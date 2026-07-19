@@ -1,0 +1,124 @@
+company,category,ats_hint,notes
+Flutter Entertainment (Group),Operator - Tier 1,workday (likely),"Group roles; brands below listed separately"
+PokerStars,Operator - Tier 1,workday (likely),Flutter brand
+Betfair International,Operator - Tier 1,workday (likely),Flutter brand
+Sky Betting & Gaming,Operator - Tier 1,workday (likely),Flutter brand
+Paddy Power,Operator - Tier 1,workday (likely),Flutter brand
+Sisal,Operator - Tier 1,detect,Flutter brand - Italy
+Snaitech,Operator - Tier 1,detect,Flutter brand - Italy
+FanDuel,Operator - Tier 1,greenhouse (verified),Flutter US - already live in app
+Entain,Operator - Tier 1,detect,"Ladbrokes, Coral, bwin, partypoker"
+BetMGM,Operator - Tier 1,detect,Entain/MGM JV
+bet365,Operator - Tier 1,detect,Own careers system
+evoke plc,Operator - Tier 1,detect,"888, William Hill, Mr Green"
+DraftKings,Operator - Tier 1,greenhouse (likely),
+Betsson Group,Operator - Tier 1,teamtailor (likely),
+FDJ United,Operator - Tier 1,detect,Kindred + FDJ
+Kindred Group,Operator - Tier 1,detect,Now FDJ United; Unibet/32Red
+Superbet,Operator - Growth,detect,
+Kaizen Gaming,Operator - Growth,detect,Betano
+LeoVegas Group,Operator - Tier 1,teamtailor (likely),MGM-owned
+Tipico,Operator - Tier 1,detect,
+Super Group,Operator - Tier 1,detect,Betway / Spin
+Betfred,Operator,detect,
+Lottomatica,Operator - Tier 1,detect,Italy
+Novibet,Operator - Growth,detect,
+LiveScore Group,Operator / Media,detect,
+Caesars Digital,Operator - US,detect,
+Rush Street Interactive,Operator - US,detect,
+PENN Entertainment / ESPN Bet,Operator - US,detect,
+Fanatics Betting & Gaming,Operator - US,detect,
+Hard Rock Digital,Operator - US,greenhouse (likely),
+Bally's Corporation,Operator - US,detect,
+Underdog,Operator - US,greenhouse (likely),
+SportyBet / Sporty Group,Operator - Africa/Asia,detect,
+BetKing,Operator - Africa,detect,
+888Africa,Operator - Africa,detect,Prior engagement
+ComeOn Group,Operator,detect,
+Casumo,Operator,detect,
+Videoslots,Operator,detect,
+Stake (Easygo),Operator - Crypto,detect,
+Evolution,Supplier - Live/RNG,smartrecruiters (likely),
+Playtech,Supplier - Platform,detect,
+Pragmatic Play,Supplier - Content,detect,
+Games Global,Supplier - Content,detect,
+Light & Wonder,Supplier - Content,detect,
+Aristocrat Interactive,Supplier - Content,detect,Incl. NeoGames/Aspire
+IGT,Supplier / Lottery,detect,
+Play'n GO,Supplier - Content,detect,
+Yggdrasil,Supplier - Content,detect,
+Push Gaming,Supplier - Content,detect,
+Hacksaw Gaming,Supplier - Content,detect,
+Relax Gaming,Supplier - Content,detect,
+Greentube (Novomatic),Supplier - Content,detect,
+Novomatic,Supplier,detect,
+Inspired Entertainment,Supplier,detect,
+Bragg Gaming,Supplier,detect,
+Amusnet,Supplier - Content,detect,
+EGT Digital,Supplier - Content,detect,
+Playson,Supplier - Content,detect,
+Wazdan,Supplier - Content,detect,
+BGaming,Supplier - Content,detect,
+SoftSwiss,Supplier - Platform,detect,
+Soft2Bet,Supplier - Platform,detect,Prior COO role
+EveryMatrix,Supplier - Platform,detect,
+Altenar,Supplier - Sportsbook,detect,
+Delasport,Supplier - Platform,detect,
+White Hat Gaming,Supplier - Platform,detect,
+Strive Gaming,Supplier - Platform US,detect,
+Kambi,Supplier - Sportsbook,lever (likely),
+OpenBet,Supplier - Sportsbook,detect,
+Gentoo Media (ex-GiG),Affiliate / Media,detect,
+GiG (platform),Supplier - Platform,detect,
+Continent 8,Infrastructure,detect,
+GeoComply,Compliance / Geo,detect,
+Sportradar,Sports data,smartrecruiters (likely),
+Genius Sports,Sports data,greenhouse (likely),
+Stats Perform,Sports data,detect,
+LSports,Sports data,detect,
+Racing Post / Spotlight Sports,Racing / Media,detect,
+UK Tote Group,Racing,detect,Alex Frost outreach target
+1/ST (Stronach Group),Racing - US,detect,
+Churchill Downs / TwinSpires,Racing - US,detect,
+Arena Racing Company,Racing - UK,detect,
+The Jockey Club,Racing - UK,detect,
+Weatherbys,Racing / Banking,detect,
+Allwyn,Lottery,detect,Incl. Camelot
+Intralot,Lottery,detect,
+OPAP,Lottery / Operator,detect,Greece - holds Key Person relevance
+Lottoland,Lottery betting,detect,
+ZEAL Network,Lottery,detect,
+GGPoker (NSUS Group),Poker,detect,
+4Poker,Poker,detect,Prior engagement
+Paysafe,Gaming payments,workday (likely),
+MuchBetter,Gaming payments,detect,Prior COO role
+MiFinity,Gaming payments,detect,
+Jeton,Gaming payments,detect,
+Las Vegas Sands,Operator - Resorts,detect,Largest by market cap; digital ambitions limited
+Wynn Resorts,Operator - Resorts,detect,WynnBet wound down but resort digital roles exist
+MGM Resorts,Operator - Resorts,detect,Parent of BetMGM JV + LeoVegas
+MGM China Holdings,Operator - Resorts Asia,detect,
+Caesars Entertainment,Operator - Resorts,detect,Parent of Caesars Digital (already listed)
+Boyd Gaming,Operator - US,detect,Owns 5% of FanDuel
+Red Rock Resorts,Operator - Resorts,detect,
+The Lottery Corporation,Lottery - Australia,detect,
+Tabcorp,Operator - Australia,detect,
+Hong Kong Jockey Club,Racing / Operator - Asia,detect,
+GAN,Supplier - Platform,detect,Sega Sammy-owned
+Cirsa,Operator - Spain/LatAm,detect,
+ATG,Racing / Operator - Sweden,detect,
+Betclic (Banijay Gaming),Operator - France,detect,
+Admiral,Operator - Austria,detect,Banijay Gaming / Novomatic brand
+Fortuna Entertainment Group,Operator - CEE,detect,
+STS,Operator - Poland,detect,Entain CEE
+Rhino Entertainment,Operator - Growth,detect,
+TopSport,Operator - Baltics,detect,
+Yolo Group,Operator / Supplier - Crypto,detect,
+Caliente,Operator - Mexico,detect,
+Pinnacle,Operator,detect,
+bet9ja,Operator - Africa,detect,
+betPawa,Operator - Africa,detect,
+Sun International,Operator - Africa,detect,SunBet
+KingMakers,Operator - Africa,detect,BetKing parent (BetKing already listed)
+AGS,Supplier - Content,detect,
+Aristocrat Leisure (Group),Supplier - Group,detect,Parent of Aristocrat Interactive (already listed)
