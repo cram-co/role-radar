@@ -1,1 +1,97 @@
-{}
+{
+ "Flutter Entertainment (Group)": {
+  "ats": "workday_pending"
+ },
+ "PokerStars": {
+  "ats": "workday_pending"
+ },
+ "Betfair International": {
+  "ats": "workday_pending"
+ },
+ "Sky Betting & Gaming": {
+  "ats": "workday_pending"
+ },
+ "Paddy Power": {
+  "ats": "workday_pending"
+ },
+ "Sisal": {
+  "ats": "smartrecruiters",
+  "token": "sisal"
+ },
+ "Snaitech": {
+  "ats": "smartrecruiters",
+  "token": "snaitech"
+ },
+ "FanDuel": {
+  "ats": "greenhouse",
+  "token": "fanduel"
+ },
+ "Entain": {
+  "ats": "smartrecruiters",
+  "token": "entain"
+ },
+ "BetMGM": {
+  "ats": "smartrecruiters",
+  "token": "betmgm"
+ },
+ "bet365": {
+  "ats": "smartrecruiters",
+  "token": "bet365"
+ },
+ "evoke plc": {
+  "ats": "smartrecruiters",
+  "token": "evokeplc"
+ },
+ "DraftKings": {
+  "ats": "smartrecruiters",
+  "token": "draftkings"
+ },
+ "Betsson Group": {
+  "ats": "smartrecruiters",
+  "token": "betssongroup"
+ },
+ "FDJ United": {
+  "ats": "smartrecruiters",
+  "token": "fdjunited"
+ },
+ "Kindred Group": {
+  "ats": "smartrecruiters",
+  "token": "kindredgroup"
+ },
+ "Superbet": {
+  "ats": "smartrecruiters",
+  "token": "superbet"
+ },
+ "Kaizen Gaming": {
+  "ats": "greenhouse",
+  "token": "kaizengaming"
+ },
+ "LeoVegas Group": {
+  "ats": "ashby",
+  "token": "leovegasgroup"
+ },
+ "Tipico": {
+  "ats": "smartrecruiters",
+  "token": "tipico"
+ },
+ "Super Group": {
+  "ats": "smartrecruiters",
+  "token": "supergroup"
+ },
+ "Betfred": {
+  "ats": "smartrecruiters",
+  "token": "betfred"
+ },
+ "Lottomatica": {
+  "ats": "smartrecruiters",
+  "token": "lottomatica"
+ },
+ "Novibet": {
+  "ats": "smartrecruiters",
+  "token": "novibet"
+ },
+ "LiveScore Group": {
+  "ats": "smartrecruiters",
+  "token": "livescoregroup"
+ }
+}
