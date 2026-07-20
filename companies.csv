@@ -1,8 +1,8 @@
-company,category,ats_hint,notes
-Flutter Entertainment (Group),Operator - Tier 1,workday (likely),"Group roles; brands below listed separately"
+company,category,ats_hint,notes,workday_url
+Flutter Entertainment (Group),Operator - Tier 1,workday,"Flutter Intl: PokerStars, Betfair, Sisal",https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External
 PokerStars,Operator - Tier 1,workday (likely),Flutter brand
 Betfair International,Operator - Tier 1,workday (likely),Flutter brand
-Sky Betting & Gaming,Operator - Tier 1,workday (likely),Flutter brand
+Sky Betting & Gaming,Operator - Tier 1,workday,"UKI incl Paddy Power - experimental",https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External
 Paddy Power,Operator - Tier 1,workday (likely),Flutter brand
 Sisal,Operator - Tier 1,detect,Flutter brand - Italy
 Snaitech,Operator - Tier 1,detect,Flutter brand - Italy
