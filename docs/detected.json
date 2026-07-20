@@ -95,5 +95,85 @@
  "LiveScore Group": {
   "ats": "smartrecruiters",
   "token": "livescoregroup"
+ },
+ "Caesars Digital": {
+  "ats": "smartrecruiters",
+  "token": "caesarsdigital"
+ },
+ "Rush Street Interactive": {
+  "ats": "greenhouse",
+  "token": "rushstreetinteractive"
+ },
+ "PENN Entertainment / ESPN Bet": {
+  "ats": "smartrecruiters",
+  "token": "pennentertainment"
+ },
+ "Fanatics Betting & Gaming": {
+  "ats": "smartrecruiters",
+  "token": "fanaticsbetting"
+ },
+ "Hard Rock Digital": {
+  "ats": "smartrecruiters",
+  "token": "hardrockdigital"
+ },
+ "Bally's Corporation": {
+  "ats": "smartrecruiters",
+  "token": "ballyscorporation"
+ },
+ "Underdog": {
+  "ats": "smartrecruiters",
+  "token": "underdog"
+ },
+ "SportyBet / Sporty Group": {
+  "ats": "smartrecruiters",
+  "token": "sportybet"
+ },
+ "BetKing": {
+  "ats": "smartrecruiters",
+  "token": "betking"
+ },
+ "888Africa": {
+  "ats": "smartrecruiters",
+  "token": "888africa"
+ },
+ "ComeOn Group": {
+  "ats": "smartrecruiters",
+  "token": "comeongroup"
+ },
+ "Casumo": {
+  "ats": "smartrecruiters",
+  "token": "casumo"
+ },
+ "Videoslots": {
+  "ats": "smartrecruiters",
+  "token": "videoslots"
+ },
+ "Stake (Easygo)": {
+  "ats": "smartrecruiters",
+  "token": "stake"
+ },
+ "Evolution": {
+  "ats": "smartrecruiters",
+  "token": "evolution"
+ },
+ "Playtech": {
+  "ats": "smartrecruiters",
+  "token": "playtech"
+ },
+ "Pragmatic Play": {
+  "ats": "smartrecruiters",
+  "token": "pragmaticplay"
+ },
+ "Games Global": {
+  "ats": "smartrecruiters",
+  "token": "gamesglobal"
+ },
+ "Light & Wonder": {
+  "ats": "ashby",
+  "token": "light"
+ },
+ "Aristocrat Interactive": {
+  "ats": "smartrecruiters",
+  "token": "aristocratinteractive"
  }
 }

@@ -1,9 +1,20 @@
 {
- "generated_at": "2026-07-20T08:58:48.187043+00:00",
- "job_count": 694,
+ "generated_at": "2026-07-20T13:27:29.411355+00:00",
+ "job_count": 1121,
  "jobs": [
   {
-   "title": "Promotions & Operations Coordinator\u2013 Merchandising \u2013 FTC (Maternity cover)",
+   "title": "Data Analyst",
+   "location": "Tbilisi, Georgia",
+   "department": "",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Data-Analyst_JR140305",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Flutter Entertainment (Group)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Promotions & Operations Coordinator\u2013 Merchandising \u2013 (Maternity cover)",
    "location": "Sofia, Bulgaria",
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Sofia-Bulgaria/Promotions---Operations-Coordinator--Merchandising---FTC--Maternity-cover-_JR140485-1",
@@ -531,34 +542,12 @@
    "source": "collector"
   },
   {
-   "title": "Senior Content Performance Executive - 9 month FTC",
-   "location": "3 Locations",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Dublin-Ireland/Senior-Content-Performance-Executive---9-month-FTC_JR138647-2",
-   "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
-   "company": "Sky Betting & Gaming",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Business Intelligence Analyst",
    "location": "Gibraltar Office",
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Gibraltar-Office/Business-Intelligence-Analyst_JR134770-1",
    "posted_at": null,
    "posted_text": "Posted 10 Days Ago",
-   "company": "Sky Betting & Gaming",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Security Governance & Assurance Analyst - Flutter UKI, Hybrid (Fixed-term, 6 months)",
-   "location": "2 Locations",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Leeds-UK/Security-Governance---Assurance-Analyst---Flutter-UKI--Hybrid--Fixed-term--6-months-_JR138392-1",
-   "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
    "company": "Sky Betting & Gaming",
    "ats": "workday",
    "source": "collector"
@@ -575,45 +564,12 @@
    "source": "collector"
   },
   {
-   "title": "Lead Data Scientist",
-   "location": "3 Locations",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Dublin-Ireland/Lead-Data-Scientist_JR139717",
-   "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
-   "company": "Sky Betting & Gaming",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "AI Lead, Gaming Product",
    "location": "Leeds, UK",
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Leeds-UK/AI-Lead--Gaming-Product_JR139383",
    "posted_at": null,
    "posted_text": "Posted 25 Days Ago",
-   "company": "Sky Betting & Gaming",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Prototyping Engineer - Frontier R&D",
-   "location": "London, UK",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/London-UK/Prototyping-Engineer---Frontier-R-D_JR137090-1",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Sky Betting & Gaming",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Data Scientist",
-   "location": "Leeds, UK",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Leeds-UK/Data-Scientist_JR138824-1",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
    "company": "Sky Betting & Gaming",
    "ats": "workday",
    "source": "collector"
@@ -1504,6 +1460,206 @@
   },
   {
    "title": "Retail Customer Service",
+   "location": "Northampton, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138640157",
+   "posted_at": "2026-07-20T13:22:09.528Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Manchester, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138639669",
+   "posted_at": "2026-07-20T13:07:24.806Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Crewe, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138637873",
+   "posted_at": "2026-07-20T13:04:30.264Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Frodsham, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138626579",
+   "posted_at": "2026-07-20T12:16:25.805Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Glasgow, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138626139",
+   "posted_at": "2026-07-20T12:15:00.982Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Bolton, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138625059",
+   "posted_at": "2026-07-20T12:09:06.986Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service ",
+   "location": "Glasgow, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138622849",
+   "posted_at": "2026-07-20T11:58:35.912Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Cleaner",
+   "location": "London, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138616919",
+   "posted_at": "2026-07-20T11:24:27.642Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service ",
+   "location": "Bromley, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138615059",
+   "posted_at": "2026-07-20T11:13:19.319Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Workplace Host",
+   "location": "London, GB",
+   "department": "Other",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138610009",
+   "posted_at": "2026-07-20T10:42:15.423Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Stoke-on-Trent, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138607505",
+   "posted_at": "2026-07-20T10:34:41.971Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Platform Engineer III",
+   "location": "London, GB",
+   "department": "Other",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138605360",
+   "posted_at": "2026-07-20T10:21:09.583Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "UKI AI Director",
+   "location": "London, GB",
+   "department": "Management",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138601723",
+   "posted_at": "2026-07-20T10:04:57.968Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "London, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138602439",
+   "posted_at": "2026-07-20T10:01:42.805Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Ilford, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138599250",
+   "posted_at": "2026-07-20T09:55:01.133Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Harwich, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138600889",
+   "posted_at": "2026-07-20T09:53:11.485Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Motion Designer - Ladbrokes & Coral",
+   "location": "London, GB",
+   "department": "Advertising",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138599120",
+   "posted_at": "2026-07-20T09:45:39.673Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Cork, IE",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138595120",
+   "posted_at": "2026-07-20T09:33:46.468Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Taunton, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138595502",
+   "posted_at": "2026-07-20T09:28:39.346Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Procurement Category Manager - Marketing",
+   "location": "London, GB",
+   "department": "Management",
+   "url": "https://jobs.smartrecruiters.com/entain/744000138595079",
+   "posted_at": "2026-07-20T09:25:39.518Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
    "location": "Lingfield, GB",
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000138584809",
@@ -1563,16 +1719,6 @@
    "source": "collector"
   },
   {
-   "title": "Retail Customer Service",
-   "location": "Mitcham, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138350576",
-   "posted_at": "2026-07-17T14:41:04.272Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Retail Cleaner",
    "location": "St Albans, GB",
    "department": "Customer Service",
@@ -1588,16 +1734,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000138350800",
    "posted_at": "2026-07-17T14:37:21.257Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Cuffley, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138352309",
-   "posted_at": "2026-07-17T14:36:13.192Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -1773,16 +1909,6 @@
    "source": "collector"
   },
   {
-   "title": "Retail Customer Service",
-   "location": "Frodsham, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138157525",
-   "posted_at": "2026-07-16T16:06:55.970Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Retail Customer Service - Weekends & Evenings",
    "location": "Paignton, GB",
    "department": "Customer Service",
@@ -1818,26 +1944,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000138072450",
    "posted_at": "2026-07-16T09:45:12.508Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Southport, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138071520",
-   "posted_at": "2026-07-16T09:41:07.664Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Arbroath, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138070104",
-   "posted_at": "2026-07-16T09:34:10.035Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -2233,31 +2339,11 @@
    "source": "collector"
   },
   {
-   "title": "Retail Customer Service Weekends only",
-   "location": "Liverpool, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000137426529",
-   "posted_at": "2026-07-13T11:00:34.994Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "AI Transformation Manager ",
    "location": "London, GB",
    "department": "Management",
    "url": "https://jobs.smartrecruiters.com/entain/744000137424514",
    "posted_at": "2026-07-13T10:59:16.546Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Liverpool, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000137424570",
-   "posted_at": "2026-07-13T10:58:14.062Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -2906,16 +2992,6 @@
    "title": "Retail Customer Service",
    "location": "Crewe, GB",
    "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000133970386",
-   "posted_at": "2026-06-24T14:45:35.787Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Crewe, GB",
-   "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000133970499",
    "posted_at": "2026-06-24T14:42:25.987Z",
    "company": "Entain",
@@ -3138,16 +3214,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000133334032",
    "posted_at": "2026-06-22T11:10:13.766Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Platform Engineer III",
-   "location": "London, GB",
-   "department": "Other",
-   "url": "https://jobs.smartrecruiters.com/entain/744000133310862",
-   "posted_at": "2026-06-22T09:38:05.166Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -3713,16 +3779,6 @@
    "source": "collector"
   },
   {
-   "title": "Affiliate Team Manager",
-   "location": "Athens, Greece",
-   "department": "Performance Marketing & Affiliation",
-   "url": "https://careers.kaizengaming.com/job-details/7647445003?gh_jid=7647445003",
-   "posted_at": "2026-07-14T10:53:04-04:00",
-   "company": "Kaizen Gaming",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Agile Delivery Lead",
    "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
@@ -3807,7 +3863,7 @@
    "location": "Sliema, Malta",
    "department": "Business Development",
    "url": "https://careers.kaizengaming.com/job-details/7753350003?gh_jid=7753350003",
-   "posted_at": "2026-07-02T10:09:38-04:00",
+   "posted_at": "2026-07-20T08:52:46-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -3853,6 +3909,16 @@
    "source": "collector"
   },
   {
+   "title": "Database Administrator",
+   "location": "Athens, Greece",
+   "department": "Site Reliability",
+   "url": "https://careers.kaizengaming.com/job-details/7527239003?gh_jid=7527239003",
+   "posted_at": "2026-07-20T05:10:22-04:00",
+   "company": "Kaizen Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Database Administrator Team Lead",
    "location": "Athens, Greece",
    "department": "Site Reliability",
@@ -3877,7 +3943,7 @@
    "location": "Athens, Greece",
    "department": "Financial Controls",
    "url": "https://careers.kaizengaming.com/job-details/7772937003?gh_jid=7772937003",
-   "posted_at": "2026-07-16T10:30:26-04:00",
+   "posted_at": "2026-07-20T08:53:31-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -3977,7 +4043,7 @@
    "location": "Athens, Greece",
    "department": "People Development & Experience",
    "url": "https://careers.kaizengaming.com/job-details/7694709003?gh_jid=7694709003",
-   "posted_at": "2026-07-20T03:20:19-04:00",
+   "posted_at": "2026-07-20T05:01:22-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -4154,20 +4220,20 @@
   },
   {
    "title": "Product Analyst",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Product Management - Sportsbook",
-   "url": "https://careers.kaizengaming.com/job-details/7643220003?gh_jid=7643220003",
-   "posted_at": "2026-07-16T09:16:27-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/7621588003?gh_jid=7621588003",
+   "posted_at": "2026-07-16T09:16:24-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Product Analyst",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Product Management - Sportsbook",
-   "url": "https://careers.kaizengaming.com/job-details/7621588003?gh_jid=7621588003",
-   "posted_at": "2026-07-16T09:16:24-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/7643220003?gh_jid=7643220003",
+   "posted_at": "2026-07-16T09:16:27-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -4234,16 +4300,6 @@
   },
   {
    "title": "Senior Backend Engineer ",
-   "location": "Athens, Greece",
-   "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5589332003?gh_jid=5589332003",
-   "posted_at": "2026-07-02T10:09:38-04:00",
-   "company": "Kaizen Gaming",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Backend Engineer ",
    "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
    "url": "https://careers.kaizengaming.com/job-details/5589334003?gh_jid=5589334003",
@@ -4253,11 +4309,11 @@
    "source": "collector"
   },
   {
-   "title": "Senior Compliance Officer",
-   "location": "Bucharest, Romania",
-   "department": "Regulatory Compliance & International Expansion",
-   "url": "https://careers.kaizengaming.com/job-details/7636618003?gh_jid=7636618003",
-   "posted_at": "2026-07-14T04:32:27-04:00",
+   "title": "Senior Backend Engineer ",
+   "location": "Athens, Greece",
+   "department": "Pipeline Tech & Product",
+   "url": "https://careers.kaizengaming.com/job-details/5589332003?gh_jid=5589332003",
+   "posted_at": "2026-07-02T10:09:38-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -4278,6 +4334,16 @@
    "department": "Regulatory Compliance & International Expansion",
    "url": "https://careers.kaizengaming.com/job-details/7752897003?gh_jid=7752897003",
    "posted_at": "2026-07-13T10:11:35-04:00",
+   "company": "Kaizen Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Compliance Officer",
+   "location": "Bucharest, Romania",
+   "department": "Regulatory Compliance & International Expansion",
+   "url": "https://careers.kaizengaming.com/job-details/7636618003?gh_jid=7636618003",
+   "posted_at": "2026-07-14T04:32:27-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -4304,20 +4370,20 @@
   },
   {
    "title": "Senior iOS Software Engineer",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5559799003?gh_jid=5559799003",
-   "posted_at": "2026-07-07T03:26:11-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/5559801003?gh_jid=5559801003",
+   "posted_at": "2026-07-07T04:56:01-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior iOS Software Engineer",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5559801003?gh_jid=5559801003",
-   "posted_at": "2026-07-07T04:56:01-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/5559799003?gh_jid=5559799003",
+   "posted_at": "2026-07-07T03:26:11-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -4454,20 +4520,20 @@
   },
   {
    "title": "Software Engineer in Test",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/4401036003?gh_jid=4401036003",
-   "posted_at": "2026-07-17T04:20:35-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/6242991003?gh_jid=6242991003",
+   "posted_at": "2026-07-17T04:20:36-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Software Engineer in Test",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/6242991003?gh_jid=6242991003",
-   "posted_at": "2026-07-17T04:20:36-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/4401036003?gh_jid=4401036003",
+   "posted_at": "2026-07-17T04:20:35-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -4480,6 +4546,16 @@
    "posted_at": "2026-07-02T10:09:38-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "QA Engineer (Warsaw)",
+   "location": "Warsaw, Poland",
+   "department": "Core Experience",
+   "url": "https://jobs.ashbyhq.com/leovegasgroup/f942c6c8-e290-4326-96c2-f3fbb2c47f29",
+   "posted_at": "2026-07-20T10:50:24.447+00:00",
+   "company": "LeoVegas Group",
+   "ats": "ashby",
    "source": "collector"
   },
   {
@@ -5223,13 +5299,123 @@
    "source": "collector"
   },
   {
-   "title": "QA Engineer",
+   "title": "QA Engineer (V\u00e4xj\u00f6)",
    "location": "V\u00e4xj\u00f6, Sweden",
    "department": "Core Experience",
    "url": "https://jobs.ashbyhq.com/leovegasgroup/63b9b778-d016-4e2b-a095-34e8ef528170",
    "posted_at": "2026-07-17T13:51:54.692+00:00",
    "company": "LeoVegas Group",
    "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Talent Acquisition Partner",
+   "location": "Sliema, Malta",
+   "department": "HR Product & Technology",
+   "url": "https://jobs.ashbyhq.com/leovegasgroup/9d6b6351-1054-4e5b-bb37-e695e32a2ed9",
+   "posted_at": "2026-07-20T12:12:32.726+00:00",
+   "company": "LeoVegas Group",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Gera, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138631155",
+   "posted_at": "2026-07-20T12:36:00.243Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138631249",
+   "posted_at": "2026-07-20T12:32:32.986Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138630299",
+   "posted_at": "2026-07-20T12:29:12.341Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138626630",
+   "posted_at": "2026-07-20T12:25:26.817Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d) ",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138628309",
+   "posted_at": "2026-07-20T12:22:02.223Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138625770",
+   "posted_at": "2026-07-20T12:20:25.746Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d) ",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138627059",
+   "posted_at": "2026-07-20T12:17:56.463Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Hamburg, DE",
+   "department": "TSAN Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138624040",
+   "posted_at": "2026-07-20T12:15:10.170Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Talent Acquisition & Development (m/f/x)",
+   "location": "Karlsruhe, DE",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138608739",
+   "posted_at": "2026-07-20T10:34:23.071Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Talent Acquisition & Development (m/f/x)",
+   "location": "St. Julian's, MT",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000138606209",
+   "posted_at": "2026-07-20T10:22:27.018Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -5688,16 +5874,6 @@
    "department": "TSANW Shops",
    "url": "https://jobs.smartrecruiters.com/tipico/744000136398449",
    "posted_at": "2026-07-08T07:46:36.755Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": " Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d) ",
-   "location": "Mannheim, DE",
-   "department": "TSAE Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000136398309",
-   "posted_at": "2026-07-08T07:45:52.488Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -7000,6 +7176,4096 @@
    "posted_at": "2024-08-19T10:38:39.388Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Accounting Operations Analyst",
+   "location": "Chicago",
+   "department": "Accounting",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5979270004",
+   "posted_at": "2026-05-12T18:20:11-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Accounting Operations Analyst",
+   "location": "Bogot\u00e1",
+   "department": "Latam: Finance",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5991960004",
+   "posted_at": "2026-05-11T16:01:46-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Assistant Manager, Training and Escalations",
+   "location": "New Jersey",
+   "department": "Player Support",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6000810004",
+   "posted_at": "2026-05-27T09:14:03-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Data Engineer",
+   "location": "Estonia; Malta; Serbia",
+   "department": "Marketing: Data Engineering",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5979302004",
+   "posted_at": "2026-07-14T08:54:15-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Data Protection Manager",
+   "location": "EMEA - Remote",
+   "department": "Information Security",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5825227004",
+   "posted_at": "2026-07-15T10:11:55-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Director, Data Engineering",
+   "location": "Estonia; Malta; Serbia",
+   "department": "Marketing: Data Engineering",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5873307004",
+   "posted_at": "2026-04-21T16:02:36-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Graphic Designer",
+   "location": "Bogot\u00e1",
+   "department": "Latam: Marketing",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5996651004",
+   "posted_at": "2026-07-07T11:54:25-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Instrumentation Analyst",
+   "location": "USA - Remote",
+   "department": "Marketing: Analytics",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6011165004",
+   "posted_at": "2026-06-11T16:32:04-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Manager, Software Engineering",
+   "location": "Bogot\u00e1; Colombia - Remote; Medell\u00edn",
+   "department": "Engineering: Front End",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6105328004",
+   "posted_at": "2026-07-17T11:54:33-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Manager, Training and Escalations",
+   "location": "New Jersey",
+   "department": "Player Support",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6099761004",
+   "posted_at": "2026-06-23T14:54:51-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "People Team Intern",
+   "location": "Bogot\u00e1",
+   "department": "People Partners",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6013085004",
+   "posted_at": "2026-06-24T18:02:45-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "People Team Intern",
+   "location": "Bogot\u00e1",
+   "department": "People Partners",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6013087004",
+   "posted_at": "2026-06-24T18:03:12-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Player Support Analyst",
+   "location": "Bogot\u00e1",
+   "department": "Latam: Player Support",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5983456004",
+   "posted_at": "2026-06-24T18:05:11-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Player Support Analyst, Intern",
+   "location": "Bogot\u00e1",
+   "department": "Latam: Player Support",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6010694004",
+   "posted_at": "2026-06-24T18:04:05-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Poker YouTube Content Producer and Editor, Freelance",
+   "location": "USA - Remote",
+   "department": "Marketing: Content",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6101700004",
+   "posted_at": "2026-06-30T08:27:22-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Product Manager",
+   "location": "USA - Remote",
+   "department": "Product Management: Platform",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6011893004",
+   "posted_at": "2026-06-05T13:33:46-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Product Marketing Manager",
+   "location": "USA - Remote",
+   "department": "Marketing: Product Marketing",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6110846004",
+   "posted_at": "2026-07-08T08:43:44-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Financial Analyst",
+   "location": "Chicago",
+   "department": "FP&A",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5845440004",
+   "posted_at": "2026-07-13T11:38:15-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Frontend Engineer",
+   "location": "Canada - Remote",
+   "department": "Marketing: Data Engineering",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5839978004",
+   "posted_at": "2026-04-22T09:11:11-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior IP Counsel",
+   "location": "USA - Remote",
+   "department": "Legal",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5831879004",
+   "posted_at": "2026-05-04T13:42:40-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior IT Engineer, Systems Integration",
+   "location": "USA - Remote",
+   "department": "Corporate IT",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6008721004",
+   "posted_at": "2026-06-05T13:30:34-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Sportsbook and Online Casino Customer Support Agent - Standard Shift",
+   "location": "New Jersey",
+   "department": "Player Support",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6113667004",
+   "posted_at": "2026-07-10T10:40:16-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Sportsbook and Online Casino Customer Support Agent - Swing/Overnight Shift",
+   "location": "New Jersey",
+   "department": "Player Support",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5637671004",
+   "posted_at": "2026-06-17T09:43:35-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Compliance Analyst",
+   "location": "USA - Remote",
+   "department": "Compliance",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6008718004",
+   "posted_at": "2026-06-01T14:23:12-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Lead - Analytics Engineer",
+   "location": "Estonia; Malta; Serbia",
+   "department": "Marketing: Data Engineering",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5810650004",
+   "posted_at": "2026-05-26T11:00:44-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "VP, Engineering",
+   "location": "EMEA",
+   "department": "Engineering: Front End",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5735851004",
+   "posted_at": "2026-05-04T08:49:08-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Manual QA Engineer",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138617750",
+   "posted_at": "2026-07-20T11:50:39.948Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "General Application for Game Presenter & Shuffler Roles-Malta Studios",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138600129",
+   "posted_at": "2026-07-20T09:49:31.852Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Biroja koordinators(-e)/ Office Coordinator",
+   "location": "Riga, LV",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138570209",
+   "posted_at": "2026-07-20T07:30:46.354Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Vietnamese Speaking Game Presenter",
+   "location": "Burnaby, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138418499",
+   "posted_at": "2026-07-17T22:34:53.935Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Japanese Speaking Game Presenter",
+   "location": "Burnaby, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138418399",
+   "posted_at": "2026-07-17T22:33:04.603Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - French Speaking ",
+   "location": "New Westminster, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138418109",
+   "posted_at": "2026-07-17T22:31:29.850Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Shuffler (No experience required)",
+   "location": "Burnaby, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138417857",
+   "posted_at": "2026-07-17T22:30:18.586Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Night Shift - Game Presenter (Live Broadcasting Studio)",
+   "location": "New Westminster, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138415340",
+   "posted_at": "2026-07-17T22:28:05.383Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Chinese Mandarin Speaking Game Presenter",
+   "location": "Burnaby, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138416279",
+   "posted_at": "2026-07-17T22:14:48.837Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter (Mandarin/Cantonese/English)",
+   "location": "New Westminster, CA",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138415519",
+   "posted_at": "2026-07-17T22:09:32.682Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Treasury Specialist",
+   "location": "St. Julian's, MT",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138366405",
+   "posted_at": "2026-07-17T15:46:28.482Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Overnight On-Camera Presenter\u2013 Up to $23/hr (Tips) \u2013 Paid Training \u2013 No Experience Needed \u2013 Southfield",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138340014",
+   "posted_at": "2026-07-17T13:56:27.807Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Receptionist? Earn Up to $23/hr (Tips) On Camera \u2013 No Front Desk, No Phones \u2013 Southfield",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138339034",
+   "posted_at": "2026-07-17T13:56:15.040Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service - Live Studio Host \u2014 Earn Up to $27/hr - No Experience Needed - Fairfield, CT",
+   "location": "Fairfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138193870",
+   "posted_at": "2026-07-16T20:43:15.365Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "On-Camera Game Host \u2014 Up to $27/hr + Full Benefits Fairfield, CT Studio",
+   "location": "Fairfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138194429",
+   "posted_at": "2026-07-16T20:42:23.698Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Floor Supervisor",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138155149",
+   "posted_at": "2026-07-16T15:49:32.555Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Physical Security Specialist",
+   "location": "Atlantic City, US",
+   "department": "Property Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138153117",
+   "posted_at": "2026-07-16T15:47:49.584Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Team Manager (Overnight)",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000138135170",
+   "posted_at": "2026-07-16T14:32:39.710Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Commercial Coordinator",
+   "location": "Buenos Aires, AR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137969919",
+   "posted_at": "2026-07-15T19:24:15.183Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Commercial Team Manager",
+   "location": "Buenos Aires, AR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137969670",
+   "posted_at": "2026-07-15T19:23:34.476Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Key Account Manager",
+   "location": "Buenos Aires, AR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137969709",
+   "posted_at": "2026-07-15T19:22:46.472Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Counsel",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137969077",
+   "posted_at": "2026-07-15T19:21:46.116Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Equipment Support Specialist",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137947209",
+   "posted_at": "2026-07-15T16:50:11.546Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Content Creator",
+   "location": "St. Julian's, MT",
+   "department": "Marketing",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137927029",
+   "posted_at": "2026-07-15T15:15:33.673Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Manager",
+   "location": "St. Julian's, MT",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137918598",
+   "posted_at": "2026-07-15T14:43:20.597Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Human Resources Generalist (on-site)",
+   "location": "Philadelphia, US",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137909935",
+   "posted_at": "2026-07-15T14:26:24.709Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "On Camera Game Host/Dealer | 4 Day Workweek | Up to $25/hr With Tips | Training provided",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137893460",
+   "posted_at": "2026-07-15T13:11:02.369Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Dutch Speaking Game Presenter (In Malta)",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137815889",
+   "posted_at": "2026-07-15T07:14:49.996Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Compliance Specialist",
+   "location": "Medell\u00edn, CO",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137696679",
+   "posted_at": "2026-07-14T15:30:31.978Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137686941",
+   "posted_at": "2026-07-14T14:50:56.441Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Chief Accountant",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137655649",
+   "posted_at": "2026-07-14T12:29:17.725Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137453169",
+   "posted_at": "2026-07-13T13:03:21.390Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Biroja vad\u012bt\u0101js(-a)/ Office Manager",
+   "location": "Riga, LV",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137431519",
+   "posted_at": "2026-07-13T11:23:44.100Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Support Engineer",
+   "location": "Moreno, AR",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137201709",
+   "posted_at": "2026-07-10T19:09:06.489Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Equipment Integrity Engineer",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137163169",
+   "posted_at": "2026-07-10T15:14:27.371Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Equipment Integrity Engineer",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137160352",
+   "posted_at": "2026-07-10T15:13:55.627Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Chief Accountant",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137103539",
+   "posted_at": "2026-07-10T11:01:36.943Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Coordinator (part-time)",
+   "location": "Tallinn, EE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137101454",
+   "posted_at": "2026-07-10T10:59:10.784Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior UI/UX Designer",
+   "location": "Tallinn, EE",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137100779",
+   "posted_at": "2026-07-10T10:45:41.102Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Unreal Engine/C++ In\u017eenieris (Core komanda) / Unreal Engine/C++ Engineer (Core team)",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137062709",
+   "posted_at": "2026-07-10T07:35:59.690Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Unreal Engine/C++ In\u017eenieris (sp\u0113\u013cu izstr\u0101de) / Unreal Engine/C++ Engineer (game development)",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137059469",
+   "posted_at": "2026-07-10T07:21:06.080Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Arabic Speaker",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000137053853",
+   "posted_at": "2026-07-10T06:59:22.999Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Afternoon (2nd Shift) - Online Casino Dealer - No Experience Needed - Up to $25/hr (Tips) | Hiring Now",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136866709",
+   "posted_at": "2026-07-09T16:34:37.237Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Part-Time Game Host \u2013 16\u201324 Hours/Week \u2013 From $17/hr + Tips (Barista, Cashier, Front desk agents welcome)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136863489",
+   "posted_at": "2026-07-09T16:18:19.681Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Evening & Night Shift On-Camera Game Host \u2013 Full-Time  \u2013 From $17/hr + Tips (Customer Service)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136859352",
+   "posted_at": "2026-07-09T16:17:50.776Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "5pm\u20131am Swing Shift | On-Camera Game Host \u2013 From $17/hr + Tips | Grand Rapids | (Bartender alt.)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136863239",
+   "posted_at": "2026-07-09T16:17:27.096Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Server Experience? Become an On-Camera Game Host \u2013 From $17/hr + Tips",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136860770",
+   "posted_at": "2026-07-09T16:14:29.913Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Key Account Manager",
+   "location": "San Jos\u00e9, CR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136847629",
+   "posted_at": "2026-07-09T15:06:45.535Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Bartender? Earn Up to $23/hr (Tips), On Camera \u2013 No Bar, No Rush! Atlantic City",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136837059",
+   "posted_at": "2026-07-09T14:27:43.620Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Hiring Now \u2013 Up to $23/hr (Tips) \u2013 On-Camera Game Host, Start Within 2 Weeks ,Atlantic City",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136835346",
+   "posted_at": "2026-07-09T14:26:54.026Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "On Camera Game Dealer up to $23/hr Apply Today, Start Fast \u2013 No Experience Needed!",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136836459",
+   "posted_at": "2026-07-09T14:25:23.149Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Year-Round Studio Job \u2013 Up to $23/hr \u2013 Not Seasonal, Atlantic City",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136836379",
+   "posted_at": "2026-07-09T14:24:46.529Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Part-Time Game Host \u2013 Up to $23/hr | 12, 16, or 24 hrs/wk. Students & Second Jobs Welcome",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136836049",
+   "posted_at": "2026-07-09T14:23:50.827Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Server or Waitress? Earn Up to $23/hr (Tips) On Camera \u2013 No Restaurant experience required!",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136835869",
+   "posted_at": "2026-07-09T14:23:01.405Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Night Shift Game Host \u2013 Up to $23/hr (Tips) \u2013 Overnight, No Experience Needed",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136834270",
+   "posted_at": "2026-07-09T14:21:08.827Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Key Account Manager",
+   "location": "San Jos\u00e9, CR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136834881",
+   "posted_at": "2026-07-09T14:20:40.596Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Svensktalande Game Presenter-Relocation",
+   "location": "Stockholm, SE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136833100",
+   "posted_at": "2026-07-09T14:14:38.643Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Grafiskais dizainers(-e)/ Graphic Designer",
+   "location": "Riga, LV",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136803290",
+   "posted_at": "2026-07-09T12:14:50.075Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u054e\u056b\u0564\u0565\u0578\u057f\u0565\u056d\u0576\u056b\u056f",
+   "location": "Yerevan, AM",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136768899",
+   "posted_at": "2026-07-09T09:31:20.698Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Support Specialist",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136743589",
+   "posted_at": "2026-07-09T07:54:56.856Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studio Support Technician",
+   "location": "Tbilisi, GE",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136733919",
+   "posted_at": "2026-07-09T07:18:57.571Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Coordinator",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136732479",
+   "posted_at": "2026-07-09T07:13:07.711Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "HR Manager",
+   "location": "Moreno, AR",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136561989",
+   "posted_at": "2026-07-08T20:23:37.900Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studio Maintenance Specialist",
+   "location": "Bucharest, RO",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136459086",
+   "posted_at": "2026-07-08T12:39:27.425Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Gaming Equipment Technician",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136270877",
+   "posted_at": "2026-07-07T15:41:43.558Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136257419",
+   "posted_at": "2026-07-07T14:43:12.315Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Mechanics Developer (Slots)",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136237344",
+   "posted_at": "2026-07-07T13:38:32.815Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "2D Animator",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136237310",
+   "posted_at": "2026-07-07T13:37:32.473Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Uniform Specialist",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136220250",
+   "posted_at": "2026-07-07T12:40:14.503Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Service Support Specialist",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136215839",
+   "posted_at": "2026-07-07T12:20:18.887Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "R&D Game Developer",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136206880",
+   "posted_at": "2026-07-07T11:40:29.176Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Uniforms Service Team Lead",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136165350",
+   "posted_at": "2026-07-07T08:29:25.368Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Service Support Specialist (Quality Assurance)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000136085548",
+   "posted_at": "2026-07-06T19:07:58.474Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Engineering Purchasing Specialist ",
+   "location": "Birkirkara, MT",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135760219",
+   "posted_at": "2026-07-03T15:31:54.228Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Project Coordinator",
+   "location": "Vilnius, LT",
+   "department": "Property Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135754684",
+   "posted_at": "2026-07-03T15:04:14.637Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Recruiter",
+   "location": "Tbilisi, GE",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135662381",
+   "posted_at": "2026-07-03T07:57:07.763Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Entry-Level Game Host - Server, Bartender & Associate background - Up to $25/hr (Tips) - Urgently hiring",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135526040",
+   "posted_at": "2026-07-02T14:52:02.986Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Surveillance Operator",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135484119",
+   "posted_at": "2026-07-02T12:01:10.839Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Payroll Accountant",
+   "location": "Kaunas, LT",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135274919",
+   "posted_at": "2026-07-01T13:57:46.965Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Datu zin\u0101tnieks / Data Scientist (Risk and fraud detection/ML)",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135191080",
+   "posted_at": "2026-07-01T07:25:22.716Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter / Croupier / Casino Dealer / Gaming Host / Card Dealer/ Customer Service Alternative (Urgent hiring)",
+   "location": "Cebu City, PH",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000135157530",
+   "posted_at": "2026-07-01T02:13:29.204Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Accountant",
+   "location": "Tbilisi, GE",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134987786",
+   "posted_at": "2026-06-30T11:11:22.793Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Paid Internship for Junior Accountant position",
+   "location": "Tbilisi, GE",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134987529",
+   "posted_at": "2026-06-30T11:07:13.565Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studio Support Technician",
+   "location": "Kaunas, LT",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134697319",
+   "posted_at": "2026-06-29T05:34:52.767Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Apresentador de Jogos (Crupi\u00ea)",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134474119",
+   "posted_at": "2026-06-26T13:21:17.240Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Overnight Studio Host - Up to $25/hr + Tips | Hotel, Receptionist, Auditor alternative | Philadelphia",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134308154",
+   "posted_at": "2026-06-25T16:37:55.186Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative - On-Camera Studio Host \u2013 Up to $25/hr+ (Tips) | Entry Level",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134308390",
+   "posted_at": "2026-06-25T16:37:43.514Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Revenue Accountant",
+   "location": "St. Julian's, MT",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134275090",
+   "posted_at": "2026-06-25T13:57:03.546Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Talent Acquisition Specialist (On site Moreno)",
+   "location": "Moreno, AR",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000134027349",
+   "posted_at": "2026-06-24T20:16:24.639Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Campanha de indica\u00e7\u00e3o S\u00e3o Paulo",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133657547",
+   "posted_at": "2026-06-23T16:57:28.048Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Cashier? Earn Up to $23/hr (Tips) On Camera \u2013 No Register, No Retail \u2013 Southfield",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133652625",
+   "posted_at": "2026-06-23T16:29:03.608Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Urgently Hiring \u2013 Up to $23/hr (Tips) \u2013 On-Camera Dealer \u2013 Start Within 2 Weeks \u2013 Southfield",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133653789",
+   "posted_at": "2026-06-23T16:28:35.154Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Summer Position: Shuffler",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133543599",
+   "posted_at": "2026-06-23T09:07:09.555Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Data Analyst ",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133385789",
+   "posted_at": "2026-06-22T14:25:42.098Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "QA Automation Engineer",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133377712",
+   "posted_at": "2026-06-22T14:00:40.319Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Payroll Specialist",
+   "location": "Bucharest, RO",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000133309841",
+   "posted_at": "2026-06-22T09:44:54.783Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Security CCTV Technician",
+   "location": "Moreno, AR",
+   "department": "Property Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000132877954",
+   "posted_at": "2026-06-18T14:16:17.614Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Game Artist",
+   "location": "Warsaw, PL",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000132649025",
+   "posted_at": "2026-06-17T13:58:22.083Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "HR Business Partner ",
+   "location": "Grand Rapids, US",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000132281999",
+   "posted_at": "2026-06-15T20:35:59.500Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Full -Time Career In Media? + Paid Training, Set Schedule, Bi-weekly Pay, and More.",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131971925",
+   "posted_at": "2026-06-12T18:54:50.122Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Programa de Talento Inclusivo (PCD)",
+   "location": "Medell\u00edn, CO",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131941504",
+   "posted_at": "2026-06-12T16:26:30.955Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Equipment Support Specialist",
+   "location": "Medell\u00edn, CO",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131920891",
+   "posted_at": "2026-06-12T14:34:01.047Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer - Backend Platform",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131915275",
+   "posted_at": "2026-06-12T14:24:33.092Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer \u2013 Backend Platform",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131916124",
+   "posted_at": "2026-06-12T14:16:42.218Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Coordinator (part-time)",
+   "location": "Kaunas, LT",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131835089",
+   "posted_at": "2026-06-12T07:53:39.368Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u053d\u0561\u0572\u0561\u0569\u0572\u0569\u0561\u057e\u0561\u0580 (\u0577\u0561\u0586\u056c\u0565\u0580)  - \u0533\u056b\u0577\u0565\u0580\u0561\u0575\u056b\u0576 \u0540\u0565\u0580\u0569\u0561\u0583\u0578\u056d",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131817779",
+   "posted_at": "2026-06-12T05:51:09.921Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Aprendiz SENA \u2013 Dise\u00f1o Grafico (Contrato de Aprendizaje)",
+   "location": "Medell\u00edn, CO",
+   "department": "Marketing",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131722251",
+   "posted_at": "2026-06-11T16:35:06.153Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Account manager",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131703389",
+   "posted_at": "2026-06-11T15:07:20.831Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Team Manager (Online Gaming)",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131699893",
+   "posted_at": "2026-06-11T14:55:53.227Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Commercial Coordinator",
+   "location": "Buenos Aires, AR",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131660419",
+   "posted_at": "2026-06-11T12:27:03.915Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Product Delivery Manager",
+   "location": "Lisbon, PT",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131626089",
+   "posted_at": "2026-06-11T09:25:14.568Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\ud55c\uad6d\uc5b4 \uac8c\uc784 \ud504\ub808\uc820\ud130 (Korean Game Presenter)",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131610855",
+   "posted_at": "2026-06-11T08:30:38.056Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Korean Speaker",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131613879",
+   "posted_at": "2026-06-11T08:24:02.794Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Danish Speaking Online Casino Dealer",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131613252",
+   "posted_at": "2026-06-11T08:23:25.659Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Italian Speaking (Relocation Provided)",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131608665",
+   "posted_at": "2026-06-11T08:01:16.588Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter (Online Croupier) - Dutch Speaking",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131606346",
+   "posted_at": "2026-06-11T07:55:23.583Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Game Artist",
+   "location": "Medell\u00edn, CO",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131600064",
+   "posted_at": "2026-06-11T07:07:03.576Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Aprendiz Legal \u2013 Contrato de Aprendizaje SENA",
+   "location": "Medell\u00edn, CO",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131506239",
+   "posted_at": "2026-06-10T17:18:07.549Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Regulatory Compliance Specialist ",
+   "location": "Southfield, US",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131488589",
+   "posted_at": "2026-06-10T15:41:16.521Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Regulatory Compliance Specialist ",
+   "location": "Fairfield, US",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131485837",
+   "posted_at": "2026-06-10T15:40:35.845Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Regulatory Compliance Specialist ",
+   "location": "Philadelphia, US",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131485880",
+   "posted_at": "2026-06-10T15:39:56.378Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Regulatory Compliance Specialist ",
+   "location": "Atlantic City, US",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131486634",
+   "posted_at": "2026-06-10T15:39:27.056Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Aprendiz SENA \u2013 Recursos Humanos (Contrato de Aprendizaje)",
+   "location": "Medell\u00edn, CO",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131461206",
+   "posted_at": "2026-06-10T14:07:38.626Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Aprendiz SENA \u2013 Controller (Contrato de Aprendizaje)",
+   "location": "Medell\u00edn, CO",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131462081",
+   "posted_at": "2026-06-10T14:02:25.641Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Account manager",
+   "location": "Bogot\u00e1, CO",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131453806",
+   "posted_at": "2026-06-10T13:33:01.925Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Operations Controller",
+   "location": "Medell\u00edn, CO",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131446169",
+   "posted_at": "2026-06-10T12:54:46.500Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Integration Specialist",
+   "location": "Buenos Aires, AR",
+   "department": "Integration Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131181880",
+   "posted_at": "2026-06-09T15:30:30.655Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Back Office Configuration",
+   "location": "Buenos Aires, AR",
+   "department": "Integration Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000131180087",
+   "posted_at": "2026-06-09T15:30:29.008Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Vilnius, LT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000130184699",
+   "posted_at": "2026-06-04T10:01:58.020Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Vilnius, LT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000130184679",
+   "posted_at": "2026-06-04T10:01:40.695Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Summer Position: Turkish Game Presenter",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000130179139",
+   "posted_at": "2026-06-04T09:30:19.139Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Floor Supervisor (Online Gaming)",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000130079099",
+   "posted_at": "2026-06-03T19:21:35.168Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Recruitment Team Lead (High Volume)",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000130056098",
+   "posted_at": "2026-06-03T17:09:34.589Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "UX/UI Designer",
+   "location": "Lisbon, PT",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000130027794",
+   "posted_at": "2026-06-03T15:01:18.018Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Datu zin\u0101tnieks / Data Scientist (Information Security Threat Detection team) ",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129957309",
+   "posted_at": "2026-06-03T09:52:18.743Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Summer Position: English Speaking Game Presenter ",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129939719",
+   "posted_at": "2026-06-03T08:29:59.944Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Security CCTV Technician",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129814829",
+   "posted_at": "2026-06-02T16:37:27.450Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Inform\u0101cijas Sist\u0113mu Dro\u0161\u012bbas In\u017eenieris (Red Team)/Information System Security Engineer (Red Team)",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129746416",
+   "posted_at": "2026-06-02T12:38:55.596Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Greek Speaking Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129684629",
+   "posted_at": "2026-06-02T08:26:11.145Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Trainer (Online Casino)",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129555595",
+   "posted_at": "2026-06-01T17:19:14.607Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Tehniskais sp\u0113\u013cu m\u0101kslinieks(-ce) /Technical Game Artist",
+   "location": "Riga, LV",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129478286",
+   "posted_at": "2026-06-01T12:53:51.484Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Account Manager",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129464039",
+   "posted_at": "2026-06-01T11:36:27.081Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Svensktalande Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129439359",
+   "posted_at": "2026-06-01T09:17:48.393Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Talent Acquisition Specialist",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129245206",
+   "posted_at": "2026-05-29T19:25:04.810Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Floor Supervisor (Online Casino)",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000129034379",
+   "posted_at": "2026-05-28T20:39:05.765Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Gaming Equipment Integrity",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000128809809",
+   "posted_at": "2026-05-27T22:03:18.947Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Bartender? Become On Camera Host \u2013 No Bar, No Rush \u2013 Southfield",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000128758282",
+   "posted_at": "2026-05-27T15:49:58.828Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Mathematician",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000127890928",
+   "posted_at": "2026-05-22T13:08:37.969Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Call Center Rep? Earn Up to $23/hr (Tips) On Camera \u2013 No Headset, No Queue \u2013 Southfield",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000127762110",
+   "posted_at": "2026-05-21T22:35:28.252Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Team Manager - Operations",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000127464669",
+   "posted_at": "2026-05-20T15:07:16.801Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Automatiz\u0101cijas kvalit\u0101tes nodro\u0161in\u0101\u0161anas in\u017eenieris/QA Automation Engineer",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000127366999",
+   "posted_at": "2026-05-20T07:27:40.035Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "T\u00fcrk\u00e7e Konu\u015fan Oyun Sunucusu \u2013 Yaz Pozisyonu",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000127191969",
+   "posted_at": "2026-05-19T12:03:04.439Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Frontend Gameplay Developer",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000127147939",
+   "posted_at": "2026-05-19T08:13:13.023Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Cashier? Earn Up to $23/hr (Tips) On Camera \u2013 No Register, No Lines \u2013 Atlantic City",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126759190",
+   "posted_at": "2026-05-15T19:57:06.332Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live Casino Dealer \u2013 up to $23/hr (Tips) \u2013 No Experience Needed \u2013 Paid Training",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126758954",
+   "posted_at": "2026-05-15T19:55:39.298Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Front desk? Be a table Games Dealer \u2013 Up to $23/hr + Tips \u2013 Live Studio \u2013 No Experience Needed",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126750839",
+   "posted_at": "2026-05-15T18:35:01.516Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "French & English Speaking Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126662751",
+   "posted_at": "2026-05-15T09:59:47.698Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler - Afternoon / Night shift",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126662759",
+   "posted_at": "2026-05-15T09:58:59.809Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Part-Time Casino Dealer \u2013 Weekends Only \u2013 Students & Second Jobs Welcome \u2013 up to $25/hr + Tips",
+   "location": "Philadelphia, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126541370",
+   "posted_at": "2026-05-14T15:23:41.984Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Apresentadora de Jogos (Crupi\u00ea Online)",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126537044",
+   "posted_at": "2026-05-14T15:05:50.941Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Unreal Engine / C++ Developer",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126503709",
+   "posted_at": "2026-05-14T11:50:58.726Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Frontend Engineer - Graphics & Rendering  / Frontend izstr\u0101d\u0101t\u0101js - grafika un render\u0113\u0161ana ",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126492000",
+   "posted_at": "2026-05-14T10:07:28.770Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Audio Specialist",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126483581",
+   "posted_at": "2026-05-14T09:06:40.937Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Especialista de Suporte de Equipamentos",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Property Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126472494",
+   "posted_at": "2026-05-14T07:38:08.993Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Online Casino Dealer",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126330309",
+   "posted_at": "2026-05-13T14:24:18.634Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior QA Automation Engineer",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126329429",
+   "posted_at": "2026-05-13T14:19:22.275Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Part-Time Customer Service Representative \u2013 Flexible 4hr or 8hr Shifts + Tips (Game Presenter)",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126304800",
+   "posted_at": "2026-05-13T12:53:16.219Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live \u056d\u0561\u0572\u0561\u057e\u0561\u0580",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126242899",
+   "posted_at": "2026-05-13T07:51:42.508Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Project Manager",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Property Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126096832",
+   "posted_at": "2026-05-12T13:59:46.508Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126095019",
+   "posted_at": "2026-05-12T13:52:52.943Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Integration Specialist",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Integration Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000126069747",
+   "posted_at": "2026-05-12T12:28:58.706Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter (Canning, Ezeiza)",
+   "location": "Buenos Aires, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125887429",
+   "posted_at": "2026-05-11T15:55:15.289Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Danish Speaking Online Casino Dealer",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125767410",
+   "posted_at": "2026-05-11T07:50:45.817Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Trainer",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125408489",
+   "posted_at": "2026-05-08T20:36:43.860Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Academy Manager",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125404791",
+   "posted_at": "2026-05-08T20:22:52.938Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Floor Supervisor",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125405239",
+   "posted_at": "2026-05-08T20:13:59.631Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Team Manager",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125400930",
+   "posted_at": "2026-05-08T19:56:22.478Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Moreno, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125399877",
+   "posted_at": "2026-05-08T19:37:21.953Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Team Manager (Online Gaming)",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125343090",
+   "posted_at": "2026-05-08T13:57:40.146Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Service Support Specialist (On-Site Moreno)",
+   "location": "Buenos Aires, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125188075",
+   "posted_at": "2026-05-07T16:58:30.433Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Kvalit\u0101tes nodro\u0161in\u0101\u0161anas in\u017eenieris / QA Engineer ",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125134176",
+   "posted_at": "2026-05-07T13:10:19.039Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Biznesa Inteli\u0123ences Datu Anal\u012bti\u0137is / Business Intelligence Data Analyst",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000125105217",
+   "posted_at": "2026-05-07T11:10:08.609Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live \u056d\u0561\u0572\u0561\u057e\u0561\u0580 - \u0533\u056b\u0577\u0565\u0580\u0561\u0575\u056b\u0576 \u0540\u0565\u0580\u0569\u0561\u0583\u0578\u056d",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000124813918",
+   "posted_at": "2026-05-06T06:33:15.178Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Animator",
+   "location": "Gothenburg, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000123690119",
+   "posted_at": "2026-04-29T13:13:12.482Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Animator",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000123636249",
+   "posted_at": "2026-04-29T08:37:09.905Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Banco de Talentos - Afirmativo PCD ",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000122311438",
+   "posted_at": "2026-04-22T17:29:19.945Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Produktu biznesa anal\u012bti\u0137is / Product Business Analyst",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000122174886",
+   "posted_at": "2026-04-22T06:33:09.323Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Operations Manager",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Property Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000121950683",
+   "posted_at": "2026-04-21T07:10:24.943Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Grand Rapids, MI (Employee Referral)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000121846306",
+   "posted_at": "2026-04-20T17:22:12.222Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Normat\u012bv\u0101s atbilst\u012bbas speci\u0101lists(-e)/ Regulatory Compliance Specialist",
+   "location": "Riga, LV",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000121738007",
+   "posted_at": "2026-04-20T10:23:54.221Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Support Specialist (On-Site Moreno)",
+   "location": "Buenos Aires, AR",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000121226417",
+   "posted_at": "2026-04-16T14:40:45.597Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Equipment Support Specialist (On-Site Moreno)",
+   "location": "Buenos Aires, AR",
+   "department": "Technical Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000121061637",
+   "posted_at": "2026-04-15T22:02:07.909Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Service Support Specialist (On-Site Canning, Ezeiza)",
+   "location": "Buenos Aires, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000120763739",
+   "posted_at": "2026-04-14T16:10:11.937Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior QA Engineer",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000119592059",
+   "posted_at": "2026-04-09T12:40:07.764Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Game Mathematician",
+   "location": "Sofia, BG",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000119045387",
+   "posted_at": "2026-04-07T07:45:16.934Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "3D Motion Graphic Artist",
+   "location": "St. Julian's, MT",
+   "department": "Marketing",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000118107552",
+   "posted_at": "2026-04-01T09:23:46.519Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Coordinator Team Lead",
+   "location": "Sofia, BG",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000118094417",
+   "posted_at": "2026-04-01T08:43:50.118Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Business Controller",
+   "location": "Tbilisi, GE",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000116995723",
+   "posted_at": "2026-03-26T15:02:38.066Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Due Diligence Specialist",
+   "location": "San Jos\u00e9, CR",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000115685982",
+   "posted_at": "2026-03-19T15:20:46.814Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000115519212",
+   "posted_at": "2026-03-18T19:42:31.676Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Elektroin\u017eenieris(-e)/ Electrical Engineer",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000114913077",
+   "posted_at": "2026-03-16T08:39:20.557Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Product Business Analyst",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000114012542",
+   "posted_at": "2026-03-11T10:11:42.885Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Frontend Developer",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000113729377",
+   "posted_at": "2026-03-10T13:59:37.899Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Floor Supervisor",
+   "location": "Southfield, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000113263287",
+   "posted_at": "2026-03-06T20:15:13.326Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Apresentador de Jogos (Crupi\u00ea Online) \u2013 Portugu\u00e9s requerido",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000112983720",
+   "posted_at": "2026-03-05T16:45:23.843Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Key Account Manager - iGaming Peru",
+   "location": "Lima, PE",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000110554845",
+   "posted_at": "2026-02-22T17:01:15.453Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studio Interior Designer",
+   "location": "S\u00e3o Paulo, BR",
+   "department": "Products",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000109692005",
+   "posted_at": "2026-02-17T11:22:22.134Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Sist\u0113mu in\u017eenieri (SRE) / Systems Engineer (SRE)",
+   "location": "Riga, LV",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000107700385",
+   "posted_at": "2026-02-06T10:06:22.816Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler (\u0432\u0456\u0434\u043f\u043e\u0432\u0456\u0434\u0430\u043b\u044c\u043d\u0438\u0439 \u0437\u0430 \u0442\u0430\u0441\u0443\u0432\u0430\u043d\u043d\u044f \u043a\u0430\u0440\u0442)",
+   "location": "Bucharest, RO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000105084275",
+   "posted_at": "2026-01-23T08:48:29.165Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter (\u0412\u0435\u0434\u0443\u0447\u0438\u0439 \u0456\u0433\u043e\u0440)",
+   "location": "Bucharest, RO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000105081748",
+   "posted_at": "2026-01-23T08:37:55.174Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Kaunas, LT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000102092065",
+   "posted_at": "2026-01-07T13:58:32.343Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Kaunas, LT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000102091681",
+   "posted_at": "2026-01-07T13:57:38.399Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Arabic Speaking Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000101875125",
+   "posted_at": "2026-01-06T15:21:03.707Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Italian & English Speaking - Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000101610114",
+   "posted_at": "2026-01-05T12:38:12.284Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Turkish and English Speaking Game Presenter \u2013 Relocation to Malta",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000101348118",
+   "posted_at": "2026-01-02T15:04:57.789Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Korean Speaking Game Presenter (\ud55c\uad6d\uc5b4 \uad6c\uc0ac\uc790)",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000101315386",
+   "posted_at": "2026-01-02T10:06:17.918Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Finnish Speaking Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000101311915",
+   "posted_at": "2026-01-02T09:30:17.526Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Norwegian Speaking Game Presenter",
+   "location": "Birkirkara, MT",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000101310746",
+   "posted_at": "2026-01-02T09:27:10.079Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Russian Speaking Game Presenter",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000100380685",
+   "posted_at": "2025-12-24T11:59:48.546Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Moder\u00e1tor/ka \u017eiv\u00e9ho vys\u00edl\u00e1n\u00ed",
+   "location": "Prague, CZ",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000099524195",
+   "posted_at": "2025-12-18T11:36:13.883Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Frontend Developer",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000098945163",
+   "posted_at": "2025-12-15T13:41:46.078Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "QA Engineer (Games)",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000096428655",
+   "posted_at": "2025-12-01T15:59:39.355Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "2D Game Artist",
+   "location": "Gothenburg, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000093012490",
+   "posted_at": "2025-11-11T15:45:38.891Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "2D Game Artist",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000093012255",
+   "posted_at": "2025-11-11T15:45:10.688Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "JavaScript / TypeScript Engineer (React)",
+   "location": "Lisbon, PT",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000091990208",
+   "posted_at": "2025-11-06T09:26:01.513Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Backend Developer (Scala)",
+   "location": "Warsaw, PL",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000084218685",
+   "posted_at": "2025-09-26T13:30:15.924Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live \u056d\u0561\u0572\u0561\u057e\u0561\u0580 - \u0531\u057c\u0561\u057e\u0578\u057f\u0575\u0561\u0576 \u0540\u0565\u0580\u0569\u0561\u0583\u0578\u056d",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000083182814",
+   "posted_at": "2025-09-22T08:55:12.672Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Moder\u00e1tor/ka \u017eiv\u00e9ho vys\u00edl\u00e1n\u00ed - no\u010dn\u00ed sm\u011bny",
+   "location": "Prague, CZ",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000080168431",
+   "posted_at": "2025-09-05T12:43:53.577Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Team Manager - 100% On-site (Ezeiza)",
+   "location": "Buenos Aires, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000077079455",
+   "posted_at": "2025-08-19T16:58:29.422Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter-Morning Shift",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073529375",
+   "posted_at": "2025-07-30T09:38:31.915Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Night Shift",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073527340",
+   "posted_at": "2025-07-30T09:38:04.601Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Afternoon Shift",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073528638",
+   "posted_at": "2025-07-30T09:37:20.751Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Russian Speaking Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073528346",
+   "posted_at": "2025-07-30T09:35:32.268Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073528925",
+   "posted_at": "2025-07-30T09:34:58.829Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073528407",
+   "posted_at": "2025-07-30T09:34:10.986Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000073528257",
+   "posted_at": "2025-07-30T09:33:33.384Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u0420\u0443\u0441\u0441\u043a\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0439 Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000071264565",
+   "posted_at": "2025-07-17T10:27:49.565Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Servicio al cliente - Presentadora de Juego Ingles Intermedio",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000070927255",
+   "posted_at": "2025-07-15T21:05:40.025Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Dutch speaking Game Presenter / Server/Waitress / Relocation included",
+   "location": "Amsterdam, NL",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000066275713",
+   "posted_at": "2025-06-20T07:12:16.740Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Frontend Developer with focus on UX/UI -Nolimit City",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000064055096",
+   "posted_at": "2025-06-09T07:45:58.129Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "UX/UI Designer with Frontend Development Skills -Nolimit City",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000064054397",
+   "posted_at": "2025-06-09T07:43:07.491Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer -Nolimit City",
+   "location": "Stockholm, SE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000064054078",
+   "posted_at": "2025-06-09T07:40:15.226Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Servicio al cliente - Presentadora de Juego (Medellin) Ingles Intermedio",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000055411940",
+   "posted_at": "2025-04-23T21:19:40.769Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter",
+   "location": "Bucharest, RO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000050197671",
+   "posted_at": "2025-03-27T07:38:43.351Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Servicio al cliente - Presentadora de Juego (Medellin)",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000047842276",
+   "posted_at": "2025-03-14T18:42:14.797Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector (Part time)",
+   "location": "Buenos Aires, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000044350167",
+   "posted_at": "2025-02-24T19:55:19.012Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Bilingual Live Casino Game Presenter Medellin ",
+   "location": "Medell\u00edn, CO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000043747117",
+   "posted_at": "2025-02-20T15:54:09.586Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u053d\u0561\u0572\u0561\u0569\u0572\u0569\u0561\u057e\u0561\u0580 (\u0577\u0561\u0586\u056c\u0565\u0580) - 08:00 - 16:00",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000038428226",
+   "posted_at": "2025-01-24T06:30:52.969Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live \u053d\u0561\u0572\u0561\u057e\u0561\u0580",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000036383796",
+   "posted_at": "2025-01-14T10:17:19.903Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u053d\u0561\u0572\u0561\u0569\u0572\u0569\u0561\u057e\u0561\u0580 (\u0577\u0561\u0586\u056c\u0565\u0580)",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000036357145",
+   "posted_at": "2025-01-14T07:43:12.818Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter (Sp\u0113\u013cu Prezent\u0113t\u0101js)",
+   "location": "Riga, LV",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000035088935",
+   "posted_at": "2025-01-07T07:00:54.156Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "R\u012bga, LV",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000031081370",
+   "posted_at": "2024-12-10T12:47:18.779Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live \u056d\u0561\u0572\u0561\u057e\u0561\u0580",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000030121437",
+   "posted_at": "2024-12-04T11:45:23.763Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u0420\u0443\u0441\u0441\u043a\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0439 Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000030120365",
+   "posted_at": "2024-12-04T11:33:53.441Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u053d\u0561\u0572\u0561\u0569\u0572\u0569\u0561\u057e\u0561\u0580 (\u0577\u0561\u0586\u056c\u0565\u0580)",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000030119880",
+   "posted_at": "2024-12-04T11:33:26.247Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000030119946",
+   "posted_at": "2024-12-04T11:32:20.646Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter / Gap Year / Work Abroad",
+   "location": "Amsterdam, NL",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000028081040",
+   "posted_at": "2024-11-22T14:54:34.437Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter / Klantenservice / Werken in het Buitenland",
+   "location": "Amsterdam, NL",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000027834462",
+   "posted_at": "2024-11-21T10:59:48.141Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "HR Generalist JR",
+   "location": "Ezeiza, AR",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000026528236",
+   "posted_at": "2024-11-14T22:05:58.076Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Open dag in Amsterdam",
+   "location": "Amsterdam, NL",
+   "department": "Marketing",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000023594418",
+   "posted_at": "2024-10-30T15:53:04.838Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Bucharest, RO",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000021060627",
+   "posted_at": "2024-10-17T09:22:58.993Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Turkish Speaking Game Presenter",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000019538931",
+   "posted_at": "2024-10-10T05:55:28.582Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "English Speaking Game Presenter",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000019410955",
+   "posted_at": "2024-10-09T14:35:09.767Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Tbilisi, GE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000017924455",
+   "posted_at": "2024-10-02T06:45:12.332Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Turkish Speaking Game Presenter",
+   "location": "Sofia, BG",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000017189124",
+   "posted_at": "2024-09-30T06:45:31.606Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector",
+   "location": "Buenos Aires, AR",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999972134224",
+   "posted_at": "2024-03-06T13:02:00.088Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "English Speaking Game Presenter",
+   "location": "Sofia, BG",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999970712363",
+   "posted_at": "2024-02-29T10:08:32.045Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "\u0420\u0443\u0441\u0441\u043a\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0439 Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999949355199",
+   "posted_at": "2023-12-06T10:38:42.019Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shuffler",
+   "location": "Sofia, BG",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999947785034",
+   "posted_at": "2023-11-30T09:26:40.501Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Flemish Speaking Game Presenter",
+   "location": "Spa, BE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999900810723",
+   "posted_at": "2023-04-19T11:04:15.683Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Spanish and English Speaking",
+   "location": "Murcia, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999858944044",
+   "posted_at": "2022-10-20T13:01:29.999Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application - Madrid",
+   "location": "Madrid, ES",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999814092718",
+   "posted_at": "2022-03-23T16:27:17.000Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenter - Flemish & French Speaking",
+   "location": "Spa, BE",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/743999743833497",
+   "posted_at": "2021-04-22T14:53:19.000Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Front End Game Developer",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138636290",
+   "posted_at": "2026-07-20T12:57:03.680Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "iGaming Floor Supervisor (Southfield, MI | $22.00/hr)",
+   "location": "Southfield, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138630989",
+   "posted_at": "2026-07-20T12:31:33.406Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Trader",
+   "location": "Sofia, BG",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138619199",
+   "posted_at": "2026-07-20T11:38:30.853Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Trader",
+   "location": "Sofia, BG",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138609105",
+   "posted_at": "2026-07-20T10:40:39.501Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Site Manager",
+   "location": "Atlantic City, US",
+   "department": "General Management/Executive",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138332722",
+   "posted_at": "2026-07-17T13:43:04.783Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Analytics Manager",
+   "location": "Sofia, BG",
+   "department": "Data",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138322888",
+   "posted_at": "2026-07-17T12:40:30.688Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Trader",
+   "location": "Sofia, BG",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138317905",
+   "posted_at": "2026-07-17T12:27:59.303Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Business Intelligence Expert",
+   "location": "Sofia, BG",
+   "department": "Corporate Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138302144",
+   "posted_at": "2026-07-17T10:50:22.709Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Data Engineer",
+   "location": "Tartu, EE",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138279892",
+   "posted_at": "2026-07-17T08:48:35.547Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Person\u0101la Administrat\u012bvais Speci\u0101lists",
+   "location": "Riga, LV",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138128529",
+   "posted_at": "2026-07-16T14:00:09.543Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Tehnisk\u0101 atbalsta speci\u0101lists",
+   "location": "Riga, LV",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138122620",
+   "posted_at": "2026-07-16T13:41:56.168Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Technical Support Specialist",
+   "location": "Riga, LV",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000138123329",
+   "posted_at": "2026-07-16T13:41:42.809Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Atenci\u00f3n a p\u00fablico en Portugu\u00e9s NATIVO - Sin Experiencia",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137933160",
+   "posted_at": "2026-07-15T15:55:44.899Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Payroll Expert ",
+   "location": "Sofia, BG",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137878159",
+   "posted_at": "2026-07-15T12:12:44.896Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "General Assistant ",
+   "location": "Hull, GB",
+   "department": "Manufacturing",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137867409",
+   "posted_at": "2026-07-15T11:20:09.245Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Accounting Specialist (GL)",
+   "location": "Sofia, BG",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137840089",
+   "posted_at": "2026-07-15T09:05:21.019Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Account Manager ",
+   "location": "Lima, PE",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137825681",
+   "posted_at": "2026-07-15T08:12:16.460Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Fullstack Developer",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137659849",
+   "posted_at": "2026-07-14T12:49:07.159Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "ProdOps Engineer (Intern)",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137652339",
+   "posted_at": "2026-07-14T12:10:27.794Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Scala Developer",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137633929",
+   "posted_at": "2026-07-14T10:15:25.853Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Operations Executive",
+   "location": "Gibraltar, GI",
+   "department": "Sales Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137627169",
+   "posted_at": "2026-07-14T09:41:45.576Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Team Manager [025557]",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000137487851",
+   "posted_at": "2026-07-13T15:18:26.463Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Coordinator/Southfield, MI",
+   "location": "Southfield, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136880531",
+   "posted_at": "2026-07-09T18:29:18.940Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Operation PowerShell Engineer",
+   "location": " Nicosia, CY",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136725660",
+   "posted_at": "2026-07-09T06:34:49.781Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "IT Operation PowerShell Engineer",
+   "location": "Sofia, BG",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136725869",
+   "posted_at": "2026-07-09T06:31:16.210Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Office Coordinator",
+   "location": "London, GB",
+   "department": "Administrative Services",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136519349",
+   "posted_at": "2026-07-08T16:18:59.381Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Atenci\u00f3n Bilingue Ingl\u00e9s C1 - Sin experiencia",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136496589",
+   "posted_at": "2026-07-08T14:51:49.414Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "People and Culture Assistant",
+   "location": "Tallinn/Tartu, EE",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136446735",
+   "posted_at": "2026-07-08T11:36:35.432Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Atenci\u00f3n Bilingue Ingl\u00e9s C1 - Sin experiencia",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136338420",
+   "posted_at": "2026-07-07T22:21:48.068Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Project Manager",
+   "location": "Kyiv, UA",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136194840",
+   "posted_at": "2026-07-07T10:36:03.938Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Reporting Engineer ",
+   "location": "Tartu, EE",
+   "department": "Data",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000136168739",
+   "posted_at": "2026-07-07T08:32:06.603Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Engineer",
+   "location": "Sofia, BG",
+   "department": "General Research & Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000135481881",
+   "posted_at": "2026-07-02T11:52:17.576Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Pitboss [025546]",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000135327389",
+   "posted_at": "2026-07-01T18:07:35.022Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Transfer Pricing Manager ",
+   "location": "London, GB",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000135206649",
+   "posted_at": "2026-07-01T08:43:58.230Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "QA Engineer (Intern) ",
+   "location": "Kyiv, UA",
+   "department": "Quality",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000135025576",
+   "posted_at": "2026-06-30T13:57:27.363Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior QA Engineer ",
+   "location": "Sofia, BG",
+   "department": "Quality",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000135010415",
+   "posted_at": "2026-06-30T13:19:18.128Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Database Administrator",
+   "location": "Tartu / Tallinn, EE",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134992049",
+   "posted_at": "2026-06-30T11:33:47.815Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Database Administrator",
+   "location": "Tartu / Tallinn, EE",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134991255",
+   "posted_at": "2026-06-30T11:32:44.420Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer",
+   "location": "Tartu, EE",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134991264",
+   "posted_at": "2026-06-30T11:31:26.820Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Project Manager",
+   "location": "Tallin / Tartu, EE",
+   "department": "Core Professional Services",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134939869",
+   "posted_at": "2026-06-30T06:59:06.458Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Development QA Engineer",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134488260",
+   "posted_at": "2026-06-26T14:21:22.185Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Account Manager",
+   "location": "Latsia, CY",
+   "department": "Core Professional Services",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134457459",
+   "posted_at": "2026-06-26T12:08:42.719Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Product Owner (Finance & Accounting)",
+   "location": "Tartu, EE",
+   "department": "Product Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134399320",
+   "posted_at": "2026-06-26T06:09:17.267Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Delivery & Operations Manager ",
+   "location": "Tartu, EE",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134236011",
+   "posted_at": "2026-06-25T11:10:49.871Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Project, Governance & Operations Manager ",
+   "location": "Tartu, EE",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134237344",
+   "posted_at": "2026-06-25T11:09:54.465Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Solution Engineer ",
+   "location": "Tartu, EE",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000134236859",
+   "posted_at": "2026-06-25T11:08:29.992Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Onboarding Solution Lead",
+   "location": "Sofia, BG",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133864536",
+   "posted_at": "2026-06-24T06:27:34.832Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Engineer",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133631876",
+   "posted_at": "2026-06-23T15:04:54.490Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Business Project Manager",
+   "location": "Sofia, BG",
+   "department": "Core Professional Services",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133569209",
+   "posted_at": "2026-06-23T11:24:08.383Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "iGaming Card Shuffler- Swing Shift (3PM-11PM)",
+   "location": "Southfield, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133396391",
+   "posted_at": "2026-06-22T15:04:02.314Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live Dealer - Swing Shift (3PM-11PM)",
+   "location": "Southfield, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133390886",
+   "posted_at": "2026-06-22T15:01:12.204Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "iGaming Card Shuffler - Night Shift (11PM-7AM)",
+   "location": "Atlantic City, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133394099",
+   "posted_at": "2026-06-22T14:52:46.418Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Project, Governance & Operations Manager ",
+   "location": "Kyiv, UA",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133358709",
+   "posted_at": "2026-06-22T12:49:07.903Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Delivery & Operations Manager ",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133357121",
+   "posted_at": "2026-06-22T12:47:41.037Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Solution Engineer ",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133358049",
+   "posted_at": "2026-06-22T12:46:32.186Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Project, Governance & Operations Manager ",
+   "location": "Sofia, BG",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133356660",
+   "posted_at": "2026-06-22T12:43:26.774Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Delivery & Operations Manager ",
+   "location": "Sofia, BG",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133356979",
+   "posted_at": "2026-06-22T12:41:46.436Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Solution Engineer ",
+   "location": "Sofia, BG",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133355494",
+   "posted_at": "2026-06-22T12:40:46.828Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Delivery & Operations Manager ",
+   "location": "Gibraltar, GI",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133356159",
+   "posted_at": "2026-06-22T12:39:49.165Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Delivery & Operations Manager ",
+   "location": "London, GB",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133353930",
+   "posted_at": "2026-06-22T12:39:13.694Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Project, Governance & Operations Manager ",
+   "location": "London, GB",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133354324",
+   "posted_at": "2026-06-22T12:37:28.518Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Project, Governance & Operations Manager ",
+   "location": "Gibraltar, GI",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133355359",
+   "posted_at": "2026-06-22T12:36:53.377Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Solution Engineer ",
+   "location": "Gibraltar, GI",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133351832",
+   "posted_at": "2026-06-22T12:35:52.274Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "AI Solution Engineer ",
+   "location": "London, GB",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133354759",
+   "posted_at": "2026-06-22T12:34:58.278Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Front End Game Developer",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133057199",
+   "posted_at": "2026-06-19T12:21:14.748Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Network Operations Engineer (Internship) ",
+   "location": "Kyiv, UA",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000133048339",
+   "posted_at": "2026-06-19T11:24:48.950Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Software Developer Python",
+   "location": "Latsia, CY",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000132913159",
+   "posted_at": "2026-06-18T16:26:41.257Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Business Analyst ",
+   "location": "Kyiv, UA",
+   "department": "Product Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000132826229",
+   "posted_at": "2026-06-18T09:59:47.243Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Data Analyst",
+   "location": "Sofia, BG",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000132778248",
+   "posted_at": "2026-06-18T05:39:36.020Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Sales Manager",
+   "location": "Sliema, MT",
+   "department": "Sales",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000132664719",
+   "posted_at": "2026-06-17T14:56:14.540Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "English Dealer",
+   "location": "Bucure\u0219ti, RO",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000132652739",
+   "posted_at": "2026-06-17T14:07:11.777Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Greek Dealer",
+   "location": "Bucure\u0219ti, RO",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000132588409",
+   "posted_at": "2026-06-17T08:47:33.750Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Database Administrator",
+   "location": "Sofia, BG",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000131686260",
+   "posted_at": "2026-06-11T14:26:39.944Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Product Manager ",
+   "location": "Tallinn / Tartu, EE",
+   "department": "Product Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000131420459",
+   "posted_at": "2026-06-10T10:30:42.142Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live Dealer - Swing Shift (3PM -11PM) - Bensalem PA",
+   "location": "Bensalem, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000130569439",
+   "posted_at": "2026-06-05T17:47:21.890Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Global Talent Acquisition Partner",
+   "location": "Tallinn / Tartu, EE",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000130035109",
+   "posted_at": "2026-06-03T15:27:37.892Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Python Software Developer - Algos",
+   "location": "London, GB",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000129833759",
+   "posted_at": "2026-06-02T18:40:48.767Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Graphic Artist",
+   "location": "Lichfield, GB",
+   "department": "Gaming",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000128426435",
+   "posted_at": "2026-05-26T08:35:37.175Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Fullstack Team Leader",
+   "location": "Kyiv, UA",
+   "department": "Product Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000128224724",
+   "posted_at": "2026-05-25T13:38:35.399Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live Dealer - 3PM-11PM Shift - Atlantic City, NJ",
+   "location": "Atlantic City, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000127925080",
+   "posted_at": "2026-05-22T15:12:43.827Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Live Dealer - Morning Shift (7AM -3PM) ",
+   "location": "Bensalem, US",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000127709555",
+   "posted_at": "2026-05-21T16:01:06.787Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Product Manager ",
+   "location": "Sofia, BG",
+   "department": "Product Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000127398239",
+   "posted_at": "2026-05-20T10:03:57.035Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Product Manager ",
+   "location": "Kyiv, UA",
+   "department": "Product Development",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000127391480",
+   "posted_at": "2026-05-20T09:27:42.826Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Animator",
+   "location": "Sofia, BG",
+   "department": "Gaming",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000126528789",
+   "posted_at": "2026-05-14T14:20:49.512Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Animator",
+   "location": "Kyiv, UA",
+   "department": "Gaming",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000126527282",
+   "posted_at": "2026-05-14T14:18:20.580Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Support Engineer ",
+   "location": "Sofia, BG",
+   "department": "Core Professional Services",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000126322820",
+   "posted_at": "2026-05-13T13:56:04.625Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Technical Project Manager",
+   "location": "Kyiv, UA",
+   "department": "Development Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000126318519",
+   "posted_at": "2026-05-13T13:41:34.191Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "K\u0101r\u0161u jauc\u0113js/-a",
+   "location": "Riga, LV",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000124820969",
+   "posted_at": "2026-05-06T07:23:49.249Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Sp\u0113\u013cu prezent\u0113t\u0101js ar Ang\u013cu valodas zin\u0101\u0161an\u0101m",
+   "location": "Riga, LV",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000123642949",
+   "posted_at": "2026-04-29T09:09:30.454Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Network Administrator ",
+   "location": "Lima, PE",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000123467164",
+   "posted_at": "2026-04-28T14:16:48.988Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Team Leader",
+   "location": "Kyiv, UA",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000123441891",
+   "posted_at": "2026-04-28T12:27:39.331Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Business Analyst ",
+   "location": "Kyiv, UA",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000121427622",
+   "posted_at": "2026-04-17T13:34:22.918Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Senior DevOps Engineer",
+   "location": "Sofia, BG",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000120925392",
+   "posted_at": "2026-04-15T11:22:20.129Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Revenue Accountant",
+   "location": "Nicosia, CY",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000120647957",
+   "posted_at": "2026-04-14T09:25:44.629Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "English speaking Game presenter",
+   "location": "Riga, LV",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000119035027",
+   "posted_at": "2026-04-07T06:46:00.631Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "KOREAN-SPEAKING GAME PRESENTER ",
+   "location": "Riga, LV",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000115906783",
+   "posted_at": "2026-03-20T15:16:29.342Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Danish speaking Game presenter",
+   "location": "Riga, LV",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000115838182",
+   "posted_at": "2026-03-20T09:59:34.832Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Java Architect",
+   "location": "Sofia, BG",
+   "department": "Software",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000115433647",
+   "posted_at": "2026-03-18T12:56:25.368Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Atenci\u00f3n a p\u00fablico en Portugu\u00e9s - Sin Experiencia",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000114198943",
+   "posted_at": "2026-03-12T01:56:33.657Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Game Presenters ",
+   "location": "Lima, PE",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000110821260",
+   "posted_at": "2026-02-23T17:23:47.243Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Business Analyst",
+   "location": "Kyiv, UA",
+   "department": "Information Technology",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000110736120",
+   "posted_at": "2026-02-23T11:41:32.224Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Quality Assurance Specialist ",
+   "location": "Lima, PE",
+   "department": "Quality",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000109237185",
+   "posted_at": "2026-02-13T14:30:10.001Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Inspector SSM - Studii Medii - Part Time",
+   "location": "Bucharest, RO",
+   "department": "Safety & Security",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000050471260",
+   "posted_at": "2025-03-28T09:50:59.820Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer",
+   "location": "Austin",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/light/a13190b1-4817-42d0-8b3e-85a2ae376d6e",
+   "posted_at": "2026-03-23T19:44:14.679+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Sales",
+   "location": "Austin",
+   "department": "GTM",
+   "url": "https://jobs.ashbyhq.com/light/1527d07e-7b2f-45cf-a771-091e5f7a621b",
+   "posted_at": "2026-07-07T18:26:29.858+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Partner Manager",
+   "location": "Austin",
+   "department": "GTM",
+   "url": "https://jobs.ashbyhq.com/light/b86d419f-628b-413e-9eef-9caa6a095f38",
+   "posted_at": "2026-07-16T21:18:06.945+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Business Operations",
+   "location": "Austin",
+   "department": "BizOps",
+   "url": "https://jobs.ashbyhq.com/light/3020e1a2-5122-46ba-b180-5d45c1321509",
+   "posted_at": "2026-06-10T15:02:07.629+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Partner Growth",
+   "location": "Austin",
+   "department": "GTM",
+   "url": "https://jobs.ashbyhq.com/light/8ffe0b2d-a5b6-4bd5-bb17-927d4f0a87ef",
+   "posted_at": "2026-06-08T14:29:27.729+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Channel Partnerships",
+   "location": "Austin",
+   "department": "GTM",
+   "url": "https://jobs.ashbyhq.com/light/19a5b030-50f0-4053-a227-595860e96eed",
+   "posted_at": "2026-06-08T17:28:19.372+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Design",
+   "location": "Austin",
+   "department": "Product",
+   "url": "https://jobs.ashbyhq.com/light/e31ae276-cd5a-4dc0-9dbf-6b15428b9cbd",
+   "posted_at": "2026-07-16T21:18:14.077+00:00",
+   "company": "Light & Wonder",
+   "ats": "ashby",
    "source": "collector"
   }
  ]
