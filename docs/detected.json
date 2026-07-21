@@ -255,5 +255,84 @@
  "Delasport": {
   "ats": "greenhouse",
   "token": "delasport"
+ },
+ "White Hat Gaming": {
+  "ats": "smartrecruiters",
+  "token": "whitehatgaming"
+ },
+ "Strive Gaming": {
+  "ats": "smartrecruiters",
+  "token": "strivegaming"
+ },
+ "Kambi": {
+  "ats": "greenhouse",
+  "token": "kambi"
+ },
+ "OpenBet": {
+  "ats": "smartrecruiters",
+  "token": "openbet"
+ },
+ "Gentoo Media (ex-GiG)": {
+  "ats": "smartrecruiters",
+  "token": "gentoomedia"
+ },
+ "GiG (platform)": {
+  "ats": "smartrecruiters",
+  "token": "gig"
+ },
+ "Continent 8": {
+  "ats": "smartrecruiters",
+  "token": "continent8"
+ },
+ "GeoComply": {
+  "ats": "smartrecruiters",
+  "token": "geocomply"
+ },
+ "Sportradar": {
+  "ats": "smartrecruiters",
+  "token": "sportradar"
+ },
+ "Genius Sports": {
+  "ats": "greenhouse",
+  "token": "geniussports"
+ },
+ "Stats Perform": {
+  "ats": "smartrecruiters",
+  "token": "statsperform"
+ },
+ "LSports": {
+  "ats": "smartrecruiters",
+  "token": "lsports"
+ },
+ "Racing Post / Spotlight Sports": {
+  "ats": "smartrecruiters",
+  "token": "racingpost"
+ },
+ "UK Tote Group": {
+  "ats": "smartrecruiters",
+  "token": "uktotegroup"
+ },
+ "1/ST (Stronach Group)": {
+  "ats": "unknown"
+ },
+ "Churchill Downs / TwinSpires": {
+  "ats": "smartrecruiters",
+  "token": "churchilldowns"
+ },
+ "Arena Racing Company": {
+  "ats": "smartrecruiters",
+  "token": "arenaracingcompany"
+ },
+ "The Jockey Club": {
+  "ats": "smartrecruiters",
+  "token": "thejockeyclub"
+ },
+ "Weatherbys": {
+  "ats": "smartrecruiters",
+  "token": "weatherbys"
+ },
+ "Allwyn": {
+  "ats": "smartrecruiters",
+  "token": "allwyn"
  }
 }
