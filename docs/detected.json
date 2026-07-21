@@ -175,5 +175,85 @@
  "Aristocrat Interactive": {
   "ats": "smartrecruiters",
   "token": "aristocratinteractive"
+ },
+ "IGT": {
+  "ats": "smartrecruiters",
+  "token": "igt"
+ },
+ "Play'n GO": {
+  "ats": "smartrecruiters",
+  "token": "playngo"
+ },
+ "Yggdrasil": {
+  "ats": "smartrecruiters",
+  "token": "yggdrasil"
+ },
+ "Push Gaming": {
+  "ats": "smartrecruiters",
+  "token": "pushgaming"
+ },
+ "Hacksaw Gaming": {
+  "ats": "smartrecruiters",
+  "token": "hacksawgaming"
+ },
+ "Relax Gaming": {
+  "ats": "smartrecruiters",
+  "token": "relaxgaming"
+ },
+ "Greentube (Novomatic)": {
+  "ats": "smartrecruiters",
+  "token": "greentube"
+ },
+ "Novomatic": {
+  "ats": "smartrecruiters",
+  "token": "novomatic"
+ },
+ "Inspired Entertainment": {
+  "ats": "smartrecruiters",
+  "token": "inspiredentertainment"
+ },
+ "Bragg Gaming": {
+  "ats": "smartrecruiters",
+  "token": "bragggaming"
+ },
+ "Amusnet": {
+  "ats": "smartrecruiters",
+  "token": "amusnet"
+ },
+ "EGT Digital": {
+  "ats": "smartrecruiters",
+  "token": "egtdigital"
+ },
+ "Playson": {
+  "ats": "ashby",
+  "token": "playson"
+ },
+ "Wazdan": {
+  "ats": "smartrecruiters",
+  "token": "wazdan"
+ },
+ "BGaming": {
+  "ats": "smartrecruiters",
+  "token": "bgaming"
+ },
+ "SoftSwiss": {
+  "ats": "smartrecruiters",
+  "token": "softswiss"
+ },
+ "Soft2Bet": {
+  "ats": "greenhouse",
+  "token": "soft2bet"
+ },
+ "EveryMatrix": {
+  "ats": "smartrecruiters",
+  "token": "everymatrix"
+ },
+ "Altenar": {
+  "ats": "smartrecruiters",
+  "token": "altenar"
+ },
+ "Delasport": {
+  "ats": "greenhouse",
+  "token": "delasport"
  }
 }
