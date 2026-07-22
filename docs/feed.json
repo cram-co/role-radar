@@ -1,23 +1,23 @@
 {
- "generated_at": "2026-07-22T12:44:40.393719+00:00",
- "job_count": 1892,
+ "generated_at": "2026-07-22T15:48:05.588148+00:00",
+ "job_count": 1943,
  "jobs": [
-  {
-   "title": "Access Administrator",
-   "location": "Warsaw, Poland",
-   "department": "Information Security",
-   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4914881101",
-   "posted_at": "2026-07-17T03:30:16-04:00",
-   "company": "LionHires",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
   {
    "title": "Access Administrator",
    "location": "Panama City, Panama",
    "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4906746101",
    "posted_at": "2026-07-15T07:52:40-04:00",
+   "company": "LionHires",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Access Administrator",
+   "location": "Warsaw, Poland",
+   "department": "Information Security",
+   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4914881101",
+   "posted_at": "2026-07-17T03:30:16-04:00",
    "company": "LionHires",
    "ats": "greenhouse",
    "source": "collector"
@@ -234,9 +234,9 @@
   },
   {
    "title": "Manual QA Engineer",
-   "location": "Mexico City, Mexico",
+   "location": "Santiago, Chile",
    "department": "QA",
-   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902400101",
+   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902413101",
    "posted_at": "2026-06-22T06:25:35-04:00",
    "company": "LionHires",
    "ats": "greenhouse",
@@ -244,10 +244,10 @@
   },
   {
    "title": "Manual QA Engineer",
-   "location": "Lisbon, Portugal",
+   "location": "Mexico City, Mexico",
    "department": "QA",
-   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4917304101",
-   "posted_at": "2026-07-02T03:17:55-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902400101",
+   "posted_at": "2026-06-22T06:25:35-04:00",
    "company": "LionHires",
    "ats": "greenhouse",
    "source": "collector"
@@ -264,10 +264,10 @@
   },
   {
    "title": "Manual QA Engineer",
-   "location": "Santiago, Chile",
+   "location": "Lisbon, Portugal",
    "department": "QA",
-   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902413101",
-   "posted_at": "2026-06-22T06:25:35-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4917304101",
+   "posted_at": "2026-07-02T03:17:55-04:00",
    "company": "LionHires",
    "ats": "greenhouse",
    "source": "collector"
@@ -334,9 +334,9 @@
   },
   {
    "title": "Product Manager",
-   "location": "Mexico City, Mexico",
+   "location": "Santiago, Chile",
    "department": "Product Managers Team",
-   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902431101",
+   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902456101",
    "posted_at": "2026-06-22T06:25:35-04:00",
    "company": "LionHires",
    "ats": "greenhouse",
@@ -344,9 +344,9 @@
   },
   {
    "title": "Product Manager",
-   "location": "Santiago, Chile",
+   "location": "Mexico City, Mexico",
    "department": "Product Managers Team",
-   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902456101",
+   "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902431101",
    "posted_at": "2026-06-22T06:25:35-04:00",
    "company": "LionHires",
    "ats": "greenhouse",
@@ -664,40 +664,10 @@
   },
   {
    "title": "Associate Engineering Manager",
-   "location": "Sofia, Bulgaria",
-   "department": "Bullfinch",
-   "url": "https://bullfinch.breezy.hr/p/181f69483c83-associate-engineering-manager",
-   "posted_at": "2026-07-03T15:28:04.457Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Associate Engineering Manager",
-   "location": "Romania, Romania",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/653385a1e185-associate-engineering-manager",
-   "posted_at": "2026-07-03T15:29:02.037Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Associate Engineering Manager",
-   "location": "Poland, Poland",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/d5eb8a43fb44-associate-engineering-manager",
-   "posted_at": "2026-07-03T15:28:35.017Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Associate Engineering Manager",
    "location": "Ukraine, Ukraine",
    "department": "",
    "url": "https://bullfinch.breezy.hr/p/a9c10eb02e1b-associate-engineering-manager",
-   "posted_at": "2026-07-03T15:27:37.946Z",
+   "posted_at": "2026-07-22T14:03:28.133Z",
    "company": "Bullfinch Recruitment",
    "ats": "breezy",
    "source": "collector"
@@ -774,40 +744,10 @@
   },
   {
    "title": "Engineering Manager",
-   "location": "Sofia, Bulgaria",
-   "department": "Bullfinch",
-   "url": "https://bullfinch.breezy.hr/p/b12418cae1d7-engineering-manager",
-   "posted_at": "2026-07-03T15:30:11.164Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Engineering Manager",
-   "location": "Romania, Romania",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/ed58aa468a93-engineering-manager",
-   "posted_at": "2026-07-03T15:32:44.528Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Engineering Manager",
-   "location": "Poland, Poland",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/adf835403252-engineering-manager",
-   "posted_at": "2026-07-03T15:32:13.045Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Engineering Manager",
    "location": "Ukraine, Ukraine",
    "department": "",
    "url": "https://bullfinch.breezy.hr/p/b9a5c548e63a-engineering-manager",
-   "posted_at": "2026-07-03T15:31:23.944Z",
+   "posted_at": "2026-07-22T14:04:30.317Z",
    "company": "Bullfinch Recruitment",
    "ats": "breezy",
    "source": "collector"
@@ -1073,36 +1013,6 @@
    "source": "collector"
   },
   {
-   "title": "Tech Lead/Staff Java Engineer",
-   "location": "Poland, Poland",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/fded71e9d265-tech-lead-staff-java-engineer",
-   "posted_at": "2026-07-03T15:37:42.268Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Tech Lead/Staff Java Engineer",
-   "location": "Romania, Romania",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/75493f9d559c-tech-lead-staff-java-engineer",
-   "posted_at": "2026-07-03T15:38:13.356Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
-   "title": "Tech Lead/Staff Java Engineer",
-   "location": "Bulgaria, Bulgaria",
-   "department": "",
-   "url": "https://bullfinch.breezy.hr/p/3cab8a951ebb-tech-lead-staff-java-engineer",
-   "posted_at": "2026-07-03T15:39:02.079Z",
-   "company": "Bullfinch Recruitment",
-   "ats": "breezy",
-   "source": "collector"
-  },
-  {
    "title": "Turkish-Speaking Game Presenter",
    "location": "Malta, Malta",
    "department": "",
@@ -1203,16 +1113,6 @@
    "source": "collector"
   },
   {
-   "title": "Territory Sales Representative / Restaurant Specialist - Staten Island, NY",
-   "location": "Staten Island, NY",
-   "department": "Territory Sales Representative",
-   "url": "https://jobs.ashbyhq.com/spoton/79b135f7-eb5b-44ff-853e-5dd425c07480",
-   "posted_at": "2026-06-23T20:43:02.254+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
    "title": "Installation Specialist - Bilingual (San Francisco, CA)",
    "location": "San Francisco, CA",
    "department": "Customer Success",
@@ -1238,56 +1138,6 @@
    "department": "Finance",
    "url": "https://jobs.ashbyhq.com/spoton/dbac4186-cdb2-4b89-8102-6cdf978cb885",
    "posted_at": "2026-03-25T20:19:56.368+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "Staff AI Engineer",
-   "location": "San Francisco, CA",
-   "department": "Engineering",
-   "url": "https://jobs.ashbyhq.com/spoton/82798dae-6a4f-42da-9702-b2bceab93de3",
-   "posted_at": "2026-04-06T17:40:46.729+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "Staff AI Engineer",
-   "location": "Austin, TX",
-   "department": "Engineering",
-   "url": "https://jobs.ashbyhq.com/spoton/2f531b96-fb03-4073-8261-aeb9dfce16d9",
-   "posted_at": "2026-04-06T17:41:17.830+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "Staff AI Engineer",
-   "location": "Remote, United States",
-   "department": "Engineering",
-   "url": "https://jobs.ashbyhq.com/spoton/33d3ad52-f5c0-4bc7-9d68-d03af2f3db4d",
-   "posted_at": "2026-04-06T17:40:35.944+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "Staff AI Engineer",
-   "location": "Chicago, IL",
-   "department": "Engineering",
-   "url": "https://jobs.ashbyhq.com/spoton/f7196711-e0cf-49d5-8eef-76d3d7b0eef3",
-   "posted_at": "2026-04-06T17:40:57.784+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "Staff AI Engineer",
-   "location": "Remote, Raleigh, NC",
-   "department": "Engineering",
-   "url": "https://jobs.ashbyhq.com/spoton/6038e413-6bbf-45b6-b138-aa097d8a765d",
-   "posted_at": "2026-04-06T17:41:30.480+00:00",
    "company": "SpotOn Connections",
    "ats": "ashby",
    "source": "collector"
@@ -1603,16 +1453,6 @@
    "source": "collector"
   },
   {
-   "title": "Client Success Partner - Spanish & English Bi-lingual",
-   "location": "San Francisco, CA",
-   "department": "Customer Success",
-   "url": "https://jobs.ashbyhq.com/spoton/7f5b6bd2-1854-470d-ad93-a7cd540169cc",
-   "posted_at": "2026-06-24T14:28:07.504+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
    "title": "Territory Sales Representative / Restaurant Specialist - Asheville, NC",
    "location": "Asheville, NC",
    "department": "Territory Sales Representative",
@@ -1923,16 +1763,6 @@
    "source": "collector"
   },
   {
-   "title": "Territory Sales Representative / Restaurant Specialist - Fort Lee, NJ",
-   "location": "Fort Lee, NJ",
-   "department": "Territory Sales Representative",
-   "url": "https://jobs.ashbyhq.com/spoton/727dc129-0105-491c-9006-5483aa1b2784",
-   "posted_at": "2026-07-07T18:39:49.689+00:00",
-   "company": "SpotOn Connections",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
    "title": "Product Manager (Dashboard)",
    "location": "Austin, TX",
    "department": "Product",
@@ -1948,6 +1778,16 @@
    "department": "Territory Sales Representative",
    "url": "https://jobs.ashbyhq.com/spoton/db16642e-dc40-41fb-bb98-38607aae00a9",
    "posted_at": "2026-07-17T15:27:21.840+00:00",
+   "company": "SpotOn Connections",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Client Onboarding Specialist",
+   "location": "Chicago, IL",
+   "department": "Customer Success",
+   "url": "https://jobs.ashbyhq.com/spoton/d73e793e-dd2f-47b8-9970-a9f03d854106",
+   "posted_at": "2026-07-22T15:10:47.807+00:00",
    "company": "SpotOn Connections",
    "ats": "ashby",
    "source": "collector"
@@ -1983,7 +1823,7 @@
    "source": "collector"
   },
   {
-   "title": "Show 16 more",
+   "title": "Show 17 more",
    "location": "",
    "department": "",
    "url": "https://italentplus.teamtailor.com/jobs/show_more?page=2",
@@ -2073,17 +1913,6 @@
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Leeds-UK/Senior-Motion-Designer_JR140442-1",
    "posted_at": null,
    "posted_text": "Posted 6 Days Ago",
-   "company": "Flutter Entertainment (Group)",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Front-end Developer",
-   "location": "Tbilisi, Georgia",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Front-end-Developer_JR139813",
-   "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
    "company": "Flutter Entertainment (Group)",
    "ats": "workday",
    "source": "collector"
@@ -2643,9 +2472,9 @@
   },
   {
    "title": "Commercial Analyst - Casino ",
-   "location": "New York City",
+   "location": "Los Angeles, California, United States",
    "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953986",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953997",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2653,9 +2482,9 @@
   },
   {
    "title": "Commercial Analyst - Casino ",
-   "location": "Los Angeles, California, United States",
+   "location": "New York City",
    "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953997",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953986",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2666,16 +2495,6 @@
    "location": "Los Angeles, California, United States",
    "department": "Marketing",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=8054528",
-   "posted_at": "2026-07-20T19:01:11-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Commercial Senior Analyst, Sportsbook",
-   "location": "New York City",
-   "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7406547",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2756,16 +2575,6 @@
    "location": "New York City",
    "department": "Commercial ",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=8028963",
-   "posted_at": "2026-07-20T19:01:11-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Digital Operations Coordinator",
-   "location": "Toronto, Ontario, Canada",
-   "department": "Marketing",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7917217",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2853,9 +2662,9 @@
   },
   {
    "title": "Head of Social",
-   "location": "Los Angeles",
+   "location": "Atlanta",
    "department": "Marketing",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7858504",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7858500",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2873,9 +2682,9 @@
   },
   {
    "title": "Head of Social",
-   "location": "Atlanta",
+   "location": "Los Angeles",
    "department": "Marketing",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7858500",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7858504",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2953,9 +2762,9 @@
   },
   {
    "title": "Lead Product Manager \u2013 Marketing Agents MCP",
-   "location": "New York City",
+   "location": "Atlanta ",
    "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7846824",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7847085",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -2963,9 +2772,9 @@
   },
   {
    "title": "Lead Product Manager \u2013 Marketing Agents MCP",
-   "location": "Atlanta ",
+   "location": "New York City",
    "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7847085",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7846824",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3073,9 +2882,9 @@
   },
   {
    "title": "Product Manager",
-   "location": "New York City",
+   "location": "Atlanta, Georgia, United States",
    "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8048450",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8048580",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3083,9 +2892,9 @@
   },
   {
    "title": "Product Manager",
-   "location": "Atlanta, Georgia, United States",
+   "location": "New York City",
    "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8048580",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8048450",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3113,9 +2922,9 @@
   },
   {
    "title": "Security Engineer",
-   "location": "Atlanta, Georgia, United States",
+   "location": "New York City",
    "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8031351",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8031341",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3123,9 +2932,9 @@
   },
   {
    "title": "Security Engineer",
-   "location": "New York City",
+   "location": "Atlanta, Georgia, United States",
    "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8031341",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8031351",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3213,9 +3022,9 @@
   },
   {
    "title": "Senior Observability Engineer",
-   "location": "Atlanta, Georgia, United States",
+   "location": "New York City",
    "department": "Platform Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022195",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022182",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3223,9 +3032,9 @@
   },
   {
    "title": "Senior Observability Engineer",
-   "location": "New York City",
+   "location": "Atlanta, Georgia, United States",
    "department": "Platform Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022182",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022195",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3257,6 +3066,26 @@
    "department": "Software Engineering",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=7694933",
    "posted_at": "2026-07-20T19:01:11-04:00",
+   "company": "FanDuel",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Technology Governance, Risk & Compliance (GRC) Analyst ",
+   "location": "Atlanta, Georgia, United States",
+   "department": "Tech Operations",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8079506",
+   "posted_at": "2026-07-22T10:37:23-04:00",
+   "company": "FanDuel",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Technology Governance, Risk & Compliance (GRC) Analyst ",
+   "location": "New York City",
+   "department": "Tech Operations",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8079437",
+   "posted_at": "2026-07-22T10:37:21-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -3303,16 +3132,6 @@
   },
   {
    "title": "Sr. Data Governance Analyst",
-   "location": "New York City",
-   "department": "Data Analytics ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7908941",
-   "posted_at": "2026-07-20T19:01:11-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Sr. Data Governance Analyst",
    "location": "Atlanta, Georgia, United States",
    "department": "Data Analytics ",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=7909038",
@@ -3322,10 +3141,10 @@
    "source": "collector"
   },
   {
-   "title": "Staff Infrastructure Engineer",
-   "location": "Atlanta, Georgia, United States",
-   "department": "Platform Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8028591",
+   "title": "Sr. Data Governance Analyst",
+   "location": "New York City",
+   "department": "Data Analytics ",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7908941",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3342,10 +3161,10 @@
    "source": "collector"
   },
   {
-   "title": "Staff Machine Learning Engineer - Search",
-   "location": "Atlanta",
-   "department": "Data Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7847466",
+   "title": "Staff Infrastructure Engineer",
+   "location": "Atlanta, Georgia, United States",
+   "department": "Platform Engineering",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8028591",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3356,6 +3175,16 @@
    "location": "New York City",
    "department": "Data Engineering",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=7611198",
+   "posted_at": "2026-07-20T19:01:11-04:00",
+   "company": "FanDuel",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Machine Learning Engineer - Search",
+   "location": "Atlanta",
+   "department": "Data Engineering",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7847466",
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -3413,6 +3242,16 @@
   },
   {
    "title": "VIP Team Manager",
+   "location": "Edmonton, Alberta, Canada",
+   "department": "Commercial ",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7592457",
+   "posted_at": "2026-07-20T19:01:11-04:00",
+   "company": "FanDuel",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "VIP Team Manager",
    "location": "Calgary, Alberta, Canada",
    "department": "Commercial ",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=7592459",
@@ -3422,13 +3261,23 @@
    "source": "collector"
   },
   {
-   "title": "VIP Team Manager",
-   "location": "Edmonton, Alberta, Canada",
-   "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7592457",
-   "posted_at": "2026-07-20T19:01:11-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
+   "title": "Retail Customer Service",
+   "location": "Birmingham, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000139094494",
+   "posted_at": "2026-07-22T14:41:03.095Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Birmingham, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000139096425",
+   "posted_at": "2026-07-22T14:40:41.441Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -3655,16 +3504,6 @@
    "title": "Retail Customer Service",
    "location": "Plymouth, GB",
    "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138862999",
-   "posted_at": "2026-07-21T12:50:27.897Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Plymouth, GB",
-   "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000138860677",
    "posted_at": "2026-07-21T12:48:05.390Z",
    "company": "Entain",
@@ -3787,16 +3626,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000138803015",
    "posted_at": "2026-07-21T08:10:50.771Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Scunthorpe, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138802954",
-   "posted_at": "2026-07-21T07:55:14.649Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -4672,16 +4501,6 @@
    "source": "collector"
   },
   {
-   "title": "Retail Customer Service",
-   "location": "Claremorris, IE",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000136757230",
-   "posted_at": "2026-07-09T08:52:26.229Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Retail Cleaner",
    "location": "Rotherham, GB",
    "department": "Customer Service",
@@ -4927,16 +4746,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000135324759",
    "posted_at": "2026-07-01T17:45:48.021Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Cleaner",
-   "location": "Crawley, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000135317299",
-   "posted_at": "2026-07-01T16:51:21.401Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -5287,16 +5096,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000133334032",
    "posted_at": "2026-06-22T11:10:13.766Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Sportsbook Manager Austria (German speaking)",
-   "location": "Vienna, AT",
-   "department": "Marketing",
-   "url": "https://jobs.smartrecruiters.com/entain/744000133298989",
-   "posted_at": "2026-06-22T09:11:10.893Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -5803,20 +5602,20 @@
   },
   {
    "title": "AI Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7774874",
-   "posted_at": "2026-04-17T08:46:51-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7774913",
+   "posted_at": "2026-04-28T05:21:38-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "AI Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7774913",
-   "posted_at": "2026-04-28T05:21:38-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7774874",
+   "posted_at": "2026-04-17T08:46:51-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6025,8 +5824,8 @@
    "title": " Customer Service Agent - Estonian Speaking",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002345",
-   "posted_at": "2026-06-17T09:49:52-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002347",
+   "posted_at": "2026-06-17T09:49:53-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6035,8 +5834,8 @@
    "title": " Customer Service Agent - Estonian Speaking",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002347",
-   "posted_at": "2026-06-17T09:49:53-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002345",
+   "posted_at": "2026-06-17T09:49:52-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6065,8 +5864,8 @@
    "title": "Danish speaking - Customer Service (inc relocation to Malta)",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839570",
-   "posted_at": "2026-04-17T08:46:45-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839572",
+   "posted_at": "2026-05-11T03:18:25-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6075,8 +5874,8 @@
    "title": "Danish speaking - Customer Service (inc relocation to Malta)",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839572",
-   "posted_at": "2026-05-11T03:18:25-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839570",
+   "posted_at": "2026-04-17T08:46:45-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6085,8 +5884,8 @@
    "title": "Data Engineer",
    "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7535276",
-   "posted_at": "2026-07-07T09:52:21-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8064185",
+   "posted_at": "2026-07-20T11:23:52-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6105,8 +5904,8 @@
    "title": "Data Engineer",
    "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8064185",
-   "posted_at": "2026-07-20T11:23:52-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7535276",
+   "posted_at": "2026-07-07T09:52:21-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6163,20 +5962,20 @@
   },
   {
    "title": "Frontend Devops Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059614",
-   "posted_at": "2026-07-13T09:29:12-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059603",
+   "posted_at": "2026-07-21T09:47:57-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Frontend Devops Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059603",
-   "posted_at": "2026-07-21T09:47:57-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059614",
+   "posted_at": "2026-07-13T09:29:12-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6203,10 +6002,10 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957204",
-   "posted_at": "2026-07-10T02:53:38-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
+   "posted_at": "2026-07-10T02:54:08-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6223,10 +6022,10 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
-   "posted_at": "2026-07-10T02:54:08-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957204",
+   "posted_at": "2026-07-10T02:53:38-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6253,20 +6052,20 @@
   },
   {
    "title": "Frontend Software Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071613",
-   "posted_at": "2026-07-21T09:27:21-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071571",
+   "posted_at": "2026-07-21T09:26:53-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Frontend Software Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071571",
-   "posted_at": "2026-07-21T09:26:53-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071613",
+   "posted_at": "2026-07-21T09:27:21-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6283,20 +6082,20 @@
   },
   {
    "title": "Frontend Software Engineer - Gaming",
-   "location": "Malta",
+   "location": "Malaga",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7963004",
-   "posted_at": "2026-06-09T10:14:54-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7992693",
+   "posted_at": "2026-06-09T10:21:36-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Frontend Software Engineer - Gaming",
-   "location": "Malaga",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7992693",
-   "posted_at": "2026-06-09T10:21:36-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7963004",
+   "posted_at": "2026-06-09T10:14:54-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6333,20 +6132,20 @@
   },
   {
    "title": "Head of Engineering - Campaign & Rewards",
-   "location": "Stockholm",
+   "location": "Malaga",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071134",
-   "posted_at": "2026-07-17T06:54:38-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071107",
+   "posted_at": "2026-07-17T06:33:31-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Head of Engineering - Campaign & Rewards",
-   "location": "Malaga",
+   "location": "Stockholm",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071107",
-   "posted_at": "2026-07-17T06:33:31-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071134",
+   "posted_at": "2026-07-17T06:54:38-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6483,20 +6282,20 @@
   },
   {
    "title": "Machine Learning Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7721239",
-   "posted_at": "2026-06-08T05:32:42-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7814134",
+   "posted_at": "2026-06-08T05:32:43-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Machine Learning Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7814134",
-   "posted_at": "2026-06-08T05:32:43-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7721239",
+   "posted_at": "2026-06-08T05:32:42-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6543,20 +6342,20 @@
   },
   {
    "title": "Partner Success Manager",
-   "location": "Tallinn",
+   "location": "Malta",
    "department": "Product",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7942249",
-   "posted_at": "2026-05-19T09:46:16-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7938011",
+   "posted_at": "2026-05-18T03:07:13-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Partner Success Manager",
-   "location": "Malta",
+   "location": "Tallinn",
    "department": "Product",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7938011",
-   "posted_at": "2026-05-18T03:07:13-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7942249",
+   "posted_at": "2026-05-19T09:46:16-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6663,20 +6462,20 @@
   },
   {
    "title": "Player Management - Backend Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7092345",
-   "posted_at": "2026-07-14T10:00:57-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8053098",
+   "posted_at": "2026-07-21T09:50:08-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Player Management - Backend Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8053098",
-   "posted_at": "2026-07-21T09:50:08-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7092345",
+   "posted_at": "2026-07-14T10:00:57-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6793,20 +6592,20 @@
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
-   "posted_at": "2026-07-21T09:38:37-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
+   "posted_at": "2026-07-21T03:38:56-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
-   "posted_at": "2026-07-21T03:38:56-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
+   "posted_at": "2026-07-21T09:38:37-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6823,20 +6622,20 @@
   },
   {
    "title": "Senior Network Engineer - Infra",
-   "location": "Malta",
+   "location": "Stockholm",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7936358",
-   "posted_at": "2026-05-29T10:03:00-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7966726",
+   "posted_at": "2026-06-01T02:32:39-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Network Engineer - Infra",
-   "location": "Stockholm",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7966726",
-   "posted_at": "2026-06-01T02:32:39-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7936358",
+   "posted_at": "2026-05-29T10:03:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -6943,20 +6742,20 @@
   },
   {
    "title": "Sportsbook - Backend Software Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071581",
-   "posted_at": "2026-07-21T03:35:09-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073961",
+   "posted_at": "2026-07-21T03:43:19-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Sportsbook - Backend Software Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073961",
-   "posted_at": "2026-07-21T03:43:19-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071581",
+   "posted_at": "2026-07-21T03:35:09-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -7023,10 +6822,10 @@
   },
   {
    "title": "Sportsbook - Performance Architect",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735116",
-   "posted_at": "2026-06-22T12:16:46-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735145",
+   "posted_at": "2026-05-20T03:55:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -7043,10 +6842,10 @@
   },
   {
    "title": "Sportsbook - Performance Architect",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735145",
-   "posted_at": "2026-05-20T03:55:00-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735116",
+   "posted_at": "2026-06-22T12:16:46-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -7156,7 +6955,7 @@
    "location": "Buenos Aires, Argentina",
    "department": "Treasury (BR)",
    "url": "https://careers.kaizengaming.com/job-details/7792658003?gh_jid=7792658003",
-   "posted_at": "2026-07-21T11:14:05-04:00",
+   "posted_at": "2026-07-22T10:22:25-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7183,20 +6982,20 @@
   },
   {
    "title": "Agile Delivery Lead",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5194245003?gh_jid=5194245003",
-   "posted_at": "2026-07-03T08:09:05-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/4401020003?gh_jid=4401020003",
+   "posted_at": "2026-07-03T08:08:40-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Agile Delivery Lead",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/4401020003?gh_jid=4401020003",
-   "posted_at": "2026-07-03T08:08:40-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/5194245003?gh_jid=5194245003",
+   "posted_at": "2026-07-03T08:09:05-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7443,20 +7242,20 @@
   },
   {
    "title": "iOS Software Engineer",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5194262003?gh_jid=5194262003",
-   "posted_at": "2026-07-07T04:57:16-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/4537456003?gh_jid=4537456003",
+   "posted_at": "2026-07-07T05:05:23-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "iOS Software Engineer",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/4537456003?gh_jid=4537456003",
-   "posted_at": "2026-07-07T05:05:23-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/5194262003?gh_jid=5194262003",
+   "posted_at": "2026-07-07T04:57:16-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7705,6 +7504,16 @@
    "title": "Senior Compliance Officer",
    "location": "Sliema, Malta",
    "department": "Regulatory Compliance & International Expansion",
+   "url": "https://careers.kaizengaming.com/job-details/7752897003?gh_jid=7752897003",
+   "posted_at": "2026-07-13T10:11:35-04:00",
+   "company": "Kaizen Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Compliance Officer",
+   "location": "Sliema, Malta",
+   "department": "Regulatory Compliance & International Expansion",
    "url": "https://careers.kaizengaming.com/job-details/7747679003?gh_jid=7747679003",
    "posted_at": "2026-07-13T10:11:58-04:00",
    "company": "Kaizen Gaming",
@@ -7717,16 +7526,6 @@
    "department": "Regulatory Compliance & International Expansion",
    "url": "https://careers.kaizengaming.com/job-details/7636618003?gh_jid=7636618003",
    "posted_at": "2026-07-14T04:32:27-04:00",
-   "company": "Kaizen Gaming",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Compliance Officer",
-   "location": "Sliema, Malta",
-   "department": "Regulatory Compliance & International Expansion",
-   "url": "https://careers.kaizengaming.com/job-details/7752897003?gh_jid=7752897003",
-   "posted_at": "2026-07-13T10:11:35-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7753,16 +7552,6 @@
   },
   {
    "title": "Senior iOS Software Engineer",
-   "location": "Athens, Greece",
-   "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5559799003?gh_jid=5559799003",
-   "posted_at": "2026-07-07T03:26:11-04:00",
-   "company": "Kaizen Gaming",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior iOS Software Engineer",
    "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
    "url": "https://careers.kaizengaming.com/job-details/5559801003?gh_jid=5559801003",
@@ -7772,11 +7561,11 @@
    "source": "collector"
   },
   {
-   "title": "Senior Marketing Executive",
-   "location": "Remote Brussels, Belgium",
-   "department": "Commercial Belgium",
-   "url": "https://careers.kaizengaming.com/job-details/7533441003?gh_jid=7533441003",
-   "posted_at": "2026-07-20T04:19:20-04:00",
+   "title": "Senior iOS Software Engineer",
+   "location": "Athens, Greece",
+   "department": "Pipeline Tech & Product",
+   "url": "https://careers.kaizengaming.com/job-details/5559799003?gh_jid=5559799003",
+   "posted_at": "2026-07-07T03:26:11-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7793,20 +7582,20 @@
   },
   {
    "title": "Senior Product Designer, Sportsbook",
-   "location": "Athens, Greece",
+   "location": "Sliema, Malta",
    "department": "Product Design - Sportsbook",
-   "url": "https://careers.kaizengaming.com/job-details/7471120003?gh_jid=7471120003",
-   "posted_at": "2026-07-03T09:29:18-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/7786455003?gh_jid=7786455003",
+   "posted_at": "2026-07-03T09:29:45-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Product Designer, Sportsbook",
-   "location": "Sliema, Malta",
+   "location": "Athens, Greece",
    "department": "Product Design - Sportsbook",
-   "url": "https://careers.kaizengaming.com/job-details/7786455003?gh_jid=7786455003",
-   "posted_at": "2026-07-03T09:29:45-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/7471120003?gh_jid=7471120003",
+   "posted_at": "2026-07-03T09:29:18-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7843,20 +7632,20 @@
   },
   {
    "title": "Site Reliability | DevOps Engineer",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Site Reliability",
-   "url": "https://careers.kaizengaming.com/job-details/5512433003?gh_jid=5512433003",
-   "posted_at": "2026-07-17T04:38:38-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/5512431003?gh_jid=5512431003",
+   "posted_at": "2026-07-03T10:04:47-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Site Reliability | DevOps Engineer",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Site Reliability",
-   "url": "https://careers.kaizengaming.com/job-details/5512431003?gh_jid=5512431003",
-   "posted_at": "2026-07-03T10:04:47-04:00",
+   "url": "https://careers.kaizengaming.com/job-details/5512433003?gh_jid=5512433003",
+   "posted_at": "2026-07-17T04:38:38-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -7883,9 +7672,9 @@
   },
   {
    "title": "Software Engineering Team Lead (Backend)",
-   "location": "Thessaloniki, Greece",
+   "location": "Athens, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/5523609003?gh_jid=5523609003",
+   "url": "https://careers.kaizengaming.com/job-details/4394836003?gh_jid=4394836003",
    "posted_at": "2026-07-02T10:09:38-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
@@ -7893,9 +7682,9 @@
   },
   {
    "title": "Software Engineering Team Lead (Backend)",
-   "location": "Athens, Greece",
+   "location": "Thessaloniki, Greece",
    "department": "Pipeline Tech & Product",
-   "url": "https://careers.kaizengaming.com/job-details/4394836003?gh_jid=4394836003",
+   "url": "https://careers.kaizengaming.com/job-details/5523609003?gh_jid=5523609003",
    "posted_at": "2026-07-02T10:09:38-04:00",
    "company": "Kaizen Gaming",
    "ats": "greenhouse",
@@ -7977,16 +7766,6 @@
    "department": "Bookmaking",
    "url": "https://jobs.ashbyhq.com/leovegasgroup/bf760d8e-2920-4a3f-b827-461f85a42763",
    "posted_at": "2026-07-17T20:58:59.956+00:00",
-   "company": "LeoVegas Group",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "Junior Bookmaking Trading Specialist",
-   "location": "Leeds, UK",
-   "department": "Bookmaking",
-   "url": "https://jobs.ashbyhq.com/leovegasgroup/6ea3bfa9-ff69-4406-bc57-0551cb960743",
-   "posted_at": "2026-07-17T21:00:04.907+00:00",
    "company": "LeoVegas Group",
    "ats": "ashby",
    "source": "collector"
@@ -8662,11 +8441,21 @@
    "source": "collector"
   },
   {
+   "title": "Junior Software Developer (m/f/x)",
+   "location": "St. Julian's, MT",
+   "department": "Account Technology",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000139076139",
+   "posted_at": "2026-07-22T13:10:40.653Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "Customer Account Specialist \u2013 German Speaking (m/f/x)",
    "location": "St. Julian's, MT",
    "department": "Business Operations",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000138892799",
-   "posted_at": "2026-07-21T14:44:17.044Z",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000139074224",
+   "posted_at": "2026-07-22T13:05:01.746Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -10572,6 +10361,16 @@
    "source": "collector"
   },
   {
+   "title": "AI Learning Partner ",
+   "location": "Spain",
+   "department": "Talent Management & Development ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4876966101",
+   "posted_at": "2026-07-22T09:41:25-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "AI Platform Engineer",
    "location": "Spain",
    "department": "Product & Technology ",
@@ -10833,26 +10632,6 @@
   },
   {
    "title": "Football Trader",
-   "location": "Belgium",
-   "department": "Trading Operations",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921795101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Football Trader",
-   "location": "Croatia",
-   "department": "Trading Operations",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921797101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Football Trader",
    "location": "Romania",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921753101",
@@ -10866,6 +10645,26 @@
    "location": "Malta",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921783101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Football Trader",
+   "location": "Belgium",
+   "department": "Trading Operations",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921795101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Football Trader",
+   "location": "Croatia",
+   "department": "Trading Operations",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921797101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -10943,9 +10742,9 @@
   },
   {
    "title": "HR Controlling Expert",
-   "location": "Poland",
+   "location": "Croatia",
    "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4909612101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902900101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -10953,9 +10752,9 @@
   },
   {
    "title": "HR Controlling Expert",
-   "location": "Croatia",
+   "location": "Poland",
    "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902900101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4909612101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11043,16 +10842,6 @@
   },
   {
    "title": "Lead Product Manager - Game Content Creation",
-   "location": "Greece",
-   "department": "Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807123101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Lead Product Manager - Game Content Creation",
    "location": "Belgium",
    "department": "Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807098101",
@@ -11082,10 +10871,10 @@
    "source": "collector"
   },
   {
-   "title": "Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Romania",
-   "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842234101",
+   "title": "Lead Product Manager - Game Content Creation",
+   "location": "Greece",
+   "department": "Gaming",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807123101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11106,6 +10895,16 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842232101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Machine Learning Engineer -  Applied ML &  Research",
+   "location": "Romania",
+   "department": "Engineering, Data",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842234101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11173,16 +10972,6 @@
   },
   {
    "title": "Principal Product GTM Manager",
-   "location": "Spain",
-   "department": "Product Strategy & Operations",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4799096101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Principal Product GTM Manager",
    "location": "Croatia",
    "department": "Product Strategy & Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4809111101",
@@ -11202,10 +10991,10 @@
    "source": "collector"
   },
   {
-   "title": "Principal Product Manager - Analytics Platform",
+   "title": "Principal Product GTM Manager",
    "location": "Spain",
-   "department": "Data Product Management",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802005101",
+   "department": "Product Strategy & Operations",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4799096101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11213,9 +11002,19 @@
   },
   {
    "title": "Principal Product Manager - Analytics Platform",
-   "location": "United Kingdom",
+   "location": "Croatia",
    "department": "Data Product Management",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4863049101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802007101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Principal Product Manager - Analytics Platform",
+   "location": "Spain",
+   "department": "Data Product Management",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802005101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11233,9 +11032,9 @@
   },
   {
    "title": "Principal Product Manager - Analytics Platform",
-   "location": "Croatia",
+   "location": "United Kingdom",
    "department": "Data Product Management",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802007101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4863049101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11303,9 +11102,19 @@
   },
   {
    "title": "Project Portfolio Manager (Finance)",
-   "location": "Romania",
+   "location": "United Kingdom",
    "department": "Group Finance Control ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4773398101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906314101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Project Portfolio Manager (Finance)",
+   "location": "Spain",
+   "department": "Group Finance Control ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906064101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11323,19 +11132,9 @@
   },
   {
    "title": "Project Portfolio Manager (Finance)",
-   "location": "United Kingdom",
+   "location": "Romania",
    "department": "Group Finance Control ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906314101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Project Portfolio Manager (Finance)",
-   "location": "Spain",
-   "department": "Group Finance Control ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906064101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4773398101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11523,6 +11322,16 @@
   },
   {
    "title": "Senior Commercial Data Scientist",
+   "location": "Brazil",
+   "department": "Data Insights (Data & Analytics)",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4818148101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Commercial Data Scientist",
    "location": "Romania",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4766139101",
@@ -11552,30 +11361,10 @@
    "source": "collector"
   },
   {
-   "title": "Senior Commercial Data Scientist",
-   "location": "Brazil",
-   "department": "Data Insights (Data & Analytics)",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4818148101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Senior Compliance Officer",
    "location": "Greece",
    "department": "Compliance",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4865140101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Data Engineer",
-   "location": "Croatia",
-   "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4792364101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11592,20 +11381,20 @@
    "source": "collector"
   },
   {
-   "title": "Senior Director of Security Operations",
-   "location": "All Locations",
-   "department": "Product & Technology ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4924466101",
+   "title": "Senior Data Engineer",
+   "location": "Croatia",
+   "department": "Engineering, Data",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4792364101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
-   "title": "Senior Employee Relations Partner",
-   "location": "Croatia",
-   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4857285101",
+   "title": "Senior Director of Security Operations",
+   "location": "All Locations",
+   "department": "Product & Technology ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4924466101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11632,10 +11421,20 @@
    "source": "collector"
   },
   {
+   "title": "Senior Employee Relations Partner",
+   "location": "Croatia",
+   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4857285101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Senior Engineering Manager",
-   "location": "Spain",
+   "location": "Croatia",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761551101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761556101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11653,9 +11452,9 @@
   },
   {
    "title": "Senior Engineering Manager",
-   "location": "Croatia",
+   "location": "Spain",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761556101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761551101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11683,29 +11482,19 @@
   },
   {
    "title": "Senior Engineering Manager - Machine Learning ",
-   "location": "Spain",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874311101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Engineering Manager - Machine Learning ",
-   "location": "Netherlands",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874316101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Engineering Manager - Machine Learning ",
    "location": "United Kingdom",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874318101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Engineering Manager - Machine Learning ",
+   "location": "Spain",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874311101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11722,10 +11511,20 @@
    "source": "collector"
   },
   {
-   "title": "Senior Engineer, Machine Learning Platform",
-   "location": "Spain",
+   "title": "Senior Engineering Manager - Machine Learning ",
+   "location": "Netherlands",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4745919101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874316101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Engineer, Machine Learning Platform",
+   "location": "United Kingdom",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4928537101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11743,19 +11542,9 @@
   },
   {
    "title": "Senior Engineer, Machine Learning Platform",
-   "location": "United Kingdom",
+   "location": "Spain",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4928537101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior iOS Engineer ",
-   "location": "Croatia",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665952101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4745919101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11766,6 +11555,16 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665951101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior iOS Engineer ",
+   "location": "Croatia",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665952101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11783,29 +11582,19 @@
   },
   {
    "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Romania",
-   "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786100101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Croatia",
-   "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786082101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
    "location": "United Kingdom",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786081101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
+   "location": "Netherlands",
+   "department": "Engineering, Data",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786079101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11823,9 +11612,19 @@
   },
   {
    "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Netherlands",
+   "location": "Croatia",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786079101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786082101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
+   "location": "Romania",
+   "department": "Engineering, Data",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786100101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11846,6 +11645,16 @@
    "location": "Romania",
    "department": "HR Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903205101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Product Data Scientist",
+   "location": "Romania",
+   "department": "Data Insights (Data & Analytics)",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761351101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11876,16 +11685,6 @@
    "location": "Croatia",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761350101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Product Data Scientist",
-   "location": "Romania",
-   "department": "Data Insights (Data & Analytics)",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761351101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11953,9 +11752,9 @@
   },
   {
    "title": "Senior Product Manager - Payments",
-   "location": "Netherlands",
+   "location": "Spain",
    "department": "Product & Technology ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932703101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932698101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -11963,9 +11762,9 @@
   },
   {
    "title": "Senior Product Manager - Payments",
-   "location": "Spain",
+   "location": "Netherlands",
    "department": "Product & Technology ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932698101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932703101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12003,19 +11802,9 @@
   },
   {
    "title": "Senior Software Engineer (Backend)",
-   "location": "Spain",
-   "department": "Engineering, Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4521285101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Software Engineer (Backend)",
    "location": "Croatia",
    "department": "Engineering, Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4860840101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4526821101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12033,9 +11822,9 @@
   },
   {
    "title": "Senior Software Engineer (Backend)",
-   "location": "Croatia",
+   "location": "Spain",
    "department": "Engineering, Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4526821101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4848153101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12045,7 +11834,17 @@
    "title": "Senior Software Engineer (Backend)",
    "location": "Spain",
    "department": "Engineering, Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4848153101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4521285101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer (Backend)",
+   "location": "Croatia",
+   "department": "Engineering, Gaming",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4860840101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12123,6 +11922,16 @@
   },
   {
    "title": "Staff Machine Learning Engineer - Applied ML & Research",
+   "location": "Spain",
+   "department": "Engineering, Data",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4610556101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Machine Learning Engineer - Applied ML & Research",
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4637336101",
@@ -12142,10 +11951,10 @@
    "source": "collector"
   },
   {
-   "title": "Staff Machine Learning Engineer - Applied ML & Research",
+   "title": "Staff Market Intelligence Researcher",
    "location": "Spain",
-   "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4610556101",
+   "department": "Data Insights (Data & Analytics)",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854469101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12156,16 +11965,6 @@
    "location": "United Kingdom",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854917101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Staff Market Intelligence Researcher",
-   "location": "Spain",
-   "department": "Data Insights (Data & Analytics)",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854469101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12193,16 +11992,6 @@
   },
   {
    "title": "Staff / Senior Software Engineer",
-   "location": "Croatia",
-   "department": "Engineering, Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4846283101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Staff / Senior Software Engineer",
    "location": "Spain",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4474703101",
@@ -12212,10 +12001,10 @@
    "source": "collector"
   },
   {
-   "title": "Staff Site Reliability Engineer - Cloud Efficiency",
-   "location": "Netherlands",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903788101",
+   "title": "Staff / Senior Software Engineer",
+   "location": "Croatia",
+   "department": "Engineering, Gaming",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4846283101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12242,10 +12031,20 @@
    "source": "collector"
   },
   {
+   "title": "Staff Site Reliability Engineer - Cloud Efficiency",
+   "location": "Netherlands",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903788101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Staff Software Engineer",
-   "location": "Croatia",
+   "location": "Netherlands",
    "department": "Engineering, Data Products",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930300101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930297101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12273,9 +12072,9 @@
   },
   {
    "title": "Staff Software Engineer",
-   "location": "Netherlands",
+   "location": "Croatia",
    "department": "Engineering, Data Products",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930297101",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930300101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12313,16 +12112,6 @@
   },
   {
    "title": "Technical Compliance Delivery Manager",
-   "location": "Gibraltar",
-   "department": "Product",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862579101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Technical Compliance Delivery Manager",
    "location": "Serbia",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867916101",
@@ -12336,6 +12125,16 @@
    "location": "Romania",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867917101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Compliance Delivery Manager",
+   "location": "Gibraltar",
+   "department": "Product",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862579101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12363,6 +12162,16 @@
   },
   {
    "title": "Technical Sourcer",
+   "location": "Croatia",
+   "department": "Talent Acquisition ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762246101",
+   "posted_at": "2026-07-22T06:35:51-04:00",
+   "company": "Super Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Sourcer",
    "location": "Romania",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762255101",
@@ -12376,16 +12185,6 @@
    "location": "Spain",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762247101",
-   "posted_at": "2026-07-22T06:35:51-04:00",
-   "company": "Super Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Technical Sourcer",
-   "location": "Croatia",
-   "department": "Talent Acquisition ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762246101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super Group",
    "ats": "greenhouse",
@@ -12522,6 +12321,26 @@
    "source": "collector"
   },
   {
+   "title": "Lead Analyst, Player Analytics",
+   "location": "Canada - Remote",
+   "department": "Marketing: Analytics",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6122513004",
+   "posted_at": "2026-07-22T11:47:35-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Lead Analyst, Player Analytics",
+   "location": "USA - Remote",
+   "department": "Marketing: Analytics",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6117015004",
+   "posted_at": "2026-07-22T11:44:16-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Manager, Software Engineering",
    "location": "Bogot\u00e1; Colombia - Remote; Medell\u00edn",
    "department": "Engineering: Front End",
@@ -12545,8 +12364,8 @@
    "title": "People Team Intern",
    "location": "Bogot\u00e1",
    "department": "People Partners",
-   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6013087004",
-   "posted_at": "2026-06-24T18:03:12-04:00",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6013085004",
+   "posted_at": "2026-06-24T18:02:45-04:00",
    "company": "Rush Street Interactive",
    "ats": "greenhouse",
    "source": "collector"
@@ -12555,8 +12374,8 @@
    "title": "People Team Intern",
    "location": "Bogot\u00e1",
    "department": "People Partners",
-   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6013085004",
-   "posted_at": "2026-06-24T18:02:45-04:00",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6013087004",
+   "posted_at": "2026-06-24T18:03:12-04:00",
    "company": "Rush Street Interactive",
    "ats": "greenhouse",
    "source": "collector"
@@ -13562,6 +13381,46 @@
    "source": "collector"
   },
   {
+   "title": "Analista de Nomina",
+   "location": "Medell\u00edn, CO",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000139111691",
+   "posted_at": "2026-07-22T15:44:22.952Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Card Inspector",
+   "location": "Atlantic City, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000139089749",
+   "posted_at": "2026-07-22T14:10:43.887Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Full -Time Career In Media? + Paid Training, Set Schedule, Bi-weekly Pay, and More.",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000139085419",
+   "posted_at": "2026-07-22T13:49:46.082Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "5pm\u20131am Swing Shift | On-Camera Game Host \u2013 From $17/hr + Tips | Grand Rapids | (Bartender alt.)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000139084624",
+   "posted_at": "2026-07-22T13:49:20.136Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "Playing Card Quality Inspector",
    "location": "Sofia, BG",
    "department": "Operations",
@@ -13577,16 +13436,6 @@
    "department": "Technical Operations",
    "url": "https://jobs.smartrecruiters.com/evolution/744000139010950",
    "posted_at": "2026-07-22T07:43:54.229Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Payroll Specialist",
-   "location": "Medell\u00edn, CO",
-   "department": "Finance",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000138944368",
-   "posted_at": "2026-07-21T19:16:20.634Z",
    "company": "Evolution",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -14102,16 +13951,6 @@
    "source": "collector"
   },
   {
-   "title": "5pm\u20131am Swing Shift | On-Camera Game Host \u2013 From $17/hr + Tips | Grand Rapids | (Bartender alt.)",
-   "location": "Grand Rapids, US",
-   "department": "Operations",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000136863239",
-   "posted_at": "2026-07-09T16:17:27.096Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Server Experience? Become an On-Camera Game Host \u2013 From $17/hr + Tips",
    "location": "Grand Rapids, US",
    "department": "Operations",
@@ -14297,16 +14136,6 @@
    "department": "Operations",
    "url": "https://jobs.smartrecruiters.com/evolution/744000136270877",
    "posted_at": "2026-07-07T15:41:43.558Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Card Inspector",
-   "location": "Atlantic City, US",
-   "department": "Operations",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000136257419",
-   "posted_at": "2026-07-07T14:43:12.315Z",
    "company": "Evolution",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -14637,16 +14466,6 @@
    "department": "Human Resources",
    "url": "https://jobs.smartrecruiters.com/evolution/744000132281999",
    "posted_at": "2026-06-15T20:35:59.500Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Full -Time Career In Media? + Paid Training, Set Schedule, Bi-weekly Pay, and More.",
-   "location": "Grand Rapids, US",
-   "department": "Operations",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000131971925",
-   "posted_at": "2026-06-12T18:54:50.122Z",
    "company": "Evolution",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -16302,6 +16121,16 @@
    "source": "collector"
   },
   {
+   "title": "FP&A and Compensation Analyst",
+   "location": "Nicosia, CY",
+   "department": "Finance",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000139090355",
+   "posted_at": "2026-07-22T14:18:24.865Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "AI Engineer",
    "location": "Sofia, BG",
    "department": "General Research & Development",
@@ -16947,16 +16776,6 @@
    "department": "Software",
    "url": "https://jobs.smartrecruiters.com/playtech/744000133354759",
    "posted_at": "2026-06-22T12:34:58.278Z",
-   "company": "Playtech",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Junior Front End Game Developer",
-   "location": "Kyiv, UA",
-   "department": "Software",
-   "url": "https://jobs.smartrecruiters.com/playtech/744000133057199",
-   "posted_at": "2026-06-19T12:21:14.748Z",
    "company": "Playtech",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -17632,6 +17451,16 @@
    "source": "collector"
   },
   {
+   "title": "Show 20 more",
+   "location": "",
+   "department": "",
+   "url": "https://softswiss.teamtailor.com/jobs/show_more?page=2",
+   "posted_at": null,
+   "company": "SoftSwiss",
+   "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
    "title": "CRM Manager ",
    "location": "New Jersey, United States",
    "department": "Marketing Department",
@@ -17702,6 +17531,16 @@
    "source": "collector"
   },
   {
+   "title": "Show 20 more",
+   "location": "",
+   "department": "",
+   "url": "https://everymatrix.teamtailor.com/jobs/show_more?page=2",
+   "posted_at": null,
+   "company": "EveryMatrix",
+   "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
    "title": "Java Team Lead",
    "location": "Kyiv, Kyiv, Ukraine",
    "department": "Engineering",
@@ -17729,6 +17568,16 @@
    "posted_at": "2026-04-30T06:57:43-04:00",
    "company": "Delasport",
    "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer - Laravel",
+   "location": "United States, United States",
+   "department": "Engineering",
+   "url": "https://strive.breezy.hr/p/f879f717b552-software-engineer-laravel",
+   "posted_at": "2025-07-23T21:12:25.572Z",
+   "company": "Strive Gaming",
+   "ats": "breezy",
    "source": "collector"
   },
   {
@@ -18082,16 +17931,6 @@
    "source": "collector"
   },
   {
-   "title": "Staff Java Software Engineer",
-   "location": "Warszawa, PL",
-   "department": "Engineering",
-   "url": "https://jobs.smartrecruiters.com/sportradar/744000135738430",
-   "posted_at": "2026-07-03T13:45:29.228Z",
-   "company": "Sportradar",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Anti-Piracy Investigator",
    "location": "London, GB",
    "department": "Product Management",
@@ -18227,16 +18066,6 @@
    "department": "Engineering",
    "url": "https://jobs.smartrecruiters.com/sportradar/744000133054409",
    "posted_at": "2026-06-19T12:07:57.656Z",
-   "company": "Sportradar",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Internal Auditor",
-   "location": "London, GB",
-   "department": "Administrative",
-   "url": "https://jobs.smartrecruiters.com/sportradar/744000132895704",
-   "posted_at": "2026-06-18T15:13:44.092Z",
    "company": "Sportradar",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -18387,16 +18216,6 @@
    "department": "Product Management",
    "url": "https://jobs.smartrecruiters.com/sportradar/744000128499798",
    "posted_at": "2026-05-26T13:30:22.083Z",
-   "company": "Sportradar",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Sales Trainee - International Graduate Program",
-   "location": "Singapore, SG",
-   "department": "General Business",
-   "url": "https://jobs.smartrecruiters.com/sportradar/744000127935323",
-   "posted_at": "2026-05-22T16:01:34.497Z",
    "company": "Sportradar",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -18623,20 +18442,20 @@
   },
   {
    "title": "Salesforce Admin",
-   "location": "New York, New York, United States",
+   "location": "London, England, United Kingdom",
    "department": "IT",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7770410003?gh_jid=7770410003",
-   "posted_at": "2026-07-10T15:00:36-04:00",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7801527003?gh_jid=7801527003",
+   "posted_at": "2026-07-10T15:15:23-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Salesforce Admin",
-   "location": "London, England, United Kingdom",
+   "location": "New York, New York, United States",
    "department": "IT",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7801527003?gh_jid=7801527003",
-   "posted_at": "2026-07-10T15:15:23-04:00",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7770410003?gh_jid=7770410003",
+   "posted_at": "2026-07-10T15:00:36-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
@@ -18793,20 +18612,20 @@
   },
   {
    "title": "SVP, Channel & Independent Agency Sales",
-   "location": "Los Angeles, California, United States",
+   "location": "New York, New York, United States",
    "department": "Commercial",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7776577003?gh_jid=7776577003",
-   "posted_at": "2026-06-17T14:35:48-04:00",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7776558003?gh_jid=7776558003",
+   "posted_at": "2026-06-17T14:35:28-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "SVP, Channel & Independent Agency Sales",
-   "location": "New York, New York, United States",
+   "location": "Los Angeles, California, United States",
    "department": "Commercial",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7776558003?gh_jid=7776558003",
-   "posted_at": "2026-06-17T14:35:28-04:00",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7776577003?gh_jid=7776577003",
+   "posted_at": "2026-06-17T14:35:48-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
@@ -18882,6 +18701,536 @@
    "source": "collector"
   },
   {
+   "title": "Technical Recruiter",
+   "location": "Bay Area",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/arena/44726c2d-4a54-43da-9e32-73bcb7522c38",
+   "posted_at": "2025-12-18T09:53:45.310+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Founding Product Security Engineer",
+   "location": "Bay Area",
+   "department": "Security",
+   "url": "https://jobs.ashbyhq.com/arena/d1c71ccd-8fbf-42cb-82b5-06694e1b79f3",
+   "posted_at": "2025-12-18T09:20:59.639+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Data Scientist ",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/2331ece0-42fb-47ea-b627-d52e75daba3e",
+   "posted_at": "2026-06-29T17:46:57.714+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer, ML Infrastructure",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/8a52db07-5ba9-4d64-a08f-1b1f6cd88c5a",
+   "posted_at": "2025-12-18T09:46:50.063+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Software Engineer, Product",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/7354e079-fd69-4c1a-b9ce-ce99dcf30482",
+   "posted_at": "2025-12-18T09:40:22.841+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer, Product",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/e53c0f7f-b715-42e0-96ca-4316a703c3dc",
+   "posted_at": "2026-04-20T21:33:16.017+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer, Data Infrastructure",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/0f4ce213-8537-4a9b-af4f-25139df1b705",
+   "posted_at": "2025-12-18T09:26:33.645+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Machine Learning Scientist - Open Source Lead",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/62014e2d-6225-4310-96d3-c0a2c3df27f0",
+   "posted_at": "2025-12-18T08:51:39.305+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Machine Learning Scientist",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/38c21c97-1852-4cd1-b618-2f5fe0492202",
+   "posted_at": "2025-12-18T08:49:07.018+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Assistant Controller",
+   "location": "Bay Area",
+   "department": "Finance & Accounting",
+   "url": "https://jobs.ashbyhq.com/arena/0a03c4de-f12b-41c4-af79-770af0fc2208",
+   "posted_at": "2026-04-28T20:17:26.018+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Solutions Engineer ",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/33a9584b-8f94-4478-8253-605da4bcc65c",
+   "posted_at": "2026-02-23T22:29:10.761+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Infrastructure Engineer, TL",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/02c6443b-f882-4e2a-8e17-9a4bc22b7508",
+   "posted_at": "2026-07-19T23:19:11.803+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Growth Marketing Manager, Email and Lifecycle",
+   "location": "Bay Area",
+   "department": "Marketing & Communications",
+   "url": "https://jobs.ashbyhq.com/arena/62a1d50b-9ee7-4792-b4fd-1597acdb6e63",
+   "posted_at": "2026-06-29T23:00:04.013+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer, Anti-Abuse",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/76fcd272-2f5b-4405-ae6c-577f7b4ccd2b",
+   "posted_at": "2026-04-22T23:26:10.886+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "People Operations Lead ",
+   "location": "Bay Area",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/arena/4cbc2bd8-24e1-4100-862c-ea93651b4cb7",
+   "posted_at": "2026-06-08T22:51:27.865+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Backend Engineer",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/7490c92c-e7a0-4629-b9b8-eb89d5862527",
+   "posted_at": "2026-07-16T23:09:03.934+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Site Reliability Engineer",
+   "location": "Bay Area",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/arena/84a4ce23-eada-4c98-9a18-f9427069a8db",
+   "posted_at": "2026-07-16T23:10:46.466+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Associate General Counsel - AI Product & Privacy",
+   "location": "Bay Area",
+   "department": "Legal",
+   "url": "https://jobs.ashbyhq.com/arena/6805896b-c5ff-412d-9490-0f0f0c6fd149",
+   "posted_at": "2026-07-14T01:49:31.228+00:00",
+   "company": "Arena Racing Company",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "People Development Specialist",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "HR",
+   "url": "https://ballysintralotsa.recruitee.com/o/people-development-specialist",
+   "posted_at": "2026-07-22 14:07:18 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Business Analyst",
+   "location": "Sault Ste. Marie, Ontario, Canada",
+   "department": "",
+   "url": "https://ballysintralotsa.recruitee.com/o/business-analyst-7",
+   "posted_at": "2026-07-20 13:13:21 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Accountant",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "FINANCE",
+   "url": "https://ballysintralotsa.recruitee.com/o/junior-accountant-1",
+   "posted_at": "2026-07-16 10:39:46 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Delivery Manager",
+   "location": "Sault Ste. Marie, Ontario, Canada",
+   "department": "",
+   "url": "https://ballysintralotsa.recruitee.com/o/technical-delivery-manager",
+   "posted_at": "2026-07-20 13:03:51 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Account Executive",
+   "location": "Toronto, Ontario, Canada",
+   "department": "",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-account-executive",
+   "posted_at": "2026-07-20 12:59:29 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Pre Sales and Bidding Specialist",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Commercial",
+   "url": "https://ballysintralotsa.recruitee.com/o/pre-sales-and-bidding-specialist-1",
+   "posted_at": "2026-07-13 14:08:21 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Pre Sales and Bidding Manager",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Commercial",
+   "url": "https://ballysintralotsa.recruitee.com/o/pre-sales-and-bidding-manager-2",
+   "posted_at": "2026-07-13 14:07:23 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Automation Test Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/junior-automation-test-engineer-1",
+   "posted_at": "2026-06-30 07:13:08 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Full-Stack Software Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/full-stack-software-engineer",
+   "posted_at": "2026-06-16 08:07:39 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Embedded Hardware Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-embedded-hardware-engineer",
+   "posted_at": "2026-06-04 07:21:37 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Systems Administrator",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Information Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/systems-administrator",
+   "posted_at": "2026-07-10 10:20:48 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Supply Chain Specialist",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "FINANCE",
+   "url": "https://ballysintralotsa.recruitee.com/o/supply-chain-specialist-1",
+   "posted_at": "2026-05-25 13:34:22 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Frontend Engineer (React)",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/frontend-engineer-react",
+   "posted_at": "2022-05-31 11:47:18 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer (Java)",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-software-engineer-java-5",
+   "posted_at": "2026-04-20 15:14:54 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer (React) - US Projects",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/software-engineer-react-us-projects",
+   "posted_at": "2024-02-08 09:16:02 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Application Support Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/application-support-engineer-hybrid",
+   "posted_at": "2022-02-11 14:00:12 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Application Support Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-application-support-engineer",
+   "posted_at": "2025-10-13 13:42:56 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Application Security Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Information Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/application-security-engineer",
+   "posted_at": "2026-03-09 09:15:26 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "BI and Reporting Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/bi-and-reporting-engineer",
+   "posted_at": "2025-10-20 12:53:06 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Business Analyst",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/business-analyst-6",
+   "posted_at": "2026-03-30 08:51:24 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Cloud Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Information Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/cloud-engineer-1",
+   "posted_at": "2025-09-30 10:19:32 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Cloud Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Information Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-cloud-engineer",
+   "posted_at": "2026-01-12 15:03:33 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Cyber Security Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Information Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-cyber-security-engineer",
+   "posted_at": "2025-08-26 10:25:43 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Engineer (Sports Betting)",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/devops-engineer-sports-betting",
+   "posted_at": "2026-05-05 10:19:09 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Java Developer-Lottery Solutions",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/java-developer-lottery-solutions",
+   "posted_at": "2025-10-21 10:18:44 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Network Engineer (Enterprise IT)",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Information Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/network-engineer-enterprise-it",
+   "posted_at": "2026-03-05 09:12:22 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Oracle PL/SQL Developer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/oracle-plsql-developer",
+   "posted_at": "2025-12-16 13:20:42 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Quality Control Engineer (Hybrid)",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/quality-control-engineer-paiania",
+   "posted_at": "2022-05-16 06:53:52 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Quality Control Engineer",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/senior-quality-control-engineer-1",
+   "posted_at": "2024-11-08 08:19:47 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Technology Delivery Manager (Hybrid)",
+   "location": "Athens, Attik\u00ed, Greece",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/technology-delivery-manager-hybrid",
+   "posted_at": "2018-10-05 08:18:11 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Enterprise AI and Automation Engineer",
+   "location": "Msida, Msida, Malta",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/enterprise-ai-and-automation-engineer",
+   "posted_at": "2026-06-12 14:52:24 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Director of Transactional Finance",
+   "location": "Manchester, Manchester, United Kingdom",
+   "department": "FINANCE",
+   "url": "https://ballysintralotsa.recruitee.com/o/director-of-transactional-finance",
+   "posted_at": "2026-06-18 14:58:03 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Support Specialist",
+   "location": "Hamburg, Hamburg, Germany",
+   "department": "Technology",
+   "url": "https://ballysintralotsa.recruitee.com/o/technical-support-specialist-2",
+   "posted_at": "2025-12-03 12:11:49 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Call Center Operator (2)",
+   "location": "Strongsville, Ohio, United States",
+   "department": "",
+   "url": "https://ballysintralotsa.recruitee.com/o/call-center-operator-2-5",
+   "posted_at": "2026-06-11 14:49:46 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "System Operator",
+   "location": "Boise, Idaho, United States",
+   "department": "",
+   "url": "https://ballysintralotsa.recruitee.com/o/system-operator",
+   "posted_at": "2026-07-08 17:35:13 UTC",
+   "company": "Intralot",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
    "title": "Join our Talent Community!",
    "location": "Gibraltar, Gibraltar; United Kingdom",
    "department": "Corporate",
@@ -18889,6 +19238,166 @@
    "posted_at": "2026-04-09T08:13:02-04:00",
    "company": "Lottoland",
    "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Brand Manager (m/w/d)",
+   "location": "Hamburg",
+   "department": "Marketing & Design",
+   "url": "https://jobs.ashbyhq.com/zeal-network/8d53cc5b-8833-459a-b60e-a594e25d70d0",
+   "posted_at": "2026-05-07T07:50:42.675+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Werkstudent:in Marketing (w/m/d)",
+   "location": "Hamburg",
+   "department": "Business",
+   "url": "https://jobs.ashbyhq.com/zeal-network/c44604aa-70ae-4044-8f81-26820c3b46de",
+   "posted_at": "2026-06-01T12:51:01.404+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Product Manager (f/m/d)",
+   "location": "Hamburg",
+   "department": "Product & UX",
+   "url": "https://jobs.ashbyhq.com/zeal-network/df0bc5bb-4c23-47d0-b3f2-279f10c28547",
+   "posted_at": "2026-07-01T07:01:31.621+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Werkstudent:in Content Creation (w/m/d)",
+   "location": "Hamburg",
+   "department": "Business",
+   "url": "https://jobs.ashbyhq.com/zeal-network/a0c1d621-614f-4e52-821e-dd4f5d1ed4bc",
+   "posted_at": "2026-06-01T13:20:49.175+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Team Lead Engineering - Traumhausverlosung (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/a1417d82-4edf-4688-b0d5-e571cc5eb22d",
+   "posted_at": "2026-05-07T07:43:13.628+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Team Lead Product Management (f/m/d)",
+   "location": "Hamburg",
+   "department": "Product & UX",
+   "url": "https://jobs.ashbyhq.com/zeal-network/f02ae580-0ee2-436e-b830-4be99cf75997",
+   "posted_at": "2026-05-08T13:28:42.525+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Werkstudent:in Projektmanagement - Traumhausverlosung (w/m/d)",
+   "location": "Hamburg",
+   "department": "Business",
+   "url": "https://jobs.ashbyhq.com/zeal-network/7a967b5e-4d6a-420a-a185-84fecb9e4749",
+   "posted_at": "2026-05-20T07:20:53.288+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "CRM Technical Expert (f/m/d)",
+   "location": "Spain (Madrid)",
+   "department": "JuegosONCE",
+   "url": "https://jobs.ashbyhq.com/zeal-network/40754848-48f2-4a2e-b651-99167f7456d0",
+   "posted_at": "2026-06-12T17:08:17.042+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Team Lead Marketing Analytics (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/573881b5-3b21-4707-99d8-92cb9e1204c5",
+   "posted_at": "2026-07-14T09:47:28.146+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Werkstudent:in Social Media (w/m/d)",
+   "location": "Hamburg",
+   "department": "Business",
+   "url": "https://jobs.ashbyhq.com/zeal-network/a30a2f58-ee2a-4eee-a351-a5b5218c211c",
+   "posted_at": "2026-05-22T09:29:07.387+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Working Student Project Management (f/m/d)",
+   "location": "Hamburg",
+   "department": "Business",
+   "url": "https://jobs.ashbyhq.com/zeal-network/06cd6d3d-7e58-4d7a-9c7b-237e37f47004",
+   "posted_at": "2026-05-27T07:51:46.852+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Data Engineer (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/b0f1da9a-e6e3-4989-b043-5d4e7ce9a54e",
+   "posted_at": "2026-06-15T07:34:45.582+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "(Senior) Full Stack Next.js Developer (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/2513ec18-f75f-4e8e-90ae-20ccaf40620c",
+   "posted_at": "2026-07-08T09:16:19.514+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Team Lead Engineering - Platform (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/79cb77d0-26ff-4331-80d9-55d03fe94edb",
+   "posted_at": "2026-07-07T10:48:29.788+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Team Lead Engineering - Backend (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/321fffc0-6258-43d1-bbe2-4d800b563bd6",
+   "posted_at": "2026-07-01T13:33:25.089+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "(Senior) Quality Assurance Engineer (f/m/d)",
+   "location": "Hamburg",
+   "department": "Technology",
+   "url": "https://jobs.ashbyhq.com/zeal-network/400b5044-e338-4e97-9db4-b612c0d173ed",
+   "posted_at": "2026-07-09T07:43:50.977+00:00",
+   "company": "ZEAL Network",
+   "ats": "ashby",
    "source": "collector"
   },
   {

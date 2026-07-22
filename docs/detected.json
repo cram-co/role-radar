@@ -280,5 +280,163 @@
  },
  "Wazdan": {
   "ats": "unknown"
+ },
+ "SoftSwiss": {
+  "ats": "teamtailor",
+  "token": "softswiss"
+ },
+ "EveryMatrix": {
+  "ats": "teamtailor",
+  "token": "everymatrix"
+ },
+ "Altenar": {
+  "ats": "unknown"
+ },
+ "White Hat Gaming": {
+  "ats": "unknown"
+ },
+ "Strive Gaming": {
+  "ats": "breezy",
+  "token": "strive"
+ },
+ "OpenBet": {
+  "ats": "unknown"
+ },
+ "Gentoo Media (ex-GiG)": {
+  "ats": "teamtailor",
+  "token": "gentoomedia"
+ },
+ "GiG (platform)": {
+  "ats": "unknown"
+ },
+ "Continent 8": {
+  "ats": "unknown"
+ },
+ "GeoComply": {
+  "ats": "unknown"
+ },
+ "Stats Perform": {
+  "ats": "teamtailor",
+  "token": "statsperform"
+ },
+ "LSports": {
+  "ats": "unknown"
+ },
+ "Racing Post / Spotlight Sports": {
+  "ats": "unknown"
+ },
+ "UK Tote Group": {
+  "ats": "unknown"
+ },
+ "Churchill Downs / TwinSpires": {
+  "ats": "unknown"
+ },
+ "Arena Racing Company": {
+  "ats": "ashby",
+  "token": "arena"
+ },
+ "The Jockey Club": {
+  "ats": "unknown"
+ },
+ "Weatherbys": {
+  "ats": "unknown"
+ },
+ "Allwyn": {
+  "ats": "unknown"
+ },
+ "Intralot": {
+  "ats": "recruitee",
+  "token": "intralot"
+ },
+ "OPAP": {
+  "ats": "unknown"
+ },
+ "ZEAL Network": {
+  "ats": "ashby",
+  "token": "zeal-network"
+ },
+ "GGPoker (NSUS Group)": {
+  "ats": "unknown"
+ },
+ "4Poker": {
+  "ats": "unknown"
+ },
+ "MuchBetter": {
+  "ats": "unknown"
+ },
+ "MiFinity": {
+  "ats": "unknown"
+ },
+ "Jeton": {
+  "ats": "unknown"
+ },
+ "The Lottery Corporation": {
+  "ats": "unknown"
+ },
+ "Tabcorp": {
+  "ats": "unknown"
+ },
+ "Hong Kong Jockey Club": {
+  "ats": "unknown"
+ },
+ "Cirsa": {
+  "ats": "unknown"
+ },
+ "Admiral": {
+  "ats": "unknown"
+ },
+ "Fortuna Entertainment Group": {
+  "ats": "unknown"
+ },
+ "Rhino Entertainment": {
+  "ats": "unknown"
+ },
+ "TopSport": {
+  "ats": "unknown"
+ },
+ "Yolo Group": {
+  "ats": "unknown"
+ },
+ "Caliente": {
+  "ats": "unknown"
+ },
+ "Pinnacle": {
+  "ats": "unknown"
+ },
+ "bet9ja": {
+  "ats": "unknown"
+ },
+ "betPawa": {
+  "ats": "unknown"
+ },
+ "Sun International": {
+  "ats": "unknown"
+ },
+ "KingMakers": {
+  "ats": "unknown"
+ },
+ "AGS": {
+  "ats": "unknown"
+ },
+ "OlyBet Group": {
+  "ats": "unknown"
+ },
+ "Live88": {
+  "ats": "unknown"
+ },
+ "APE | Poker Technology": {
+  "ats": "unknown"
+ },
+ "Tipwin Limited": {
+  "ats": "unknown"
+ },
+ "Neds": {
+  "ats": "unknown"
+ },
+ "Palmerbet": {
+  "ats": "unknown"
+ },
+ "FEG": {
+  "ats": "unknown"
  }
 }
