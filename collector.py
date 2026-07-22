@@ -28,7 +28,7 @@ COMPANIES_CSV = ROOT / "companies.csv"
 CACHE_FILE = DOCS / "detected.json"
 FEED_FILE = DOCS / "feed.json"
 
-DETECT_PER_RUN = 20          # new companies probed per run
+DETECT_PER_RUN = 50          # new companies probed per run
 REQUEST_DELAY = 0.35         # politeness delay between probe requests
 TIMEOUT = 15
 HEADERS = {"User-Agent": "RoleRadar/1.0 (personal job-search tool)"}
@@ -59,30 +59,40 @@ def slug_candidates(name: str):
 # ---------------------------------------------------------------- probes
 # Each returns a truthy token payload if the slug exists on that ATS.
 
+def _nonempty(x):
+    """A probe only counts as a match if the board returns at least one posting.
+    Several ATS APIs answer 200 with an empty result set for slugs that don't
+    exist (SmartRecruiters most notably), which produced false positives that
+    were then cached and blocked the real ATS from ever being tried."""
+    return bool(x)
+
+
 def probe_greenhouse(slug):
     r = session.get(
         f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs", timeout=TIMEOUT
     )
-    return r.status_code == 200 and "jobs" in r.json()
+    return r.status_code == 200 and _nonempty(r.json().get("jobs"))
 
 
 def probe_breezy(slug):
     r = session.get(f"https://{slug}.breezy.hr/json", timeout=TIMEOUT)
-    return r.status_code == 200 and isinstance(r.json(), list)
+    d = r.json()
+    return r.status_code == 200 and isinstance(d, list) and _nonempty(d)
 
 
 def probe_lever(slug):
     r = session.get(
         f"https://api.lever.co/v0/postings/{slug}?mode=json", timeout=TIMEOUT
     )
-    return r.status_code == 200 and isinstance(r.json(), list)
+    d = r.json()
+    return r.status_code == 200 and isinstance(d, list) and _nonempty(d)
 
 
 def probe_ashby(slug):
     r = session.get(
         f"https://api.ashbyhq.com/posting-api/job-board/{slug}", timeout=TIMEOUT
     )
-    return r.status_code == 200 and "jobs" in r.json()
+    return r.status_code == 200 and _nonempty(r.json().get("jobs"))
 
 
 def probe_smartrecruiters(slug):
@@ -90,12 +100,15 @@ def probe_smartrecruiters(slug):
         f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=1",
         timeout=TIMEOUT,
     )
-    return r.status_code == 200 and "content" in r.json()
+    if r.status_code != 200:
+        return False
+    d = r.json()
+    return _nonempty(d.get("content")) or (d.get("totalFound") or 0) > 0
 
 
 def probe_recruitee(slug):
     r = session.get(f"https://{slug}.recruitee.com/api/offers/", timeout=TIMEOUT)
-    return r.status_code == 200 and "offers" in r.json()
+    return r.status_code == 200 and _nonempty(r.json().get("offers"))
 
 
 def probe_workable(slug):
@@ -104,12 +117,15 @@ def probe_workable(slug):
         json={"query": "", "location": [], "department": []},
         timeout=TIMEOUT,
     )
-    return r.status_code == 200 and "results" in r.json()
+    return r.status_code == 200 and _nonempty(r.json().get("results"))
 
 
 def probe_teamtailor(slug):
     r = session.get(f"https://{slug}.teamtailor.com/jobs", timeout=TIMEOUT)
-    return r.status_code == 200 and "teamtailor" in r.text.lower()
+    if r.status_code != 200 or "teamtailor" not in r.text.lower():
+        return False
+    # a real board links out to individual job pages
+    return "/jobs/" in r.text
 
 
 PROBES = {
