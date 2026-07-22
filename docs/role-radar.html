@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Role Radar | Cram Consultancy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root{--ink:#0A0C10;--navy:#0E1B2E;--navy2:#16283F;--steel:#3E5069;--slate:#6B7688;
+        --mist:#AEB6C2;--paper:#F4F5F7;--line:#1E2C3E;--line2:#E2E4E8;--royal:#1F4BC4;--chief:#5B8DEF;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5;}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px;}
+
+  header.rr{background:linear-gradient(180deg,var(--ink) 0%,var(--navy) 100%);color:var(--paper);padding:34px 0 26px;}
+  header.rr h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,5vw,40px);letter-spacing:.02em;color:#fff;}
+  header.rr .sub{font-size:15px;color:var(--mist);margin-top:6px;}
+  .ticker{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);
+          font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--mist);
+          display:flex;gap:22px;flex-wrap:wrap;text-transform:uppercase;}
+
+  .panel{background:#EEF0F3;border-bottom:1px solid var(--line2);padding:22px 0;}
+  .searchbar{display:flex;gap:9px;}
+  .searchbar input{flex:1;min-width:0;padding:13px 14px;border:1.5px solid #D3D7DE;border-radius:5px;background:#fff;font:inherit;font-size:15px;}
+  .searchbar input:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.12);}
+  .go{padding:13px 24px;border:none;border-radius:5px;background:var(--navy);color:#fff;font:inherit;font-size:14px;font-weight:600;cursor:pointer;}
+  .go:hover{background:var(--royal);}
+  .filter-row{margin-top:11px;}
+  .filter-row{position:relative;}
+  .locbtn{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;max-width:360px;
+          padding:11px 13px;border:1.5px solid #D3D7DE;border-radius:5px;background:#fff;font:inherit;
+          font-size:14.5px;color:var(--navy2);cursor:pointer;text-align:left;}
+  .locbtn:hover{border-color:var(--steel);}
+  .locbtn .caret{color:var(--slate);font-size:11px;}
+  .locpanel{position:absolute;z-index:20;top:calc(100% + 6px);left:0;width:100%;max-width:360px;background:#fff;
+            border:1px solid #D3D7DE;border-radius:6px;box-shadow:0 8px 26px rgba(14,27,46,.14);padding:10px;}
+  .locpanel input{width:100%;padding:9px 11px;border:1px solid #D3D7DE;border-radius:4px;font:inherit;font-size:14px;margin-bottom:8px;}
+  .locpanel input:focus{outline:none;border-color:var(--royal);}
+  #locopts{max-height:280px;overflow-y:auto;}
+  .locgroup{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+            color:var(--slate);padding:10px 6px 6px;}
+  .locopt{display:flex;align-items:center;gap:9px;padding:7px 6px;border-radius:4px;cursor:pointer;font-size:14px;color:var(--navy2);}
+  .locopt:hover{background:#F4F5F7;}
+  .locopt input{width:16px;height:16px;margin:0;accent-color:var(--royal);flex:0 0 auto;}
+  .locopt .n{margin-left:auto;color:var(--mist);font-size:12.5px;font-family:'IBM Plex Mono',monospace;}
+  .lead-row{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14.5px;color:var(--navy2);cursor:pointer;}
+  .lead-row input{width:18px;height:18px;accent-color:var(--royal);cursor:pointer;}
+  .countline{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;
+             text-transform:uppercase;color:var(--slate);display:flex;gap:14px;align-items:center;}
+  .clear{background:none;border:none;padding:0;font:inherit;color:var(--royal);cursor:pointer;text-transform:uppercase;}
+
+  .list{padding:8px 0 50px;}
+  .job{display:block;text-decoration:none;color:inherit;border-bottom:1px solid var(--line2);padding:17px 2px;transition:.12s;}
+  .job:hover{background:#fff;padding-left:8px;padding-right:8px;}
+  .job .t{font-family:'Fraunces',serif;font-size:17.5px;font-weight:500;color:var(--navy);line-height:1.3;}
+  .job .m{margin-top:5px;font-size:13.5px;color:var(--slate);display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .job .co{color:var(--royal);font-weight:500;}
+  .dot{color:var(--mist);}
+  .empty{padding:46px 8px;text-align:center;color:var(--slate);font-size:15px;}
+  .empty .go{margin-top:14px;}
+  .notice{background:#FFF6E5;border:1px solid #F0D9A8;border-radius:6px;padding:12px 14px;margin:16px 0 0;font-size:13.5px;color:#6B5320;}
+  footer.rr{border-top:1px solid var(--line2);padding:24px 0 40px;font-size:13px;color:var(--slate);}
+  footer.rr a{color:var(--royal);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="rr">
+  <div class="wrap">
+    <h1>ROLE RADAR</h1>
+    <div class="sub">iGaming &middot; Betting &middot; Casino &middot; Sports &middot; Racing</div>
+    <div class="ticker">
+      <span id="t-roles">loading…</span>
+      <span id="t-cos"></span>
+      <span id="t-upd"></span>
+    </div>
+  </div>
+</header>
+
+<div class="panel">
+  <div class="wrap">
+    <div class="searchbar">
+      <input id="q" type="text" placeholder="Enter role, title or keyword" autocomplete="off" />
+      <button class="go" id="btn">Search</button>
+    </div>
+    <div class="filter-row">
+      <button type="button" class="locbtn" id="locbtn" aria-expanded="false">
+        <span id="locbtn-label">All locations</span><span class="caret">&#9662;</span>
+      </button>
+      <div class="locpanel" id="locpanel" hidden>
+        <input type="text" id="locsearch" placeholder="Find a location" autocomplete="off" />
+        <div id="locopts"></div>
+      </div>
+    </div>
+    <label class="lead-row">
+      <input type="checkbox" id="lead" />
+      <span>Leadership only &mdash; C-level, MD, GM, Director, VP, Head of</span>
+    </label>
+    <div class="countline">
+      <span id="count">&nbsp;</span>
+      <button class="clear" id="clear" style="display:none">Clear</button>
+    </div>
+    <div id="notice"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="list" id="list"></div>
+</div>
+
+<footer class="rr">
+  <div class="wrap">
+    <strong>BETA</strong> &mdash; spot any bugs or issues? Let me know at
+    <a href="mailto:heath@cramcfc.com">heath@cramcfc.com</a><br />
+    Hope you too enjoy using my aggregator!
+  </div>
+</footer>
+
+<script>
+// Once this page is served from /docs alongside feed.json, the first entry is
+// same-origin: no CORS involved at all. The others are fallbacks.
+const FEED_URLS = [
+  "feed.json",
+  "https://raw.githubusercontent.com/cram-co/role-radar/main/docs/feed.json",
+  "https://cram-co.github.io/role-radar/feed.json"
+];
+const SAMPLE = [{"c":"LionHires","t":"Country Manager - Spain ","l":"Spain","u":"https://job-boards.eu.greenhouse.io/lionhires/jobs/4909620101","p":"2026-06-29T10:22:25-04:00"},{"c":"LionHires","t":"Country Manager - Sweden","l":"Copenhagen, Denmark","u":"https://job-boards.eu.greenhouse.io/lionhires/jobs/4802646101","p":"2026-06-26T07:41:05-04:00"},{"c":"LionHires","t":"Head of Programmatic","l":"Lisbon","u":"https://job-boards.eu.greenhouse.io/lionhires/jobs/4716429101","p":"2026-07-06T07:34:08-04:00"},{"c":"LionHires","t":"Operational CFO","l":"Birkirkara, Malta","u":"https://job-boards.eu.greenhouse.io/lionhires/jobs/4934495101","p":"2026-07-22T05:43:25-04:00"},{"c":"LionHires","t":"VP of Engagement","l":"Lisbon, Portugal","u":"https://job-boards.eu.greenhouse.io/lionhires/jobs/4904851101","p":"2026-06-22T07:45:50-04:00"},{"c":"Bullfinch Recruitment","t":"Head of Growth","l":"Tallinn, Estonia","u":"https://bullfinch.breezy.hr/p/30afb540b1fa-head-of-growth","p":"2026-07-15T09:16:19.116Z"},{"c":"Bullfinch Recruitment","t":"Head of Growth","l":"Limassol, Cyprus","u":"https://bullfinch.breezy.hr/p/54a27ae1e627-head-of-growth","p":"2026-07-15T09:15:36.593Z"},{"c":"Bullfinch Recruitment","t":"Head of VIP","l":"Cape Town, South Africa","u":"https://bullfinch.breezy.hr/p/38705c28e5e9-head-of-vip","p":"2026-05-12T09:18:30.234Z"},{"c":"Bullfinch Recruitment","t":"Head of Workforce and Player Operations Technology","l":"Gibraltar, Gibraltar","u":"https://bullfinch.breezy.hr/p/c42add28be22-head-of-workforce-and-player-operations-technology","p":"2026-06-12T10:28:42.097Z"},{"c":"Flutter Entertainment (Group)","t":"Head of Performance / Digital Media","l":"3 Locations","u":"https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Saint-Julians-Malta/Head-of-Media_JR137515","p":null},{"c":"FanDuel","t":"Campaign Strategy Director","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=8036951","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Head of Social","l":"Los Angeles","u":"https://www.fanduel.careers/open-positions?gh_jid=7858504","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Head of Social","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=7858483","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Head of Social","l":"Atlanta","u":"https://www.fanduel.careers/open-positions?gh_jid=7858500","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Infrastructure Engineering Director","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=8048863","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Infrastructure Engineering Director","l":"Atlanta, Georgia, United States","u":"https://www.fanduel.careers/open-positions?gh_jid=8048893","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Investment Strategy Director","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=8036841","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Marketing Sciences Vice President","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=7826293","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Media Investment Strategy Director","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=8017555","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Regulatory Counsel Vice President","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=7901824","p":"2026-07-20T19:01:11-04:00"},{"c":"FanDuel","t":"Software Engineering Director","l":"Edinburgh / Hybrid","u":"https://www.fanduel.careers/open-positions?gh_jid=7553494","p":"2026-07-20T19:01:11-04:00"},{"c":"Entain","t":"Head of StratOps","l":"London, GB","u":"https://jobs.smartrecruiters.com/entain/744000139014349","p":"2026-07-22T07:49:27.916Z"},{"c":"Entain","t":"UKI AI Director","l":"London, GB","u":"https://jobs.smartrecruiters.com/entain/744000138601723","p":"2026-07-20T10:04:57.968Z"},{"c":"Entain","t":"Head of Design - Coral & Ladbrokes","l":"London, GB","u":"https://jobs.smartrecruiters.com/entain/744000137861629","p":"2026-07-15T10:49:07.467Z"},{"c":"Entain","t":"Head of Technical Accounting","l":"London, GB","u":"https://jobs.smartrecruiters.com/entain/744000137088829","p":"2026-07-10T09:42:11.948Z"},{"c":"Entain","t":"Head of Media Strategy and Planning","l":"Toronto, CA","u":"https://jobs.smartrecruiters.com/entain/744000128541763","p":"2026-05-26T16:07:06.230Z"},{"c":"Entain","t":"Head of Social- Strategy and Growth","l":"S\u00e3o Paulo, BR","u":"https://jobs.smartrecruiters.com/entain/744000127259844","p":"2026-05-19T16:40:53.964Z"},{"c":"Entain","t":"Head of Brand Insight, UK&I","l":"London, GB","u":"https://jobs.smartrecruiters.com/entain/744000121157017","p":"2026-04-16T09:56:34.605Z"},{"c":"Betsson Group","t":"Country Manager - Belgium","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/7805940","p":"2026-06-16T04:53:38-04:00"},{"c":"Betsson Group","t":"Country Manager - Greece","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/8038381","p":"2026-07-03T05:45:18-04:00"},{"c":"Betsson Group","t":"Head of Artificial Intelligence","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/7541257","p":"2026-04-28T05:29:00-04:00"},{"c":"Betsson Group","t":"Head of Engineering - Campaign & Rewards","l":"Stockholm","u":"https://job-boards.greenhouse.io/betsson/jobs/8071134","p":"2026-07-17T06:54:38-04:00"},{"c":"Betsson Group","t":"Head of Engineering - Campaign & Rewards","l":"Malaga","u":"https://job-boards.greenhouse.io/betsson/jobs/8071107","p":"2026-07-17T06:33:31-04:00"},{"c":"Betsson Group","t":"Head of PPC","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/7771926","p":"2026-04-17T08:46:51-04:00"},{"c":"Betsson Group","t":"Head of Product Design","l":"Tbilisi","u":"https://job-boards.greenhouse.io/betsson/jobs/8043170","p":"2026-07-03T02:41:09-04:00"},{"c":"Kindred Group","t":"Director, Lifecycle Marketing","l":"Remote - US","u":"https://jobs.ashbyhq.com/kindred/031d501d-998e-47c5-bebf-ad6f1c1b2d95","p":"2026-07-16T17:37:37.062+00:00"},{"c":"Kaizen Gaming","t":"Country Manager","l":"Sliema, Malta","u":"https://careers.kaizengaming.com/job-details/7753350003?gh_jid=7753350003","p":"2026-07-20T08:52:46-04:00"},{"c":"Kaizen Gaming","t":"Head of Pre Event Soccer","l":"Athens, Greece","u":"https://careers.kaizengaming.com/job-details/7606764003?gh_jid=7606764003","p":"2026-07-02T10:09:38-04:00"},{"c":"Kaizen Gaming","t":"Head of Product, Account & Regulation","l":"Athens, Greece","u":"https://careers.kaizengaming.com/job-details/7769382003?gh_jid=7769382003","p":"2026-07-06T06:30:57-04:00"},{"c":"Kaizen Gaming","t":"Head of Product, Entertainment & Engagement Platforms","l":"Athens, Greece","u":"https://careers.kaizengaming.com/job-details/7769417003?gh_jid=7769417003","p":"2026-07-02T10:09:38-04:00"},{"c":"Kaizen Gaming","t":"Managing Director","l":"Ceuta, Spain","u":"https://careers.kaizengaming.com/job-details/7761369003?gh_jid=7761369003","p":"2026-07-08T06:54:55-04:00"},{"c":"LeoVegas Group","t":"Director of Sports, Product","l":"M\u00e1laga, Spain","u":"https://jobs.ashbyhq.com/leovegasgroup/3c9dd2a1-4e73-4d0c-a559-b1b19d37ec5a","p":"2026-07-17T13:32:52.036+00:00"},{"c":"LeoVegas Group","t":"Head of Enterprise IT","l":"Stockholm, Sweden","u":"https://jobs.ashbyhq.com/leovegasgroup/f92415f8-11fa-4c5b-af44-e34a9c90b061","p":"2026-07-17T13:04:32.765+00:00"},{"c":"LeoVegas Group","t":"Country Director - Finland","l":"Stockholm, Sweden","u":"https://jobs.ashbyhq.com/leovegasgroup/fc646cc7-c20d-4240-a12b-c27513c8baf8","p":"2026-07-20T15:49:34.534+00:00"},{"c":"Tipico","t":"Head of Talent Acquisition & Development (m/f/x)","l":"St. Julian's, MT","u":"https://jobs.smartrecruiters.com/tipico/744000138649599","p":"2026-07-20T13:45:13.639Z"},{"c":"Tipico","t":"Head of Talent Acquisition & Development (m/f/x)","l":"Karlsruhe, DE","u":"https://jobs.smartrecruiters.com/tipico/744000138608739","p":"2026-07-20T10:34:23.071Z"},{"c":"Tipico","t":"Head of HR Business Partnering (m/f/x)","l":"St. Julian's, MT","u":"https://jobs.smartrecruiters.com/tipico/744000105812586","p":"2026-01-27T10:01:57.217Z"},{"c":"Super Group","t":"Director, EU Affairs","l":"Belgium","u":"https://job-boards.eu.greenhouse.io/super/jobs/4921448101","p":"2026-07-22T06:35:51-04:00"},{"c":"Super Group","t":"Head of Brand & Media","l":"Brazil","u":"https://job-boards.eu.greenhouse.io/super/jobs/4934094101","p":"2026-07-22T06:35:51-04:00"},{"c":"Super Group","t":"Head of Customer Proposition","l":"Brazil","u":"https://job-boards.eu.greenhouse.io/super/jobs/4873885101","p":"2026-07-22T06:35:51-04:00"},{"c":"Super Group","t":"Head of Monetisation","l":"Romania","u":"https://job-boards.eu.greenhouse.io/super/jobs/4913287101","p":"2026-07-22T06:35:51-04:00"},{"c":"Super Group","t":"Senior Director of Security Operations","l":"All Locations","u":"https://job-boards.eu.greenhouse.io/super/jobs/4924466101","p":"2026-07-22T06:35:51-04:00"},{"c":"Rush Street Interactive","t":"Director, Data Engineering","l":"Estonia; Malta; Serbia","u":"https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5873307004","p":"2026-04-21T16:02:36-04:00"},{"c":"Hard Rock Digital","t":"Director - VIP","l":"Florida, Florida, United States","u":"https://hardrockdigital.recruitee.com/o/director-vip-1","p":"2026-07-21 09:09:11 UTC"},{"c":"Hard Rock Digital","t":"Senior Director - US Regulatory Compliance","l":"Remote job","u":"https://hardrockdigital.recruitee.com/o/senior-director-us-regulatory-compliance-1","p":"2026-07-08 10:45:38 UTC"},{"c":"Hard Rock Digital","t":"Senior Director - Sports Commercial Revenue","l":"Remote job","u":"https://hardrockdigital.recruitee.com/o/senior-director-sports-commercial-revenue","p":"2026-06-10 14:29:41 UTC"},{"c":"Hard Rock Digital","t":"Senior Director - Casino Commercial Revenue","l":"Remote job","u":"https://hardrockdigital.recruitee.com/o/senior-director-casino-commercial-revenue","p":"2026-06-10 14:02:07 UTC"},{"c":"Hard Rock Digital","t":"Director - Facilities","l":"Hollywood, Florida, United States","u":"https://hardrockdigital.recruitee.com/o/director-facilities","p":"2026-05-14 13:39:48 UTC"},{"c":"Stake (Easygo)","t":"Head of Growth","l":"Sydney, Australia","u":"https://stake.breezy.hr/p/64d05ba1d400-head-of-growth","p":"2026-06-12T04:25:15.979Z"},{"c":"Stake (Easygo)","t":"Head of Information Security","l":"Sydney, Australia","u":"https://stake.breezy.hr/p/2aeb3ee851fc-head-of-information-security","p":"2026-07-16T22:06:40.789Z"},{"c":"Betsson Group","t":"Sportsbook - Performance Architect","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/7672154","p":"2026-05-20T03:40:58-04:00"},{"c":"FanDuel","t":"Staff Machine Learning Engineer - Search","l":"Atlanta","u":"https://www.fanduel.careers/open-positions?gh_jid=7847466","p":"2026-07-20T19:01:11-04:00"},{"c":"LeoVegas Group","t":"Commercial Performance Senior Manager","l":"Leeds, UK","u":"https://jobs.ashbyhq.com/leovegasgroup/91136ee9-38da-478c-8d99-f2c0e53f77cc","p":"2026-07-17T13:44:06.856+00:00"},{"c":"Evolution","t":"Equipment Integrity Engineer","l":"Philadelphia, US","u":"https://jobs.smartrecruiters.com/evolution/744000137163169","p":"2026-07-10T15:14:27.371Z"},{"c":"Bullfinch Recruitment","t":"Tech Lead/Staff Java Engineer","l":"Poland, Poland","u":"https://bullfinch.breezy.hr/p/fded71e9d265-tech-lead-staff-java-engineer","p":"2026-07-03T15:37:42.268Z"},{"c":"SpotOn Connections","t":"Engineering Manager","l":"Krak\u00f3w, Lesser Poland Voivodeship, Poland","u":"https://jobs.ashbyhq.com/spoton/26d977a4-8dd8-4491-a8ec-45f817001a91","p":"2026-06-22T09:32:25.516+00:00"},{"c":"Playson","t":"Security Lead / Security Engineer","l":"European Union","u":"https://jobs.ashbyhq.com/playson/18f39fc1-6bae-4572-a27d-328193215bfb","p":"2025-11-04T08:18:34.209+00:00"},{"c":"Super Group","t":"Senior Commercial Data Scientist","l":"Spain","u":"https://job-boards.eu.greenhouse.io/super/jobs/4769607101","p":"2026-07-22T07:54:44-04:00"},{"c":"Talentgrator","t":"Sales Manager (Latam market)","l":"Medell\u00edn, CO","u":"https://jobs.smartrecruiters.com/talentgrator/743999910236960","p":"2023-05-31T08:48:36.316Z"},{"c":"LeoVegas Group","t":"Senior Backend Engineer - Core","l":"Warsaw, Poland","u":"https://jobs.ashbyhq.com/leovegasgroup/b5121a4f-6bab-4a9a-8f96-81c581fbe734","p":"2026-07-17T20:51:03.869+00:00"},{"c":"Rush Street Interactive","t":"Instrumentation Analyst","l":"USA - Remote","u":"https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6011165004","p":"2026-06-11T16:32:04-04:00"},{"c":"SpotOn Connections","t":"Staff AI Engineer","l":"Chicago, IL","u":"https://jobs.ashbyhq.com/spoton/f7196711-e0cf-49d5-8eef-76d3d7b0eef3","p":"2026-04-06T17:40:57.784+00:00"},{"c":"Super Group","t":"HR Controlling Expert","l":"Croatia","u":"https://job-boards.eu.greenhouse.io/super/jobs/4902900101","p":"2026-07-22T06:35:51-04:00"},{"c":"Entain","t":"Retail Customer Service ","l":"Fareham, GB","u":"https://jobs.smartrecruiters.com/entain/744000136483569","p":"2026-07-08T14:04:38.790Z"},{"c":"Bullfinch Recruitment","t":"Finance Business Partner","l":"Isle of Man, Isle of Man","u":"https://bullfinch.breezy.hr/p/338ed92e644d-finance-business-partner","p":"2026-07-01T13:30:56.740Z"},{"c":"SpotOn Connections","t":"Territory Sales Representative / Restaurant Specialist - Bowling Green, KY","l":"Bowling Green, KY","u":"https://jobs.ashbyhq.com/spoton/16f5cd03-eccc-4b61-a06d-fd13e854a813","p":"2026-07-21T14:49:39.994+00:00"},{"c":"Tipico","t":"Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)","l":"Hamburg, DE","u":"https://jobs.smartrecruiters.com/tipico/744000134705649","p":"2026-06-29T06:42:49.764Z"},{"c":"Tipico","t":" Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ","l":"Bonn, DE","u":"https://jobs.smartrecruiters.com/tipico/744000137078199","p":"2026-07-10T08:51:42.543Z"},{"c":"SpotOn Connections","t":"Installation Specialist - Bilingual (Charlotte, NC)","l":"Charlotte, North Carolina","u":"https://jobs.ashbyhq.com/spoton/c1bab4ee-92e4-4ac1-9c88-6eebee3232d2","p":"2026-06-11T22:33:19.927+00:00"},{"c":"Entain","t":"Retail Customer Service","l":"Carlisle, GB","u":"https://jobs.smartrecruiters.com/entain/744000133401684","p":"2026-06-22T15:18:02.598Z"},{"c":"SpotOn Connections","t":"Territory Sales Representative / Restaurant Specialist - Benicia, CA","l":"Benicia, CA","u":"https://jobs.ashbyhq.com/spoton/db16642e-dc40-41fb-bb98-38607aae00a9","p":"2026-07-17T15:27:21.840+00:00"},{"c":"Super Group","t":"Senior Product Data Scientist","l":"Netherlands","u":"https://job-boards.eu.greenhouse.io/super/jobs/4775353101","p":"2026-07-22T06:35:51-04:00"},{"c":"Tipico","t":"Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)","l":"Osnabr\u00fcck, DE","u":"https://jobs.smartrecruiters.com/tipico/744000136399309","p":"2026-07-08T07:50:09.794Z"},{"c":"SpotOn Connections","t":"Territory Sales Representative / Restaurant Specialist - Clearwater, MN","l":"Clearwater, MN","u":"https://jobs.ashbyhq.com/spoton/3d8ce28c-497a-46f4-a432-f6ca204fb796","p":"2026-07-21T14:49:52.254+00:00"},{"c":"Playson","t":"Promo Features Marketing & Commercialisation Lead","l":"European Union","u":"https://jobs.ashbyhq.com/playson/4f3dd1f3-cf1b-4910-bb87-c7f3630ab1f4","p":"2026-06-30T18:45:27.255+00:00"},{"c":"Super Group","t":"Staff Market Intelligence Researcher","l":"United Kingdom","u":"https://job-boards.eu.greenhouse.io/super/jobs/4854917101","p":"2026-07-22T06:35:51-04:00"},{"c":"FanDuel","t":"Consumer Insights Manager, Sportsbook and Predicts","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=7792252","p":"2026-07-20T19:01:11-04:00"},{"c":"Entain","t":"GAMING PRODUCT SPECIALIST \u2013 SOSTITUZIONE MATERNITA\u2019","l":"Rome, IT","u":"https://jobs.smartrecruiters.com/entain/744000135657863","p":"2026-07-03T07:45:07.400Z"},{"c":"Evolution","t":"Playing Card Quality Inspector","l":"Sofia, BG","u":"https://jobs.smartrecruiters.com/evolution/744000139021780","p":"2026-07-22T08:33:21.968Z"},{"c":"Stake (Easygo)","t":"Senior Complaints Specialist - IDR/EDR","l":"Sydney, Australia","u":"https://stake.breezy.hr/p/e065ef8b8e9e-senior-complaints-specialist-idr-edr","p":"2026-07-06T05:57:58.665Z"},{"c":"SpotOn Connections","t":"Territory Sales Representative / Restaurant Specialist - Mobile, AL","l":"Mobile, AL","u":"https://jobs.ashbyhq.com/spoton/4fe9b193-4c2e-4f6a-a045-b93a4807853c","p":"2026-07-21T15:41:34.190+00:00"},{"c":"Super Group","t":"Technical Sourcer","l":"Croatia","u":"https://job-boards.eu.greenhouse.io/super/jobs/4762246101","p":"2026-07-22T06:35:51-04:00"},{"c":"Rush Street Interactive","t":"Player Support Analyst, Intern","l":"Bogot\u00e1","u":"https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6010694004","p":"2026-06-24T18:04:05-04:00"},{"c":"LeoVegas Group","t":"Senior Backend Engineer - Sports","l":"Stockholm, Sweden","u":"https://jobs.ashbyhq.com/leovegasgroup/2b5de2de-c214-45eb-ab9f-ea887f4a8031","p":"2026-07-17T13:48:14.885+00:00"},{"c":"Bullfinch Recruitment","t":"Turkish-Speaking Game Presenter","l":"Malta, Malta","u":"https://bullfinch.breezy.hr/p/eac3c766b988-turkish-speaking-game-presenter","p":"2026-05-19T12:16:26.180Z"},{"c":"Entain","t":"Stadia - Bar & Catering Team Member","l":"Hove, GB","u":"https://jobs.smartrecruiters.com/entain/744000135963479","p":"2026-07-06T09:53:42.008Z"},{"c":"Bullfinch Recruitment","t":"Spanish-Speaking Game Presenter","l":"Malta, Malta","u":"https://bullfinch.breezy.hr/p/74d6b7a29128-spanish-speaking-game-presenter","p":"2026-03-25T09:49:05.506Z"},{"c":"Super Group","t":"Senior Release Platform Engineer","l":"Netherlands","u":"https://job-boards.eu.greenhouse.io/super/jobs/4913532101","p":"2026-07-22T06:35:51-04:00"},{"c":"Sportradar","t":"Senior Application Engineer","l":"London, GB","u":"https://jobs.smartrecruiters.com/sportradar/744000130775519","p":"2026-06-08T11:21:37.687Z"},{"c":"FanDuel","t":"Lead Product Manager","l":"New York City","u":"https://www.fanduel.careers/open-positions?gh_jid=7642695","p":"2026-07-20T19:01:11-04:00"},{"c":"Betsson Group","t":"Frontend Software Engineer - Gaming","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/7963004","p":"2026-06-09T10:14:54-04:00"},{"c":"Tipico","t":"Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)","l":"Halle (Saale), DE","u":"https://jobs.smartrecruiters.com/tipico/744000136401359","p":"2026-07-08T07:57:05.655Z"},{"c":"FanDuel","t":"Senior Observability Engineer","l":"New Jersey, United States","u":"https://www.fanduel.careers/open-positions?gh_jid=8022211","p":"2026-07-20T19:01:11-04:00"},{"c":"Super Group","t":"Senior Engineering Manager","l":"Netherlands","u":"https://job-boards.eu.greenhouse.io/super/jobs/4792878101","p":"2026-07-22T06:35:51-04:00"},{"c":"FanDuel","t":"Acquisition Strategy Manager","l":"Toronto, Ontario, Canada","u":"https://www.fanduel.careers/open-positions?gh_jid=8069161","p":"2026-07-20T19:01:11-04:00"},{"c":"Super Group","t":"Staff Software Engineer","l":"Spain","u":"https://job-boards.eu.greenhouse.io/super/jobs/4822143101","p":"2026-07-22T06:35:51-04:00"},{"c":"Betsson Group","t":"Product Owner- Data & AI","l":"Malta","u":"https://job-boards.greenhouse.io/betsson/jobs/7641177","p":"2026-04-17T08:46:50-04:00"},{"c":"Super Group","t":"Senior Software Engineer (Backend)","l":"Spain","u":"https://job-boards.eu.greenhouse.io/super/jobs/4848153101","p":"2026-07-22T06:35:51-04:00"},{"c":"Light & Wonder","t":"Channel Partnerships","l":"Austin","u":"https://jobs.ashbyhq.com/light/19a5b030-50f0-4053-a227-595860e96eed","p":"2026-06-08T17:28:19.372+00:00"},{"c":"Evolution","t":"HR Business Partner ","l":"Grand Rapids, US","u":"https://jobs.smartrecruiters.com/evolution/744000132281999","p":"2026-06-15T20:35:59.500Z"},{"c":"Entain","t":"Senior Procurement Category Manager - Marketing","l":"London, GB","u":"https://jobs.smartrecruiters.com/entain/744000138595079","p":"2026-07-20T09:25:39.518Z"},{"c":"Flutter Entertainment (Group)","t":"Integrated Digital Campaign Lead","l":"Tbilisi, Georgia","u":"https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Integrated-Digital-Campaign-Lead_JR139674","p":null},{"c":"Rush Street Interactive","t":"Data Protection Manager","l":"EMEA - Remote","u":"https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5825227004","p":"2026-07-15T10:11:55-04:00"},{"c":"Evolution","t":"Chinese Mandarin Speaking Game Presenter","l":"Burnaby, CA","u":"https://jobs.smartrecruiters.com/evolution/744000138416279","p":"2026-07-17T22:14:48.837Z"},{"c":"Entain","t":"Retail Customer Service","l":"Loughton, GB","u":"https://jobs.smartrecruiters.com/entain/744000138294292","p":"2026-07-17T10:08:28.869Z"},{"c":"LeoVegas Group","t":"Engineering Manager Core Experience - UK/IR market","l":"Newcastle Upon Tyne, UK","u":"https://jobs.ashbyhq.com/leovegasgroup/e1c7ca63-d64d-4208-903e-b7ee754571bc","p":"2026-07-17T13:24:04.414+00:00"},{"c":"Flutter Entertainment (Group)","t":"Traffic Manager (6M FTC)","l":"2 Locations","u":"https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Isle-of-Man/Traffic-Manager--6M-FTC-_JR139495","p":null},{"c":"Super Group","t":"Senior Machine Learning Engineer -  Applied ML &  Research","l":"Romania","u":"https://job-boards.eu.greenhouse.io/super/jobs/4786100101","p":"2026-07-22T06:35:51-04:00"},{"c":"Evolution","t":"Senior QA Automation Engineer","l":"Sofia, BG","u":"https://jobs.smartrecruiters.com/evolution/744000126329429","p":"2026-05-13T14:19:22.275Z"},{"c":"SpotOn Connections","t":"Senior Software Engineer II (Golang, Fulfillment)","l":"Poland Remote","u":"https://jobs.ashbyhq.com/spoton/8988c6c3-61f4-47c6-8788-88535e7d8c1b","p":"2026-07-08T07:51:39.543+00:00"}];
+const SENIORITY = /\b(chief|c[eoftm]o\b|coo\b|president|managing director|general manager|country manager|director|vp\b|vice president|head of|svp\b|evp\b)|(?<![,\-]\s)\b(?:md|gm)\b(?!\s*$)/i;
+
+let JOBS = [], usingSample = false, updated = null;
+let LOC_COUNTS = {};
+let selectedLocs = (() => {
+  try { return JSON.parse(localStorage.getItem("rr_locations") || "[]"); } catch(e){ return []; }
+})();
+function saveLocs(){
+  try { localStorage.setItem("rr_locations", JSON.stringify(selectedLocs)); } catch(e){}
+}
+
+const ISO = {mt:"Malta",gb:"United Kingdom",uk:"United Kingdom",ie:"Ireland",im:"Isle of Man",gi:"Gibraltar",
+cy:"Cyprus",gr:"Greece",bg:"Bulgaria",ro:"Romania",pl:"Poland",lv:"Latvia",lt:"Lithuania",ee:"Estonia",
+ua:"Ukraine",am:"Armenia",ge:"Georgia",de:"Germany",es:"Spain",pt:"Portugal",it:"Italy",nl:"Netherlands",
+be:"Belgium",fr:"France",se:"Sweden",dk:"Denmark",no:"Norway",fi:"Finland",cz:"Czechia",hu:"Hungary",
+rs:"Serbia",hr:"Croatia",at:"Austria",ch:"Switzerland",us:"United States",ca:"Canada",br:"Brazil",
+co:"Colombia",mx:"Mexico",ar:"Argentina",pe:"Peru",cl:"Chile",au:"Australia",nz:"New Zealand",in:"India",
+ph:"Philippines",sg:"Singapore",jp:"Japan",za:"South Africa",ng:"Nigeria",ke:"Kenya",ae:"UAE",il:"Israel",
+tr:"Turkey",my:"Malaysia",tw:"Taiwan",hk:"Hong Kong",al:"Albania",md:"Moldova",mk:"North Macedonia"};
+const NAMES = Array.from(new Set(Object.values(ISO)));
+const UK_CITIES = ["london","leeds","manchester","birmingham","glasgow","edinburgh","liverpool","sheffield","nottingham","bristol","brighton"];
+const US_CITIES = ["new york","atlantic city","las vegas","southfield","chicago","boston","los angeles","san francisco","jersey city","philadelphia","denver","miami","austin","seattle","dallas","atlanta"];
+// iGaming's actual hubs — pinned to the top so they aren't buried under volume
+const HUBS = ["Multiple locations","Malta","United Kingdom","Gibraltar","Isle of Man","Cyprus","Ireland","UAE","Remote"];
+
+function bucket(loc){
+  if(!loc) return null;
+  const s = String(loc).trim(), low = s.toLowerCase();
+  if(/^\d+\s+locations?$/i.test(s) || low.includes("multiple location")) return "Multiple locations";
+  if(low.includes("remote") || low.includes("anywhere")) return "Remote";
+  if(low.includes("european union")) return "European Union";
+  if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "UAE";
+  for(const n of NAMES){
+    if(new RegExp("\\b"+n.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b").test(low)) return n;
+  }
+  const parts = s.split(",").map(x=>x.trim());
+  const tail = (parts[parts.length-1]||"").toLowerCase();
+  if(ISO[tail]) return ISO[tail];
+  if(tail.length===2 && /^[a-z]{2}$/.test(tail)) return tail.toUpperCase();
+  const head = (parts[0]||"").toLowerCase();
+  if(US_CITIES.some(c=>head.includes(c)) || ["usa","u.s.","united states"].includes(tail)) return "United States";
+  if(UK_CITIES.some(c=>head.includes(c))) return "United Kingdom";
+  return parts[parts.length-1] || null;
+}
+
+function ago(ts){
+  if(!ts) return "";
+  const d = Math.floor((Date.now()-ts)/86400000);
+  if(d<=0) return "today"; if(d===1) return "1 day ago";
+  if(d<30) return d+" days ago";
+  const m=Math.floor(d/30); return m===1?"1 month ago":m+" months ago";
+}
+
+async function load(){
+  for(const url of FEED_URLS){
+    try{
+      const r = await fetch(url, {cache:"no-store"});
+      if(!r.ok) continue;
+      const d = await r.json();
+      JOBS = (d.jobs||[]).map(j=>({c:j.company,t:j.title,l:j.location,u:j.url,p:j.posted_at}));
+      updated = d.generated_at ? Date.parse(d.generated_at) : null;
+      usingSample = false;
+      return;
+    }catch(e){ /* next host */ }
+  }
+  JOBS = SAMPLE; usingSample = true;
+}
+
+function render(){
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const leadOnly = document.getElementById("lead").checked;
+  let out = JOBS;
+  if(leadOnly) out = out.filter(j => SENIORITY.test(j.t||""));
+  if(selectedLocs.length) out = out.filter(j => selectedLocs.includes(bucket(j.l)));
+  if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
+  out = out.slice().sort((a,b)=>(Date.parse(b.p||0)||0)-(Date.parse(a.p||0)||0));
+
+  const anyFilter = q || leadOnly || selectedLocs.length;
+  document.getElementById("count").textContent =
+    anyFilter ? out.length.toLocaleString()+" of "+JOBS.length.toLocaleString()+" roles match"
+              : JOBS.length.toLocaleString()+" roles";
+  document.getElementById("clear").style.display = anyFilter ? "inline" : "none";
+
+  const list = document.getElementById("list");
+  if(!out.length){
+    list.innerHTML = '<div class="empty">No roles match that search.</div>';
+    return;
+  }
+  list.innerHTML = out.slice(0,400).map(j => `
+    <a class="job" href="${j.u||"#"}" target="_blank" rel="noopener">
+      <div class="t">${j.t||""}</div>
+      <div class="m"><span class="co">${j.c||""}</span>
+        ${j.l?'<span class="dot">&middot;</span><span>'+j.l+"</span>":""}
+        ${j.p?'<span class="dot">&middot;</span><span>'+ago(Date.parse(j.p))+"</span>":""}
+      </div>
+    </a>`).join("");
+}
+
+function buildLocations(){
+  LOC_COUNTS = {};
+  JOBS.forEach(j => { const b = bucket(j.l); if(b) LOC_COUNTS[b] = (LOC_COUNTS[b]||0)+1; });
+  // keep remembered picks even if this run has none of them
+  selectedLocs = selectedLocs.filter(k => k in LOC_COUNTS || true);
+  drawLocations();
+  updateLocLabel();
+}
+
+function drawLocations(){
+  const q = (document.getElementById("locsearch").value || "").toLowerCase();
+  const hubs = HUBS.filter(h => LOC_COUNTS[h]);
+  const rest = Object.keys(LOC_COUNTS).filter(k => !hubs.includes(k)).sort((a,b)=>LOC_COUNTS[b]-LOC_COUNTS[a]);
+  const row = k => `<label class="locopt"><input type="checkbox" value="${k}"${selectedLocs.includes(k)?" checked":""} />
+      <span>${k}</span><span class="n">${LOC_COUNTS[k]}</span></label>`;
+  const f = arr => arr.filter(k => !q || k.toLowerCase().includes(q));
+  const h2 = f(hubs), r2 = f(rest);
+  document.getElementById("locopts").innerHTML =
+      (h2.length ? '<div class="locgroup">iGaming hubs</div>'+h2.map(row).join("") : "")
+    + (r2.length ? '<div class="locgroup">Everywhere else</div>'+r2.map(row).join("") : "")
+    + (!h2.length && !r2.length ? '<div class="locgroup">No match</div>' : "");
+  document.querySelectorAll("#locopts input").forEach(cb => {
+    cb.addEventListener("change", () => {
+      if(cb.checked){ if(!selectedLocs.includes(cb.value)) selectedLocs.push(cb.value); }
+      else selectedLocs = selectedLocs.filter(v => v !== cb.value);
+      saveLocs(); updateLocLabel(); render();
+    });
+  });
+}
+
+function updateLocLabel(){
+  const el = document.getElementById("locbtn-label");
+  if(!selectedLocs.length) el.textContent = "All locations";
+  else if(selectedLocs.length <= 2) el.textContent = selectedLocs.join(", ");
+  else el.textContent = selectedLocs.length + " locations selected";
+}
+
+function stats(){
+  document.getElementById("t-roles").textContent = JOBS.length.toLocaleString()+" roles";
+  document.getElementById("t-cos").textContent = new Set(JOBS.map(j=>j.c)).size+" companies";
+  document.getElementById("t-upd").textContent = usingSample ? "sample data" : (updated?"updated "+ago(updated):"");
+  if(usingSample){
+    document.getElementById("notice").innerHTML =
+      '<div class="notice"><b>Showing a small sample.</b> The live feed can\'t be reached from this preview &mdash; ' +
+      'it will load normally once this page is hosted on your own domain.</div>';
+  }
+}
+
+document.getElementById("btn").addEventListener("click", render);
+document.getElementById("q").addEventListener("input", render);
+document.getElementById("q").addEventListener("keydown", e => { if(e.key==="Enter") render(); });
+document.getElementById("lead").addEventListener("change", render);
+document.getElementById("locbtn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  const p = document.getElementById("locpanel");
+  const open = p.hasAttribute("hidden");
+  if(open){ p.removeAttribute("hidden"); } else { p.setAttribute("hidden",""); }
+  document.getElementById("locbtn").setAttribute("aria-expanded", open ? "true" : "false");
+});
+document.getElementById("locpanel").addEventListener("click", e => e.stopPropagation());
+document.getElementById("locsearch").addEventListener("input", drawLocations);
+document.addEventListener("click", () => {
+  document.getElementById("locpanel").setAttribute("hidden","");
+  document.getElementById("locbtn").setAttribute("aria-expanded","false");
+});
+document.getElementById("clear").addEventListener("click", () => {
+  document.getElementById("q").value=""; document.getElementById("lead").checked=false;
+  selectedLocs = []; saveLocs(); drawLocations(); updateLocLabel(); render();
+});
+
+load().then(()=>{ buildLocations(); stats(); render(); });
+</script>
+</body>
+</html>

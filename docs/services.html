@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services | Cram Consultancy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root{
+    --ink:#0A0C10; --navy:#0E1B2E; --navy2:#16283F; --steel:#3E5069;
+    --slate:#6B7688; --mist:#AEB6C2; --paper:#F4F5F7; --line:#1E2C3E;
+    --line2:#E2E4E8; --royal:#1F4BC4; --chief:#5B8DEF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  /* logo mark — open C wrapping "Cram" (not a closed oval) */
+  .logo{display:inline-flex;align-items:center;text-decoration:none;font-family:'Fraunces',serif;}
+  .logo svg{height:44px;width:auto;display:block;}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(244,245,247,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{color:var(--navy2);text-decoration:none;font-size:14px;font-weight:500;}
+  .nav-links a:hover{color:var(--royal);}
+  .nav-cta{background:var(--navy);color:#fff!important;padding:9px 17px;border-radius:4px;font-size:13px;}
+  .nav-cta:hover{background:var(--navy2);}
+  .nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer;}
+
+  /* hero header block */
+  .hero{background:linear-gradient(180deg,var(--ink) 0%,var(--navy) 70%,var(--navy2) 100%);color:var(--paper);padding:40px 0 40px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-160px;top:-80px;width:520px;height:520px;border:1px solid rgba(255,255,255,.05);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.02);pointer-events:none;}
+  .hero .firm{font-family:'Fraunces',serif;font-size:clamp(26px,4vw,40px);font-weight:500;letter-spacing:-.01em;margin-bottom:20px;}
+  .frac-header{font-family:'IBM Plex Mono',monospace;font-size:clamp(13px,1.8vw,15px);letter-spacing:.22em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .chiefs{display:flex;flex-direction:column;gap:10px;position:relative;z-index:2;}
+  .chief-line{font-family:'Fraunces',serif;font-size:clamp(19px,2.9vw,29px);line-height:1.15;font-weight:500;color:#fff;}
+  .chief-line b{color:var(--chief);font-weight:600;}
+  .chief-line .paren{color:var(--mist);font-size:.72em;font-family:'Inter';font-weight:400;letter-spacing:.01em;}
+  .chief-line .frac{color:var(--mist);font-weight:400;}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px;}
+  .btn{display:inline-block;text-decoration:none;font-size:14.5px;font-weight:500;padding:12px 22px;border-radius:5px;transition:.15s;}
+  .btn-primary{background:var(--paper);color:var(--navy);}
+  .btn-primary:hover{background:#fff;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--steel);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--mist);background:rgba(255,255,255,.05);}
+
+  section.block{padding:66px 0;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--royal);margin-bottom:16px;}
+  .kicker.on-dark{color:var(--mist);}
+  .kicker.kicker-sm{font-size:12px;letter-spacing:.16em;}
+  h2.head{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,3.6vw,40px);line-height:1.1;letter-spacing:-.01em;color:var(--navy);max-width:22ch;margin-bottom:18px;}
+  .block.dark h2.head{color:var(--paper);}
+  .sub{font-size:16.5px;color:var(--slate);max-width:60ch;line-height:1.7;}
+  .block.dark .sub{color:var(--mist);}
+  .sub + .sub{margin-top:16px;}
+
+  /* ABOUT */
+  .about-lead{font-family:'Fraunces',serif;font-size:clamp(20px,2.6vw,26px);line-height:1.4;color:var(--navy2);max-width:30ch;font-weight:400;}
+  .about-body{margin-top:22px;}
+  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);}
+  .role{padding:30px 24px;text-align:center;border-right:1px solid var(--line2);display:flex;flex-direction:column;align-items:center;}
+  .role:last-child{border-right:none;}
+  .role .logobox{height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .role .logobox img{max-height:48px;max-width:170px;object-fit:contain;}
+  .role .rtitle{font-family:'Fraunces',serif;font-size:19px;color:var(--navy);font-weight:500;margin-bottom:5px;}
+  .role .rtag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);}
+  .also{margin-top:36px;text-align:center;}
+  .also .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin-bottom:20px;}
+  .also-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:34px 46px;}
+  .also-row img{max-height:30px;max-width:130px;object-fit:contain;opacity:.62;filter:grayscale(1);transition:.2s;}
+  .also-row img:hover{opacity:1;filter:grayscale(0);}
+  .also-row img.tall{max-height:42px;}
+
+  /* CTA band */
+  .cta-band{margin-top:44px;background:var(--navy);color:var(--paper);border-radius:10px;padding:30px 32px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;}
+  .cta-band .cta-q{font-family:'Fraunces',serif;font-size:24px;font-weight:500;color:#fff;margin-bottom:8px;}
+  .cta-band p{font-size:15px;line-height:1.6;color:var(--mist);max-width:52ch;}
+  .btn-solid{background:var(--chief);color:#0A0C10;font-weight:600;white-space:nowrap;}
+  .btn-solid:hover{background:#fff;}
+
+  /* enquiry form */
+  .enq{margin-top:38px;max-width:760px;}
+  .enq-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .fld{display:block;margin-bottom:22px;border:none;padding:0;}
+  .flabel{display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin-bottom:9px;}
+  .enq input[type=text],.enq input[type=email],.enq select,.enq textarea{
+    width:100%;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);background:var(--paper);
+    border:1px solid #D3D7DE;border-radius:5px;padding:11px 13px;transition:.15s;}
+  .enq textarea{resize:vertical;line-height:1.6;}
+  .enq input:focus,.enq select:focus,.enq textarea:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.13);}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;}
+  .chip{position:relative;}
+  .chip input{position:absolute;opacity:0;width:0;height:0;}
+  .chip span{display:inline-block;font-size:14px;padding:9px 15px;border:1px solid #D3D7DE;border-radius:100px;background:var(--paper);color:var(--steel);cursor:pointer;transition:.15s;}
+  .chip input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff;}
+  .chip input:focus-visible + span{outline:2px solid var(--royal);outline-offset:2px;}
+  .chip span:hover{border-color:var(--steel);}
+  .enq-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px;}
+  .enq .btn-solid{border:none;cursor:pointer;font-family:'Inter',sans-serif;}
+  .enq-note{font-size:13.5px;color:var(--slate);}
+  .enq-note a{color:var(--royal);text-decoration:none;}
+  .enq-note a:hover{text-decoration:underline;}
+  @media(max-width:620px){.enq-row{grid-template-columns:1fr;}}
+
+  /* stat band */
+  .stats{background:var(--ink);color:var(--paper);}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stat{background:var(--ink);padding:34px 20px;text-align:center;}
+  .stat .big{font-family:'Fraunces',serif;font-size:clamp(30px,4vw,42px);color:#fff;line-height:1;}
+  .stat .lbl{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--slate);margin-top:12px;letter-spacing:.03em;line-height:1.4;}
+
+  /* EXPERIENCE — capability rows, public-safe */
+  .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);margin-top:44px;}
+  .exp{background:var(--paper);padding:26px 24px;}
+  .exp-grid .exp:last-child{grid-column:1 / -1;}
+  .exp .cat{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);margin-bottom:12px;}
+  .exp h3{font-family:'Fraunces',serif;font-weight:500;font-size:18.5px;color:var(--navy);margin-bottom:8px;line-height:1.25;}
+  .exp p{font-size:14px;color:var(--slate);line-height:1.6;}
+
+  /* values */
+  .val-list{margin-top:44px;border-top:1px solid var(--line2);}
+  .val{display:grid;grid-template-columns:210px 1fr auto;gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line2);}
+  .val h3{font-family:'Fraunces',serif;font-weight:500;font-size:20px;color:var(--navy);}
+  .val p{font-size:14.5px;color:var(--slate);line-height:1.6;}
+  .val .proof{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--royal);white-space:nowrap;}
+  .val .proof a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:.15s;}
+  .val .proof a:hover{border-bottom-color:var(--royal);}
+  .val .proof a:focus-visible{outline:2px solid var(--royal);outline-offset:3px;border-radius:2px;}
+
+  /* radar */
+  .radar{background:var(--ink);color:var(--paper);border-radius:12px;padding:44px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;}
+  .radar .tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .radar h3{font-family:'Fraunces',serif;font-weight:500;font-size:27px;margin-bottom:14px;line-height:1.12;}
+  .radar p{color:var(--mist);font-size:15px;line-height:1.65;margin-bottom:22px;}
+  .radar .stat2{border-left:2px solid var(--chief);padding-left:18px;}
+  .radar .stat2 .big{font-family:'Fraunces',serif;font-size:42px;line-height:1;color:#fff;}
+  .radar .stat2 .lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);margin-top:8px;}
+
+  footer{background:var(--ink);color:var(--slate);padding:54px 0 38px;border-top:1px solid var(--line);}
+  .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:38px;}
+  .cfc-mark{font-family:'IBM Plex Mono',monospace;font-size:20px;letter-spacing:.22em;color:var(--mist);margin-top:18px;}
+  .foot-blurb{max-width:38ch;font-size:14.5px;line-height:1.6;color:var(--slate);margin-top:10px;}
+  .cfc-mark .b,.foot-blurb .b{color:var(--chief);font-weight:600;}
+  .foot-links{display:flex;gap:56px;flex-wrap:wrap;}
+  .foot-col h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .foot-col a{display:block;color:var(--slate);text-decoration:none;font-size:14px;margin-bottom:9px;}
+  .foot-col a:hover{color:var(--paper);}
+  .foot-base{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--steel);font-family:'IBM Plex Mono',monospace;}
+
+  @media(max-width:820px){
+    .nav-links{display:none;} .nav-toggle{display:block;}
+    .roles{grid-template-columns:1fr;} .role{border-right:none;border-bottom:1px solid var(--line2);}
+    .role:last-child{border-bottom:none;}
+    .stats-inner{grid-template-columns:repeat(2,1fr);}
+    .exp-grid{grid-template-columns:1fr;}
+    .val{grid-template-columns:1fr;gap:5px;} .val .proof{margin-top:3px;}
+    .radar{grid-template-columns:1fr;gap:24px;}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none;}}
+
+  .keysvc{margin-bottom:8px;border:1px solid var(--line2);border-left:3px solid var(--royal);border-radius:8px;padding:28px 30px;background:#fff;}
+  .keysvc-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:11px 30px;}
+  .keysvc-list li{font-size:14.5px;line-height:1.45;color:var(--navy2);padding-left:18px;position:relative;}
+  .keysvc-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--royal);font-size:12px;font-weight:600;}
+  @media(max-width:860px){.keysvc-list{grid-template-columns:1fr;}}
+</style>
+
+<style>
+  .current{color:var(--royal)!important;}
+  .page-hero{background:linear-gradient(180deg,var(--ink) 0%,var(--navy) 100%);color:var(--paper);padding:44px 0 48px;}
+  .page-hero .kicker{color:var(--chief);}
+  .page-hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,4.4vw,44px);line-height:1.08;letter-spacing:-.01em;color:#fff;max-width:20ch;margin-bottom:16px;}
+  .page-hero p{font-size:16.5px;line-height:1.7;color:var(--mist);max-width:58ch;}
+
+  /* problem blocks */
+  .prob{border-top:1px solid var(--line2);padding:38px 0;}
+  .prob:last-of-type{border-bottom:1px solid var(--line2);}
+  .prob-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+  .prob-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(21px,2.8vw,27px);color:var(--navy);line-height:1.2;max-width:24ch;}
+  .prob-cols{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:34px;}
+  .pc h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--royal);margin-bottom:12px;}
+  .pc ul{list-style:none;}
+  .pc li{font-size:14.5px;line-height:1.6;color:var(--slate);padding-left:15px;position:relative;margin-bottom:9px;}
+  .pc li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:1px;background:var(--mist);}
+  .pc.do li{padding-left:22px;}
+  .pc.do li::before{content:"\2713";width:auto;height:auto;background:none;top:-1px;color:var(--royal);font-size:13px;font-weight:600;}
+  .pc p{font-size:14.5px;line-height:1.65;color:var(--slate);}
+  .pc.good p{color:var(--navy2);font-weight:500;}
+
+  /* featured DD block */
+  .feature{background:var(--navy);color:var(--paper);border-radius:12px;padding:40px 38px;margin:56px 0 0;}
+  .feature .tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--chief);margin-bottom:14px;}
+  .feature h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(23px,3vw,30px);color:#fff;margin-bottom:16px;max-width:24ch;line-height:1.15;}
+  .feature p{color:var(--mist);font-size:15.5px;line-height:1.7;max-width:64ch;}
+  .feature .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line);}
+  .feature .split h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--chief);margin-bottom:10px;}
+  .feature .split p{font-size:14.5px;color:var(--mist);}
+
+  /* sequence — a real order, so numbered */
+  .seq{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);margin-top:40px;}
+  .seq-step{background:var(--paper);padding:28px 24px;}
+  .seq-n{font-family:'Fraunces',serif;font-size:34px;color:var(--mist);line-height:1;margin-bottom:14px;}
+  .seq-step h4{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:var(--navy);margin-bottom:9px;line-height:1.25;}
+  .seq-step p{font-size:14px;color:var(--slate);line-height:1.6;}
+
+  /* won't do */
+  .wont{border:1px solid var(--line2);border-left:3px solid var(--navy);border-radius:8px;padding:34px 32px;margin-top:56px;background:#fff;}
+  .wont h2{font-family:'Fraunces',serif;font-weight:500;font-size:26px;color:var(--navy);margin-bottom:10px;}
+  .wont .lead{font-size:15.5px;color:var(--slate);line-height:1.7;max-width:62ch;margin-bottom:24px;}
+  .wont ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;}
+  .wont li{font-size:14.5px;line-height:1.6;color:var(--slate);padding-left:22px;position:relative;}
+  .wont li::before{content:"\00D7";position:absolute;left:0;top:-1px;color:var(--navy);font-size:15px;}
+  .wont li b{color:var(--navy2);font-weight:600;}
+  .wont ul li:last-child{grid-column:1 / -1;}
+
+  @media(max-width:860px){
+    .prob-cols{grid-template-columns:1fr;gap:24px;}
+    .seq{grid-template-columns:1fr;}
+    .feature .split{grid-template-columns:1fr;}
+    .wont ul{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html" aria-label="Cram Consultancy">
+      <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 8 A15 15 0 1 0 40 32" fill="none" stroke="#1F4BC4" stroke-width="3.4" stroke-linecap="round"/>
+        <text x="21" y="28" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#0E1B2E">Cram</text>
+      </svg>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="services.html" class="current">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#radar">Role Radar</a>
+      <a href="enquire.html" class="nav-cta">Start a conversation</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker">Services</div>
+    <h1>What I solve.</h1>
+    <p>See below for situations I get called into most, plus M&amp;A operational work which is less dealing and more op readiness. If your problems are not here, it's still worth asking. And if I'm not the right person, I'll say so.</p>
+  </div>
+</section>
+
+<section class="block" style="padding:38px 0 0;">
+  <div class="wrap">
+    <div class="keysvc">
+      <div class="kicker" style="margin-bottom:18px;">Key services</div>
+      <ul class="keysvc-list">
+        <li>Fractional COO, GM or MD leadership</li>
+        <li>Executive or Non-Executive Directorship</li>
+        <li>Strategic Portfolio Leadership</li>
+        <li>Programme, Project &amp; Change Management</li>
+        <li>Strategy &amp; Performance Execution</li>
+        <li>Strategy &amp; OKR creation or redefinition</li>
+        <li>Operating model &amp; organisational redesign</li>
+        <li>Company, people and location restructuring</li>
+        <li>Process &amp; Automation review</li>
+        <li>Customer Operations setup and leadership</li>
+        <li>New vertical or start-up leadership</li>
+        <li>Due Diligence &amp; Integration</li>
+        <li>Executive Advisory &amp; Coaching</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+
+    <div class="kicker">Common problem statements</div>
+    <div class="prob">
+      <div class="prob-head"><h2>Outgrowing your current operating model</h2></div>
+      <div class="prob-cols">
+        <div class="pc"><h4>You know this when</h4><ul>
+          <li>Headcount is growing faster than output</li>
+          <li>Every quarter feels like firefighting</li>
+          <li>Nobody can say cleanly who owns what</li>
+          <li>The exec team is the escalation path for everything</li>
+        </ul></div>
+        <div class="pc do"><h4>What I do</h4><ul>
+          <li>Map the operating model as it actually runs, not as the org chart claims</li>
+          <li>Redesign ownership and structure</li>
+          <li>Establish new cadence and operating rhythm</li>
+          <li>Propose an organisational and location target state, and prioritise gaps for hiring, relocation or repurposing</li>
+          <li>Establish or refine strategic plan and OKRs</li>
+        </ul></div>
+        <div class="pc good"><h4>What good looks like</h4><p>A business that runs on a rhythm instead of heroics. Ownership is obvious. Accountability is installed. Business now scales and growth stops requiring proportional headcount.</p></div>
+      </div>
+    </div>
+
+    <div class="prob">
+      <div class="prob-head"><h2>Process drag, and the automation you keep meaning to start</h2></div>
+      <div class="prob-cols">
+        <div class="pc"><h4>You know this when</h4><ul>
+          <li>Manual workarounds have quietly become the process</li>
+          <li>You've discussed AI for a year and shipped nothing</li>
+          <li>Volume growth lands straight on headcount</li>
+          <li>Work is backlogged, handle times are slow or service levels are missed</li>
+        </ul></div>
+        <div class="pc do"><h4>What I do</h4><ul>
+          <li>Analyse pain points and sources of customer dissatisfaction</li>
+          <li>Inventory the work before the tooling</li>
+          <li>Close automation and workflow capability gaps</li>
+          <li>Build the pipeline; prioritise by impact vs effort</li>
+          <li>Separate what should be automated from what should simply stop</li>
+          <li>Set measures to prove work has actually been removed and benefits realised</li>
+        </ul></div>
+        <div class="pc good"><h4>What good looks like</h4><p>Work removed, measurably. Tooling proposed or added. A standing pipeline of low-no-code work, distinct and separate from the product roadmap, and always with a next candidate in waiting.</p></div>
+      </div>
+    </div>
+
+    <div class="prob">
+      <div class="prob-head"><h2>A function or team that's underperforming</h2></div>
+      <div class="prob-cols">
+        <div class="pc"><h4>You know this when</h4><ul>
+          <li>Good people, poor results</li>
+          <li>Numbers get missed</li>
+          <li>Leaders are firefighting rather than delivering outcomes</li>
+          <li>Reporting is of problems, not solutions</li>
+        </ul></div>
+        <div class="pc do"><h4>What I do</h4><ul>
+          <li>Get in with the team, rather than above it, implementing best practice</li>
+          <li>Diagnose whether it is structure, capability, tooling or leadership</li>
+          <li>Fix what is actually broken, rather than restructuring on instinct</li>
+          <li>Rebuild reporting to outcomes, simplifying to what is most important, and ensure every issue has a solution not just proposed but in flight</li>
+          <li>Establish a RACI and coach the relevant leadership team towards true accountability</li>
+        </ul></div>
+        <div class="pc good"><h4>What good looks like</h4><p>The team knows its numbers and hits them. A clear execution plan is in place to close residual gaps in performance. A leadership layer now holds itself to account, without you in the room.</p></div>
+      </div>
+    </div>
+
+    <div class="prob">
+      <div class="prob-head"><h2>No operational leader, or a CEO carrying it alone</h2></div>
+      <div class="prob-cols">
+        <div class="pc"><h4>You know this when</h4><ul>
+          <li>Vision is clear and the strategy is set, but execution keeps slipping</li>
+          <li>The CEO has become also COO, by default</li>
+          <li>You need inward-facing senior leadership that comes with credibility, without the cost of a permanent C-level</li>
+          <li>The board, founders or investors ask operational questions that nobody clearly owns</li>
+        </ul></div>
+        <div class="pc do"><h4>What I do</h4><ul>
+          <li>Step in as fractional Chief Operations or Chief of Staff</li>
+          <li>Own the operating rhythm, performance reporting and exec cadence</li>
+          <li>Act as an operational partner the CEO can be straight with</li>
+          <li>Prepare and front operational updates to board, owners and investors</li>
+          <li>Build a working permanent structure, to hand over</li>
+        </ul></div>
+        <div class="pc good"><h4>What good looks like</h4><p>Owner and founders remain strategic. The CEO gets their week back. The board gets straight answers. Execution stops depending on ill-equipped individuals, and poor execution or low-value priorities stop completely.</p></div>
+      </div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="feature">
+      <div class="tag">Featured</div>
+      <h2>Pre-deal operational due diligence</h2>
+      <p>The business reports share their data but don't tell you what the operation actually is, what it will take to integrate, or which dependencies likely sit in a few people's heads. I look at the operational functions the way an operator does, before you sign.</p>
+      <div class="split">
+        <div><h4>Before the deal</h4><p>Operational reality against the stated position. Integration cost and complexity. Licence, location and people dependencies. A risk register highlighting risk to be inherited.</p></div>
+        <div><h4>After the deal</h4><p>Integration of company and brand cultures, operating models and licences. Turning a signed deal into a working, performing operation across brand, licence and location. Target state org design and a full ops gap analysis, including quick wins.</p></div>
+      </div>
+    </div>
+
+    <!-- SEQUENCE -->
+    <div class="kicker" style="margin-top:60px;">Where this usually goes</div>
+    <h2 class="head">Three steps, in this order.</h2>
+    <p class="sub">Most businesses want step three. It doesn't hold without the first two.</p>
+    <div class="seq">
+      <div class="seq-step"><div class="seq-n">1</div><h4>An operating model that's consistent and reliable</h4><p>Predictable delivery, clear ownership, heavily automated where automation genuinely fits.</p></div>
+      <div class="seq-step"><div class="seq-n">2</div><h4>Better offering, resourcing and tooling</h4><p>Strengthen what the operation runs on once it's stable enough to improve rather than just survive.</p></div>
+      <div class="seq-step"><div class="seq-n">3</div><h4>Experience and innovation on top</h4><p>The layer that earns positive customer sentiment, added once the foundation can carry it.</p></div>
+    </div>
+
+    <!-- WON'T DO -->
+    <div class="wont" id="wont-do">
+      <h2>What I won't do</h2>
+      <p class="lead">There's no special sauce here, and no attempt to be everything. Knowing where I stop is part of what you're buying. Where the work needs someone else, I'll point you at people I'd use myself.</p>
+      <ul>
+        <li><b>People and HR consultancy.</b> I've led HR functions and can drive restructuring, but talent acquisition or head-hunting is not an available service.</li>
+        <li><b>Corporate finance and deal-making.</b> I'll gladly assess the operation behind a deal, and even help with integration, but I won't originate or negotiate a partnership.</li>
+        <li><b>Take on more than I can hold.</b> I'll only agree to the time I can give my all to.</li>
+        <li><b>Run it entirely from afar.</b> Fractional means fewer days, not less presence.</li>
+        <li><b>Promise what I'm not.</b> If I'm the wrong person for it, you'll hear that on the first call.</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-band" style="margin-top:56px;">
+      <div class="cta-copy">
+        <div class="cta-q">Sound like what you need?</div>
+        <p>Tell me what you're facing and how much of me you think you need, and I'll come back with what an initial engagement would look like.</p>
+      </div>
+      <a href="enquire.html" class="btn btn-solid">Enquire within</a>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="index.html">
+          <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg" style="height:34px;">
+            <path d="M40 8 A15 15 0 1 0 40 32" fill="none" stroke="#5B8DEF" stroke-width="3.4" stroke-linecap="round"/>
+            <text x="21" y="28" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#F4F5F7">Cram</text>
+          </svg>
+        </a>
+        <div class="cfc-mark"><span class="b">C</span>RAM<span class="b">CFC</span></div>
+        <p class="foot-blurb"><span class="b">C</span>ram <span class="b">C</span>onsultancy: <span class="b">F</span>ractional <span class="b">C</span>-level</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col"><h4>Site</h4>
+          <a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="role-radar.html">Tools</a>
+        </div>
+        <div class="foot-col"><h4>Get in touch</h4>
+          <a href="mailto:heath@cramcfc.com">heath@cramcfc.com</a><a href="https://linkedin.com/in/heath-cram-69279a57" target="_blank" rel="noopener">LinkedIn</a><a href="enquire.html">Enquiry form</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Cram Consultancy</span>
+      <span>Cram Consultancy &middot; cramcfc.com</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

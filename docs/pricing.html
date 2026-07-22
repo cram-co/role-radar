@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing | Cram Consultancy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  :root{
+    --ink:#0A0C10; --navy:#0E1B2E; --navy2:#16283F; --steel:#3E5069;
+    --slate:#6B7688; --mist:#AEB6C2; --paper:#F4F5F7; --line:#1E2C3E;
+    --line2:#E2E4E8; --royal:#1F4BC4; --chief:#5B8DEF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  /* logo mark — open C wrapping "Cram" (not a closed oval) */
+  .logo{display:inline-flex;align-items:center;text-decoration:none;font-family:'Fraunces',serif;}
+  .logo svg{height:44px;width:auto;display:block;}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(244,245,247,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{color:var(--navy2);text-decoration:none;font-size:14px;font-weight:500;}
+  .nav-links a:hover{color:var(--royal);}
+  .nav-cta{background:var(--navy);color:#fff!important;padding:9px 17px;border-radius:4px;font-size:13px;}
+  .nav-cta:hover{background:var(--navy2);}
+  .nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer;}
+
+  /* hero header block */
+  .hero{background:linear-gradient(180deg,var(--ink) 0%,var(--navy) 70%,var(--navy2) 100%);color:var(--paper);padding:40px 0 40px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-160px;top:-80px;width:520px;height:520px;border:1px solid rgba(255,255,255,.05);border-radius:50%;box-shadow:0 0 0 70px rgba(255,255,255,.02);pointer-events:none;}
+  .hero .firm{font-family:'Fraunces',serif;font-size:clamp(26px,4vw,40px);font-weight:500;letter-spacing:-.01em;margin-bottom:20px;}
+  .frac-header{font-family:'IBM Plex Mono',monospace;font-size:clamp(13px,1.8vw,15px);letter-spacing:.22em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .chiefs{display:flex;flex-direction:column;gap:10px;position:relative;z-index:2;}
+  .chief-line{font-family:'Fraunces',serif;font-size:clamp(19px,2.9vw,29px);line-height:1.15;font-weight:500;color:#fff;}
+  .chief-line b{color:var(--chief);font-weight:600;}
+  .chief-line .paren{color:var(--mist);font-size:.72em;font-family:'Inter';font-weight:400;letter-spacing:.01em;}
+  .chief-line .frac{color:var(--mist);font-weight:400;}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:26px;}
+  .btn{display:inline-block;text-decoration:none;font-size:14.5px;font-weight:500;padding:12px 22px;border-radius:5px;transition:.15s;}
+  .btn-primary{background:var(--paper);color:var(--navy);}
+  .btn-primary:hover{background:#fff;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid var(--steel);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--mist);background:rgba(255,255,255,.05);}
+
+  section.block{padding:66px 0;}
+  .kicker{font-family:'IBM Plex Mono',monospace;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--royal);margin-bottom:16px;}
+  .kicker.on-dark{color:var(--mist);}
+  .kicker.kicker-sm{font-size:12px;letter-spacing:.16em;}
+  h2.head{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,3.6vw,40px);line-height:1.1;letter-spacing:-.01em;color:var(--navy);max-width:22ch;margin-bottom:18px;}
+  .block.dark h2.head{color:var(--paper);}
+  .sub{font-size:16.5px;color:var(--slate);max-width:60ch;line-height:1.7;}
+  .block.dark .sub{color:var(--mist);}
+  .sub + .sub{margin-top:16px;}
+
+  /* ABOUT */
+  .about-lead{font-family:'Fraunces',serif;font-size:clamp(20px,2.6vw,26px);line-height:1.4;color:var(--navy2);max-width:30ch;font-weight:400;}
+  .about-body{margin-top:22px;}
+  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);}
+  .role{padding:30px 24px;text-align:center;border-right:1px solid var(--line2);display:flex;flex-direction:column;align-items:center;}
+  .role:last-child{border-right:none;}
+  .role .logobox{height:78px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+  .role .logobox img{max-height:48px;max-width:170px;object-fit:contain;}
+  .role .rtitle{font-family:'Fraunces',serif;font-size:19px;color:var(--navy);font-weight:500;margin-bottom:5px;}
+  .role .rtag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--royal);}
+  .also{margin-top:36px;text-align:center;}
+  .also .lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin-bottom:20px;}
+  .also-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:34px 46px;}
+  .also-row img{max-height:30px;max-width:130px;object-fit:contain;opacity:.62;filter:grayscale(1);transition:.2s;}
+  .also-row img:hover{opacity:1;filter:grayscale(0);}
+  .also-row img.tall{max-height:42px;}
+
+  /* CTA band */
+  .cta-band{margin-top:44px;background:var(--navy);color:var(--paper);border-radius:10px;padding:30px 32px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;}
+  .cta-band .cta-q{font-family:'Fraunces',serif;font-size:24px;font-weight:500;color:#fff;margin-bottom:8px;}
+  .cta-band p{font-size:15px;line-height:1.6;color:var(--mist);max-width:52ch;}
+  .btn-solid{background:var(--chief);color:#0A0C10;font-weight:600;white-space:nowrap;}
+  .btn-solid:hover{background:#fff;}
+
+  /* enquiry form */
+  .enq{margin-top:38px;max-width:760px;}
+  .enq-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .fld{display:block;margin-bottom:22px;border:none;padding:0;}
+  .flabel{display:block;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin-bottom:9px;}
+  .enq input[type=text],.enq input[type=email],.enq select,.enq textarea{
+    width:100%;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);background:var(--paper);
+    border:1px solid #D3D7DE;border-radius:5px;padding:11px 13px;transition:.15s;}
+  .enq textarea{resize:vertical;line-height:1.6;}
+  .enq input:focus,.enq select:focus,.enq textarea:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.13);}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;}
+  .chip{position:relative;}
+  .chip input{position:absolute;opacity:0;width:0;height:0;}
+  .chip span{display:inline-block;font-size:14px;padding:9px 15px;border:1px solid #D3D7DE;border-radius:100px;background:var(--paper);color:var(--steel);cursor:pointer;transition:.15s;}
+  .chip input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff;}
+  .chip input:focus-visible + span{outline:2px solid var(--royal);outline-offset:2px;}
+  .chip span:hover{border-color:var(--steel);}
+  .enq-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px;}
+  .enq .btn-solid{border:none;cursor:pointer;font-family:'Inter',sans-serif;}
+  .enq-note{font-size:13.5px;color:var(--slate);}
+  .enq-note a{color:var(--royal);text-decoration:none;}
+  .enq-note a:hover{text-decoration:underline;}
+  @media(max-width:620px){.enq-row{grid-template-columns:1fr;}}
+
+  /* stat band */
+  .stats{background:var(--ink);color:var(--paper);}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stat{background:var(--ink);padding:34px 20px;text-align:center;}
+  .stat .big{font-family:'Fraunces',serif;font-size:clamp(30px,4vw,42px);color:#fff;line-height:1;}
+  .stat .lbl{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--slate);margin-top:12px;letter-spacing:.03em;line-height:1.4;}
+
+  /* EXPERIENCE — capability rows, public-safe */
+  .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);margin-top:44px;}
+  .exp{background:var(--paper);padding:26px 24px;}
+  .exp-grid .exp:last-child{grid-column:1 / -1;}
+  .exp .cat{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);margin-bottom:12px;}
+  .exp h3{font-family:'Fraunces',serif;font-weight:500;font-size:18.5px;color:var(--navy);margin-bottom:8px;line-height:1.25;}
+  .exp p{font-size:14px;color:var(--slate);line-height:1.6;}
+
+  /* values */
+  .val-list{margin-top:44px;border-top:1px solid var(--line2);}
+  .val{display:grid;grid-template-columns:210px 1fr auto;gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line2);}
+  .val h3{font-family:'Fraunces',serif;font-weight:500;font-size:20px;color:var(--navy);}
+  .val p{font-size:14.5px;color:var(--slate);line-height:1.6;}
+  .val .proof{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--royal);white-space:nowrap;}
+  .val .proof a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:.15s;}
+  .val .proof a:hover{border-bottom-color:var(--royal);}
+  .val .proof a:focus-visible{outline:2px solid var(--royal);outline-offset:3px;border-radius:2px;}
+
+  /* radar */
+  .radar{background:var(--ink);color:var(--paper);border-radius:12px;padding:44px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;}
+  .radar .tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .radar h3{font-family:'Fraunces',serif;font-weight:500;font-size:27px;margin-bottom:14px;line-height:1.12;}
+  .radar p{color:var(--mist);font-size:15px;line-height:1.65;margin-bottom:22px;}
+  .radar .stat2{border-left:2px solid var(--chief);padding-left:18px;}
+  .radar .stat2 .big{font-family:'Fraunces',serif;font-size:42px;line-height:1;color:#fff;}
+  .radar .stat2 .lbl{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);margin-top:8px;}
+
+  footer{background:var(--ink);color:var(--slate);padding:54px 0 38px;border-top:1px solid var(--line);}
+  .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:38px;}
+  .cfc-mark{font-family:'IBM Plex Mono',monospace;font-size:20px;letter-spacing:.22em;color:var(--mist);margin-top:18px;}
+  .foot-blurb{max-width:38ch;font-size:14.5px;line-height:1.6;color:var(--slate);margin-top:10px;}
+  .cfc-mark .b,.foot-blurb .b{color:var(--chief);font-weight:600;}
+  .foot-links{display:flex;gap:56px;flex-wrap:wrap;}
+  .foot-col h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .foot-col a{display:block;color:var(--slate);text-decoration:none;font-size:14px;margin-bottom:9px;}
+  .foot-col a:hover{color:var(--paper);}
+  .foot-base{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--steel);font-family:'IBM Plex Mono',monospace;}
+
+  @media(max-width:820px){
+    .nav-links{display:none;} .nav-toggle{display:block;}
+    .roles{grid-template-columns:1fr;} .role{border-right:none;border-bottom:1px solid var(--line2);}
+    .role:last-child{border-bottom:none;}
+    .stats-inner{grid-template-columns:repeat(2,1fr);}
+    .exp-grid{grid-template-columns:1fr;}
+    .val{grid-template-columns:1fr;gap:5px;} .val .proof{margin-top:3px;}
+    .radar{grid-template-columns:1fr;gap:24px;}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none;}}
+</style>
+
+<style>
+  .current{color:var(--royal)!important;}
+  .page-hero{background:linear-gradient(180deg,var(--ink) 0%,var(--navy) 100%);color:var(--paper);padding:40px 0 36px;}
+  .page-hero .kicker{color:var(--chief);}
+  .page-hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,4.4vw,44px);line-height:1.08;letter-spacing:-.01em;color:#fff;max-width:20ch;margin-bottom:16px;}
+  .page-hero p{font-size:16.5px;line-height:1.7;color:var(--mist);max-width:60ch;}
+
+  .rates{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);margin-top:8px;}
+  .rate{background:var(--paper);padding:32px 26px;display:flex;flex-direction:column;}
+  .rate .rlabel{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--royal);margin-bottom:18px;}
+  .rate .amount{font-family:'Fraunces',serif;font-size:clamp(30px,4vw,40px);color:var(--navy);line-height:1;}
+  .rate .per{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);margin-top:9px;letter-spacing:.05em;}
+  .rate .rdesc{font-size:14.5px;line-height:1.6;color:var(--slate);margin:20px 0 18px;}
+  .rate ul{list-style:none;margin-top:auto;}
+  .rate li{font-size:13.5px;line-height:1.55;color:var(--steel);padding-left:20px;position:relative;margin-bottom:9px;}
+  .rate li::before{content:"\2713";position:absolute;left:0;top:-1px;color:var(--royal);font-size:12px;font-weight:600;}
+
+  .ast{color:var(--royal);font-size:.5em;vertical-align:super;font-weight:600;}
+  .rate-note{margin-top:16px;font-size:13.5px;line-height:1.6;color:var(--slate);}
+  .rate-note .ast{font-size:13px;vertical-align:baseline;margin-right:3px;}
+  .rate li b{color:var(--navy2);font-weight:600;}
+  .alt-price{margin-top:12px;padding-top:12px;border-top:1px solid var(--line2);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:var(--slate);}
+  .alt-price .alt-amt{font-family:'Fraunces',serif;font-size:22px;color:var(--navy);letter-spacing:0;margin-right:6px;}
+  .rate-lead{box-shadow:inset 0 3px 0 var(--royal);}
+  .terms{margin-top:48px;border-top:1px solid var(--line2);padding-top:38px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px 40px;}
+  .term h4{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:var(--navy);margin-bottom:7px;}
+  .term p{font-size:14.5px;line-height:1.65;color:var(--slate);}
+
+  .why{background:var(--navy);color:var(--paper);border-radius:12px;padding:34px 34px;margin-top:52px;}
+  .why .tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--chief);margin-bottom:12px;}
+  .why p{font-size:16px;line-height:1.7;color:var(--mist);max-width:66ch;}
+  .why p b{color:#fff;font-weight:500;}
+
+  @media(max-width:860px){.rates{grid-template-columns:1fr;}.terms{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html" aria-label="Cram Consultancy">
+      <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 8 A15 15 0 1 0 40 32" fill="none" stroke="#1F4BC4" stroke-width="3.4" stroke-linecap="round"/>
+        <text x="21" y="28" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#0E1B2E">Cram</text>
+      </svg>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html" class="current">Pricing</a>
+      <a href="index.html#radar">Role Radar</a>
+      <a href="enquire.html" class="nav-cta">Start a conversation</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="kicker">Pricing</div>
+    <h1>What it costs.</h1>
+    <p>Published in full, so you don't have to ask to find out. Three ways to work together, priced on what the engagement actually is rather than what your business looks like it can afford.</p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:34px;">
+  <div class="wrap">
+
+    <div class="rates">
+      <div class="rate">
+        <div class="rlabel">Professional services &amp; advisory</div>
+        <div class="amount">&pound;1,000<sup class="ast">*</sup></div>
+        <div class="per">per day</div>
+        <p class="rdesc">Defined-scope work with a start and an end. Bought in days, used where they matter.</p>
+        <ul>
+          <li>Portfolio, programme and project leadership</li>
+          <li>Transformation and change delivery</li>
+          <li>Pre-deal operational due diligence</li>
+          <li>Post-deal integration</li>
+          <li>Strategic advisory and executive coaching</li>
+          <li><b>No minimum term</b></li>
+        </ul>
+      </div>
+
+      <div class="rate rate-lead">
+        <div class="rlabel">Embedded fractional</div>
+        <div class="amount">&pound;8,000<sup class="ast">*</sup></div>
+        <div class="per">per month &middot; two days a week</div>
+        <div class="alt-price"><span class="alt-amt">&pound;11,000</span> per month &middot; three days a week</div>
+        <p class="rdesc">An executive seat, filled fractionally. In the leadership team and its cadence, accountable for outcomes, reachable between the days.</p>
+        <ul>
+          <li>Chief Operations</li>
+          <li>Chief of Staff</li>
+          <li>General Manager or Managing Director</li>
+          <li>Customer Operations leadership</li>
+          <li>No meter on the messages between days</li>
+          <li><b>Minimum term of three months</b></li>
+        </ul>
+      </div>
+
+      <div class="rate">
+        <div class="rlabel">Non-executive director</div>
+        <div class="amount">&pound;6,000<sup class="ast">*</sup></div>
+        <div class="per">per quarter</div>
+        <p class="rdesc">Board-level oversight, governance and operational challenge.</p>
+        <ul>
+          <li>iGaming and fintech boards</li>
+          <li>Key Person and Designated Officer status held</li>
+          <li>Regulated entity experience</li>
+          <li>Operational challenge, not just attendance</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="rate-note"><span class="ast">*</span> Travel, accommodation and reasonable expenses apply for on-site visits. No VAT.</p>
+
+    <div class="terms">
+      <div class="term">
+        <h4>Planning in 7/14/30, not 30/60/90</h4>
+        <p>Reach decision-grade detail, collaborate and share, and start executing. First report at the end of week two, final playback at the end of month one.</p>
+      </div>
+      <div class="term">
+        <h4>Days agreed in advance</h4>
+        <p>You know what you're buying before it starts, and I'll flag it early if the work needs more or less than we planned.</p>
+      </div>
+      <div class="term">
+        <h4>The first call is obviously free</h4>
+        <p>Half an hour to understand your problems and gaps, and ensure I match and can help. If I'm the wrong person for it, you'll hear that on the call.</p>
+      </div>
+    </div>
+
+    
+
+    <div class="cta-band" style="margin-top:56px;">
+      <div class="cta-copy">
+        <div class="cta-q">Know what you need?</div>
+        <p>Tell me what you're facing and how much of me you think you need. I'll come back with an honest view on whether I'm the right person, and what an initial engagement would look like.</p>
+      </div>
+      <a href="enquire.html" class="btn btn-solid">Enquire within</a>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="index.html">
+          <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg" style="height:34px;">
+            <path d="M40 8 A15 15 0 1 0 40 32" fill="none" stroke="#5B8DEF" stroke-width="3.4" stroke-linecap="round"/>
+            <text x="21" y="28" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#F4F5F7">Cram</text>
+          </svg>
+        </a>
+        <div class="cfc-mark"><span class="b">C</span>RAM<span class="b">CFC</span></div>
+        <p class="foot-blurb"><span class="b">C</span>ram <span class="b">C</span>onsultancy: <span class="b">F</span>ractional <span class="b">C</span>-level</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col"><h4>Site</h4>
+          <a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="role-radar.html">Tools</a>
+        </div>
+        <div class="foot-col"><h4>Get in touch</h4>
+          <a href="mailto:heath@cramcfc.com">heath@cramcfc.com</a><a href="https://linkedin.com/in/heath-cram-69279a57" target="_blank" rel="noopener">LinkedIn</a><a href="enquire.html">Enquiry form</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Cram Consultancy</span>
+      <span>Cram Consultancy &middot; cramcfc.com</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
