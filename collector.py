@@ -66,6 +66,11 @@ def probe_greenhouse(slug):
     return r.status_code == 200 and "jobs" in r.json()
 
 
+def probe_breezy(slug):
+    r = session.get(f"https://{slug}.breezy.hr/json", timeout=TIMEOUT)
+    return r.status_code == 200 and isinstance(r.json(), list)
+
+
 def probe_lever(slug):
     r = session.get(
         f"https://api.lever.co/v0/postings/{slug}?mode=json", timeout=TIMEOUT
@@ -109,6 +114,7 @@ def probe_teamtailor(slug):
 
 PROBES = {
     "greenhouse": probe_greenhouse,
+    "breezy": probe_breezy,
     "lever": probe_lever,
     "ashby": probe_ashby,
     "smartrecruiters": probe_smartrecruiters,
@@ -165,6 +171,35 @@ def fetch_greenhouse(token):
         }
         for j in d.get("jobs", [])
     ]
+
+
+def fetch_breezy(token):
+    """Breezy HR public board: https://<token>.breezy.hr/json"""
+    d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
+    out = []
+    for j in d if isinstance(d, list) else []:
+        loc = j.get("location") or {}
+        if isinstance(loc, dict):
+            country = loc.get("country") or {}
+            country = country.get("name", "") if isinstance(country, dict) else str(country)
+            parts = [loc.get("city") or loc.get("name") or "", country]
+            location = ", ".join([p for p in parts if p]) or loc.get("name", "")
+        else:
+            location = str(loc)
+        dept = j.get("department") or ""
+        if isinstance(dept, dict):
+            dept = dept.get("name", "")
+        url = j.get("url") or ""
+        if url and not url.startswith("http"):
+            url = f"https://{token}.breezy.hr{url}"
+        out.append({
+            "title": j.get("name", "") or j.get("title", ""),
+            "location": location,
+            "department": dept,
+            "url": url or f"https://{token}.breezy.hr/",
+            "posted_at": j.get("published_date") or j.get("creation_date"),
+        })
+    return out
 
 
 def fetch_lever(token):
@@ -354,6 +389,7 @@ def fetch_workday(url):
 
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
+    "breezy": fetch_breezy,
     "lever": fetch_lever,
     "ashby": fetch_ashby,
     "smartrecruiters": fetch_smartrecruiters,
