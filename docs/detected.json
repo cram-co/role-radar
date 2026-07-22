@@ -1,0 +1,125 @@
+{
+ "Flutter Entertainment (Group)": {
+  "ats": "workday",
+  "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External"
+ },
+ "PokerStars": {
+  "ats": "workday_pending"
+ },
+ "Betfair International": {
+  "ats": "workday_pending"
+ },
+ "Sky Betting & Gaming": {
+  "ats": "workday",
+  "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External"
+ },
+ "Paddy Power": {
+  "ats": "workday_pending"
+ },
+ "FanDuel": {
+  "ats": "greenhouse",
+  "token": "fanduel"
+ },
+ "Entain": {
+  "ats": "smartrecruiters",
+  "token": "entain"
+ },
+ "Kaizen Gaming": {
+  "ats": "greenhouse",
+  "token": "kaizengaming"
+ },
+ "LeoVegas Group": {
+  "ats": "ashby",
+  "token": "leovegasgroup"
+ },
+ "Tipico": {
+  "ats": "smartrecruiters",
+  "token": "tipico"
+ },
+ "Rush Street Interactive": {
+  "ats": "greenhouse",
+  "token": "rushstreetinteractive"
+ },
+ "Evolution": {
+  "ats": "smartrecruiters",
+  "token": "evolution"
+ },
+ "Playtech": {
+  "ats": "smartrecruiters",
+  "token": "playtech"
+ },
+ "Light & Wonder": {
+  "ats": "ashby",
+  "token": "light"
+ },
+ "Playson": {
+  "ats": "ashby",
+  "token": "playson"
+ },
+ "BGaming": {
+  "ats": "smartrecruiters",
+  "token": "bgaming"
+ },
+ "Soft2Bet": {
+  "ats": "greenhouse",
+  "token": "soft2bet"
+ },
+ "Delasport": {
+  "ats": "greenhouse",
+  "token": "delasport"
+ },
+ "Kambi": {
+  "ats": "greenhouse",
+  "token": "kambi"
+ },
+ "Sportradar": {
+  "ats": "smartrecruiters",
+  "token": "sportradar"
+ },
+ "Genius Sports": {
+  "ats": "greenhouse",
+  "token": "geniussports"
+ },
+ "1/ST (Stronach Group)": {
+  "ats": "unknown"
+ },
+ "LionHires": {
+  "ats": "greenhouse",
+  "token": "lionhires"
+ },
+ "Lottoland": {
+  "ats": "greenhouse",
+  "token": "lottoland"
+ },
+ "Paysafe": {
+  "ats": "workday_pending"
+ },
+ "Betting Connections": {
+  "ats": "smartrecruiters",
+  "token": "bettingconnections"
+ },
+ "iGamingHunt": {
+  "ats": "breezy",
+  "token": "igaminghunt"
+ },
+ "Talentgrator": {
+  "ats": "smartrecruiters",
+  "token": "talentgrator"
+ },
+ "GAN": {
+  "ats": "breezy",
+  "token": "gan"
+ },
+ "ATG": {
+  "ats": "ashby",
+  "token": "atg"
+ },
+ "Betclic (Banijay Gaming)": {
+  "ats": "breezy",
+  "token": "betclic"
+ },
+ "STS": {
+  "ats": "greenhouse",
+  "token": "sts"
+ }
+}
