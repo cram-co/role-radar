@@ -497,5 +497,85 @@
  "STS": {
   "ats": "greenhouse",
   "token": "sts"
+ },
+ "Rhino Entertainment": {
+  "ats": "smartrecruiters",
+  "token": "rhinoentertainment"
+ },
+ "TopSport": {
+  "ats": "smartrecruiters",
+  "token": "topsport"
+ },
+ "Yolo Group": {
+  "ats": "smartrecruiters",
+  "token": "yologroup"
+ },
+ "Caliente": {
+  "ats": "smartrecruiters",
+  "token": "caliente"
+ },
+ "Pinnacle": {
+  "ats": "smartrecruiters",
+  "token": "pinnacle"
+ },
+ "bet9ja": {
+  "ats": "smartrecruiters",
+  "token": "bet9ja"
+ },
+ "betPawa": {
+  "ats": "smartrecruiters",
+  "token": "betpawa"
+ },
+ "Sun International": {
+  "ats": "smartrecruiters",
+  "token": "suninternational"
+ },
+ "KingMakers": {
+  "ats": "smartrecruiters",
+  "token": "kingmakers"
+ },
+ "AGS": {
+  "ats": "smartrecruiters",
+  "token": "ags"
+ },
+ "OlyBet Group": {
+  "ats": "smartrecruiters",
+  "token": "olybetgroup"
+ },
+ "Live88": {
+  "ats": "smartrecruiters",
+  "token": "live88"
+ },
+ "APE | Poker Technology": {
+  "ats": "smartrecruiters",
+  "token": "apepokertechnology"
+ },
+ "Tipwin Limited": {
+  "ats": "smartrecruiters",
+  "token": "tipwinlimited"
+ },
+ "Neds": {
+  "ats": "smartrecruiters",
+  "token": "neds"
+ },
+ "Palmerbet": {
+  "ats": "smartrecruiters",
+  "token": "palmerbet"
+ },
+ "FEG": {
+  "ats": "smartrecruiters",
+  "token": "feg"
+ },
+ "Booming Games": {
+  "ats": "smartrecruiters",
+  "token": "boominggames"
+ },
+ "3 Oaks Gaming": {
+  "ats": "smartrecruiters",
+  "token": "3oaksgaming"
+ },
+ "Banijay Gaming": {
+  "ats": "smartrecruiters",
+  "token": "banijaygaming"
  }
 }
