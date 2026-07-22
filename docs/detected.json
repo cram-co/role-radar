@@ -417,5 +417,85 @@
  "Hong Kong Jockey Club": {
   "ats": "smartrecruiters",
   "token": "hongkongjockeyclub"
+ },
+ "Bullfinch Recruitment": {
+  "ats": "smartrecruiters",
+  "token": "bullfinchrecruitment"
+ },
+ "Betting Connections": {
+  "ats": "smartrecruiters",
+  "token": "bettingconnections"
+ },
+ "SpotOn Connections": {
+  "ats": "smartrecruiters",
+  "token": "spotonconnections"
+ },
+ "EyeSpy Recruitment": {
+  "ats": "smartrecruiters",
+  "token": "eyespyrecruitment"
+ },
+ "TalentBet": {
+  "ats": "smartrecruiters",
+  "token": "talentbet"
+ },
+ "Emerald Zebra": {
+  "ats": "smartrecruiters",
+  "token": "emeraldzebra"
+ },
+ "BSQ Talent": {
+  "ats": "smartrecruiters",
+  "token": "bsqtalent"
+ },
+ "iTalent PLUS": {
+  "ats": "smartrecruiters",
+  "token": "italentplus"
+ },
+ "iGamingHunt": {
+  "ats": "breezy",
+  "token": "igaminghunt"
+ },
+ "iGaming Recruitment": {
+  "ats": "smartrecruiters",
+  "token": "igamingrecruitment"
+ },
+ "Apercon": {
+  "ats": "smartrecruiters",
+  "token": "apercon"
+ },
+ "Acebet": {
+  "ats": "smartrecruiters",
+  "token": "acebet"
+ },
+ "Talentgrator": {
+  "ats": "smartrecruiters",
+  "token": "talentgrator"
+ },
+ "GAN": {
+  "ats": "breezy",
+  "token": "gan"
+ },
+ "Cirsa": {
+  "ats": "smartrecruiters",
+  "token": "cirsa"
+ },
+ "ATG": {
+  "ats": "ashby",
+  "token": "atg"
+ },
+ "Betclic (Banijay Gaming)": {
+  "ats": "breezy",
+  "token": "betclic"
+ },
+ "Admiral": {
+  "ats": "smartrecruiters",
+  "token": "admiral"
+ },
+ "Fortuna Entertainment Group": {
+  "ats": "smartrecruiters",
+  "token": "fortunaentertainmentgroup"
+ },
+ "STS": {
+  "ats": "greenhouse",
+  "token": "sts"
  }
 }
