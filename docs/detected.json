@@ -121,5 +121,164 @@
  "STS": {
   "ats": "greenhouse",
   "token": "sts"
+ },
+ "Bullfinch Recruitment": {
+  "ats": "breezy",
+  "token": "bullfinch"
+ },
+ "SpotOn Connections": {
+  "ats": "ashby",
+  "token": "spoton"
+ },
+ "EyeSpy Recruitment": {
+  "ats": "unknown"
+ },
+ "TalentBet": {
+  "ats": "unknown"
+ },
+ "Emerald Zebra": {
+  "ats": "unknown"
+ },
+ "BSQ Talent": {
+  "ats": "unknown"
+ },
+ "iTalent PLUS": {
+  "ats": "teamtailor",
+  "token": "italentplus"
+ },
+ "iGaming Recruitment": {
+  "ats": "unknown"
+ },
+ "Apercon": {
+  "ats": "unknown"
+ },
+ "Acebet": {
+  "ats": "unknown"
+ },
+ "Sisal": {
+  "ats": "unknown"
+ },
+ "Snaitech": {
+  "ats": "unknown"
+ },
+ "BetMGM": {
+  "ats": "unknown"
+ },
+ "bet365": {
+  "ats": "unknown"
+ },
+ "evoke plc": {
+  "ats": "unknown"
+ },
+ "DraftKings": {
+  "ats": "unknown"
+ },
+ "Betsson Group": {
+  "ats": "greenhouse",
+  "token": "betsson"
+ },
+ "FDJ United": {
+  "ats": "unknown"
+ },
+ "Kindred Group": {
+  "ats": "ashby",
+  "token": "kindred"
+ },
+ "Superbet": {
+  "ats": "unknown"
+ },
+ "Super Group": {
+  "ats": "greenhouse",
+  "token": "super"
+ },
+ "Betfred": {
+  "ats": "unknown"
+ },
+ "Lottomatica": {
+  "ats": "unknown"
+ },
+ "Novibet": {
+  "ats": "unknown"
+ },
+ "LiveScore Group": {
+  "ats": "unknown"
+ },
+ "Caesars Digital": {
+  "ats": "unknown"
+ },
+ "Fanatics Betting & Gaming": {
+  "ats": "unknown"
+ },
+ "Hard Rock Digital": {
+  "ats": "recruitee",
+  "token": "hardrockdigital"
+ },
+ "Underdog": {
+  "ats": "unknown"
+ },
+ "SportyBet / Sporty Group": {
+  "ats": "unknown"
+ },
+ "BetKing": {
+  "ats": "unknown"
+ },
+ "888Africa": {
+  "ats": "unknown"
+ },
+ "ComeOn Group": {
+  "ats": "unknown"
+ },
+ "Casumo": {
+  "ats": "unknown"
+ },
+ "Videoslots": {
+  "ats": "unknown"
+ },
+ "Stake (Easygo)": {
+  "ats": "breezy",
+  "token": "stake"
+ },
+ "Pragmatic Play": {
+  "ats": "teamtailor",
+  "token": "pragmatic"
+ },
+ "Games Global": {
+  "ats": "unknown"
+ },
+ "Aristocrat Interactive": {
+  "ats": "unknown"
+ },
+ "Play'n GO": {
+  "ats": "unknown"
+ },
+ "Yggdrasil": {
+  "ats": "unknown"
+ },
+ "Push Gaming": {
+  "ats": "unknown"
+ },
+ "Hacksaw Gaming": {
+  "ats": "unknown"
+ },
+ "Relax Gaming": {
+  "ats": "unknown"
+ },
+ "Greentube (Novomatic)": {
+  "ats": "unknown"
+ },
+ "Inspired Entertainment": {
+  "ats": "unknown"
+ },
+ "Bragg Gaming": {
+  "ats": "unknown"
+ },
+ "Amusnet": {
+  "ats": "unknown"
+ },
+ "EGT Digital": {
+  "ats": "unknown"
+ },
+ "Wazdan": {
+  "ats": "unknown"
  }
 }
