@@ -334,5 +334,88 @@
  "Allwyn": {
   "ats": "smartrecruiters",
   "token": "allwyn"
+ },
+ "LionHires": {
+  "ats": "greenhouse",
+  "token": "lionhires"
+ },
+ "Intralot": {
+  "ats": "smartrecruiters",
+  "token": "intralot"
+ },
+ "OPAP": {
+  "ats": "smartrecruiters",
+  "token": "opap"
+ },
+ "Lottoland": {
+  "ats": "greenhouse",
+  "token": "lottoland"
+ },
+ "ZEAL Network": {
+  "ats": "smartrecruiters",
+  "token": "zealnetwork"
+ },
+ "GGPoker (NSUS Group)": {
+  "ats": "smartrecruiters",
+  "token": "ggpoker"
+ },
+ "4Poker": {
+  "ats": "smartrecruiters",
+  "token": "4poker"
+ },
+ "Paysafe": {
+  "ats": "workday_pending"
+ },
+ "MuchBetter": {
+  "ats": "smartrecruiters",
+  "token": "muchbetter"
+ },
+ "MiFinity": {
+  "ats": "smartrecruiters",
+  "token": "mifinity"
+ },
+ "Jeton": {
+  "ats": "smartrecruiters",
+  "token": "jeton"
+ },
+ "Las Vegas Sands": {
+  "ats": "smartrecruiters",
+  "token": "lasvegassands"
+ },
+ "Wynn Resorts": {
+  "ats": "smartrecruiters",
+  "token": "wynnresorts"
+ },
+ "MGM Resorts": {
+  "ats": "smartrecruiters",
+  "token": "mgmresorts"
+ },
+ "MGM China Holdings": {
+  "ats": "smartrecruiters",
+  "token": "mgmchinaholdings"
+ },
+ "Caesars Entertainment": {
+  "ats": "smartrecruiters",
+  "token": "caesarsentertainment"
+ },
+ "Boyd Gaming": {
+  "ats": "smartrecruiters",
+  "token": "boydgaming"
+ },
+ "Red Rock Resorts": {
+  "ats": "smartrecruiters",
+  "token": "redrockresorts"
+ },
+ "The Lottery Corporation": {
+  "ats": "smartrecruiters",
+  "token": "thelotterycorporation"
+ },
+ "Tabcorp": {
+  "ats": "smartrecruiters",
+  "token": "tabcorp"
+ },
+ "Hong Kong Jockey Club": {
+  "ats": "smartrecruiters",
+  "token": "hongkongjockeyclub"
  }
 }
