@@ -1178,7 +1178,8 @@ def scrape_vankaizen():
         return []
 
 
-def _spa_api_hunt(base, source, max_bundles=4):
+def _spa_api_hunt(base, source, max_bundles=4, prefer=("main", "app", "index", "vendor",
+                                                       "runtime", "config", "env")):
     """Single-page apps fetch their data from an API whose URL is baked into the
     JS bundle. Rather than guessing endpoint names, pull the bundle and read the
     URLs out of it. Works for any React/Vue careers app, not just this one."""
@@ -1194,10 +1195,15 @@ def _spa_api_hunt(base, source, max_bundles=4):
 
     srcs = re.findall(r'<script[^>]+src="([^"]+)"', html_text)
     srcs = [u if u.startswith("http") else base.rstrip("/") + "/" + u.lstrip("/") for u in srcs]
-    print(f"      {source}: {len(srcs)} script bundle(s) referenced")
+    # Some apps reference 150+ chunks. Downloading them all is wasteful, but only
+    # sampling the first few misses the one holding the API base, so sort the
+    # likely candidates to the front and widen the budget when there are many.
+    srcs.sort(key=lambda u: (not any(k in u.lower() for k in prefer), len(u)))
+    budget = max_bundles if len(srcs) <= 12 else min(30, max_bundles + len(srcs) // 6)
+    print(f"      {source}: {len(srcs)} script bundle(s) referenced, checking {budget}")
 
     found = set()
-    for u in srcs[:max_bundles]:
+    for u in srcs[:budget]:
         try:
             b = session.get(u, headers=AGENCY_UA, timeout=TIMEOUT)
             if b.status_code != 200:
