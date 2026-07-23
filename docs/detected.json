@@ -168,20 +168,23 @@
   "checked": 1784786160.892168
  },
  "BetMGM": {
-  "ats": "unknown",
-  "checked": 1784786160.892168
+  "ats": "workday",
+  "url": "https://betmgminc.wd5.myworkdayjobs.com/en-US/BetMGM",
+  "manual": true
  },
  "bet365": {
   "ats": "unknown",
   "checked": 1784786160.892168
  },
  "evoke plc": {
-  "ats": "unknown",
-  "checked": 1784786160.892168
+  "ats": "bamboohr",
+  "token": "888spectate",
+  "manual": true
  },
  "DraftKings": {
-  "ats": "unknown",
-  "checked": 1784786160.892168
+  "ats": "workday",
+  "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings",
+  "manual": true
  },
  "Betsson Group": {
   "ats": "greenhouse",
@@ -196,8 +199,9 @@
   "token": "kindred"
  },
  "Superbet": {
-  "ats": "unknown",
-  "checked": 1784786971.6618996
+  "ats": "greenhouse_eu",
+  "token": "superbet",
+  "manual": true
  },
  "Super Group": {
   "ats": "greenhouse",
@@ -216,16 +220,18 @@
   "checked": 1784786971.6618996
  },
  "LiveScore Group": {
-  "ats": "unknown",
-  "checked": 1784786971.6618996
+  "ats": "greenhouse",
+  "token": "livescore9",
+  "manual": true
  },
  "Caesars Digital": {
   "ats": "unknown",
   "checked": 1784786971.6618996
  },
  "Fanatics Betting & Gaming": {
-  "ats": "unknown",
-  "checked": 1784786971.6618996
+  "ats": "greenhouse",
+  "token": "fanaticsfbg",
+  "manual": true
  },
  "Hard Rock Digital": {
   "ats": "recruitee",
@@ -272,40 +278,52 @@
   "checked": 1784786971.6618996
  },
  "Aristocrat Interactive": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Play'n GO": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "playngo"
  },
  "Yggdrasil": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Push Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Hacksaw Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Relax Gaming": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "relaxgaming"
  },
  "Greentube (Novomatic)": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Inspired Entertainment": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Bragg Gaming": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "bragggaming"
  },
  "Amusnet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "EGT Digital": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Wazdan": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "SoftSwiss": {
   "ats": "teamtailor",
@@ -316,82 +334,100 @@
   "token": "everymatrix"
  },
  "Altenar": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "altenar"
  },
  "White Hat Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Strive Gaming": {
   "ats": "breezy",
   "token": "strive"
  },
  "OpenBet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Gentoo Media (ex-GiG)": {
   "ats": "teamtailor",
   "token": "gentoomedia"
  },
  "GiG (platform)": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Continent 8": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "continent8"
  },
  "GeoComply": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Stats Perform": {
   "ats": "teamtailor",
   "token": "statsperform"
  },
  "LSports": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Racing Post / Spotlight Sports": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "UK Tote Group": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Churchill Downs / TwinSpires": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Arena Racing Company": {
   "ats": "ashby",
   "token": "arena"
  },
  "The Jockey Club": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Weatherbys": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Allwyn": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "Intralot": {
   "ats": "recruitee",
   "token": "intralot"
  },
  "OPAP": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "ZEAL Network": {
   "ats": "ashby",
   "token": "zeal-network"
  },
  "GGPoker (NSUS Group)": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "4Poker": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "MuchBetter": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784789322.8501365
  },
  "MiFinity": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "mifinity"
  },
  "Jeton": {
   "ats": "unknown"
@@ -1027,5 +1063,9 @@
  "FSB Technology": {
   "ats": "unknown",
   "checked": 1784786971.6618996
+ },
+ "Amelco UK Ltd": {
+  "ats": "bamboohr",
+  "token": "amelco"
  }
 }
