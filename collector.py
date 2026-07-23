@@ -76,6 +76,22 @@ def probe_greenhouse(slug):
     return r.status_code == 200 and _nonempty(r.json().get("jobs"))
 
 
+def probe_greenhouse_eu(slug):
+    """Greenhouse runs a separate EU data region: job-boards.eu.greenhouse.io"""
+    r = session.get(
+        f"https://boards-api.eu.greenhouse.io/v1/boards/{slug}/jobs", timeout=TIMEOUT
+    )
+    return r.status_code == 200 and _nonempty(r.json().get("jobs"))
+
+
+def probe_bamboohr(slug):
+    r = session.get(f"https://{slug}.bamboohr.com/careers/list", timeout=TIMEOUT)
+    if r.status_code != 200:
+        return False
+    d = r.json()
+    return _nonempty((d.get("result") or d.get("data") or d) if isinstance(d, dict) else d)
+
+
 def probe_breezy(slug):
     r = session.get(f"https://{slug}.breezy.hr/json", timeout=TIMEOUT)
     d = r.json()
@@ -132,6 +148,8 @@ def probe_teamtailor(slug):
 
 PROBES = {
     "greenhouse": probe_greenhouse,
+    "greenhouse_eu": probe_greenhouse_eu,
+    "bamboohr": probe_bamboohr,
     "breezy": probe_breezy,
     "lever": probe_lever,
     "ashby": probe_ashby,
@@ -189,6 +207,47 @@ def fetch_greenhouse(token):
         }
         for j in d.get("jobs", [])
     ]
+
+
+def fetch_greenhouse_eu(token):
+    """Same shape as Greenhouse, EU data region."""
+    d = session.get(
+        f"https://boards-api.eu.greenhouse.io/v1/boards/{token}/jobs", timeout=TIMEOUT
+    ).json()
+    return [
+        {
+            "title": j["title"],
+            "location": (j.get("location") or {}).get("name", ""),
+            "department": "",
+            "url": j["absolute_url"],
+            "posted_at": j.get("updated_at"),
+        }
+        for j in d.get("jobs", [])
+    ]
+
+
+def fetch_bamboohr(token):
+    """BambooHR public careers list: https://<token>.bamboohr.com/careers/list"""
+    d = session.get(f"https://{token}.bamboohr.com/careers/list", timeout=TIMEOUT).json()
+    items = d.get("result") if isinstance(d, dict) else d
+    out = []
+    for j in items or []:
+        loc = j.get("location") or {}
+        if isinstance(loc, dict):
+            parts = [loc.get("city"), loc.get("state"), loc.get("country")]
+            location = ", ".join([p for p in parts if p])
+        else:
+            location = str(loc or "")
+        if j.get("isRemote"):
+            location = (location + " (Remote)").strip()
+        out.append({
+            "title": j.get("jobOpeningName", "") or j.get("title", ""),
+            "location": location,
+            "department": j.get("departmentLabel", "") or j.get("department", ""),
+            "url": f"https://{token}.bamboohr.com/careers/{j.get('id','')}",
+            "posted_at": j.get("datePosted") or j.get("originalOpenDate"),
+        })
+    return out
 
 
 def fetch_breezy(token):
@@ -407,6 +466,8 @@ def fetch_workday(url):
 
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
+    "greenhouse_eu": fetch_greenhouse_eu,
+    "bamboohr": fetch_bamboohr,
     "breezy": fetch_breezy,
     "lever": fetch_lever,
     "ashby": fetch_ashby,
@@ -436,13 +497,18 @@ def main():
         override = (c.get("ats_token") or "").strip()
         if not override:
             continue
-        if ":" in override:
+        # NB: check the URL form first — "https://..." also contains a colon
+        if override.startswith("http"):
+            cache[name] = {"ats": "workday", "url": override, "manual": True}
+        elif ":" in override:
             ats, token = override.split(":", 1)
             ats, token = ats.strip().lower(), token.strip()
             if ats in FETCHERS and token:
                 cache[name] = {"ats": ats, "token": token, "manual": True}
-        elif override.startswith("http"):
-            cache[name] = {"ats": "workday", "url": override, "manual": True}
+            else:
+                print(f"  ! unrecognised ats_token for {name}: {override}")
+        else:
+            print(f"  ! malformed ats_token for {name}: {override}")
 
     # --- detection pass (budgeted) ---
     now = time.time()
