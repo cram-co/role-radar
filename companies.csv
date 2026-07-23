@@ -3,14 +3,13 @@ LionHires,Recruitment agency,greenhouse,Global recruitment agency; multi-client 
 Bullfinch Recruitment,Recruitment agency,breezy,Breezy board; IOM/Gib/Malta/Cyprus focus,
 Betting Connections,Recruitment agency,detect,Malta; one of the largest iGaming agencies,
 EyeSpy Recruitment,Recruitment agency,detect,Gibraltar/UK iGaming specialist,
-TalentBet,Recruitment agency,detect,Malta/UK iGaming consultancy,
+TalentBet,Recruitment agency,detect,"WordPress jobs board, handled by scrape_custom",skip
 Emerald Zebra,Recruitment agency,detect,Cyprus; iGaming fintech and tech,
 BSQ Talent,Recruitment agency,detect,iGaming recruitment,
 iTalent PLUS,Recruitment agency,detect,Malta iGaming specialist,
 iGamingHunt,Recruitment agency,detect,Ashby board,ashby:igaminghunt
-iGaming Recruitment,Recruitment agency,detect,Gibraltar/Malta/Cyprus specialist,
+iGaming Recruitment,Recruitment agency,detect,"WordPress jobs board, handled by scrape_custom",skip
 Apercon,Recruitment agency,detect,"bespoke jobs page, handled by scrape_custom",skip
-Acebet,Recruitment agency,detect,Niche iGaming recruiter; unverified board - speculative add,
 Talentgrator,Recruitment agency,detect,iGaming recruitment platform,
 Novig,Operator - Prediction,greenhouse,Sports prediction market / betting exchange; CFTC-designated; NY,
 Myriad,Operator - Prediction,detect,Prediction market platform,
@@ -283,3 +282,4 @@ FSB Technology,Supplier - Platform,detect,From LinkedIn follows,
 Amelco UK Ltd,Supplier - Platform,detect,From LinkedIn follows,
 PawaTech,Supplier - Platform,detect,"betPawa technology arm, in-house careers site",skip
 Lucky Group,Operator,detect,"in-house careers site, handled by scrape_custom",skip
+Exacta Solutions,Recruitment agency,detect,"Malta-based; WordPress vacancies board, handled by scrape_custom",skip

@@ -1352,6 +1352,13 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"]),
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
                          listing=["/JobApplications/Apply/", "/"]),
+    "Exacta Solutions": dict(base="https://www.exactasolutions.com", marker="/vacancies/",
+                         listing=["/vacancies/", "/vacancies/page/2/", "/vacancies/page/3/",
+                                  "/vacancies/page/4/", "/vacancies/page/5/"]),
+    "TalentBet":    dict(base="https://www.talentbet.com", marker="/job",
+                         listing=["/jobs/", "/jobs/page/2/", "/vacancies/"]),
+    "iGaming Recruitment": dict(base="https://igamingrecruitment.io", marker="/job",
+                         listing=["/jobs/", "/jobs/page/2/", "/vacancies/"]),
     "Apercon":      dict(base="https://apercon.com", marker="/job",
                          listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
