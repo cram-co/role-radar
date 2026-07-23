@@ -239,8 +239,16 @@ def probe_workable(slug):
     return r.status_code == 200 and _nonempty(r.json().get("results"))
 
 
+def _tt_base(token):
+    """Teamtailor boards are usually <token>.teamtailor.com, but customers can
+    put them on their own domain (MrQ use careers.lindar.com)."""
+    if "." in token:
+        return token if token.startswith("http") else f"https://{token}"
+    return f"https://{token}.teamtailor.com"
+
+
 def probe_teamtailor(slug):
-    r = session.get(f"https://{slug}.teamtailor.com/jobs", timeout=TIMEOUT)
+    r = session.get(f"{_tt_base(slug)}/jobs", timeout=TIMEOUT)
     if r.status_code != 200 or "teamtailor" not in r.text.lower():
         return False
     # a real board links out to individual job pages
@@ -519,23 +527,19 @@ def fetch_workable(token):
 
 
 def fetch_teamtailor(token):
-    """Teamtailor has no public JSON API — parse the careers page HTML."""
-    html = session.get(f"https://{token}.teamtailor.com/jobs", timeout=TIMEOUT).text
+    """Teamtailor has no public JSON API — parse the careers page HTML.
+    Works for <token>.teamtailor.com and for boards on a customer's own domain."""
+    base = _tt_base(token)
+    try:
+        page = session.get(f"{base}/jobs", headers=AGENCY_UA, timeout=TIMEOUT).text
+    except Exception:
+        return []
     jobs = []
-    for m in re.finditer(
-        r'href="(/jobs/[^"]+)"[^>]*>(?:\s*<[^>]+>)*\s*([^<]{4,120})', html
-    ):
-        url, title = m.group(1), m.group(2).strip()
-        if title and not title.lower().startswith(("apply", "read more")):
-            jobs.append(
-                {
-                    "title": title,
-                    "location": "",
-                    "department": "",
-                    "url": f"https://{token}.teamtailor.com{url}",
-                    "posted_at": None,
-                }
-            )
+    for url, title in _links_with_titles(page, base, "/jobs/"):
+        if url.rstrip("/").endswith("/jobs"):
+            continue
+        jobs.append({"title": title, "location": "", "department": "",
+                     "url": url, "posted_at": None})
     return jobs
 
 
@@ -1200,8 +1204,95 @@ def scrape_tabcorp():
     return out
 
 
+# Sites with no supported ATS behind them. Rather than a bespoke scraper each,
+# one routine walks the same ladder: JSON-LD -> sitemap -> SPA bundle API ->
+# tolerant link parsing. Config is just a base URL and the path job links share.
+CUSTOM_BOARDS = {
+    "Cirsa":        dict(base="https://joblink.allibo.com", marker="job-offer",
+                         listing=["/ats2/job-offer.aspx", "/ats2/"]),
+    "Codere Online":dict(base="https://codere.hiringroom.com", marker="/jobs/",
+                         listing=["/jobs/"], extra=["https://codereargentina.hiringroom.com/jobs/"]),
+    "Casumo":       dict(base="https://www.casumocareers.com", marker="/jobs/",
+                         listing=["/jobs/"]),
+    "Betika":       dict(base="https://betika.seamlesshiring.com", marker="/h/",
+                         listing=["/h/"]),
+    "PawaTech":     dict(base="https://careers.pawatech.com", marker="/job/",
+                         listing=["/job/", "/jobs/"]),
+    "Lucky Group":  dict(base="https://careers.lckygroup.com", marker="/jobs/",
+                         listing=["/jobs/"]),
+    "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
+                         listing=["/JobApplications/Apply/", "/"]),
+}
+
+
+def scrape_custom(name):
+    """Try, in order: JSON-LD on the listing, the XML sitemap, the SPA bundle's
+    API, then tolerant link parsing. Logs which rung worked."""
+    cfg = CUSTOM_BOARDS[name]
+    base, marker = cfg["base"], cfg["marker"]
+    pages = [base.rstrip("/") + p for p in cfg["listing"]] + cfg.get("extra", [])
+
+    for url in pages:
+        ld = _jsonld_jobs(url, name)
+        if ld:
+            print(f"   {name}: JSON-LD on {url}")
+            return ld
+
+    urls = _sitemap_job_urls(base, marker)
+    if urls:
+        detailed = []
+        for u in urls[:80]:
+            detailed.extend(_jsonld_jobs(u, name))
+            time.sleep(REQUEST_DELAY)
+            if len(detailed) >= 80:
+                break
+        if detailed:
+            print(f"   {name}: sitemap + JSON-LD -> {len(detailed)}")
+            return detailed
+        derived = _titles_from_urls(urls, name)
+        if derived:
+            print(f"   {name}: sitemap slugs -> {len(derived)}")
+            return derived
+
+    hits = _spa_api_hunt(base, name)
+    for u in hits:
+        if re.search(r"(job|vacanc|position|advert|offer)", u, re.I):
+            data = _try_json(u, u)
+            if data:
+                jobs = _normalise(data, base, name)
+                if jobs:
+                    print(f"   {name}: bundle API {u} -> {len(jobs)}")
+                    return jobs
+            time.sleep(REQUEST_DELAY)
+
+    out, seen = [], set()
+    for url in pages:
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+            if r.status_code != 200:
+                print(f"      {name} {url}: HTTP {r.status_code}")
+                continue
+            found = _links_with_titles(r.text, base, marker)
+            if not found:
+                print(f"      {name} {url}: 200, {len(r.text)} bytes, "
+                      f"{r.text.count(marker)} '{marker}' refs, no titles parsed")
+            for u, t in found:
+                if u in seen:
+                    continue
+                seen.add(u)
+                out.append({"title": t, "location": "", "department": "",
+                            "url": u, "posted_at": None})
+            time.sleep(REQUEST_DELAY)
+        except Exception as e:
+            print(f"      {name} {url}: error ({type(e).__name__})")
+    if out:
+        print(f"   {name}: link parse -> {len(out)}")
+    return out
+
+
 AGENCY_BOARDS = {
     "Fortuna Entertainment Group": scrape_fortuna,
+    **{n: (lambda n=n: scrape_custom(n)) for n in CUSTOM_BOARDS},
     "Betfred": scrape_betfred,
     "Tabcorp": scrape_tabcorp,
     "Pentasia": scrape_pentasia,

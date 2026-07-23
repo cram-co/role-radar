@@ -42,19 +42,19 @@ Tipico,Operator - Tier 1,detect,,
 Super Group,Operator - Tier 1,detect,Betway / Spin,skip
 Betfred,Operator,detect,"TalosATS client-rendered app, handled by scrape_betfred",skip
 Lottomatica,Operator - Tier 1,detect,Workday tenant,https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers
-Novibet,Operator - Growth,detect,,
+Novibet,Operator - Growth,detect,Workable,workable:novibet
 LiveScore Group,Operator / Media,detect,,greenhouse:livescore9
 Caesars Digital,Operator - US,detect,,
 Rush Street Interactive,Operator - US,detect,,
 Fanatics Betting & Gaming,Operator - US,detect,,greenhouse:fanaticsfbg
 Hard Rock Digital,Operator - US,greenhouse (likely),,
-Underdog,Operator - US,greenhouse (likely),,
-SportyBet / Sporty Group,Operator - Africa/Asia,detect,,
-BetKing,Operator - Africa,detect,,
+Underdog,Operator - US,greenhouse (likely),Greenhouse,greenhouse:underdogfantasy
+SportyBet / Sporty Group,Operator - Africa/Asia,detect,Greenhouse EU-hosted board,greenhouse:sportygroup
+BetKing,Operator - Africa,detect,"Workable, under parent KingMakers",workable:kingmakers
 888Africa,Operator - Africa,detect,Prior engagement,
-ComeOn Group,Operator,detect,,
-Casumo,Operator,detect,,
-Videoslots,Operator,detect,,
+ComeOn Group,Operator,detect,Workable,workable:comeon-group
+Casumo,Operator,detect,"in-house careers site, handled by scrape_custom",skip
+Videoslots,Operator,detect,BambooHR,bamboohr:videoslots
 Stake (Easygo),Operator - Crypto,detect,,
 Evolution,Supplier - Live/RNG,smartrecruiters (likely),,
 Playtech,Supplier - Platform,detect,,
@@ -114,7 +114,7 @@ The Lottery Corporation,Lottery - Australia,detect,,
 Tabcorp,Operator - Australia,detect,"server-rendered careers site (PageUp behind it), handled by scrape_tabcorp",skip
 Hong Kong Jockey Club,Racing / Operator - Asia,detect,,
 GAN,Supplier - Platform,detect,Sega Sammy-owned,
-Cirsa,Operator - Spain/LatAm,detect,,
+Cirsa,Operator - Spain/LatAm,detect,"Allibo joblink board, handled by scrape_custom",skip
 ATG,Racing / Operator - Sweden,detect,,
 Betclic (Banijay Gaming),Operator - France,detect,,
 Admiral,Operator - Austria,detect,Banijay Gaming / Novomatic brand,
@@ -125,10 +125,10 @@ TopSport,Operator - Baltics,detect,,
 Yolo Group,Operator / Supplier - Crypto,detect,,
 Caliente,Operator - Mexico,detect,,
 Pinnacle,Operator,detect,,
-bet9ja,Operator - Africa,detect,,
-betPawa,Operator - Africa,detect,,
-Sun International,Operator - Africa,detect,SunBet,
-KingMakers,Operator - Africa,detect,BetKing parent (BetKing already listed),
+bet9ja,Operator - Africa,detect,"in-house careers site, handled by scrape_custom",skip
+betPawa,Operator - Africa,detect,Workable - no openings at time of setup,workable:betpawa
+Sun International,Operator - Africa,detect,"MCI DirectHire, mostly brick-and-mortar - deliberately not chased",skip
+KingMakers,Operator - Africa,detect,same Workable board as BetKing,skip
 AGS,Supplier - Content,detect,,
 OlyBet Group,Operator,detect,From LinkedIn follows,
 Live88,Operator,detect,From LinkedIn follows,
@@ -153,9 +153,9 @@ KICK,Operator,detect,From LinkedIn follows,
 Bodog Nation,Operator,detect,From LinkedIn follows,
 Bovada,Operator,detect,From LinkedIn follows,
 Racing1,Racing,detect,From LinkedIn follows,
-Codere Online,Operator,detect,From LinkedIn follows,
+Codere Online,Operator,detect,"HiringRoom (codere + codereargentina), handled by scrape_custom",skip
 InPlaySoft,Supplier - Platform,detect,From LinkedIn follows,
-Wildz Group,Operator,detect,From LinkedIn follows,
+Wildz Group,Operator,detect,Teamtailor on custom domain (same pattern as MrQ),teamtailor:careers.wildz.group
 4Play Gaming,Supplier - Content,detect,From LinkedIn follows,
 unikrn,Operator,detect,From LinkedIn follows,
 Skilrock Technologies,Supplier - Platform,detect,From LinkedIn follows,
@@ -163,7 +163,7 @@ NuxGame,Supplier - Platform,detect,From LinkedIn follows,
 188BET,Operator,detect,From LinkedIn follows,
 Asia Gaming,Supplier - Content,detect,From LinkedIn follows,
 7bet,Operator,detect,From LinkedIn follows,
-Betika,Operator,detect,From LinkedIn follows,
+Betika,Operator,detect,"SeamlessHiring, handled by scrape_custom",skip
 Picklebet,Sports/Prediction,detect,From LinkedIn follows,
 SPRIBE,Supplier - Content,detect,From LinkedIn follows,
 Upgaming,Supplier - Content,detect,From LinkedIn follows,
@@ -174,7 +174,7 @@ Derivco,Operator,detect,From LinkedIn follows,
 PointsBet Canada,Sports/Prediction,detect,From LinkedIn follows,
 Silverspin,Supplier - Content,detect,From LinkedIn follows,
 Gamdom,Operator,detect,From LinkedIn follows,
-MrQ,Operator,detect,From LinkedIn follows,
+MrQ,Operator,detect,Teamtailor on Lindar Media custom domain,teamtailor:careers.lindar.com
 Evoplay,Supplier - Content,detect,From LinkedIn follows,
 SCIENTIFIC GAMES,Supplier - Content,detect,From LinkedIn follows,
 Nolimit City®,Supplier - Content,detect,From LinkedIn follows,
@@ -281,3 +281,5 @@ Luckia,Operator,detect,From LinkedIn follows,
 PKR Technologies Ltd,Supplier - Platform,detect,From LinkedIn follows,
 FSB Technology,Supplier - Platform,detect,From LinkedIn follows,
 Amelco UK Ltd,Supplier - Platform,detect,From LinkedIn follows,
+PawaTech,Supplier - Platform,detect,"betPawa technology arm, in-house careers site",skip
+Lucky Group,Operator,detect,"in-house careers site, handled by scrape_custom",skip
