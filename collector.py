@@ -30,7 +30,7 @@ FEED_FILE = DOCS / "feed.json"
 
 DETECT_PER_RUN = 50          # new companies probed per run
 RETRY_UNKNOWN_DAYS = 10      # re-probe "unknown" companies after this many days
-RETRY_PER_RUN = 15           # how many stale unknowns to re-probe each run
+RETRY_PER_RUN = 30           # how many stale unknowns to re-probe each run
 REQUEST_DELAY = 0.35         # politeness delay between probe requests
 TIMEOUT = 15
 HEADERS = {"User-Agent": "RoleRadar/1.0 (personal job-search tool)"}
