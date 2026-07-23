@@ -1261,6 +1261,11 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"]),
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
                          listing=["/JobApplications/Apply/", "/"]),
+    # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
+    # completely separate system — the SuccessFactors work doesn't reach them.
+    "Allwyn":       dict(base="https://jobs.recruitis.io", marker="/job",
+                         listing=["/allwyn", "/allwyn/"],
+                         extra=["https://www.allwyn.co.uk/job-board"]),
 }
 
 

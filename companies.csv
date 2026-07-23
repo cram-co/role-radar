@@ -99,7 +99,7 @@ Churchill Downs / TwinSpires,Racing - US,detect,,
 Arena Racing Company,Racing - UK,detect,,
 The Jockey Club,Racing - UK,detect,,
 Weatherbys,Racing / Banking,detect,,
-Allwyn,Lottery,detect,Incl. Camelot,
+Allwyn,Lottery,detect,"Recruitis (jobs.recruitis.io/allwyn), handled by scrape_custom",skip
 Intralot,Lottery,detect,,
 OPAP,Lottery / Operator,detect,"SuccessFactors, company id opapsa (not opap)",successfactors:career2.successfactors.eu|opapsa
 Lottoland,Lottery betting,detect,,
