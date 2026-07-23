@@ -12,10 +12,13 @@ probes a handful of new companies (DETECT_PER_RUN) — the full list
 resolves itself over the first week of daily runs.
 """
 
+import contextlib
 import csv
 import html
+import io
 import json
 import re
+import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -1455,5 +1458,32 @@ def main():
     print(f"Unresolved companies ({len(unknown)}): {', '.join(unknown[:30])}")
 
 
+class _Tee:
+    """Write to several streams at once."""
+
+    def __init__(self, *streams):
+        self.streams = streams
+
+    def write(self, data):
+        for st in self.streams:
+            st.write(data)
+
+    def flush(self):
+        for st in self.streams:
+            st.flush()
+
+
 if __name__ == "__main__":
-    main()
+    # Mirror the whole run into docs/run-log.txt. The workflow commits docs/,
+    # so the diagnostics end up published alongside the feed instead of being
+    # stranded in the Actions console.
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(_Tee(sys.stdout, buf)):
+            main()
+    finally:
+        stamp = datetime.now(timezone.utc).isoformat()
+        (DOCS / "run-log.txt").write_text(
+            f"role-radar collector run: {stamp}\n{'=' * 60}\n\n" + buf.getvalue(),
+            encoding="utf-8",
+        )
