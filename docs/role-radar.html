@@ -48,6 +48,8 @@
   .sort-row select{padding:8px 11px;border:1px solid #D3D7DE;border-radius:5px;background:#fff;
                    font:inherit;font-size:13.5px;color:var(--navy2);cursor:pointer;}
   .sort-row select:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.12);}
+  .excl-row{margin-top:12px;}
+  .excl-label{display:block;font-size:13px;color:var(--slate);margin-bottom:7px;}
   .lead-row{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14.5px;color:var(--navy2);cursor:pointer;}
   .lead-row input{width:18px;height:18px;accent-color:var(--royal);cursor:pointer;}
   .countline{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;
@@ -165,6 +167,10 @@
         <option value="co">Company A&ndash;Z</option>
       </select>
     </div>
+    <div class="excl-row">
+      <span class="excl-label">Hide</span>
+      <div class="chips chips-sm" id="excl"></div>
+    </div>
     <label class="lead-row">
       <input type="checkbox" id="lead" />
       <span>Leadership only &mdash; Chief, VP, Director, Head+</span>
@@ -230,6 +236,26 @@ const SAMPLE = [{"c":"LionHires","t":"Country Manager - Spain ","l":"Spain","u":
 const SENIORITY = /\b(chief|c[eoftm]o\b|coo\b|president|managing director|general manager|country manager|director|vp\b|vice president|head of|svp\b|evp\b)|(?<![,\-]\s)\b(?:md|gm)\b(?!\s*$)/i;
 
 let JOBS = [], usingSample = false, updated = null;
+
+// Function groups you can hide. Matched on the job title, because the feed's
+// department field is blank for most sources. Ordered as Heath grouped them.
+const EXCLUDE_GROUPS = [
+  { id: "it",  label: "IT & Engineering",
+    rx: /\b(developer|engineer|engineering|devops|sre|qa|tester|architect|programmer|frontend|front-end|backend|back-end|fullstack|full-stack|java|python|\.net|php|react|node|data scientist|sysadmin|infrastructure|cto|cio|security)\b/i },
+  { id: "com", label: "Commercial & Marketing",
+    rx: /\b(cco|cmo|marketing|crm|social|seo|ppc|affiliate|brand|content|copywriter|designer|creative|acquisition|retention|vip|country manager|sales|business development|bd|partnership|commercial)\b/i },
+  { id: "fin", label: "Finance",
+    rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep|fp&a|billing|invoic)\b/i },
+  { id: "ops", label: "Operational & Business Functions",
+    rx: /\b(people|hr|human resources|talent|recruit|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal)\b/i },
+];
+let excluded = (() => {
+  try { return new Set(JSON.parse(localStorage.getItem("rr_excluded") || "[]")); }
+  catch(e){ return new Set(); }
+})();
+function saveExcluded(){
+  try { localStorage.setItem("rr_excluded", JSON.stringify([...excluded])); } catch(e){}
+}
 
 // these list roles on behalf of unnamed clients, so say so rather than letting
 // the user assume the agency is the employer
@@ -335,6 +361,10 @@ function render(){
   let out = JOBS;
   if(leadOnly) out = out.filter(j => SENIORITY.test(j.t||""));
   if(selectedLocs.length) out = out.filter(j => selectedLocs.includes(bucket(j.l)));
+  if(excluded.size){
+    const active = EXCLUDE_GROUPS.filter(g => excluded.has(g.id));
+    out = out.filter(j => !active.some(g => g.rx.test(j.t || "")));
+  }
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
   // Teamtailor, the agency boards) simply don't publish one. Sorting those to
@@ -357,7 +387,7 @@ function render(){
                    || (a.t||"").localeCompare(b.t||""));
   }
 
-  const anyFilter = q || leadOnly || selectedLocs.length;
+  const anyFilter = q || leadOnly || selectedLocs.length || excluded.size;
   document.getElementById("count").textContent =
     anyFilter ? out.length.toLocaleString()+" of "+JOBS.length.toLocaleString()+" roles match"
               : JOBS.length.toLocaleString()+" roles";
@@ -378,6 +408,19 @@ function render(){
         <span class="dot">&middot;</span><span${j.p?"":' class="nodate"'}>${j.p?ago(Date.parse(j.p)):"date not listed"}</span>
       </div>
     </a>`).join("");
+}
+
+function buildExcludes(){
+  const el = document.getElementById("excl");
+  el.innerHTML = EXCLUDE_GROUPS.map(g =>
+    `<label class="chip"><input type="checkbox" value="${g.id}"${excluded.has(g.id)?" checked":""} />
+       <span>${g.label}</span></label>`).join("");
+  el.querySelectorAll("input").forEach(cb => {
+    cb.addEventListener("change", () => {
+      cb.checked ? excluded.add(cb.value) : excluded.delete(cb.value);
+      saveExcluded(); render();
+    });
+  });
 }
 
 function buildLocations(){
@@ -449,10 +492,11 @@ document.addEventListener("click", () => {
 document.getElementById("clear").addEventListener("click", () => {
   document.getElementById("q").value=""; document.getElementById("lead").checked=false;
   document.getElementById("sort").value="new";
-  selectedLocs = []; saveLocs(); drawLocations(); updateLocLabel(); render();
+  selectedLocs = []; saveLocs(); drawLocations(); updateLocLabel();
+  excluded.clear(); saveExcluded(); buildExcludes(); render();
 });
 
-load().then(()=>{ buildLocations(); stats(); render(); });
+load().then(()=>{ buildLocations(); buildExcludes(); stats(); render(); });
 </script>
 
 <script>
