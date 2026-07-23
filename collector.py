@@ -539,45 +539,103 @@ def scrape_pentasia():
     return out
 
 
-def _wp_jobs(base, post_types=("job", "jobs", "vacancy", "vacancies", "af_job")):
-    """Try the WordPress REST API for a jobs custom post type."""
+def _try_json(url, label):
+    """Fetch a candidate endpoint and report what came back. Used to discover the
+    real jobs API on recruiter sites whose listings are rendered client-side."""
+    try:
+        r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        ct = r.headers.get("content-type", "")
+        if r.status_code != 200:
+            print(f"      {label}: HTTP {r.status_code}")
+            return None
+        if "json" not in ct:
+            print(f"      {label}: 200 but {ct.split(';')[0]} (not json)")
+            return None
+        data = r.json()
+        n = len(data) if isinstance(data, list) else len(data.get("data", data.get("results", data.get("jobs", [])) or []))
+        print(f"      {label}: 200 JSON, {n} records  <-- USABLE" if n else f"      {label}: 200 JSON but empty")
+        return data if n else None
+    except Exception as e:
+        print(f"      {label}: error ({type(e).__name__})")
+        return None
+
+
+def _normalise(items, base, source):
+    """Best-effort mapping of an unknown JSON job shape onto our schema."""
     out = []
-    for pt in post_types:
-        try:
-            r = session.get(
-                f"{base}/wp-json/wp/v2/{pt}?per_page=100", headers=AGENCY_UA, timeout=TIMEOUT
-            )
-            if r.status_code != 200:
-                continue
-            data = r.json()
-            if not isinstance(data, list) or not data:
-                continue
-            for j in data:
-                title = (j.get("title") or {})
-                title = title.get("rendered", "") if isinstance(title, dict) else str(title)
-                title = re.sub(r"<[^>]+>", "", title).strip()
-                if not title:
-                    continue
-                out.append({
-                    "title": title,
-                    "location": "",
-                    "department": "",
-                    "url": j.get("link", base),
-                    "posted_at": j.get("date_gmt") or j.get("date"),
-                })
-            if out:
-                return out
-        except Exception:
+    if isinstance(items, dict):
+        items = items.get("data") or items.get("results") or items.get("jobs") or []
+    for j in items or []:
+        if not isinstance(j, dict):
             continue
+        title = j.get("title") or j.get("name") or j.get("job_title") or ""
+        if isinstance(title, dict):
+            title = title.get("rendered", "")
+        title = html.unescape(re.sub(r"<[^>]+>", "", str(title))).strip()
+        if not title:
+            continue
+        loc = j.get("location") or j.get("city") or j.get("job_location") or ""
+        if isinstance(loc, dict):
+            loc = loc.get("name") or loc.get("city") or ""
+        elif isinstance(loc, list):
+            loc = ", ".join(str(x) for x in loc if x)
+        url = j.get("link") or j.get("url") or j.get("apply_url") or base
+        out.append({
+            "title": title,
+            "location": html.unescape(str(loc)).strip(),
+            "department": str(j.get("category") or j.get("department") or "" ) or "",
+            "url": url,
+            "posted_at": j.get("date_gmt") or j.get("date") or j.get("published_at") or j.get("created_at"),
+        })
     return out
 
 
+def _discover(base, candidates, source):
+    """Try each candidate endpoint in turn; first one with records wins.
+    Every attempt is logged so the run output tells us which path is live."""
+    print(f"   {source}: probing {len(candidates)} candidate endpoints")
+    for path in candidates:
+        url = base + path
+        data = _try_json(url, path)
+        if data:
+            jobs = _normalise(data, base, source)
+            if jobs:
+                print(f"   {source}: FOUND -> {path}  ({len(jobs)} jobs)")
+                return jobs
+        time.sleep(REQUEST_DELAY)
+    return []
+
+
+BETTINGJOBS_CANDIDATES = [
+    "/wp-json/wp/v2/job?per_page=100",
+    "/wp-json/wp/v2/jobs?per_page=100",
+    "/wp-json/wp/v2/vacancy?per_page=100",
+    "/wp-json/af/v1/jobs",
+    "/wp-json/applyflow/v1/jobs",
+    "/api/v1/jobs?limit=200",
+    "/api/jobs?limit=200",
+    "/jobs.json",
+    "/wp-json/wp/v2/search?subtype=job&per_page=100",
+]
+
+VANKAIZEN_CANDIDATES = [
+    "/wp-json/wp/v2/vacancy?per_page=100",
+    "/wp-json/wp/v2/job?per_page=100",
+    "/wp-json/wp/v2/jobs?per_page=100",
+    "/wp-json/wp/v2/posts?per_page=100",
+    "/api/vacancies",
+    "/api/jobs",
+    "/vacancies.json",
+]
+
+
 def scrape_bettingjobs():
-    """bettingjobs.com — WordPress + Applyflow. The listing is JS-rendered, so try
-    the WP REST API first, then fall back to parsing job links off the sector pages."""
-    out = _wp_jobs("https://www.bettingjobs.com")
-    if out:
-        return out
+    """bettingjobs.com — WordPress + Applyflow, listing rendered client-side.
+    Discovers the live endpoint on first run, then falls back to sector pages."""
+    jobs = _discover("https://www.bettingjobs.com", BETTINGJOBS_CANDIDATES, "BettingJobs")
+    if jobs:
+        return jobs
+    print("   BettingJobs: no JSON endpoint found, falling back to sector pages")
     seen, res = set(), []
     sectors = ["hr-finance","marketing","executive-senior-appointments","it-technical",
                "analytics-bi","commercial","trading-sportsbook","operations",
@@ -603,10 +661,11 @@ def scrape_bettingjobs():
 
 
 def scrape_vankaizen():
-    """vankaizen.com — bespoke board. Tries the WP REST API, then the vacancies page."""
-    out = _wp_jobs("https://www.vankaizen.com")
-    if out:
-        return out
+    """vankaizen.com — bespoke board with load-more pagination."""
+    jobs = _discover("https://www.vankaizen.com", VANKAIZEN_CANDIDATES, "Van Kaizen")
+    if jobs:
+        return jobs
+    print("   Van Kaizen: no JSON endpoint found, falling back to page parse")
     try:
         r = session.get("https://www.vankaizen.com/vacancies", headers=AGENCY_UA, timeout=TIMEOUT)
         if r.status_code != 200:
