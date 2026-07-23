@@ -79,14 +79,13 @@ def probe_greenhouse(slug):
 
 def _gh_jobs(slug):
     """Greenhouse boards hosted in the EU region still answer on the main API,
-    so try that first and only then the eu-specific host."""
+    so try that first and only then the eu-specific host. Uses the same payload
+    helper so `first_published` is picked up rather than `updated_at`."""
     for host in ("boards-api.greenhouse.io", "boards-api.eu.greenhouse.io"):
         try:
-            r = session.get(f"https://{host}/v1/boards/{slug}/jobs", timeout=TIMEOUT)
-            if r.status_code == 200:
-                jobs = r.json().get("jobs")
-                if jobs:
-                    return jobs
+            jobs = _greenhouse_payload(slug, host).get("jobs")
+            if jobs:
+                return jobs
         except Exception:
             continue
     return None
@@ -199,10 +198,26 @@ def detect(name, hint=""):
 
 # ---------------------------------------------------------------- fetchers
 
+def _greenhouse_payload(token, host="boards-api.greenhouse.io"):
+    """Greenhouse's plain jobs endpoint only exposes `updated_at`, which resets
+    whenever a posting is edited — so a bulk edit makes an entire board look
+    posted today. Asking for content=true also returns `first_published`, the
+    real go-live date. Falls back to the plain endpoint if that call fails."""
+    try:
+        r = session.get(
+            f"https://{host}/v1/boards/{token}/jobs?content=true", timeout=TIMEOUT
+        )
+        if r.status_code == 200:
+            d = r.json()
+            if d.get("jobs") and any(j.get("first_published") for j in d["jobs"]):
+                return d
+    except Exception:
+        pass
+    return session.get(f"https://{host}/v1/boards/{token}/jobs", timeout=TIMEOUT).json()
+
+
 def fetch_greenhouse(token):
-    d = session.get(
-        f"https://boards-api.greenhouse.io/v1/boards/{token}/jobs", timeout=TIMEOUT
-    ).json()
+    d = _greenhouse_payload(token)
     dept = {}
     try:
         dd = session.get(
@@ -220,7 +235,7 @@ def fetch_greenhouse(token):
             "location": (j.get("location") or {}).get("name", ""),
             "department": dept.get(j["id"], ""),
             "url": j["absolute_url"],
-            "posted_at": j.get("updated_at"),
+            "posted_at": j.get("first_published") or j.get("updated_at"),
         }
         for j in d.get("jobs", [])
     ]
@@ -235,7 +250,7 @@ def fetch_greenhouse_eu(token):
             "location": (j.get("location") or {}).get("name", ""),
             "department": "",
             "url": j["absolute_url"],
-            "posted_at": j.get("updated_at"),
+            "posted_at": j.get("first_published") or j.get("updated_at"),
         }
         for j in d.get("jobs", [])
     ]
@@ -665,16 +680,43 @@ def _sitemap_job_urls(base, must_contain, limit=600):
     return found[:limit]
 
 
+# slug fragments that indicate a listing/category page rather than a real vacancy
+_NOT_A_JOB = {
+    "vacancies", "vacancy", "jobs", "job", "careers", "career", "search",
+    "page", "all", "index", "apply", "roles", "opportunities", "live-roles",
+}
+
+# common shorthand that reads badly when title-cased from a slug
+_FIX_CASE = {
+    "Aml": "AML", "Cft": "CFT", "Amlcft": "AML/CFT", "Kyc": "KYC", "Coo": "COO",
+    "Ceo": "CEO", "Cfo": "CFO", "Cto": "CTO", "Cmo": "CMO", "Cpo": "CPO",
+    "Vp": "VP", "Md": "MD", "Gm": "GM", "Hr": "HR", "It": "IT", "Bi": "BI",
+    "Crm": "CRM", "Seo": "SEO", "Ppc": "PPC", "Vip": "VIP", "Ux": "UX",
+    "Ui": "UI", "Qa": "QA", "Uk": "UK", "Us": "US", "Eu": "EU", "Latam": "LATAM",
+    "Dach": "DACH", "Emea": "EMEA", "Apac": "APAC", "B2b": "B2B", "B2c": "B2C",
+    "Ftd": "FTD", "Pam": "PAM", "Okr": "OKR", "Rg": "RG", "Psp": "PSP",
+}
+
+
 def _titles_from_urls(urls, source):
-    """Derive a readable title from a job URL slug — a last resort when nothing
-    structured is available, but better than showing the user nothing."""
-    out = []
+    """Derive a readable title from a job URL slug — the last resort when no
+    structured data is available. Better than showing nothing, but it can only
+    ever give a title, so locations and dates come back empty."""
+    out, seen = [], set()
     for u in urls:
         slug = u.rstrip("/").rsplit("/", 1)[-1]
-        slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)
-        title = slug.replace("-", " ").replace("_", " ").strip().title()
-        if len(title) < 4:
+        if slug.lower() in _NOT_A_JOB:
             continue
+        slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)   # trailing id
+        slug = re.sub(r"[-_]\d{1,3}$", "", slug)            # trailing dedupe counter
+        words = [w for w in re.split(r"[-_]+", slug) if w]
+        # single-word titles are legitimate (CMO, Accountant, Controller)
+        if not words or len("".join(words)) < 3:
+            continue
+        title = " ".join(_FIX_CASE.get(w.title(), w.title()) for w in words)
+        if title.lower() in seen:
+            continue
+        seen.add(title.lower())
         out.append({"title": title, "location": "", "department": "",
                     "url": u, "posted_at": None})
     return out
