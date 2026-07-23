@@ -525,20 +525,24 @@
   "token": "sporttrade"
  },
  "Booming Games": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "3 Oaks Gaming": {
   "ats": "workable",
   "token": "3-oaks-gaming"
  },
  "Banijay Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Playnetic": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Winna.com": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "ARB Interactive": {
   "ats": "ashby",
@@ -549,90 +553,116 @@
   "token": "kermagames"
  },
  "1X2gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "RPM Gaming": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "rpm"
  },
  "PrizePicks": {
   "ats": "greenhouse",
   "token": "prizepicks"
  },
  "highbet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "EvenBet Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "KICK": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Bodog Nation": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Bovada": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Racing1": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Codere Online": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "InPlaySoft": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Wildz Group": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "4Play Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "unikrn": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Skilrock Technologies": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "NuxGame": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "188BET": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Asia Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "7bet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Betika": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Picklebet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "SPRIBE": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Upgaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "SmartSoft": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "OnAim": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "PawaPay": {
   "ats": "greenhouse",
   "token": "pawapay"
  },
  "Derivco": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "derivco"
  },
  "PointsBet Canada": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784793318.450108
  },
  "Silverspin": {
   "ats": "teamtailor",
@@ -1060,5 +1090,38 @@
  "FSB Technology": {
   "ats": "unknown",
   "checked": 1784786971.6618996
+ },
+ "Superbet": {
+  "ats": "greenhouse",
+  "token": "super",
+  "manual": true
+ },
+ "Super Group": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Myriad": {
+  "ats": "unknown",
+  "checked": 1784793318.450108
+ },
+ "Play'n GO": {
+  "ats": "unknown",
+  "checked": 1784793318.450108
+ },
+ "Relax Gaming": {
+  "ats": "unknown",
+  "checked": 1784793318.450108
+ },
+ "Bragg Gaming": {
+  "ats": "unknown",
+  "checked": 1784793318.450108
+ },
+ "Jeton": {
+  "ats": "unknown",
+  "checked": 1784793318.450108
+ },
+ "Amelco UK Ltd": {
+  "ats": "smartrecruiters",
+  "token": "amelcouk"
  }
 }

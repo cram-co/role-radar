@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-07-23T07:22:23.825434+00:00",
- "job_count": 2627,
+ "generated_at": "2026-07-23T08:04:23.643942+00:00",
+ "job_count": 2693,
  "jobs": [
   {
    "title": "Access Administrator",
@@ -2648,6 +2648,16 @@
    "posted_at": "2026-07-20T19:01:11-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Luton, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000139225069",
+   "posted_at": "2026-07-23T08:01:41.901Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -7488,7 +7498,7 @@
    "location": "Ireland",
    "department": "Commercial International Function ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4918820101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7498,7 +7508,7 @@
    "location": "Romania",
    "department": "Business Applications",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4821514101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7508,7 +7518,7 @@
    "location": "Croatia",
    "department": "Business Applications",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4821464101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7518,7 +7528,7 @@
    "location": "Spain",
    "department": "Talent Management & Development ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4876966101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7528,7 +7538,7 @@
    "location": "Croatia",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914596101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7538,7 +7548,7 @@
    "location": "Netherlands",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914669101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7548,7 +7558,7 @@
    "location": "Spain",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914670101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7558,7 +7568,7 @@
    "location": "United Kingdom",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4934116101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7568,7 +7578,7 @@
    "location": "Brazil",
    "department": "Antifraud, Payments and Risk",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921935101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7578,7 +7588,7 @@
    "location": "Croatia",
    "department": "Antifraud, Payments and Risk",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4856874101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7588,7 +7598,7 @@
    "location": "Greece",
    "department": "Customer Engagement Global ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4924519101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7598,7 +7608,7 @@
    "location": "Croatia",
    "department": "Engineering, Sports",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4770285101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7608,7 +7618,7 @@
    "location": "Gibraltar",
    "department": "Marketing ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4905958101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7618,7 +7628,7 @@
    "location": "Brazil",
    "department": "Marketing ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930106101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7628,7 +7638,7 @@
    "location": "Romania",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4896687101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7638,7 +7648,7 @@
    "location": "Romania",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4827827101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7648,7 +7658,7 @@
    "location": "Romania",
    "department": "Romania Online Operations ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4922491101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7658,7 +7668,7 @@
    "location": "Brazil",
    "department": "Commercial International Function ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4896711101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7668,7 +7678,7 @@
    "location": "Brazil",
    "department": "Customer Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4927868101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7678,7 +7688,7 @@
    "location": "Brazil",
    "department": "Board & Executive",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4910107101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7688,7 +7698,7 @@
    "location": "Romania",
    "department": "Romania Online Operations ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933747101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7698,7 +7708,7 @@
    "location": "Brazil",
    "department": "Brazil",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4899813101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7708,7 +7718,7 @@
    "location": "Romania",
    "department": "Customer Engagement Romania",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4662886101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7718,7 +7728,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4746113101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7728,7 +7738,7 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4746112101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7738,7 +7748,7 @@
    "location": "Romania",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4917538101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7748,7 +7758,7 @@
    "location": "Belgium",
    "department": "Regulatory Affairs",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921448101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7758,7 +7768,7 @@
    "location": "Spain",
    "department": "Talent Management & Development ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932571101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7768,7 +7778,7 @@
    "location": "Croatia",
    "department": "Engineering, Sports",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4809249101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7776,9 +7786,9 @@
   {
    "title": "Financial Projects & Tax Manager",
    "location": "Poland",
-   "department": "Finance Other Markets (PL, SRB, BL)",
+   "department": "Finance Other Markets",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4848902101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7788,7 +7798,7 @@
    "location": "Romania",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921753101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7798,7 +7808,7 @@
    "location": "Malta",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921783101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7808,7 +7818,7 @@
    "location": "Belgium",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921795101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7818,7 +7828,7 @@
    "location": "Croatia",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4921797101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7828,7 +7838,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4852688101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7838,7 +7848,7 @@
    "location": "Croatia",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4934103101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7848,7 +7858,7 @@
    "location": "Romania",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4934112101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7858,7 +7868,7 @@
    "location": "Romania",
    "department": "Group Commercial Finance ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4878771101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7868,7 +7878,7 @@
    "location": "Brazil",
    "department": "Marketing ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4934094101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7876,9 +7886,9 @@
   {
    "title": "Head of Customer Proposition",
    "location": "Brazil",
-   "department": "Commercial CEE Function ",
+   "department": "Commercial CEE ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4873885101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7888,7 +7898,7 @@
    "location": "Romania",
    "department": "Romania Online Operations ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4913287101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7896,9 +7906,9 @@
   {
    "title": "HR Controlling Expert",
    "location": "Poland",
-   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
+   "department": "People Experience & Total Rewards",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4909612101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7906,9 +7916,9 @@
   {
    "title": "HR Controlling Expert",
    "location": "Croatia",
-   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
+   "department": "People Experience & Total Rewards",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902900101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7918,7 +7928,7 @@
    "location": "United Kingdom",
    "department": "HR Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4875134101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7928,7 +7938,7 @@
    "location": "All Locations",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4924440101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7938,7 +7948,7 @@
    "location": "Spain",
    "department": "IT Support",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4922891101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7948,7 +7958,7 @@
    "location": "Serbia",
    "department": "IT Support",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4926071101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7958,7 +7968,7 @@
    "location": "Brazil",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849422101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7968,7 +7978,7 @@
    "location": "Brazil",
    "department": "Product Strategy & Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4887692101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7978,7 +7988,7 @@
    "location": "Brazil",
    "department": "Brazil",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933270101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7988,7 +7998,7 @@
    "location": "Spain",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4865567101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -7998,7 +8008,7 @@
    "location": "Spain",
    "department": "Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807116101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8008,7 +8018,7 @@
    "location": "Belgium",
    "department": "Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807098101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8018,7 +8028,7 @@
    "location": "Croatia",
    "department": "Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807119101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8028,7 +8038,7 @@
    "location": "Greece",
    "department": "Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807123101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8038,7 +8048,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842215101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8048,7 +8058,7 @@
    "location": "Romania",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842234101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8058,7 +8068,7 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842232101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8068,7 +8078,7 @@
    "location": "Netherlands",
    "department": "Board & Executive",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914357101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8078,7 +8088,7 @@
    "location": "Belgium",
    "department": "Belgium Commercial",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4812234101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8088,7 +8098,7 @@
    "location": "Greece",
    "department": "HR BPs, Commercial Global Support Functions",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4908103101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8098,7 +8108,7 @@
    "location": "Romania",
    "department": "Marketing Romania",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4848572101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8108,7 +8118,7 @@
    "location": "Brazil",
    "department": "Board & Executive",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4887694101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8118,7 +8128,7 @@
    "location": "Netherlands",
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4828655101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8128,7 +8138,7 @@
    "location": "Croatia",
    "department": "Product Strategy & Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4809111101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8138,7 +8148,7 @@
    "location": "Romania",
    "department": "Product Strategy & Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4799190101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8148,7 +8158,7 @@
    "location": "Spain",
    "department": "Product Strategy & Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4799096101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8158,7 +8168,7 @@
    "location": "Spain",
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802005101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8168,7 +8178,7 @@
    "location": "Romania",
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802006101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8178,7 +8188,7 @@
    "location": "Netherlands",
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802008101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8188,7 +8198,7 @@
    "location": "United Kingdom",
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4863049101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8198,7 +8208,7 @@
    "location": "Croatia",
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802007101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8208,7 +8218,7 @@
    "location": "Croatia",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4908313101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8218,7 +8228,7 @@
    "location": "Spain",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903679101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8228,7 +8238,7 @@
    "location": "Spain",
    "department": "Player ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4864837101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8238,7 +8248,7 @@
    "location": "Spain",
    "department": "Engineering, Sports",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4879610101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8248,7 +8258,7 @@
    "location": "Slovakia",
    "department": "Product Support",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4922885101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8258,7 +8268,7 @@
    "location": "Romania",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4773398101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8268,7 +8278,7 @@
    "location": "United Kingdom",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906314101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8278,7 +8288,7 @@
    "location": "Spain",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906064101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8288,7 +8298,7 @@
    "location": "Croatia",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4905929101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8298,7 +8308,7 @@
    "location": "Croatia",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4896486101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8308,7 +8318,7 @@
    "location": "Romania",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4896489101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8318,7 +8328,7 @@
    "location": "Spain",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4896483101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8328,7 +8338,7 @@
    "location": "Netherlands",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4896470101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8338,7 +8348,7 @@
    "location": "Romania",
    "department": "Customer Engagement Global ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4909639101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8348,7 +8358,7 @@
    "location": "Croatia",
    "department": "Croatia",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4823522101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8358,7 +8368,7 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4812249101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8368,7 +8378,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4812248101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8378,7 +8388,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665950101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8388,7 +8398,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665949101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8398,7 +8408,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4745905101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8408,7 +8418,7 @@
    "location": "Spain",
    "department": "Engineering, Sports",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4775936101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8418,7 +8428,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4751486101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8428,7 +8438,7 @@
    "location": "Croatia",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933675101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8438,7 +8448,7 @@
    "location": "Netherlands",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933671101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8448,7 +8458,7 @@
    "location": "Greece",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4934540101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8458,7 +8468,7 @@
    "location": "Romania",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933669101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8468,7 +8478,7 @@
    "location": "Spain",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933486101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8478,7 +8488,7 @@
    "location": "Brazil",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4818148101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8488,7 +8498,7 @@
    "location": "Spain",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4769607101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8498,7 +8508,7 @@
    "location": "Romania",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4766139101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8508,7 +8518,7 @@
    "location": "Brazil",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4818171101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8518,7 +8528,7 @@
    "location": "Greece",
    "department": "Compliance",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4865140101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8528,7 +8538,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4792365101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8538,7 +8548,7 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4792364101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8548,7 +8558,7 @@
    "location": "All Locations",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4924466101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8556,9 +8566,9 @@
   {
    "title": "Senior Employee Relations Partner",
    "location": "Croatia",
-   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
+   "department": "People Experience & Total Rewards",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4857285101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8566,9 +8576,9 @@
   {
    "title": "Senior Employee Relations Partner",
    "location": "Romania",
-   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
+   "department": "People Experience & Total Rewards",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4851226101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8576,9 +8586,9 @@
   {
    "title": "Senior Employee Relations Partner",
    "location": "Spain",
-   "department": "People Experience, HR Systems & Data, Organizational Effectiveness & Rewards",
+   "department": "People Experience & Total Rewards",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4926108101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8588,7 +8598,7 @@
    "location": "Netherlands",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4792878101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8598,7 +8608,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761551101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8608,7 +8618,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761556101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8618,7 +8628,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4871976101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8628,7 +8638,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4871983101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8638,7 +8648,7 @@
    "location": "United Kingdom",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874318101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8648,7 +8658,7 @@
    "location": "Netherlands",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874316101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8658,7 +8668,7 @@
    "location": "Romania",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874314101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8668,7 +8678,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874311101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8678,7 +8688,7 @@
    "location": "United Kingdom",
    "department": "Engineering, Player",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4935587101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8688,7 +8698,7 @@
    "location": "United Kingdom",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4928537101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8698,7 +8708,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4745919101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8708,7 +8718,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4768338101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8718,7 +8728,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665951101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8728,7 +8738,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665952101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8738,7 +8748,7 @@
    "location": "Belgium",
    "department": "Belgium Commercial",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4897999101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8748,7 +8758,7 @@
    "location": "United Kingdom",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786081101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8758,7 +8768,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786080101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8768,7 +8778,7 @@
    "location": "Netherlands",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786079101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8778,7 +8788,7 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786082101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8788,7 +8798,7 @@
    "location": "Romania",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786100101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8798,7 +8808,7 @@
    "location": "Greece",
    "department": "Marketing ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4894877101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8808,7 +8818,7 @@
    "location": "Romania",
    "department": "HR Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903205101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8818,7 +8828,7 @@
    "location": "Spain",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761246101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8828,7 +8838,7 @@
    "location": "Netherlands",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4775353101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8838,7 +8848,7 @@
    "location": "Romania",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761351101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8848,7 +8858,7 @@
    "location": "Croatia",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4761350101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8858,7 +8868,7 @@
    "location": "Croatia",
    "department": "Product Design",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4818432101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8868,7 +8878,7 @@
    "location": "Spain",
    "department": "Product Design",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4889883101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8878,7 +8888,7 @@
    "location": "Spain",
    "department": "Product Design",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849905101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8888,7 +8898,7 @@
    "location": "Croatia",
    "department": "Product Design",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849915101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8898,7 +8908,7 @@
    "location": "Spain",
    "department": "Player ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4855956101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8908,7 +8918,7 @@
    "location": "Spain",
    "department": "Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4881585101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8918,7 +8928,7 @@
    "location": "Spain",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932698101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8928,7 +8938,7 @@
    "location": "Netherlands",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4932703101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8938,7 +8948,7 @@
    "location": "Netherlands",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4913532101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8948,7 +8958,7 @@
    "location": "Spain",
    "department": "Engineering, Data Products",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4825107101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8958,7 +8968,7 @@
    "location": "Netherlands",
    "department": "Engineering, Data Products",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4573261101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8968,7 +8978,7 @@
    "location": "Spain",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4848153101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8978,7 +8988,7 @@
    "location": "Spain",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4521285101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8988,7 +8998,7 @@
    "location": "Croatia",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4526821101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -8998,7 +9008,7 @@
    "location": "Croatia",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4860840101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9008,7 +9018,7 @@
    "location": "Croatia",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4848152101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9018,7 +9028,7 @@
    "location": "Croatia",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4796266101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9028,7 +9038,7 @@
    "location": "Spain",
    "department": "Product Design",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4885086101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9038,7 +9048,7 @@
    "location": "Croatia",
    "department": "Product Design",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4857535101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9048,7 +9058,7 @@
    "location": "Poland",
    "department": "Poland",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4892358101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9058,7 +9068,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4803867101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9068,7 +9078,7 @@
    "location": "Netherlands",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4469986101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9078,7 +9088,7 @@
    "location": "Romania",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786103101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9088,7 +9098,7 @@
    "location": "United Kingdom",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4610557101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9098,7 +9108,7 @@
    "location": "Spain",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4610556101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9108,7 +9118,7 @@
    "location": "Croatia",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4637336101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9118,7 +9128,7 @@
    "location": "Netherlands",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854933101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9128,7 +9138,7 @@
    "location": "United Kingdom",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854917101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9138,7 +9148,7 @@
    "location": "Spain",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854469101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9148,7 +9158,7 @@
    "location": "Spain",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4750425101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9158,7 +9168,7 @@
    "location": "Spain",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4474703101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9168,7 +9178,7 @@
    "location": "Croatia",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4846283101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9178,7 +9188,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902283101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9188,7 +9198,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902287101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9198,7 +9208,7 @@
    "location": "Netherlands",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903788101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9208,7 +9218,7 @@
    "location": "Netherlands",
    "department": "Engineering, Data Products",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930297101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9218,7 +9228,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4822143101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9228,7 +9238,7 @@
    "location": "Spain",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4822142101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9238,7 +9248,7 @@
    "location": "Croatia",
    "department": "Engineering, Data Products",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930300101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9248,7 +9258,7 @@
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4854379101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9258,7 +9268,7 @@
    "location": "United Kingdom",
    "department": "Data Insights (Data & Analytics)",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4878125101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9268,7 +9278,7 @@
    "location": "Brazil",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4929415101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9278,7 +9288,7 @@
    "location": "Romania",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867917101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9288,7 +9298,7 @@
    "location": "Croatia",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867919101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9298,7 +9308,7 @@
    "location": "Gibraltar",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862579101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9308,7 +9318,7 @@
    "location": "Serbia",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867916101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9318,7 +9328,7 @@
    "location": "Serbia",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862559101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9328,7 +9338,7 @@
    "location": "Spain",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762247101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9338,7 +9348,7 @@
    "location": "Croatia",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762246101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9348,7 +9358,7 @@
    "location": "Romania",
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762255101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9358,7 +9368,7 @@
    "location": "Brazil",
    "department": "Trading Operations",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4935751101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9368,7 +9378,7 @@
    "location": "Brazil",
    "department": "Commercial International Function ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933782101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9378,7 +9388,7 @@
    "location": "Brazil",
    "department": "Commercial International Function ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933768101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9388,7 +9398,7 @@
    "location": "Brazil",
    "department": "Brazil",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4866871101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9398,7 +9408,7 @@
    "location": "Poland",
    "department": "Poland",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4881839101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -9408,7 +9418,7 @@
    "location": "Croatia",
    "department": "People Data, Analytics & HR Systems ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933365101",
-   "posted_at": "2026-07-23T03:20:36-04:00",
+   "posted_at": "2026-07-23T04:01:23-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -10889,6 +10899,16 @@
    "department": "Commercial Performance and Strategy",
    "url": "https://jobs.ashbyhq.com/leovegasgroup/adc4cab3-b4a2-440c-8a76-1fe642fd4191",
    "posted_at": "2026-07-21T20:04:08.611+00:00",
+   "company": "LeoVegas Group",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Information Security Analyst",
+   "location": "Sliema, Malta",
+   "department": "Technical Compliance",
+   "url": "https://jobs.ashbyhq.com/leovegasgroup/ba46aa74-10ae-4411-aa59-828acb307df8",
+   "posted_at": "2026-07-23T07:40:04.329+00:00",
    "company": "LeoVegas Group",
    "ats": "ashby",
    "source": "collector"
@@ -14784,6 +14804,16 @@
    "source": "collector"
   },
   {
+   "title": "Office Manager",
+   "location": "St. Julian's, MT",
+   "department": "Office Management",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000139217210",
+   "posted_at": "2026-07-23T07:28:06.747Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "Game Presenter - Grand Rapids, MI (Employee Referral)",
    "location": "Grand Rapids, US",
    "department": "Operations",
@@ -15159,16 +15189,6 @@
    "department": "Marketing",
    "url": "https://jobs.smartrecruiters.com/evolution/744000137927029",
    "posted_at": "2026-07-15T15:15:33.673Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Office Manager",
-   "location": "St. Julian's, MT",
-   "department": "Office Management",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000137918598",
-   "posted_at": "2026-07-15T14:43:20.597Z",
    "company": "Evolution",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -25664,6 +25684,16 @@
    "source": "collector"
   },
   {
+   "title": "Senior Software Quality Engineer",
+   "location": "Sydney",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/4995138007",
+   "posted_at": "2026-07-23T03:23:19-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Software Engineering Manager ",
    "location": "Melbourne",
    "department": "Engineering",
@@ -26422,6 +26452,636 @@
    "company": "Amelco UK Ltd",
    "ats": "smartrecruiters",
    "source": "collector"
+  },
+  {
+   "title": "Vacancies",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Accountant 3",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/accountant-3",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Amlcft Consultant Freelance",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/amlcft-consultant-freelance",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Business Development Manager Us",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/business-development-manager-us",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Chief Product Officer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/chief-product-officer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Cmo 2",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/cmo-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Commercial Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/commercial-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Customer Care Manager Latam",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/customer-care-manager-latam",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Dach Country Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/dach-country-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Development Team Lead",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/development-team-lead",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Digitization Automation Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/digitization-automation-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Director Of Casino Operations",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/director-of-casino-operations",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Economy Designer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/economy-designer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Ehs Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/ehs-specialist",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Event Manager Sponsorship Activations",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/event-manager-sponsorship-activations",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Finance Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/finance-administrator",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Developer Slots",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/game-developer-slots",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "General Manager Engineering",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/general-manager-engineering",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Go Golang Developer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/go-golang-developer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Graphic Designer 2",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/graphic-designer-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Group Ceo",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/group-ceo",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Acquisition",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-acquisition",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Business Intelligence 1",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-business-intelligence-1",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Crm 2",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-crm-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Game Design",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-game-design",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Performance Insights",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-performance-insights",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Product Commerical Analytics",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-product-commerical-analytics",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Talent",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-talent",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Vip Johannesburg Open To Remote Within South Africa For Candidates Not Based In Johannesburg",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-vip-johannesburg-open-to-remote-within-south-africa-for-candidates-not-based-in-johannesburg",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Vip Loyalty",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-vip-loyalty",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "In Play Trader",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/in-play-trader",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Influencer Content Partnership Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/influencer-content-partnership-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Influencer Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/influencer-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Junior Artworker",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/junior-artworker",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Lead Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/lead-engineer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Live Streaming Operations Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/live-streaming-operations-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Manager Client Markets",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/manager-client-markets",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Market Strategy Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/market-strategy-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Marketing Manager Out Of Home Pr",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/marketing-manager-out-of-home-pr",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Mid Senior Frontend Developer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/mid-senior-frontend-developer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Online Media Buyer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/online-media-buyer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Operations Plant Manager Germantown Md",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/operations-plant-manager-germantown-md",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Oracle Transformation Project Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/oracle-transformation-project-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Pr Manager In House",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/pr-manager-in-house",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Project New Business Manager Integrated Campaigns",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/project-new-business-manager-integrated-campaigns",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Proposal Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/proposal-specialist",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Quality Engineer Ii",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/quality-engineer-ii",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Quantity Surveyor",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/quantity-surveyor",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Sales Executive 2",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/sales-executive-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Sales Manager 3",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/sales-manager-3",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Affiliate Manager Finland",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/senior-affiliate-manager-finland",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/senior-engineer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Full Stack Engineer Malta",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/senior-full-stack-engineer-malta",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Product Manager 2",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/senior-product-manager-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Service Developer",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/service-developer",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Speech Systems Senior Ai Engineer Stt Tts Vad",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/speech-systems-senior-ai-engineer-stt-tts-vad",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Sr Finance Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/sr-finance-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Sr Seo Manager",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/sr-seo-manager",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Swedish Account Manager Vip",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/swedish-account-manager-vip",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Vip Manager 2",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/vip-manager-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Vp Of Digital Marketing",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/vp-of-digital-marketing",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Vp Of Product Wondr Nation",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/vp-of-product-wondr-nation",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Vp Sales Revenue",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/vp-sales-revenue",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
   }
  ]
 }
