@@ -24,6 +24,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from collections import Counter
 
 ROOT = Path(__file__).parent
 DOCS = ROOT / "docs"
@@ -164,28 +165,46 @@ def fetch_successfactors(token):
                     return out
             except Exception:
                 continue
-        # 2) the rendered listing — pull jobreqcareer links and their anchor text
-        for path in (f"/career?company={company}&career_ns=job_listing",
+        # 2) the rendered listing. SuccessFactors keys a job on ?jobId=NNNN, so the
+        #    query string is the identifier and must be kept — hence a dedicated
+        #    parser rather than the generic link helper, which strips queries.
+        for path in (f"/career?company={company}&career_ns=job_listing_summary",
+                     f"/career?company={company}&career_ns=job_listing",
                      f"/careers?company={company}",
-                     f"/career?company={company}"):
+                     f"/career?company={company}",
+                     f"/sfcareer/jobreqcareer?company={company}"):
             try:
                 r = session.get(base + path, headers=AGENCY_UA, timeout=TIMEOUT)
                 if r.status_code != 200:
-                    print(f"      sf {company} {host}{path[:28]}: HTTP {r.status_code}")
+                    print(f"      sf {company} {host}{path[:34]}: HTTP {r.status_code}")
                     continue
-                hits = _links_with_titles(r.text, base, "jobreqcareer")
-                if not hits:
-                    ids = set(re.findall(r"jobId=(\d+)", r.text))
-                    if ids:
-                        print(f"      successfactors {company}: {len(ids)} jobIds on {host} but no titles parsed")
-                    continue
-                for u, t in hits:
-                    out.append({"title": t, "location": "", "department": "",
-                                "url": u, "posted_at": None})
+                page = r.text
+                seen_ids = set()
+                for m in re.finditer(
+                    r'href="([^"]*jobreqcareer[^"]*?jobId=(\d+)[^"]*)"[^>]*>(.*?)</a>',
+                    page, re.S | re.I,
+                ):
+                    href, jid, inner = m.group(1), m.group(2), m.group(3)
+                    if jid in seen_ids:
+                        continue
+                    title = html.unescape(re.sub(r"<[^>]+>", " ", inner))
+                    title = re.sub(r"\s+", " ", title).strip()
+                    if not title or len(title) < 3:
+                        continue
+                    seen_ids.add(jid)
+                    url = html.unescape(href)
+                    if not url.startswith("http"):
+                        url = base + ("" if url.startswith("/") else "/") + url.lstrip("/")
+                    out.append({"title": title, "location": "", "department": "",
+                                "url": url, "posted_at": None})
                 if out:
-                    print(f"      successfactors {company}: listing on {host} -> {len(out)} jobs")
+                    print(f"      successfactors {company}: listing {path[:34]} -> {len(out)} jobs")
                     return out
-            except Exception:
+                ids = set(re.findall(r"jobId=(\d+)", page))
+                print(f"      sf {company} {host}{path[:34]}: 200, {len(page)} bytes, "
+                      f"{len(ids)} jobIds, {page.count('<a ')} anchors")
+            except Exception as e:
+                print(f"      sf {company} {host}{path[:34]}: {type(e).__name__}")
                 continue
     print(f"      successfactors {company}: nothing found across {len(hosts)} host(s)")
     return out
@@ -714,6 +733,24 @@ VANKAIZEN_CANDIDATES = [
 ]
 
 
+def _href_shapes(html_text, limit=12):
+    """Summarise the distinct URL path shapes on a page. When a marker finds
+    nothing this says what the real pattern is, instead of another guess."""
+    paths = []
+    for href in re.findall(r'href="([^"#?]+)', html_text):
+        if href.startswith(("mailto:", "tel:", "javascript:")):
+            continue
+        p = re.sub(r"^https?://[^/]+", "", href)
+        seg = [x for x in p.split("/") if x]
+        if not seg:
+            continue
+        # collapse the identifying part so shapes group: /jobs/foo-123 -> /jobs/*
+        shape = f"/{seg[0]}/*" if len(seg) > 1 else f"/{seg[0]}"
+        paths.append(shape)
+    common = Counter(paths).most_common(limit)
+    return ", ".join(f"{p} x{n}" for p, n in common)
+
+
 def _links_with_titles(html_text, base, path_marker):
     """(url, title) pairs for links whose path contains `path_marker`.
     Deliberately tolerant: hrefs may be relative or absolute, and the visible
@@ -721,7 +758,7 @@ def _links_with_titles(html_text, base, path_marker):
     the anchor, so tags are stripped rather than excluded."""
     out, seen = [], set()
     rx = re.compile(
-        r'href="((?:https?://[^"]*?)?' + re.escape(path_marker) + r'[^"?#]+)[^"]*"[^>]*>(.*?)</a>',
+        r'href="([^"]*?' + re.escape(path_marker) + r'[^"?#]*)[^"]*"[^>]*>(.*?)</a>',
         re.S | re.I,
     )
     for href, inner in rx.findall(html_text):
@@ -1012,7 +1049,12 @@ def scrape_bettingjobs():
     if jobs:
         return jobs
     print("   BettingJobs: strategy 2 — sitemap")
-    urls = _sitemap_job_urls(base, "/job/")
+    urls = []
+    for marker in ("/job/", "/jobs/", "/job-category/", "/vacancy/"):
+        urls = _sitemap_job_urls(base, marker)
+        if urls:
+            print(f"      sitemap marker that worked: {marker}")
+            break
     if urls:
         detailed = []
         for u in urls[:120]:
@@ -1030,8 +1072,9 @@ def scrape_bettingjobs():
     print("   BettingJobs: strategy 4 — sector pages")
     print("   BettingJobs: no JSON endpoint found, falling back to sector pages")
     seen, res = set(), []
-    sectors = ["hr-finance","marketing","executive-senior-appointments","it-technical",
-               "analytics-bi","commercial","trading-sportsbook","operations",
+    sectors = ["jobs","job-seekers","hr-finance","marketing",
+               "executive-senior-appointments","it-technical","analytics-bi",
+               "commercial","trading-sportsbook","operations-payment",
                "compliance-legal","product"]
     base = "https://www.bettingjobs.com"
     for sec in sectors:
@@ -1040,10 +1083,14 @@ def scrape_bettingjobs():
             if r.status_code != 200:
                 print(f"      /{sec}/: HTTP {r.status_code}")
                 continue
-            hits = _links_with_titles(r.text, base, "/job/")
+            hits = []
+            for marker in ("/job/", "/jobs/", "/job-category/", "/vacancy/"):
+                hits = _links_with_titles(r.text, base, marker)
+                if hits:
+                    break
             if not hits and sec == sectors[0]:
-                print(f"      /{sec}/: HTTP 200, {len(r.text)} bytes, "
-                      f"{r.text.count('/job/')} '/job/' refs, {r.text.count('<a ')} anchors")
+                print(f"      /{sec}/: HTTP 200, {len(r.text)} bytes, {r.text.count('<a ')} anchors")
+                print(f"         link shapes present: {_href_shapes(r.text)}")
             for link, title in hits:
                 if link in seen:
                     continue
@@ -1134,6 +1181,10 @@ def _spa_api_hunt(base, source, max_bundles=4):
             found.add(base.rstrip("/") + m)
         for m in re.findall(r'"(https?://[A-Za-z0-9._-]*azurewebsites\.net[^"]{0,80})"', txt):
             found.add(m)
+    NOISE = ("reactjs.org", "whatwg.org", "w3.org", "electronjs.org", "github.com",
+             "npmjs.com", "nodejs.org", "mozilla.org", "jquery.com", "angular.io",
+             "vuejs.org", "schema.org", "example.com", "localhost")
+    found = {u for u in found if not any(n in u for n in NOISE)}
     urls = sorted(found)[:25]
     if urls:
         print(f"      {source}: API-looking URLs in bundle:")
@@ -1165,7 +1216,10 @@ def scrape_fortuna():
     for root in roots:
         for path in ("/api/jobs", "/api/Jobs", "/api/vacancies", "/api/Vacancies",
                      "/api/positions", "/api/JobOffers", "/api/joboffers",
-                     "/api/v1/jobs", "/api/adverts"):
+                     "/api/v1/jobs", "/api/adverts", "/api/Job/GetAll",
+                     "/api/Job/List", "/api/JobAds", "/api/jobads",
+                     "/api/publication", "/api/publications", "/api/offers",
+                     "/api/Recruitment/Jobs", "/api/job/search"):
             tries.append(root + path)
     for u in tries:
         if u in seen:
@@ -1253,8 +1307,8 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"], extra=["https://codereargentina.hiringroom.com/jobs/"]),
     "Casumo":       dict(base="https://www.casumocareers.com", marker="/jobs/",
                          listing=["/jobs/"]),
-    "Betika":       dict(base="https://betika.seamlesshiring.com", marker="/h/",
-                         listing=["/h/"]),
+    "Betika":       dict(base="https://betika.seamlesshiring.com", marker="/job",
+                         listing=["/", "/jobs", "/careers", "/h"]),
     "PawaTech":     dict(base="https://careers.pawatech.com", marker="/job/",
                          listing=["/job/", "/jobs/"]),
     "Lucky Group":  dict(base="https://careers.lckygroup.com", marker="/jobs/",
@@ -1319,7 +1373,8 @@ def scrape_custom(name):
             found = _links_with_titles(r.text, base, marker)
             if not found:
                 print(f"      {name} {url}: 200, {len(r.text)} bytes, "
-                      f"{r.text.count(marker)} '{marker}' refs, no titles parsed")
+                      f"{r.text.count(marker)} '{marker}' refs")
+                print(f"         link shapes present: {_href_shapes(r.text)}")
             for u, t in found:
                 if u in seen:
                     continue
