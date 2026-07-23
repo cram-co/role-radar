@@ -136,6 +136,8 @@ def fetch_successfactors(token):
                 r = session.get(f"{base}/{name}?company={company}",
                                 headers=AGENCY_UA, timeout=TIMEOUT)
                 if r.status_code != 200 or "xml" not in r.headers.get("content-type", ""):
+                    print(f"      sf {company} {host}/{name}: HTTP {r.status_code} "
+                          f"{r.headers.get('content-type','?').split(';')[0]}")
                     continue
                 blocks = re.findall(r"<url>(.*?)</url>", r.text, re.S)
                 for b in blocks:
@@ -166,6 +168,7 @@ def fetch_successfactors(token):
             try:
                 r = session.get(base + path, headers=AGENCY_UA, timeout=TIMEOUT)
                 if r.status_code != 200:
+                    print(f"      sf {company} {host}{path[:28]}: HTTP {r.status_code}")
                     continue
                 hits = _links_with_titles(r.text, base, "jobreqcareer")
                 if not hits:
@@ -544,8 +547,23 @@ def fetch_workday(url):
     """
     m = re.match(r"https://([^.]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-zA-Z]{2}-[a-zA-Z]{2}/)?([^/?#]+)", url)
     if not m:
+        print(f"      workday: URL didn't parse -> {url}")
         return []
     tenant, wd, site = m.groups()
+    # The CXS tenant is usually the subdomain, but not always — some tenants use
+    # the site name instead, so try both before giving up.
+    for cxs in (tenant, site.lower(), site):
+        probe = f"https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{cxs}/{site}/jobs"
+        try:
+            t = session.post(probe, json={"appliedFacets": {}, "limit": 1, "offset": 0,
+                                          "searchText": ""}, timeout=TIMEOUT)
+            if t.status_code == 200 and (t.json().get("total") or t.json().get("jobPostings")):
+                tenant = cxs
+                break
+            print(f"      workday {tenant}/{site}: cxs '{cxs}' -> HTTP {t.status_code}"
+                  f"{' (0 results)' if t.status_code == 200 else ''}")
+        except Exception as e:
+            print(f"      workday {tenant}/{site}: cxs '{cxs}' error ({type(e).__name__})")
     endpoint = f"https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs"
     out, offset = [], 0
     for _ in range(15):
