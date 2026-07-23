@@ -13,6 +13,7 @@ resolves itself over the first week of daily runs.
 """
 
 import csv
+import html
 import json
 import re
 import time
@@ -430,7 +431,7 @@ def fetch_workday(url):
     https://TENANT.wd3.myworkdayjobs.com/SITE
     Uses the public CXS JSON endpoint the career site itself calls.
     """
-    m = re.match(r"https://([^.]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z-]+/)?([^/?#]+)", url)
+    m = re.match(r"https://([^.]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-zA-Z]{2}-[a-zA-Z]{2}/)?([^/?#]+)", url)
     if not m:
         return []
     tenant, wd, site = m.groups()
@@ -475,6 +476,160 @@ FETCHERS = {
     "recruitee": fetch_recruitee,
     "workable": fetch_workable,
     "teamtailor": fetch_teamtailor,
+}
+
+
+
+# ---------------------------------------------------------------- agency boards
+# Recruiter sites don't run a public ATS, so each needs its own reader. These are
+# best-effort: if a site changes its markup the scraper returns [] and logs a
+# warning rather than crashing the run.
+
+AGENCY_UA = {"User-Agent": "Mozilla/5.0 (compatible; RoleRadar/1.0; +personal job-search tool)"}
+
+# location words that appear at the tail of a Pentasia slug
+_LOC_WORDS = {
+    "malta","europe","remote","uk","usa","gibraltar","cyprus","ireland","spain","portugal",
+    "italy","germany","france","netherlands","sweden","denmark","poland","romania","bulgaria",
+    "greece","serbia","croatia","estonia","latvia","lithuania","ukraine","georgia","armenia",
+    "australia","canada","brazil","mexico","colombia","peru","argentina","india","philippines",
+    "singapore","japan","israel","turkey","uae","dubai","london","gibraltar","isleofman",
+}
+
+
+def scrape_pentasia():
+    """pentasia.com — server-rendered Next.js listing, paginated ?page=N (0-indexed)."""
+    out, seen = [], set()
+    for page in range(0, 12):
+        url = "https://www.pentasia.com/cm/candidates/jobs"
+        if page:
+            url += f"?page={page}"
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+            if r.status_code != 200:
+                break
+            html = r.text
+        except Exception:
+            break
+        found = re.findall(
+            r'href="(https://www\.pentasia\.com/careers/[^"?]+)[^"]*"[^>]*>([^<]{3,140})</a>', html
+        )
+        new = 0
+        for link, title in found:
+            title = html.unescape(re.sub(r"\s+", " ", title)).strip()
+            if not title or title.lower() in ("apply now", "learn more", "view job"):
+                continue
+            if link in seen:
+                continue
+            seen.add(link)
+            new += 1
+            slug = link.rsplit("/", 1)[-1]
+            slug = re.sub(r"-\d+-\d+$", "", slug)          # drop the trailing ids
+            tail = slug.rsplit("-", 1)[-1] if "-" in slug else ""
+            out.append({
+                "title": title,
+                "location": tail.title() if tail in _LOC_WORDS else "",
+                "department": "",
+                "url": link,
+                "posted_at": None,
+            })
+        if not new:
+            break
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
+def _wp_jobs(base, post_types=("job", "jobs", "vacancy", "vacancies", "af_job")):
+    """Try the WordPress REST API for a jobs custom post type."""
+    out = []
+    for pt in post_types:
+        try:
+            r = session.get(
+                f"{base}/wp-json/wp/v2/{pt}?per_page=100", headers=AGENCY_UA, timeout=TIMEOUT
+            )
+            if r.status_code != 200:
+                continue
+            data = r.json()
+            if not isinstance(data, list) or not data:
+                continue
+            for j in data:
+                title = (j.get("title") or {})
+                title = title.get("rendered", "") if isinstance(title, dict) else str(title)
+                title = re.sub(r"<[^>]+>", "", title).strip()
+                if not title:
+                    continue
+                out.append({
+                    "title": title,
+                    "location": "",
+                    "department": "",
+                    "url": j.get("link", base),
+                    "posted_at": j.get("date_gmt") or j.get("date"),
+                })
+            if out:
+                return out
+        except Exception:
+            continue
+    return out
+
+
+def scrape_bettingjobs():
+    """bettingjobs.com — WordPress + Applyflow. The listing is JS-rendered, so try
+    the WP REST API first, then fall back to parsing job links off the sector pages."""
+    out = _wp_jobs("https://www.bettingjobs.com")
+    if out:
+        return out
+    seen, res = set(), []
+    sectors = ["hr-finance","marketing","executive-senior-appointments","it-technical",
+               "analytics-bi","commercial","trading-sportsbook","operations",
+               "compliance-legal","product"]
+    for sec in sectors:
+        try:
+            r = session.get(f"https://www.bettingjobs.com/{sec}/", headers=AGENCY_UA, timeout=TIMEOUT)
+            if r.status_code != 200:
+                continue
+            for link, title in re.findall(
+                r'href="(https://www\.bettingjobs\.com/job/[^"?]+)[^"]*"[^>]*>([^<]{3,140})</a>', r.text
+            ):
+                title = html.unescape(re.sub(r"\s+", " ", title)).strip()
+                if not title or title.lower() in ("learn more", "apply now") or link in seen:
+                    continue
+                seen.add(link)
+                res.append({"title": title, "location": "", "department": sec.replace("-", " ").title(),
+                            "url": link, "posted_at": None})
+            time.sleep(REQUEST_DELAY)
+        except Exception:
+            continue
+    return res
+
+
+def scrape_vankaizen():
+    """vankaizen.com — bespoke board. Tries the WP REST API, then the vacancies page."""
+    out = _wp_jobs("https://www.vankaizen.com")
+    if out:
+        return out
+    try:
+        r = session.get("https://www.vankaizen.com/vacancies", headers=AGENCY_UA, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return []
+        seen, res = set(), []
+        for link, title in re.findall(
+            r'href="(https?://(?:www\.)?vankaizen\.com/(?:vacancy|vacancies|job)/[^"?]+)[^"]*"[^>]*>([^<]{3,140})</a>',
+            r.text,
+        ):
+            title = html.unescape(re.sub(r"\s+", " ", title)).strip()
+            if not title or link in seen:
+                continue
+            seen.add(link)
+            res.append({"title": title, "location": "", "department": "", "url": link, "posted_at": None})
+        return res
+    except Exception:
+        return []
+
+
+AGENCY_BOARDS = {
+    "Pentasia": scrape_pentasia,
+    "BettingJobs": scrape_bettingjobs,
+    "Van Kaizen": scrape_vankaizen,
 }
 
 
@@ -567,6 +722,18 @@ def main():
             all_jobs.extend(jobs)
             print(f"{name}: {len(jobs)} roles ({ats})")
             time.sleep(REQUEST_DELAY)
+        except Exception as e:
+            print(f"{name}: FAILED ({e})")
+
+    # --- agency boards (recruiter sites, no public ATS) ---
+    for name, fn in AGENCY_BOARDS.items():
+        try:
+            jobs = fn()
+            for j in jobs:
+                j.update(company=name, ats="agency", source="agency")
+            all_jobs.extend(jobs)
+            print(f"{name}: {len(jobs)} roles (agency board)"
+                  + ("  <-- CHECK: returned nothing" if not jobs else ""))
         except Exception as e:
             print(f"{name}: FAILED ({e})")
 
