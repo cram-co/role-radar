@@ -233,7 +233,7 @@ The Star Entertainment Group,Operator,detect,From LinkedIn follows,
 GR8_TECH,Supplier - Platform,detect,From LinkedIn follows,
 Parimatch,Operator,detect,From LinkedIn follows,
 ARRISE,Operator,detect,From LinkedIn follows,
-Betty,Operator,detect,From LinkedIn follows,
+Betty,Operator,detect,"Greenhouse; token is bettyjobboard, not betty",greenhouse:bettyjobboard
 Brightstar Lottery,Lottery,detect,From LinkedIn follows,
 1X2 Network,Operator,detect,From LinkedIn follows,
 IGT PlayDigital,Operator,detect,From LinkedIn follows,
@@ -283,3 +283,4 @@ Amelco UK Ltd,Supplier - Platform,detect,From LinkedIn follows,
 PawaTech,Supplier - Platform,detect,"betPawa technology arm, in-house careers site",skip
 Lucky Group,Operator,detect,"in-house careers site, handled by scrape_custom",skip
 Exacta Solutions,Recruitment agency,detect,"Malta-based; WordPress vacancies board, handled by scrape_custom",skip
+Sportsbet,Operator - Australia,detect,"Flutter-owned; same careers platform as Tabcorp, handled by scrape_sportsbet",skip

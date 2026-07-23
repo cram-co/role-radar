@@ -1308,6 +1308,41 @@ def scrape_betfred():
     return []
 
 
+def _pageup_style(name, base):
+    """Tabcorp and Sportsbet run the same careers platform: a server-rendered
+    listing at /jobs/search with individual roles at /jobs/{slug}."""
+    out, seen = [], set()
+    for page in range(1, 8):
+        url = f"{base}/jobs/search?page={page}&query="
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        except Exception as e:
+            print(f"      {name} page {page}: error ({type(e).__name__})")
+            break
+        if r.status_code != 200:
+            print(f"      {name} page {page}: HTTP {r.status_code}")
+            break
+        new = 0
+        for u, t in _links_with_titles(r.text, base, "/jobs/"):
+            if u in seen or u.rstrip("/").endswith(("/jobs", "/jobs/search")):
+                continue
+            seen.add(u)
+            out.append({"title": t, "location": "", "department": "",
+                        "url": u, "posted_at": None})
+            new += 1
+        if page == 1 and not new:
+            print(f"      {name}: 200, {len(r.text)} bytes")
+            print(f"         link shapes present: {_href_shapes(r.text)}")
+        if not new:
+            break
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
+def scrape_sportsbet():
+    return _pageup_style("Sportsbet", "https://careers.sportsbet.com.au")
+
+
 def scrape_tabcorp():
     """Tabcorp's careers site is server-rendered, so the listing parses directly.
     (Their underlying ATS is PageUp, but the public site is easier to read.)"""
@@ -1446,6 +1481,7 @@ AGENCY_BOARDS = {
     **{n: (lambda n=n: scrape_custom(n)) for n in CUSTOM_BOARDS},
     "Betfred": scrape_betfred,
     "Tabcorp": scrape_tabcorp,
+    "Sportsbet": scrape_sportsbet,
     "Pentasia": scrape_pentasia,
     "BettingJobs": scrape_bettingjobs,
     "Van Kaizen": scrape_vankaizen,
