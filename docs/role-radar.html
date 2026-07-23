@@ -43,6 +43,11 @@
   .locopt:hover{background:#F4F5F7;}
   .locopt input{width:16px;height:16px;margin:0;accent-color:var(--royal);flex:0 0 auto;}
   .locopt .n{margin-left:auto;color:var(--mist);font-size:12.5px;font-family:'IBM Plex Mono',monospace;}
+  .sort-row{display:flex;align-items:center;gap:9px;margin-top:11px;}
+  .sort-row label{font-size:13px;color:var(--slate);}
+  .sort-row select{padding:8px 11px;border:1px solid #D3D7DE;border-radius:5px;background:#fff;
+                   font:inherit;font-size:13.5px;color:var(--navy2);cursor:pointer;}
+  .sort-row select:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.12);}
   .lead-row{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14.5px;color:var(--navy2);cursor:pointer;}
   .lead-row input{width:18px;height:18px;accent-color:var(--royal);cursor:pointer;}
   .countline{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;
@@ -52,9 +57,16 @@
   .list{padding:8px 0 50px;}
   .job{display:block;text-decoration:none;color:inherit;border-bottom:1px solid var(--line2);padding:17px 2px;transition:.12s;}
   .job:hover{background:#fff;padding-left:8px;padding-right:8px;}
+  .job .lvl{display:inline-block;margin-top:6px;padding:2px 9px;border-radius:100px;
+            background:#EEF2FB;color:var(--royal);font-family:'IBM Plex Mono',monospace;
+            font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;}
   .job .t{font-family:'Fraunces',serif;font-size:17.5px;font-weight:500;color:var(--navy);line-height:1.3;}
   .job .m{margin-top:5px;font-size:13.5px;color:var(--slate);display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
   .job .co{color:var(--royal);font-weight:500;}
+  .job .nodate{color:var(--mist);font-style:italic;}
+  .job .agency{margin-left:7px;padding:1px 7px;border:1px solid var(--line2);border-radius:100px;
+               font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
+               text-transform:uppercase;color:var(--slate);}
   .dot{color:var(--mist);}
   .empty{padding:46px 8px;text-align:center;color:var(--slate);font-size:15px;}
   .empty .go{margin-top:14px;}
@@ -145,6 +157,14 @@
         <div id="locopts"></div>
       </div>
     </div>
+    <div class="sort-row">
+      <label for="sort">Sort</label>
+      <select id="sort">
+        <option value="new">Newest first</option>
+        <option value="lead">Leadership first</option>
+        <option value="co">Company A&ndash;Z</option>
+      </select>
+    </div>
     <label class="lead-row">
       <input type="checkbox" id="lead" />
       <span>Leadership only &mdash; Chief, VP, Director, Head+</span>
@@ -210,6 +230,11 @@ const SAMPLE = [{"c":"LionHires","t":"Country Manager - Spain ","l":"Spain","u":
 const SENIORITY = /\b(chief|c[eoftm]o\b|coo\b|president|managing director|general manager|country manager|director|vp\b|vice president|head of|svp\b|evp\b)|(?<![,\-]\s)\b(?:md|gm)\b(?!\s*$)/i;
 
 let JOBS = [], usingSample = false, updated = null;
+
+// these list roles on behalf of unnamed clients, so say so rather than letting
+// the user assume the agency is the employer
+const AGENCIES = new Set(["Pentasia","BettingJobs","Van Kaizen","LionHires",
+  "Bullfinch Recruitment","Betting Connections","Talentgrator","iTalent PLUS"]);
 let LOC_COUNTS = {};
 let selectedLocs = (() => {
   try { return JSON.parse(localStorage.getItem("rr_locations") || "[]"); } catch(e){ return []; }
@@ -252,6 +277,34 @@ function bucket(loc){
   return parts[parts.length-1] || null;
 }
 
+
+// Seniority tiers, ordered as Heath ranks them. Order matters when testing:
+// "Senior Director" must be checked before "Director", "Vice President"
+// before "President", and so on, or the broader term swallows the narrower.
+const LEVELS = [
+  // guard against roles that merely mention an exec: "EA to the CEO",
+  // "Executive Assistant, Chief Product", and "Chief Accountant" (a senior
+  // accounting title across much of Europe, not a C-suite seat)
+  { name: "C-level",           rx: /\b(chief|c[eofmpir]o)\b/i,
+    not: /\b(executive\s+assistant|personal\s+assistant|\bea\b|assistant\s+to|support\s+to|reporting\s+to)\b|\bchief\s+accountant\b/i },
+  { name: "President",         rx: /\bpresident\b/i, not: /\b(vice|deputy|vp)\b/i },
+  { name: "Senior Director",   rx: /\b(senior|snr|sr\.?)\s+director\b|\b(evp|svp)\b|\b(executive|senior)\s+vice\s+president\b/i },
+  { name: "Vice President",    rx: /\bvice\s+president\b|\bvp\b/i },
+  { name: "Managing Director", rx: /\bmanaging\s+director\b|(?<![,\-]\s)\bmd\b(?!\s*$)/i },
+  { name: "Director",          rx: /\bdirector\b/i },
+  { name: "General Manager",   rx: /\bgeneral\s+manager\b|\bcountry\s+manager\b|(?<![,\-]\s)\bgm\b(?!\s*$)/i },
+  { name: "Head of",           rx: /\bhead\s+of\b|\bhead,\s/i },
+];
+
+function level(title){
+  const t = title || "";
+  for(let i = 0; i < LEVELS.length; i++){
+    const L = LEVELS[i];
+    if(L.rx.test(t) && !(L.not && L.not.test(t))) return i;
+  }
+  return LEVELS.length;          // everything else sits below
+}
+
 function ago(ts){
   if(!ts) return "";
   const d = Math.floor((Date.now()-ts)/86400000);
@@ -282,7 +335,26 @@ function render(){
   if(leadOnly) out = out.filter(j => SENIORITY.test(j.t||""));
   if(selectedLocs.length) out = out.filter(j => selectedLocs.includes(bucket(j.l)));
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
-  out = out.slice().sort((a,b)=>(Date.parse(b.p||0)||0)-(Date.parse(a.p||0)||0));
+  // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
+  // Teamtailor, the agency boards) simply don't publish one. Sorting those to
+  // the bottom hid whole sources, so undated roles rank just below anything
+  // posted today rather than last.
+  const UNDATED = Date.now() - 36*3600*1000;          // "sometime in the last day or two"
+  const when = j => j.p ? (Date.parse(j.p) || UNDATED) : UNDATED;
+  const mode = document.getElementById("sort").value;
+  out = out.slice();
+  if(mode === "co"){
+    out.sort((a,b) => (a.c||"").localeCompare(b.c||"") || when(b) - when(a));
+  } else if(mode === "lead" || leadOnly){
+    // rank by seniority, not recency — date is only the tiebreak within a tier
+    out.sort((a,b) => level(a.t) - level(b.t)
+                   || when(b) - when(a)
+                   || (a.c||"").localeCompare(b.c||""));
+  } else {
+    out.sort((a,b) => when(b) - when(a)
+                   || (a.c||"").localeCompare(b.c||"")
+                   || (a.t||"").localeCompare(b.t||""));
+  }
 
   const anyFilter = q || leadOnly || selectedLocs.length;
   document.getElementById("count").textContent =
@@ -295,12 +367,14 @@ function render(){
     list.innerHTML = '<div class="empty">No roles match that search.</div>';
     return;
   }
+  const showLevel = (mode === "lead" || leadOnly);
   list.innerHTML = out.slice(0,400).map(j => `
     <a class="job" href="${j.u||"#"}" target="_blank" rel="noopener">
       <div class="t">${j.t||""}</div>
-      <div class="m"><span class="co">${j.c||""}</span>
+      ${showLevel && level(j.t) < LEVELS.length ? '<span class="lvl">'+LEVELS[level(j.t)].name+'</span>' : ""}
+      <div class="m"><span class="co">${j.c||""}</span>${AGENCIES.has(j.c)?'<span class="agency">agency</span>':""}
         ${j.l?'<span class="dot">&middot;</span><span>'+j.l+"</span>":""}
-        ${j.p?'<span class="dot">&middot;</span><span>'+ago(Date.parse(j.p))+"</span>":""}
+        <span class="dot">&middot;</span><span${j.p?"":' class="nodate"'}>${j.p?ago(Date.parse(j.p)):"date not listed"}</span>
       </div>
     </a>`).join("");
 }
@@ -357,6 +431,7 @@ document.getElementById("btn").addEventListener("click", render);
 document.getElementById("q").addEventListener("input", render);
 document.getElementById("q").addEventListener("keydown", e => { if(e.key==="Enter") render(); });
 document.getElementById("lead").addEventListener("change", render);
+document.getElementById("sort").addEventListener("change", render);
 document.getElementById("locbtn").addEventListener("click", (e) => {
   e.stopPropagation();
   const p = document.getElementById("locpanel");
@@ -372,6 +447,7 @@ document.addEventListener("click", () => {
 });
 document.getElementById("clear").addEventListener("click", () => {
   document.getElementById("q").value=""; document.getElementById("lead").checked=false;
+  document.getElementById("sort").value="new";
   selectedLocs = []; saveLocs(); drawLocations(); updateLocLabel(); render();
 });
 
