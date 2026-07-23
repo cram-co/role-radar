@@ -196,54 +196,68 @@
   "token": "kindred"
  },
  "Superbet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Super Group": {
   "ats": "greenhouse",
   "token": "super"
  },
  "Betfred": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Lottomatica": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Novibet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "LiveScore Group": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Caesars Digital": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Fanatics Betting & Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Hard Rock Digital": {
   "ats": "recruitee",
   "token": "hardrockdigital"
  },
  "Underdog": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "SportyBet / Sporty Group": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "BetKing": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "888Africa": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "ComeOn Group": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Casumo": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Videoslots": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Stake (Easygo)": {
   "ats": "breezy",
@@ -254,7 +268,8 @@
   "token": "pragmatic"
  },
  "Games Global": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  },
  "Aristocrat Interactive": {
   "ats": "unknown"
@@ -812,5 +827,205 @@
  "Super": {
   "ats": "greenhouse",
   "token": "super"
+ },
+ "The Star Entertainment Group": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "GR8_TECH": {
+  "ats": "greenhouse",
+  "token": "gr8tech"
+ },
+ "Parimatch": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "ARRISE": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Betty": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Brightstar Lottery": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "1X2 Network": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "IGT PlayDigital": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "SoftGamings": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "BrainRocket": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "The Rank Group plc": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "New Zealand Thoroughbred Racing Inc": {
+  "ats": "greenhouse",
+  "token": "new"
+ },
+ "Betway Global": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Red Tiger": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "GAMING1": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "evoke": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Flutter UK & Ireland": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Orbital": {
+  "ats": "ashby",
+  "token": "orbital"
+ },
+ "DAZN Bet": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "WA.Technology": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Fanatics": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "KamaGames": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Bally's Interactive": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Flutter International": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "NSUSLAB Korea": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "NSUS Group": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Easygo": {
+  "ats": "greenhouse",
+  "token": "easygo"
+ },
+ "Rivalry": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Sportingtech": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Amber Gaming": {
+  "ats": "ashby",
+  "token": "amber"
+ },
+ "PointsBet": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Dabble": {
+  "ats": "teamtailor",
+  "token": "dabble"
+ },
+ "Pragmatic Solutions": {
+  "ats": "teamtailor",
+  "token": "pragmatic"
+ },
+ "DAZN": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "VAIX a Sportradar Company": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Voxbet": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Blip.pt": {
+  "ats": "greenhouse",
+  "token": "blip"
+ },
+ "MERKUR GAMING": {
+  "ats": "recruitee",
+  "token": "merkur"
+ },
+ "Junglee Games": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "GGNetwork": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "UltraPlay": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "RNGplay": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "BETBY": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "VGW": {
+  "ats": "greenhouse",
+  "token": "vgw"
+ },
+ "Gaming Innovation Group": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "FunFair Technologies": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "CODERE": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "Luckia": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "PKR Technologies Ltd": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
+ },
+ "FSB Technology": {
+  "ats": "unknown",
+  "checked": 1784786971.6618996
  }
 }

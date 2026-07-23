@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-07-23T06:06:46.916300+00:00",
- "job_count": 2380,
+ "generated_at": "2026-07-23T06:20:20.387811+00:00",
+ "job_count": 2541,
  "jobs": [
   {
    "title": "Access Administrator",
@@ -17772,16 +17772,6 @@
   },
   {
    "title": "Product Marketing Manager, Betting",
-   "location": "New York, New York, United States",
-   "department": "Marketing",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7798042003?gh_jid=7798042003",
-   "posted_at": "2026-07-07T14:55:48-04:00",
-   "company": "Genius Sports",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Product Marketing Manager, Betting",
    "location": "London, England, United Kingdom",
    "department": "Marketing",
    "url": "https://boards.greenhouse.io/geniussports/jobs/7783098003?gh_jid=7783098003",
@@ -17791,11 +17781,11 @@
    "source": "collector"
   },
   {
-   "title": "Salesforce Admin",
-   "location": "London, England, United Kingdom",
-   "department": "IT",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7801527003?gh_jid=7801527003",
-   "posted_at": "2026-07-10T15:15:23-04:00",
+   "title": "Product Marketing Manager, Betting",
+   "location": "New York, New York, United States",
+   "department": "Marketing",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7798042003?gh_jid=7798042003",
+   "posted_at": "2026-07-07T14:55:48-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
@@ -17806,6 +17796,16 @@
    "department": "IT",
    "url": "https://boards.greenhouse.io/geniussports/jobs/7770410003?gh_jid=7770410003",
    "posted_at": "2026-07-10T15:00:36-04:00",
+   "company": "Genius Sports",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Salesforce Admin",
+   "location": "London, England, United Kingdom",
+   "department": "IT",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7801527003?gh_jid=7801527003",
+   "posted_at": "2026-07-10T15:15:23-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
@@ -18011,6 +18011,16 @@
    "source": "collector"
   },
   {
+   "title": "Transformation Analyst/Manager",
+   "location": "Medell\u00edn, Antioquia, Colombia",
+   "department": "Operations",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7813418003?gh_jid=7813418003",
+   "posted_at": "2026-07-23T02:07:54-04:00",
+   "company": "Genius Sports",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Vice President, Inside Sales - Channel Partnerships ",
    "location": "New York, New York, United States",
    "department": "Commercial",
@@ -18022,20 +18032,20 @@
   },
   {
    "title": "VP, Business Technology",
-   "location": "London, England, United Kingdom",
+   "location": "New York, New York, United States",
    "department": "IT",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7763511003?gh_jid=7763511003",
-   "posted_at": "2026-06-05T16:50:47-04:00",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7763502003?gh_jid=7763502003",
+   "posted_at": "2026-06-05T16:50:58-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "VP, Business Technology",
-   "location": "New York, New York, United States",
+   "location": "London, England, United Kingdom",
    "department": "IT",
-   "url": "https://boards.greenhouse.io/geniussports/jobs/7763502003?gh_jid=7763502003",
-   "posted_at": "2026-06-05T16:50:58-04:00",
+   "url": "https://boards.greenhouse.io/geniussports/jobs/7763511003?gh_jid=7763511003",
+   "posted_at": "2026-06-05T16:50:47-04:00",
    "company": "Genius Sports",
    "ats": "greenhouse",
    "source": "collector"
@@ -23847,6 +23857,1606 @@
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933365101",
    "posted_at": "2026-07-22T06:35:51-04:00",
    "company": "Super",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Accounting Team Lead",
+   "location": "Cyprus",
+   "department": "Finance GR8 Tech",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4902653101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Office Admin",
+   "location": "Poland; Ukraine",
+   "department": "Office Admin",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4838332101",
+   "posted_at": "2026-07-14T06:44:53-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Turnkey Solution",
+   "location": "Anywhere; Bulgaria; Cyprus; Poland; Spain",
+   "department": "GR8 Tech",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4871699101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Turnkey Solution",
+   "location": "Anywhere",
+   "department": "GR8 Tech",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4836959101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "L2 Technical Support Specialist",
+   "location": "Anywhere",
+   "department": "Business Operations",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4930927101",
+   "posted_at": "2026-07-17T11:05:31-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Middle Account Manager for Payments Team",
+   "location": "Anywhere",
+   "department": "Payments Account Management",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4905030101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Middle Information Security Access Specialist",
+   "location": "Anywhere",
+   "department": "Security Management",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4902734101",
+   "posted_at": "2026-07-21T08:58:28-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Middle Media Buyer",
+   "location": "Anywhere; Bulgaria; Cyprus; Poland; Prague, Czech Republic",
+   "department": "Marketing Communications",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4835178101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Middle/Senior Data Engineer for Real Time Streaming Platform",
+   "location": "Anywhere",
+   "department": "Streaming & Traffic",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4906966101",
+   "posted_at": "2026-07-21T09:01:01-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Middle/Senior Java Developer for Stream Data Processing Tech",
+   "location": "Anywhere",
+   "department": "Streaming & Traffic",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4884982101",
+   "posted_at": "2026-07-21T09:01:01-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Office Manager",
+   "location": "Kyiv; Ukraine",
+   "department": "Office Admin",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4866565101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Product Team Lead for Platform Product",
+   "location": "Armenia; Bulgaria; Cyprus; Georgia; Poland",
+   "department": "Platform Product",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4890934101",
+   "posted_at": "2026-07-02T07:01:33-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "QA Engineer for Payments Team",
+   "location": "Armenia; Cyprus; Moldova; Poland; Spain",
+   "department": "Casino & Payments General QA",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4927211101",
+   "posted_at": "2026-07-21T08:56:33-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Risk & Anti-Fraud Operations Specialist (Casino)",
+   "location": "Anywhere",
+   "department": "Antifraud Casino",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4918670101",
+   "posted_at": "2026-07-09T08:43:23-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Accountant",
+   "location": "Armenia; Cyprus; Poland; Spain",
+   "department": "Finance GR8 Tech",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4921185101",
+   "posted_at": "2026-07-08T12:26:49-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Account Manager",
+   "location": "Anywhere",
+   "department": "Account Management",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4904886101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Employer Brand Specialist (Hybrid, Warsaw)",
+   "location": "Warsaw",
+   "department": "Employer Brand and Events",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4888792101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Front End Developer",
+   "location": "Anywhere",
+   "department": "Platform Widgets Web",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4922818101",
+   "posted_at": "2026-07-22T06:21:06-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Full-Stack .NET Engineer (with Node.js & Go)",
+   "location": "Anywhere",
+   "department": "Platform Widgets Web",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4921245101",
+   "posted_at": "2026-07-22T10:13:53-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Node.js Developer for CMS Core Tech",
+   "location": "Anywhere",
+   "department": "Platform Widgets Web",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4901457101",
+   "posted_at": "2026-07-21T08:58:12-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Payment Technical Manager",
+   "location": "Anywhere; Armenia; Georgia; Latvia; Moldova",
+   "department": "Payments Delivery TechOps",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4903270101",
+   "posted_at": "2026-07-22T05:29:58-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Payment Technical Manager",
+   "location": "Anywhere; Armenia; Latvia; Moldova; Poland",
+   "department": "Payments Delivery TechOps",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4848336101",
+   "posted_at": "2026-07-22T05:29:58-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Product Manager for Platform Product",
+   "location": "Armenia; Bulgaria; Cyprus; Europe; Georgia; Malta; Poland",
+   "department": "Platform Product",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4896615101",
+   "posted_at": "2026-07-07T04:48:25-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Product Manager (Gambling) ",
+   "location": "Anywhere; Armenia; Bulgaria; Moldova; Poland",
+   "department": "Gambling Product",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4879360101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Talent Pool",
+   "location": "Anywhere",
+   "department": "x Talent Pool",
+   "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4372591101",
+   "posted_at": "2026-07-02T05:13:38-04:00",
+   "company": "GR8_TECH",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Performance Marketing Manager (UK  & Ireland)",
+   "location": "Dublin",
+   "department": "Performance Marketing",
+   "url": "https://job-boards.greenhouse.io/new/jobs/4649245003",
+   "posted_at": "2024-07-24T16:10:07-04:00",
+   "company": "New Zealand Thoroughbred Racing Inc",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Business Development Representative",
+   "location": "New York",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/d244ee6a-17bd-4041-bbfa-55f0af405930",
+   "posted_at": "2026-03-31T13:47:18.448+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Site Reliability Engineer",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/13e78992-d17a-42c8-b7f8-6802190e879a",
+   "posted_at": "2025-11-25T10:37:53.767+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/57c1516f-cf9d-4810-a7a1-c0cb9d9862e2",
+   "posted_at": "2026-06-25T07:32:32.584+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Marketing Manager ",
+   "location": "New York",
+   "department": "Marketing",
+   "url": "https://jobs.ashbyhq.com/orbital/a7ea81db-8792-46c9-826a-0d0130008738",
+   "posted_at": "2026-04-07T14:46:18.380+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Solutions Architect  (CRE Lawyer)",
+   "location": "London",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/bcc1ca6e-4439-40de-8834-f3d98304c41e",
+   "posted_at": "2026-07-17T10:29:31.916+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Sales Development Manager",
+   "location": "New York",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/911abfbe-81c6-4bc5-b988-a85a07fd744f",
+   "posted_at": "2026-06-03T13:26:23.461+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Engineer",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/d6c13569-8d96-4a7b-9019-1dfc06268a17",
+   "posted_at": "2026-07-17T13:07:23.729+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Manager",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/59deca46-1d05-4002-991d-a5b033c523d3",
+   "posted_at": "2026-07-17T13:07:35.524+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/46650557-07b4-4fc0-9499-d86824ae7a40",
+   "posted_at": "2026-07-17T13:07:44.751+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Lead (Software Engineering)",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/5c515a36-166b-48a8-9fd4-5b54f26b8b9d",
+   "posted_at": "2026-07-17T13:07:55.122+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Real Estate Attorney (AI Legal Engineer)",
+   "location": "New York",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/8943768d-b22a-4e54-a6bc-d8f914b72146",
+   "posted_at": "2026-04-01T07:37:44.907+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "VP of People",
+   "location": "New York",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/orbital/d4dc303b-b06e-4415-ac83-e7db98ade43d",
+   "posted_at": "2026-04-28T15:13:03.022+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "AI Engineer",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/e3e55ac8-82dd-428a-93b4-349d6b52cb98",
+   "posted_at": "2026-05-21T16:45:28.650+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Staff AI Engineer",
+   "location": "London",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/5d8185fb-8a20-4eda-94c3-2b338ed010eb",
+   "posted_at": "2026-05-14T14:01:56.239+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Growth Marketing Manager",
+   "location": "New York",
+   "department": "Marketing",
+   "url": "https://jobs.ashbyhq.com/orbital/352f1b88-a24f-454b-bbf2-095ae6992d8f",
+   "posted_at": "2026-07-09T13:20:37.965+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Revenue Operations Manager (Sales)",
+   "location": "New York",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/507b6a0c-6324-4b59-9202-3c07bbb6414f",
+   "posted_at": "2026-07-20T14:28:44.482+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Solutions Consulting",
+   "location": "New York",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/6a9e7175-6acc-4484-8c32-f59c75984107",
+   "posted_at": "2026-05-21T17:08:16.779+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Talent Partner",
+   "location": "London",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/orbital/d74d81c3-3704-4310-9bcc-b356e41e9305",
+   "posted_at": "2026-06-24T15:56:40.309+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Sales Development Manager",
+   "location": "Los Angeles",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/2b4b375d-8b15-4ee8-bdb0-d161510c8d81",
+   "posted_at": "2026-06-05T19:42:29.130+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Business Development Representative ",
+   "location": "London",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/f029a24d-35b1-4434-9ead-02de11f403c1",
+   "posted_at": "2026-06-18T09:50:11.102+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Talent Partner",
+   "location": "New York",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/orbital/884d5238-e3dc-40d5-bb5d-bad107b3aac9",
+   "posted_at": "2026-06-24T15:56:47.166+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Talent Partner",
+   "location": "Los Angeles",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/orbital/da1f4f86-51e7-4984-a306-3f870f332bdd",
+   "posted_at": "2026-06-24T15:56:43.882+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Sales Manager",
+   "location": "New York",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/0207d8cf-80be-4f98-a260-232a3a36cdcf",
+   "posted_at": "2026-07-08T15:26:16.655+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Finance Manager",
+   "location": "London",
+   "department": "Finance",
+   "url": "https://jobs.ashbyhq.com/orbital/bbd40095-3192-4651-b7c8-61d805309c6e",
+   "posted_at": "2026-07-08T10:40:37.394+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "People Enablement Partner ",
+   "location": "New York",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/orbital/79a098e8-1047-4c1b-905c-e2370b643006",
+   "posted_at": "2026-07-10T09:25:34.686+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Engineer",
+   "location": "Vancouver",
+   "department": "Engineering",
+   "url": "https://jobs.ashbyhq.com/orbital/4bd3c343-ce82-49b3-b357-bab30fd0e8cc",
+   "posted_at": "2026-07-10T12:11:27.914+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Founding West Coast Sales Manager - Los Angeles",
+   "location": "Los Angeles",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/orbital/61dd5ee2-09a9-4581-b576-c8d61a67c268",
+   "posted_at": "2026-07-20T16:19:18.764+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "GTM Talent Acquisition Manager - New York ",
+   "location": "New York",
+   "department": "People",
+   "url": "https://jobs.ashbyhq.com/orbital/abad7a2e-8daa-41bd-89a4-85efe59c7c17",
+   "posted_at": "2026-07-21T10:16:27.334+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior legal Counsel",
+   "location": "New York",
+   "department": "Operations",
+   "url": "https://jobs.ashbyhq.com/orbital/00d61d69-0d0a-45c4-bad4-e76dcec9debd",
+   "posted_at": "2026-07-22T17:22:06.686+00:00",
+   "company": "Orbital",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Manager - Juice",
+   "location": "Melbourne, Australia",
+   "department": "Strategy ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184076007",
+   "posted_at": "2026-07-10T00:55:54-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Account Manager - Juice",
+   "location": "Remote",
+   "department": "Strategy ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184079007",
+   "posted_at": "2026-07-13T21:25:59-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Administrative Assistant",
+   "location": "Lima, Per\u00fa",
+   "department": "Regulated Markets - Peru",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5137431007",
+   "posted_at": "2026-05-28T10:36:29-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "AML Manager",
+   "location": "Melbourne, Australia",
+   "department": "Legal - Compliance ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5180074007",
+   "posted_at": "2026-07-06T06:16:52-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Atlassian Engineer",
+   "location": "Melbourne, Australia",
+   "department": "Finance ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5153842007",
+   "posted_at": "2026-07-06T23:19:48-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "CRM Specialist",
+   "location": "Melbourne, Australia",
+   "department": "Marketing",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5149650007",
+   "posted_at": "2026-06-02T23:52:14-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Expression of Interest",
+   "location": "Melbourne, Victoria, Australia, Sydney, New South Wales, Australia",
+   "department": "Easygo AU",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5180045007",
+   "posted_at": "2026-07-06T20:57:38-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Finance Analyst",
+   "location": "S\u00e3o Paulo, S\u00e3o Paulo, Brasil",
+   "department": "Finance ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5146091007",
+   "posted_at": "2026-05-25T16:47:48-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Financial Accountant",
+   "location": "Melbourne, Australia",
+   "department": "Finance ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5153860007",
+   "posted_at": "2026-06-02T21:28:40-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Financial Transformation Analyst",
+   "location": "Melbourne, Australia",
+   "department": "Finance ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5156522007",
+   "posted_at": "2026-06-05T02:56:25-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "HR Business Partner",
+   "location": "Bogot\u00e1, Colombia",
+   "department": "Regulated Markets - Colombia",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5176770007",
+   "posted_at": "2026-06-30T01:54:51-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Internal Auditor",
+   "location": "Melbourne, Australia",
+   "department": "Legal",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5155270007",
+   "posted_at": "2026-06-30T23:43:29-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Kitchen Hand/Barista (6 Month FTC)",
+   "location": "Melbourne, Australia",
+   "department": "People & Culture",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5171103007",
+   "posted_at": "2026-06-23T20:04:28-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Lead/ Staff Product Designer - KICK",
+   "location": "Melbourne, Australia",
+   "department": "Creative",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5078313007",
+   "posted_at": "2026-05-20T00:41:18-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Counsel (Disputes & Investigations)",
+   "location": "Melbourne, Australia",
+   "department": "Legal",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5193203007",
+   "posted_at": "2026-07-23T00:51:56-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Legal Counsel (Intellectual Property)",
+   "location": "Melbourne, Australia",
+   "department": "Legal",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5193181007",
+   "posted_at": "2026-07-22T08:46:42-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Marketing Lead (Portuguese Speaking)",
+   "location": "Melbourne, Australia",
+   "department": "Marketing - Affiliate ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5162890007",
+   "posted_at": "2026-07-09T00:05:01-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Paid Search Lead",
+   "location": "Melbourne, Australia",
+   "department": "Marketing",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5186176007",
+   "posted_at": "2026-07-14T00:37:29-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Paid Social Lead",
+   "location": "Melbourne, Australia",
+   "department": "Marketing",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5186136007",
+   "posted_at": "2026-07-14T00:44:50-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "People Enablement Lead",
+   "location": "Melbourne, Australia",
+   "department": "People & Culture",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5193165007",
+   "posted_at": "2026-07-22T08:12:24-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Programmatic Lead",
+   "location": "Melbourne, Australia",
+   "department": "Marketing",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5186179007",
+   "posted_at": "2026-07-14T00:54:52-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Racing Analyst",
+   "location": "Melbourne, Australia",
+   "department": "Wagering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5188398007",
+   "posted_at": "2026-07-16T04:21:54-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Backend Engineer - Engine",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5191644007",
+   "posted_at": "2026-07-22T22:01:37-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Backend Engineer - KICK Platform Trust",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5146144007",
+   "posted_at": "2026-07-15T00:33:29-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Frontend Engineer - KICK Discovery & Presence",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5174811007",
+   "posted_at": "2026-07-15T00:25:10-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Machine Learning Operations Engineer (MLOps)",
+   "location": "Melbourne, Australia",
+   "department": "Business Intelligence ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5119804007",
+   "posted_at": "2026-05-20T19:27:41-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Product Designer - KICK ",
+   "location": "Melbourne, Australia",
+   "department": "Creative",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5079728007",
+   "posted_at": "2026-06-04T22:37:13-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/4991302007",
+   "posted_at": "2026-07-09T20:45:37-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer - Engagement",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5123541007",
+   "posted_at": "2026-07-15T03:28:16-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer - KICK Creator Tools & Engagement",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/4996791007",
+   "posted_at": "2026-05-20T00:04:11-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer - KICK Discovery & Presence",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5117022007",
+   "posted_at": "2026-05-20T00:34:41-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineering Manager ",
+   "location": "Melbourne",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5152558007",
+   "posted_at": "2026-07-20T20:27:39-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer, Mobile (Android)",
+   "location": "Melbourne",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5151058007",
+   "posted_at": "2026-07-20T23:33:14-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Sponsorships Lead",
+   "location": "Melbourne, Australia",
+   "department": "Marketing - Sponsorship",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5118324007",
+   "posted_at": "2026-06-16T20:19:04-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Frontend Engineer - Casino Gaming and Compliance",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5193079007",
+   "posted_at": "2026-07-22T21:27:11-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Frontend Engineer - Web Platform",
+   "location": "Serbia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5100934007",
+   "posted_at": "2026-06-24T09:32:59-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Frontend Software Engineer",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5153906007",
+   "posted_at": "2026-06-02T23:13:11-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff/Senior Backend Engineer (Golang) - Admin Platform",
+   "location": "Serbia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5168932007",
+   "posted_at": "2026-06-19T03:08:01-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff/Senior Frontend Engineer - Admin Platform",
+   "location": "Serbia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5168941007",
+   "posted_at": "2026-06-19T03:08:17-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Software Engineer - Casino Team",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5103176007",
+   "posted_at": "2026-07-03T00:31:19-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Software Engineer - Frontend Web Platform KICK",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5097647007",
+   "posted_at": "2026-05-21T21:18:44-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Software Engineer, (Full-Stack) - Engagement team",
+   "location": "Melbourne, Australia",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5103198007",
+   "posted_at": "2026-05-20T00:31:49-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Software Engineer - Payments (Crypto & Fiat)",
+   "location": "Melbourne, Australia ",
+   "department": "Engineering",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5153931007",
+   "posted_at": "2026-06-03T05:19:41-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Compliance Analyst",
+   "location": "Melbourne, Australia",
+   "department": "Legal - Compliance ",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5161835007",
+   "posted_at": "2026-06-11T00:24:03-04:00",
+   "company": "Easygo",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Project Manager - AI (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/c91c88e7-754c-4200-9fc3-bd42bcd9dd2a",
+   "posted_at": "2026-04-27T12:09:53.701+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Performance Marketing Manager (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Marketing",
+   "url": "https://jobs.ashbyhq.com/amber/e6c20c7c-da52-46d4-8f31-43382eafe586",
+   "posted_at": "2026-07-20T06:19:43.513+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Executive BeNeLux (F/M/*)",
+   "location": "Remote",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/0d1a96fc-7c6e-4c39-8b85-0c4c4349a34d",
+   "posted_at": "2026-03-27T09:35:27.862+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Executive BeNeLux (F/M/*)",
+   "location": "Aachen",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/518b403c-0e55-49ef-b923-3eddf4e9ca53",
+   "posted_at": "2026-03-27T09:34:13.949+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Engineering Manager in the Office of the CTO (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/b73707e5-f45e-48d7-8c05-bf2d00832d39",
+   "posted_at": "2026-07-21T06:35:46.917+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Product Owner - AI (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/796f3dde-c3c3-4a71-b3a3-481432a40da5",
+   "posted_at": "2026-03-25T11:04:59.733+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Partner Manager (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/4736fe3e-cfab-45d7-a9d5-b3aa44bac4e3",
+   "posted_at": "2026-03-27T12:52:48.451+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Accounting & Procurement (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Administration",
+   "url": "https://jobs.ashbyhq.com/amber/77c637c3-d7af-4f7a-9cc2-18333226d252",
+   "posted_at": "2026-05-06T13:59:09.150+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "(Senior) IT Systems Engineer (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/70364f47-f0f4-4f17-a41e-e1c57e5a270d",
+   "posted_at": "2026-05-29T11:22:20.607+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "(Senior) Backend Engineer (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/aa0437cd-5558-4dc2-b3df-a076959f27d7",
+   "posted_at": "2026-04-17T13:06:13.693+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Executive Mid-Market (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/5fb066bd-6da8-4bb3-98d5-3efa629c58db",
+   "posted_at": "2026-06-01T12:13:21.132+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Senior AI Engineer (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/79f9b649-b210-40b0-bcca-013d1eb4803f",
+   "posted_at": "2026-06-19T14:24:59.231+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "AI Test Engineer (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/2b46385d-974d-47ec-a57a-dbea3bef4c0b",
+   "posted_at": "2026-05-04T13:50:33.140+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Executive - Business KI (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/810332c1-4a6d-491c-a2f3-ca189d96fe77",
+   "posted_at": "2026-06-01T12:14:24.052+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Head of IT (F/M/*)",
+   "location": "Aachen",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/6e06afb4-089f-4bdf-8138-c4c44c17e2f8",
+   "posted_at": "2026-05-29T11:25:28.030+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Intern Sales (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/ad6d9488-f4f4-45f6-91e0-296ece77f874",
+   "posted_at": "2026-06-22T14:15:24.144+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Demand Generation Manager (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/02008610-2839-4127-a89b-7ce826d8b67d",
+   "posted_at": "2026-06-16T12:49:44.504+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Executive Nordics (F/M/*)",
+   "location": "Gothenburg",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/27fa14c7-5e83-492d-98f9-5eab2db6635d",
+   "posted_at": "2026-06-16T15:39:34.669+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Account Executive Nordics (F/M/*)",
+   "location": "Copenhagen",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/78d03148-3101-461d-a84c-e20a4250579f",
+   "posted_at": "2026-06-16T15:41:19.917+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "AI Engineering Intern (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/f87fd9e4-1ad1-4182-80ae-831c4aa5a352",
+   "posted_at": "2026-06-19T15:01:30.291+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Success Manager (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Customer Success",
+   "url": "https://jobs.ashbyhq.com/amber/e32a24ce-bd65-42bf-b94a-ca2acd2ad90e",
+   "posted_at": "2026-06-23T07:24:40.769+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Sales Development Representative (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/c2507e44-dd7d-4a64-8939-dec7995696a8",
+   "posted_at": "2026-06-23T08:27:09.605+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Implementation Engineer (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/57f4b5af-f8ef-4708-a19f-313f6e1b38e2",
+   "posted_at": "2026-06-29T08:20:18.669+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Partner Manager (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Sales",
+   "url": "https://jobs.ashbyhq.com/amber/ef531f2a-9e8f-4396-b073-758908a19ca2",
+   "posted_at": "2026-07-20T11:54:42.881+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Forward Deployed Engineer (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Tech",
+   "url": "https://jobs.ashbyhq.com/amber/68147d65-761c-4c7e-a9ca-a59465799842",
+   "posted_at": "2026-07-20T12:00:05.625+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Online Marketing Manager - AI (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Marketing",
+   "url": "https://jobs.ashbyhq.com/amber/7d888f7c-634f-4d37-8efe-cd76c19ac27a",
+   "posted_at": "2026-07-20T12:05:47.312+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "AI Adoption Engineer (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Customer Success",
+   "url": "https://jobs.ashbyhq.com/amber/0f5950c7-4a92-4fb5-ac2f-fd6ff79f86bb",
+   "posted_at": "2026-07-20T12:11:02.782+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Content Creator (F/M/*)",
+   "location": "K\u00f6ln",
+   "department": "Marketing",
+   "url": "https://jobs.ashbyhq.com/amber/b6ddb2ca-3180-46fe-9ce9-5aa919e0fb15",
+   "posted_at": "2026-07-21T13:41:50.436+00:00",
+   "company": "Amber Gaming",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Blip General Interest Form",
+   "location": "Remote",
+   "department": "Blip",
+   "url": "https://job-boards.greenhouse.io/blip/jobs/4253389005",
+   "posted_at": "2024-07-24T16:07:53-04:00",
+   "company": "Blip.pt",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Social + Community Specialist ",
+   "location": "Los Angeles, CA",
+   "department": "Blip",
+   "url": "https://job-boards.greenhouse.io/blip/jobs/4490381005",
+   "posted_at": "2024-10-25T18:08:40-04:00",
+   "company": "Blip.pt",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Linux System Administrator (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/linux-system-administrator-wmd",
+   "posted_at": "2026-07-20 11:29:31 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "N\u00e4chster Karriereschritt: Vertriebscoach (w/m/d)",
+   "location": "Salzburg, Salzburg, \u00d6sterreich",
+   "department": "Vertrieb",
+   "url": "https://merkur.recruitee.com/o/nachster-karriereschritt-vertriebscoach-wmd-1",
+   "posted_at": "2026-07-13 09:40:34 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Team Member Hausverwaltung (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "MIVOG Immobilienverwertungs- und VerwaltungsgesmbH",
+   "url": "https://merkur.recruitee.com/o/team-member-hausverwaltung-wmd",
+   "posted_at": "2026-07-07 12:53:18 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Team Member Bauprojektmanagement & Immobilienentwicklung (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "MIVOG Immobilienverwertungs- und VerwaltungsgesmbH",
+   "url": "https://merkur.recruitee.com/o/team-member-bauprojektmanagement-immobilienentwicklung-wmd-1",
+   "posted_at": "2026-07-07 12:27:46 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Backoffice im Vertrieb (w/m/d)",
+   "location": "Salzburg, Salzburg, \u00d6sterreich",
+   "department": "Vertriebsinnendienst",
+   "url": "https://merkur.recruitee.com/o/backoffice-im-vertrieb-wmd",
+   "posted_at": "2026-06-23 12:42:32 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Team Member Lebensversicherung \u2013 Schwerpunkt Projekte & Organisation (m/w/d)",
+   "location": "Salzburg, Salzburg, \u00d6sterreich",
+   "department": "Sparte Lebensversicherung",
+   "url": "https://merkur.recruitee.com/o/team-member-lebensversicherung-schwerpunkt-projekte-organisation-mwd",
+   "posted_at": "2026-06-15 13:40:11 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Engineer (w/m/d) \u2013 Fokus: Plattformentwicklung",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/devops-engineer-wmd-fokus-plattformentwicklung",
+   "posted_at": "2026-05-19 15:46:56 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Product Owner (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/devops-product-owner-wmd",
+   "posted_at": "2026-05-19 15:44:15 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Scrum Master (w/m/d) in der IT Entwicklung",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/scrum-master-wmd-in-der-it-entwicklung",
+   "posted_at": "2026-05-19 15:40:37 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Test Engineer (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/senior-software-test-engineer-wmd",
+   "posted_at": "2026-05-19 15:38:42 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Angular Frontend Developer (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/senior-angular-frontend-developer-wmd",
+   "posted_at": "2026-05-19 15:30:30 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Java Backend Developer (w/m/d)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Informationstechnologie",
+   "url": "https://merkur.recruitee.com/o/senior-java-backend-developer-wmd",
+   "posted_at": "2026-05-19 15:19:05 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Vorstandsassistenz f\u00fcr unsere Tochtergesellschaft - 25h/Woche (Karenzvertretung)",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Merkur International Holding AG",
+   "url": "https://merkur.recruitee.com/o/vorstandsassistenz-fur-unsere-tochtergesellschaft-25hwoche-karenzvertretung",
+   "posted_at": "2026-05-07 05:34:49 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Steiermark Ost/S\u00fcd",
+   "location": "Weiz, Steiermark, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-steiermark-ostsud-1",
+   "posted_at": "2025-11-17 04:47:37 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - K\u00e4rnten",
+   "location": "Klagenfurt am W\u00f6rthersee, K\u00e4rnten, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-karnten",
+   "posted_at": "2025-11-17 04:44:27 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Ober\u00f6sterreich",
+   "location": "Linz, Ober\u00f6sterreich, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-oberosterreich",
+   "posted_at": "2025-11-13 16:01:44 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Salzburg",
+   "location": "Salzburg, Salzburg, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-salzburg",
+   "posted_at": "2025-11-13 15:57:20 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Tirol",
+   "location": "Innsbruck, Tirol, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-tirol",
+   "posted_at": "2025-11-13 15:47:35 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Vorarlberg",
+   "location": "Bregenz, Vorarlberg, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-vorarlberg-3",
+   "posted_at": "2025-11-13 15:43:42 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Nieder\u00f6sterreich",
+   "location": "Krems, Nieder\u00f6sterreich, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-niederosterreich",
+   "posted_at": "2025-11-11 10:54:13 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Wien",
+   "location": "Wien, Wien, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-wien",
+   "posted_at": "2025-11-11 10:52:47 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Burgenland",
+   "location": "Eisenstadt, Burgenland, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-burgenland",
+   "posted_at": "2025-11-11 10:47:22 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Graz",
+   "location": "Graz, Steiermark, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-graz-1",
+   "posted_at": "2025-10-31 14:11:28 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Versicherungsberater:in - Steiermark Nord",
+   "location": "Leoben, Steiermark, \u00d6sterreich",
+   "department": "Vertriebsau\u00dfendienst",
+   "url": "https://merkur.recruitee.com/o/versicherungsberaterin-steiermark-nord",
+   "posted_at": "2025-09-10 11:04:26 UTC",
+   "company": "MERKUR GAMING",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Georgia",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576059002",
+   "posted_at": "2026-07-22T01:38:59-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Illinois",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576060002",
+   "posted_at": "2026-07-21T22:04:15-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Iowa",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576061002",
+   "posted_at": "2026-07-21T22:03:22-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Wisconsin ",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576062002",
+   "posted_at": "2026-07-21T22:02:50-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Arkansas ",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576063002",
+   "posted_at": "2026-07-22T01:20:04-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Kentucky",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576064002",
+   "posted_at": "2026-07-22T01:22:15-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Tennessee ",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576065002",
+   "posted_at": "2026-07-22T01:24:37-04:00",
+   "company": "VGW",
    "ats": "greenhouse",
    "source": "collector"
   }
