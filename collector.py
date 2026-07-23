@@ -531,64 +531,114 @@ _LOC_WORDS = {
 }
 
 
-def scrape_pentasia():
-    """pentasia.com — server-rendered Next.js listing, paginated ?page=N (0-indexed).
-    JSON-LD first; falls back to parsing the /careers/ links off each page."""
-    ld = _jsonld_jobs("https://www.pentasia.com/cm/candidates/jobs", "Pentasia")
-    if ld:
-        return ld
-    print("   Pentasia: no JSON-LD, parsing listing pages")
+
+# slug fragments that indicate a listing/category page rather than a real vacancy
+_NOT_A_JOB = {
+    "vacancies", "vacancy", "jobs", "job", "careers", "career", "search",
+    "page", "all", "index", "apply", "roles", "opportunities", "live-roles",
+}
+
+# shorthand that reads badly when title-cased from a slug
+_FIX_CASE = {
+    "Aml": "AML", "Cft": "CFT", "Amlcft": "AML/CFT", "Kyc": "KYC", "Coo": "COO",
+    "Ceo": "CEO", "Cfo": "CFO", "Cto": "CTO", "Cmo": "CMO", "Cpo": "CPO",
+    "Vp": "VP", "Md": "MD", "Gm": "GM", "Hr": "HR", "It": "IT", "Bi": "BI",
+    "Crm": "CRM", "Seo": "SEO", "Ppc": "PPC", "Vip": "VIP", "Ux": "UX",
+    "Ui": "UI", "Qa": "QA", "Uk": "UK", "Us": "US", "Eu": "EU", "Latam": "LATAM",
+    "Dach": "DACH", "Emea": "EMEA", "Apac": "APAC", "B2b": "B2B", "B2c": "B2C",
+    "Ftd": "FTD", "Pam": "PAM", "Okr": "OKR", "Psp": "PSP",
+}
+
+BETTINGJOBS_CANDIDATES = [
+    "/wp-json/wp/v2/job?per_page=100",
+    "/wp-json/wp/v2/jobs?per_page=100",
+    "/wp-json/wp/v2/vacancy?per_page=100",
+    "/wp-json/af/v1/jobs",
+    "/wp-json/applyflow/v1/jobs",
+    "/api/v1/jobs?limit=200",
+    "/api/jobs?limit=200",
+    "/jobs.json",
+]
+
+VANKAIZEN_CANDIDATES = [
+    "/wp-json/wp/v2/vacancy?per_page=100",
+    "/wp-json/wp/v2/job?per_page=100",
+    "/wp-json/wp/v2/jobs?per_page=100",
+    "/wp-json/wp/v2/posts?per_page=100",
+    "/api/vacancies",
+    "/api/jobs",
+]
+
+
+def _links_with_titles(html_text, base, path_marker):
+    """(url, title) pairs for links whose path contains `path_marker`.
+    Deliberately tolerant: hrefs may be relative or absolute, and the visible
+    title is often wrapped in nested tags rather than sitting directly inside
+    the anchor, so tags are stripped rather than excluded."""
     out, seen = [], set()
-    for page in range(0, 12):
-        url = "https://www.pentasia.com/cm/candidates/jobs"
-        if page:
-            url += f"?page={page}"
-        try:
-            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
-            if r.status_code != 200:
-                break
-            html = r.text
-        except Exception:
-            break
-        found = re.findall(
-            r'href="(https://www\.pentasia\.com/careers/[^"?]+)[^"]*"[^>]*>([^<]{3,140})</a>', html
-        )
-        new = 0
-        for link, title in found:
-            title = html.unescape(re.sub(r"\s+", " ", title)).strip()
-            if not title or title.lower() in ("apply now", "learn more", "view job"):
-                continue
-            if link in seen:
-                continue
-            seen.add(link)
-            new += 1
-            slug = link.rsplit("/", 1)[-1]
-            slug = re.sub(r"-\d+-\d+$", "", slug)          # drop the trailing ids
-            tail = slug.rsplit("-", 1)[-1] if "-" in slug else ""
-            out.append({
-                "title": title,
-                "location": tail.title() if tail in _LOC_WORDS else "",
-                "department": "",
-                "url": link,
-                "posted_at": None,
-            })
-        if page == 0 and not new:
-            print(f"      page 0: HTTP 200, {len(html)} bytes, "
-                  f"{html.count('/careers/')} '/careers/' occurrences, "
-                  f"{'__NEXT_DATA__ present' if '__NEXT_DATA__' in html else 'no __NEXT_DATA__'}")
-        if not new:
-            break
-        time.sleep(REQUEST_DELAY)
+    rx = re.compile(
+        r'href="((?:https?://[^"]*?)?' + re.escape(path_marker) + r'[^"?#]+)[^"]*"[^>]*>(.*?)</a>',
+        re.S | re.I,
+    )
+    for href, inner in rx.findall(html_text):
+        title = html.unescape(re.sub(r"<[^>]+>", " ", inner))
+        title = re.sub(r"\s+", " ", title).strip()
+        if not title or len(title) < 3 or len(title) > 140:
+            continue
+        if title.lower() in ("apply now", "learn more", "view job", "read more", "more info"):
+            continue
+        url = href if href.startswith("http") else base.rstrip("/") + href
+        if url in seen:
+            continue
+        seen.add(url)
+        out.append((url, title))
+    return out
+
+
+def _next_data_jobs(html_text, base):
+    """Next.js ships page data as JSON in a __NEXT_DATA__ script tag. Where it
+    exists it's far more reliable than parsing rendered markup."""
+    m = re.search(r'<script[^>]+id="__NEXT_DATA__"[^>]*>(.*?)</script>', html_text, re.S)
+    if not m:
+        return []
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return []
+    found, stack = [], [data]
+    while stack:
+        node = stack.pop()
+        if isinstance(node, list):
+            stack.extend(node)
+            continue
+        if not isinstance(node, dict):
+            continue
+        title = node.get("jobTitle") or node.get("title") or node.get("name")
+        link = node.get("url") or node.get("slug") or node.get("link")
+        if isinstance(title, str) and isinstance(link, str) and "/careers/" in link:
+            t = html.unescape(re.sub(r"<[^>]+>", "", title)).strip()
+            if 3 <= len(t) <= 140:
+                u = link if link.startswith("http") else base.rstrip("/") + link
+                loc = node.get("location") or node.get("jobLocation") or ""
+                if isinstance(loc, dict):
+                    loc = loc.get("name") or loc.get("city") or ""
+                found.append({"title": t, "location": str(loc)[:60], "department": "",
+                              "url": u, "posted_at": node.get("datePosted") or node.get("createdAt")})
+        stack.extend(v for v in node.values() if isinstance(v, (dict, list)))
+    seen, out = set(), []
+    for j in found:
+        k = (j["title"], j["url"])
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append(j)
     return out
 
 
 def _jsonld_jobs(url, source):
-    """Pull schema.org JobPosting objects out of a page's JSON-LD blocks.
-
-    Job boards embed this markup so Google for Jobs can index them, and Google
-    does not reliably run JavaScript — so the structured data is almost always
-    server-rendered even when the visible listing is built client-side. That
-    makes it a far steadier target than guessing at private API paths."""
+    """schema.org JobPosting objects from a page's JSON-LD blocks. Job boards
+    embed these for Google for Jobs, and Google doesn't reliably run JavaScript,
+    so the markup is usually server-rendered even when the listing isn't."""
     try:
         r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
         if r.status_code != 200:
@@ -601,7 +651,6 @@ def _jsonld_jobs(url, source):
     except Exception as e:
         print(f"      json-ld {url}: error ({type(e).__name__})")
         return []
-
     out = []
     for blk in blocks:
         try:
@@ -633,19 +682,13 @@ def _jsonld_jobs(url, source):
                 if isinstance(addr, dict):
                     loc = ", ".join(
                         str(addr.get(k)) for k in ("addressLocality", "addressRegion", "addressCountry")
-                        if addr.get(k) and isinstance(addr.get(k), str)
+                        if isinstance(addr.get(k), str)
                     )
             if not loc and node.get("jobLocationType") == "TELECOMMUTE":
                 loc = "Remote"
-            org = node.get("hiringOrganization") or {}
-            org = org.get("name", "") if isinstance(org, dict) else str(org)
             out.append({
-                "title": title,
-                "location": loc,
-                "department": "",
-                "url": node.get("url") or url,
-                "posted_at": node.get("datePosted"),
-                "client": org,
+                "title": title, "location": loc, "department": "",
+                "url": node.get("url") or url, "posted_at": node.get("datePosted"),
             })
     if out:
         print(f"      json-ld {url}: {len(out)} JobPosting blocks  <-- USABLE")
@@ -653,8 +696,8 @@ def _jsonld_jobs(url, source):
 
 
 def _sitemap_job_urls(base, must_contain, limit=600):
-    """Walk the site's XML sitemaps and return URLs that look like job pages.
-    Sitemaps are static XML, so they work regardless of how the site renders."""
+    """Walk the site's XML sitemaps for URLs that look like job pages.
+    Static XML, so it works regardless of how the site renders."""
     found, seen_maps = [], set()
     queue = [base + "/sitemap.xml", base + "/sitemap_index.xml", base + "/job-sitemap.xml"]
     while queue and len(found) < limit:
@@ -680,37 +723,16 @@ def _sitemap_job_urls(base, must_contain, limit=600):
     return found[:limit]
 
 
-# slug fragments that indicate a listing/category page rather than a real vacancy
-_NOT_A_JOB = {
-    "vacancies", "vacancy", "jobs", "job", "careers", "career", "search",
-    "page", "all", "index", "apply", "roles", "opportunities", "live-roles",
-}
-
-# common shorthand that reads badly when title-cased from a slug
-_FIX_CASE = {
-    "Aml": "AML", "Cft": "CFT", "Amlcft": "AML/CFT", "Kyc": "KYC", "Coo": "COO",
-    "Ceo": "CEO", "Cfo": "CFO", "Cto": "CTO", "Cmo": "CMO", "Cpo": "CPO",
-    "Vp": "VP", "Md": "MD", "Gm": "GM", "Hr": "HR", "It": "IT", "Bi": "BI",
-    "Crm": "CRM", "Seo": "SEO", "Ppc": "PPC", "Vip": "VIP", "Ux": "UX",
-    "Ui": "UI", "Qa": "QA", "Uk": "UK", "Us": "US", "Eu": "EU", "Latam": "LATAM",
-    "Dach": "DACH", "Emea": "EMEA", "Apac": "APAC", "B2b": "B2B", "B2c": "B2C",
-    "Ftd": "FTD", "Pam": "PAM", "Okr": "OKR", "Rg": "RG", "Psp": "PSP",
-}
-
-
 def _titles_from_urls(urls, source):
-    """Derive a readable title from a job URL slug — the last resort when no
-    structured data is available. Better than showing nothing, but it can only
-    ever give a title, so locations and dates come back empty."""
+    """Derive a title from a job URL slug — last resort, gives title only."""
     out, seen = [], set()
     for u in urls:
         slug = u.rstrip("/").rsplit("/", 1)[-1]
         if slug.lower() in _NOT_A_JOB:
             continue
-        slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)   # trailing id
-        slug = re.sub(r"[-_]\d{1,3}$", "", slug)            # trailing dedupe counter
+        slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)
+        slug = re.sub(r"[-_]\d{1,3}$", "", slug)
         words = [w for w in re.split(r"[-_]+", slug) if w]
-        # single-word titles are legitimate (CMO, Accountant, Controller)
         if not words or len("".join(words)) < 3:
             continue
         title = " ".join(_FIX_CASE.get(w.title(), w.title()) for w in words)
@@ -723,8 +745,7 @@ def _titles_from_urls(urls, source):
 
 
 def _try_json(url, label):
-    """Fetch a candidate endpoint and report what came back. Used to discover the
-    real jobs API on recruiter sites whose listings are rendered client-side."""
+    """Fetch a candidate endpoint and report what came back."""
     try:
         r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
         ct = r.headers.get("content-type", "")
@@ -735,8 +756,9 @@ def _try_json(url, label):
             print(f"      {label}: 200 but {ct.split(';')[0]} (not json)")
             return None
         data = r.json()
-        n = len(data) if isinstance(data, list) else len(data.get("data", data.get("results", data.get("jobs", [])) or []))
-        print(f"      {label}: 200 JSON, {n} records  <-- USABLE" if n else f"      {label}: 200 JSON but empty")
+        n = len(data) if isinstance(data, list) else len(
+            data.get("data", data.get("results", data.get("jobs", [])) or []))
+        print(f"      {label}: 200 JSON, {n} records" + ("  <-- USABLE" if n else " but empty"))
         return data if n else None
     except Exception as e:
         print(f"      {label}: error ({type(e).__name__})")
@@ -744,7 +766,7 @@ def _try_json(url, label):
 
 
 def _normalise(items, base, source):
-    """Best-effort mapping of an unknown JSON job shape onto our schema."""
+    """Map an unknown JSON job shape onto our schema."""
     out = []
     if isinstance(items, dict):
         items = items.get("data") or items.get("results") or items.get("jobs") or []
@@ -762,24 +784,21 @@ def _normalise(items, base, source):
             loc = loc.get("name") or loc.get("city") or ""
         elif isinstance(loc, list):
             loc = ", ".join(str(x) for x in loc if x)
-        url = j.get("link") or j.get("url") or j.get("apply_url") or base
         out.append({
-            "title": title,
-            "location": html.unescape(str(loc)).strip(),
-            "department": str(j.get("category") or j.get("department") or "" ) or "",
-            "url": url,
+            "title": title, "location": html.unescape(str(loc)).strip(),
+            "department": str(j.get("category") or j.get("department") or ""),
+            "url": j.get("link") or j.get("url") or j.get("apply_url") or base,
             "posted_at": j.get("date_gmt") or j.get("date") or j.get("published_at") or j.get("created_at"),
         })
     return out
 
 
 def _discover(base, candidates, source):
-    """Try each candidate endpoint in turn; first one with records wins.
-    Every attempt is logged so the run output tells us which path is live."""
+    """Try each candidate endpoint; first with records wins. Every attempt is
+    logged so the run output shows which path is live."""
     print(f"   {source}: probing {len(candidates)} candidate endpoints")
     for path in candidates:
-        url = base + path
-        data = _try_json(url, path)
+        data = _try_json(base + path, path)
         if data:
             jobs = _normalise(data, base, source)
             if jobs:
@@ -789,27 +808,54 @@ def _discover(base, candidates, source):
     return []
 
 
-BETTINGJOBS_CANDIDATES = [
-    "/wp-json/wp/v2/job?per_page=100",
-    "/wp-json/wp/v2/jobs?per_page=100",
-    "/wp-json/wp/v2/vacancy?per_page=100",
-    "/wp-json/af/v1/jobs",
-    "/wp-json/applyflow/v1/jobs",
-    "/api/v1/jobs?limit=200",
-    "/api/jobs?limit=200",
-    "/jobs.json",
-    "/wp-json/wp/v2/search?subtype=job&per_page=100",
-]
+def scrape_pentasia():
+    """pentasia.com — Next.js listing, paginated ?page=N (0-indexed).
+    Order: __NEXT_DATA__ JSON, then JSON-LD, then tolerant link parsing."""
+    base = "https://www.pentasia.com"
+    out, seen = [], set()
+    for page in range(0, 12):
+        url = base + "/cm/candidates/jobs" + (f"?page={page}" if page else "")
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        except Exception as e:
+            print(f"      Pentasia page {page}: error ({type(e).__name__})")
+            break
+        if r.status_code != 200:
+            print(f"      Pentasia page {page}: HTTP {r.status_code}")
+            break
+        html_text = r.text
+        new = 0
 
-VANKAIZEN_CANDIDATES = [
-    "/wp-json/wp/v2/vacancy?per_page=100",
-    "/wp-json/wp/v2/job?per_page=100",
-    "/wp-json/wp/v2/jobs?per_page=100",
-    "/wp-json/wp/v2/posts?per_page=100",
-    "/api/vacancies",
-    "/api/jobs",
-    "/vacancies.json",
-]
+        for j in _next_data_jobs(html_text, base):
+            if j["url"] in seen: continue
+            seen.add(j["url"]); out.append(j); new += 1
+        if new and page == 0:
+            print(f"      Pentasia: __NEXT_DATA__ gave {new} jobs on page 0")
+
+        if not new:
+            for j in _jsonld_jobs(url, "Pentasia"):
+                if j["url"] in seen: continue
+                seen.add(j["url"]); out.append(j); new += 1
+
+        if not new:
+            for u, t in _links_with_titles(html_text, base, "/careers/"):
+                if u in seen: continue
+                seen.add(u)
+                slug = re.sub(r"-\d+-\d+$", "", u.rstrip("/").rsplit("/", 1)[-1])
+                tail = slug.rsplit("-", 1)[-1] if "-" in slug else ""
+                out.append({"title": t, "location": tail.title() if tail in _LOC_WORDS else "",
+                            "department": "", "url": u, "posted_at": None})
+                new += 1
+
+        if page == 0 and not new:
+            print(f"      Pentasia page 0: HTTP 200, {len(html_text)} bytes, "
+                  f"{html_text.count('/careers/')} '/careers/' refs, "
+                  f"{'__NEXT_DATA__ present' if '__NEXT_DATA__' in html_text else 'no __NEXT_DATA__'}, "
+                  f"{html_text.count('<a ')} anchors")
+        if not new:
+            break
+        time.sleep(REQUEST_DELAY)
+    return out
 
 
 def scrape_bettingjobs():
@@ -843,22 +889,27 @@ def scrape_bettingjobs():
     sectors = ["hr-finance","marketing","executive-senior-appointments","it-technical",
                "analytics-bi","commercial","trading-sportsbook","operations",
                "compliance-legal","product"]
+    base = "https://www.bettingjobs.com"
     for sec in sectors:
         try:
-            r = session.get(f"https://www.bettingjobs.com/{sec}/", headers=AGENCY_UA, timeout=TIMEOUT)
+            r = session.get(f"{base}/{sec}/", headers=AGENCY_UA, timeout=TIMEOUT)
             if r.status_code != 200:
+                print(f"      /{sec}/: HTTP {r.status_code}")
                 continue
-            for link, title in re.findall(
-                r'href="(https://www\.bettingjobs\.com/job/[^"?]+)[^"]*"[^>]*>([^<]{3,140})</a>', r.text
-            ):
-                title = html.unescape(re.sub(r"\s+", " ", title)).strip()
-                if not title or title.lower() in ("learn more", "apply now") or link in seen:
+            hits = _links_with_titles(r.text, base, "/job/")
+            if not hits and sec == sectors[0]:
+                print(f"      /{sec}/: HTTP 200, {len(r.text)} bytes, "
+                      f"{r.text.count('/job/')} '/job/' refs, {r.text.count('<a ')} anchors")
+            for link, title in hits:
+                if link in seen:
                     continue
                 seen.add(link)
-                res.append({"title": title, "location": "", "department": sec.replace("-", " ").title(),
+                res.append({"title": title, "location": "",
+                            "department": sec.replace("-", " ").title(),
                             "url": link, "posted_at": None})
             time.sleep(REQUEST_DELAY)
-        except Exception:
+        except Exception as e:
+            print(f"      /{sec}/: error ({type(e).__name__})")
             continue
     return res
 
