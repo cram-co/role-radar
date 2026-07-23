@@ -234,7 +234,8 @@ let JOBS = [], usingSample = false, updated = null;
 // these list roles on behalf of unnamed clients, so say so rather than letting
 // the user assume the agency is the employer
 const AGENCIES = new Set(["Pentasia","BettingJobs","Van Kaizen","LionHires",
-  "Bullfinch Recruitment","Betting Connections","Talentgrator","iTalent PLUS"]);
+  "Bullfinch Recruitment","Betting Connections","Talentgrator","iTalent PLUS",
+  "iGamingHunt","Apercon"]);
 let LOC_COUNTS = {};
 let selectedLocs = (() => {
   try { return JSON.parse(localStorage.getItem("rr_locations") || "[]"); } catch(e){ return []; }
