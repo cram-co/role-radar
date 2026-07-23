@@ -499,7 +499,12 @@ FETCHERS = {
 # best-effort: if a site changes its markup the scraper returns [] and logs a
 # warning rather than crashing the run.
 
-AGENCY_UA = {"User-Agent": "Mozilla/5.0 (compatible; RoleRadar/1.0; +personal job-search tool)"}
+AGENCY_UA = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"),
+    "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-GB,en;q=0.9",
+}
 
 # location words that appear at the tail of a Pentasia slug
 _LOC_WORDS = {
@@ -512,7 +517,12 @@ _LOC_WORDS = {
 
 
 def scrape_pentasia():
-    """pentasia.com — server-rendered Next.js listing, paginated ?page=N (0-indexed)."""
+    """pentasia.com — server-rendered Next.js listing, paginated ?page=N (0-indexed).
+    JSON-LD first; falls back to parsing the /careers/ links off each page."""
+    ld = _jsonld_jobs("https://www.pentasia.com/cm/candidates/jobs", "Pentasia")
+    if ld:
+        return ld
+    print("   Pentasia: no JSON-LD, parsing listing pages")
     out, seen = [], set()
     for page in range(0, 12):
         url = "https://www.pentasia.com/cm/candidates/jobs"
@@ -547,9 +557,126 @@ def scrape_pentasia():
                 "url": link,
                 "posted_at": None,
             })
+        if page == 0 and not new:
+            print(f"      page 0: HTTP 200, {len(html)} bytes, "
+                  f"{html.count('/careers/')} '/careers/' occurrences, "
+                  f"{'__NEXT_DATA__ present' if '__NEXT_DATA__' in html else 'no __NEXT_DATA__'}")
         if not new:
             break
         time.sleep(REQUEST_DELAY)
+    return out
+
+
+def _jsonld_jobs(url, source):
+    """Pull schema.org JobPosting objects out of a page's JSON-LD blocks.
+
+    Job boards embed this markup so Google for Jobs can index them, and Google
+    does not reliably run JavaScript — so the structured data is almost always
+    server-rendered even when the visible listing is built client-side. That
+    makes it a far steadier target than guessing at private API paths."""
+    try:
+        r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        if r.status_code != 200:
+            print(f"      json-ld {url}: HTTP {r.status_code}")
+            return []
+        blocks = re.findall(
+            r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            r.text, re.S | re.I,
+        )
+    except Exception as e:
+        print(f"      json-ld {url}: error ({type(e).__name__})")
+        return []
+
+    out = []
+    for blk in blocks:
+        try:
+            data = json.loads(blk.strip())
+        except Exception:
+            continue
+        stack = [data]
+        while stack:
+            node = stack.pop()
+            if isinstance(node, list):
+                stack.extend(node)
+                continue
+            if not isinstance(node, dict):
+                continue
+            for key in ("@graph", "itemListElement", "item"):
+                if key in node:
+                    stack.append(node[key])
+            if node.get("@type") not in ("JobPosting", ["JobPosting"]):
+                continue
+            title = html.unescape(re.sub(r"<[^>]+>", "", str(node.get("title", "")))).strip()
+            if not title:
+                continue
+            loc = ""
+            jl = node.get("jobLocation")
+            if isinstance(jl, list):
+                jl = jl[0] if jl else {}
+            if isinstance(jl, dict):
+                addr = jl.get("address", {})
+                if isinstance(addr, dict):
+                    loc = ", ".join(
+                        str(addr.get(k)) for k in ("addressLocality", "addressRegion", "addressCountry")
+                        if addr.get(k) and isinstance(addr.get(k), str)
+                    )
+            if not loc and node.get("jobLocationType") == "TELECOMMUTE":
+                loc = "Remote"
+            org = node.get("hiringOrganization") or {}
+            org = org.get("name", "") if isinstance(org, dict) else str(org)
+            out.append({
+                "title": title,
+                "location": loc,
+                "department": "",
+                "url": node.get("url") or url,
+                "posted_at": node.get("datePosted"),
+                "client": org,
+            })
+    if out:
+        print(f"      json-ld {url}: {len(out)} JobPosting blocks  <-- USABLE")
+    return out
+
+
+def _sitemap_job_urls(base, must_contain, limit=600):
+    """Walk the site's XML sitemaps and return URLs that look like job pages.
+    Sitemaps are static XML, so they work regardless of how the site renders."""
+    found, seen_maps = [], set()
+    queue = [base + "/sitemap.xml", base + "/sitemap_index.xml", base + "/job-sitemap.xml"]
+    while queue and len(found) < limit:
+        sm = queue.pop(0)
+        if sm in seen_maps:
+            continue
+        seen_maps.add(sm)
+        try:
+            r = session.get(sm, headers=AGENCY_UA, timeout=TIMEOUT)
+            if r.status_code != 200 or "xml" not in r.headers.get("content-type", ""):
+                continue
+            locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", r.text)
+        except Exception:
+            continue
+        for u in locs:
+            if u.endswith(".xml") and len(seen_maps) < 25:
+                queue.append(u)
+            elif must_contain in u:
+                found.append(u)
+        time.sleep(REQUEST_DELAY)
+    if found:
+        print(f"      sitemap {base}: {len(found)} job URLs")
+    return found[:limit]
+
+
+def _titles_from_urls(urls, source):
+    """Derive a readable title from a job URL slug — a last resort when nothing
+    structured is available, but better than showing the user nothing."""
+    out = []
+    for u in urls:
+        slug = u.rstrip("/").rsplit("/", 1)[-1]
+        slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)
+        title = slug.replace("-", " ").replace("_", " ").strip().title()
+        if len(title) < 4:
+            continue
+        out.append({"title": title, "location": "", "department": "",
+                    "url": u, "posted_at": None})
     return out
 
 
@@ -645,10 +772,30 @@ VANKAIZEN_CANDIDATES = [
 
 def scrape_bettingjobs():
     """bettingjobs.com — WordPress + Applyflow, listing rendered client-side.
-    Discovers the live endpoint on first run, then falls back to sector pages."""
-    jobs = _discover("https://www.bettingjobs.com", BETTINGJOBS_CANDIDATES, "BettingJobs")
+    Tries, in order: JSON-LD on the listing, the XML sitemap, candidate API
+    endpoints, then sector-page link parsing."""
+    base = "https://www.bettingjobs.com"
+    print("   BettingJobs: strategy 1 — JSON-LD")
+    jobs = _jsonld_jobs(base + "/jobs/", "BettingJobs")
     if jobs:
         return jobs
+    print("   BettingJobs: strategy 2 — sitemap")
+    urls = _sitemap_job_urls(base, "/job/")
+    if urls:
+        detailed = []
+        for u in urls[:120]:
+            detailed.extend(_jsonld_jobs(u, "BettingJobs"))
+            time.sleep(REQUEST_DELAY)
+            if len(detailed) >= 120:
+                break
+        if detailed:
+            return detailed
+        return _titles_from_urls(urls, "BettingJobs")
+    print("   BettingJobs: strategy 3 — endpoint discovery")
+    jobs = _discover(base, BETTINGJOBS_CANDIDATES, "BettingJobs")
+    if jobs:
+        return jobs
+    print("   BettingJobs: strategy 4 — sector pages")
     print("   BettingJobs: no JSON endpoint found, falling back to sector pages")
     seen, res = set(), []
     sectors = ["hr-finance","marketing","executive-senior-appointments","it-technical",
@@ -676,9 +823,26 @@ def scrape_bettingjobs():
 
 def scrape_vankaizen():
     """vankaizen.com — bespoke board with load-more pagination."""
-    jobs = _discover("https://www.vankaizen.com", VANKAIZEN_CANDIDATES, "Van Kaizen")
+    base = "https://www.vankaizen.com"
+    print("   Van Kaizen: strategy 1 — JSON-LD")
+    jobs = _jsonld_jobs(base + "/vacancies", "Van Kaizen")
     if jobs:
         return jobs
+    print("   Van Kaizen: strategy 2 — sitemap")
+    urls = _sitemap_job_urls(base, "/vacanc")
+    if urls:
+        detailed = []
+        for u in urls[:120]:
+            detailed.extend(_jsonld_jobs(u, "Van Kaizen"))
+            time.sleep(REQUEST_DELAY)
+        if detailed:
+            return detailed
+        return _titles_from_urls(urls, "Van Kaizen")
+    print("   Van Kaizen: strategy 3 — endpoint discovery")
+    jobs = _discover(base, VANKAIZEN_CANDIDATES, "Van Kaizen")
+    if jobs:
+        return jobs
+    print("   Van Kaizen: strategy 4 — page parse")
     print("   Van Kaizen: no JSON endpoint found, falling back to page parse")
     try:
         r = session.get("https://www.vankaizen.com/vacancies", headers=AGENCY_UA, timeout=TIMEOUT)
