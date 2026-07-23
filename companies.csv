@@ -24,24 +24,24 @@ PokerStars,Operator - Tier 1,workday (likely),Flutter brand,
 Betfair International,Operator - Tier 1,workday (likely),Flutter brand,
 Sky Betting & Gaming,Operator - Tier 1,workday (likely),Flutter brand,
 Paddy Power,Operator - Tier 1,workday (likely),Flutter brand,
-Sisal,Operator - Tier 1,detect,Flutter brand - Italy,
+Sisal,Operator - Tier 1,detect,Workday tenant,https://sisal.wd3.myworkdayjobs.com/sisalcorp
 Snaitech,Operator - Tier 1,detect,Flutter brand - Italy,
 FanDuel,Operator - Tier 1,greenhouse (verified),Flutter US - already live in app,
 Entain,Operator - Tier 1,detect,"Ladbrokes, Coral, bwin, partypoker",
 BetMGM,Operator - Tier 1,detect,Entain/MGM JV,https://betmgminc.wd5.myworkdayjobs.com/en-US/BetMGM
-bet365,Operator - Tier 1,detect,Own careers system,
+bet365,Operator - Tier 1,detect,"SmartRecruiters ID is Bet3651 - trailing 1 and capitalised, not guessable",smartrecruiters:Bet3651
 evoke plc,Operator - Tier 1,detect,"888, William Hill, Mr Green",bamboohr:888spectate
 DraftKings,Operator - Tier 1,greenhouse (likely),,https://draftkings.wd1.myworkdayjobs.com/DraftKings
 Betsson Group,Operator - Tier 1,teamtailor (likely),,
-FDJ United,Operator - Tier 1,detect,Kindred + FDJ,
+FDJ United,Operator - Tier 1,detect,Workday tenant; some legacy roles still sit on the Kindred stack,https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED
 Kindred Group,Operator - Tier 1,detect,Now FDJ United; Unibet/32Red,
 Superbet,Operator - Growth,detect,,greenhouse:super
 Kaizen Gaming,Operator - Growth,detect,Betano,
 LeoVegas Group,Operator - Tier 1,teamtailor (likely),MGM-owned,
 Tipico,Operator - Tier 1,detect,,
 Super Group,Operator - Tier 1,detect,Betway / Spin,skip
-Betfred,Operator,detect,,
-Lottomatica,Operator - Tier 1,detect,Italy,
+Betfred,Operator,detect,"TalosATS client-rendered app, handled by scrape_betfred",skip
+Lottomatica,Operator - Tier 1,detect,Workday tenant,https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers
 Novibet,Operator - Growth,detect,,
 LiveScore Group,Operator / Media,detect,,greenhouse:livescore9
 Caesars Digital,Operator - US,detect,,
@@ -101,7 +101,7 @@ The Jockey Club,Racing - UK,detect,,
 Weatherbys,Racing / Banking,detect,,
 Allwyn,Lottery,detect,Incl. Camelot,
 Intralot,Lottery,detect,,
-OPAP,Lottery / Operator,detect,Greece - holds Key Person relevance,
+OPAP,Lottery / Operator,detect,"SuccessFactors, company id opapsa (not opap)",successfactors:career2.successfactors.eu|opapsa
 Lottoland,Lottery betting,detect,,
 ZEAL Network,Lottery,detect,,
 GGPoker (NSUS Group),Poker,detect,,
@@ -111,14 +111,14 @@ MuchBetter,Gaming payments,detect,Prior COO role,
 MiFinity,Gaming payments,detect,,
 Jeton,Gaming payments,detect,,
 The Lottery Corporation,Lottery - Australia,detect,,
-Tabcorp,Operator - Australia,detect,,
+Tabcorp,Operator - Australia,detect,"server-rendered careers site (PageUp behind it), handled by scrape_tabcorp",skip
 Hong Kong Jockey Club,Racing / Operator - Asia,detect,,
 GAN,Supplier - Platform,detect,Sega Sammy-owned,
 Cirsa,Operator - Spain/LatAm,detect,,
 ATG,Racing / Operator - Sweden,detect,,
 Betclic (Banijay Gaming),Operator - France,detect,,
 Admiral,Operator - Austria,detect,Banijay Gaming / Novomatic brand,
-Fortuna Entertainment Group,Operator - CEE,detect,,
+Fortuna Entertainment Group,Operator - CEE,detect," | bespoke Azure Easy Apply app, handled by scrape_fortuna",skip
 STS,Operator - Poland,detect,Entain CEE,
 Rhino Entertainment,Operator - Growth,detect,,
 TopSport,Operator - Baltics,detect,,
@@ -179,7 +179,7 @@ Evoplay,Supplier - Content,detect,From LinkedIn follows,
 SCIENTIFIC GAMES,Supplier - Content,detect,From LinkedIn follows,
 Nolimit City®,Supplier - Content,detect,From LinkedIn follows,
 DigiOutsource,Operator,detect,From LinkedIn follows,
-Snai,Operator,detect,From LinkedIn follows,
+Snai,Operator,detect,roles appear under the Flutter International Workday tenant,skip
 MaxBet,Operator,detect,From LinkedIn follows,
 GoldBet,Operator,detect,From LinkedIn follows,
 SKS365 Group,Operator,detect,From LinkedIn follows,

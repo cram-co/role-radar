@@ -108,6 +108,88 @@ def probe_bamboohr(slug):
     return isinstance(items, list) and len(items) > 0
 
 
+SF_HOSTS = ["career2.successfactors.eu", "career4.successfactors.com",
+            "career5.successfactors.eu", "career10.successfactors.com",
+            "careersd2.successfactors.eu", "performancemanager.successfactors.eu"]
+
+
+def _sf_parts(token):
+    """Accept either 'company' or 'host|company' / 'host/company'."""
+    tok = token.replace("/", "|")
+    if "|" in tok:
+        host, company = tok.split("|", 1)
+        return [host.strip()], company.strip()
+    return SF_HOSTS, tok.strip()
+
+
+def fetch_successfactors(token):
+    """SAP SuccessFactors publishes no public jobs API, but career sites expose
+    an XML sitemap carrying title, location and employer. Falls back to parsing
+    jobreqcareer links off the rendered listing."""
+    hosts, company = _sf_parts(token)
+    out = []
+    for host in hosts:
+        base = f"https://{host}"
+        # 1) the sitemap (documented as sitemap.xml, occasionally sitemal.xml)
+        for name in ("sitemap.xml", "sitemal.xml"):
+            try:
+                r = session.get(f"{base}/{name}?company={company}",
+                                headers=AGENCY_UA, timeout=TIMEOUT)
+                if r.status_code != 200 or "xml" not in r.headers.get("content-type", ""):
+                    continue
+                blocks = re.findall(r"<url>(.*?)</url>", r.text, re.S)
+                for b in blocks:
+                    loc = re.search(r"<loc>\s*([^<\s]+)\s*</loc>", b)
+                    if not loc or "jobId=" not in loc.group(1):
+                        continue
+                    title = re.search(r"<(?:title|job:title)>(.*?)</", b, re.S)
+                    place = re.search(r"<(?:location|job:location)>(.*?)</", b, re.S)
+                    t = html.unescape(re.sub(r"<[^>]+>", "", title.group(1))).strip() if title else ""
+                    if not t:
+                        continue
+                    out.append({
+                        "title": t,
+                        "location": html.unescape(re.sub(r"<[^>]+>", "", place.group(1))).strip() if place else "",
+                        "department": "",
+                        "url": loc.group(1),
+                        "posted_at": None,
+                    })
+                if out:
+                    print(f"      successfactors {company}: sitemap on {host} -> {len(out)} jobs")
+                    return out
+            except Exception:
+                continue
+        # 2) the rendered listing — pull jobreqcareer links and their anchor text
+        for path in (f"/career?company={company}&career_ns=job_listing",
+                     f"/careers?company={company}",
+                     f"/career?company={company}"):
+            try:
+                r = session.get(base + path, headers=AGENCY_UA, timeout=TIMEOUT)
+                if r.status_code != 200:
+                    continue
+                hits = _links_with_titles(r.text, base, "jobreqcareer")
+                if not hits:
+                    ids = set(re.findall(r"jobId=(\d+)", r.text))
+                    if ids:
+                        print(f"      successfactors {company}: {len(ids)} jobIds on {host} but no titles parsed")
+                    continue
+                for u, t in hits:
+                    out.append({"title": t, "location": "", "department": "",
+                                "url": u, "posted_at": None})
+                if out:
+                    print(f"      successfactors {company}: listing on {host} -> {len(out)} jobs")
+                    return out
+            except Exception:
+                continue
+    print(f"      successfactors {company}: nothing found across {len(hosts)} host(s)")
+    return out
+
+
+# NB: deliberately absent from PROBES. Auto-detection would mean 6 hosts x 3
+# paths per company, and SuccessFactors IDs are never derivable from the company
+# name (OPAP is "opapsa"), so this lane is manual-pin only.
+
+
 def probe_breezy(slug):
     r = session.get(f"https://{slug}.breezy.hr/json", timeout=TIMEOUT)
     d = r.json()
@@ -498,6 +580,7 @@ FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "greenhouse_eu": fetch_greenhouse_eu,
     "bamboohr": fetch_bamboohr,
+    "successfactors": fetch_successfactors,
     "breezy": fetch_breezy,
     "lever": fetch_lever,
     "ashby": fetch_ashby,
@@ -956,7 +1039,153 @@ def scrape_vankaizen():
         return []
 
 
+def _spa_api_hunt(base, source, max_bundles=4):
+    """Single-page apps fetch their data from an API whose URL is baked into the
+    JS bundle. Rather than guessing endpoint names, pull the bundle and read the
+    URLs out of it. Works for any React/Vue careers app, not just this one."""
+    try:
+        r = session.get(base, headers=AGENCY_UA, timeout=TIMEOUT)
+        if r.status_code != 200:
+            print(f"      {source}: shell HTTP {r.status_code}")
+            return []
+        html_text = r.text
+    except Exception as e:
+        print(f"      {source}: shell error ({type(e).__name__})")
+        return []
+
+    srcs = re.findall(r'<script[^>]+src="([^"]+)"', html_text)
+    srcs = [u if u.startswith("http") else base.rstrip("/") + "/" + u.lstrip("/") for u in srcs]
+    print(f"      {source}: {len(srcs)} script bundle(s) referenced")
+
+    found = set()
+    for u in srcs[:max_bundles]:
+        try:
+            b = session.get(u, headers=AGENCY_UA, timeout=TIMEOUT)
+            if b.status_code != 200:
+                continue
+            txt = b.text[:4_000_000]
+        except Exception:
+            continue
+        # absolute api urls, and relative api paths
+        for m in re.findall(r'https?://[A-Za-z0-9._-]+/[A-Za-z0-9/_-]*api[A-Za-z0-9/_-]*', txt):
+            found.add(m)
+        for m in re.findall(r'"(/api/[^"\s]{2,80})"', txt):
+            found.add(base.rstrip("/") + m)
+        for m in re.findall(r'"(https?://[A-Za-z0-9._-]*azurewebsites\.net[^"]{0,80})"', txt):
+            found.add(m)
+    urls = sorted(found)[:25]
+    if urls:
+        print(f"      {source}: API-looking URLs in bundle:")
+        for u in urls:
+            print(f"         {u}")
+    else:
+        print(f"      {source}: no API URLs found in bundle")
+    return urls
+
+
+def scrape_fortuna():
+    """Fortuna Entertainment Group run a bespoke 'Easy Apply' React app on Azure
+    rather than a standard ATS. Hunt the API out of the JS bundle, then try the
+    usual listing paths against whatever host it points at."""
+    base = "https://app-azeun-p-hr-easyapply-fe.azurewebsites.net"
+    print("   Fortuna: hunting API in the SPA bundle")
+    hits = _spa_api_hunt(base, "Fortuna")
+
+    # anything that already looks like a job listing endpoint, plus sensible guesses
+    tries, seen = [], set()
+    for u in hits:
+        if re.search(r"(job|vacanc|position|offer|advert)", u, re.I):
+            tries.append(u)
+    roots = {base}
+    for u in hits:
+        m = re.match(r"(https?://[^/]+)", u)
+        if m:
+            roots.add(m.group(1))
+    for root in roots:
+        for path in ("/api/jobs", "/api/Jobs", "/api/vacancies", "/api/Vacancies",
+                     "/api/positions", "/api/JobOffers", "/api/joboffers",
+                     "/api/v1/jobs", "/api/adverts"):
+            tries.append(root + path)
+    for u in tries:
+        if u in seen:
+            continue
+        seen.add(u)
+        data = _try_json(u, u)
+        if data:
+            jobs = _normalise(data, base, "Fortuna")
+            if jobs:
+                print(f"   Fortuna: FOUND -> {u}  ({len(jobs)} jobs)")
+                return jobs
+        time.sleep(REQUEST_DELAY)
+    return []
+
+
+def scrape_betfred():
+    """Betfred run TalosATS, a client-rendered careers app. Same approach as
+    Fortuna: read the API URL out of the JS bundle rather than guessing."""
+    base = "https://betfredgroup.talosats-careers.com"
+    print("   Betfred: hunting API in the TalosATS bundle")
+    hits = _spa_api_hunt(base, "Betfred")
+    tries, seen = [], set()
+    for u in hits:
+        if re.search(r"(job|vacanc|position|advert)", u, re.I):
+            tries.append(u)
+    roots = {base} | {m.group(1) for u in hits
+                      if (m := re.match(r"(https?://[^/]+)", u))}
+    for root in roots:
+        for path in ("/api/jobs", "/api/Jobs", "/api/vacancies", "/api/job/search",
+                     "/api/jobs/search", "/api/v1/jobs", "/api/adverts"):
+            tries.append(root + path)
+    for u in tries:
+        if u in seen:
+            continue
+        seen.add(u)
+        data = _try_json(u, u)
+        if data:
+            jobs = _normalise(data, base, "Betfred")
+            if jobs:
+                print(f"   Betfred: FOUND -> {u}  ({len(jobs)} jobs)")
+                return jobs
+        time.sleep(REQUEST_DELAY)
+    return []
+
+
+def scrape_tabcorp():
+    """Tabcorp's careers site is server-rendered, so the listing parses directly.
+    (Their underlying ATS is PageUp, but the public site is easier to read.)"""
+    base = "https://careers.tabcorp.com.au"
+    out, seen = [], set()
+    for page in range(1, 8):
+        url = f"{base}/jobs/search?page={page}&query="
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        except Exception as e:
+            print(f"      Tabcorp page {page}: error ({type(e).__name__})")
+            break
+        if r.status_code != 200:
+            print(f"      Tabcorp page {page}: HTTP {r.status_code}")
+            break
+        new = 0
+        for u, t in _links_with_titles(r.text, base, "/jobs/"):
+            if u in seen or u.endswith("/jobs/search"):
+                continue
+            seen.add(u)
+            out.append({"title": t, "location": "", "department": "",
+                        "url": u, "posted_at": None})
+            new += 1
+        if page == 1 and not new:
+            print(f"      Tabcorp: HTTP 200, {len(r.text)} bytes, "
+                  f"{r.text.count('/jobs/')} '/jobs/' refs, no titles parsed")
+        if not new:
+            break
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
 AGENCY_BOARDS = {
+    "Fortuna Entertainment Group": scrape_fortuna,
+    "Betfred": scrape_betfred,
+    "Tabcorp": scrape_tabcorp,
     "Pentasia": scrape_pentasia,
     "BettingJobs": scrape_bettingjobs,
     "Van Kaizen": scrape_vankaizen,
