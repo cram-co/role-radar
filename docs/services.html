@@ -114,7 +114,6 @@
   /* EXPERIENCE — capability rows, public-safe */
   .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line2);border:1px solid var(--line2);margin-top:44px;}
   .exp{background:var(--paper);padding:26px 24px;}
-  .exp-grid .exp:last-child{grid-column:1 / -1;}
   .exp .cat{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--royal);margin-bottom:12px;}
   .exp h3{font-family:'Fraunces',serif;font-weight:500;font-size:18.5px;color:var(--navy);margin-bottom:8px;line-height:1.25;}
   .exp p{font-size:14px;color:var(--slate);line-height:1.6;}
@@ -167,7 +166,7 @@
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none;}}
 
   .keysvc{margin-bottom:8px;border:1px solid var(--line2);border-left:3px solid var(--royal);border-radius:8px;padding:28px 30px;background:#fff;}
-  .keysvc-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:11px 30px;}
+  .keysvc-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:11px 30px;align-items:start;}
   .keysvc-list li{font-size:14.5px;line-height:1.45;color:var(--navy2);padding-left:18px;position:relative;}
   .keysvc-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--royal);font-size:12px;font-weight:600;}
   @media(max-width:860px){.keysvc-list{grid-template-columns:1fr;}}
@@ -185,7 +184,7 @@
   .prob:last-of-type{border-bottom:1px solid var(--line2);}
   .prob-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
   .prob-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(21px,2.8vw,27px);color:var(--navy);line-height:1.2;max-width:24ch;}
-  .prob-cols{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:34px;}
+  .prob-cols{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:34px;align-items:start;}
   .pc h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--royal);margin-bottom:12px;}
   .pc ul{list-style:none;}
   .pc li{font-size:14.5px;line-height:1.6;color:var(--slate);padding-left:15px;position:relative;margin-bottom:9px;}
@@ -200,7 +199,7 @@
   .feature .tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--chief);margin-bottom:14px;}
   .feature h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(23px,3vw,30px);color:#fff;margin-bottom:16px;max-width:24ch;line-height:1.15;}
   .feature p{color:var(--mist);font-size:15.5px;line-height:1.7;max-width:64ch;}
-  .feature .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line);}
+  .feature .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line);align-items:start;}
   .feature .split h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--chief);margin-bottom:10px;}
   .feature .split p{font-size:14.5px;color:var(--mist);}
 
@@ -215,11 +214,10 @@
   .wont{border:1px solid var(--line2);border-left:3px solid var(--navy);border-radius:8px;padding:34px 32px;margin-top:56px;background:#fff;}
   .wont h2{font-family:'Fraunces',serif;font-weight:500;font-size:26px;color:var(--navy);margin-bottom:10px;}
   .wont .lead{font-size:15.5px;color:var(--slate);line-height:1.7;max-width:62ch;margin-bottom:24px;}
-  .wont ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;}
+  .wont ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;align-items:start;}
   .wont li{font-size:14.5px;line-height:1.6;color:var(--slate);padding-left:22px;position:relative;}
   .wont li::before{content:"\00D7";position:absolute;left:0;top:-1px;color:var(--navy);font-size:15px;}
   .wont li b{color:var(--navy2);font-weight:600;}
-  .wont ul li:last-child{grid-column:1 / -1;}
 
   @media(max-width:860px){
     .prob-cols{grid-template-columns:1fr;gap:24px;}
@@ -265,10 +263,9 @@
       <ul class="keysvc-list">
         <li>Fractional COO, GM or MD leadership</li>
         <li>Executive or Non-Executive Directorship</li>
-        <li>Strategic Portfolio Leadership</li>
-        <li>Programme, Project &amp; Change Management</li>
+        <li>Portfolio, Programme &amp; Project Leadership</li>
         <li>Strategy &amp; Performance Execution</li>
-        <li>Strategy &amp; OKR creation or redefinition</li>
+        <li>OKR creation or redefinition</li>
         <li>Operating model &amp; organisational redesign</li>
         <li>Company, people and location restructuring</li>
         <li>Process &amp; Automation review</li>
@@ -396,6 +393,7 @@
         <li><b>Corporate finance and deal-making.</b> I'll gladly assess the operation behind a deal, and even help with integration, but I won't originate or negotiate a partnership.</li>
         <li><b>Take on more than I can hold.</b> I'll only agree to the time I can give my all to.</li>
         <li><b>Run it entirely from afar.</b> Fractional means fewer days, not less presence.</li>
+        <li><b>Turn up with a team.</b> You get me, not a partner at the pitch and juniors on the work.</li>
         <li><b>Promise what I'm not.</b> If I'm the wrong person for it, you'll hear that on the first call.</li>
       </ul>
     </div>
