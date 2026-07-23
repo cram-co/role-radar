@@ -81,7 +81,8 @@
   "token": "geniussports"
  },
  "1/ST (Stronach Group)": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "LionHires": {
   "ats": "greenhouse",
@@ -127,54 +128,68 @@
   "token": "bullfinch"
  },
  "EyeSpy Recruitment": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "TalentBet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Emerald Zebra": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "BSQ Talent": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "iTalent PLUS": {
   "ats": "teamtailor",
   "token": "italentplus"
  },
  "iGaming Recruitment": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Apercon": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Acebet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Sisal": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Snaitech": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "BetMGM": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "bet365": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "evoke plc": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "DraftKings": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Betsson Group": {
   "ats": "greenhouse",
   "token": "betsson"
  },
  "FDJ United": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784786160.892168
  },
  "Kindred Group": {
   "ats": "ashby",
@@ -592,5 +607,210 @@
  },
  "Snai": {
   "ats": "unknown"
+ },
+ "Midnite": {
+  "ats": "ashby",
+  "token": "midnite",
+  "manual": true
+ },
+ "MaxBet": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "GoldBet": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "SKS365 Group": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "SoftConstruct": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "SkyCity Entertainment Group": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "PENN Interactive": {
+  "ats": "greenhouse",
+  "token": "penninteractive"
+ },
+ "BlueBet": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "betr": {
+  "ats": "lever",
+  "token": "betr"
+ },
+ "Parimatch Tech": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "VBET": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Jackpot.com": {
+  "ats": "greenhouse",
+  "token": "jackpot"
+ },
+ "1XBET": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Polymarket": {
+  "ats": "ashby",
+  "token": "polymarket"
+ },
+ "Kalshi": {
+  "ats": "greenhouse",
+  "token": "kalshi"
+ },
+ "1win": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Konami Gaming": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Flutter Southern Europe & Africa (SEA)": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "MERKUR Casino UK": {
+  "ats": "recruitee",
+  "token": "merkur"
+ },
+ "MERKUR GROUP": {
+  "ats": "recruitee",
+  "token": "merkur"
+ },
+ "The Pools": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Sportium": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "PlayOJO": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "CoinPoker": {
+  "ats": "teamtailor",
+  "token": "coinpoker"
+ },
+ "World Series of Poker": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "WPT Global": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Triton Poker Series": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "KKCG Group": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "BetWarrior": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Racing NSW": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "SportPesa": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "pawaTech": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Hub88": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "SkillOnNet": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "bragg": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Blueprint Gaming Ltd.": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Oddin.gg": {
+  "ats": "lever",
+  "token": "oddin"
+ },
+ "Veikkaus": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Fennica Gaming": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "BetMakers Technology Group": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Alea": {
+  "ats": "teamtailor",
+  "token": "alea"
+ },
+ "B2Spin Limited": {
+  "ats": "ashby",
+  "token": "b2spin"
+ },
+ "Patrianna": {
+  "ats": "ashby",
+  "token": "patrianna"
+ },
+ "Amelco Limited": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Racing and Sports": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "FIRST.bet": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Digitain": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Aspire Global": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Monkey Tilt": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Betano": {
+  "ats": "unknown",
+  "checked": 1784786160.892168
+ },
+ "Super": {
+  "ats": "greenhouse",
+  "token": "super"
  }
 }
