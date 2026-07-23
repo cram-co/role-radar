@@ -234,9 +234,12 @@ def probe_workable(slug):
     r = session.post(
         f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
         json={"query": "", "location": [], "department": []},
-        timeout=TIMEOUT,
+        headers={"Accept": "application/json"}, timeout=TIMEOUT,
     )
-    return r.status_code == 200 and _nonempty(r.json().get("results"))
+    if r.status_code != 200:
+        return False
+    d = r.json()
+    return _nonempty(d.get("results") or d.get("jobs"))
 
 
 def _tt_base(token):
@@ -489,41 +492,74 @@ def fetch_recruitee(token):
 
 
 def fetch_workable(token):
-    out, token_page = [], None
-    for _ in range(5):
+    """Workable's v3 board API. Their schema has shifted over time — `location`
+    may be a dict, a list, or absent in favour of `locations` — so every field is
+    read defensively and a single odd record can't take the whole board down."""
+    out, page_token = [], None
+    for _ in range(6):
         payload = {"query": "", "location": [], "department": []}
-        if token_page:
-            payload["token"] = token_page
-        d = session.post(
-            f"https://apply.workable.com/api/v3/accounts/{token}/jobs",
-            json=payload,
-            timeout=TIMEOUT,
-        ).json()
-        out.extend(d.get("results", []))
-        token_page = d.get("nextPage")
-        if not token_page:
-            break
-    return [
-        {
-            "title": j.get("title", ""),
-            "location": ", ".join(
-                filter(
-                    None,
-                    [
-                        (j.get("location") or {}).get("city"),
-                        (j.get("location") or {}).get("country"),
-                    ],
-                )
+        if page_token:
+            payload["token"] = page_token
+        try:
+            r = session.post(
+                f"https://apply.workable.com/api/v3/accounts/{token}/jobs",
+                json=payload, headers={"Accept": "application/json"}, timeout=TIMEOUT,
             )
-            or ("Remote" if j.get("remote") else ""),
-            "department": (j.get("department") or [""])[0]
-            if isinstance(j.get("department"), list)
-            else j.get("department", ""),
-            "url": f"https://apply.workable.com/{token}/j/{j.get('shortcode','')}/",
-            "posted_at": j.get("published"),
-        }
-        for j in out
-    ]
+            if r.status_code != 200:
+                print(f"      workable {token}: HTTP {r.status_code}")
+                break
+            d = r.json()
+        except Exception as e:
+            print(f"      workable {token}: {type(e).__name__}")
+            break
+        batch = d.get("results") or d.get("jobs") or []
+        out.extend(batch)
+        page_token = d.get("nextPage")
+        if not page_token or not batch:
+            break
+        time.sleep(REQUEST_DELAY)
+
+    def place(j):
+        loc = j.get("location") or j.get("locations") or {}
+        if isinstance(loc, list):
+            loc = loc[0] if loc else {}
+        if isinstance(loc, dict):
+            parts = [loc.get("city"), loc.get("region"), loc.get("country")]
+            txt = ", ".join([p for p in parts if isinstance(p, str) and p])
+        else:
+            txt = str(loc)
+        return txt or ("Remote" if j.get("remote") or j.get("workplace") == "remote" else "")
+
+    def dept(j):
+        d = j.get("department")
+        if isinstance(d, list):
+            d = d[0] if d else ""
+        if isinstance(d, dict):
+            d = d.get("name", "")
+        return str(d or "")
+
+    jobs = []
+    for j in out:
+        if not isinstance(j, dict):
+            continue
+        title = str(j.get("title") or "").strip()
+        if not title:
+            continue
+        try:
+            jobs.append({
+                "title": title,
+                "location": place(j),
+                "department": dept(j),
+                "url": j.get("url") or j.get("shortlink")
+                       or f"https://apply.workable.com/{token}/j/{j.get('shortcode','')}/",
+                "posted_at": j.get("published") or j.get("published_on") or j.get("created_at"),
+            })
+        except Exception:
+            continue          # never let one malformed record lose the whole board
+    if out and not jobs:
+        print(f"      workable {token}: {len(out)} records but none mapped "
+              f"(keys: {sorted(out[0].keys())[:10]})")
+    return jobs
 
 
 def fetch_teamtailor(token):
