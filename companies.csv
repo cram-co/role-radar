@@ -35,11 +35,11 @@ DraftKings,Operator - Tier 1,greenhouse (likely),,https://draftkings.wd1.myworkd
 Betsson Group,Operator - Tier 1,teamtailor (likely),,
 FDJ United,Operator - Tier 1,detect,Kindred + FDJ,
 Kindred Group,Operator - Tier 1,detect,Now FDJ United; Unibet/32Red,
-Superbet,Operator - Growth,detect,,greenhouse_eu:superbet
+Superbet,Operator - Growth,detect,,greenhouse:super
 Kaizen Gaming,Operator - Growth,detect,Betano,
 LeoVegas Group,Operator - Tier 1,teamtailor (likely),MGM-owned,
 Tipico,Operator - Tier 1,detect,,
-Super Group,Operator - Tier 1,detect,Betway / Spin,
+Super Group,Operator - Tier 1,detect,Betway / Spin,skip
 Betfred,Operator,detect,,
 Lottomatica,Operator - Tier 1,detect,Italy,
 Novibet,Operator - Growth,detect,,
@@ -230,7 +230,6 @@ Digitain,Supplier - Platform,detect,From LinkedIn follows,
 Aspire Global,Operator,detect,From LinkedIn follows,
 Monkey Tilt,Operator,detect,From LinkedIn follows,
 Betano,Operator,detect,From LinkedIn follows,
-Super,Operator,detect,From LinkedIn follows,
 The Star Entertainment Group,Operator,detect,From LinkedIn follows,
 GR8_TECH,Supplier - Platform,detect,From LinkedIn follows,
 Parimatch,Operator,detect,From LinkedIn follows,

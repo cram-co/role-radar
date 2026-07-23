@@ -77,20 +77,36 @@ def probe_greenhouse(slug):
     return r.status_code == 200 and _nonempty(r.json().get("jobs"))
 
 
+def _gh_jobs(slug):
+    """Greenhouse boards hosted in the EU region still answer on the main API,
+    so try that first and only then the eu-specific host."""
+    for host in ("boards-api.greenhouse.io", "boards-api.eu.greenhouse.io"):
+        try:
+            r = session.get(f"https://{host}/v1/boards/{slug}/jobs", timeout=TIMEOUT)
+            if r.status_code == 200:
+                jobs = r.json().get("jobs")
+                if jobs:
+                    return jobs
+        except Exception:
+            continue
+    return None
+
+
 def probe_greenhouse_eu(slug):
-    """Greenhouse runs a separate EU data region: job-boards.eu.greenhouse.io"""
-    r = session.get(
-        f"https://boards-api.eu.greenhouse.io/v1/boards/{slug}/jobs", timeout=TIMEOUT
-    )
-    return r.status_code == 200 and _nonempty(r.json().get("jobs"))
+    return _nonempty(_gh_jobs(slug))
 
 
 def probe_bamboohr(slug):
     r = session.get(f"https://{slug}.bamboohr.com/careers/list", timeout=TIMEOUT)
     if r.status_code != 200:
         return False
-    d = r.json()
-    return _nonempty((d.get("result") or d.get("data") or d) if isinstance(d, dict) else d)
+    try:
+        d = r.json()
+    except Exception:
+        return False
+    # must be an actual list of postings — an empty board returns {"result": []}
+    items = d.get("result") if isinstance(d, dict) else d
+    return isinstance(items, list) and len(items) > 0
 
 
 def probe_breezy(slug):
@@ -211,10 +227,8 @@ def fetch_greenhouse(token):
 
 
 def fetch_greenhouse_eu(token):
-    """Same shape as Greenhouse, EU data region."""
-    d = session.get(
-        f"https://boards-api.eu.greenhouse.io/v1/boards/{token}/jobs", timeout=TIMEOUT
-    ).json()
+    """Same shape as Greenhouse; resolves against whichever region answers."""
+    d = {"jobs": _gh_jobs(token) or []}
     return [
         {
             "title": j["title"],
@@ -710,6 +724,9 @@ def main():
         name = c["company"].strip()
         override = (c.get("ats_token") or "").strip()
         if not override:
+            continue
+        if override.lower() in ("skip", "none", "-"):
+            cache[name] = {"ats": "skip", "manual": True}
             continue
         # NB: check the URL form first — "https://..." also contains a colon
         if override.startswith("http"):
