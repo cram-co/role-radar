@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-07-23T10:29:10.941482+00:00",
- "job_count": 2989,
+ "generated_at": "2026-07-23T10:51:05.150553+00:00",
+ "job_count": 2994,
  "jobs": [
   {
    "title": "Access Administrator",
@@ -2794,16 +2794,6 @@
    "title": "Retail Customer Service",
    "location": "Birmingham, GB",
    "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000139094494",
-   "posted_at": "2026-07-22T14:41:03.095Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Birmingham, GB",
-   "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000139096425",
    "posted_at": "2026-07-22T14:40:41.441Z",
    "company": "Entain",
@@ -3686,16 +3676,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000137822739",
    "posted_at": "2026-07-15T07:50:05.998Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Bristol, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000137701284",
-   "posted_at": "2026-07-14T15:53:29.471Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -15916,6 +15896,16 @@
    "source": "collector"
   },
   {
+   "title": "AI Forward Deployed Engineer - CRM & Marketing",
+   "location": "Remote job",
+   "department": "Data",
+   "url": "https://hardrockdigital.recruitee.com/o/ai-forward-deployed-engineer-crm-marketing",
+   "posted_at": "2026-06-24 08:15:52 UTC",
+   "company": "Hard Rock Digital",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
    "title": "Analyst - Payments (Overnight)",
    "location": "Toronto, ON, Ontario, Canada",
    "department": "Customer Operations",
@@ -16383,6 +16373,16 @@
    "posted_at": "2026-06-28T23:43:47.642Z",
    "company": "Stake (Easygo)",
    "ats": "breezy",
+   "source": "collector"
+  },
+  {
+   "title": "Arabic Speaking Game Presenter",
+   "location": "Yerevan, AM",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000139252714",
+   "posted_at": "2026-07-23T10:28:30.177Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -20616,30 +20616,10 @@
    "source": "collector"
   },
   {
-   "title": "Account Manager",
-   "location": "S\u00e3o Paulo",
-   "department": "Account Management and Service Delivery",
-   "url": "https://altenar.bamboohr.com/careers/216",
-   "posted_at": null,
-   "company": "Altenar",
-   "ats": "bamboohr",
-   "source": "collector"
-  },
-  {
    "title": "Senior DevOps Build/CI Engineer",
    "location": "St Julians, Malta",
    "department": "",
    "url": "https://altenar.bamboohr.com/careers/221",
-   "posted_at": null,
-   "company": "Altenar",
-   "ats": "bamboohr",
-   "source": "collector"
-  },
-  {
-   "title": "Social Media Content Creator",
-   "location": "St Julians, Malta",
-   "department": "Marketing",
-   "url": "https://altenar.bamboohr.com/careers/222",
    "posted_at": null,
    "company": "Altenar",
    "ats": "bamboohr",
@@ -20670,16 +20650,6 @@
    "location": "",
    "department": "Legal",
    "url": "https://altenar.bamboohr.com/careers/229",
-   "posted_at": null,
-   "company": "Altenar",
-   "ats": "bamboohr",
-   "source": "collector"
-  },
-  {
-   "title": "Content Creator",
-   "location": "St Julians, Malta",
-   "department": "Marketing",
-   "url": "https://altenar.bamboohr.com/careers/232",
    "posted_at": null,
    "company": "Altenar",
    "ats": "bamboohr",
@@ -22946,6 +22916,36 @@
    "source": "collector"
   },
   {
+   "title": "IT Specialist",
+   "location": "Bitola, North Macedonia",
+   "department": "Tech",
+   "url": "https://apply.workable.com/rhino-entertainment/j/1875F1869D/",
+   "posted_at": "2026-07-07T00:00:00.000Z",
+   "company": "Rhino Entertainment",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
+   "title": "Automation & AI Specialist",
+   "location": "St. Julian's, Malta",
+   "department": "Tech",
+   "url": "https://apply.workable.com/rhino-entertainment/j/0CBF71FD05/",
+   "posted_at": "2026-06-03T00:00:00.000Z",
+   "company": "Rhino Entertainment",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
+   "title": "Product Owner",
+   "location": "St. Julian's, Malta",
+   "department": "Product",
+   "url": "https://apply.workable.com/rhino-entertainment/j/453655AD85/",
+   "posted_at": "2026-05-12T00:00:00.000Z",
+   "company": "Rhino Entertainment",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
    "title": "Customer Service Representative",
    "location": "TIJUANA, BAJA CALIFORNIA",
    "department": "Customer Service",
@@ -23193,6 +23193,56 @@
    "posted_at": null,
    "company": "Pinnacle",
    "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Principal Backend Software Engineer (Customer)",
+   "location": "Cape Town, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/B01D5686AE/",
+   "posted_at": "2026-07-23T00:00:00.000Z",
+   "company": "KingMakers",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
+   "title": "Principal Front End Software Engineer",
+   "location": "Cape Town, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/97202B999F/",
+   "posted_at": "2026-07-23T00:00:00.000Z",
+   "company": "KingMakers",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
+   "title": "3D Motion Designer",
+   "location": "Lagos, Nigeria",
+   "department": "BetKing",
+   "url": "https://apply.workable.com/kingmakers/j/E5A5650A2D/",
+   "posted_at": "2026-07-22T00:00:00.000Z",
+   "company": "KingMakers",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
+   "title": "Social Media Specialist (SuperSportBet)",
+   "location": "Cape Town, South Africa",
+   "department": "SuperSportBet",
+   "url": "https://apply.workable.com/kingmakers/j/C78243C848/",
+   "posted_at": "2026-07-22T00:00:00.000Z",
+   "company": "KingMakers",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
+   "title": "Data Engineer",
+   "location": "Bratislava, Slovakia",
+   "department": "",
+   "url": "https://apply.workable.com/3-oaks-gaming/j/86C1D8561F/",
+   "posted_at": "2026-06-17T00:00:00.000Z",
+   "company": "3 Oaks Gaming",
+   "ats": "workable",
    "source": "collector"
   },
   {
@@ -28046,6 +28096,16 @@
    "source": "agency"
   },
   {
+   "title": "Venue Support Consultant (MAX - Loyalty)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Digital Content Co-ordinator",
    "location": "",
    "department": "",
@@ -28066,10 +28126,10 @@
    "source": "agency"
   },
   {
-   "title": "Venue Support Consultant (MAX - Loyalty)",
+   "title": "Workshop Technician",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-35733d60-b8e9-49f0-92ea-409b422ab2ad",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -28086,16 +28146,6 @@
    "source": "agency"
   },
   {
-   "title": "Workshop Technician",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-35733d60-b8e9-49f0-92ea-409b422ab2ad",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Service Technician",
    "location": "",
    "department": "",
@@ -28106,10 +28156,10 @@
    "source": "agency"
   },
   {
-   "title": "Retail Sales & Oncourse Coordinator (Darwin)",
+   "title": "Field Technician",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/retail-sales-oncourse-coordinator-darwin-darwin-larrakia-country-nt-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/field-technician-eight-mile-plains-turrbal-country-qld-australia-8c5cb074-f22c-4ac6-94e0-01f422998dd5",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -28129,17 +28179,17 @@
    "title": "Field Technician",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/field-technician-eight-mile-plains-turrbal-country-qld-australia-8c5cb074-f22c-4ac6-94e0-01f422998dd5",
+   "url": "https://careers.tabcorp.com.au/jobs/field-technician-regional-nsw-nsw-australia-8fb3fdf3-f969-4088-9c5b-2a1b06ee6751",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Field Technician",
+   "title": "Retail Sales & Oncourse Coordinator (Darwin)",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/field-technician-regional-nsw-nsw-australia-8fb3fdf3-f969-4088-9c5b-2a1b06ee6751",
+   "url": "https://careers.tabcorp.com.au/jobs/retail-sales-oncourse-coordinator-darwin-darwin-larrakia-country-nt-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -28166,10 +28216,50 @@
    "source": "agency"
   },
   {
+   "title": "Storeperson",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/storeperson-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Manager \u2013 Financial Crime Governance & Reporting",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-financial-crime-governance-reporting-sydney-eora-nation-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "General Manager Regulatory Affairs",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/general-manager-regulatory-affairs-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Oncourse Operator (Casual) Sydney",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/oncourse-operator-casual-sydney-sydney-eora-nation-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Workforce Management Delivery Lead (Contract)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/workforce-management-delivery-lead-contract-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -28196,70 +28286,10 @@
    "source": "agency"
   },
   {
-   "title": "General Manager Regulatory Affairs",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/general-manager-regulatory-affairs-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Manager \u2013 Financial Crime Governance & Reporting",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-financial-crime-governance-reporting-sydney-eora-nation-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Storeperson",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/storeperson-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Workforce Management Delivery Lead (Contract)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/workforce-management-delivery-lead-contract-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Oncourse Customer Service Operator",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/oncourse-customer-service-operator-regional-nsw-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Network Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/network-engineer-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Network Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-network-engineer-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -28280,6 +28310,26 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/senior-security-engineer-ann-street-qld-australia-brisbane-turrbal-country-melbourne-kulin-nation-vic",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Network Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-network-engineer-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Network Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/network-engineer-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
