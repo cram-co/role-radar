@@ -7,9 +7,9 @@ TalentBet,Recruitment agency,detect,Malta/UK iGaming consultancy,
 Emerald Zebra,Recruitment agency,detect,Cyprus; iGaming fintech and tech,
 BSQ Talent,Recruitment agency,detect,iGaming recruitment,
 iTalent PLUS,Recruitment agency,detect,Malta iGaming specialist,
-iGamingHunt,Recruitment agency,detect,Specialist iGaming recruiter,
+iGamingHunt,Recruitment agency,detect,Ashby board,ashby:igaminghunt
 iGaming Recruitment,Recruitment agency,detect,Gibraltar/Malta/Cyprus specialist,
-Apercon,Recruitment agency,detect,C-level iGaming search; Eastern Europe; 250+ exec vacancies monthly,
+Apercon,Recruitment agency,detect,"bespoke jobs page, handled by scrape_custom",skip
 Acebet,Recruitment agency,detect,Niche iGaming recruiter; unverified board - speculative add,
 Talentgrator,Recruitment agency,detect,iGaming recruitment platform,
 Novig,Operator - Prediction,greenhouse,Sports prediction market / betting exchange; CFTC-designated; NY,

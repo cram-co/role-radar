@@ -206,6 +206,25 @@ def fetch_successfactors(token):
             except Exception as e:
                 print(f"      sf {company} {host}{path[:34]}: {type(e).__name__}")
                 continue
+    # 3) modern SuccessFactors career sites render client-side — the pages come
+    #    back at 130-200KB with barely any anchors — so go after the API the
+    #    bundle calls, the same way we do for other single-page apps.
+    for host in hosts[:2]:
+        base = f"https://{host}"
+        hits = _spa_api_hunt(f"{base}/career?company={company}", f"SF/{company}")
+        for u in hits:
+            if not re.search(r"(job|search|requisition|posting)", u, re.I):
+                continue
+            for sep in ("?" if "?" not in u else "&",):
+                probe = f"{u}{sep}company={company}"
+            data = _try_json(probe, probe) or _try_json(u, u)
+            if data:
+                jobs = _normalise(data, base, f"SF/{company}")
+                if jobs:
+                    print(f"      successfactors {company}: bundle API -> {len(jobs)} jobs")
+                    return jobs
+            time.sleep(REQUEST_DELAY)
+
     print(f"      successfactors {company}: nothing found across {len(hosts)} host(s)")
     return out
 
@@ -1040,69 +1059,81 @@ def scrape_pentasia():
 
 
 def scrape_bettingjobs():
-    """bettingjobs.com — WordPress + Applyflow, listing rendered client-side.
-    Tries, in order: JSON-LD on the listing, the XML sitemap, candidate API
-    endpoints, then sector-page link parsing."""
+    """bettingjobs.com — WordPress + Applyflow. Individual roles live under
+    /jobview/, which is what the sector pages link out to. The board listing
+    itself renders client-side, so the sector pages are the reliable source."""
     base = "https://www.bettingjobs.com"
-    print("   BettingJobs: strategy 1 — JSON-LD")
-    jobs = _jsonld_jobs(base + "/jobs/", "BettingJobs")
-    if jobs:
-        return jobs
-    print("   BettingJobs: strategy 2 — sitemap")
-    urls = []
-    for marker in ("/job/", "/jobs/", "/job-category/", "/vacancy/"):
+    MARKERS = ("/jobview/", "/job/", "/jobs/", "/job-category/")
+
+    # 1) sector and listing pages — server-rendered, each carries job links
+    pages = [f"{base}/{p}/" for p in (
+        "jobs", "job-seekers", "hr-finance", "marketing",
+        "executive-senior-appointments", "it-technical", "analytics-bi",
+        "commercial", "trading-sportsbook", "operations-payment",
+        "compliance-legal", "product",
+    )]
+    out, seen = [], set()
+    for url in pages:
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        except Exception as e:
+            print(f"      BettingJobs {url}: error ({type(e).__name__})")
+            continue
+        if r.status_code != 200:
+            print(f"      BettingJobs {url}: HTTP {r.status_code}")
+            continue
+        hits = []
+        for marker in MARKERS:
+            hits = _links_with_titles(r.text, base, marker)
+            if hits:
+                break
+        if not hits:
+            if url == pages[0]:
+                print(f"      BettingJobs {url}: 200, {len(r.text)} bytes")
+                print(f"         link shapes present: {_href_shapes(r.text)}")
+            continue
+        for u, t in hits:
+            if u in seen or u.rstrip("/").endswith(("/jobview", "/jobs")):
+                continue
+            seen.add(u)
+            out.append({"title": t, "location": "", "department": "",
+                        "url": u, "posted_at": None})
+        time.sleep(REQUEST_DELAY)
+    if out:
+        print(f"   BettingJobs: sector pages -> {len(out)} roles")
+        return out
+
+    # 2) sitemap, trying each marker
+    for marker in MARKERS:
         urls = _sitemap_job_urls(base, marker)
         if urls:
-            print(f"      sitemap marker that worked: {marker}")
-            break
-    if urls:
-        detailed = []
-        for u in urls[:120]:
-            detailed.extend(_jsonld_jobs(u, "BettingJobs"))
-            time.sleep(REQUEST_DELAY)
-            if len(detailed) >= 120:
-                break
-        if detailed:
-            return detailed
-        return _titles_from_urls(urls, "BettingJobs")
-    print("   BettingJobs: strategy 3 — endpoint discovery")
+            print(f"      BettingJobs: sitemap marker {marker} -> {len(urls)}")
+            detailed = []
+            for u in urls[:120]:
+                detailed.extend(_jsonld_jobs(u, "BettingJobs"))
+                time.sleep(REQUEST_DELAY)
+            if detailed:
+                return detailed
+            derived = _titles_from_urls(urls, "BettingJobs")
+            if derived:
+                return derived
+
+    # 3) the API the board calls
+    print("   BettingJobs: endpoint discovery")
     jobs = _discover(base, BETTINGJOBS_CANDIDATES, "BettingJobs")
     if jobs:
         return jobs
-    print("   BettingJobs: strategy 4 — sector pages")
-    print("   BettingJobs: no JSON endpoint found, falling back to sector pages")
-    seen, res = set(), []
-    sectors = ["jobs","job-seekers","hr-finance","marketing",
-               "executive-senior-appointments","it-technical","analytics-bi",
-               "commercial","trading-sportsbook","operations-payment",
-               "compliance-legal","product"]
-    base = "https://www.bettingjobs.com"
-    for sec in sectors:
-        try:
-            r = session.get(f"{base}/{sec}/", headers=AGENCY_UA, timeout=TIMEOUT)
-            if r.status_code != 200:
-                print(f"      /{sec}/: HTTP {r.status_code}")
-                continue
-            hits = []
-            for marker in ("/job/", "/jobs/", "/job-category/", "/vacancy/"):
-                hits = _links_with_titles(r.text, base, marker)
-                if hits:
-                    break
-            if not hits and sec == sectors[0]:
-                print(f"      /{sec}/: HTTP 200, {len(r.text)} bytes, {r.text.count('<a ')} anchors")
-                print(f"         link shapes present: {_href_shapes(r.text)}")
-            for link, title in hits:
-                if link in seen:
-                    continue
-                seen.add(link)
-                res.append({"title": title, "location": "",
-                            "department": sec.replace("-", " ").title(),
-                            "url": link, "posted_at": None})
+    hits = _spa_api_hunt(f"{base}/jobs/", "BettingJobs")
+    for u in hits:
+        if re.search(r"(job|vacanc|search)", u, re.I):
+            data = _try_json(u, u)
+            if data:
+                mapped = _normalise(data, base, "BettingJobs")
+                if mapped:
+                    print(f"   BettingJobs: bundle API {u} -> {len(mapped)}")
+                    return mapped
             time.sleep(REQUEST_DELAY)
-        except Exception as e:
-            print(f"      /{sec}/: error ({type(e).__name__})")
-            continue
-    return res
+    return []
 
 
 def scrape_vankaizen():
@@ -1315,6 +1346,8 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"]),
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
                          listing=["/JobApplications/Apply/", "/"]),
+    "Apercon":      dict(base="https://apercon.com", marker="/job",
+                         listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
     # completely separate system — the SuccessFactors work doesn't reach them.
     "Allwyn":       dict(base="https://jobs.recruitis.io", marker="/job",
