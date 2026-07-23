@@ -59,11 +59,64 @@
   .empty{padding:46px 8px;text-align:center;color:var(--slate);font-size:15px;}
   .empty .go{margin-top:14px;}
   .notice{background:#FFF6E5;border:1px solid #F0D9A8;border-radius:6px;padding:12px 14px;margin:16px 0 0;font-size:13.5px;color:#6B5320;}
-  footer.rr{border-top:1px solid var(--line2);padding:24px 0 40px;font-size:13px;color:var(--slate);}
-  footer.rr a{color:var(--royal);text-decoration:none;}
+  .beta-note{border-top:1px solid var(--line2);margin-top:10px;padding:22px 0 34px;font-size:13.5px;line-height:1.7;color:var(--slate);}
+  .beta-note strong{color:var(--navy);letter-spacing:.08em;}
+  .beta-note a{color:var(--royal);text-decoration:none;}
+
+  /* ---- site chrome (shared with the rest of cramcfc.com) ---- */
+  .logo{display:inline-flex;align-items:center;text-decoration:none;font-family:'Fraunces',serif;}
+  .logo svg{height:34px;width:auto;display:block;}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(244,245,247,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2);}
+  .nav-inner{position:relative;display:flex;align-items:center;justify-content:space-between;height:66px;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{color:var(--navy2);text-decoration:none;font-size:14px;font-weight:500;}
+  .nav-links a:hover{color:var(--royal);}
+  .nav-links a.current{color:var(--royal);}
+  .nav-cta{background:var(--navy);color:#fff!important;padding:9px 17px;border-radius:4px;font-size:13px;}
+  .nav-cta:hover{background:var(--navy2);}
+  .nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer;}
+  footer#contact{background:var(--ink);color:var(--slate);padding:54px 0 38px;border-top:1px solid var(--line);}
+  footer#contact .foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:38px;}
+  .cfc-mark{font-family:'IBM Plex Mono',monospace;font-size:20px;letter-spacing:.22em;color:var(--mist);margin-top:18px;}
+  .foot-blurb{max-width:38ch;font-size:14.5px;line-height:1.6;color:var(--slate);margin-top:10px;}
+  .cfc-mark .b,.foot-blurb .b{color:var(--chief);font-weight:600;}
+  .foot-links{display:flex;gap:56px;flex-wrap:wrap;}
+  .foot-col h4{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);margin-bottom:14px;}
+  .foot-col a{display:block;color:var(--slate);text-decoration:none;font-size:14px;margin-bottom:9px;}
+  .foot-col a:hover{color:var(--paper);}
+  .foot-base{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--steel);font-family:'IBM Plex Mono',monospace;}
+  @media(max-width:820px){
+    .nav-links{display:none;} .nav-toggle{display:block;}
+    .nav-links.open{display:flex;flex-direction:column;align-items:stretch;gap:0;
+      position:absolute;top:100%;left:0;right:0;background:var(--paper);
+      border-bottom:1px solid var(--line2);box-shadow:0 10px 24px rgba(14,27,46,.10);padding:8px 0;}
+    .nav-links.open a{padding:14px 28px;font-size:16px;border-bottom:1px solid var(--line2);}
+    .nav-links.open a:last-child{border-bottom:none;}
+    .nav-links.open .nav-cta{margin:10px 28px 6px;text-align:center;border-radius:5px;}
+  }
 </style>
 </head>
 <body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html" aria-label="Cram Consultancy">
+      <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 8 A15 15 0 1 0 40 32" fill="none" stroke="#1F4BC4" stroke-width="3.4" stroke-linecap="round"/>
+        <text x="21" y="28" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#0E1B2E">Cram</text>
+      </svg>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="services.html" class="current">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="role-radar.html" class="current">Role Radar</a>
+      <a href="enquire.html" class="nav-cta">Start a conversation</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">&#8801;</button>
+  </div>
+</header>
 
 <header class="rr">
   <div class="wrap">
@@ -108,11 +161,40 @@
   <div class="list" id="list"></div>
 </div>
 
-<footer class="rr">
-  <div class="wrap">
+<div class="wrap">
+  <div class="beta-note">
     <strong>BETA</strong> &mdash; spot any bugs or issues? Let me know at
     <a href="mailto:heath@cramcfc.com">heath@cramcfc.com</a><br />
     Hope you too enjoy using my aggregator!
+  </div>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="logo" href="index.html">
+          <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg" style="height:34px;">
+            <path d="M40 8 A15 15 0 1 0 40 32" fill="none" stroke="#5B8DEF" stroke-width="3.4" stroke-linecap="round"/>
+            <text x="21" y="28" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="#F4F5F7">Cram</text>
+          </svg>
+        </a>
+        <div class="cfc-mark"><span class="b">C</span>RAM<span class="b">CFC</span></div>
+        <p class="foot-blurb"><span class="b">C</span>ram <span class="b">C</span>onsultancy: <span class="b">F</span>ractional <span class="b">C</span>-level</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col"><h4>Site</h4>
+          <a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="role-radar.html">Tools</a>
+        </div>
+        <div class="foot-col"><h4>Get in touch</h4>
+          <a href="mailto:heath@cramcfc.com">heath@cramcfc.com</a><a href="https://linkedin.com/in/heath-cram-69279a57" target="_blank" rel="noopener">LinkedIn</a><a href="enquire.html">Enquiry form</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Cram Consultancy</span>
+      <span>Cram Consultancy &middot; cramcfc.com</span>
+    </div>
   </div>
 </footer>
 
@@ -294,6 +376,28 @@ document.getElementById("clear").addEventListener("click", () => {
 });
 
 load().then(()=>{ buildLocations(); stats(); render(); });
+</script>
+
+<script>
+(function () {
+  var btn = document.querySelector(".nav-toggle");
+  var links = document.querySelector(".nav-links");
+  if (!btn || !links) return;
+  btn.setAttribute("aria-expanded", "false");
+  function close() {
+    links.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+    btn.innerHTML = "&#8801;";
+  }
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    var open = links.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.innerHTML = open ? "&times;" : "&#8801;";
+  });
+  links.addEventListener("click", function (e) { if (e.target.tagName === "A") close(); });
+  document.addEventListener("click", function () { if (links.classList.contains("open")) close(); });
+})();
 </script>
 </body>
 </html>
