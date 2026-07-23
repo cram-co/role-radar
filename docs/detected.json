@@ -198,15 +198,6 @@
   "ats": "ashby",
   "token": "kindred"
  },
- "Superbet": {
-  "ats": "greenhouse_eu",
-  "token": "superbet",
-  "manual": true
- },
- "Super Group": {
-  "ats": "greenhouse",
-  "token": "super"
- },
  "Betfred": {
   "ats": "unknown",
   "checked": 1784786971.6618996
@@ -281,10 +272,6 @@
   "ats": "unknown",
   "checked": 1784789322.8501365
  },
- "Play'n GO": {
-  "ats": "bamboohr",
-  "token": "playngo"
- },
  "Yggdrasil": {
   "ats": "unknown",
   "checked": 1784789322.8501365
@@ -297,10 +284,6 @@
   "ats": "unknown",
   "checked": 1784789322.8501365
  },
- "Relax Gaming": {
-  "ats": "bamboohr",
-  "token": "relaxgaming"
- },
  "Greentube (Novomatic)": {
   "ats": "unknown",
   "checked": 1784789322.8501365
@@ -308,10 +291,6 @@
  "Inspired Entertainment": {
   "ats": "unknown",
   "checked": 1784789322.8501365
- },
- "Bragg Gaming": {
-  "ats": "bamboohr",
-  "token": "bragggaming"
  },
  "Amusnet": {
   "ats": "unknown",
@@ -429,10 +408,6 @@
   "ats": "bamboohr",
   "token": "mifinity"
  },
- "Jeton": {
-  "ats": "bamboohr",
-  "token": "jeton"
- },
  "The Lottery Corporation": {
   "ats": "unknown",
   "checked": 1784789874.8873959
@@ -528,10 +503,6 @@
  "Novig": {
   "ats": "ashby",
   "token": "novig"
- },
- "Myriad": {
-  "ats": "bamboohr",
-  "token": "myriad"
  },
  "Manifold Markets": {
   "ats": "unknown",
@@ -890,10 +861,6 @@
   "ats": "unknown",
   "checked": 1784786160.892168
  },
- "Super": {
-  "ats": "greenhouse",
-  "token": "super"
- },
  "The Star Entertainment Group": {
   "ats": "unknown",
   "checked": 1784786971.6618996
@@ -1093,9 +1060,5 @@
  "FSB Technology": {
   "ats": "unknown",
   "checked": 1784786971.6618996
- },
- "Amelco UK Ltd": {
-  "ats": "bamboohr",
-  "token": "amelco"
  }
 }
