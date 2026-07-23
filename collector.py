@@ -729,6 +729,7 @@ _FIX_CASE = {
     "Ui": "UI", "Qa": "QA", "Uk": "UK", "Us": "US", "Eu": "EU", "Latam": "LATAM",
     "Dach": "DACH", "Emea": "EMEA", "Apac": "APAC", "B2b": "B2B", "B2c": "B2C",
     "Ftd": "FTD", "Pam": "PAM", "Okr": "OKR", "Psp": "PSP",
+    "Vat": "VAT", "Cs": "CS", "Ta": "TA", "Rg": "RG", "Cx": "CX", "Sre": "SRE",
 }
 
 BETTINGJOBS_CANDIDATES = [
@@ -930,6 +931,11 @@ def _titles_from_urls(urls, source):
         slug = u.rstrip("/").rsplit("/", 1)[-1]
         if slug.lower() in _NOT_A_JOB:
             continue
+        # agency reference codes first, e.g. "-qvv8x9w6", "-es6649", "-5wryr53r".
+        # Must run before the digit rules or those split the code and strand a
+        # fragment ("...-es6649" would otherwise leave a trailing "Es").
+        slug = re.sub(r"[-_](?=[a-z0-9]{4,10}$)(?=[a-z0-9]*\d)(?=[a-z0-9]*[a-z])[a-z0-9]+$",
+                      "", slug, flags=re.I)
         slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)
         slug = re.sub(r"[-_]\d{1,3}$", "", slug)
         words = [w for w in re.split(r"[-_]+", slug) if w]
