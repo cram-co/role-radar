@@ -29,6 +29,8 @@ CACHE_FILE = DOCS / "detected.json"
 FEED_FILE = DOCS / "feed.json"
 
 DETECT_PER_RUN = 50          # new companies probed per run
+RETRY_UNKNOWN_DAYS = 10      # re-probe "unknown" companies after this many days
+RETRY_PER_RUN = 15           # how many stale unknowns to re-probe each run
 REQUEST_DELAY = 0.35         # politeness delay between probe requests
 TIMEOUT = 15
 HEADERS = {"User-Agent": "RoleRadar/1.0 (personal job-search tool)"}
@@ -428,7 +430,22 @@ def main():
     if CACHE_FILE.exists():
         cache = json.loads(CACHE_FILE.read_text())
 
+    # --- manual overrides always win (ats_token column: "greenhouse:midnite") ---
+    for c in companies:
+        name = c["company"].strip()
+        override = (c.get("ats_token") or "").strip()
+        if not override:
+            continue
+        if ":" in override:
+            ats, token = override.split(":", 1)
+            ats, token = ats.strip().lower(), token.strip()
+            if ats in FETCHERS and token:
+                cache[name] = {"ats": ats, "token": token, "manual": True}
+        elif override.startswith("http"):
+            cache[name] = {"ats": "workday", "url": override, "manual": True}
+
     # --- detection pass (budgeted) ---
+    now = time.time()
     probed = 0
     for c in companies:
         name = c["company"].strip()
@@ -443,8 +460,26 @@ def main():
             continue
         print(f"Detecting: {name}")
         result = detect(name, hint)
-        cache[name] = result or {"ats": "unknown"}
+        cache[name] = result or {"ats": "unknown", "checked": now}
         probed += 1
+
+    # --- retry stale "unknown" companies -------------------------------------
+    # A probe only matches when a board returns at least one posting, so a
+    # company whose board was empty (or briefly erroring) gets recorded as
+    # unknown. Without this, that verdict would stand forever.
+    known = {c["company"].strip() for c in companies}
+    stale = [
+        n for n, v in cache.items()
+        if n in known
+        and v.get("ats") == "unknown"
+        and not v.get("manual")
+        and (now - v.get("checked", 0)) > RETRY_UNKNOWN_DAYS * 86400
+    ]
+    hints = {c["company"].strip(): (c.get("ats_hint") or "") for c in companies}
+    for name in stale[:RETRY_PER_RUN]:
+        print(f"Re-probing (was unknown): {name}")
+        result = detect(name, hints.get(name, ""))
+        cache[name] = result or {"ats": "unknown", "checked": now}
 
     CACHE_FILE.write_text(json.dumps(cache, indent=1))
 
