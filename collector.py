@@ -771,6 +771,22 @@ def _href_shapes(html_text, limit=12):
     return ", ".join(f"{p} x{n}" for p, n in common)
 
 
+# Titles that are navigation, not vacancies. Scrapers pick these up when a
+# listing page links to itself or to a category index.
+_JUNK_TITLE = re.compile(
+    r"^(job\s*board|jobs?|vacanc(y|ies)|careers?|search|apply|home|all\s+jobs?|"
+    r"view\s+all|more|see\s+all|browse|opportunities|open\s+roles?|back|next|"
+    r"previous|contact|about|register|sign\s*in|log\s*in)$", re.I)
+
+
+def _drop_junk(jobs, source=""):
+    """Strip navigation links that slipped through as vacancies."""
+    out = [j for j in jobs if not _JUNK_TITLE.match((j.get("title") or "").strip())]
+    if len(out) != len(jobs) and source:
+        print(f"      {source}: dropped {len(jobs)-len(out)} navigation link(s)")
+    return out
+
+
 def _links_with_titles(html_text, base, path_marker):
     """(url, title) pairs for links whose path contains `path_marker`.
     Deliberately tolerant: hrefs may be relative or absolute, and the visible
@@ -1586,7 +1602,7 @@ def main():
     # --- agency boards (recruiter sites, no public ATS) ---
     for name, fn in AGENCY_BOARDS.items():
         try:
-            jobs = fn()
+            jobs = _drop_junk(fn(), name)
             for j in jobs:
                 j.update(company=name, ats="agency", source="agency")
             all_jobs.extend(jobs)
