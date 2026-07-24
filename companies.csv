@@ -263,7 +263,7 @@ Pragmatic Solutions,Operator,detect,From LinkedIn follows,
 DAZN,Operator,detect,From LinkedIn follows,
 VAIX a Sportradar Company,Operator,detect,From LinkedIn follows,
 Voxbet,Sports/Prediction,detect,From LinkedIn follows,
-Blip.pt,Operator,detect,SUSPECT - greenhouse:blip returned a Los Angeles social role; verify before re-enabling.,skip
+Blip.pt,Supplier - Platform,detect,Flutter's Porto engineering hub; own board at blip.pt/jobs/ (greenhouse:blip is a different company),skip
 MERKUR GAMING,Supplier - Content,detect,From LinkedIn follows,
 Junglee Games,Supplier - Content,detect,From LinkedIn follows,
 GGNetwork,Poker,detect,From LinkedIn follows,

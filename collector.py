@@ -1433,6 +1433,10 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/", "/jobs/page/2/", "/vacancies/"]),
     "iGaming Recruitment": dict(base="https://igamingrecruitment.io", marker="/job",
                          listing=["/jobs/", "/jobs/page/2/", "/vacancies/"]),
+    # Flutter's Porto engineering hub. Note greenhouse:blip is a DIFFERENT Blip
+    # (a US company) — their real board is on their own site.
+    "Blip.pt":      dict(base="https://www.blip.pt", marker="/jobs/",
+                         listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3"]),
     "Apercon":      dict(base="https://apercon.com", marker="/job",
                          listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
