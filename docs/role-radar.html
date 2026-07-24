@@ -48,7 +48,20 @@
   .sort-row select{padding:8px 11px;border:1px solid #D3D7DE;border-radius:5px;background:#fff;
                    font:inherit;font-size:13.5px;color:var(--navy2);cursor:pointer;}
   .sort-row select:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.12);}
-  .excl-row{margin-top:12px;}
+  .excl-row{margin-top:14px;}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{position:relative;display:inline-block;}
+  .chip input{position:absolute;opacity:0;width:0;height:0;}
+  .chip span{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid #D3D7DE;
+             border-radius:100px;background:#fff;color:var(--steel);font-size:13.5px;cursor:pointer;
+             transition:.15s;white-space:nowrap;}
+  .chip span::before{content:"";width:14px;height:14px;border:1.5px solid #C3C9D4;border-radius:3px;
+                     flex:0 0 auto;transition:.15s;}
+  .chip input:checked + span{background:var(--navy);border-color:var(--navy);color:#fff;}
+  .chip input:checked + span::before{background:var(--chief);border-color:var(--chief);}
+  .chip input:focus-visible + span{outline:2px solid var(--royal);outline-offset:2px;}
+  .chip span:hover{border-color:var(--steel);}
+  .chips-sm .chip span{font-size:13px;padding:7px 12px;}
   .excl-label{display:block;font-size:13px;color:var(--slate);margin-bottom:7px;}
   .lead-row{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:14.5px;color:var(--navy2);cursor:pointer;}
   .lead-row input{width:18px;height:18px;accent-color:var(--royal);cursor:pointer;}
@@ -70,6 +83,15 @@
                font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
                text-transform:uppercase;color:var(--slate);}
   .dot{color:var(--mist);}
+  .pager{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:26px 2px 8px;}
+  .pg{padding:8px 13px;border:1px solid var(--line2);border-radius:5px;background:#fff;
+      font:inherit;font-size:13.5px;color:var(--navy2);cursor:pointer;transition:.15s;}
+  .pg:hover:not(:disabled):not(.on){border-color:var(--steel);}
+  .pg.on{background:var(--navy);border-color:var(--navy);color:#fff;font-weight:600;}
+  .pg:disabled{opacity:.35;cursor:default;}
+  .pg-gap{padding:0 4px;color:var(--mist);}
+  .pg-count{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);}
+  @media(max-width:620px){.pg-count{margin-left:0;width:100%;padding-top:8px;}}
   .empty{padding:46px 8px;text-align:center;color:var(--slate);font-size:15px;}
   .empty .go{margin-top:14px;}
   .notice{background:#FFF6E5;border:1px solid #F0D9A8;border-radius:6px;padding:12px 14px;margin:16px 0 0;font-size:13.5px;color:#6B5320;}
@@ -159,6 +181,10 @@
         <div id="locopts"></div>
       </div>
     </div>
+    <label class="lead-row">
+      <input type="checkbox" id="lead" />
+      <span>Leadership only &mdash; Chief, VP, Director, Head+</span>
+    </label>
     <div class="sort-row">
       <label for="sort">Sort</label>
       <select id="sort">
@@ -171,10 +197,6 @@
       <span class="excl-label">Hide</span>
       <div class="chips chips-sm" id="excl"></div>
     </div>
-    <label class="lead-row">
-      <input type="checkbox" id="lead" />
-      <span>Leadership only &mdash; Chief, VP, Director, Head+</span>
-    </label>
     <div class="countline">
       <span id="count">&nbsp;</span>
       <button class="clear" id="clear" style="display:none">Clear</button>
@@ -236,6 +258,8 @@ const SAMPLE = [{"c":"LionHires","t":"Country Manager - Spain ","l":"Spain","u":
 const SENIORITY = /\b(chief|c[eoftm]o\b|coo\b|president|managing director|general manager|country manager|director|vp\b|vice president|head of|svp\b|evp\b)|(?<![,\-]\s)\b(?:md|gm)\b(?!\s*$)/i;
 
 let JOBS = [], usingSample = false, updated = null;
+const PER_PAGE = 100;
+let page = 1;
 
 // Function groups you can hide. Matched on the job title, because the feed's
 // department field is blank for most sources. Ordered as Heath grouped them.
@@ -278,11 +302,38 @@ rs:"Serbia",hr:"Croatia",at:"Austria",ch:"Switzerland",us:"United States",ca:"Ca
 co:"Colombia",mx:"Mexico",ar:"Argentina",pe:"Peru",cl:"Chile",au:"Australia",nz:"New Zealand",in:"India",
 ph:"Philippines",sg:"Singapore",jp:"Japan",za:"South Africa",ng:"Nigeria",ke:"Kenya",ae:"UAE",il:"Israel",
 tr:"Turkey",my:"Malaysia",tw:"Taiwan",hk:"Hong Kong",al:"Albania",md:"Moldova",mk:"North Macedonia"};
+const US_STATES = new Set(("al ak az ar ca co ct de fl ga hi id il in ia ks ky la me md ma mi mn ms "+
+  "mo mt ne nv nh nj nm ny nc nd oh ok or pa ri sc sd tn tx ut vt va wa wv wi wy dc").split(" "));
+const CA_PROV = new Set(["ab","bc","mb","nb","nl","ns","nt","nu","on","pe","qc","sk","yt"]);
+// two-letter codes that are countries, not states — added so they don't get
+// swept into the US bucket
+Object.assign(ISO, {si:"Slovenia", ba:"Bosnia & Herzegovina", cr:"Costa Rica", uy:"Uruguay"});
+// Feeds carry bare city names and local-language country names. Map the ones
+// that actually appear rather than leaving them as separate one-off buckets.
+const CITY_COUNTRY = {
+  "new york":"United States", "new york city":"United States", "bay area":"United States",
+  "new jersey":"United States", "las vegas":"United States", "boston":"United States",
+  "chicago":"United States", "los angeles":"United States", "san francisco":"United States",
+  "atlantic city":"United States", "jersey city":"United States", "philadelphia":"United States",
+  "london":"United Kingdom", "leeds":"United Kingdom", "manchester":"United Kingdom",
+  "sofia":"Bulgaria", "athens":"Greece", "budapest":"Hungary", "warsaw":"Poland",
+  "hamburg":"Germany", "köln":"Germany", "koln":"Germany", "berlin":"Germany", "munich":"Germany",
+  "österreich":"Austria", "osterreich":"Austria", "deutschland":"Germany", "españa":"Spain",
+  "italia":"Italy", "polska":"Poland", "sverige":"Sweden", "suomi":"Finland",
+  "roma":"Italy", "milano":"Italy", "madrid":"Spain", "barcelona":"Spain",
+  "lisbon":"Portugal", "lisboa":"Portugal", "são paulo":"Brazil", "sao paulo":"Brazil",
+  "buenos aires":"Argentina", "bogotá":"Colombia", "medellín":"Colombia",
+  "pieta":"Malta", "sliema":"Malta", "st julian's":"Malta", "birkirkara":"Malta",
+  "valletta":"Malta", "tbilisi":"Georgia", "yerevan":"Armenia", "kyiv":"Ukraine",
+  "riga":"Latvia", "tallinn":"Estonia", "vilnius":"Lithuania", "belgrade":"Serbia",
+  "zagreb":"Croatia", "bucharest":"Romania", "sydney":"Australia", "melbourne":"Australia",
+  "toronto":"Canada", "vancouver":"Canada", "hyderabad":"India", "manila":"Philippines",
+};
 const NAMES = Array.from(new Set(Object.values(ISO)));
 const UK_CITIES = ["london","leeds","manchester","birmingham","glasgow","edinburgh","liverpool","sheffield","nottingham","bristol","brighton"];
 const US_CITIES = ["new york","atlantic city","las vegas","southfield","chicago","boston","los angeles","san francisco","jersey city","philadelphia","denver","miami","austin","seattle","dallas","atlanta"];
 // iGaming's actual hubs — pinned to the top so they aren't buried under volume
-const HUBS = ["Multiple locations","Malta","United Kingdom","Gibraltar","Isle of Man","Cyprus","Ireland","UAE","Remote"];
+const HUBS = ["Multiple locations","Malta","United Kingdom","United States","Gibraltar","Isle of Man","Cyprus","Ireland","UAE","Remote"];
 
 function bucket(loc){
   if(!loc) return null;
@@ -296,7 +347,16 @@ function bucket(loc){
   }
   const parts = s.split(",").map(x=>x.trim());
   const tail = (parts[parts.length-1]||"").toLowerCase();
+  // check state/province before the country map, since PA and MA are both
+  // US states and country codes — in a "City, XX" string the state wins
   if(ISO[tail]) return ISO[tail];
+  if(parts.length > 1 && US_STATES.has(tail)) return "United States";
+  if(parts.length > 1 && CA_PROV.has(tail)) return "Canada";
+  if(CITY_COUNTRY[tail]) return CITY_COUNTRY[tail];
+  // strip street detail: "Roma - Via degli Aldobrandeschi" -> "Roma"
+  const cityPart = tail.split(/\s+[-–]\s+/)[0].trim();
+  if(CITY_COUNTRY[cityPart]) return CITY_COUNTRY[cityPart];
+  if(/^(europe|emea|global|central|anywhere|worldwide)$/i.test(tail)) return "Remote";
   if(tail.length===2 && /^[a-z]{2}$/.test(tail)) return tail.toUpperCase();
   const head = (parts[0]||"").toLowerCase();
   if(US_CITIES.some(c=>head.includes(c)) || ["usa","u.s.","united states"].includes(tail)) return "United States";
@@ -398,8 +458,11 @@ function render(){
     list.innerHTML = '<div class="empty">No roles match that search.</div>';
     return;
   }
+  const pages = Math.max(1, Math.ceil(out.length / PER_PAGE));
+  if(page > pages) page = pages;
+  const slice = out.slice((page-1)*PER_PAGE, page*PER_PAGE);
   const showLevel = (mode === "lead" || leadOnly);
-  list.innerHTML = out.slice(0,400).map(j => `
+  list.innerHTML = slice.map(j => `
     <a class="job" href="${j.u||"#"}" target="_blank" rel="noopener">
       <div class="t">${j.t||""}</div>
       ${showLevel && level(j.t) < LEVELS.length ? '<span class="lvl">'+LEVELS[level(j.t)].name+'</span>' : ""}
@@ -407,7 +470,33 @@ function render(){
         ${j.l?'<span class="dot">&middot;</span><span>'+j.l+"</span>":""}
         <span class="dot">&middot;</span><span${j.p?"":' class="nodate"'}>${j.p?ago(Date.parse(j.p)):"date not listed"}</span>
       </div>
-    </a>`).join("");
+    </a>`).join("") + pager(page, pages, out.length);
+
+  list.querySelectorAll("[data-page]").forEach(b => {
+    b.addEventListener("click", () => {
+      page = parseInt(b.dataset.page, 10);
+      render();
+      window.scrollTo({ top: document.querySelector(".panel").offsetTop - 8, behavior: "smooth" });
+    });
+  });
+}
+
+function pager(cur, pages, total){
+  if(pages <= 1) return "";
+  const btn = (p, label, on) =>
+    `<button class="pg${on ? " on" : ""}" data-page="${p}"${on ? " aria-current=\"page\"" : ""}>${label}</button>`;
+  let nums = [];
+  const span = 2;
+  for(let p = 1; p <= pages; p++){
+    if(p === 1 || p === pages || Math.abs(p - cur) <= span) nums.push(p);
+    else if(nums[nums.length-1] !== "…") nums.push("…");
+  }
+  return `<div class="pager">
+      ${cur > 1 ? btn(cur-1, "&larr; Prev") : '<button class="pg" disabled>&larr; Prev</button>'}
+      ${nums.map(n => n === "…" ? '<span class="pg-gap">…</span>' : btn(n, n, n === cur)).join("")}
+      ${cur < pages ? btn(cur+1, "Next &rarr;") : '<button class="pg" disabled>Next &rarr;</button>'}
+      <span class="pg-count">${((cur-1)*PER_PAGE)+1}&ndash;${Math.min(cur*PER_PAGE, total)} of ${total.toLocaleString()}</span>
+    </div>`;
 }
 
 function buildExcludes(){
@@ -418,7 +507,7 @@ function buildExcludes(){
   el.querySelectorAll("input").forEach(cb => {
     cb.addEventListener("change", () => {
       cb.checked ? excluded.add(cb.value) : excluded.delete(cb.value);
-      saveExcluded(); render();
+      saveExcluded(); page = 1; render();
     });
   });
 }
@@ -448,7 +537,7 @@ function drawLocations(){
     cb.addEventListener("change", () => {
       if(cb.checked){ if(!selectedLocs.includes(cb.value)) selectedLocs.push(cb.value); }
       else selectedLocs = selectedLocs.filter(v => v !== cb.value);
-      saveLocs(); updateLocLabel(); render();
+      saveLocs(); updateLocLabel(); page = 1; render();
     });
   });
 }
@@ -471,11 +560,11 @@ function stats(){
   }
 }
 
-document.getElementById("btn").addEventListener("click", render);
-document.getElementById("q").addEventListener("input", render);
+document.getElementById("btn").addEventListener("click", () => { page = 1; render(); });
+document.getElementById("q").addEventListener("input", () => { page = 1; render(); });
 document.getElementById("q").addEventListener("keydown", e => { if(e.key==="Enter") render(); });
-document.getElementById("lead").addEventListener("change", render);
-document.getElementById("sort").addEventListener("change", render);
+document.getElementById("lead").addEventListener("change", () => { page = 1; render(); });
+document.getElementById("sort").addEventListener("change", () => { page = 1; render(); });
 document.getElementById("locbtn").addEventListener("click", (e) => {
   e.stopPropagation();
   const p = document.getElementById("locpanel");
