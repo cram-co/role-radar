@@ -337,8 +337,8 @@
   "checked": 1784789874.8873959
  },
  "Fortuna Entertainment Group": {
-  "ats": "unknown",
-  "checked": 1784789874.8873959
+  "ats": "skip",
+  "manual": true
  },
  "Rhino Entertainment": {
   "ats": "workable",
@@ -409,20 +409,24 @@
   "token": "sporttrade"
  },
  "Booming Games": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "3 Oaks Gaming": {
   "ats": "workable",
   "token": "3-oaks-gaming"
  },
  "Banijay Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Playnetic": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Winna.com": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "ARB Interactive": {
   "ats": "ashby",
@@ -433,81 +437,104 @@
   "token": "kermagames"
  },
  "1X2gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "RPM Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "PrizePicks": {
   "ats": "greenhouse",
   "token": "prizepicks"
  },
  "highbet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "EvenBet Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "KICK": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Bodog Nation": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Bovada": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Racing1": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "InPlaySoft": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "4Play Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "unikrn": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Skilrock Technologies": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "NuxGame": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "188BET": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Asia Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "7bet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Picklebet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "SPRIBE": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Upgaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "SmartSoft": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "OnAim": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "PawaPay": {
   "ats": "greenhouse",
   "token": "pawapay"
  },
  "Derivco": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "derivco"
  },
  "PointsBet Canada": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Silverspin": {
   "ats": "teamtailor",
@@ -518,13 +545,16 @@
   "token": "gamdom"
  },
  "Evoplay": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "SCIENTIFIC GAMES": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "Nolimit City\u00ae": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1784928750.2694056
  },
  "DigiOutsource": {
   "ats": "unknown"
@@ -893,5 +923,230 @@
  "FSB Technology": {
   "ats": "unknown",
   "checked": 1784786971.6618996
+ },
+ "TalentBet": {
+  "ats": "skip",
+  "manual": true
+ },
+ "iGamingHunt": {
+  "ats": "ashby",
+  "token": "igaminghunt",
+  "manual": true
+ },
+ "iGaming Recruitment": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Apercon": {
+  "ats": "skip",
+  "manual": true
+ },
+ "PredictIt": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Sisal": {
+  "ats": "workday",
+  "url": "https://sisal.wd3.myworkdayjobs.com/sisalcorp",
+  "manual": true
+ },
+ "bet365": {
+  "ats": "smartrecruiters",
+  "token": "Bet3651",
+  "manual": true
+ },
+ "FDJ United": {
+  "ats": "workday",
+  "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED",
+  "manual": true
+ },
+ "Superbet": {
+  "ats": "greenhouse",
+  "token": "super",
+  "manual": true
+ },
+ "Super Group": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Betfred": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Lottomatica": {
+  "ats": "workday",
+  "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers",
+  "manual": true
+ },
+ "Novibet": {
+  "ats": "workable",
+  "token": "novibet",
+  "manual": true
+ },
+ "Underdog": {
+  "ats": "greenhouse",
+  "token": "underdogfantasy",
+  "manual": true
+ },
+ "SportyBet / Sporty Group": {
+  "ats": "greenhouse",
+  "token": "sportygroup",
+  "manual": true
+ },
+ "BetKing": {
+  "ats": "workable",
+  "token": "kingmakers",
+  "manual": true
+ },
+ "ComeOn Group": {
+  "ats": "workable",
+  "token": "comeon-group",
+  "manual": true
+ },
+ "Casumo": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Videoslots": {
+  "ats": "bamboohr",
+  "token": "videoslots",
+  "manual": true
+ },
+ "Strive Gaming": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Allwyn": {
+  "ats": "skip",
+  "manual": true
+ },
+ "OPAP": {
+  "ats": "successfactors",
+  "token": "career2.successfactors.eu|opapsa",
+  "manual": true
+ },
+ "Tabcorp": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Cirsa": {
+  "ats": "skip",
+  "manual": true
+ },
+ "STS": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Pinnacle": {
+  "ats": "skip",
+  "manual": true
+ },
+ "bet9ja": {
+  "ats": "skip",
+  "manual": true
+ },
+ "betPawa": {
+  "ats": "workable",
+  "token": "betpawa",
+  "manual": true
+ },
+ "Sun International": {
+  "ats": "skip",
+  "manual": true
+ },
+ "KingMakers": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Codere Online": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Wildz Group": {
+  "ats": "teamtailor",
+  "token": "careers.wildz.group",
+  "manual": true
+ },
+ "Betika": {
+  "ats": "skip",
+  "manual": true
+ },
+ "MrQ": {
+  "ats": "teamtailor",
+  "token": "careers.lindar.com",
+  "manual": true
+ },
+ "Snai": {
+  "ats": "skip",
+  "manual": true
+ },
+ "MERKUR Casino UK": {
+  "ats": "skip",
+  "manual": true
+ },
+ "MERKUR GROUP": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Betty": {
+  "ats": "greenhouse",
+  "token": "bettyjobboard",
+  "manual": true
+ },
+ "New Zealand Thoroughbred Racing Inc": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Pragmatic Solutions": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Blip.pt": {
+  "ats": "skip",
+  "manual": true
+ },
+ "MERKUR GAMING": {
+  "ats": "skip",
+  "manual": true
+ },
+ "PawaTech": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Lucky Group": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Exacta Solutions": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Sportsbet": {
+  "ats": "skip",
+  "manual": true
+ },
+ "Myriad": {
+  "ats": "unknown",
+  "checked": 1784928750.2694056
+ },
+ "Play'n GO": {
+  "ats": "unknown",
+  "checked": 1784928750.2694056
+ },
+ "Relax Gaming": {
+  "ats": "unknown",
+  "checked": 1784928750.2694056
+ },
+ "Bragg Gaming": {
+  "ats": "unknown",
+  "checked": 1784928750.2694056
+ },
+ "Jeton": {
+  "ats": "unknown",
+  "checked": 1784928750.2694056
+ },
+ "Amelco UK Ltd": {
+  "ats": "smartrecruiters",
+  "token": "amelcouk"
  }
 }
