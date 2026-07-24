@@ -79,6 +79,7 @@
   .job .m{margin-top:5px;font-size:13.5px;color:var(--slate);display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
   .job .co{color:var(--royal);font-weight:500;}
   .job .nodate{color:var(--mist);font-style:italic;}
+  .job .multi{color:var(--royal);}
   .job .agency{margin-left:7px;padding:1px 7px;border:1px solid var(--line2);border-radius:100px;
                font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
                text-transform:uppercase;color:var(--slate);}
@@ -271,6 +272,10 @@ const EXCLUDE_GROUPS = [
     rx: /\b(cco|cmo|marketing|crm|social|seo|ppc|affiliate|brand|content|copywriter|designer|creative|acquisition|retention|vip|country manager|sales|business development|bd|partnership|commercial)\b/i },
   { id: "fin", label: "Finance",
     rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep|fp&a|billing|invoic)\b/i },
+  { id: "ret", label: "Retail & Shop floor",
+    // Entain and Tipico post hundreds of individual betting-shop vacancies
+    rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer)\b/i,
+    keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director)\b/i },
   { id: "ops", label: "Operational & Business Functions",
     rx: /\b(people|hr|human resources|talent|recruit|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal)\b/i },
 ];
@@ -424,7 +429,8 @@ function render(){
   if(selectedLocs.length) out = out.filter(j => selectedLocs.includes(bucket(j.l)));
   if(excluded.size){
     const active = EXCLUDE_GROUPS.filter(g => excluded.has(g.id));
-    out = out.filter(j => !active.some(g => g.rx.test(j.t || "")));
+    out = out.filter(j => !active.some(g =>
+      g.rx.test(j.t || "") && !(g.keep && g.keep.test(j.t || ""))));
   }
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
@@ -459,6 +465,15 @@ function render(){
     list.innerHTML = '<div class="empty">No roles match that search.</div>';
     return;
   }
+  // collapse repeats of the same title at the same company into one row
+  const groups = new Map();
+  for(const j of out){
+    const k = (j.c||"") + "\u0000" + (j.t||"").trim().toLowerCase();
+    if(groups.has(k)){ groups.get(k).dupes.push(j); }
+    else { groups.set(k, Object.assign({}, j, {dupes: []})); }
+  }
+  out = [...groups.values()];
+
   const pages = Math.max(1, Math.ceil(out.length / PER_PAGE));
   if(page > pages) page = pages;
   const slice = out.slice((page-1)*PER_PAGE, page*PER_PAGE);
@@ -468,7 +483,14 @@ function render(){
       <div class="t">${j.t||""}</div>
       ${showLevel && level(j.t) < LEVELS.length ? '<span class="lvl">'+LEVELS[level(j.t)].name+'</span>' : ""}
       <div class="m"><span class="co">${j.c||""}</span>${AGENCIES.has(j.c)?'<span class="agency">agency</span>':""}
-        ${j.l?'<span class="dot">&middot;</span><span>'+j.l+"</span>":""}
+        ${(() => {
+          if(!j.dupes || !j.dupes.length) return j.l ? '<span class="dot">&middot;</span><span>'+j.l+"</span>" : "";
+          const locs = new Set([j.l, ...j.dupes.map(d => d.l)].filter(Boolean));
+          const n = j.dupes.length + 1;
+          return '<span class="dot">&middot;</span><span class="multi">'
+               + (locs.size > 1 ? locs.size + " locations" : (j.l || "")) 
+               + " &middot; " + n + " openings</span>";
+        })()}
         <span class="dot">&middot;</span><span${j.p?"":' class="nodate"'}>${j.p?ago(Date.parse(j.p)):"date not listed"}</span>
       </div>
     </a>`).join("") + pager(page, pages, out.length);
