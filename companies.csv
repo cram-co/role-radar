@@ -14,7 +14,7 @@ Talentgrator,Recruitment agency,detect,iGaming recruitment platform,
 Novig,Operator - Prediction,greenhouse,Sports prediction market / betting exchange; CFTC-designated; NY,
 Myriad,Operator - Prediction,detect,Prediction market platform,
 Manifold Markets,Operator - Prediction,detect,Prediction market; small team,
-PredictIt,Operator - Prediction,detect,Prediction market,
+PredictIt,Operator - Prediction,detect,WRONG MATCH - bamboohr:predictit is a Dutch engineering firm in Delft. Needs the real board.,skip
 Opinion,Operator - Prediction,detect,Prediction market platform,
 Hedgehog Markets,Operator - Prediction,detect,Prediction market platform,
 Sporttrade,Operator - Prediction,detect,US sports betting exchange,
@@ -80,7 +80,7 @@ EveryMatrix,Supplier - Platform,detect,,
 Altenar,Supplier - Sportsbook,detect,,
 Delasport,Supplier - Platform,detect,,
 White Hat Gaming,Supplier - Platform,detect,,
-Strive Gaming,Supplier - Platform US,detect,,
+Strive Gaming,Supplier - Platform US,detect,SUSPECT - breezy:strive returned a generic Laravel role; verify before re-enabling.,skip
 Kambi,Supplier - Sportsbook,lever (likely),,
 OpenBet,Supplier - Sportsbook,detect,,
 Gentoo Media (ex-GiG),Affiliate / Media,detect,,
@@ -118,12 +118,12 @@ ATG,Racing / Operator - Sweden,detect,,
 Betclic (Banijay Gaming),Operator - France,detect,,
 Admiral,Operator - Austria,detect,Banijay Gaming / Novomatic brand,
 Fortuna Entertainment Group,Operator - CEE,detect," | bespoke Azure Easy Apply app, handled by scrape_fortuna",skip
-STS,Operator - Poland,detect,Entain CEE,
+STS,Operator - Poland,detect,WRONG MATCH - greenhouse:sts resolved to a US plumbing company. Needs the real board.,skip
 Rhino Entertainment,Operator - Growth,detect,,
 TopSport,Operator - Baltics,detect,,
 Yolo Group,Operator / Supplier - Crypto,detect,,
 Caliente,Operator - Mexico,detect,,
-Pinnacle,Operator,detect,,
+Pinnacle,Operator,detect,WRONG MATCH - bamboohr:pinnacle is Pinnacle Midlands Health Network (NZ healthcare). Needs the real sportsbook board.,skip
 bet9ja,Operator - Africa,detect,"in-house careers site, handled by scrape_custom",skip
 betPawa,Operator - Africa,detect,Workable - no openings at time of setup,workable:betpawa
 Sun International,Operator - Africa,detect,"MCI DirectHire, mostly brick-and-mortar - deliberately not chased",skip
@@ -240,7 +240,7 @@ IGT PlayDigital,Operator,detect,From LinkedIn follows,
 SoftGamings,Supplier - Content,detect,From LinkedIn follows,
 BrainRocket,Operator,detect,From LinkedIn follows,
 The Rank Group plc,Operator,detect,From LinkedIn follows,
-New Zealand Thoroughbred Racing Inc,Racing,detect,From LinkedIn follows,
+New Zealand Thoroughbred Racing Inc,Racing,detect,"WRONG MATCH - slug ""new"" hit an unrelated Greenhouse board.",skip
 Betway Global,Operator,detect,From LinkedIn follows,
 Red Tiger,Supplier - Content,detect,From LinkedIn follows,
 GAMING1,Supplier - Content,detect,From LinkedIn follows,
@@ -263,7 +263,7 @@ Pragmatic Solutions,Operator,detect,From LinkedIn follows,
 DAZN,Operator,detect,From LinkedIn follows,
 VAIX a Sportradar Company,Operator,detect,From LinkedIn follows,
 Voxbet,Sports/Prediction,detect,From LinkedIn follows,
-Blip.pt,Operator,detect,From LinkedIn follows,
+Blip.pt,Operator,detect,SUSPECT - greenhouse:blip returned a Los Angeles social role; verify before re-enabling.,skip
 MERKUR GAMING,Supplier - Content,detect,From LinkedIn follows,
 Junglee Games,Supplier - Content,detect,From LinkedIn follows,
 GGNetwork,Poker,detect,From LinkedIn follows,

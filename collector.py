@@ -46,6 +46,16 @@ session.headers.update(HEADERS)
 
 # ---------------------------------------------------------------- slugs
 
+# tokens too generic to be anyone's unique board id
+_GENERIC_SLUGS = {
+    "new", "the", "all", "one", "our", "job", "jobs", "pro", "max", "top", "key",
+    "big", "get", "now", "web", "app", "inc", "ltd", "plc", "group", "global",
+    "digital", "online", "gaming", "games", "sports", "media", "tech", "data",
+    "play", "bet", "win", "live", "next", "first", "prime", "core", "edge",
+    "strive", "blip", "spark", "pulse", "nova", "apex", "vega", "orbit",
+}
+
+
 def slug_candidates(name: str):
     """Generate likely ATS tokens from a company name."""
     base = re.sub(r"\(.*?\)", "", name)          # drop parentheticals
@@ -58,8 +68,15 @@ def slug_candidates(name: str):
     joined = "".join(words)
     dashed = "-".join(words)
     for c in (joined, dashed, words[0], "".join(words[:2])):
-        if c and c not in cands and len(c) > 2:
-            cands.append(c)
+        # Reject short or generic tokens outright. A three-letter slug like
+        # "new", "sts" or "pro" will almost always belong to someone else, and a
+        # false match is far more damaging than a miss — it silently fills the
+        # feed with another industry's jobs.
+        if not c or c in cands:
+            continue
+        if len(c) < 5 or c in _GENERIC_SLUGS:
+            continue
+        cands.append(c)
     return cands[:4]
 
 
