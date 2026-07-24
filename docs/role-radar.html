@@ -265,7 +265,8 @@ let page = 1;
 // department field is blank for most sources. Ordered as Heath grouped them.
 const EXCLUDE_GROUPS = [
   { id: "it",  label: "IT & Engineering",
-    rx: /\b(developer|engineer|engineering|devops|sre|qa|tester|architect|programmer|frontend|front-end|backend|back-end|fullstack|full-stack|java|python|\.net|php|react|node|data scientist|sysadmin|infrastructure|cto|cio|security)\b/i },
+    // "cto" alone missed "Chief Technology Officer", so the word forms are here too
+    rx: /\b(developer|engineer|engineering|devops|devsecops|sre|qa|tester|testing|architect|programmer|coder|frontend|front-end|backend|back-end|fullstack|full-stack|java|javascript|python|\.net|c\+\+|php|ruby|golang|react|node|angular|vue|sysadmin|system administrator|systems administrator|infrastructure|cto|cio|technolog(y|ies|ical)|technical|software|\bit\b|platform|cloud|devops|database|dba|\bapi\b|sdk|mobile|android|ios|cyber|security|penetration|scrum|automation engineer|data engineer|data scientist|machine learning|\bml\b|integration)\b/i },
   { id: "com", label: "Commercial & Marketing",
     rx: /\b(cco|cmo|marketing|crm|social|seo|ppc|affiliate|brand|content|copywriter|designer|creative|acquisition|retention|vip|country manager|sales|business development|bd|partnership|commercial)\b/i },
   { id: "fin", label: "Finance",
