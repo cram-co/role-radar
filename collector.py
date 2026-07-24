@@ -1632,6 +1632,17 @@ def main():
         except Exception as e:
             print(f"{name}: FAILED ({e})")
 
+    # Warn when several company rows resolve to the same board — that's either a
+    # duplicate entry or a slug that matched somebody else's careers site.
+    boards = {}
+    for j in all_jobs:
+        m = re.match(r"https?://([^/]+)", j.get("url") or "")
+        if m:
+            boards.setdefault(m.group(1), set()).add(j["company"])
+    for host, cos in boards.items():
+        if len(cos) > 1:
+            print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
+
     feed = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "job_count": len(all_jobs),

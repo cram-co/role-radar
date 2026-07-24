@@ -197,8 +197,8 @@ Midnite,Operator,detect,From LinkedIn follows,ashby:midnite
 1win,Operator,detect,From LinkedIn follows,
 Konami Gaming,Supplier - Content,detect,From LinkedIn follows,
 Flutter Southern Europe & Africa (SEA),Operator,detect,From LinkedIn follows,
-MERKUR Casino UK,Operator,detect,From LinkedIn follows,
-MERKUR GROUP,Operator,detect,From LinkedIn follows,
+MERKUR Casino UK,Operator,detect,"WRONG MATCH - merkur.recruitee.com is Merkur Versicherung, an Austrian insurance company (life insurance, property, construction)",skip
+MERKUR GROUP,Operator,detect,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK,skip
 The Pools,Operator,detect,From LinkedIn follows,
 Sportium,Operator,detect,From LinkedIn follows,
 PlayOJO,Operator,detect,From LinkedIn follows,
@@ -259,12 +259,12 @@ Rivalry,Operator,detect,From LinkedIn follows,
 Sportingtech,Sports/Prediction,detect,From LinkedIn follows,
 PointsBet,Sports/Prediction,detect,From LinkedIn follows,
 Dabble,Sports/Prediction,detect,From LinkedIn follows,
-Pragmatic Solutions,Operator,detect,From LinkedIn follows,
+Pragmatic Solutions,Operator,detect,"DUPLICATE - shares pragmatic.teamtailor.com with Pragmatic Play, so every role was listed twice",skip
 DAZN,Operator,detect,From LinkedIn follows,
 VAIX a Sportradar Company,Operator,detect,From LinkedIn follows,
 Voxbet,Sports/Prediction,detect,From LinkedIn follows,
 Blip.pt,Supplier - Platform,detect,Flutter's Porto engineering hub; own board at blip.pt/jobs/ (greenhouse:blip is a different company),skip
-MERKUR GAMING,Supplier - Content,detect,From LinkedIn follows,
+MERKUR GAMING,Supplier - Content,detect,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK,skip
 Junglee Games,Supplier - Content,detect,From LinkedIn follows,
 GGNetwork,Poker,detect,From LinkedIn follows,
 UltraPlay,Operator,detect,From LinkedIn follows,
