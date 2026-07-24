@@ -264,21 +264,46 @@ let page = 1;
 
 // Function groups you can hide. Matched on the job title, because the feed's
 // department field is blank for most sources. Ordered as Heath grouped them.
+// Each role is assigned to exactly ONE group, by the first match in this order,
+// so the set partitions the feed: tick every box and the list empties. Specific
+// functions are tested before broad ones — "Head of Technical Accounting" is
+// Finance, not IT, because Finance is checked first.
 const EXCLUDE_GROUPS = [
-  { id: "it",  label: "IT & Engineering",
-    // "cto" alone missed "Chief Technology Officer", so the word forms are here too
-    rx: /\b(developer|engineer|engineering|devops|devsecops|sre|qa|tester|testing|architect|programmer|coder|frontend|front-end|backend|back-end|fullstack|full-stack|java|javascript|python|\.net|c\+\+|php|ruby|golang|react|node|angular|vue|sysadmin|system administrator|systems administrator|infrastructure|cto|cio|technolog(y|ies|ical)|technical|software|\bit\b|platform|cloud|devops|database|dba|\bapi\b|sdk|mobile|android|ios|cyber|security|penetration|scrum|automation engineer|data engineer|data scientist|machine learning|\bml\b|integration)\b/i },
-  { id: "com", label: "Commercial & Marketing",
-    rx: /\b(cco|cmo|marketing|crm|social|seo|ppc|affiliate|brand|content|copywriter|designer|creative|acquisition|retention|vip|country manager|sales|business development|bd|partnership|commercial)\b/i },
-  { id: "fin", label: "Finance",
-    rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep|fp&a|billing|invoic)\b/i },
   { id: "ret", label: "Retail & Shop floor",
-    // Entain and Tipico post hundreds of individual betting-shop vacancies
     rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer)\b/i,
     keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director)\b/i },
+
+  { id: "trd", label: "Trading & Sportsbook",
+    rx: /\b(trader|trading|odds|pricing|sportsbook|bookmaker|liability)\b/i,
+    keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director)\b/i },
+
+  { id: "fin", label: "Finance",
+    rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep|fp&a|billing|invoic|reconciliation|collections|wealth|actuar)\b/i,
+    // "Customer Account Advisor" and "Key Account Manager" are service and
+    // commercial roles, not finance — let them fall through
+    keep: /\b(customer account|key account|account manager|account executive|account advisor|account director)\b/i },
+
+  { id: "it",  label: "IT & Engineering",
+    rx: /\b(developer|engineer|engineering|devops|devsecops|sre|qa|tester|testing|architect|programmer|coder|frontend|front-end|backend|back-end|fullstack|full-stack|java|javascript|python|\.net|c\+\+|php|ruby|golang|react|node|angular|vue|sysadmin|system administrator|systems administrator|infrastructure|cto|cio|technolog(y|ies|ical)|technical|software|\bit\b|platform|cloud|database|dba|\bapi\b|sdk|mobile|android|ios|cyber|penetration|scrum|automation|data|analytics|intelligence|\bbi\b|machine learning|artificial intelligence|integration|linux|network)\b/i },
+
+  { id: "com", label: "Commercial & Marketing",
+    rx: /\b(cco|cmo|marketing|crm|social|seo|aso|ppc|programmatic|affiliate|brand|content|copywriter|designer|creative|acquisition|retention|vip|loyalty|country manager|sales|business development|partnership|commercial|growth|media|community|engagement|sponsor|vertrieb)\b/i },
+
   { id: "ops", label: "Operational & Business Functions",
-    rx: /\b(people|hr|human resources|talent|recruit|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal)\b/i },
+    rx: /\b(people|hr|human resources|talent|recruit|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|service manager|service advisor|customer|kundeservice|kundenservice|kundeservicemedarbejder|klantenservice|player|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal|counsel|due diligence|procurement|vendor|facilit|office|backoffice|security)\b/i },
+
+  { id: "oth", label: "Everything else", other: true },
 ];
+
+// the single group a title belongs to
+function groupOf(title){
+  const t = title || "";
+  for(const g of EXCLUDE_GROUPS){
+    if(!g.rx) continue;
+    if(g.rx.test(t) && !(g.keep && g.keep.test(t))) return g.id;
+  }
+  return "oth";
+}
 let excluded = (() => {
   try { return new Set(JSON.parse(localStorage.getItem("rr_excluded") || "[]")); }
   catch(e){ return new Set(); }
@@ -428,9 +453,7 @@ function render(){
   if(leadOnly) out = out.filter(j => SENIORITY.test(j.t||""));
   if(selectedLocs.length) out = out.filter(j => selectedLocs.includes(bucket(j.l)));
   if(excluded.size){
-    const active = EXCLUDE_GROUPS.filter(g => excluded.has(g.id));
-    out = out.filter(j => !active.some(g =>
-      g.rx.test(j.t || "") && !(g.keep && g.keep.test(j.t || ""))));
+    out = out.filter(j => !excluded.has(groupOf(j.t)));
   }
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
