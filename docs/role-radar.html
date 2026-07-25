@@ -269,8 +269,8 @@ let page = 1;
 // functions are tested before broad ones — "Head of Technical Accounting" is
 // Finance, not IT, because Finance is checked first.
 const EXCLUDE_GROUPS = [
-  { id: "ret", label: "Retail & Shop floor",
-    rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer)\b/i,
+  { id: "ret", label: "Retail, Casino & Hotel floor",
+    rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer|slot attendant|slot technician|casino host|pit boss|floor supervisor|table games|beverage|bartender|barback|server|waiter|waitress|host|hostess|busser|barista|cook|chef|culinary|kitchen|steward|dishwash\w*|banquet|buffet|restaurant|housekeep\w*|room attendant|guest (room|service)|valet|porter|bell ?(person|staff|hop)|concierge|spa|salon|massage|lifeguard|pool attendant|security officer|surveillance|groundskeep\w*|landscap\w*|maintenance technician|custodian|janitor|laundry|warehouse|usher|ticket|box office|parking)\b/i,
     keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director)\b/i },
 
   { id: "trd", label: "Trading & Sportsbook",
@@ -278,19 +278,19 @@ const EXCLUDE_GROUPS = [
     keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director)\b/i },
 
   { id: "fin", label: "Finance",
-    rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep|fp&a|billing|invoic|reconciliation|collections|wealth|actuar)\b/i,
+    rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep\w*|fp&a|billing|invoic\w*|reconciliation\w*|collections|wealth|actuar)\b/i,
     // "Customer Account Advisor" and "Key Account Manager" are service and
     // commercial roles, not finance — let them fall through
     keep: /\b(customer account|key account|account manager|account executive|account advisor|account director)\b/i },
 
   { id: "it",  label: "IT & Engineering",
-    rx: /\b(developer|engineer|engineering|devops|devsecops|sre|qa|tester|testing|architect|programmer|coder|frontend|front-end|backend|back-end|fullstack|full-stack|java|javascript|python|\.net|c\+\+|php|ruby|golang|react|node|angular|vue|sysadmin|system administrator|systems administrator|infrastructure|cto|cio|technolog(y|ies|ical)|technical|software|\bit\b|platform|cloud|database|dba|\bapi\b|sdk|mobile|android|ios|cyber|penetration|scrum|automation|data|analytics|intelligence|\bbi\b|machine learning|artificial intelligence|integration|linux|network)\b/i },
+    rx: /\b(developer|engineer|engineering|devops|devsecops|sre|qa|tester|testing|architect|programmer|coder|frontend|front-end|backend|back-end|fullstack|full-stack|java|javascript|python|\.net|c\+\+|php|ruby|golang|react|node|angular|vue|sysadmin|system administrator|systems administrator|infrastructure|cto|cio|technolog(y|ies|ical)|technical|software|\bit\b|platform|cloud|database|dba|\bapi\b|sdk|mobile|android|ios|cyber|penetration\w*|scrum|automation|data|analytics|intelligence|\bbi\b|machine learning|artificial intelligence|integration|linux|network)\b/i },
 
   { id: "com", label: "Commercial & Marketing",
-    rx: /\b(cco|cmo|marketing|crm|social|seo|aso|ppc|programmatic|affiliate|brand|content|copywriter|designer|creative|acquisition|retention|vip|loyalty|country manager|sales|business development|partnership|commercial|growth|media|community|engagement|sponsor|vertrieb)\b/i },
+    rx: /\b(cco|cmo|marketing|crm|social|seo|aso|ppc|programmatic|affiliate|brand|content|copywriter\w*|designer|creative|acquisition|retention|vip|loyalty|country manager|sales|business development|partnership|commercial|growth|media|community|engagement|sponsor|vertrieb)\b/i },
 
   { id: "ops", label: "Operational & Business Functions",
-    rx: /\b(people|hr|human resources|talent|recruit|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|service manager|service advisor|customer|kundeservice|kundenservice|kundeservicemedarbejder|klantenservice|player|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal|counsel|due diligence|procurement|vendor|facilit|office|backoffice|security)\b/i },
+    rx: /\b(people|hr|human resources|talent|recruit\w*|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|service manager|service advisor|customer|kundeservice|kundenservice|kundeservicemedarbejder|klantenservice|player|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal|counsel|due diligence|procurement|vendor|facilit\w*|office|backoffice|security)\b/i },
 
   { id: "oth", label: "Everything else", other: true },
 ];
@@ -305,8 +305,13 @@ function groupOf(title){
   return "oth";
 }
 let excluded = (() => {
-  try { return new Set(JSON.parse(localStorage.getItem("rr_excluded") || "[]")); }
-  catch(e){ return new Set(); }
+  // First visit hides floor-level roles: group career sites (Caesars, Entain,
+  // Tipico) carry thousands, and this tool is aimed at senior people. Once the
+  // user changes anything their own choice is stored and respected.
+  try {
+    const saved = localStorage.getItem("rr_excluded");
+    return saved === null ? new Set(["ret"]) : new Set(JSON.parse(saved));
+  } catch(e){ return new Set(["ret"]); }
 })();
 function saveExcluded(){
   try { localStorage.setItem("rr_excluded", JSON.stringify([...excluded])); } catch(e){}
