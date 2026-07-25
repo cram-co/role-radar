@@ -434,6 +434,145 @@ def fetch_bamboohr(token):
     return out
 
 
+def fetch_ultipro(token):
+    """UKG/UltiPro job board. Token is "companyId|boardGuid" — both appear in the
+    board URL: recruiting.ultipro.com/<companyId>/JobBoard/<boardGuid>/..."""
+    if "|" not in token:
+        print(f"      ultipro {token}: need companyId|boardGuid")
+        return []
+    company, board = token.split("|", 1)
+    base = f"https://recruiting.ultipro.com/{company}/JobBoard/{board}"
+    out, page = [], 1
+    for _ in range(10):
+        try:
+            r = session.post(
+                f"{base}/JobBoardView/LoadSearchResults",
+                json={"opportunitySearch": {"Top": 100, "Skip": (page - 1) * 100,
+                                            "QueryString": "", "OrderBy": [], "Filters": []},
+                      "matchCriteria": {"PreferredJobs": [], "Educations": [], "LicenseAndCertifications": [],
+                                        "Skills": [], "hasNoLicenses": False, "SkippedSkills": []}},
+                headers={**AGENCY_UA, "Content-Type": "application/json",
+                         "Accept": "application/json"},
+                timeout=TIMEOUT,
+            )
+            if r.status_code != 200:
+                print(f"      ultipro {company}: HTTP {r.status_code}")
+                break
+            d = r.json()
+        except Exception as e:
+            print(f"      ultipro {company}: {type(e).__name__}")
+            break
+        items = (d.get("opportunities") or d.get("Opportunities") or [])
+        if not items:
+            break
+        for j in items:
+            title = j.get("Title") or j.get("title") or ""
+            if not title:
+                continue
+            locs = j.get("Locations") or []
+            loc = ""
+            if isinstance(locs, list) and locs:
+                a = locs[0] or {}
+                parts = [a.get("City"), (a.get("State") or {}).get("Name") if isinstance(a.get("State"), dict) else a.get("State"),
+                         (a.get("Country") or {}).get("Name") if isinstance(a.get("Country"), dict) else a.get("Country")]
+                loc = ", ".join([str(x) for x in parts if isinstance(x, str) and x])
+            out.append({
+                "title": html.unescape(str(title)).strip(),
+                "location": loc,
+                "department": "",
+                "url": f"{base}/OpportunityDetail?opportunityId={j.get('Id') or j.get('id','')}",
+                "posted_at": j.get("PostedDate") or j.get("postedDate"),
+            })
+        if len(items) < 100:
+            break
+        page += 1
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
+def fetch_icims(token):
+    """iCIMS careers portal. Token is the subdomain, e.g. "careers-gamesglobal".
+    No public JSON API, so the search pages are parsed for /jobs/<id>/<slug> links."""
+    base = f"https://{token}.icims.com"
+    out, seen = [], set()
+    for page in range(1, 11):
+        url = f"{base}/jobs/search?ss=1&in_iframe=1&pr={page - 1}"
+        try:
+            r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        except Exception as e:
+            print(f"      icims {token}: {type(e).__name__}")
+            break
+        if r.status_code != 200:
+            print(f"      icims {token}: HTTP {r.status_code}")
+            break
+        hits = _links_with_titles(r.text, base, "/jobs/")
+        new = 0
+        for u, t in hits:
+            if u in seen or re.search(r"/jobs/search", u):
+                continue
+            seen.add(u)
+            out.append({"title": t, "location": "", "department": "",
+                        "url": u, "posted_at": None})
+            new += 1
+        if page == 1 and not new:
+            print(f"      icims {token}: 200, {len(r.text)} bytes")
+            print(f"         link shapes: {_href_shapes(r.text)}")
+        if not new:
+            break
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
+def fetch_oracle(token):
+    """Oracle HCM Cloud (Fusion) recruiting. Token is "host|siteNumber", both
+    visible in a job URL: https://<host>/hcmUI/CandidateExperience/en/sites/<site>/job/123
+    Oracle exposes a public REST endpoint that the career site itself calls."""
+    if "|" not in token:
+        print(f"      oracle {token}: need host|siteNumber")
+        return []
+    host, site = token.split("|", 1)
+    base = f"https://{host}"
+    api = f"{base}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+    out, offset = [], 0
+    for _ in range(10):
+        url = (f"{api}?onlyData=true&expand=requisitionList.secondaryLocations"
+               f"&finder=findReqs;siteNumber={site},limit=200,offset={offset},"
+               f"sortBy=POSTING_DATES_DESC")
+        try:
+            r = session.get(url, headers={**AGENCY_UA, "Accept": "application/json"},
+                            timeout=TIMEOUT)
+            if r.status_code != 200:
+                print(f"      oracle {site}: HTTP {r.status_code}")
+                break
+            d = r.json()
+        except Exception as e:
+            print(f"      oracle {site}: {type(e).__name__}")
+            break
+        items = d.get("items") or []
+        reqs = []
+        for it in items:
+            reqs.extend(it.get("requisitionList") or [])
+        if not reqs:
+            break
+        for j in reqs:
+            title = html.unescape(str(j.get("Title") or "")).strip()
+            if not title:
+                continue
+            loc = j.get("PrimaryLocation") or j.get("Location") or ""
+            out.append({
+                "title": title,
+                "location": html.unescape(str(loc)).strip(),
+                "department": str(j.get("JobFamily") or ""),
+                "url": f"{base}/hcmUI/CandidateExperience/en/sites/{site}/job/{j.get('Id','')}",
+                "posted_at": j.get("PostedDate") or j.get("PostingStartDate"),
+            })
+        if len(reqs) < 200:
+            break
+        offset += 200
+        time.sleep(REQUEST_DELAY)
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json"""
     d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
@@ -696,6 +835,9 @@ FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "greenhouse_eu": fetch_greenhouse_eu,
     "bamboohr": fetch_bamboohr,
+    "ultipro": fetch_ultipro,
+    "icims": fetch_icims,
+    "oracle": fetch_oracle,
     "successfactors": fetch_successfactors,
     "breezy": fetch_breezy,
     "lever": fetch_lever,
@@ -1420,8 +1562,9 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"]),
     "Betika":       dict(base="https://betika.seamlesshiring.com", marker="/job",
                          listing=["/", "/jobs", "/careers", "/h"]),
+    # listing is client-rendered; the sitemap rung is what should catch /job/{id}
     "PawaTech":     dict(base="https://careers.pawatech.com", marker="/job/",
-                         listing=["/job/", "/jobs/"]),
+                         listing=["/", "/job/", "/jobs/", "/careers"]),
     "Lucky Group":  dict(base="https://careers.lckygroup.com", marker="/jobs/",
                          listing=["/jobs/"]),
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
@@ -1437,6 +1580,14 @@ CUSTOM_BOARDS = {
     # (a US company) — their real board is on their own site.
     "Blip.pt":      dict(base="https://www.blip.pt", marker="/jobs/",
                          listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3"]),
+    "Betclic (Banijay Gaming)": dict(base="https://betclicgroup.com", marker="/job",
+                         listing=["/en/people", "/en/people#jobs", "/en/jobs", "/jobs"]),
+    "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
+                         listing=["/careers/v/", "/careers/", "/careers/v/?page=2"]),
+    "UK Tote Group": dict(base="https://careers.uktotegroup.com", marker="/job/",
+                         listing=["/", "/jobs", "/vacancies", "/search"]),
+    "Greentube (Novomatic)": dict(base="https://careers.greentube.com", marker="/job",
+                         listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
     "Apercon":      dict(base="https://apercon.com", marker="/job",
                          listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
@@ -1523,6 +1674,51 @@ AGENCY_BOARDS = {
     "BettingJobs": scrape_bettingjobs,
     "Van Kaizen": scrape_vankaizen,
 }
+
+
+def _write_company_status(companies, all_jobs, cache):
+    """Refresh the returning / roles / status columns in companies.csv so the
+    file always shows which companies actually produced roles on the last run.
+    Written via a temp file and renamed, so a failure can't leave the collector's
+    own input truncated."""
+    counts = {}
+    for j in all_jobs:
+        counts[j["company"]] = counts.get(j["company"], 0) + 1
+
+    fields = ["company", "category", "returning", "roles", "status",
+              "ats_hint", "ats_token", "notes"]
+    extra = [k for k in (companies[0].keys() if companies else []) if k not in fields]
+
+    for c in companies:
+        name = c["company"].strip()
+        n = counts.get(name, 0)
+        ats = (cache.get(name) or {}).get("ats")
+        c["roles"] = str(n)
+        c["returning"] = "yes" if n else "no"
+        if n:
+            c["status"] = "producing"
+        elif (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-") or ats == "skip":
+            c["status"] = "skipped on purpose"
+        elif ats == "workday_pending":
+            c["status"] = "needs Workday URL"
+        elif ats == "unknown":
+            c["status"] = "no board found"
+        elif ats is None:
+            c["status"] = "not probed yet"
+        else:
+            c["status"] = f"{ats} board found but empty"
+
+    rows = sorted(companies, key=lambda r: (r["returning"] == "yes",
+                                            r["status"], r["company"].lower()))
+    tmp = COMPANIES_CSV.with_suffix(".csv.tmp")
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fields + extra, lineterminator="\r\n")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: (r.get(k) or "") for k in fields + extra})
+    tmp.replace(COMPANIES_CSV)
+    yes = sum(1 for r in rows if r["returning"] == "yes")
+    print(f"\ncompanies.csv refreshed: {yes} returning, {len(rows)-yes} not")
 
 
 # ---------------------------------------------------------------- main
@@ -1642,6 +1838,8 @@ def main():
     for host, cos in boards.items():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
+
+    _write_company_status(companies, all_jobs, cache)
 
     feed = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
