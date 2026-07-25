@@ -496,7 +496,11 @@ def fetch_icims(token):
     base = f"https://{token}.icims.com"
     out, seen = [], set()
     for page in range(1, 11):
-        url = f"{base}/jobs/search?ss=1&in_iframe=1&pr={page - 1}"
+        paths = [f"/jobs/search?ss=1&in_iframe=1&pr={page - 1}",
+                 f"/jobs/search?pr={page - 1}",
+                 f"/jobs/search?ss=1&searchRelation=keyword_all&pr={page - 1}",
+                 f"/jobs?pr={page - 1}"]
+        url = base + paths[0]
         try:
             r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
         except Exception as e:
@@ -505,6 +509,17 @@ def fetch_icims(token):
         if r.status_code != 200:
             print(f"      icims {token}: HTTP {r.status_code}")
             break
+        if len(r.text) < 800 and page == 1:
+            for alt in paths[1:]:
+                try:
+                    r2 = session.get(base + alt, headers=AGENCY_UA, timeout=TIMEOUT)
+                    if r2.status_code == 200 and len(r2.text) > len(r.text):
+                        print(f"      icims {token}: using {alt} ({len(r2.text)} bytes)")
+                        r = r2
+                        break
+                except Exception:
+                    continue
+                time.sleep(REQUEST_DELAY)
         hits = _links_with_titles(r.text, base, "/jobs/")
         new = 0
         for u, t in hits:
@@ -803,10 +818,10 @@ def fetch_workday(url):
             print(f"      workday {tenant}/{site}: cxs '{cxs}' error ({type(e).__name__})")
     endpoint = f"https://{tenant}.{wd}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs"
     out, offset = [], 0
-    for _ in range(15):
+    for _ in range(40):
         r = session.post(
             endpoint,
-            json={"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": ""},
+            json={"appliedFacets": {}, "limit": 100, "offset": offset, "searchText": ""},
             timeout=TIMEOUT,
         )
         if r.status_code != 200:
@@ -824,10 +839,16 @@ def fetch_workday(url):
                     "posted_text": j.get("postedOn", ""),
                 }
             )
-        offset += 20
-        if offset >= d.get("total", 0) or not batch:
+        offset += len(batch)
+        total = d.get("total") or 0
+        # a missing or wrong `total` must not halt paging — only an empty batch
+        # or reaching a total we actually trust should stop it
+        if not batch or (total and offset >= total):
             break
         time.sleep(REQUEST_DELAY)
+    if len(out) and len(out) % 20 == 0:
+        print(f"      workday {tenant}/{site}: {len(out)} roles (exact multiple of the "
+              f"page size — check it isn't truncated)")
     return out
 
 
