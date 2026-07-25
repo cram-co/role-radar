@@ -821,7 +821,8 @@ def fetch_workday(url):
     for _ in range(40):
         r = session.post(
             endpoint,
-            json={"appliedFacets": {}, "limit": 100, "offset": offset, "searchText": ""},
+            # Workday's CXS endpoint rejects a limit above 20 with HTTP 422 — do not raise it
+            json={"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": ""},
             timeout=TIMEOUT,
         )
         if r.status_code != 200:
