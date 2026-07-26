@@ -1,12 +1,12 @@
-role-radar collector run: 2026-07-25T15:10:15.212121+00:00
+role-radar collector run: 2026-07-26T11:16:51.212139+00:00
 ============================================================
 
 GAN: 0 roles (breezy)
 Aristocrat Interactive: 190 roles (workday)
 Bally's Interactive: 437 roles (ultipro)
 Bragg Gaming: 2 roles (workday)
-Caesars Digital: 1416 roles (oracle)
-DigiOutsource: 124 roles (workday)
+Caesars Digital: 1419 roles (oracle)
+DigiOutsource: 125 roles (workday)
       icims careers-gamesglobal: 200, 148 bytes
          link shapes: 
 Games Global: 0 roles (icims)
@@ -15,11 +15,11 @@ Veikkaus (incl. Fennica Gaming): 18 roles (oracle)
 Super Group (Betway, Jackpot City, Spin): 62 roles (workday)
       sf opapsa career2.successfactors.eu/sitemap.xml: HTTP 404 text/html
       sf opapsa career2.successfactors.eu/sitemal.xml: HTTP 404 text/html
-      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 202600 bytes, 0 jobIds, 9 anchors
-      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 133764 bytes, 0 jobIds, 6 anchors
-      sf opapsa career2.successfactors.eu/careers?company=opapsa: 200, 184452 bytes, 0 jobIds, 8 anchors
-      sf opapsa career2.successfactors.eu/career?company=opapsa: 200, 184444 bytes, 0 jobIds, 8 anchors
-      sf opapsa career2.successfactors.eu/sfcareer/jobreqcareer?company=opa: 200, 133813 bytes, 0 jobIds, 6 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 202586 bytes, 0 jobIds, 9 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 133750 bytes, 0 jobIds, 6 anchors
+      sf opapsa career2.successfactors.eu/careers?company=opapsa: 200, 184440 bytes, 0 jobIds, 8 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa: 200, 184432 bytes, 0 jobIds, 8 anchors
+      sf opapsa career2.successfactors.eu/sfcareer/jobreqcareer?company=opa: 200, 133799 bytes, 0 jobIds, 6 anchors
       SF/opapsa: 161 script bundle(s) referenced, checking 30
       SF/opapsa: no API URLs found in bundle
       successfactors opapsa: nothing found across 1 host(s)
@@ -43,7 +43,7 @@ BetMGM: 42 roles (workday)
 betr: 11 roles (lever)
 Betsson Group: 127 roles (greenhouse)
 Betting Connections: 2 roles (smartrecruiters)
-Betty: 24 roles (greenhouse)
+Betty: 25 roles (greenhouse)
 BGaming: 1 roles (smartrecruiters)
 Bullfinch Recruitment: 41 roles (breezy)
 Caliente: 7 roles (bamboohr)
@@ -53,7 +53,7 @@ Continent 8: 3 roles (bamboohr)
 Dabble: 10 roles (teamtailor)
 Delasport: 3 roles (greenhouse)
 Derivco: 5 roles (bamboohr)
-DraftKings: 87 roles (workday)
+DraftKings: 86 roles (workday)
 Easygo: 45 roles (greenhouse)
 Entain: 221 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
@@ -96,14 +96,14 @@ Playson: 22 roles (ashby)
 Playtech: 106 roles (smartrecruiters)
 Polymarket: 64 roles (ashby)
 Pragmatic Play: 4 roles (teamtailor)
-PrizePicks: 24 roles (greenhouse)
+PrizePicks: 22 roles (greenhouse)
 Rhino Entertainment: 3 roles (workable)
 Rush Street Interactive: 33 roles (greenhouse)
 Silverspin: 11 roles (teamtailor)
 Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola): 4 roles (workday)
 Soft2Bet: 7 roles (greenhouse)
 SoftSwiss: 21 roles (teamtailor)
-Sportradar: 67 roles (smartrecruiters)
+Sportradar: 69 roles (smartrecruiters)
 Sporttrade: 1 roles (bamboohr)
 SportyBet / Sporty Group: 69 roles (greenhouse)
 Stake (Easygo): 26 roles (breezy)
@@ -355,9 +355,9 @@ Greentube (Novomatic): 2 roles (agency board)
    Apercon: link parse -> 18
 Apercon: 18 roles (agency board)
       Allwyn: shell HTTP 404
-      Allwyn https://jobs.recruitis.io/allwyn: 200, 67088 bytes, 0 '/job' refs
+      Allwyn https://jobs.recruitis.io/allwyn: 200, 67095 bytes, 0 '/job' refs
          link shapes present: /assets/* x17, /allwyn/* x12, /favicon.ico x1, /fonts.googleapis.com/* x1, /npm/* x1, /ajax/* x1, /allwyn x1
-      Allwyn https://jobs.recruitis.io/allwyn/: 200, 67076 bytes, 0 '/job' refs
+      Allwyn https://jobs.recruitis.io/allwyn/: 200, 67086 bytes, 0 '/job' refs
          link shapes present: /assets/* x17, /allwyn/* x12, /favicon.ico x1, /fonts.googleapis.com/* x1, /npm/* x1, /ajax/* x1, /allwyn x1
    Allwyn: link parse -> 1
       Allwyn: dropped 1 navigation link(s)
@@ -400,13 +400,13 @@ Pentasia: 116 roles (agency board)
 BettingJobs: 87 roles (agency board)
    Van Kaizen: strategy 1 — JSON-LD
    Van Kaizen: strategy 2 — sitemap
-      sitemap https://www.vankaizen.com: 62 job URLs
+      sitemap https://www.vankaizen.com: 63 job URLs
       json-ld https://vankaizen.com/vacancies/swedish-account-manager-vip: HTTP 429
       json-ld https://vankaizen.com/vacancies/vip-manager-2: HTTP 429
       json-ld https://vankaizen.com/vacancies/vp-of-digital-marketing: HTTP 429
       json-ld https://vankaizen.com/vacancies/vp-of-product-wondr-nation: HTTP 429
       json-ld https://vankaizen.com/vacancies/vp-sales-revenue: HTTP 429
-Van Kaizen: 61 roles (agency board)
+Van Kaizen: 62 roles (agency board)
 !! myhcm.wd3.myworkdayjobs.com is serving 3 company rows: Betway Africa, DigiOutsource, Super Group (Betway, Jackpot City, Spin)
 !! apply.workable.com is serving 5 company rows: 3 Oaks Gaming, BetKing, ComeOn Group, Novibet, Rhino Entertainment
 !! jobs.smartrecruiters.com is serving 10 company rows: Amelco UK Ltd, BGaming, Betting Connections, Entain, Evolution, Playtech, Sportradar, Talentgrator, Tipico, bet365
@@ -418,5 +418,5 @@ Van Kaizen: 61 roles (agency board)
 
 companies.csv refreshed: 113 returning, 175 not
 
-Feed written: 5883 jobs
+Feed written: 5888 jobs
 Unresolved companies (137): 1/ST (Stronach Group), Paysafe, EyeSpy Recruitment, Emerald Zebra, BSQ Talent, Snaitech, 888Africa, Yggdrasil, Push Gaming, Hacksaw Gaming, Inspired Entertainment, Amusnet, EGT Digital, Wazdan, White Hat Gaming, OpenBet, GeoComply, LSports, Racing Post / Spotlight Sports, Churchill Downs / TwinSpires, The Jockey Club, Weatherbys, GGPoker (NSUS Group), 4Poker, MuchBetter, The Lottery Corporation, Hong Kong Jockey Club, Admiral, TopSport, Yolo Group
