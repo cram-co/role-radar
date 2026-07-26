@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-07-26T11:16:51.173143+00:00",
- "job_count": 5888,
+ "generated_at": "2026-07-26T20:21:52.575924+00:00",
+ "job_count": 5880,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -645,17 +645,6 @@
    "location": "USA - New Hampshire, Concord",
    "department": "",
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/USA---New-Hampshire-Concord/Customer-Service-Agent_R0021856",
-   "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Sr Engineer II - Manual Testing",
-   "location": "Noida, UP, IN",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Sr-Engineer-II_R0021114",
    "posted_at": null,
    "posted_text": "Posted 11 Days Ago",
    "company": "Aristocrat Interactive",
@@ -28177,17 +28166,6 @@
    "source": "collector"
   },
   {
-   "title": "Software Engineer, Backend",
-   "location": "Remote - Ireland",
-   "department": "",
-   "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Ireland/Software-Engineer_JR14688-2",
-   "posted_at": null,
-   "posted_text": "Posted 3 Days Ago",
-   "company": "DraftKings",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Operations Supervisor, Jackpocket",
    "location": "North Andover, MA",
    "department": "",
@@ -29427,16 +29405,6 @@
    "posted_at": "2026-06-11T00:23:10-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Software Development Engineer II",
-   "location": "Hyderabad, IN",
-   "department": "Information Technology",
-   "url": "https://jobs.smartrecruiters.com/entain/744000139822309",
-   "posted_at": "2026-07-25T11:34:59.536Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -46888,6 +46856,16 @@
    "source": "collector"
   },
   {
+   "title": "Senior Software Engineer (GO)",
+   "location": "Remote",
+   "department": "Engineering",
+   "url": "http://prizepicks.com/position?gh_jid=7786030003",
+   "posted_at": "2026-06-26T17:49:43-04:00",
+   "company": "PrizePicks",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Senior Software Engineer (React)",
    "location": "Remote",
    "department": "Engineering",
@@ -46923,6 +46901,16 @@
    "department": "Marketing",
    "url": "http://prizepicks.com/position?gh_jid=7798371003",
    "posted_at": "2026-07-08T13:37:01-04:00",
+   "company": "PrizePicks",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Software Engineer II (React Native)",
+   "location": "Remote",
+   "department": "Engineering",
+   "url": "http://prizepicks.com/position?gh_jid=7786028003",
+   "posted_at": "2026-06-26T17:54:54-04:00",
    "company": "PrizePicks",
    "ats": "greenhouse",
    "source": "collector"
@@ -56647,6 +56635,16 @@
    "source": "agency"
   },
   {
+   "title": "Junior Software Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/junior-software-engineer-sydney-eora-nation-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Commercial Wagering Analytics Manager",
    "location": "",
    "department": "",
@@ -56657,10 +56655,30 @@
    "source": "agency"
   },
   {
+   "title": "Venue Support Consultant (MAX - Loyalty)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Field Technician (Contract)",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/field-technician-contract-granville-darug-country-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Warehouse Technician - Retail Terminal Project",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/warehouse-technician-retail-terminal-project-melbourne-kulin-nation-vic-australia-scoresby",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -56687,46 +56705,6 @@
    "source": "agency"
   },
   {
-   "title": "Junior Software Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/junior-software-engineer-sydney-eora-nation-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Warehouse Technician - Retail Terminal Project",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/warehouse-technician-retail-terminal-project-melbourne-kulin-nation-vic-australia-scoresby",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Venue Support Consultant (MAX - Loyalty)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Service Technician",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/service-technician-perth-western-australia-australia-f2209c6d-11cc-4f22-a68b-1e8939a3d0d0",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Workshop Technician",
    "location": "",
    "department": "",
@@ -56747,6 +56725,16 @@
    "source": "agency"
   },
   {
+   "title": "Service Technician",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/service-technician-perth-western-australia-australia-f2209c6d-11cc-4f22-a68b-1e8939a3d0d0",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Field Technician",
    "location": "",
    "department": "",
@@ -56757,10 +56745,10 @@
    "source": "agency"
   },
   {
-   "title": "Field Technician",
+   "title": "Storeperson",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/field-technician-regional-nsw-nsw-australia-8fb3fdf3-f969-4088-9c5b-2a1b06ee6751",
+   "url": "https://careers.tabcorp.com.au/jobs/storeperson-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -56787,20 +56775,10 @@
    "source": "agency"
   },
   {
-   "title": "Storeperson",
+   "title": "Field Technician",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/storeperson-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Oncourse Operator (Casual) Sydney",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/oncourse-operator-casual-sydney-sydney-eora-nation-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/field-technician-regional-nsw-nsw-australia-8fb3fdf3-f969-4088-9c5b-2a1b06ee6751",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -56811,6 +56789,16 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/senior-manager-financial-crime-governance-reporting-sydney-eora-nation-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Oncourse Operator (Casual) Sydney",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/oncourse-operator-casual-sydney-sydney-eora-nation-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -56847,36 +56835,6 @@
    "source": "agency"
   },
   {
-   "title": "Senior Network Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-network-engineer-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Security Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-security-engineer-ann-street-qld-australia-brisbane-turrbal-country-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Network Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/network-engineer-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Oncourse Customer Service Operator",
    "location": "",
    "department": "",
@@ -56887,30 +56845,10 @@
    "source": "agency"
   },
   {
-   "title": "Vulnerability Analyst",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/vulnerability-analyst-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "import \"sites/pages_bs5_im\" import \"sites/videojsandyoutube\"",
    "location": "",
    "department": "",
    "url": "https://careers.sportsbet.com.au/assets/sites/controllers/jobs/filter_controller-e66637dc.js",
-   "posted_at": null,
-   "company": "Sportsbet",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Junior Software Engineer (Java)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/junior-software-engineer-java-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -56937,20 +56875,10 @@
    "source": "agency"
   },
   {
-   "title": "Data Science Lead",
+   "title": "Junior Software Engineer (Java)",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/data-science-lead-melbourne-vic-australia-6fe55588-6d03-456e-9d6f-5d8ecce81bce",
-   "posted_at": null,
-   "company": "Sportsbet",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Sports Trader Operator - Tennis",
-   "location": "",
-   "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/sports-trader-operator-tennis-melbourne-vic-australia-275aeab3-d002-4d78-b5f2-7e2dedd519aa",
+   "url": "https://careers.sportsbet.com.au/jobs/junior-software-engineer-java-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -56967,30 +56895,20 @@
    "source": "agency"
   },
   {
-   "title": "Senior Full Stack Engineer",
+   "title": "Sports Trader Operator - Tennis",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/senior-full-stack-engineer-melbourne-vic-australia",
+   "url": "https://careers.sportsbet.com.au/jobs/sports-trader-operator-tennis-melbourne-vic-australia-275aeab3-d002-4d78-b5f2-7e2dedd519aa",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Senior Legal Counsel - Corporate & Commercial",
+   "title": "Data Science Lead",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/senior-legal-counsel-corporate-commercial-melbourne-vic-australia",
-   "posted_at": null,
-   "company": "Sportsbet",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Risk and Trade Commercial Manager",
-   "location": "",
-   "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/senior-risk-and-trade-commercial-manager-melbourne-vic-australia",
+   "url": "https://careers.sportsbet.com.au/jobs/data-science-lead-melbourne-vic-australia-6fe55588-6d03-456e-9d6f-5d8ecce81bce",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -57001,6 +56919,26 @@
    "location": "",
    "department": "",
    "url": "https://careers.sportsbet.com.au/jobs/software-engineer-java-melbourne-vic-australia-507dac33-d531-430b-802e-4c14b94398bd",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Full Stack Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/senior-full-stack-engineer-melbourne-vic-australia",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Risk and Trade Commercial Manager",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/senior-risk-and-trade-commercial-manager-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -58141,26 +58079,6 @@
    "location": "Malta",
    "department": "",
    "url": "https://www.pentasia.com/careers/account-manager-malta-based-on-site-malta-38785-29106",
-   "posted_at": null,
-   "company": "Pentasia",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Content Manager - Maternity Cover - Dutch Speaking - Malta",
-   "location": "Europe",
-   "department": "",
-   "url": "https://www.pentasia.com/careers/content-manager-maternity-cover-dutch-speaking-malta-europe-38781-29102",
-   "posted_at": null,
-   "company": "Pentasia",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Game Mathematician",
-   "location": "Europe",
-   "department": "",
-   "url": "https://www.pentasia.com/careers/senior-game-mathematician-europe-38779-29101",
    "posted_at": null,
    "company": "Pentasia",
    "ats": "agency",
