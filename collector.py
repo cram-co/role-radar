@@ -588,6 +588,43 @@ def fetch_oracle(token):
     return out
 
 
+def fetch_freshteam(token):
+    """Freshworks Freshteam board at https://<token>.freshteam.com/jobs.
+    Server-rendered, but each anchor carries the full job blurb, so the title is
+    taken from the URL slug (clean and deterministic) rather than the link text.
+    The location is read off the tail of the anchor, which ends "City, Region Type"."""
+    base = f"https://{token}.freshteam.com"
+    try:
+        r = session.get(f"{base}/jobs", headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      freshteam {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      freshteam {token}: HTTP {r.status_code}")
+        return []
+    out, seen = [], set()
+    for url, text in _links_with_titles(r.text, base, "/jobs/"):
+        if url in seen or url.rstrip("/").endswith("/jobs"):
+            continue
+        seen.add(url)
+        slug = url.rstrip("/").rsplit("/", 1)[-1]
+        words = [w for w in re.split(r"[-_]+", slug) if w]
+        if not words:
+            continue
+        title = " ".join(_FIX_CASE.get(w.title(), w.title()) for w in words)
+        loc = ""
+        # no dots in the class, or the trailing "..." of the blurb gets swallowed
+        m = re.search(r"([A-Z][A-Za-z '-]{2,24},\s*[A-Z][A-Za-z '-]{2,24})\s*"
+                      r"(?:Full Time|Part Time|Contract|Internship|Freelance)\s*$", text)
+        if m:
+            loc = m.group(1).strip()
+        out.append({"title": title, "location": loc, "department": "",
+                    "url": url, "posted_at": None})
+    if not out:
+        print(f"      freshteam {token}: 200 but no job links parsed")
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json"""
     d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
@@ -859,6 +896,7 @@ FETCHERS = {
     "bamboohr": fetch_bamboohr,
     "ultipro": fetch_ultipro,
     "icims": fetch_icims,
+    "freshteam": fetch_freshteam,
     "oracle": fetch_oracle,
     "successfactors": fetch_successfactors,
     "breezy": fetch_breezy,
@@ -1610,6 +1648,8 @@ CUSTOM_BOARDS = {
                          listing=["/", "/jobs", "/vacancies", "/search"]),
     "Greentube (Novomatic)": dict(base="https://careers.greentube.com", marker="/job",
                          listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
+    "ARRISE (global)": dict(base="https://arrise.com", marker="/job",
+                         listing=["/careers", "/careers/", "/jobs", "/en/careers"]),
     "Apercon":      dict(base="https://apercon.com", marker="/job",
                          listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a

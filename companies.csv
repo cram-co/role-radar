@@ -21,7 +21,7 @@ Amelco Limited,Supplier - Platform,no,0,no board found,detect,,From LinkedIn fol
 Amusnet,Supplier - Content,no,0,no board found,detect,,
 APE | Poker Technology,Poker,no,0,no board found,detect,,From LinkedIn follows
 Aristocrat Interactive,Supplier - Content,no,0,no board found,detect,https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite,"Aristocrat group Workday tenant - may include land-based slot roles, watch the mix"
-ARRISE,Operator,no,0,no board found,detect,,From LinkedIn follows
+ARRISE,Operator,no,0,no board found,detect,freshteam:arrise,"Services group powering Pragmatic Play, 6,000+ staff. Freshteam board is the India entity (Hyderabad, Kolkata, Noida)"
 Asia Gaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 Aspire Global,Operator,no,0,no board found,detect,,From LinkedIn follows
 Bally's Interactive,Operator,no,0,no board found,detect,ultipro:TWI1006TRWH|b9cc79c4-75a2-4800-8508-16504f7a2d90,UKG/UltiPro job board
@@ -259,7 +259,7 @@ Pentasia,Recruitment agency,yes,116,producing,detect,skip,bespoke scraper in col
 Playson,Supplier - Content,yes,22,producing,detect,,
 Playtech,Supplier - Platform,yes,106,producing,detect,,
 Polymarket,Sports/Prediction,yes,64,producing,detect,,From LinkedIn follows
-Pragmatic Play,Supplier - Content,yes,4,producing,detect,,
+Pragmatic Play,Supplier - Content,yes,4,producing,detect,,Teamtailor board carries only a few roles - most hiring runs through ARRISE
 PrizePicks,Sports/Prediction,yes,24,producing,detect,,From LinkedIn follows
 Rhino Entertainment,Operator - Growth,yes,3,producing,detect,,
 Rush Street Interactive,Operator - US,yes,33,producing,detect,,
@@ -287,3 +287,4 @@ ZEAL Network,Lottery,yes,16,producing,detect,,
 Flutter Group (corporate),Operator - Tier 1,no,0,not probed yet,detect,https://flutterbe.wd3.myworkdayjobs.com/Group_External,Flutter plc group functions; third Workday tenant alongside FlutterInt and FlutterUKI
 Betway Africa,Operator - Africa,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjobs.com/Betway_Africa,Super Group; own Workday tenant
 Jumpman Gaming,Operator,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjobs.com/jumpman,"Super Group; own Workday tenant, no open roles at time of setup"
+ARRISE (global),Supplier - Content,no,0,not probed yet,detect,skip,"arrise.com/careers blocks bots - handled by scrape_custom; global roles across Gibraltar, Malta, Romania, Serbia, Bulgaria"
