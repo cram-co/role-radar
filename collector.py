@@ -499,7 +499,9 @@ def fetch_icims(token):
         paths = [f"/jobs/search?ss=1&in_iframe=1&pr={page - 1}",
                  f"/jobs/search?pr={page - 1}",
                  f"/jobs/search?ss=1&searchRelation=keyword_all&pr={page - 1}",
-                 f"/jobs?pr={page - 1}"]
+                 f"/jobs?pr={page - 1}",
+                 f"/jobs/search?ss=1&hashed=-625966102&mobile=false&width=1200&pr={page - 1}",
+                 f"/search?pr={page - 1}"]
         url = base + paths[0]
         try:
             r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
@@ -532,6 +534,12 @@ def fetch_icims(token):
         if page == 1 and not new:
             print(f"      icims {token}: 200, {len(r.text)} bytes")
             print(f"         link shapes: {_href_shapes(r.text)}")
+            urls = _sitemap_job_urls(base, "/jobs/")
+            if urls:
+                derived = _titles_from_urls(urls, f"icims:{token}")
+                if derived:
+                    print(f"      icims {token}: sitemap -> {len(derived)}")
+                    return derived
         if not new:
             break
         time.sleep(REQUEST_DELAY)
@@ -621,8 +629,87 @@ def fetch_freshteam(token):
         out.append({"title": title, "location": loc, "department": "",
                     "url": url, "posted_at": None})
     if not out:
-        print(f"      freshteam {token}: 200 but no job links parsed")
+        print(f"      freshteam {token}: listing had no job links, trying the sitemap")
+        urls = _sitemap_job_urls(base, "/jobs/")
+        if urls:
+            out = _titles_from_urls(urls, f"freshteam:{token}")
+            print(f"      freshteam {token}: sitemap -> {len(out)}")
     return out
+
+
+def fetch_jobvite(token):
+    """Jobvite careers portal at jobs.jobvite.com/<token>. Server-rendered list."""
+    base = f"https://jobs.jobvite.com/{token}"
+    try:
+        r = session.get(base, headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      jobvite {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      jobvite {token}: HTTP {r.status_code}")
+        return []
+    out, seen = [], set()
+    for url, title in _links_with_titles(r.text, "https://jobs.jobvite.com", "/job/"):
+        if url in seen:
+            continue
+        seen.add(url)
+        out.append({"title": title, "location": "", "department": "",
+                    "url": url, "posted_at": None})
+    if not out:
+        print(f"      jobvite {token}: 200, {len(r.text)} bytes")
+        print(f"         link shapes: {_href_shapes(r.text)}")
+    return out
+
+
+def fetch_betterteam(token):
+    """Betterteam board at <token>.betterteam.com — a simple server-rendered list."""
+    base = f"https://{token}.betterteam.com"
+    try:
+        r = session.get(base, headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      betterteam {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      betterteam {token}: HTTP {r.status_code}")
+        return []
+    out, seen = [], set()
+    for marker in ("/job/", "/jobs/", "/careers/"):
+        for url, title in _links_with_titles(r.text, base, marker):
+            if url in seen or url.rstrip("/").endswith(("/job", "/jobs")):
+                continue
+            seen.add(url)
+            out.append({"title": title, "location": "", "department": "",
+                        "url": url, "posted_at": None})
+        if out:
+            break
+    if not out:
+        print(f"      betterteam {token}: 200, {len(r.text)} bytes")
+        print(f"         link shapes: {_href_shapes(r.text)}")
+    return out
+
+
+def fetch_rippling(token):
+    """Rippling ATS board at ats.rippling.com/<token>/jobs."""
+    base = "https://ats.rippling.com"
+    for path in (f"/{token}/jobs", f"/en-GB/{token}/jobs", f"/en-US/{token}/jobs"):
+        try:
+            r = session.get(base + path, headers=AGENCY_UA, timeout=TIMEOUT)
+        except Exception:
+            continue
+        if r.status_code != 200:
+            continue
+        out, seen = [], set()
+        for url, title in _links_with_titles(r.text, base, "/jobs/"):
+            if url in seen or url.rstrip("/").endswith("/jobs"):
+                continue
+            seen.add(url)
+            out.append({"title": title, "location": "", "department": "",
+                        "url": url, "posted_at": None})
+        if out:
+            return out
+        print(f"      rippling {token}{path}: 200, {len(r.text)} bytes")
+        print(f"         link shapes: {_href_shapes(r.text)}")
+    return []
 
 
 def fetch_breezy(token):
@@ -897,6 +984,9 @@ FETCHERS = {
     "ultipro": fetch_ultipro,
     "icims": fetch_icims,
     "freshteam": fetch_freshteam,
+    "jobvite": fetch_jobvite,
+    "betterteam": fetch_betterteam,
+    "rippling": fetch_rippling,
     "oracle": fetch_oracle,
     "successfactors": fetch_successfactors,
     "breezy": fetch_breezy,
@@ -1648,13 +1738,31 @@ CUSTOM_BOARDS = {
                          listing=["/", "/jobs", "/vacancies", "/search"]),
     "Greentube (Novomatic)": dict(base="https://careers.greentube.com", marker="/job",
                          listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
+    "Play'n GO":    dict(base="https://talenthub.playngo.com", marker="/job",
+                         listing=["/jobs/", "/jobs", "/"]),
+    "SPRIBE":       dict(base="https://spribe.hurma.work", marker="/vacanc",
+                         listing=["/public-vacancies/", "/public-vacancies"]),
+    "EGT Digital":  dict(base="https://egt-digital.skillie.ai", marker="/job",
+                         listing=["/jobs/", "/jobs"]),
+    "EvenBet Gaming": dict(base="https://evenbetgaming.com", marker="/vacanc",
+                         listing=["/vacancies/", "/vacancies"]),
+    "Inspired Entertainment": dict(base="https://careers.inseinc.com", marker="/job/",
+                         listing=["/", "/jobs", "/search"]),
+    "Amusnet":      dict(base="https://jobs.amusnet.com", marker="/job",
+                         listing=["/Interactive/", "/Interactive/job/", "/"]),
+    "Nolimit City®": dict(base="https://career.nolimitcity.com", marker="/career/",
+                         listing=["/", "/career/"]),
+    "Push Gaming":  dict(base="https://www.pushgaming.com", marker="/careers/",
+                         listing=["/careers/join-our-team/", "/careers/"]),
     "ARRISE (global)": dict(base="https://arrise.com", marker="/job",
                          listing=["/careers", "/careers/", "/jobs", "/en/careers"]),
     "Apercon":      dict(base="https://apercon.com", marker="/job",
                          listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
     # completely separate system — the SuccessFactors work doesn't reach them.
-    "Allwyn":       dict(base="https://jobs.recruitis.io", marker="/job",
+    # Recruitis puts each job at /<tenant>/<id>, not /job/<id> — the run log's
+    # link-shape report showed "/allwyn/* x10" while "/job" matched nothing
+    "Allwyn":       dict(base="https://jobs.recruitis.io", marker="/allwyn/",
                          listing=["/allwyn", "/allwyn/"],
                          extra=["https://www.allwyn.co.uk/job-board"]),
 }

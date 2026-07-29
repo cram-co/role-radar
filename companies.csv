@@ -16,9 +16,9 @@ PokerStars,Operator - Tier 1,no,0,needs Workday URL,workday (likely),skip,roles 
 7bet,Operator,no,0,no board found,detect,,From LinkedIn follows
 888Africa,Operator - Africa,no,0,no board found,detect,,Prior engagement
 Admiral,Operator - Austria,no,0,no board found,detect,,Banijay Gaming / Novomatic brand
-AGS,Supplier - Content,no,0,no board found,detect,,
+AGS,Supplier - Content,no,0,no board found,detect,jobvite:agscareer,Jobvite (Play AGS); a Betterteam board also exists but Jobvite looks primary
 Amelco Limited,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-Amusnet,Supplier - Content,no,0,no board found,detect,,
+Amusnet,Supplier - Content,no,0,no board found,detect,skip,"jobs.amusnet.com, handled by scrape_custom (SuccessFactors sits behind it)"
 APE | Poker Technology,Poker,no,0,no board found,detect,,From LinkedIn follows
 Aristocrat Interactive,Supplier - Content,no,0,no board found,detect,https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite,"Aristocrat group Workday tenant - may include land-based slot roles, watch the mix"
 ARRISE,Operator,no,0,no board found,detect,freshteam:arrise,"Services group powering Pragmatic Play, 6,000+ staff. Freshteam board is the India entity (Hyderabad, Kolkata, Noida)"
@@ -48,11 +48,11 @@ DAZN,Operator,no,0,no board found,detect,,From LinkedIn follows
 DAZN Bet,Operator,no,0,no board found,detect,,From LinkedIn follows
 DigiOutsource,Operator,no,0,no board found,detect,https://myhcm.wd3.myworkdayjobs.com/digioutsource,Super Group tech arm; own Workday tenant on myhcm
 Digitain,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-EGT Digital,Supplier - Content,no,0,no board found,detect,,
+EGT Digital,Supplier - Content,no,0,no board found,detect,skip,"skillie.ai, handled by scrape_custom"
 Emerald Zebra,Recruitment agency,no,0,no board found,detect,,Cyprus; iGaming fintech and tech
-EvenBet Gaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
+EvenBet Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, handled by scrape_custom"
 evoke,Operator,no,0,no board found,detect,,From LinkedIn follows
-Evoplay,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
+Evoplay,Supplier - Content,no,0,no board found,detect,greenhouse:evoplaygames,"Greenhouse, EU-hosted board"
 EyeSpy Recruitment,Recruitment agency,no,0,no board found,detect,,Gibraltar/UK iGaming specialist
 Fanatics,Operator,no,0,no board found,detect,,From LinkedIn follows
 FEG,Operator,no,0,no board found,detect,,From LinkedIn follows
@@ -72,14 +72,13 @@ GGPoker (NSUS Group),Poker,no,0,no board found,detect,,
 GiG (platform),Supplier - Platform,no,0,no board found,detect,skip,roles come through Gentoo Media (ex-GiG)
 GoldBet,Operator,no,0,no board found,detect,,From LinkedIn follows
 Greentube (Novomatic),Supplier - Content,no,0,no board found,detect,skip,careers.greentube.com - handled by scrape_custom
-Hacksaw Gaming,Supplier - Content,no,0,no board found,detect,,
+Hacksaw Gaming,Supplier - Content,no,0,no board found,detect,bamboohr:hacksawoperations,BambooHR
 Hedgehog Markets,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
 highbet,Operator,no,0,no board found,detect,,From LinkedIn follows
-Hong Kong Jockey Club,Racing / Operator - Asia,no,0,no board found,detect,,
 Hub88,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 IGT PlayDigital,Operator,no,0,no board found,detect,,From LinkedIn follows
 InPlaySoft,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-Inspired Entertainment,Supplier,no,0,no board found,detect,,
+Inspired Entertainment,Supplier,no,0,no board found,detect,skip,"careers.inseinc.com, handled by scrape_custom"
 Jeton,Gaming payments,no,0,no board found,detect,,
 Junglee Games,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 KamaGames,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
@@ -94,36 +93,35 @@ MaxBet,Operator,no,0,no board found,detect,,From LinkedIn follows
 Monkey Tilt,Operator,no,0,no board found,detect,,From LinkedIn follows
 MuchBetter,Gaming payments,no,0,no board found,detect,,Prior COO role
 Myriad,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
-Neds,Operator,no,0,no board found,detect,,From LinkedIn follows
-Nolimit City®,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
+Neds,Operator,no,0,no board found,detect,workable:entaingroup,Entain Australia & New Zealand board - CHECK next run for overlap with the Entain row
+Nolimit City®,Supplier - Content,no,0,no board found,detect,skip,"career.nolimitcity.com static pages, handled by scrape_custom - low expectation"
 NSUS Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 NSUSLAB Korea,Operator,no,0,no board found,detect,,From LinkedIn follows
 NuxGame,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 OlyBet Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 OnAim,Operator,no,0,no board found,detect,,From LinkedIn follows
-OpenBet,Supplier - Sportsbook,no,0,no board found,detect,,
+OpenBet,Supplier - Sportsbook,no,0,no board found,detect,workable:openbet-1,"Workable, note the -1 suffix"
 Opinion,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
-Palmerbet,Operator,no,0,no board found,detect,,From LinkedIn follows
 Parimatch,Operator,no,0,no board found,detect,,From LinkedIn follows
 Parimatch Tech,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 Picklebet,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 PKR Technologies Ltd,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-Play'n GO,Supplier - Content,no,0,no board found,detect,,
+Play'n GO,Supplier - Content,no,0,no board found,detect,skip,"talenthub.playngo.com, handled by scrape_custom"
 Playnetic,Operator,no,0,no board found,detect,,From LinkedIn follows
 PlayOJO,Operator,no,0,no board found,detect,,From LinkedIn follows
 PointsBet,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 PointsBet Canada,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
-Push Gaming,Supplier - Content,no,0,no board found,detect,,
+Push Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, no open roles at setup - handled by scrape_custom"
 Racing and Sports,Racing,no,0,no board found,detect,,From LinkedIn follows
 Racing NSW,Racing,no,0,no board found,detect,,From LinkedIn follows
 Racing Post / Spotlight Sports,Racing / Media,no,0,no board found,detect,,
 Racing1,Racing,no,0,no board found,detect,,From LinkedIn follows
 Red Tiger,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
-Relax Gaming,Supplier - Content,no,0,no board found,detect,,
+Relax Gaming,Supplier - Content,no,0,no board found,detect,teamtailor:careers.relax-gaming.com,Teamtailor on a custom domain
 Rivalry,Operator,no,0,no board found,detect,,From LinkedIn follows
 RNGplay,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 RPM Gaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
-SCIENTIFIC GAMES,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
+SCIENTIFIC GAMES,Supplier - Content,no,0,no board found,detect,https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers,Workday
 SkillOnNet,Operator,no,0,no board found,detect,teamtailor:skillonnet-1744715103.teamtailor.com,Teamtailor
 Skilrock Technologies,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 SKS365 Group,Operator,no,0,no board found,detect,,From LinkedIn follows
@@ -135,7 +133,7 @@ SoftGamings,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 Sportingtech,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 Sportium,Operator,no,0,no board found,detect,,From LinkedIn follows
 SportPesa,Operator,no,0,no board found,detect,,From LinkedIn follows
-SPRIBE,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
+SPRIBE,Supplier - Content,no,0,no board found,detect,skip,"hurma.work, handled by scrape_custom"
 The Jockey Club,Racing - UK,no,0,no board found,detect,,
 The Lottery Corporation,Lottery - Australia,no,0,no board found,detect,,
 The Pools,Operator,no,0,no board found,detect,,From LinkedIn follows
@@ -155,11 +153,11 @@ Voxbet,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 WA.Technology,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 Wazdan,Supplier - Content,no,0,no board found,detect,,
 Weatherbys,Racing / Banking,no,0,no board found,detect,,
-White Hat Gaming,Supplier - Platform,no,0,no board found,detect,,
+White Hat Gaming,Supplier - Platform,no,0,no board found,detect,rippling:whitehatgaming,Rippling ATS
 Winna.com,Operator,no,0,no board found,detect,,From LinkedIn follows
 World Series of Poker,Poker,no,0,no board found,detect,,From LinkedIn follows
 WPT Global,Poker,no,0,no board found,detect,,From LinkedIn follows
-Yggdrasil,Supplier - Content,no,0,no board found,detect,,
+Yggdrasil,Supplier - Content,no,0,no board found,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id"
 Yolo Group,Operator / Supplier - Crypto,no,0,no board found,detect,,
 Allwyn,Lottery,no,0,skipped on purpose,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded"
 bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,"in-house careers site, handled by scrape_custom"
