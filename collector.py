@@ -1109,6 +1109,10 @@ def _links_with_titles(html_text, base, path_marker):
     for href, inner in rx.findall(html_text):
         title = html.unescape(re.sub(r"<[^>]+>", " ", inner))
         title = re.sub(r"\s+", " ", title).strip()
+        # some boards run marketing copy straight into the link text, e.g.
+        # 'Frontend web developer! (Gurugram) "Get paid to break things" READ MORE'
+        title = re.split(r'\s*["\u201c\u201d]|\s+#|\s+READ MORE|\s+APPLY', title)[0].strip()
+        title = re.sub(r"\s*\{.*$", "", title).strip()
         if not title or len(title) < 3 or len(title) > 140:
             continue
         if title.lower() in ("apply now", "learn more", "view job", "read more", "more info"):
@@ -1263,11 +1267,12 @@ def _titles_from_urls(urls, source):
                       "", slug, flags=re.I)
         slug = re.sub(r"[-_]?\d{4,}[-_]?\d*$", "", slug)
         slug = re.sub(r"[-_]\d{1,3}$", "", slug)
+        slug = re.sub(r"^\d+[-_]+", "", slug)          # leading job id
         words = [w for w in re.split(r"[-_]+", slug) if w]
         if not words or len("".join(words)) < 3:
             continue
         title = " ".join(_FIX_CASE.get(w.title(), w.title()) for w in words)
-        if title.lower() in seen:
+        if title.lower() in seen or title.strip().lower() in ("null", "none", "undefined", "test"):
             continue
         seen.add(title.lower())
         out.append({"title": title, "location": "", "department": "",
@@ -1792,10 +1797,7 @@ def scrape_custom(name):
         if detailed:
             print(f"   {name}: sitemap + JSON-LD -> {len(detailed)}")
             return detailed
-        derived = _titles_from_urls(urls, name)
-        if derived:
-            print(f"   {name}: sitemap slugs -> {len(derived)}")
-            return derived
+        # deliberately NOT returning derived slugs here — see below
 
     hits = _spa_api_hunt(base, name)
     for u in hits:
@@ -1831,6 +1833,15 @@ def scrape_custom(name):
             print(f"      {name} {url}: error ({type(e).__name__})")
     if out:
         print(f"   {name}: link parse -> {len(out)}")
+        return out
+
+    # last resort: titles derived from sitemap URLs. Unverified, and a sitemap
+    # often lists closed roles too, so this only runs when nothing else worked.
+    if urls:
+        derived = _titles_from_urls(urls, name)
+        if derived:
+            print(f"   {name}: sitemap slugs -> {len(derived)} (unverified, may include closed roles)")
+            return derived
     return out
 
 
