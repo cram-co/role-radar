@@ -91,6 +91,40 @@ def _nonempty(x):
     return bool(x)
 
 
+def _request(method, url, tries=4, **kw):
+    """Wrap a request so a 429 backs off and retries instead of losing the board.
+
+    Adding two more Workable companies pushed the run past their rate limit and
+    every Workable company returned zero at once — including several that had
+    been working. Honours Retry-After when the server sends it."""
+    delay = 2.0
+    for attempt in range(tries):
+        try:
+            r = session.request(method, url, timeout=TIMEOUT, **kw)
+        except Exception:
+            if attempt == tries - 1:
+                raise
+            time.sleep(delay)
+            delay *= 2
+            continue
+        if r.status_code != 429:
+            return r
+        wait = delay
+        ra = r.headers.get("Retry-After")
+        if ra:
+            try:
+                wait = min(float(ra), 60)
+            except ValueError:
+                pass
+        if attempt == tries - 1:
+            print(f"      rate limited after {tries} attempts: {url.split('?')[0]}")
+            return r
+        print(f"      429 from {url.split('//')[-1].split('/')[0]}, waiting {wait:.0f}s")
+        time.sleep(wait)
+        delay *= 2
+    return r
+
+
 def probe_greenhouse(slug):
     r = session.get(
         f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs", timeout=TIMEOUT
@@ -289,11 +323,9 @@ def probe_recruitee(slug):
 
 
 def probe_workable(slug):
-    r = session.post(
-        f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
-        json={"query": "", "location": [], "department": []},
-        headers={"Accept": "application/json"}, timeout=TIMEOUT,
-    )
+    r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
+                 json={"query": "", "location": [], "department": []},
+                 headers={"Accept": "application/json"})
     if r.status_code != 200:
         return False
     d = r.json()
@@ -837,10 +869,8 @@ def fetch_workable(token):
         if page_token:
             payload["token"] = page_token
         try:
-            r = session.post(
-                f"https://apply.workable.com/api/v3/accounts/{token}/jobs",
-                json=payload, headers={"Accept": "application/json"}, timeout=TIMEOUT,
-            )
+            r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{token}/jobs",
+                         json=payload, headers={"Accept": "application/json"})
             if r.status_code != 200:
                 print(f"      workable {token}: HTTP {r.status_code}")
                 break
@@ -854,6 +884,8 @@ def fetch_workable(token):
         if not page_token or not batch:
             break
         time.sleep(REQUEST_DELAY)
+
+    time.sleep(REQUEST_DELAY * 2)      # be gentler on a host we share across companies
 
     def place(j):
         loc = j.get("location") or j.get("locations") or {}
@@ -1743,6 +1775,10 @@ CUSTOM_BOARDS = {
                          listing=["/", "/jobs", "/vacancies", "/search"]),
     "Greentube (Novomatic)": dict(base="https://careers.greentube.com", marker="/job",
                          listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
+    # careers.gamesglobal.com is the listing; careers-gamesglobal.icims.com is
+    # only the apply gateway, which is why the iCIMS fetcher saw a 148-byte stub
+    "Games Global": dict(base="https://careers.gamesglobal.com", marker="/jobs/",
+                         listing=["/jobs", "/jobs?lang=en-us", "/", "/search"]),
     "Play'n GO":    dict(base="https://talenthub.playngo.com", marker="/job",
                          listing=["/jobs/", "/jobs", "/"]),
     "SPRIBE":       dict(base="https://spribe.hurma.work", marker="/vacanc",
