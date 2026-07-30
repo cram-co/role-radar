@@ -91,12 +91,19 @@ def _nonempty(x):
     return bool(x)
 
 
-def _request(method, url, tries=4, **kw):
+# A whole-run ceiling on time lost to rate limiting. Without this the retry sits
+# inside the pagination loop, so waits multiply: attempts x pages x companies.
+_RATE_LIMIT_BUDGET = 180.0        # seconds, across the entire run
+_rate_limit_spent = 0.0
+
+
+def _request(method, url, tries=3, **kw):
     """Wrap a request so a 429 backs off and retries instead of losing the board.
 
     Adding two more Workable companies pushed the run past their rate limit and
     every Workable company returned zero at once — including several that had
     been working. Honours Retry-After when the server sends it."""
+    global _rate_limit_spent
     delay = 2.0
     for attempt in range(tries):
         try:
@@ -113,14 +120,19 @@ def _request(method, url, tries=4, **kw):
         ra = r.headers.get("Retry-After")
         if ra:
             try:
-                wait = min(float(ra), 60)
+                wait = float(ra)
             except ValueError:
                 pass
-        if attempt == tries - 1:
-            print(f"      rate limited after {tries} attempts: {url.split('?')[0]}")
+        wait = min(wait, 15)
+        if attempt == tries - 1 or _rate_limit_spent + wait > _RATE_LIMIT_BUDGET:
+            if _rate_limit_spent + wait > _RATE_LIMIT_BUDGET:
+                print(f"      rate-limit budget spent, giving up on {url.split('?')[0]}")
+            else:
+                print(f"      rate limited after {tries} attempts: {url.split('?')[0]}")
             return r
         print(f"      429 from {url.split('//')[-1].split('/')[0]}, waiting {wait:.0f}s")
         time.sleep(wait)
+        _rate_limit_spent += wait
         delay *= 2
     return r
 
@@ -871,6 +883,10 @@ def fetch_workable(token):
         try:
             r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{token}/jobs",
                          json=payload, headers={"Accept": "application/json"})
+            if r.status_code == 429:
+                print(f"      workable {token}: still rate limited, stopping "
+                      f"({len(out)} roles so far)")
+                break
             if r.status_code != 200:
                 print(f"      workable {token}: HTTP {r.status_code}")
                 break
