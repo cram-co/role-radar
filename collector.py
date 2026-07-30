@@ -96,14 +96,41 @@ def _nonempty(x):
 _RATE_LIMIT_BUDGET = 180.0        # seconds, across the entire run
 _rate_limit_spent = 0.0
 
+# Detection probes are speculative; fetches are known-good pins. Left unchecked
+# the probes eat the whole budget first — a run spent it all on bodog, bovada,
+# racing1 and inplaysoft, so the six real Workable companies got nothing. Once a
+# host rate-limits us this many times during detection, stop probing it.
+_HOST_429_LIMIT = 2
+_host_429 = {}
 
-def _request(method, url, tries=3, **kw):
+
+def _host_of(url):
+    m = re.match(r"https?://([^/]+)", url or "")
+    return m.group(1) if m else ""
+
+
+def _host_is_throttled(url):
+    return _host_429.get(_host_of(url), 0) >= _HOST_429_LIMIT
+
+
+class _Throttled:
+    """Stands in for a response when we skip a host we know is rate-limiting."""
+    status_code = 429
+    headers = {}
+
+    def json(self):
+        return {}
+
+
+def _request(method, url, tries=3, probing=False, **kw):
     """Wrap a request so a 429 backs off and retries instead of losing the board.
 
     Adding two more Workable companies pushed the run past their rate limit and
     every Workable company returned zero at once — including several that had
     been working. Honours Retry-After when the server sends it."""
     global _rate_limit_spent
+    if probing and _host_is_throttled(url):
+        return _Throttled()
     delay = 2.0
     for attempt in range(tries):
         try:
@@ -116,6 +143,8 @@ def _request(method, url, tries=3, **kw):
             continue
         if r.status_code != 429:
             return r
+        h = _host_of(url)
+        _host_429[h] = _host_429.get(h, 0) + 1
         wait = delay
         ra = r.headers.get("Retry-After")
         if ra:
@@ -337,7 +366,7 @@ def probe_recruitee(slug):
 def probe_workable(slug):
     r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
                  json={"query": "", "location": [], "department": []},
-                 headers={"Accept": "application/json"})
+                 headers={"Accept": "application/json"}, probing=True)
     if r.status_code != 200:
         return False
     d = r.json()
@@ -1799,8 +1828,6 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/", "/jobs", "/"]),
     "SPRIBE":       dict(base="https://spribe.hurma.work", marker="/vacanc",
                          listing=["/public-vacancies/", "/public-vacancies"]),
-    "EGT Digital":  dict(base="https://egt-digital.skillie.ai", marker="/job",
-                         listing=["/jobs/", "/jobs"]),
     "EvenBet Gaming": dict(base="https://evenbetgaming.com", marker="/vacanc",
                          listing=["/vacancies/", "/vacancies"]),
     "Inspired Entertainment": dict(base="https://careers.inseinc.com", marker="/job/",
@@ -2029,6 +2056,12 @@ def main():
     CACHE_FILE.write_text(json.dumps(cache, indent=1))
 
     # --- fetch pass ---
+    # Detection is speculative and may have tripped the circuit breaker on a
+    # host. The pins that follow are known-good, so give them a clean slate.
+    _host_429.clear()
+    global _rate_limit_spent
+    _rate_limit_spent = 0.0
+
     all_jobs = []
     for c in companies:
         name = c["company"].strip()
