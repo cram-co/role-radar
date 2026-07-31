@@ -48,7 +48,7 @@ DAZN,Operator,no,0,no board found,detect,,From LinkedIn follows
 DAZN Bet,Operator,no,0,no board found,detect,,From LinkedIn follows
 DigiOutsource,Operator,no,0,no board found,detect,https://myhcm.wd3.myworkdayjobs.com/digioutsource,Super Group tech arm; own Workday tenant on myhcm
 Digitain,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-EGT Digital,Supplier - Content,no,0,no board found,detect,skip,"EXCLUDED - skillie.ai is a Vue SPA with no server-rendered links, and its sitemap lists every job ever posted (ids 2-14667). 532 stale roles is worse than none"
+EGT Digital,Supplier - Content,no,0,no board found,detect,skip,"egt-digital.com/careers lists only CURRENT roles and links to skillie.ai - use it as the live filter, since the skillie sitemap holds every job ever posted"
 Emerald Zebra,Recruitment agency,no,0,no board found,detect,,Cyprus; iGaming fintech and tech
 EvenBet Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, handled by scrape_custom"
 evoke,Operator,no,0,no board found,detect,,From LinkedIn follows

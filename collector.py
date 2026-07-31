@@ -1822,6 +1822,12 @@ CUSTOM_BOARDS = {
                          listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
     # careers.gamesglobal.com is the listing; careers-gamesglobal.icims.com is
     # only the apply gateway, which is why the iCIMS fetcher saw a 148-byte stub
+    # The careers page lists only the CURRENT roles and links out to skillie.ai,
+    # whose own sitemap carries every job ever posted (ids 2-14667). So use the
+    # marketing site as the live filter, and take titles from the slugs since
+    # the anchors there are empty.
+    "EGT Digital":  dict(base="https://egt-digital.com", marker="skillie.ai/jobs/",
+                         listing=["/careers/", "/careers"], slug_titles=True),
     "Games Global": dict(base="https://careers.gamesglobal.com", marker="/jobs/",
                          listing=["/jobs", "/jobs?lang=en-us", "/", "/search"]),
     "Play'n GO":    dict(base="https://talenthub.playngo.com", marker="/job",
@@ -1895,6 +1901,19 @@ def scrape_custom(name):
             r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
             if r.status_code != 200:
                 print(f"      {name} {url}: HTTP {r.status_code}")
+                continue
+            if cfg.get("slug_titles"):
+                # collect the links only, then name them from their slugs
+                links = re.findall(r'href="([^"]*' + re.escape(marker) + r'[^"?#]*)', r.text)
+                links = [u if u.startswith("http") else base.rstrip("/") + u for u in links]
+                derived = _titles_from_urls(sorted(set(links)), name)
+                for j in derived:
+                    if j["url"] in seen:
+                        continue
+                    seen.add(j["url"])
+                    out.append(j)
+                if derived:
+                    print(f"   {name}: listing page -> {len(derived)} current roles")
                 continue
             found = _links_with_titles(r.text, base, marker)
             if not found:
