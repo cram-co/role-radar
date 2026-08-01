@@ -183,7 +183,7 @@
       </div>
     </div>
     <label class="lead-row">
-      <input type="checkbox" id="lead" />
+      <input type="checkbox" id="lead" checked />
       <span>Leadership only &mdash; Chief, VP, Director, Head+</span>
     </label>
     <div class="sort-row">
@@ -400,12 +400,33 @@ function bucket(loc){
 // Seniority tiers, ordered as Heath ranks them. Order matters when testing:
 // "Senior Director" must be checked before "Director", "Vice President"
 // before "President", and so on, or the broader term swallows the narrower.
+// guard against roles that merely mention an exec: "EA to the CEO",
+// "Executive Assistant, Chief Product", and "Chief Accountant" (a senior
+// accounting title across much of Europe, not a C-suite seat)
+// Roles that sit beside a chief rather than being one — excluded from every
+// seniority tier: "Executive Assistant to the CEO", "Senior Associate, CEO's Office"
+const SUPPORT_NOT = /\b(executive\s+assistant|personal\s+assistant|\bea\b|assistant\s+to|support\s+to|reporting\s+to)\b|\bc[eofmpir]o'?s?\s+office\b|\b(associate|analyst|coordinator|specialist|intern)\b/i;
+
+// The functional C-suite additionally rejects Chief of Staff (a real senior
+// seat, but not a C-suite one — it has its own tier below) and Chief Accountant
+// (a senior accounting title across much of Europe, not a C-suite seat).
+const EXEC_NOT = new RegExp(
+  SUPPORT_NOT.source + "|\\bchief\\s+accountant\\b|\\b(right\\s+hand|chief\\s+of\\s+staff)\\b", "i");
+
 const LEVELS = [
-  // guard against roles that merely mention an exec: "EA to the CEO",
-  // "Executive Assistant, Chief Product", and "Chief Accountant" (a senior
-  // accounting title across much of Europe, not a C-suite seat)
-  { name: "C-level",           rx: /\b(chief|c[eofmpir]o)\b/i,
-    not: /\b(executive\s+assistant|personal\s+assistant|\bea\b|assistant\s+to|support\s+to|reporting\s+to)\b|\bchief\s+accountant\b/i },
+  // C-suite split by function so the top of the board runs CEO, COO, CFO,
+  // CTO and so on rather than by whoever posted most recently
+  { name: "Chief Executive",   rx: /\bchief\s+exec\w*|\bceo\b/i,          not: EXEC_NOT },
+  { name: "Chief Operating",   rx: /\bchief\s+oper\w*|\bcoo\b/i,          not: EXEC_NOT },
+  { name: "Chief Financial",   rx: /\bchief\s+financ\w*|\bcfo\b/i,        not: EXEC_NOT },
+  { name: "Chief Technology",  rx: /\bchief\s+(tech\w*|info\w*|digital|data)\b|\bc[ti]o\b/i, not: EXEC_NOT },
+  { name: "Chief Commercial",  rx: /\bchief\s+(commercial|revenue|growth|sales)\b|\bc[cr]o\b/i, not: EXEC_NOT },
+  { name: "Chief Marketing",   rx: /\bchief\s+market\w*|\bcmo\b/i,        not: EXEC_NOT },
+  { name: "Chief Product",     rx: /\bchief\s+product\b|\bcpo\b/i,        not: EXEC_NOT },
+  { name: "Chief People",      rx: /\bchief\s+(people|human|hr|talent)\b|\bchro\b/i, not: EXEC_NOT },
+  { name: "Chief Risk",        rx: /\bchief\s+(risk|compliance|legal|security|audit)\b|\bc[sl]o\b/i, not: EXEC_NOT },
+  { name: "Chief",             rx: /\bchief\b/i,                            not: EXEC_NOT },
+  { name: "Chief of Staff",    rx: /\bchief\s+of\s+staff\b|\bright\s+hand\s+to\b/i, not: SUPPORT_NOT },
   { name: "President",         rx: /\bpresident\b/i, not: /\b(vice|deputy|vp)\b/i },
   { name: "Senior Director",   rx: /\b(senior|snr|sr\.?)\s+director\b|\b(evp|svp)\b|\b(executive|senior)\s+vice\s+president\b/i },
   { name: "Vice President",    rx: /\bvice\s+president\b|\bvp\b/i },
@@ -414,6 +435,27 @@ const LEVELS = [
   { name: "General Manager",   rx: /\bgeneral\s+manager\b|\bcountry\s+manager\b|(?<![,\-]\s)\bgm\b(?!\s*$)/i },
   { name: "Head of",           rx: /\bhead\s+of\b|\bhead,\s/i },
 ];
+
+// Agencies dominate the senior end of the feed — Apercon alone can fill the
+// first page. Within a run of equally senior roles, cycle through companies so
+// the top of the board shows a mix rather than one recruiter's whole desk.
+function interleaveByCompany(list){
+  const byCo = new Map();
+  for(const j of list){
+    const k = j.c || "";
+    if(!byCo.has(k)) byCo.set(k, []);
+    byCo.get(k).push(j);
+  }
+  const queues = [...byCo.values()];
+  const out = [];
+  for(let more = true; more; ){
+    more = false;
+    for(const q of queues){
+      if(q.length){ out.push(q.shift()); more = true; }
+    }
+  }
+  return out;
+}
 
 function level(title){
   const t = title || "";
@@ -472,6 +514,16 @@ function render(){
     out.sort((a,b) => level(a.t) - level(b.t)
                    || when(b) - when(a)
                    || (a.c||"").localeCompare(b.c||""));
+    // then rotate companies within each seniority band
+    const bands = [];
+    let cur = [], curLvl = null;
+    for(const j of out){
+      const L = level(j.t);
+      if(L !== curLvl){ if(cur.length) bands.push(cur); cur = []; curLvl = L; }
+      cur.push(j);
+    }
+    if(cur.length) bands.push(cur);
+    out = bands.flatMap(interleaveByCompany);
   } else {
     out.sort((a,b) => when(b) - when(a)
                    || (a.c||"").localeCompare(b.c||"")
