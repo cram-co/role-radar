@@ -1173,11 +1173,24 @@ def _drop_junk(jobs, source=""):
     return out
 
 
+# CSS and JS can contain anything, including strings that look like hrefs.
+# Apercon's stylesheet produced a "role" titled img:is([sizes=auto i],[sizes^=
+_STYLE_SCRIPT = re.compile(r"<(style|script|noscript)\b.*?</\1>", re.S | re.I)
+
+# a title that is really a page heading rather than a vacancy
+_PAGE_TITLE = re.compile(
+    r"^(jobs?|careers?|vacanc\w*|opportunit\w*|positions?)\s+(at|with|@|in)\b", re.I)
+
+# leftovers that mean the parser grabbed markup, not a job
+_MARKUP_JUNK = re.compile(r"[{}]|:is\(|\^=|@media|!important|</|\bdocument\.|\bfunction\s*\(")
+
+
 def _links_with_titles(html_text, base, path_marker):
     """(url, title) pairs for links whose path contains `path_marker`.
     Deliberately tolerant: hrefs may be relative or absolute, and the visible
     title is often wrapped in nested tags rather than sitting directly inside
     the anchor, so tags are stripped rather than excluded."""
+    html_text = _STYLE_SCRIPT.sub(" ", html_text)
     out, seen = [], set()
     rx = re.compile(
         r'href="([^"]*?' + re.escape(path_marker) + r'[^"?#]*)[^"]*"[^>]*>(.*?)</a>',
@@ -1350,6 +1363,8 @@ def _titles_from_urls(urls, source):
             continue
         title = " ".join(_FIX_CASE.get(w.title(), w.title()) for w in words)
         if title.lower() in seen or title.strip().lower() in ("null", "none", "undefined", "test"):
+            continue
+        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
             continue
         seen.add(title.lower())
         out.append({"title": title, "location": "", "department": "",
