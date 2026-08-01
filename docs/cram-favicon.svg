@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cram">
+  <title>Cram</title>
+  <rect width="64" height="64" rx="12" fill="#0E1B2E"/>
+  <path d="M35.71 17.15 A17.14 17.14 0 1 0 35.71 46.85" fill="none" stroke="#5B8DEF" stroke-width="4.60" stroke-linecap="round"/>
+  <path d="M54.00 17.15 A17.14 17.14 0 1 0 54.00 46.85" fill="none" stroke="#AEB6C2" stroke-width="4.60" stroke-linecap="round"/>
+</svg>
