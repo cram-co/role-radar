@@ -810,7 +810,7 @@ def fetch_wordpress(token):
         out = []
         for j in items:
             title = html.unescape(str((j.get("title") or {}).get("rendered") or "")).strip()
-            if not title:
+            if not title or _TALENT_POOL.search(title):
                 continue
             # taxonomy terms arrive under _embedded when _embed=1 is asked for
             loc = ""
@@ -1233,6 +1233,13 @@ _STYLE_SCRIPT = re.compile(r"<(style|script|noscript)\b.*?</\1>", re.S | re.I)
 _PAGE_TITLE = re.compile(
     r"^(jobs?|careers?|vacanc\w*|opportunit\w*|positions?)\s+(at|with|@|in)\b", re.I)
 
+# Speculative applications, not open roles. Huddle's WordPress "careers" post
+# type is entirely these — "Open Application: DevOps - Talent Pool".
+_TALENT_POOL = re.compile(
+    r"\btalent\s*(pool|community|network|bank)\b|\bopen\s+application\b"
+    r"|\bspeculative\b|\bgeneral\s+interest\b|\bfuture\s+opportunit\w*\b"
+    r"|\bjoin\s+our\s+talent\b|\bregister\s+your\s+interest\b", re.I)
+
 # leftovers that mean the parser grabbed markup, not a job
 _MARKUP_JUNK = re.compile(r"[{}]|:is\(|\^=|@media|!important|</|\bdocument\.|\bfunction\s*\(")
 
@@ -1416,7 +1423,7 @@ def _titles_from_urls(urls, source):
         title = " ".join(_FIX_CASE.get(w.title(), w.title()) for w in words)
         if title.lower() in seen or title.strip().lower() in ("null", "none", "undefined", "test"):
             continue
-        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title) or _TALENT_POOL.search(title):
             continue
         seen.add(title.lower())
         out.append({"title": title, "location": "", "department": "",
