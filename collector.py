@@ -2055,7 +2055,12 @@ _RACING_PHYSICAL = re.compile(
     r"head\s*(lad|girl)|work\s*rider|exercise\s*rider|jockey|farrier|trackwork|"
     r"track\s*work|stalls\s*handler|yard\s*(person|staff|hand)|raceday|race\s*day|"
     r"turnstile|groundstaff|groundsperson|racecourse\s*(steward|attendant)|"
-    r"horsebox|equine\s*(care|therapist)|riding\s*out|point[- ]to[- ]point)\b", re.I)
+    r"horsebox|equine\s*(care|therapist)|riding\s*out|point[- ]to[- ]point|"
+    # the gender-neutral yard titles the first pass missed: a "Head Person" or
+    # "Travelling Head Person" is a stable role, same as head lad
+    r"head\s*person|second\s*person|travelling\s*head|gallops?|"
+    r"gardener|caretaker|groundsman|groundskeeper|stalls|"
+    r"racing\s*secretary|yard\s*manager)\b", re.I)
 
 # a senior seat that merely names the function is not a yard job
 _RACING_KEEP = re.compile(
