@@ -416,10 +416,15 @@ const NAMES = Array.from(new Set(Object.values(ISO)));
 const UK_CITIES = ["london","leeds","manchester","birmingham","glasgow","edinburgh","liverpool","sheffield","nottingham","bristol","brighton"];
 const US_CITIES = ["new york","atlantic city","las vegas","southfield","chicago","boston","los angeles","san francisco","jersey city","philadelphia","denver","miami","austin","seattle","dallas","atlanta"];
 // iGaming's actual hubs — pinned to the top so they aren't buried under volume
-const HUBS = ["Multiple locations","Malta","United Kingdom","United States","Canada","Gibraltar","Isle of Man","Cyprus","Ireland","UAE","Remote"];
+// Pinned to the top; everything else lists alphabetically beneath.
+// "Inside the listing" holds roles whose posting carries a location that the
+// board never exposes in its feed — 17% of the total, and previously
+// invisible the moment any location filter was applied.
+const HUBS = ["Inside the listing","Multiple locations","Remote","United Kingdom","United States"];
 
 function bucket(loc){
-  if(!loc) return null;
+  // TalentBet emit ", , " — passes a plain emptiness check but names nowhere
+  if(!loc || !/[a-z0-9]/i.test(String(loc))) return "Inside the listing";
   // some feeds arrive with entities intact: "St. Julian&#39;s" -> "St. Julian's"
   const s = String(loc).replace(/&#3[49];/g, "'").replace(/&amp;/g, "&")
                        .replace(/&nbsp;/g, " ").trim();
@@ -465,7 +470,7 @@ function bucket(loc){
   const head = (parts[0]||"").toLowerCase();
   if(US_CITIES.some(c=>head.includes(c)) || ["usa","u.s.","united states"].includes(tail)) return "United States";
   if(UK_CITIES.some(c=>head.includes(c))) return "United Kingdom";
-  return parts[parts.length-1] || null;
+  return parts[parts.length-1] || "Inside the listing";
 }
 
 
@@ -632,7 +637,9 @@ function render(){
       ${showLevel && level(j.t) < LEVELS.length ? '<span class="lvl">'+LEVELS[level(j.t)].name+'</span>' : ""}
       <div class="m"><span class="co">${j.c||""}</span>${AGENCIES.has(j.c)?'<span class="agency">agency</span>':""}
         ${(() => {
-          if(!j.dupes || !j.dupes.length) return j.l ? '<span class="dot">&middot;</span><span>'+j.l+"</span>" : "";
+          if(!j.dupes || !j.dupes.length)
+            return j.l ? '<span class="dot">&middot;</span><span>'+j.l+"</span>"
+                       : '<span class="dot">&middot;</span><span class="nodate">location in listing</span>';
           const locs = new Set([j.l, ...j.dupes.map(d => d.l)].filter(Boolean));
           const n = j.dupes.length + 1;
           return '<span class="dot">&middot;</span><span class="multi">'
