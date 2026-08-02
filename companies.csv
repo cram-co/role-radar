@@ -187,7 +187,7 @@ Sisal,Operator - Tier 1,no,0,workday board found but empty,detect,https://sisal.
 Alea,Operator,yes,6,producing,detect,,From LinkedIn follows
 Altenar,Supplier - Sportsbook,yes,22,producing,detect,,
 Amelco UK Ltd,Supplier - Platform,yes,2,producing,detect,,From LinkedIn follows
-Apercon,Recruitment agency,yes,18,producing,detect,skip,"bespoke jobs page, handled by scrape_custom"
+Apercon,Recruitment agency,yes,18,producing,detect,wordpress:apercon.com,WordPress REST API - link-parsing their listing page only reached the first 20 of 250+ roles
 ARB Interactive,Operator,yes,4,producing,detect,,From LinkedIn follows
 Arena Racing Company,Racing - UK,yes,18,producing,detect,,
 ATG,Racing / Operator - Sweden,yes,6,producing,detect,,
@@ -288,3 +288,4 @@ Jumpman Gaming,Operator,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjo
 ARRISE (global),Supplier - Content,no,0,not probed yet,detect,skip,"arrise.com/careers blocks bots - handled by scrape_custom; global roles across Gibraltar, Malta, Romania, Serbia, Bulgaria"
 B2Tech,Supplier - Platform,no,0,not probed yet,detect,teamtailor:careers.b2tech.com,Teamtailor on a custom domain (careers.b2tech.com) - looked like a bespoke site
 Huddle,Supplier - Content,no,0,not probed yet,detect,wordpress:huddle.tech,"WordPress + WP Job Openings plugin (no ATS). NOT apply.workable.com/huddle - that is a different Huddle, the UK document-collaboration firm"
+Growe,Operator,no,0,not probed yet,detect,greenhouse_eu:growe,Greenhouse EU board (job-boards.eu.greenhouse.io/growe); iGaming and entertainment group

@@ -794,18 +794,27 @@ def fetch_wordpress(token):
     TYPES = ["awsm_job_openings", "job_listing", "jobs", "job", "career",
              "careers", "vacancy", "vacancies", "position", "open-roles"]
     for t in TYPES:
-        url = f"{base}/wp-json/wp/v2/{t}?per_page=100&_embed=1"
-        try:
-            r = _request("GET", url, headers={**AGENCY_UA, "Accept": "application/json"})
-        except Exception:
-            continue
-        if r.status_code != 200:
-            continue
-        try:
-            items = r.json()
-        except Exception:
-            continue
-        if not isinstance(items, list) or not items:
+        items, page = [], 1
+        while page <= 10:
+            url = f"{base}/wp-json/wp/v2/{t}?per_page=100&page={page}&_embed=1"
+            try:
+                r = _request("GET", url, headers={**AGENCY_UA, "Accept": "application/json"})
+            except Exception:
+                break
+            if r.status_code != 200:
+                break
+            try:
+                batch = r.json()
+            except Exception:
+                break
+            if not isinstance(batch, list) or not batch:
+                break
+            items.extend(batch)
+            if len(batch) < 100:
+                break
+            page += 1
+            time.sleep(REQUEST_DELAY)
+        if not items:
             continue
         out = []
         for j in items:
@@ -1917,6 +1926,9 @@ CUSTOM_BOARDS = {
                          listing=["/careers/join-our-team/", "/careers/"]),
     "ARRISE (global)": dict(base="https://arrise.com", marker="/job",
                          listing=["/careers", "/careers/", "/jobs", "/en/careers"]),
+    # NOTE: Apercon is now pinned to wordpress:apercon.com in companies.csv,
+    # because link-parsing their listing only reached the first 20 roles.
+    # This config is kept as a fallback if the REST API is ever closed.
     "Apercon":      dict(base="https://apercon.com", marker="/job",
                          listing=["/jobs/", "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
