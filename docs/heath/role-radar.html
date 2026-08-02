@@ -337,6 +337,20 @@ tr:"Turkey",my:"Malaysia",tw:"Taiwan",hk:"Hong Kong",al:"Albania",md:"Moldova",m
 const US_STATES = new Set(("al ak az ar ca co ct de fl ga hi id il in ia ks ky la me md ma mi mn ms "+
   "mo mt ne nv nh nj nm ny nc nd oh ok or pa ri sc sd tn tx ut vt va wa wv wi wy dc").split(" "));
 const CA_PROV = new Set(["ab","bc","mb","nb","nl","ns","nt","nu","on","pe","qc","sk","yt"]);
+
+// Some boards give a bare state or province with no city, so the code-based
+// lookups above never fire — "Arkansas" and "Ontario" arrived unbucketed.
+const US_STATE_NAMES = new Set(("alabama alaska arizona arkansas california colorado connecticut delaware "+
+  "florida georgia hawaii idaho illinois indiana iowa kansas kentucky louisiana maine maryland "+
+  "massachusetts michigan minnesota mississippi missouri montana nebraska nevada ohio oklahoma "+
+  "oregon pennsylvania tennessee texas utah vermont virginia washington wisconsin wyoming").split(" "));
+const CA_PROV_NAMES = new Set(["ontario","quebec","québec","alberta","manitoba","saskatchewan",
+  "nova scotia","new brunswick","newfoundland","prince edward island","british columbia"]);
+
+// Corporate site codes bury a real city behind a company or entity name:
+// "Junglee Bangalore", "Product Madness - Barcelona", "FDJ SERVICES BOULOGNE",
+// "DNU_Adjarabet Tbilisi Head Office". Strip the wrapper and look again.
+const SITE_NOISE = /\b(head office|office|hub|hq|campus|site|services|sas|ltd|limited|inc|bv|gmbh|delta|aleda|adstellam|dnu_?|junglee|massecom|fdj|fdp|product madness)\b/gi;
 // two-letter codes that are countries, not states — added so they don't get
 // swept into the US bucket
 Object.assign(ISO, {si:"Slovenia", ba:"Bosnia & Herzegovina", cr:"Costa Rica", uy:"Uruguay"});
@@ -360,17 +374,60 @@ const CITY_COUNTRY = {
   "riga":"Latvia", "tallinn":"Estonia", "vilnius":"Lithuania", "belgrade":"Serbia",
   "zagreb":"Croatia", "bucharest":"Romania", "sydney":"Australia", "melbourne":"Australia",
   "toronto":"Canada", "vancouver":"Canada", "hyderabad":"India", "manila":"Philippines",
+  // added after alphabetical sorting exposed how many entries were cities,
+  // states and corporate site codes rather than countries
+  "cape town":"South Africa", "johannesburg":"South Africa", "kwazulu-natal":"South Africa",
+  "durban":"South Africa", "pretoria":"South Africa", "sandton":"South Africa",
+  "prague":"Czechia", "praha":"Czechia", "brno":"Czechia",
+  "bratislava":"Slovakia", "gdansk":"Poland", "gdańsk":"Poland", "krakow":"Poland", "kraków":"Poland",
+  "stockholm":"Sweden", "uppsala":"Sweden", "gothenburg":"Sweden", "malmö":"Sweden",
+  "copenhagen":"Denmark", "københavn":"Denmark", "oslo":"Norway", "helsinki":"Finland",
+  "malaga":"Spain", "málaga":"Spain", "valencia":"Spain", "sevilla":"Spain", "seville":"Spain",
+  "bordeaux":"France", "boulogne-billancourt":"France", "boulogne billancourt":"France",
+  "bastia":"France", "fontenay sous bois":"France", "paris":"France", "lyon":"France",
+  "marseille":"France", "nantes":"France", "lille":"France", "toulouse":"France",
+  "dublin":"Ireland", "sandyford":"Ireland", "cork":"Ireland",
+  "belfast":"United Kingdom", "cardiff":"United Kingdom", "newcastle":"United Kingdom",
+  "douglas":"Isle of Man", "msida":"Malta", "ta`xbiex":"Malta", "ta'xbiex":"Malta",
+  "gzira":"Malta", "san gwann":"Malta", "qormi":"Malta", "mosta":"Malta",
+  "lima":"Peru", "montevideo":"Uruguay", "bogota":"Colombia", "santiago":"Chile",
+  "mexico city":"Mexico", "cdmx":"Mexico", "monterrey":"Mexico", "guadalajara":"Mexico",
+  "baja california":"Mexico", "dar es salaam":"Tanzania", "nairobi":"Kenya", "lagos":"Nigeria",
+  "accra":"Ghana", "kampala":"Uganda", "lusaka":"Zambia",
+  "bangalore":"India", "bengaluru":"India", "gurgaon":"India", "gurugram":"India",
+  "mumbai":"India", "delhi":"India", "noida":"India", "pune":"India", "kolkata":"India",
+  "albury":"Australia", "tamworth":"Australia", "brisbane":"Australia", "perth":"Australia",
+  "adelaide":"Australia", "auckland":"New Zealand", "wellington":"New Zealand",
+  "amsterdam":"Netherlands", "rotterdam":"Netherlands", "brussels":"Belgium",
+  "zurich":"Switzerland", "geneva":"Switzerland", "vienna":"Austria", "wien":"Austria",
+  "milan":"Italy", "turin":"Italy", "napoli":"Italy", "naples":"Italy",
+  "porto":"Portugal", "skopje":"North Macedonia", "sarajevo":"Bosnia & Herzegovina",
+  "ljubljana":"Slovenia", "tirana":"Albania", "chisinau":"Moldova",
+  "tel aviv":"Israel", "istanbul":"Turkey", "cairo":"Egypt", "dubai":"UAE",
+  "singapore":"Singapore", "hong kong":"Hong Kong", "tokyo":"Japan", "seoul":"South Korea",
+  "concord":"United States", "washington":"United States", "d.c.":"United States",
+  // country-name variants that arrive spelled differently
+  "brasil":"Brazil", "perú":"Peru", "czech republic":"Czechia", "méxico":"Mexico",
+  "boulogne":"France", "vitrolles":"France", "tito scalo":"Italy",
+  "valka.ai":"Latvia", "st. julian's":"Malta", "st julians":"Malta",
+  "west coast":"United States", "tulsa":"United States",
 };
 const NAMES = Array.from(new Set(Object.values(ISO)));
 const UK_CITIES = ["london","leeds","manchester","birmingham","glasgow","edinburgh","liverpool","sheffield","nottingham","bristol","brighton"];
 const US_CITIES = ["new york","atlantic city","las vegas","southfield","chicago","boston","los angeles","san francisco","jersey city","philadelphia","denver","miami","austin","seattle","dallas","atlanta"];
 // iGaming's actual hubs — pinned to the top so they aren't buried under volume
-const HUBS = ["Multiple locations","Malta","United Kingdom","United States","Gibraltar","Isle of Man","Cyprus","Ireland","UAE","Remote"];
+const HUBS = ["Multiple locations","Malta","United Kingdom","United States","Canada","Gibraltar","Isle of Man","Cyprus","Ireland","UAE","Remote"];
 
 function bucket(loc){
   if(!loc) return null;
-  const s = String(loc).trim(), low = s.toLowerCase();
-  if(/^\d+\s+locations?$/i.test(s) || low.includes("multiple location")) return "Multiple locations";
+  // some feeds arrive with entities intact: "St. Julian&#39;s" -> "St. Julian's"
+  const s = String(loc).replace(/&#3[49];/g, "'").replace(/&amp;/g, "&")
+                       .replace(/&nbsp;/g, " ").trim();
+  const low = s.toLowerCase();
+  if(/^\d+\s+locations?$/i.test(s) || low.includes("multiple location")
+     || /^all locations?$/i.test(s)) return "Multiple locations";
+  // "Stockholm; Uppsala" — take the first, it's the primary site
+  if(s.includes(";")) return bucket(s.split(";")[0]);
   if(low.includes("remote") || low.includes("anywhere")) return "Remote";
   if(low.includes("european union")) return "European Union";
   if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "UAE";
@@ -385,6 +442,21 @@ function bucket(loc){
   if(parts.length > 1 && US_STATES.has(tail)) return "United States";
   if(parts.length > 1 && CA_PROV.has(tail)) return "Canada";
   if(CITY_COUNTRY[tail]) return CITY_COUNTRY[tail];
+  // test the tail as well as the whole string, or "Phoenix, Arizona" is missed
+  if(US_STATE_NAMES.has(low) || US_STATE_NAMES.has(tail)) return "United States";
+  if(CA_PROV_NAMES.has(low) || CA_PROV_NAMES.has(tail)) return "Canada";
+  // Workday-style site codes: "USA-KS-Topeka-128 North Kansas Ave"
+  if(/^usa[-\s]/i.test(low)) return "United States";
+  if(/^can[-\s]/i.test(low)) return "Canada";
+  // last resort: strip company and entity words, then re-test each word left
+  const cleaned = low.replace(SITE_NOISE, " ").replace(/[_\-]+/g, " ")
+                     .replace(/\s+/g, " ").trim();
+  if(cleaned && cleaned !== low){
+    if(CITY_COUNTRY[cleaned]) return CITY_COUNTRY[cleaned];
+    for(const w of cleaned.split(" ")){
+      if(CITY_COUNTRY[w]) return CITY_COUNTRY[w];
+    }
+  }
   // strip street detail: "Roma - Via degli Aldobrandeschi" -> "Roma"
   const cityPart = tail.split(/\s+[-–]\s+/)[0].trim();
   if(CITY_COUNTRY[cityPart]) return CITY_COUNTRY[cityPart];
@@ -623,7 +695,9 @@ function buildLocations(){
 function drawLocations(){
   const q = (document.getElementById("locsearch").value || "").toLowerCase();
   const hubs = HUBS.filter(h => LOC_COUNTS[h]);
-  const rest = Object.keys(LOC_COUNTS).filter(k => !hubs.includes(k)).sort((a,b)=>LOC_COUNTS[b]-LOC_COUNTS[a]);
+  // hubs keep their curated order; everything else reads alphabetically,
+  // which is far easier to scan than a count-ordered list
+  const rest = Object.keys(LOC_COUNTS).filter(k => !hubs.includes(k)).sort((a,b)=>a.localeCompare(b));
   const row = k => `<label class="locopt"><input type="checkbox" value="${k}"${selectedLocs.includes(k)?" checked":""} />
       <span>${k}</span><span class="n">${LOC_COUNTS[k]}</span></label>`;
   const f = arr => arr.filter(k => !q || k.toLowerCase().includes(q));
