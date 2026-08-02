@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-02T13:06:24.755634+00:00",
- "job_count": 6099,
+ "generated_at": "2026-08-02T18:22:53.841311+00:00",
+ "job_count": 6084,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -7317,16 +7317,6 @@
    "location": "Atlantic City, NJ, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/83505",
-   "posted_at": "2026-07-30",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "HR Generalist",
-   "location": "Columbus, NE, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84037",
    "posted_at": "2026-07-30",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -39400,7 +39390,7 @@
   {
    "title": "Accounting Team Lead",
    "location": "Cyprus",
-   "department": "",
+   "department": "Finance GR8 Tech",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4902653101",
    "posted_at": "2026-06-19T06:31:46-04:00",
    "company": "GR8_TECH",
@@ -39410,7 +39400,7 @@
   {
    "title": "Engineering Team Lead/ Project Manager",
    "location": "Anywhere",
-   "department": "",
+   "department": "Casino Core",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4938494101",
    "posted_at": "2026-07-31T09:28:00-04:00",
    "company": "GR8_TECH",
@@ -39420,7 +39410,7 @@
   {
    "title": "Head of Business LATAM (iGaming)",
    "location": "Anywhere; Latin America",
-   "department": "",
+   "department": "Sales and Business Development",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4935275101",
    "posted_at": "2026-07-24T06:16:50-04:00",
    "company": "GR8_TECH",
@@ -39430,7 +39420,7 @@
   {
    "title": "Head of Office Admin",
    "location": "Poland; Ukraine",
-   "department": "",
+   "department": "Office Admin",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4838332101",
    "posted_at": "2026-04-14T08:08:24-04:00",
    "company": "GR8_TECH",
@@ -39440,7 +39430,7 @@
   {
    "title": "Head of Turnkey Solution",
    "location": "Anywhere; Bulgaria; Cyprus; Poland; Spain",
-   "department": "",
+   "department": "GR8 Tech",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4871699101",
    "posted_at": "2026-05-20T06:38:04-04:00",
    "company": "GR8_TECH",
@@ -39450,7 +39440,7 @@
   {
    "title": "Head of Turnkey Solution",
    "location": "Anywhere",
-   "department": "",
+   "department": "GR8 Tech",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4836959101",
    "posted_at": "2026-04-14T06:41:05-04:00",
    "company": "GR8_TECH",
@@ -39460,7 +39450,7 @@
   {
    "title": "Junior IT Procurement Specialist",
    "location": "Anywhere",
-   "department": "",
+   "department": "IT Procurement",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4938469101",
    "posted_at": "2026-07-27T10:17:32-04:00",
    "company": "GR8_TECH",
@@ -39470,7 +39460,7 @@
   {
    "title": "Junior L2 Technical Support Specialist for CRM Team",
    "location": "Anywhere",
-   "department": "",
+   "department": "Business Operations",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4938731101",
    "posted_at": "2026-07-27T11:30:32-04:00",
    "company": "GR8_TECH",
@@ -39480,7 +39470,7 @@
   {
    "title": "Middle Data Engineer",
    "location": "Anywhere",
-   "department": "",
+   "department": "Streaming & Traffic",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4906966101",
    "posted_at": "2026-06-24T08:05:58-04:00",
    "company": "GR8_TECH",
@@ -39490,7 +39480,7 @@
   {
    "title": "Middle Java Developer",
    "location": "Anywhere",
-   "department": "",
+   "department": "Streaming & Traffic",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4884982101",
    "posted_at": "2026-06-10T10:49:40-04:00",
    "company": "GR8_TECH",
@@ -39500,7 +39490,7 @@
   {
    "title": "Middle L2 Technical Support Specialist for Platform Team",
    "location": "Anywhere",
-   "department": "",
+   "department": "Business Operations",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4930927101",
    "posted_at": "2026-07-17T11:04:32-04:00",
    "company": "GR8_TECH",
@@ -39510,7 +39500,7 @@
   {
    "title": "Office Manager",
    "location": "Kyiv; Ukraine",
-   "department": "",
+   "department": "Office Admin",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4866565101",
    "posted_at": "2026-05-15T11:28:38-04:00",
    "company": "GR8_TECH",
@@ -39520,7 +39510,7 @@
   {
    "title": "Product Team Lead for Platform Product",
    "location": "Armenia; Bulgaria; Cyprus; Georgia; Poland",
-   "department": "",
+   "department": "Platform Product",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4890934101",
    "posted_at": "2026-06-23T13:09:19-04:00",
    "company": "GR8_TECH",
@@ -39530,7 +39520,7 @@
   {
    "title": "QA Engineer for Payments Team",
    "location": "Armenia; Cyprus; Moldova; Poland; Spain",
-   "department": "",
+   "department": "Casino & Payments General QA",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4927211101",
    "posted_at": "2026-07-16T07:38:05-04:00",
    "company": "GR8_TECH",
@@ -39540,7 +39530,7 @@
   {
    "title": "Risk & Anti-Fraud Operations Specialist (Casino)",
    "location": "Anywhere",
-   "department": "",
+   "department": "Antifraud Casino",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4918670101",
    "posted_at": "2026-07-08T09:49:37-04:00",
    "company": "GR8_TECH",
@@ -39550,7 +39540,7 @@
   {
    "title": "Senior Accountant",
    "location": "Armenia; Cyprus; Poland; Spain",
-   "department": "",
+   "department": "Finance GR8 Tech",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4921185101",
    "posted_at": "2026-07-08T12:26:49-04:00",
    "company": "GR8_TECH",
@@ -39560,7 +39550,7 @@
   {
    "title": "Senior Account Manager",
    "location": "Anywhere",
-   "department": "",
+   "department": "Account Management",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4904886101",
    "posted_at": "2026-06-23T10:28:11-04:00",
    "company": "GR8_TECH",
@@ -39570,7 +39560,7 @@
   {
    "title": "Senior CRM Manager",
    "location": "Anywhere",
-   "department": "",
+   "department": "Managed Services",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4936346101",
    "posted_at": "2026-07-27T10:53:58-04:00",
    "company": "GR8_TECH",
@@ -39580,7 +39570,7 @@
   {
    "title": "Senior Full-Stack .NET Engineer (with Node.js & Go)",
    "location": "Anywhere",
-   "department": "",
+   "department": "Platform Widgets Web",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4936294101",
    "posted_at": "2026-07-23T09:49:04-04:00",
    "company": "GR8_TECH",
@@ -39590,7 +39580,7 @@
   {
    "title": "Senior Product Manager for Platform Product",
    "location": "Anywhere",
-   "department": "",
+   "department": "Client Growth Product",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4936259101",
    "posted_at": "2026-07-27T06:44:35-04:00",
    "company": "GR8_TECH",
@@ -39600,7 +39590,7 @@
   {
    "title": "Senior Sales Manager",
    "location": "Anywhere; Armenia; Cyprus; Spain",
-   "department": "",
+   "department": "B2B Sales",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4935436101",
    "posted_at": "2026-07-31T10:33:57-04:00",
    "company": "GR8_TECH",
@@ -39610,7 +39600,7 @@
   {
    "title": "Talent Pool",
    "location": "Anywhere",
-   "department": "",
+   "department": "x Talent Pool",
    "url": "https://job-boards.eu.greenhouse.io/gr8tech/jobs/4372591101",
    "posted_at": "2024-07-30T08:00:19-04:00",
    "company": "GR8_TECH",
@@ -43050,7 +43040,7 @@
   {
    "title": "Access Administrator",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4914881101",
    "posted_at": "2026-07-01T09:40:06-04:00",
    "company": "LionHires",
@@ -43060,7 +43050,7 @@
   {
    "title": "Access Administrator",
    "location": "Panama City, Panama",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4906746101",
    "posted_at": "2026-06-24T05:59:40-04:00",
    "company": "LionHires",
@@ -43070,7 +43060,7 @@
   {
    "title": "Accountant",
    "location": "Limassol, Cyprus",
-   "department": "",
+   "department": "Finance",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4781789101",
    "posted_at": "2026-02-12T15:54:12-05:00",
    "company": "LionHires",
@@ -43080,7 +43070,7 @@
   {
    "title": "Affiliate Invoice Coordinator",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Affiliate Department",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4765562101",
    "posted_at": "2026-01-23T11:00:33-05:00",
    "company": "LionHires",
@@ -43090,7 +43080,7 @@
   {
    "title": "Country Manager - Spain ",
    "location": "Spain",
-   "department": "",
+   "department": "Marketing Department",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4909620101",
    "posted_at": "2026-06-26T07:44:56-04:00",
    "company": "LionHires",
@@ -43100,7 +43090,7 @@
   {
    "title": "Country Manager - Sweden",
    "location": "Copenhagen, Denmark",
-   "department": "",
+   "department": "Marketing Department",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4802646101",
    "posted_at": "2026-03-09T10:53:41-04:00",
    "company": "LionHires",
@@ -43110,7 +43100,7 @@
   {
    "title": "CRM Manager (Italian speaking)",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Marketing Department",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4899107101",
    "posted_at": "2026-06-16T05:13:34-04:00",
    "company": "LionHires",
@@ -43120,7 +43110,7 @@
   {
    "title": "CRM Manager - Romania ",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4496956101",
    "posted_at": "2025-01-08T08:52:15-05:00",
    "company": "LionHires",
@@ -43130,7 +43120,7 @@
   {
    "title": "Danish CRM Manager",
    "location": "Copenhagen, Denmark",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4555423101",
    "posted_at": "2025-03-12T03:00:16-04:00",
    "company": "LionHires",
@@ -43140,7 +43130,7 @@
   {
    "title": "Danish CRM Manager ",
    "location": "Copenhagen, Denmark",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4921439101",
    "posted_at": "2026-07-07T10:19:12-04:00",
    "company": "LionHires",
@@ -43150,7 +43140,7 @@
   {
    "title": "Data Operations Engineer",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Data and Analytics",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4908171101",
    "posted_at": "2026-06-25T07:30:29-04:00",
    "company": "LionHires",
@@ -43160,7 +43150,7 @@
   {
    "title": "Data Support Team Lead",
    "location": "Valencia, Spain",
-   "department": "",
+   "department": "Data and Analytics",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4909718101",
    "posted_at": "2026-06-26T08:25:26-04:00",
    "company": "LionHires",
@@ -43170,7 +43160,7 @@
   {
    "title": "DevSecOps Engineer",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4910017101",
    "posted_at": "2026-06-26T12:30:40-04:00",
    "company": "LionHires",
@@ -43180,7 +43170,7 @@
   {
    "title": "Dutch Content Manager",
    "location": "Dubai, Panama",
-   "department": "",
+   "department": "Marketing Department",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4911240101",
    "posted_at": "2026-06-29T06:21:30-04:00",
    "company": "LionHires",
@@ -43190,7 +43180,7 @@
   {
    "title": "HR Operations Specialist ",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "HR Division",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4875222101",
    "posted_at": "2026-05-26T06:24:32-04:00",
    "company": "LionHires",
@@ -43200,7 +43190,7 @@
   {
    "title": "Integration Analyst ",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4875223101",
    "posted_at": "2026-05-26T06:27:49-04:00",
    "company": "LionHires",
@@ -43210,7 +43200,7 @@
   {
    "title": "Legal Counsel",
    "location": "Valencia, Spain",
-   "department": "",
+   "department": "Legal",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4900447101",
    "posted_at": "2026-06-16T15:46:24-04:00",
    "company": "LionHires",
@@ -43220,7 +43210,7 @@
   {
    "title": "Manual QA Engineer",
    "location": "Athens, Greece",
-   "department": "",
+   "department": "QA",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4908190101",
    "posted_at": "2026-06-25T07:50:24-04:00",
    "company": "LionHires",
@@ -43230,7 +43220,7 @@
   {
    "title": "Manual QA Engineer",
    "location": "Mexico City, Mexico",
-   "department": "",
+   "department": "QA",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902400101",
    "posted_at": "2026-06-18T06:42:44-04:00",
    "company": "LionHires",
@@ -43240,7 +43230,7 @@
   {
    "title": "Manual QA Engineer",
    "location": "Santiago, Chile",
-   "department": "",
+   "department": "QA",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902413101",
    "posted_at": "2026-06-18T06:40:53-04:00",
    "company": "LionHires",
@@ -43250,7 +43240,7 @@
   {
    "title": "Manual QA Engineer",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "QA",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4917304101",
    "posted_at": "2026-07-02T03:17:55-04:00",
    "company": "LionHires",
@@ -43260,7 +43250,7 @@
   {
    "title": "Operational CFO",
    "location": "Birkirkara, Malta",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4934495101",
    "posted_at": "2026-07-22T05:43:25-04:00",
    "company": "LionHires",
@@ -43270,7 +43260,7 @@
   {
    "title": "Payments Business Development Manager",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Business Development",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4906086101",
    "posted_at": "2026-06-23T08:27:04-04:00",
    "company": "LionHires",
@@ -43280,7 +43270,7 @@
   {
    "title": "Payments Contract Specialist (Legal)",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4900402101",
    "posted_at": "2026-06-16T14:32:26-04:00",
    "company": "LionHires",
@@ -43290,7 +43280,7 @@
   {
    "title": "Product Manager",
    "location": "Santiago, Chile",
-   "department": "",
+   "department": "Product Managers Team",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902456101",
    "posted_at": "2026-06-18T07:18:43-04:00",
    "company": "LionHires",
@@ -43300,7 +43290,7 @@
   {
    "title": "Product Manager",
    "location": "Mexico City, Mexico",
-   "department": "",
+   "department": "Product Managers Team",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4902431101",
    "posted_at": "2026-06-18T07:11:16-04:00",
    "company": "LionHires",
@@ -43310,7 +43300,7 @@
   {
    "title": "Product Manager (Gamification)",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Product Managers Team",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4921079101",
    "posted_at": "2026-07-07T06:19:32-04:00",
    "company": "LionHires",
@@ -43320,7 +43310,7 @@
   {
    "title": "Product Manager (Swedish Regulations)",
    "location": "Copenhagen, Denmark",
-   "department": "",
+   "department": "Product Managers Team",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4917590101",
    "posted_at": "2026-07-02T07:36:17-04:00",
    "company": "LionHires",
@@ -43330,7 +43320,7 @@
   {
    "title": "Product Owner",
    "location": "Valencia, Spain",
-   "department": "",
+   "department": "Product Owners Team",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4909716101",
    "posted_at": "2026-06-26T08:20:15-04:00",
    "company": "LionHires",
@@ -43340,7 +43330,7 @@
   {
    "title": "Regional CRM Manager - North America ",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Marketing Department",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4914900101",
    "posted_at": "2026-07-01T10:04:23-04:00",
    "company": "LionHires",
@@ -43350,7 +43340,7 @@
   {
    "title": "Regional CRM Manager - Romanian Market",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4908439101",
    "posted_at": "2026-06-25T10:56:11-04:00",
    "company": "LionHires",
@@ -43360,7 +43350,7 @@
   {
    "title": "Regional CRM Manager - Spanish Market",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4907149101",
    "posted_at": "2026-06-24T09:48:06-04:00",
    "company": "LionHires",
@@ -43370,7 +43360,7 @@
   {
    "title": "Security Access Management Team Lead",
    "location": "Belgrade, Serbia",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4915019101",
    "posted_at": "2026-07-01T10:49:08-04:00",
    "company": "LionHires",
@@ -43380,7 +43370,7 @@
   {
    "title": "Security Access Management Team Lead",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4898142101",
    "posted_at": "2026-06-15T10:47:52-04:00",
    "company": "LionHires",
@@ -43390,7 +43380,7 @@
   {
    "title": "Security Automation Engineer",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4831424101",
    "posted_at": "2026-07-08T05:31:48-04:00",
    "company": "LionHires",
@@ -43400,7 +43390,7 @@
   {
    "title": "Senior Application Security Engineer",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4910013101",
    "posted_at": "2026-06-26T12:18:22-04:00",
    "company": "LionHires",
@@ -43410,7 +43400,7 @@
   {
    "title": "Senior B2B Account Manager",
    "location": "Limassol, Cyprus",
-   "department": "",
+   "department": "Business Development",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4905040101",
    "posted_at": "2026-06-22T08:45:51-04:00",
    "company": "LionHires",
@@ -43420,7 +43410,7 @@
   {
    "title": "Senior B2B Sales Manager",
    "location": "Limassol, Cyprus",
-   "department": "",
+   "department": "Business Development",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4904991101",
    "posted_at": "2026-06-22T08:13:45-04:00",
    "company": "LionHires",
@@ -43430,7 +43420,7 @@
   {
    "title": "Senior BI Developer",
    "location": "Birkirkara, Malta",
-   "department": "",
+   "department": "Data and Analytics",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4581595101",
    "posted_at": "2025-04-29T03:46:43-04:00",
    "company": "LionHires",
@@ -43440,7 +43430,7 @@
   {
    "title": "Senior Business Development Manager",
    "location": "Birkirkara, Malta",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4904815101",
    "posted_at": "2026-06-22T06:37:06-04:00",
    "company": "LionHires",
@@ -43450,7 +43440,7 @@
   {
    "title": "Senior CRM Sports Coordinator - relocation to Portugal ",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4904997101",
    "posted_at": "2026-06-22T09:25:22-04:00",
    "company": "LionHires",
@@ -43460,7 +43450,7 @@
   {
    "title": "Senior Data Engineer",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Data and Analytics",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4908164101",
    "posted_at": "2026-06-25T07:26:37-04:00",
    "company": "LionHires",
@@ -43470,7 +43460,7 @@
   {
    "title": "Senior DevOps Engineer",
    "location": "Valencia, Spain",
-   "department": "",
+   "department": "DevOps",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4907823101",
    "posted_at": "2026-06-25T04:00:12-04:00",
    "company": "LionHires",
@@ -43480,7 +43470,7 @@
   {
    "title": "Senior DevOps Engineer (Cloudflare)",
    "location": "Belgrade, Serbia",
-   "department": "",
+   "department": "DevOps",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4908092101",
    "posted_at": "2026-06-25T06:42:37-04:00",
    "company": "LionHires",
@@ -43490,7 +43480,7 @@
   {
    "title": "Senior Financial Crime Compliance Officer",
    "location": "Birkirkara, Malta",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4936263101",
    "posted_at": "2026-07-23T08:44:24-04:00",
    "company": "LionHires",
@@ -43500,7 +43490,7 @@
   {
    "title": "Senior Flutter Developer",
    "location": "Cyprus",
-   "department": "",
+   "department": "Mobile unit",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4941013101",
    "posted_at": "2026-07-29T11:07:35-04:00",
    "company": "LionHires",
@@ -43510,7 +43500,7 @@
   {
    "title": "Senior Full Stack Developer (Node.js & React)",
    "location": "Valencia, Spain",
-   "department": "",
+   "department": "Platform Operations",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4909712101",
    "posted_at": "2026-06-26T08:16:22-04:00",
    "company": "LionHires",
@@ -43520,7 +43510,7 @@
   {
    "title": "Senior Penetration Tester",
    "location": "Warsaw, Poland",
-   "department": "",
+   "department": "Information Security",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4910029101",
    "posted_at": "2026-06-26T12:38:30-04:00",
    "company": "LionHires",
@@ -43530,7 +43520,7 @@
   {
    "title": "Senior Sport CRM Coordinator ",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4901206101",
    "posted_at": "2026-06-17T08:37:37-04:00",
    "company": "LionHires",
@@ -43540,7 +43530,7 @@
   {
    "title": "Senior Technical Support Specialist \u2013 Payments Platform",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4900390101",
    "posted_at": "2026-06-16T14:15:20-04:00",
    "company": "LionHires",
@@ -43550,7 +43540,7 @@
   {
    "title": "System Administrator",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "R&D Division ",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4917369101",
    "posted_at": "2026-07-02T04:39:28-04:00",
    "company": "LionHires",
@@ -43560,7 +43550,7 @@
   {
    "title": "Team Lead Backend Developer (Node.js)",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Back-end",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4917512101",
    "posted_at": "2026-07-02T06:29:18-04:00",
    "company": "LionHires",
@@ -43570,7 +43560,7 @@
   {
    "title": "Technical Account Manager \u2013 Payments Platform",
    "location": "Panama City, Panama",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4912120101",
    "posted_at": "2026-06-29T14:10:19-04:00",
    "company": "LionHires",
@@ -43580,7 +43570,7 @@
   {
    "title": "Technical Account Manager \u2013 Payments Platform",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "Payments",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4900399101",
    "posted_at": "2026-06-16T14:29:26-04:00",
    "company": "LionHires",
@@ -43590,7 +43580,7 @@
   {
    "title": "Technical Manager",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "R&D Division ",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4907972101",
    "posted_at": "2026-06-25T05:27:23-04:00",
    "company": "LionHires",
@@ -43600,7 +43590,7 @@
   {
    "title": "VIP Account Manager (Spanish Speaking)",
    "location": "Ceuta, Spain",
-   "department": "",
+   "department": "VIP",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4923331101",
    "posted_at": "2026-07-09T04:30:53-04:00",
    "company": "LionHires",
@@ -43610,7 +43600,7 @@
   {
    "title": "VP of Engagement",
    "location": "Lisbon, Portugal",
-   "department": "",
+   "department": "CRM",
    "url": "https://job-boards.eu.greenhouse.io/lionhires/jobs/4904851101",
    "posted_at": "2026-06-22T06:56:12-04:00",
    "company": "LionHires",
@@ -55842,6 +55832,56 @@
    "source": "collector"
   },
   {
+   "title": "Open Application: DevOps \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/devops-talent-pool/",
+   "posted_at": "2026-05-11T09:52:58",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Backend Engineering \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/be-talent-pool/",
+   "posted_at": "2026-05-11T09:52:55",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Quantitative Analytics \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/quant-talent-pool/",
+   "posted_at": "2026-05-11T09:52:52",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Data Engineering \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/de-talent-pool/",
+   "posted_at": "2026-05-11T09:52:48",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Frontend Engineering \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/fe-talent-pool/",
+   "posted_at": "2026-05-11T09:52:24",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
    "title": "Subir CV a base general",
    "location": "",
    "department": "",
@@ -58492,186 +58532,6 @@
    "source": "agency"
   },
   {
-   "title": "Head of Country / Country Manager Tier-1",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/head-of-country-country-manager-tier-1/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Head of Influence and Streamers",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/head-of-influence-and-streamers/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Chief Commercial Officer (CCO) \u2014 B2B Game Provider",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/chief-commercial-officer-cco-b2b-game-provider/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Product Manager",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/senior-product-manager/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Head of ASO/ iGaming",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/head-of-aso-igaming/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Chief Financial Officer (CFO), FinTech iGaming Remote Europe More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/chief-financial-officer-cfo-fintech/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Chief Product Officer (iGaming) iGaming Cyprus More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/chief-product-officer-igaming/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "CEO Global iGaming iGaming Global B2C Remote More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/ceo-global-igaming/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Head of B2C Division iGaming Remote Cyprus Europe More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/head-of-b2c-division/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Head of Account Management Operations iGaming Platform Remote Cyprus Europe More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/head-of-account-management-operations/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "CEO Global B2C Operations(gambling) iGaming Gambling More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/ceo-global-global-b2c-operationsgambling/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "CFO (Sweepstakes) iGaming Gambling Cyprus Cyprus / Worldwide More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/cfo-sweepstakes/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Chief Marketing Officer (CMO) \u2013 EdTech Remote More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/chief-marketing-officer-cmo-edtech/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Head of Retention \u2013 iGaming iGaming Remote Cyprus Europe More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/head-of-retention-igaming/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "CEO (Sweepstakes) iGaming Cyprus Cyprus / Worldwide More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/ceo-sweepstakes/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Chief Architect iGaming More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/chief-architect/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "HRD International Holding (iGaming) iGaming Remote Remote / International More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/hrd-international-holding-igaming/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "HR Director (iGaming) iGaming Cyprus More Details",
-   "location": "",
-   "department": "",
-   "url": "https://apercon.com/jobs/hr-director-igaming-2/",
-   "posted_at": null,
-   "company": "Apercon",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Junior Procurement Specialist",
    "location": "",
    "department": "",
@@ -58712,10 +58572,10 @@
    "source": "agency"
   },
   {
-   "title": "Senior Financial Crime Compliance Specialist",
+   "title": "HR Data Analyst",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-financial-crime-compliance-specialist-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/hr-data-analyst-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58732,10 +58592,20 @@
    "source": "agency"
   },
   {
-   "title": "HR Data Analyst",
+   "title": "Regulatory Reporting Analyst",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/hr-data-analyst-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/regulatory-reporting-analyst-sydney-eora-nation-nsw-australia-646c1ae9-429c-4507-9108-562f598d6007",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Financial Crime Compliance Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-financial-crime-compliance-specialist-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58752,10 +58622,10 @@
    "source": "agency"
   },
   {
-   "title": "Regulatory Reporting Analyst",
+   "title": "Controls Assurance Senior Advisor",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/regulatory-reporting-analyst-sydney-eora-nation-nsw-australia-646c1ae9-429c-4507-9108-562f598d6007",
+   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58772,40 +58642,10 @@
    "source": "agency"
   },
   {
-   "title": "Controls Assurance Senior Advisor",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Financial Crime Controls Assurance Manager",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/financial-crime-controls-assurance-manager-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Policy & Governance Manager",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/policy-governance-manager-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Trade Marketing Co-ordinator - MAX (4 days/ week)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/trade-marketing-co-ordinator-max-4-days-week-melbourne-kulin-nation-vic-australia-sydney-eora-nation-nsw",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58822,30 +58662,10 @@
    "source": "agency"
   },
   {
-   "title": "Senior Manager Compliance and Assurance",
+   "title": "Policy & Governance Manager",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "BCP Manager",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/bcp-manager-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Project Coordinator - Remediation",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/project-coordinator-remediation-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/policy-governance-manager-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58862,16 +58682,6 @@
    "source": "agency"
   },
   {
-   "title": "Customer Engagement Ambassador",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/customer-engagement-ambassador-brisbane-turrbal-country-qld-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Commercial Wagering Analytics Manager",
    "location": "",
    "department": "",
@@ -58882,30 +58692,50 @@
    "source": "agency"
   },
   {
-   "title": "Associate Trader - Racing",
+   "title": "Trade Marketing Co-ordinator - MAX (4 days/ week)",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
+   "url": "https://careers.tabcorp.com.au/jobs/trade-marketing-co-ordinator-max-4-days-week-melbourne-kulin-nation-vic-australia-sydney-eora-nation-nsw",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Venue Support Consultant (MAX - Loyalty)",
+   "title": "BCP Manager",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/bcp-manager-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Junior Software Engineer",
+   "title": "Senior Manager Compliance and Assurance",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/junior-software-engineer-sydney-eora-nation-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Customer Engagement Ambassador",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/customer-engagement-ambassador-brisbane-turrbal-country-qld-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Project Coordinator - Remediation",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/project-coordinator-remediation-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58922,10 +58752,10 @@
    "source": "agency"
   },
   {
-   "title": "Warehouse Technician - Retail Terminal Project",
+   "title": "Associate Trader - Racing",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/warehouse-technician-retail-terminal-project-melbourne-kulin-nation-vic-australia-scoresby",
+   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58942,10 +58772,20 @@
    "source": "agency"
   },
   {
-   "title": "Workshop Technician",
+   "title": "Junior Software Engineer",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-35733d60-b8e9-49f0-92ea-409b422ab2ad",
+   "url": "https://careers.tabcorp.com.au/jobs/junior-software-engineer-sydney-eora-nation-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Venue Support Consultant (MAX - Loyalty)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -58962,12 +58802,22 @@
    "source": "agency"
   },
   {
-   "title": "Risk & Compliance Manager (Corporate Functions Line 1) \u2013 12 month FTC",
+   "title": "Warehouse Technician - Retail Terminal Project",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/risk-compliance-manager-corporate-functions-line-1-12-month-ftc-melbourne-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/warehouse-technician-retail-terminal-project-melbourne-kulin-nation-vic-australia-scoresby",
    "posted_at": null,
-   "company": "Sportsbet",
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Workshop Technician",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-35733d60-b8e9-49f0-92ea-409b422ab2ad",
+   "posted_at": null,
+   "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
@@ -58992,10 +58842,10 @@
    "source": "agency"
   },
   {
-   "title": "Data Science Lead",
+   "title": "Risk & Compliance Manager (Corporate Functions Line 1) \u2013 12 month FTC",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/data-science-lead-melbourne-vic-australia-6fe55588-6d03-456e-9d6f-5d8ecce81bce",
+   "url": "https://careers.sportsbet.com.au/jobs/risk-compliance-manager-corporate-functions-line-1-12-month-ftc-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -59022,20 +58872,30 @@
    "source": "agency"
   },
   {
-   "title": "Payroll Officer",
+   "title": "Data Engineer",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/payroll-officer-melbourne-vic-australia-26625c28-293a-499b-b4c9-3f7db26d9963",
+   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Data Engineer",
+   "title": "Data Science Lead",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
+   "url": "https://careers.sportsbet.com.au/jobs/data-science-lead-melbourne-vic-australia-6fe55588-6d03-456e-9d6f-5d8ecce81bce",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Payroll Officer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/payroll-officer-melbourne-vic-australia-26625c28-293a-499b-b4c9-3f7db26d9963",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -60986,16 +60846,6 @@
    "location": "",
    "department": "",
    "url": "https://www.bettingjobs.com/jobview/exchange-specialist/80af1cc2-7d9b-4447-b048-4723e1cdc4ef/",
-   "posted_at": null,
-   "company": "BettingJobs",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Sports Trader US sports",
-   "location": "",
-   "department": "",
-   "url": "https://www.bettingjobs.com/jobview/sports-trader-us-sports/19f4cd07-6719-4b40-b7a5-3061244971f4/",
    "posted_at": null,
    "company": "BettingJobs",
    "ats": "agency",
