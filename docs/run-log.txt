@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-02T18:51:25.079877+00:00
+role-radar collector run: 2026-08-02T19:05:10.652934+00:00
 ============================================================
 
 GAN: 0 roles (breezy)
@@ -27,11 +27,11 @@ Yggdrasil: 6 roles (smartrecruiters)
 Super Group (Betway, Jackpot City, Spin): 52 roles (workday)
       sf opapsa career2.successfactors.eu/sitemap.xml: HTTP 404 text/html
       sf opapsa career2.successfactors.eu/sitemal.xml: HTTP 404 text/html
-      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 202588 bytes, 0 jobIds, 9 anchors
-      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 133756 bytes, 0 jobIds, 6 anchors
-      sf opapsa career2.successfactors.eu/careers?company=opapsa: 200, 184446 bytes, 0 jobIds, 8 anchors
-      sf opapsa career2.successfactors.eu/career?company=opapsa: 200, 184438 bytes, 0 jobIds, 8 anchors
-      sf opapsa career2.successfactors.eu/sfcareer/jobreqcareer?company=opa: 200, 133805 bytes, 0 jobIds, 6 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 202624 bytes, 0 jobIds, 9 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 133784 bytes, 0 jobIds, 6 anchors
+      sf opapsa career2.successfactors.eu/careers?company=opapsa: 200, 184470 bytes, 0 jobIds, 8 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa: 200, 184462 bytes, 0 jobIds, 8 anchors
+      sf opapsa career2.successfactors.eu/sfcareer/jobreqcareer?company=opa: 200, 133833 bytes, 0 jobIds, 6 anchors
       SF/opapsa: 161 script bundle(s) referenced, checking 30
       SF/opapsa: no API URLs found in bundle
       successfactors opapsa: nothing found across 1 host(s)
@@ -142,24 +142,6 @@ Huddle: 5 roles (wordpress)
       Fortuna: 1 script bundle(s) referenced, checking 4
       Fortuna: API-looking URLs in bundle:
          https://app-azeun-p-hr-easyapply-be.azurewebsites.net
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobs: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Jobs: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/vacancies: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Vacancies: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/positions: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/JobOffers: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/joboffers: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/v1/jobs: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/adverts: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Job/GetAll: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Job/List: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/JobAds: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobads: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/publication: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/publications: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/offers: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Recruitment/Jobs: HTTP 500
-      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/job/search: HTTP 500
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
@@ -178,6 +160,24 @@ Huddle: 5 roles (wordpress)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobs: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Jobs: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/vacancies: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Vacancies: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/positions: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/JobOffers: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/joboffers: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/v1/jobs: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/adverts: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Job/GetAll: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Job/List: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/JobAds: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobads: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/publication: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/publications: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/offers: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Recruitment/Jobs: HTTP 500
+      https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/job/search: HTTP 500
 Fortuna Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://joblink.allibo.com/ats2/: HTTP 403
       Cirsa: 1 script bundle(s) referenced, checking 4
@@ -190,12 +190,17 @@ Cirsa: 0 roles (agency board)  <-- CHECK: returned nothing
       Codere Online: no API URLs found in bundle
    Codere Online: link parse -> 2
 Codere Online: 2 roles (agency board)
-      sitemap https://www.casumocareers.com: 3 job URLs
-      json-ld https://www.casumocareers.com/jobs/8049683-multimedia-designer: 1 JobPosting blocks  <-- USABLE
-      json-ld https://www.casumocareers.com/jobs/7922995-business-intelligence-analyst: 1 JobPosting blocks  <-- USABLE
+      sitemap https://www.casumocareers.com: 8 job URLs
+      json-ld https://www.casumocareers.com/jobs/7873243-risk-fraud-payments-analyst: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7707249-platform-engineer: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7696971-casino-coordinator: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7693327-quality-assurance-specialist: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7693168-ai-engineer: HTTP 410
       json-ld https://www.casumocareers.com/jobs/7691557-casino-manager: 1 JobPosting blocks  <-- USABLE
-   Casumo: sitemap + JSON-LD -> 3
-Casumo: 3 roles (agency board)
+      json-ld https://www.casumocareers.com/jobs/7659688-site-reliability-engineer: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7622742-information-security-engineer: HTTP 410
+   Casumo: sitemap + JSON-LD -> 1
+Casumo: 1 roles (agency board)
       json-ld https://betika.seamlesshiring.com/jobs: HTTP 404
       json-ld https://betika.seamlesshiring.com/careers: HTTP 404
       json-ld https://betika.seamlesshiring.com/h: HTTP 404
@@ -468,8 +473,13 @@ Inspired Entertainment: 0 roles (agency board)  <-- CHECK: returned nothing
       sitemap https://jobs.amusnet.com: 72 job URLs
       Amusnet: 19 script bundle(s) referenced, checking 7
       Amusnet: no API URLs found in bundle
-   Amusnet: link parse -> 1
-Amusnet: 1 roles (agency board)
+      Amusnet https://jobs.amusnet.com/Interactive/: 200, 50061 bytes, 6 '/job' refs
+         link shapes present: /Interactive/* x22, /platform/* x7, /rmkcdn.successfactors.com/* x2, /Interactive x2, /about x2, /company x2, /cookie-policy x1, /community x1, /AmusnetCareers x1, /amusnet_careers x1, /company/* x1, /@amusnet1 x1
+      Amusnet https://jobs.amusnet.com/Interactive/job/: 200, 39462 bytes, 6 '/job' refs
+         link shapes present: /go/* x22, /platform/* x7, /rmkcdn.successfactors.com/* x2, /about x2, /cookie-policy x1, /AmusnetCareers x1, /amusnet_careers x1, /company/* x1, /@amusnet1 x1, /technologies/* x1, /privacy x1, /terms x1
+      Amusnet https://jobs.amusnet.com/: 200, 49529 bytes, 6 '/job' refs
+         link shapes present: /go/* x22, /platform/* x7, /rmkcdn.successfactors.com/* x2, /about x2, /company x2, /cookie-policy x1, /community x1, /AmusnetCareers x1, /amusnet_careers x1, /company/* x1, /@amusnet1 x1, /technologies/* x1
+Amusnet: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://career.nolimitcity.com/career/: HTTP 403
       Nolimit City®: 4 script bundle(s) referenced, checking 4
       Nolimit City®: no API URLs found in bundle
@@ -515,13 +525,6 @@ Allwyn: 4 roles (agency board)
          https://maps.googleapis.com/maps/api/js
          https://postingpandajobboard-live.azurewebsites.net/bundles/SelfBuildAppForms
       https://postingpandajobboard-live.azurewebsites.net/bundles/SelfBuildAppForms: 200 but text/javascript (not json)
-      https://maps.googleapis.com/api/jobs: HTTP 404
-      https://maps.googleapis.com/api/Jobs: HTTP 404
-      https://maps.googleapis.com/api/vacancies: HTTP 404
-      https://maps.googleapis.com/api/job/search: HTTP 404
-      https://maps.googleapis.com/api/jobs/search: HTTP 404
-      https://maps.googleapis.com/api/v1/jobs: HTTP 404
-      https://maps.googleapis.com/api/adverts: HTTP 404
       https://postingpandajobboard-live.azurewebsites.net/api/jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/Jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/vacancies: 200 but text/html (not json)
@@ -529,6 +532,13 @@ Allwyn: 4 roles (agency board)
       https://postingpandajobboard-live.azurewebsites.net/api/jobs/search: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/adverts: 200 but text/html (not json)
+      https://maps.googleapis.com/api/jobs: HTTP 404
+      https://maps.googleapis.com/api/Jobs: HTTP 404
+      https://maps.googleapis.com/api/vacancies: HTTP 404
+      https://maps.googleapis.com/api/job/search: HTTP 404
+      https://maps.googleapis.com/api/jobs/search: HTTP 404
+      https://maps.googleapis.com/api/v1/jobs: HTTP 404
+      https://maps.googleapis.com/api/adverts: HTTP 404
       https://betfredgroup.talosats-careers.com/api/jobs: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/Jobs: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/vacancies: 200 but text/html (not json)
@@ -563,7 +573,7 @@ BettingJobs: 98 roles (agency board)
       json-ld https://vankaizen.com/vacancies/vp-sales-revenue: HTTP 429
 Van Kaizen: 70 roles (agency board)
 
-companies.csv refreshed: 134 returning, 155 not
+companies.csv refreshed: 133 returning, 156 not
 
-Feed written: 6207 jobs
+Feed written: 6204 jobs
 Unresolved companies (115): 1/ST (Stronach Group), Paysafe, EyeSpy Recruitment, Emerald Zebra, BSQ Talent, Snaitech, 888Africa, Wazdan, GeoComply, LSports, Racing Post / Spotlight Sports, Churchill Downs / TwinSpires, The Jockey Club, Weatherbys, GGPoker (NSUS Group), 4Poker, MuchBetter, The Lottery Corporation, Admiral, TopSport, Yolo Group, OlyBet Group, Live88, APE | Poker Technology, Tipwin Limited, FEG, Manifold Markets, Opinion, Hedgehog Markets, Booming Games
