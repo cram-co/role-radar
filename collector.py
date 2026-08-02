@@ -1257,6 +1257,10 @@ def _links_with_titles(html_text, base, path_marker):
         title = re.sub(r"\s*\{.*$", "", title).strip()
         if not title or len(title) < 3 or len(title) > 140:
             continue
+        # same guards the slug path uses — link text can carry a page heading
+        # ("Jobs at Amusnet We use cookies...") or stray markup
+        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+            continue
         if title.lower() in ("apply now", "learn more", "view job", "read more", "more info"):
             continue
         url = href if href.startswith("http") else base.rstrip("/") + href
