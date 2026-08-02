@@ -287,3 +287,4 @@ Betway Africa,Operator - Africa,no,0,not probed yet,detect,https://myhcm.wd3.myw
 Jumpman Gaming,Operator,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjobs.com/jumpman,"Super Group; own Workday tenant, no open roles at time of setup"
 ARRISE (global),Supplier - Content,no,0,not probed yet,detect,skip,"arrise.com/careers blocks bots - handled by scrape_custom; global roles across Gibraltar, Malta, Romania, Serbia, Bulgaria"
 B2Tech,Supplier - Platform,no,0,not probed yet,detect,teamtailor:careers.b2tech.com,Teamtailor on a custom domain (careers.b2tech.com) - looked like a bespoke site
+Huddle,Supplier - Content,no,0,not probed yet,detect,wordpress:huddle.tech,"WordPress + WP Job Openings plugin (no ATS). NOT apply.workable.com/huddle - that is a different Huddle, the UK document-collaboration firm"

@@ -785,6 +785,57 @@ def fetch_rippling(token):
     return []
 
 
+def fetch_wordpress(token):
+    """WordPress sites that run a jobs plugin expose it through the standard WP
+    REST API. Token is the host. Huddle's filter labels (Departments, Locations,
+    Employment Types) are the WP Job Openings defaults, so that post type is
+    tried first, then the other common ones."""
+    base = f"https://{token}" if not token.startswith("http") else token
+    TYPES = ["awsm_job_openings", "job_listing", "jobs", "job", "career",
+             "careers", "vacancy", "vacancies", "position", "open-roles"]
+    for t in TYPES:
+        url = f"{base}/wp-json/wp/v2/{t}?per_page=100&_embed=1"
+        try:
+            r = _request("GET", url, headers={**AGENCY_UA, "Accept": "application/json"})
+        except Exception:
+            continue
+        if r.status_code != 200:
+            continue
+        try:
+            items = r.json()
+        except Exception:
+            continue
+        if not isinstance(items, list) or not items:
+            continue
+        out = []
+        for j in items:
+            title = html.unescape(str((j.get("title") or {}).get("rendered") or "")).strip()
+            if not title:
+                continue
+            # taxonomy terms arrive under _embedded when _embed=1 is asked for
+            loc = ""
+            for group in ((j.get("_embedded") or {}).get("wp:term") or []):
+                for term in group or []:
+                    tax = str(term.get("taxonomy") or "")
+                    if "location" in tax or "city" in tax or "country" in tax:
+                        loc = html.unescape(str(term.get("name") or ""))
+                        break
+                if loc:
+                    break
+            out.append({
+                "title": title,
+                "location": loc,
+                "department": "",
+                "url": j.get("link") or f"{base}/?p={j.get('id','')}",
+                "posted_at": j.get("date_gmt") or j.get("date"),
+            })
+        if out:
+            print(f"      wordpress {token}: {t} -> {len(out)}")
+            return out
+    print(f"      wordpress {token}: no job post type found among {len(TYPES)} tried")
+    return []
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json"""
     d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
@@ -1061,6 +1112,7 @@ FETCHERS = {
     "ultipro": fetch_ultipro,
     "icims": fetch_icims,
     "freshteam": fetch_freshteam,
+    "wordpress": fetch_wordpress,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
