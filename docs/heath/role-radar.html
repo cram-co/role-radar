@@ -84,6 +84,12 @@
   .job .agency{margin-left:7px;padding:1px 7px;border:1px solid var(--line2);border-radius:100px;
                font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
                text-transform:uppercase;color:var(--slate);}
+  /* tinted rather than outlined, so it reads as a property of the role
+     rather than another company label sitting beside the agency badge */
+  .job .openapp{margin-left:7px;padding:1px 7px;border-radius:100px;
+               background:rgba(31,75,196,.08);
+               font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
+               text-transform:uppercase;color:var(--royal);}
   .dot{color:var(--mist);}
   .pager{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:26px 2px 8px;}
   .pg{padding:8px 13px;border:1px solid var(--line2);border-radius:5px;background:#fff;
@@ -315,6 +321,10 @@ function saveExcluded(){
 
 // these list roles on behalf of unnamed clients, so say so rather than letting
 // the user assume the agency is the employer
+// Expression-of-interest listings: real and useful, but you're registering
+// interest rather than applying to an open seat, so the card says so.
+const OPEN_APP = /\btalent\s*(pool|community|network|bank)\b|\bopen\s+application\b|\bspeculative\b|\bgeneral\s+interest\b|\bexpression\s+of\s+interest\b|\bfuture\s+opportunit\w*\b|\bregister\s+your\s+interest\b|\bjoin\s+our\s+talent\b/i;
+
 const AGENCIES = new Set(["Pentasia","BettingJobs","Van Kaizen","LionHires",
   "Bullfinch Recruitment","Betting Connections","Talentgrator","iTalent PLUS",
   "iGamingHunt","Apercon"]);
@@ -638,7 +648,7 @@ function render(){
     <a class="job" href="${j.u||"#"}" target="_blank" rel="noopener">
       <div class="t">${j.t||""}</div>
       ${showLevel && level(j.t) < LEVELS.length ? '<span class="lvl">'+LEVELS[level(j.t)].name+'</span>' : ""}
-      <div class="m"><span class="co">${j.c||""}</span>${AGENCIES.has(j.c)?'<span class="agency">agency</span>':""}
+      <div class="m"><span class="co">${j.c||""}</span>${AGENCIES.has(j.c)?'<span class="agency">agency</span>':""}${OPEN_APP.test(j.t||"")?'<span class="openapp">open application</span>':""}
         ${(() => {
           if(!j.dupes || !j.dupes.length)
             return j.l ? '<span class="dot">&middot;</span><span>'+j.l+"</span>"
