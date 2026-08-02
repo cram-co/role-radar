@@ -289,3 +289,4 @@ ARRISE (global),Supplier - Content,no,0,not probed yet,detect,skip,"arrise.com/c
 B2Tech,Supplier - Platform,no,0,not probed yet,detect,teamtailor:careers.b2tech.com,Teamtailor on a custom domain (careers.b2tech.com) - looked like a bespoke site
 Huddle,Supplier - Content,no,0,not probed yet,detect,wordpress:huddle.tech,"WordPress + WP Job Openings plugin (no ATS). NOT apply.workable.com/huddle - that is a different Huddle, the UK document-collaboration firm"
 Growe,Operator,no,0,not probed yet,detect,greenhouse_eu:growe,Greenhouse EU board (job-boards.eu.greenhouse.io/growe); iGaming and entertainment group
+Careers in Racing,Racing,no,0,not probed yet,detect,skip,British Horseracing Authority official industry board; physical yard roles stripped at collection

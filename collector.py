@@ -1894,6 +1894,11 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3"]),
     "Betclic (Banijay Gaming)": dict(base="https://betclicgroup.com", marker="/job",
                          listing=["/en/people", "/en/people#jobs", "/en/jobs", "/jobs"]),
+    # BHA's official industry board. Mostly yard and raceday work, which the
+    # collection-time racing filter strips — what's left is racecourse
+    # management, commercial and marketing.
+    "Careers in Racing": dict(base="https://jobs.careersinracing.com", marker="/job/",
+                         listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3", "/jobs"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
                          listing=["/careers/v/", "/careers/", "/careers/v/?page=2"]),
     "UK Tote Group": dict(base="https://careers.uktotegroup.com", marker="/job/",
@@ -2038,6 +2043,29 @@ AGENCY_BOARDS = {
     "BettingJobs": scrape_bettingjobs,
     "Van Kaizen": scrape_vankaizen,
 }
+
+
+# Physical racing roles — stable, yard, raceday and track staff. These are
+# dropped at collection rather than being made hideable in the app: the board
+# exists to surface digital and commercial roles, and no user of it wants a
+# stablehand vacancy. Same call as removing land-based casino resorts.
+# Deliberately NOT the bare word "racing", which would catch Head of Racing.
+_RACING_PHYSICAL = re.compile(
+    r"\b(stable\s*hand|stablehand|stable\s*staff|stud\s*(hand|groom|farm)|groom|"
+    r"head\s*(lad|girl)|work\s*rider|exercise\s*rider|jockey|farrier|trackwork|"
+    r"track\s*work|stalls\s*handler|yard\s*(person|staff|hand)|raceday|race\s*day|"
+    r"turnstile|groundstaff|groundsperson|racecourse\s*(steward|attendant)|"
+    r"horsebox|equine\s*(care|therapist)|riding\s*out|point[- ]to[- ]point)\b", re.I)
+
+# a senior seat that merely names the function is not a yard job
+_RACING_KEEP = re.compile(
+    r"\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|"
+    r"head of|director of|senior director|head,)\b", re.I)
+
+
+def _is_physical_racing(title):
+    t = title or ""
+    return bool(_RACING_PHYSICAL.search(t)) and not _RACING_KEEP.search(t)
 
 
 def _write_company_status(companies, all_jobs, cache):
@@ -2212,6 +2240,12 @@ def main():
     for host, cos in boards.items():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
+
+    before = len(all_jobs)
+    all_jobs = [j for j in all_jobs if not _is_physical_racing(j.get("title"))]
+    if before != len(all_jobs):
+        print(f"\ndropped {before - len(all_jobs)} physical racing roles "
+              f"(stable, yard, raceday, track)")
 
     _write_company_status(companies, all_jobs, cache)
 
