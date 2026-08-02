@@ -1930,7 +1930,9 @@ CUSTOM_BOARDS = {
     # because link-parsing their listing only reached the first 20 roles.
     # This config is kept as a fallback if the REST API is ever closed.
     "Apercon":      dict(base="https://apercon.com", marker="/job",
-                         listing=["/jobs/", "/vacancies/", "/"]),
+                         listing=["/jobs/", "/jobs/page/2/", "/jobs/page/3/",
+                                  "/jobs/page/4/", "/jobs/page/5/", "/jobs/page/6/",
+                                  "/vacancies/", "/"]),
     # Allwyn sit on Recruitis, a Czech ATS. Commercially tied to OPAP, but a
     # completely separate system — the SuccessFactors work doesn't reach them.
     # Recruitis puts each job at /<tenant>/<id>, not /job/<id> — the run log's

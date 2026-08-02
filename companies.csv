@@ -187,7 +187,7 @@ Sisal,Operator - Tier 1,no,0,workday board found but empty,detect,https://sisal.
 Alea,Operator,yes,6,producing,detect,,From LinkedIn follows
 Altenar,Supplier - Sportsbook,yes,22,producing,detect,,
 Amelco UK Ltd,Supplier - Platform,yes,2,producing,detect,,From LinkedIn follows
-Apercon,Recruitment agency,yes,18,producing,detect,wordpress:apercon.com,WordPress REST API - link-parsing their listing page only reached the first 20 of 250+ roles
+Apercon,Recruitment agency,yes,18,producing,detect,skip,WP REST API is closed (all 10 post types empty) - handled by scrape_custom with paginated listing URLs
 ARB Interactive,Operator,yes,4,producing,detect,,From LinkedIn follows
 Arena Racing Company,Racing - UK,yes,18,producing,detect,,
 ATG,Racing / Operator - Sweden,yes,6,producing,detect,,
