@@ -410,6 +410,9 @@ const CITY_COUNTRY = {
   "brasil":"Brazil", "perú":"Peru", "czech republic":"Czechia", "méxico":"Mexico",
   "boulogne":"France", "vitrolles":"France", "tito scalo":"Italy",
   "valka.ai":"Latvia", "st. julian's":"Malta", "st julians":"Malta",
+  // BetWarrior post "Buenos Aires, Ciudad" — Ciudad Autonoma de Buenos Aires,
+  // truncated. The tail is meaningless on its own, so the head decides it.
+  "ciudad":"Argentina", "caba":"Argentina", "ciudad autonoma de buenos aires":"Argentina",
   "west coast":"United States", "tulsa":"United States",
 };
 const NAMES = Array.from(new Set(Object.values(ISO)));
@@ -710,8 +713,8 @@ function drawLocations(){
   const f = arr => arr.filter(k => !q || k.toLowerCase().includes(q));
   const h2 = f(hubs), r2 = f(rest);
   document.getElementById("locopts").innerHTML =
-      (h2.length ? '<div class="locgroup">iGaming hubs</div>'+h2.map(row).join("") : "")
-    + (r2.length ? '<div class="locgroup">Everywhere else</div>'+r2.map(row).join("") : "")
+      (h2.length ? '<div class="locgroup">Post location</div>'+h2.map(row).join("") : "")
+    + (r2.length ? '<div class="locgroup">Country</div>'+r2.map(row).join("") : "")
     + (!h2.length && !r2.length ? '<div class="locgroup">No match</div>' : "");
   document.querySelectorAll("#locopts input").forEach(cb => {
     cb.addEventListener("change", () => {
