@@ -116,7 +116,7 @@ def _host_is_throttled(url):
 # Workable throttles hard when several companies are pulled back to back. The
 # retry helper alone just burns the budget losing the same requests, so pace the
 # requests instead: never hit the same host more often than this.
-_HOST_MIN_GAP = {"apply.workable.com": 6.0}
+_HOST_MIN_GAP = {"apply.workable.com": 12.0}
 _host_last = {}
 
 
@@ -391,7 +391,10 @@ def probe_workable(slug):
         return None
     r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
                  json={"query": "", "location": [], "department": []},
-                 headers={"Accept": "application/json"}, probing=True)
+                 headers={**AGENCY_UA, "Accept": "application/json",
+                          "Content-Type": "application/json",
+                          "Origin": "https://apply.workable.com",
+                          "Referer": f"https://apply.workable.com/{slug}/"}, probing=True)
     if r.status_code != 200:
         return False
     d = r.json()
@@ -996,7 +999,11 @@ def fetch_workable(token):
             payload["token"] = page_token
         try:
             r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{token}/jobs",
-                         json=payload, headers={"Accept": "application/json"})
+                         json=payload,
+                         headers={**AGENCY_UA, "Accept": "application/json",
+                                  "Content-Type": "application/json",
+                                  "Origin": "https://apply.workable.com",
+                                  "Referer": f"https://apply.workable.com/{token}/"})
             if r.status_code == 429:
                 print(f"      workable {token}: still rate limited, stopping "
                       f"({len(out)} roles so far)")
@@ -2098,6 +2105,55 @@ def _is_physical_racing(title):
     return bool(_RACING_PHYSICAL.search(t)) and not _RACING_KEEP.search(t)
 
 
+# A company that errored this run should not silently vanish from the feed.
+# Workable throttling wiped seven companies and ~90 roles in one go; those roles
+# hadn't been withdrawn, we just couldn't reach them. Carry the previous run's
+# roles forward for a few days, then let them go.
+_CARRY_DAYS = 3
+
+
+def _carry_forward(all_jobs, feed_path):
+    """Re-add roles for companies that returned nothing this run but had roles
+    in the last feed. Only applies where the company produced before, so a board
+    that is genuinely empty still shows as empty."""
+    try:
+        with open(feed_path, encoding="utf-8") as f:
+            prev = json.load(f).get("jobs") or []
+    except Exception:
+        return all_jobs
+    if not prev:
+        return all_jobs
+
+    now = datetime.now(timezone.utc)
+    have = {j["company"] for j in all_jobs}
+    by_co = {}
+    for j in prev:
+        by_co.setdefault(j["company"], []).append(j)
+
+    carried = 0
+    for co, jobs in by_co.items():
+        if co in have:
+            continue
+        kept = []
+        for j in jobs:
+            first = j.get("carried_since") or now.isoformat()
+            try:
+                age = (now - datetime.fromisoformat(first)).days
+            except Exception:
+                age = 0
+            if age < _CARRY_DAYS:
+                j = dict(j)
+                j["carried_since"] = first
+                kept.append(j)
+        if kept:
+            all_jobs.extend(kept)
+            carried += len(kept)
+            print(f"   carried forward {len(kept)} roles for {co} (unreachable this run)")
+    if carried:
+        print(f"\ncarried {carried} roles forward from the previous feed")
+    return all_jobs
+
+
 def _write_company_status(companies, all_jobs, cache):
     """Refresh the returning / roles / status columns in companies.csv so the
     file always shows which companies actually produced roles on the last run.
@@ -2270,6 +2326,8 @@ def main():
     for host, cos in boards.items():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
+
+    all_jobs = _carry_forward(all_jobs, FEED_JSON)
 
     before = len(all_jobs)
     all_jobs = [j for j in all_jobs if not _is_physical_racing(j.get("title"))]
