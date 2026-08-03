@@ -385,10 +385,12 @@ def probe_recruitee(slug):
 
 
 def probe_workable(slug):
-    # Detection probes on this host cost more than they return: a speculative
-    # miss still counts against the rate limit that the real fetches need.
-    if _host_429.get("apply.workable.com", 0) or _rate_limit_spent > 30:
-        return None
+    # No speculative probing of Workable. Their account slugs aren't derivable
+    # from a company name — "openbet-1", "entaingroup", "rhino-entertainment" —
+    # so guessing almost never lands, while every attempt is paced at 12s and
+    # counts against a limit the real fetches need. 80 probes a run was adding
+    # 16 minutes for nothing. Workable companies are pinned in companies.csv.
+    return None
     r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
                  json={"query": "", "location": [], "department": []},
                  headers={**AGENCY_UA, "Accept": "application/json",
@@ -2327,7 +2329,7 @@ def main():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
 
-    all_jobs = _carry_forward(all_jobs, FEED_JSON)
+    all_jobs = _carry_forward(all_jobs, FEED_FILE)
 
     before = len(all_jobs)
     all_jobs = [j for j in all_jobs if not _is_physical_racing(j.get("title"))]
