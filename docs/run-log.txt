@@ -1,93 +1,76 @@
-role-radar collector run: 2026-08-03T11:34:36.779663+00:00
+role-radar collector run: 2026-08-03T13:30:59.533238+00:00
 ============================================================
 
-Re-probing (was unknown): Playnetic
-Re-probing (was unknown): Winna.com
-Re-probing (was unknown): 1X2gaming
-Re-probing (was unknown): RPM Gaming
-Re-probing (was unknown): highbet
-Re-probing (was unknown): KICK
-Re-probing (was unknown): Bodog Nation
-Re-probing (was unknown): Bovada
-Re-probing (was unknown): Racing1
-Re-probing (was unknown): InPlaySoft
-Re-probing (was unknown): 4Play Gaming
-Re-probing (was unknown): unikrn
-Re-probing (was unknown): Skilrock Technologies
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate limited after 3 attempts: https://apply.workable.com/api/v3/accounts/skilrock/jobs
-Re-probing (was unknown): NuxGame
-Re-probing (was unknown): 188BET
-Re-probing (was unknown): Asia Gaming
-Re-probing (was unknown): 7bet
-Re-probing (was unknown): Picklebet
-Re-probing (was unknown): Upgaming
-Re-probing (was unknown): SmartSoft
-Re-probing (was unknown): OnAim
-Re-probing (was unknown): Derivco
-Re-probing (was unknown): PointsBet Canada
-Re-probing (was unknown): MaxBet
-Re-probing (was unknown): GoldBet
-Re-probing (was unknown): SKS365 Group
-Re-probing (was unknown): SkyCity Entertainment Group
-Re-probing (was unknown): BlueBet
-Re-probing (was unknown): Parimatch Tech
-Re-probing (was unknown): Konami Gaming
+Re-probing (was unknown): Flutter Southern Europe & Africa (SEA)
+Re-probing (was unknown): The Pools
+Re-probing (was unknown): Sportium
+Re-probing (was unknown): PlayOJO
+Re-probing (was unknown): World Series of Poker
+Re-probing (was unknown): WPT Global
+Re-probing (was unknown): Triton Poker Series
+Re-probing (was unknown): KKCG Group
+Re-probing (was unknown): BetWarrior
+Re-probing (was unknown): Racing NSW
+Re-probing (was unknown): SportPesa
+Re-probing (was unknown): Hub88
+Re-probing (was unknown): bragg
+Re-probing (was unknown): Blueprint Gaming Ltd.
+Re-probing (was unknown): BetMakers Technology Group
+Re-probing (was unknown): Amelco Limited
+Re-probing (was unknown): Racing and Sports
+Re-probing (was unknown): FIRST.bet
+Re-probing (was unknown): Digitain
+Re-probing (was unknown): Aspire Global
+Re-probing (was unknown): Monkey Tilt
+Re-probing (was unknown): The Star Entertainment Group
+Re-probing (was unknown): Parimatch
+Re-probing (was unknown): Brightstar Lottery
+Re-probing (was unknown): 1X2 Network
+Re-probing (was unknown): IGT PlayDigital
+Re-probing (was unknown): SoftGamings
+Re-probing (was unknown): BrainRocket
+Re-probing (was unknown): The Rank Group plc
+Re-probing (was unknown): Red Tiger
 GAN: 0 roles (breezy)
       jobvite agscareer: 200, 101484 bytes
          link shapes: /d3igejkwe1ucjd.cloudfront.net/* x5, /careers.jobvite.com/* x5, /releases/* x2, /agscareer/* x2, /agscareer x2, /privacy-policy x1, /terms-of-service x1, /AmericanGamingSystems x1, /play_ags x1, /company/* x1, /user/* x1, /Overview/* x1
 AGS: 0 roles (jobvite)
-Aristocrat Interactive: 197 roles (workday)
+Aristocrat Interactive: 196 roles (workday)
       freshteam arrise: listing had no job links, trying the sitemap
 ARRISE: 0 roles (freshteam)
-Bally's Interactive: 458 roles (ultipro)
+Bally's Interactive: 457 roles (ultipro)
+BetWarrior: 6 roles (bamboohr)
 Bragg Gaming: 2 roles (workday)
 Caesars Digital: 1400 roles (oracle)
 DigiOutsource: 124 roles (workday)
 Evoplay: 2 roles (greenhouse)
 Hacksaw Gaming: 3 roles (bamboohr)
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate limited after 3 attempts: https://apply.workable.com/api/v3/accounts/entaingroup/jobs
-      workable entaingroup: still rate limited, stopping (0 roles so far)
-Neds: 0 roles (workable)
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate limited after 3 attempts: https://apply.workable.com/api/v3/accounts/openbet-1/jobs
-      workable openbet-1: still rate limited, stopping (0 roles so far)
-OpenBet: 0 roles (workable)
+Neds: 10 roles (workable)
+OpenBet: 8 roles (workable)
 Relax Gaming: 5 roles (teamtailor)
 SCIENTIFIC GAMES: 110 roles (workday)
 SkillOnNet: 21 roles (teamtailor)
 Veikkaus (incl. Fennica Gaming): 20 roles (oracle)
 White Hat Gaming: 3 roles (rippling)
+World Series of Poker: 5 roles (bamboohr)
 Yggdrasil: 6 roles (smartrecruiters)
-Super Group (Betway, Jackpot City, Spin): 53 roles (workday)
+Super Group (Betway, Jackpot City, Spin): 54 roles (workday)
       sf opapsa career2.successfactors.eu/sitemap.xml: HTTP 404 text/html
       sf opapsa career2.successfactors.eu/sitemal.xml: HTTP 404 text/html
-      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 202610 bytes, 0 jobIds, 9 anchors
-      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 133774 bytes, 0 jobIds, 6 anchors
-      sf opapsa career2.successfactors.eu/careers?company=opapsa: 200, 184458 bytes, 0 jobIds, 8 anchors
-      sf opapsa career2.successfactors.eu/career?company=opapsa: 200, 184450 bytes, 0 jobIds, 8 anchors
-      sf opapsa career2.successfactors.eu/sfcareer/jobreqcareer?company=opa: 200, 133819 bytes, 0 jobIds, 6 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 202592 bytes, 0 jobIds, 9 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa&career_ns=j: 200, 133760 bytes, 0 jobIds, 6 anchors
+      sf opapsa career2.successfactors.eu/careers?company=opapsa: 200, 184446 bytes, 0 jobIds, 8 anchors
+      sf opapsa career2.successfactors.eu/career?company=opapsa: 200, 184438 bytes, 0 jobIds, 8 anchors
+      sf opapsa career2.successfactors.eu/sfcareer/jobreqcareer?company=opa: 200, 133805 bytes, 0 jobIds, 6 anchors
       SF/opapsa: 161 script bundle(s) referenced, checking 30
       SF/opapsa: no API URLs found in bundle
       successfactors opapsa: nothing found across 1 host(s)
 OPAP: 0 roles (successfactors)
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate limited after 3 attempts: https://apply.workable.com/api/v3/accounts/betpawa/jobs
-      workable betpawa: still rate limited, stopping (0 roles so far)
 betPawa: 0 roles (workable)
       workday sisal/sisalcorp: cxs 'sisal' -> HTTP 200 (0 results)
       workday sisal/sisalcorp: cxs 'sisalcorp' -> HTTP 422
       workday sisal/sisalcorp: cxs 'sisalcorp' -> HTTP 422
 Sisal: 0 roles (workday)
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate limited after 3 attempts: https://apply.workable.com/api/v3/accounts/3-oaks-gaming/jobs
-      workable 3-oaks-gaming: still rate limited, stopping (0 roles so far)
 3 Oaks Gaming: 0 roles (workable)
 Alea: 7 roles (teamtailor)
 Altenar: 22 roles (bamboohr)
@@ -96,44 +79,36 @@ ARB Interactive: 4 roles (ashby)
 Arena Racing Company: 16 roles (ashby)
 ATG: 6 roles (ashby)
 B2Spin Limited: 16 roles (ashby)
-bet365: 93 roles (smartrecruiters)
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate limited after 3 attempts: https://apply.workable.com/api/v3/accounts/kingmakers/jobs
-      workable kingmakers: still rate limited, stopping (0 roles so far)
-BetKing: 0 roles (workable)
+bet365: 94 roles (smartrecruiters)
+BetKing: 8 roles (workable)
       workday betmgminc/BetMGM: 20 roles (exact multiple of the page size — check it isn't truncated)
 BetMGM: 20 roles (workday)
 betr: 13 roles (lever)
-Betsson Group: 122 roles (greenhouse)
+Betsson Group: 124 roles (greenhouse)
 Betting Connections: 2 roles (smartrecruiters)
 Betty: 25 roles (greenhouse)
 BGaming: 1 roles (smartrecruiters)
 Bullfinch Recruitment: 39 roles (breezy)
 Caliente: 13 roles (bamboohr)
 CoinPoker: 5 roles (teamtailor)
-      429 from apply.workable.com, waiting 15s
-      429 from apply.workable.com, waiting 15s
-      rate-limit budget spent, giving up on https://apply.workable.com/api/v3/accounts/comeon-group/jobs
-      workable comeon-group: still rate limited, stopping (0 roles so far)
-ComeOn Group: 0 roles (workable)
+ComeOn Group: 27 roles (workable)
 Continent 8: 3 roles (bamboohr)
 Dabble: 7 roles (teamtailor)
 Delasport: 3 roles (greenhouse)
 Derivco: 3 roles (bamboohr)
 DraftKings: 90 roles (workday)
 Easygo: 42 roles (greenhouse)
-Entain: 225 roles (smartrecruiters)
+Entain: 220 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
 evoke plc: 1 roles (bamboohr)
-Evolution: 290 roles (smartrecruiters)
+Evolution: 292 roles (smartrecruiters)
 Fanatics Betting & Gaming: 72 roles (greenhouse)
 FanDuel: 84 roles (greenhouse)
-FDJ United: 83 roles (workday)
+FDJ United: 86 roles (workday)
 Flutter International (PokerStars, Betfair Int, Adjarabet): 50 roles (workday)
 Gamdom: 5 roles (teamtailor)
 Genius Sports: 57 roles (greenhouse)
-Gentoo Media (ex-GiG): 10 roles (teamtailor)
+Gentoo Media (ex-GiG): 9 roles (teamtailor)
 GR8_TECH: 22 roles (greenhouse)
 Hard Rock Digital: 61 roles (recruitee)
 iGamingHunt: 9 roles (ashby)
@@ -142,10 +117,10 @@ iTalent PLUS: 21 roles (teamtailor)
 Jackpot.com: 7 roles (greenhouse)
 Kaizen Gaming: 80 roles (greenhouse)
 Kalshi: 27 roles (greenhouse)
-Kambi: 6 roles (greenhouse)
+Kambi: 5 roles (greenhouse)
 Kerma Games: 13 roles (greenhouse)
 Kindred Group: 4 roles (ashby)
-LeoVegas Group: 69 roles (ashby)
+LeoVegas Group: 70 roles (ashby)
 Light & Wonder: 7 roles (ashby)
 LionHires: 47 roles (greenhouse)
 LiveScore Group: 15 roles (greenhouse)
@@ -154,22 +129,18 @@ Lottomatica: 45 roles (workday)
 Midnite: 20 roles (ashby)
 MiFinity: 12 roles (bamboohr)
 MrQ: 8 roles (teamtailor)
-      rate-limit budget spent, giving up on https://apply.workable.com/api/v3/accounts/novibet/jobs
-      workable novibet: still rate limited, stopping (0 roles so far)
-Novibet: 0 roles (workable)
+Novibet: 43 roles (workable)
 Novig: 10 roles (ashby)
 Oddin.gg: 20 roles (lever)
 Patrianna: 21 roles (ashby)
 PawaPay: 2 roles (greenhouse)
 PENN Interactive: 28 roles (greenhouse)
 Playson: 24 roles (ashby)
-Playtech: 130 roles (smartrecruiters)
+Playtech: 133 roles (smartrecruiters)
 Polymarket: 68 roles (ashby)
 Pragmatic Play: 4 roles (teamtailor)
 PrizePicks: 23 roles (greenhouse)
-      rate-limit budget spent, giving up on https://apply.workable.com/api/v3/accounts/rhino-entertainment/jobs
-      workable rhino-entertainment: still rate limited, stopping (0 roles so far)
-Rhino Entertainment: 0 roles (workable)
+Rhino Entertainment: 3 roles (workable)
 Rush Street Interactive: 31 roles (greenhouse)
 Silverspin: 10 roles (teamtailor)
 Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola): 2 roles (workday)
@@ -182,13 +153,13 @@ Stake (Easygo): 25 roles (breezy)
 Stats Perform: 12 roles (teamtailor)
 Superbet: 191 roles (greenhouse)
 Talentgrator: 3 roles (smartrecruiters)
-Tipico: 179 roles (smartrecruiters)
+Tipico: 178 roles (smartrecruiters)
 Underdog: 15 roles (greenhouse)
 VGW: 7 roles (greenhouse)
 Videoslots: 12 roles (bamboohr)
 Wildz Group: 1 roles (teamtailor)
-ZEAL Network: 18 roles (ashby)
-Flutter Group (corporate): 39 roles (workday)
+ZEAL Network: 17 roles (ashby)
+Flutter Group (corporate): 38 roles (workday)
 Betway Africa: 43 roles (workday)
       workday myhcm/jumpman: cxs 'myhcm' -> HTTP 200 (0 results)
       workday myhcm/jumpman: cxs 'jumpman' -> HTTP 422
@@ -239,7 +210,6 @@ Growe: 15 roles (greenhouse_eu)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
 Fortuna Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
-      json-ld https://joblink.allibo.com/ats2/job-offer.aspx: error (ConnectTimeout)
       json-ld https://joblink.allibo.com/ats2/: HTTP 403
       Cirsa: 1 script bundle(s) referenced, checking 4
       Cirsa: no API URLs found in bundle
@@ -251,12 +221,17 @@ Cirsa: 0 roles (agency board)  <-- CHECK: returned nothing
       Codere Online: no API URLs found in bundle
    Codere Online: link parse -> 2
 Codere Online: 2 roles (agency board)
-      sitemap https://www.casumocareers.com: 3 job URLs
-      json-ld https://www.casumocareers.com/jobs/8049683-multimedia-designer: 1 JobPosting blocks  <-- USABLE
-      json-ld https://www.casumocareers.com/jobs/7922995-business-intelligence-analyst: 1 JobPosting blocks  <-- USABLE
+      sitemap https://www.casumocareers.com: 8 job URLs
+      json-ld https://www.casumocareers.com/jobs/7873243-risk-fraud-payments-analyst: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7707249-platform-engineer: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7696971-casino-coordinator: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7693327-quality-assurance-specialist: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7693168-ai-engineer: HTTP 410
       json-ld https://www.casumocareers.com/jobs/7691557-casino-manager: 1 JobPosting blocks  <-- USABLE
-   Casumo: sitemap + JSON-LD -> 3
-Casumo: 3 roles (agency board)
+      json-ld https://www.casumocareers.com/jobs/7659688-site-reliability-engineer: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7622742-information-security-engineer: HTTP 410
+   Casumo: sitemap + JSON-LD -> 1
+Casumo: 1 roles (agency board)
       json-ld https://betika.seamlesshiring.com/jobs: HTTP 404
       json-ld https://betika.seamlesshiring.com/careers: HTTP 404
       json-ld https://betika.seamlesshiring.com/h: HTTP 404
@@ -441,47 +416,37 @@ Greentube (Novomatic): 2 roles (agency board)
    EGT Digital: link parse -> 32
 EGT Digital: 32 roles (agency board)
       sitemap https://careers.gamesglobal.com: 30 job URLs
-      json-ld https://careers.gamesglobal.com/jobs/1710?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1706?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1694?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1703?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1704?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1697?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1702?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1699?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1695?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1674?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1692?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1650?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1636?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1631?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1684?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1637?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1677?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1685?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1641?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1687?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1640?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1669?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1678?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1665?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1639?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1610?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1644?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1619?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1598?lang=en-us: HTTP 502
-      json-ld https://careers.gamesglobal.com/jobs/1615?lang=en-us: HTTP 502
-      Games Global: 4 script bundle(s) referenced, checking 4
-      Games Global: no API URLs found in bundle
-      Games Global https://careers.gamesglobal.com/jobs: 200, 338734 bytes, 4 '/jobs/' refs
-         link shapes present: /Company/* x4, /Media x2, /public-register/* x2, /jobs x1, /prod/* x1, /HEADER.NAV_LOGO_LINK x1, /Products x1, /Studios x1, /Careers x1, /categories x1, /locations x1, /PrivacyPolicy x1
-      Games Global https://careers.gamesglobal.com/jobs?lang=en-us: 200, 343618 bytes, 4 '/jobs/' refs
-         link shapes present: /Company/* x4, /prod/* x2, /Media x2, /public-register/* x2, /jobs x1, /HEADER.NAV_LOGO_LINK x1, /Products x1, /Studios x1, /Careers x1, /categories x1, /brands x1, /locations x1
-      Games Global https://careers.gamesglobal.com/: 200, 343551 bytes, 4 '/jobs/' refs
-         link shapes present: /Company/* x4, /prod/* x2, /Media x2, /public-register/* x2, /jobs x1, /HEADER.NAV_LOGO_LINK x1, /Products x1, /Studios x1, /Careers x1, /categories x1, /brands x1, /locations x1
-      Games Global https://careers.gamesglobal.com/search: 200, 343551 bytes, 4 '/jobs/' refs
-         link shapes present: /Company/* x4, /prod/* x2, /Media x2, /public-register/* x2, /jobs x1, /HEADER.NAV_LOGO_LINK x1, /Products x1, /Studios x1, /Careers x1, /categories x1, /brands x1, /locations x1
-   Games Global: sitemap slugs -> 30 (unverified, may include closed roles)
+      json-ld https://careers.gamesglobal.com/jobs/1710?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1706?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1694?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1703?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1704?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1697?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1702?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1699?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1695?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1674?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1692?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1650?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1636?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1631?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1684?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1637?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1677?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1685?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1641?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1687?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1640?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1669?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1678?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1665?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1639?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1610?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1644?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1619?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1598?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1615?lang=en-us: 1 JobPosting blocks  <-- USABLE
+   Games Global: sitemap + JSON-LD -> 30
 Games Global: 30 roles (agency board)
       sitemap https://talenthub.playngo.com: 2 job URLs
       json-ld https://talenthub.playngo.com/jobs/7937264-senior-microsoft-platform-security-engineer: 1 JobPosting blocks  <-- USABLE
@@ -514,7 +479,7 @@ EvenBet Gaming: 5 roles (agency board)
       Inspired Entertainment https://careers.inseinc.com/jobs: HTTP 404
       Inspired Entertainment https://careers.inseinc.com/search: HTTP 404
 Inspired Entertainment: 0 roles (agency board)  <-- CHECK: returned nothing
-      sitemap https://jobs.amusnet.com: 72 job URLs
+      sitemap https://jobs.amusnet.com: 70 job URLs
       Amusnet: 19 script bundle(s) referenced, checking 7
       Amusnet: no API URLs found in bundle
       Amusnet https://jobs.amusnet.com/Interactive/: 200, 50062 bytes, 6 '/job' refs
@@ -569,13 +534,6 @@ Allwyn: 4 roles (agency board)
          https://maps.googleapis.com/maps/api/js
          https://postingpandajobboard-live.azurewebsites.net/bundles/SelfBuildAppForms
       https://postingpandajobboard-live.azurewebsites.net/bundles/SelfBuildAppForms: 200 but text/javascript (not json)
-      https://maps.googleapis.com/api/jobs: HTTP 404
-      https://maps.googleapis.com/api/Jobs: HTTP 404
-      https://maps.googleapis.com/api/vacancies: HTTP 404
-      https://maps.googleapis.com/api/job/search: HTTP 404
-      https://maps.googleapis.com/api/jobs/search: HTTP 404
-      https://maps.googleapis.com/api/v1/jobs: HTTP 404
-      https://maps.googleapis.com/api/adverts: HTTP 404
       https://betfredgroup.talosats-careers.com/api/jobs: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/Jobs: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/vacancies: 200 but text/html (not json)
@@ -583,6 +541,13 @@ Allwyn: 4 roles (agency board)
       https://betfredgroup.talosats-careers.com/api/jobs/search: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/v1/jobs: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/adverts: 200 but text/html (not json)
+      https://maps.googleapis.com/api/jobs: HTTP 404
+      https://maps.googleapis.com/api/Jobs: HTTP 404
+      https://maps.googleapis.com/api/vacancies: HTTP 404
+      https://maps.googleapis.com/api/job/search: HTTP 404
+      https://maps.googleapis.com/api/jobs/search: HTTP 404
+      https://maps.googleapis.com/api/v1/jobs: HTTP 404
+      https://maps.googleapis.com/api/adverts: HTTP 404
       https://postingpandajobboard-live.azurewebsites.net/api/jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/Jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/vacancies: 200 but text/html (not json)
@@ -600,6 +565,7 @@ BettingJobs: 98 roles (agency board)
    Van Kaizen: strategy 1 — JSON-LD
    Van Kaizen: strategy 2 — sitemap
       sitemap https://www.vankaizen.com: 71 job URLs
+      json-ld https://vankaizen.com/vacancies/senior-engineer: HTTP 429
       json-ld https://vankaizen.com/vacancies/senior-front-end-developer-1: HTTP 429
       json-ld https://vankaizen.com/vacancies/senior-full-stack-engineer-malta: HTTP 429
       json-ld https://vankaizen.com/vacancies/senior-infrastructure-engineer-l3: HTTP 429
@@ -611,13 +577,11 @@ BettingJobs: 98 roles (agency board)
       json-ld https://vankaizen.com/vacancies/swedish-account-manager-vip: HTTP 429
       json-ld https://vankaizen.com/vacancies/vip-manager-2: HTTP 429
       json-ld https://vankaizen.com/vacancies/vp-of-digital-marketing: HTTP 429
-      json-ld https://vankaizen.com/vacancies/vp-of-product-wondr-nation: HTTP 429
-      json-ld https://vankaizen.com/vacancies/vp-sales-revenue: HTTP 429
 Van Kaizen: 70 roles (agency board)
 
 dropped 32 physical racing roles (stable, yard, raceday, track)
 
-companies.csv refreshed: 126 returning, 165 not
+companies.csv refreshed: 134 returning, 157 not
 
-Feed written: 6119 jobs
-Unresolved companies (117): 1/ST (Stronach Group), Paysafe, EyeSpy Recruitment, Emerald Zebra, BSQ Talent, Snaitech, 888Africa, Wazdan, GeoComply, LSports, Racing Post / Spotlight Sports, Churchill Downs / TwinSpires, The Jockey Club, Weatherbys, GGPoker (NSUS Group), 4Poker, MuchBetter, The Lottery Corporation, Admiral, TopSport, Yolo Group, OlyBet Group, Live88, APE | Poker Technology, Tipwin Limited, FEG, Manifold Markets, Opinion, Hedgehog Markets, Booming Games
+Feed written: 6228 jobs
+Unresolved companies (115): 1/ST (Stronach Group), Paysafe, EyeSpy Recruitment, Emerald Zebra, BSQ Talent, Snaitech, 888Africa, Wazdan, GeoComply, LSports, Racing Post / Spotlight Sports, Churchill Downs / TwinSpires, The Jockey Club, Weatherbys, GGPoker (NSUS Group), 4Poker, MuchBetter, The Lottery Corporation, Admiral, TopSport, Yolo Group, OlyBet Group, Live88, APE | Poker Technology, Tipwin Limited, FEG, Manifold Markets, Opinion, Hedgehog Markets, Booming Games
