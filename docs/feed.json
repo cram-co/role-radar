@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-03T13:30:59.493622+00:00",
- "job_count": 6228,
+ "generated_at": "2026-08-03T16:15:51.968509+00:00",
+ "job_count": 6403,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -20,6 +20,17 @@
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Sr-Technical-Lead---Workday_R0017690-1",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
+   "company": "Aristocrat Interactive",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "2D Animator",
+   "location": "Krakow, Poland",
+   "department": "",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Krakow-Poland/XMLNAME-3D-Animator_R0021819-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "Aristocrat Interactive",
    "ats": "workday",
    "source": "collector"
@@ -51,17 +62,6 @@
    "location": "Philadelphia, PA, US",
    "department": "",
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Philadelphia-PA-US/Field-Service-Technician_R0022140",
-   "posted_at": null,
-   "posted_text": "Posted 3 Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Junior 2D Animator",
-   "location": "Krakow, Poland",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Krakow-Poland/XMLNAME-3D-Animator_R0021819-1",
    "posted_at": null,
    "posted_text": "Posted 3 Days Ago",
    "company": "Aristocrat Interactive",
@@ -1587,17 +1587,6 @@
    "source": "collector"
   },
   {
-   "title": "React Native Lead",
-   "location": "2 Locations",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Gdansk/React-Native-Lead_R0021104",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Product Owner (Game Design)",
    "location": "Gdansk",
    "department": "",
@@ -1961,6 +1950,17 @@
    "source": "collector"
   },
   {
+   "title": "2D Animator",
+   "location": "Krakow, Poland",
+   "department": "",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Krakow-Poland/XMLNAME-3D-Animator_R0021819-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Aristocrat Interactive",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "QA Lead",
    "location": "London, United Kingdom",
    "department": "",
@@ -1987,17 +1987,6 @@
    "location": "Philadelphia, PA, US",
    "department": "",
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Philadelphia-PA-US/Field-Service-Technician_R0022140",
-   "posted_at": null,
-   "posted_text": "Posted 3 Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Junior 2D Animator",
-   "location": "Krakow, Poland",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Krakow-Poland/XMLNAME-3D-Animator_R0021819-1",
    "posted_at": null,
    "posted_text": "Posted 3 Days Ago",
    "company": "Aristocrat Interactive",
@@ -2156,6 +2145,56 @@
    "posted_text": "Posted 4 Days Ago",
    "company": "Aristocrat Interactive",
    "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Guest Room Attendant - Part Time",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=56f2dabb-c72d-4b5e-8aed-72ac9f6f6293",
+   "posted_at": "2026-08-03T14:21:28.394Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
+   "title": "Bartender",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=ba1dd140-4518-48b7-868b-fb409ecd9449",
+   "posted_at": "2026-08-03T13:59:42.992Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
+   "title": "Surveillance Officer",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=7db9ffff-994f-4536-91a9-97f06f232e56",
+   "posted_at": "2026-08-03T13:42:58.315Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
+   "title": "EVS - Casino Heavy Porter FT",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=1b696dd9-0284-45e7-b306-ed09ab007450",
+   "posted_at": "2026-08-03T13:40:51.692Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
+   "title": "Attendant - Wardrobe",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=3f80244a-8133-43ad-a9a9-9ec080cd55af",
+   "posted_at": "2026-08-03T13:29:35.045Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
    "source": "collector"
   },
   {
@@ -3089,16 +3128,6 @@
    "source": "collector"
   },
   {
-   "title": "Dunkin Donut Attendant FT",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=25d4ea07-0591-42aa-92bf-6d5c9d47e978",
-   "posted_at": "2026-07-27T16:19:42.444Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
    "title": "Cook II /Cashier  - Full House",
    "location": "",
    "department": "",
@@ -3254,16 +3283,6 @@
    "department": "",
    "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=51c84632-80bd-43f2-9e26-4ae43a5d85ab",
    "posted_at": "2026-07-23T22:14:41.699Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
-   "title": "EVS - Utility Lead",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=8506db9e-3517-4035-bb0d-b265d026dc32",
-   "posted_at": "2026-07-23T21:27:13.911Z",
    "company": "Bally's Interactive",
    "ats": "ultipro",
    "source": "collector"
@@ -3464,16 +3483,6 @@
    "department": "",
    "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=f8bb539e-4fe3-476a-85b5-777cc9e2f4fc",
    "posted_at": "2026-07-21T16:30:24.109Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
-   "title": "Guest Room Attendant - Part Time",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=56f2dabb-c72d-4b5e-8aed-72ac9f6f6293",
-   "posted_at": "2026-07-21T16:29:50.028Z",
    "company": "Bally's Interactive",
    "ats": "ultipro",
    "source": "collector"
@@ -4249,26 +4258,6 @@
    "source": "collector"
   },
   {
-   "title": "Senior Ai Engineer  (AI/ML/R&D)",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=929d746b-bb56-4d84-80b6-00e9530bc685",
-   "posted_at": "2026-06-29T13:59:02.264Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
-   "title": "Lead Ai Engineer (AI/ML/R&D)",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=0efe83f9-d68c-4fa8-ac22-b58313fa8a74",
-   "posted_at": "2026-06-29T13:23:41.686Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
    "title": "Shift Manager - EVS (2:00A-10:30A)",
    "location": "",
    "department": "",
@@ -4834,16 +4823,6 @@
    "department": "",
    "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=7f5fb7f2-0bca-45dd-b9fe-669944fb6869",
    "posted_at": "2026-05-29T21:42:12.801Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
-   "title": "Lead Count Room Representative",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=65bf63d7-1867-44f2-a4df-1b5815de9456",
-   "posted_at": "2026-05-29T19:49:01.151Z",
    "company": "Bally's Interactive",
    "ats": "ultipro",
    "source": "collector"
@@ -6801,10 +6780,90 @@
    "source": "collector"
   },
   {
+   "title": "Host Part-Time (Jack Binion's Steakhouse, Horseshoe)",
+   "location": "Council Bluffs, IA, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84552",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Guest Service Agent (Harrah's Hotel)",
+   "location": "Council Bluffs, IA, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84724",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Technician Design and Decor Regional- Full Time (Harrah's Atlantic City/CES)",
+   "location": "Atlantic City, NJ, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87114",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Casino Services Cashier-On Call (Harrah's Atlantic City)",
+   "location": "Atlantic City, NJ, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87525",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Cashier And Dispatcher- Full Time (Caesars Atlantic City)",
+   "location": "Atlantic City, NJ, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87527",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Caesars Rewards Representative-Part Time (Caesars Atlantic City)",
+   "location": "Atlantic City, NJ, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87551",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
    "title": "Dishwasher- Full Time (Harrah's Hoosier Park)",
    "location": "Anderson, IN, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87651",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "BUSSER - BREW BROTHERS",
+   "location": "Columbus, OH, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87754",
+   "posted_at": "2026-08-03",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Beverage Server",
+   "location": "Boonville, MO, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87757",
    "posted_at": "2026-08-03",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -6915,16 +6974,6 @@
    "location": "Biloxi, MS, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87366",
-   "posted_at": "2026-07-31",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Security Dual Rate Supervisor - Full Time (Horseshoe Hammond)",
-   "location": "Hammond, IN, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87426",
    "posted_at": "2026-07-31",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -10311,16 +10360,6 @@
    "source": "collector"
   },
   {
-   "title": "EVS Manager",
-   "location": "Baltimore, MD, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87299",
-   "posted_at": "2026-07-21",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
    "title": "Painter-Full Time (Harrah's Atlantic City)",
    "location": "Atlantic City, NJ, United States",
    "department": "",
@@ -10395,16 +10434,6 @@
    "location": "Joliet, IL, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87115",
-   "posted_at": "2026-07-20",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Director of Facilities",
-   "location": "Baltimore, MD, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87297",
    "posted_at": "2026-07-20",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -10735,16 +10764,6 @@
    "location": "Atlantic City, NJ, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87138",
-   "posted_at": "2026-07-17",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Slot Operations Supervisor",
-   "location": "Danville, VA, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87164",
    "posted_at": "2026-07-17",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -12355,16 +12374,6 @@
    "location": "Elgin, IL, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/86681",
-   "posted_at": "2026-07-09",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Table Games Dual Rate Assistant Shift Manager and Supervisor",
-   "location": "Danville, VA, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/86688",
    "posted_at": "2026-07-09",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -14085,16 +14094,6 @@
    "location": "New Orleans, LA, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/86406",
-   "posted_at": "2026-07-01",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Staff Auditor - Corporate (Las Vegas)",
-   "location": "Las Vegas, NV, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/86429",
    "posted_at": "2026-07-01",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -17411,16 +17410,6 @@
    "source": "collector"
   },
   {
-   "title": "Security Manager - Day",
-   "location": "Baltimore, MD, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/85081",
-   "posted_at": "2026-05-29",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
    "title": "SRT Supervisor - Full Time (Las Vegas)",
    "location": "Las Vegas, NV, United States",
    "department": "",
@@ -17901,16 +17890,6 @@
    "source": "collector"
   },
   {
-   "title": "Guest Service Agent (Harrah's Hotel)",
-   "location": "Council Bluffs, IA, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84724",
-   "posted_at": "2026-05-22",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
    "title": "Specialist Crowd Control Gaming - On Call (Harrah's Atlantic City)",
    "location": "Atlantic City, NJ, United States",
    "department": "",
@@ -18341,16 +18320,6 @@
    "source": "collector"
   },
   {
-   "title": "Security Manager - Grave",
-   "location": "Baltimore, MD, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84146",
-   "posted_at": "2026-05-13",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
    "title": "Cage Cashier - Eldorado Scioto Downs ( Columbus,OH)",
    "location": "Columbus, OH, United States",
    "department": "",
@@ -18775,16 +18744,6 @@
    "location": "Anderson, IN, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/83753",
-   "posted_at": "2026-05-01",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Host Part-Time (Jack Binion's Steakhouse, Horseshoe)",
-   "location": "Council Bluffs, IA, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/83766",
    "posted_at": "2026-05-01",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -20772,6 +20731,17 @@
    "source": "collector"
   },
   {
+   "title": "Operations Manager",
+   "location": "Cape Town",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Operations-Manager_JR13176",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "DigiOutsource",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Senior Dynamics 365 Functional Consultant",
    "location": "Cape Town",
    "department": "",
@@ -21916,6 +21886,17 @@
    "source": "collector"
   },
   {
+   "title": "Operations Manager",
+   "location": "Cape Town",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Operations-Manager_JR13176",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "DigiOutsource",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Senior Dynamics 365 Functional Consultant",
    "location": "Cape Town",
    "department": "",
@@ -22107,17 +22088,6 @@
    "location": "Cape Town",
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Financial-Accountant_JR13027",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "DigiOutsource",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Project Manager",
-   "location": "Cape Town",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Senior-Project-Manager_JR12324",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
    "company": "DigiOutsource",
@@ -22504,6 +22474,17 @@
    "source": "collector"
   },
   {
+   "title": "Operations Manager",
+   "location": "Solon, OH",
+   "department": "",
+   "url": "https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers/job/Solon-OH/Operations-Manager_R505145",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "SCIENTIFIC GAMES",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Specialist Infrastructure Delivery Manager",
    "location": "Bangalore, India",
    "department": "",
@@ -22596,17 +22577,6 @@
    "location": "Bangalore, India",
    "department": "",
    "url": "https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers/job/Bangalore-India/Senior-System-Engineer_R505005",
-   "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
-   "company": "SCIENTIFIC GAMES",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Operations Manager",
-   "location": "Solon, OH",
-   "department": "",
-   "url": "https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers/job/Solon-OH/Operations-Manager_R505145",
    "posted_at": null,
    "posted_text": "Posted 4 Days Ago",
    "company": "SCIENTIFIC GAMES",
@@ -23278,17 +23248,6 @@
    "location": "Alpharetta, GA",
    "department": "",
    "url": "https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers/job/Alpharetta-GA/Machine-Operator-IV_R504972",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "SCIENTIFIC GAMES",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Sales Account Manager III",
-   "location": "Oklahoma, US",
-   "department": "",
-   "url": "https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers/job/Oklahoma-US/Sales-Account-Manager-III_R504943-1",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
    "company": "SCIENTIFIC GAMES",
@@ -24176,6 +24135,28 @@
    "source": "collector"
   },
   {
+   "title": "Game Studio Lead",
+   "location": "Johannesburg",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/Johannesburg/Game-Studio-Lead_JR13089-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Super Group (Betway, Jackpot City, Spin)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Multi Media Designer",
+   "location": "London - St Pancras Campus (Red)",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/London---St-Pancras-Campus-Red/Senior-Multi-Media-Designer_JR13123-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Super Group (Betway, Jackpot City, Spin)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Manager Banking Operations",
    "location": "Johannesburg",
    "department": "",
@@ -24226,17 +24207,6 @@
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/North-London-UK/Senior-DevSecOps-Engineer_JR13434",
    "posted_at": null,
    "posted_text": "Posted 11 Days Ago",
-   "company": "Super Group (Betway, Jackpot City, Spin)",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Social Media Designer",
-   "location": "2 Locations",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/Cape-Town/Senior-Social-Media-Designer_JR13238",
-   "posted_at": null,
-   "posted_text": "Posted 18 Days Ago",
    "company": "Super Group (Betway, Jackpot City, Spin)",
    "ats": "workday",
    "source": "collector"
@@ -24550,6 +24520,28 @@
    "source": "collector"
   },
   {
+   "title": "Game Studio Lead",
+   "location": "Johannesburg",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/Johannesburg/Game-Studio-Lead_JR13089-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Super Group (Betway, Jackpot City, Spin)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Multi Media Designer",
+   "location": "London - St Pancras Campus (Red)",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/London---St-Pancras-Campus-Red/Senior-Multi-Media-Designer_JR13123-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Super Group (Betway, Jackpot City, Spin)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Manager Banking Operations",
    "location": "Johannesburg",
    "department": "",
@@ -24600,17 +24592,6 @@
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/North-London-UK/Senior-DevSecOps-Engineer_JR13434",
    "posted_at": null,
    "posted_text": "Posted 11 Days Ago",
-   "company": "Super Group (Betway, Jackpot City, Spin)",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Social Media Designer",
-   "location": "2 Locations",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/Cape-Town/Senior-Social-Media-Designer_JR13238",
-   "posted_at": null,
-   "posted_text": "Posted 18 Days Ago",
    "company": "Super Group (Betway, Jackpot City, Spin)",
    "ats": "workday",
    "source": "collector"
@@ -24748,14 +24729,13 @@
    "source": "collector"
   },
   {
-   "title": "Paid Social Team Manager",
-   "location": "London - St Pancras Campus (Red)",
+   "title": "Technical Account Manager - API",
+   "location": "",
    "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway/job/London---St-Pancras-Campus-Red/Paid-Social-Team-Manager_JR13030-1",
+   "url": "https://alea.teamtailor.com/jobs/8162868-technical-account-manager-api",
    "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Super Group (Betway, Jackpot City, Spin)",
-   "ats": "workday",
+   "company": "Alea",
+   "ats": "teamtailor",
    "source": "collector"
   },
   {
@@ -24773,16 +24753,6 @@
    "location": "",
    "department": "",
    "url": "https://alea.teamtailor.com/jobs/8102683-games-assistant-intern",
-   "posted_at": null,
-   "company": "Alea",
-   "ats": "teamtailor",
-   "source": "collector"
-  },
-  {
-   "title": "Games Administrative Assistant",
-   "location": "",
-   "department": "",
-   "url": "https://alea.teamtailor.com/jobs/8101750-games-administrative-assistant",
    "posted_at": null,
    "company": "Alea",
    "ats": "teamtailor",
@@ -25484,6 +25454,16 @@
    "department": "Commercial",
    "url": "https://jobs.ashbyhq.com/b2spin/1cba1f83-32ac-4336-8bfa-013f2a01faa5",
    "posted_at": "2026-07-29T08:18:38.259+00:00",
+   "company": "B2Spin Limited",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Business Applications Administrator",
+   "location": "Georgia",
+   "department": "Information Technologies",
+   "url": "https://jobs.ashbyhq.com/b2spin/21ea7fdf-d303-4ba7-9e56-5c591d8f7c80",
+   "posted_at": "2026-08-03T14:00:52.792+00:00",
    "company": "B2Spin Limited",
    "ats": "ashby",
    "source": "collector"
@@ -26429,6 +26409,16 @@
    "source": "collector"
   },
   {
+   "title": "Senior Product Manager - Agency",
+   "location": "Lagos, Lagos, Nigeria",
+   "department": "BetKing",
+   "url": "https://apply.workable.com/kingmakers/j/FEFE367AF9/",
+   "posted_at": "2026-08-03T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
+   "source": "collector"
+  },
+  {
    "title": "Trade Marketing Specialist - Agency",
    "location": "Lagos, Lagos, Nigeria",
    "department": "BetKing",
@@ -26940,20 +26930,20 @@
   },
   {
    "title": "Backend Software Engineer Team Lead",
-   "location": "Stockholm",
+   "location": "Malaga",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073934",
-   "posted_at": "2026-07-20T02:17:24-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059576",
+   "posted_at": "2026-07-20T02:17:23-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Backend Software Engineer Team Lead",
-   "location": "Malaga",
+   "location": "Stockholm",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059576",
-   "posted_at": "2026-07-20T02:17:23-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073934",
+   "posted_at": "2026-07-20T02:17:24-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27062,8 +27052,8 @@
    "title": " Customer Service Agent - Estonian Speaking",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002347",
-   "posted_at": "2026-06-12T06:37:25-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002345",
+   "posted_at": "2026-06-12T06:37:28-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27072,18 +27062,8 @@
    "title": " Customer Service Agent - Estonian Speaking",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002345",
-   "posted_at": "2026-06-12T06:37:28-04:00",
-   "company": "Betsson Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Danish speaking - Customer Service (inc relocation to Malta)",
-   "location": "Malta",
-   "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839572",
-   "posted_at": "2025-04-28T05:49:08-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002347",
+   "posted_at": "2026-06-12T06:37:25-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27109,21 +27089,21 @@
    "source": "collector"
   },
   {
-   "title": "Data Engineer",
+   "title": "Danish speaking - Customer Service (inc relocation to Malta)",
    "location": "Malta",
-   "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7535276",
-   "posted_at": "2026-01-14T02:54:58-05:00",
+   "department": "Operations",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839572",
+   "posted_at": "2025-04-28T05:49:08-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
-   "title": "DevOps Engineer",
-   "location": "Budapest",
+   "title": "Data Engineer",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7984465",
-   "posted_at": "2026-06-10T04:53:02-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7535276",
+   "posted_at": "2026-01-14T02:54:58-05:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27139,11 +27119,21 @@
    "source": "collector"
   },
   {
-   "title": "DevOps Engineer - Player Account Management",
-   "location": "Malta",
+   "title": "DevOps Engineer",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8093764",
-   "posted_at": "2026-07-29T08:59:12-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7984465",
+   "posted_at": "2026-06-10T04:53:02-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Engineer - Player Account Management",
+   "location": "Athens",
+   "department": "Product Development",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8081413",
+   "posted_at": "2026-07-29T03:22:53-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27160,10 +27150,20 @@
   },
   {
    "title": "DevOps Engineer - Player Account Management",
+   "location": "Malta",
+   "department": "Product Development",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8093764",
+   "posted_at": "2026-07-29T08:59:12-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Engineer - Wallet",
    "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8081413",
-   "posted_at": "2026-07-29T03:22:53-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002911",
+   "posted_at": "2026-08-03T09:27:01-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27210,9 +27210,9 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957204",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
    "posted_at": "2026-05-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -27220,9 +27220,9 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957204",
    "posted_at": "2026-05-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -27290,20 +27290,20 @@
   },
   {
    "title": "Frontend Software Engineer - Gaming",
-   "location": "Malta",
+   "location": "Malaga",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7963004",
-   "posted_at": "2026-06-09T10:14:54-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7992693",
+   "posted_at": "2026-06-09T10:21:36-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Frontend Software Engineer - Gaming",
-   "location": "Malaga",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7992693",
-   "posted_at": "2026-06-09T10:21:36-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7963004",
+   "posted_at": "2026-06-09T10:14:54-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27350,20 +27350,20 @@
   },
   {
    "title": "Head of Engineering - Campaign & Rewards",
-   "location": "Stockholm",
+   "location": "Malaga",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071134",
-   "posted_at": "2026-07-17T06:54:38-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071107",
+   "posted_at": "2026-07-17T06:33:31-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Head of Engineering - Campaign & Rewards",
-   "location": "Malaga",
+   "location": "Stockholm",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071107",
-   "posted_at": "2026-07-17T06:33:31-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071134",
+   "posted_at": "2026-07-17T06:54:38-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27500,20 +27500,20 @@
   },
   {
    "title": "Machine Learning Tech Lead",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7860963",
-   "posted_at": "2026-06-10T07:08:46-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7995189",
+   "posted_at": "2026-06-10T07:10:24-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Machine Learning Tech Lead",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7995189",
-   "posted_at": "2026-06-10T07:10:24-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7860963",
+   "posted_at": "2026-06-10T07:08:46-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27600,20 +27600,20 @@
   },
   {
    "title": "Platform Database Engineer - Infra",
-   "location": "Malta",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7842115",
-   "posted_at": "2026-05-20T04:46:49-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7946220",
+   "posted_at": "2026-05-20T06:28:28-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Platform Database Engineer - Infra",
-   "location": "Athens",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7946220",
-   "posted_at": "2026-05-20T06:28:28-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7842115",
+   "posted_at": "2026-05-20T04:46:49-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27650,20 +27650,20 @@
   },
   {
    "title": "Player Management - Backend Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7092345",
-   "posted_at": "2025-07-24T08:56:10-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8053098",
+   "posted_at": "2026-07-14T09:59:14-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Player Management - Backend Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8053098",
-   "posted_at": "2026-07-14T09:59:14-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7092345",
+   "posted_at": "2025-07-24T08:56:10-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27720,9 +27720,9 @@
   },
   {
    "title": "Salesforce Marketing Cloud Developer ",
-   "location": "Athens",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074165",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074167",
    "posted_at": "2026-07-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -27740,9 +27740,9 @@
   },
   {
    "title": "Salesforce Marketing Cloud Developer ",
-   "location": "Malta",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074167",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074165",
    "posted_at": "2026-07-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -27790,20 +27790,20 @@
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
-   "posted_at": "2026-07-21T03:38:56-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
+   "posted_at": "2026-07-21T03:38:54-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
-   "posted_at": "2026-07-21T03:38:54-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
+   "posted_at": "2026-07-21T03:38:56-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27880,20 +27880,20 @@
   },
   {
    "title": "Site Reliability Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823478",
-   "posted_at": "2026-04-17T05:10:11-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823808",
+   "posted_at": "2026-04-17T05:10:12-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Site Reliability Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823808",
-   "posted_at": "2026-04-17T05:10:12-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823478",
+   "posted_at": "2026-04-17T05:10:11-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -27920,6 +27920,16 @@
   },
   {
    "title": "Sportsbook - Backend Software Engineer",
+   "location": "Budapest",
+   "department": "Product Development",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073961",
+   "posted_at": "2026-07-20T03:28:06-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Sportsbook - Backend Software Engineer",
    "location": "Athens",
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/8074060",
@@ -27934,16 +27944,6 @@
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/8071581",
    "posted_at": "2026-07-20T03:28:05-04:00",
-   "company": "Betsson Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Sportsbook - Backend Software Engineer",
-   "location": "Budapest",
-   "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073961",
-   "posted_at": "2026-07-20T03:28:06-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28000,9 +28000,9 @@
   },
   {
    "title": "Sportsbook - Performance Architect",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735145",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7672154",
    "posted_at": "2026-03-23T19:00:01-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -28010,9 +28010,9 @@
   },
   {
    "title": "Sportsbook - Performance Architect",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7672154",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735145",
    "posted_at": "2026-03-23T19:00:01-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -28384,6 +28384,16 @@
    "department": "",
    "url": "https://bullfinch.breezy.hr/p/a9c10eb02e1b-associate-engineering-manager",
    "posted_at": "2026-07-27T11:00:50.258Z",
+   "company": "Bullfinch Recruitment",
+   "ats": "breezy",
+   "source": "collector"
+  },
+  {
+   "title": "Chargeback Analyst",
+   "location": "Bulgaria, Bulgaria",
+   "department": "",
+   "url": "https://bullfinch.breezy.hr/p/74db9ae71801-chargeback-analyst",
+   "posted_at": "2026-08-03T15:48:37.940Z",
    "company": "Bullfinch Recruitment",
    "ats": "breezy",
    "source": "collector"
@@ -29764,17 +29774,6 @@
    "source": "collector"
   },
   {
-   "title": "Senior Social Marketing Associate",
-   "location": "2 Locations",
-   "department": "",
-   "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Social-Marketing-Associate_JR14674-1",
-   "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
-   "company": "DraftKings",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Senior Lead Software Engineer, Android",
    "location": "Remote - US",
    "department": "",
@@ -30790,6 +30789,56 @@
   },
   {
    "title": "Retail Customer Service",
+   "location": "Ballyfermot, IE",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141300879",
+   "posted_at": "2026-08-03T15:45:14.091Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service - Weekends only",
+   "location": "Stockton-on-Tees, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141295899",
+   "posted_at": "2026-08-03T15:24:13.404Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "York, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141290134",
+   "posted_at": "2026-08-03T15:04:20.249Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Northallerton, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141273919",
+   "posted_at": "2026-08-03T14:05:33.132Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Princes Risborough, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141268399",
+   "posted_at": "2026-08-03T13:43:58.759Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
    "location": "Glasgow, GB",
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000141235899",
@@ -30994,16 +31043,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000140938869",
    "posted_at": "2026-07-31T15:03:27.311Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Retail Customer Service",
-   "location": "Northampton, GB",
-   "department": "Customer Service",
-   "url": "https://jobs.smartrecruiters.com/entain/744000140932199",
-   "posted_at": "2026-07-31T14:38:22.304Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -31969,16 +32008,6 @@
    "source": "collector"
   },
   {
-   "title": "Platform Engineer III",
-   "location": "London, GB",
-   "department": "Other",
-   "url": "https://jobs.smartrecruiters.com/entain/744000138605360",
-   "posted_at": "2026-07-20T10:21:09.583Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "UKI AI Director",
    "location": "London, GB",
    "department": "Management",
@@ -32869,16 +32898,6 @@
    "source": "collector"
   },
   {
-   "title": "Principal Machine Learning Engineer",
-   "location": "London, GB",
-   "department": "Engineering",
-   "url": "https://jobs.smartrecruiters.com/entain/744000127033060",
-   "posted_at": "2026-05-18T15:45:32.024Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Retail Customer Service",
    "location": "Belfast, GB",
    "department": "Customer Service",
@@ -33206,6 +33225,36 @@
    "posted_at": null,
    "company": "evoke plc",
    "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Junior Technical Compliance Specialist",
+   "location": "St. Julian's, MT",
+   "department": "Legal",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000141295061",
+   "posted_at": "2026-08-03T15:26:03.031Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "5pm\u20131am Swing Shift | On-Camera Game Host \u2013 From $17/hr + Tips | Grand Rapids | (Bartender alt.)",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000141272473",
+   "posted_at": "2026-08-03T14:05:03.908Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Evolution Brand Ambassador - Grand Rapids",
+   "location": "Grand Rapids, US",
+   "department": "Operations",
+   "url": "https://jobs.smartrecruiters.com/evolution/744000141272049",
+   "posted_at": "2026-08-03T13:58:12.556Z",
+   "company": "Evolution",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -33824,16 +33873,6 @@
    "department": "Operations",
    "url": "https://jobs.smartrecruiters.com/evolution/744000139085419",
    "posted_at": "2026-07-22T13:49:46.082Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "5pm\u20131am Swing Shift | On-Camera Game Host \u2013 From $17/hr + Tips | Grand Rapids | (Bartender alt.)",
-   "location": "Grand Rapids, US",
-   "department": "Operations",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000139084624",
-   "posted_at": "2026-07-22T13:49:20.136Z",
    "company": "Evolution",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -36290,6 +36329,16 @@
   },
   {
    "title": "Manager Engineering Software- FBG-Trading",
+   "location": "London, England, United Kingdom",
+   "department": "Gaming - Trading",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4212274009",
+   "posted_at": "2026-04-09T11:40:54-04:00",
+   "company": "Fanatics Betting & Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Manager Engineering Software- FBG-Trading",
    "location": "Dublin, Ireland",
    "department": "Gaming - Trading",
    "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4214342009",
@@ -36299,11 +36348,11 @@
    "source": "collector"
   },
   {
-   "title": "Manager Engineering Software- FBG-Trading",
-   "location": "London, England, United Kingdom",
-   "department": "Gaming - Trading",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4212274009",
-   "posted_at": "2026-04-09T11:40:54-04:00",
+   "title": "Manager, Loyalty Marketing (Brand & GTM)",
+   "location": "New York, NY, United States",
+   "department": "Gaming - Non-Tech",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4343359009",
+   "posted_at": "2026-08-03T10:56:43-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -36559,7 +36608,7 @@
    "source": "collector"
   },
   {
-   "title": "Senior Platform Engineer - Core Platform- UK & Ireland ",
+   "title": "Senior Platform Engineer, Infrastructure - Core UK & IRE ",
    "location": "Leeds, England, United Kingdom; London, England, United Kingdom",
    "department": "Gaming - Core Engineering",
    "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4274218009",
@@ -36789,21 +36838,21 @@
    "source": "collector"
   },
   {
-   "title": "Staff Platform Engineer - Core Platform- UK & Ireland ",
-   "location": "Dublin, Ireland; Galway, Ireland; Leeds, England, United Kingdom; London, England, United Kingdom",
-   "department": "Gaming - Core Engineering",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4218898009",
-   "posted_at": "2026-04-14T05:26:09-04:00",
-   "company": "Fanatics Betting & Gaming",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Staff Platform Engineer, Data Storage - Core",
    "location": "New York, NY, United States",
    "department": "Gaming - Core Engineering",
    "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4324199009",
    "posted_at": "2026-07-24T14:47:26-04:00",
+   "company": "Fanatics Betting & Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Platform Engineer, Infrastructure - Core UK & Ireland ",
+   "location": "Dublin, Ireland; Galway, Ireland; Leeds, England, United Kingdom; London, England, United Kingdom",
+   "department": "Gaming - Core Engineering",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4218898009",
+   "posted_at": "2026-04-14T05:26:09-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -37689,6 +37738,17 @@
    "source": "collector"
   },
   {
+   "title": "Product Engineering Lead, Customer Operations",
+   "location": "Malta",
+   "department": "",
+   "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Product-Engineering-Lead--Customer-Operations_JR103076",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "FDJ United",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "AI Enablement Lead",
    "location": "2 Locations",
    "department": "",
@@ -38173,17 +38233,6 @@
    "source": "collector"
   },
   {
-   "title": "Product Engineering Lead, Customer Operations",
-   "location": "Malta",
-   "department": "",
-   "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Product-Engineering-Lead--Customer-Operations_JR103076",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "FDJ United",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Senior Security Analyst",
    "location": "Malta",
    "department": "",
@@ -38265,17 +38314,6 @@
    "location": "BOULOGNE-BILLANCOURT",
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Manager-Oprations-Fraude-et-Blanchiment---F-H---CDI_JR102932",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "FDJ United",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Chef de Projets Strat\u00e9gie Groupe - F/H - Stage",
-   "location": "BOULOGNE-BILLANCOURT",
-   "department": "",
-   "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Chef-de-Projets-Stratgie-Groupe---F-H---Stage_JR102947",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
    "company": "FDJ United",
@@ -38410,6 +38448,17 @@
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BASTIA/Commercial-Sdentaire---F-H---Alternance_JR102673",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
+   "company": "FDJ United",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Product Engineering Lead, Customer Operations",
+   "location": "Malta",
+   "department": "",
+   "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Product-Engineering-Lead--Customer-Operations_JR103076",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -38624,13 +38673,24 @@
    "source": "collector"
   },
   {
-   "title": "Responsable Grands Comptes \u2013 D\u00e9veloppement Enseignes \u2013 F/H \u2013 CDD",
-   "location": "BOULOGNE-BILLANCOURT",
+   "title": "Customer Care Support",
+   "location": "Tirana - Rruga Dritan - 40h",
    "department": "",
-   "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Responsable-Grands-Comptes---Dveloppement-Enseignes---F-H---CDD_JR103257",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tirana---Rruga-Dritan---40h/Customer-Care-Support_JR140594-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
-   "company": "FDJ United",
+   "posted_text": "Posted Today",
+   "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Planning & Governance Specialist",
+   "location": "Tirana - Rruga Dritan - 40h",
+   "department": "",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tirana---Rruga-Dritan---40h/Planning---Governance-Specialist_JR140581-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
   },
@@ -40325,6 +40385,36 @@
    "source": "collector"
   },
   {
+   "title": "Bilingual Performance Video Editor",
+   "location": "Remote job",
+   "department": "Marketing",
+   "url": "https://hardrockdigital.recruitee.com/o/bilingual-performance-video-editor",
+   "posted_at": "2026-07-30 11:03:36 UTC",
+   "company": "Hard Rock Digital",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Analyst - Payments",
+   "location": "Hollywood, Florida, United States",
+   "department": "Customer Operations",
+   "url": "https://hardrockdigital.recruitee.com/o/senior-analyst-payments-2",
+   "posted_at": "2026-07-29 07:55:34 UTC",
+   "company": "Hard Rock Digital",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "Analyst - Payments",
+   "location": "Atlantic City, NJ, New Jersey, United States",
+   "department": "Customer Operations",
+   "url": "https://hardrockdigital.recruitee.com/o/analyst-payments-7",
+   "posted_at": "2026-07-29 07:46:18 UTC",
+   "company": "Hard Rock Digital",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
    "title": "Analyst - Fraud",
    "location": "Atlantic City, NJ, New Jersey, United States",
    "department": "Customer Operations",
@@ -40355,21 +40445,21 @@
    "source": "collector"
   },
   {
-   "title": "VIP Associate",
-   "location": "Hollywood, Florida, United States",
-   "department": "Customer Operations",
-   "url": "https://hardrockdigital.recruitee.com/o/vip-associate-3",
-   "posted_at": "2026-07-21 09:16:56 UTC",
-   "company": "Hard Rock Digital",
-   "ats": "recruitee",
-   "source": "collector"
-  },
-  {
    "title": "Supervisor - Payments",
    "location": "Toronto, ON, Ontario, Canada",
    "department": "Customer Operations",
    "url": "https://hardrockdigital.recruitee.com/o/supervisor-payments-1",
    "posted_at": "2026-06-18 15:01:08 UTC",
+   "company": "Hard Rock Digital",
+   "ats": "recruitee",
+   "source": "collector"
+  },
+  {
+   "title": "VIP Associate",
+   "location": "Hollywood, Florida, United States",
+   "department": "Customer Operations",
+   "url": "https://hardrockdigital.recruitee.com/o/vip-associate-3",
+   "posted_at": "2026-07-21 09:16:56 UTC",
    "company": "Hard Rock Digital",
    "ats": "recruitee",
    "source": "collector"
@@ -42835,16 +42925,6 @@
    "source": "collector"
   },
   {
-   "title": "Senior QA Engineer - Core Experience",
-   "location": "Stockholm, Sweden",
-   "department": "Core Experience",
-   "url": "https://jobs.ashbyhq.com/leovegasgroup/fa41cc50-2afb-412f-8dea-3de1fffbc6ee",
-   "posted_at": "2026-07-17T13:27:32.128+00:00",
-   "company": "LeoVegas Group",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
    "title": "Process Improvement Specialist",
    "location": "Sliema, Malta",
    "department": "Process Improvement and Automation",
@@ -43445,11 +43525,31 @@
    "source": "collector"
   },
   {
+   "title": "Customer Experience Advisor - Danish",
+   "location": "Sliema, Malta",
+   "department": "Customer support and Insights",
+   "url": "https://jobs.ashbyhq.com/leovegasgroup/897285b3-cc0a-451e-87a7-ec08d0a4337e",
+   "posted_at": "2026-08-03T15:11:28.398+00:00",
+   "company": "LeoVegas Group",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
    "title": "Safer Gambling Analyst ",
    "location": "Sliema, Malta",
    "department": "Player Sustainability",
    "url": "https://jobs.ashbyhq.com/leovegasgroup/4bc8c415-493f-4669-8d39-e0b984b44ec8",
    "posted_at": "2026-08-03T13:13:20.586+00:00",
+   "company": "LeoVegas Group",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Experience Advisor",
+   "location": "Sliema, Malta",
+   "department": "Customer support and Insights",
+   "url": "https://jobs.ashbyhq.com/leovegasgroup/5279baf1-9c76-4058-869c-9b85eca9d8c9",
+   "posted_at": "2026-08-03T15:10:26.872+00:00",
    "company": "LeoVegas Group",
    "ats": "ashby",
    "source": "collector"
@@ -44667,16 +44767,6 @@
    "posted_text": "Posted 30+ Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Paralegal",
-   "location": "United Kingdom",
-   "department": "Operations",
-   "url": "https://jobs.ashbyhq.com/midnite/a5393db0-523f-42e4-831a-f377d5b07b6b",
-   "posted_at": "2026-06-19T12:00:53.242+00:00",
-   "company": "Midnite",
-   "ats": "ashby",
    "source": "collector"
   },
   {
@@ -46010,6 +46100,16 @@
    "source": "collector"
   },
   {
+   "title": "Chargeback Analyst",
+   "location": "Romania",
+   "department": "Partnerships & Payments",
+   "url": "https://jobs.ashbyhq.com/patrianna/27ed2ae9-e101-45e5-9ce8-311117935dab",
+   "posted_at": "2026-08-03T15:41:54.005+00:00",
+   "company": "Patrianna",
+   "ats": "ashby",
+   "source": "collector"
+  },
+  {
    "title": "Cybersecurity Officer \u2013 West Africa",
    "location": "Africa",
    "department": "Cyber Security",
@@ -46420,7 +46520,7 @@
    "source": "collector"
   },
   {
-   "title": "Technical Support Specialist",
+   "title": "Technical Support Engineer",
    "location": "REMOTE - Asia",
    "department": "Platform Tribe",
    "url": "https://jobs.ashbyhq.com/playson/c105ad30-59a8-4e92-8ee6-fb40481b63ff",
@@ -46430,7 +46530,7 @@
    "source": "collector"
   },
   {
-   "title": "Technical Support Specialist",
+   "title": "Technical Support  Engineer",
    "location": "Brazil",
    "department": "Platform Tribe",
    "url": "https://jobs.ashbyhq.com/playson/76584f59-1f9d-4ca3-92e6-0c4fb36df912",
@@ -46520,7 +46620,7 @@
    "source": "collector"
   },
   {
-   "title": "Technical Support Specialist",
+   "title": "Technical Support Engineer",
    "location": "REMOTE - Asia",
    "department": "Platform Tribe",
    "url": "https://jobs.ashbyhq.com/playson/98513c1b-cf15-49ec-bed8-770ae531eea4",
@@ -46547,6 +46647,36 @@
    "posted_at": "2026-07-30T15:13:52.008+00:00",
    "company": "Playson",
    "ats": "ashby",
+   "source": "collector"
+  },
+  {
+   "title": "Risk Subject Matter Expert ",
+   "location": "Sao Paulo, BR",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000141279976",
+   "posted_at": "2026-08-03T14:29:23.563Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service Manager ",
+   "location": "Sao Paulo, BR",
+   "department": "Customer Support",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000141275039",
+   "posted_at": "2026-08-03T14:09:30.418Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "People and Culture Generalist",
+   "location": "Bensalem, US",
+   "department": "Human Resources",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000141262510",
+   "posted_at": "2026-08-03T13:35:19.870Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -46610,16 +46740,6 @@
    "source": "collector"
   },
   {
-   "title": "Retail Customer Service Manager ",
-   "location": "Sao Paulo, BR",
-   "department": "Customer Support",
-   "url": "https://jobs.smartrecruiters.com/playtech/744000140974570",
-   "posted_at": "2026-07-31T18:13:31.457Z",
-   "company": "Playtech",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Poker Data Analyst",
    "location": "Sofia, BG",
    "department": "Product Development",
@@ -46635,16 +46755,6 @@
    "department": "Gaming",
    "url": "https://jobs.smartrecruiters.com/playtech/744000140904089",
    "posted_at": "2026-07-31T12:53:44.143Z",
-   "company": "Playtech",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Risk Subject Matter Expert ",
-   "location": "Sao Paulo, BR",
-   "department": "Customer Support",
-   "url": "https://jobs.smartrecruiters.com/playtech/744000140748085",
-   "posted_at": "2026-07-30T17:57:35.102Z",
    "company": "Playtech",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -48881,20 +48991,20 @@
   },
   {
    "title": "Affiliate Manager",
-   "location": "USA - Remote",
+   "location": "Canada - Remote",
    "department": "Marketing: Growth Marketing",
-   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6122838004",
-   "posted_at": "2026-07-23T16:36:01-04:00",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6123728004",
+   "posted_at": "2026-07-23T16:36:02-04:00",
    "company": "Rush Street Interactive",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Affiliate Manager",
-   "location": "Canada - Remote",
+   "location": "USA - Remote",
    "department": "Marketing: Growth Marketing",
-   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6123728004",
-   "posted_at": "2026-07-23T16:36:02-04:00",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6122838004",
+   "posted_at": "2026-07-23T16:36:01-04:00",
    "company": "Rush Street Interactive",
    "ats": "greenhouse",
    "source": "collector"
@@ -48955,16 +49065,6 @@
    "department": "Latam: Marketing",
    "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5996651004",
    "posted_at": "2026-05-16T01:47:55-04:00",
-   "company": "Rush Street Interactive",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Instrumentation Analyst",
-   "location": "USA - Remote",
-   "department": "Marketing: Analytics",
-   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6011165004",
-   "posted_at": "2026-06-02T10:49:14-04:00",
    "company": "Rush Street Interactive",
    "ats": "greenhouse",
    "source": "collector"
@@ -49105,6 +49205,16 @@
    "department": "Marketing: Data Engineering",
    "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/5839978004",
    "posted_at": "2026-04-10T10:43:07-04:00",
+   "company": "Rush Street Interactive",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Instrumentation Analyst",
+   "location": "USA - Remote",
+   "department": "Marketing: Analytics",
+   "url": "https://job-boards.greenhouse.io/rushstreetinteractive/jobs/6011165004",
+   "posted_at": "2026-06-02T10:49:14-04:00",
    "company": "Rush Street Interactive",
    "ats": "greenhouse",
    "source": "collector"
@@ -49559,6 +49669,36 @@
    "posted_at": null,
    "company": "SoftSwiss",
    "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Staff Engineer",
+   "location": "Bremen, DE",
+   "department": "Engineering",
+   "url": "https://jobs.smartrecruiters.com/sportradar/744000141272315",
+   "posted_at": "2026-08-03T14:07:14.767Z",
+   "company": "Sportradar",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Consolidation and Reporting Specialist",
+   "location": "London, GB",
+   "department": "Administrative",
+   "url": "https://jobs.smartrecruiters.com/sportradar/744000141272899",
+   "posted_at": "2026-08-03T14:01:56.672Z",
+   "company": "Sportradar",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Consolidation and Reporting Specialist (m/f/d)",
+   "location": "Vienna, AT",
+   "department": "Administrative",
+   "url": "https://jobs.smartrecruiters.com/sportradar/744000141272709",
+   "posted_at": "2026-08-03T14:01:28.471Z",
+   "company": "Sportradar",
+   "ats": "smartrecruiters",
    "source": "collector"
   },
   {
@@ -50216,6 +50356,16 @@
    "location": "",
    "department": "Compliance",
    "url": "https://sporttrade.bamboohr.com/careers/26",
+   "posted_at": null,
+   "company": "Sporttrade",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Site Reliability Engineer",
+   "location": "",
+   "department": "Site Reliability Engineering",
+   "url": "https://sporttrade.bamboohr.com/careers/27",
    "posted_at": null,
    "company": "Sporttrade",
    "ats": "bamboohr",
@@ -51273,16 +51423,6 @@
   },
   {
    "title": "AI Platform Engineer",
-   "location": "Netherlands",
-   "department": "Product & Technology ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914669101",
-   "posted_at": "2026-07-01T07:13:36-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "AI Platform Engineer",
    "location": "Spain",
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914670101",
@@ -51297,6 +51437,16 @@
    "department": "Product & Technology ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914596101",
    "posted_at": "2026-07-01T07:03:17-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "AI Platform Engineer",
+   "location": "Netherlands",
+   "department": "Product & Technology ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4914669101",
+   "posted_at": "2026-07-01T07:13:36-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51363,10 +51513,10 @@
   },
   {
    "title": "Business Process Analyst",
-   "location": "Croatia",
+   "location": "Romania",
    "department": "Business Transformation",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4937522101",
-   "posted_at": "2026-07-24T14:52:36-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4827827101",
+   "posted_at": "2026-03-31T17:27:41-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51383,10 +51533,10 @@
   },
   {
    "title": "Business Process Analyst",
-   "location": "Romania",
+   "location": "Croatia",
    "department": "Business Transformation",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4827827101",
-   "posted_at": "2026-03-31T17:27:41-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4937522101",
+   "posted_at": "2026-07-24T14:52:36-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51473,20 +51623,20 @@
   },
   {
    "title": "Data Engineer",
-   "location": "Croatia",
+   "location": "Spain",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4746112101",
-   "posted_at": "2025-12-31T04:32:25-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4746113101",
+   "posted_at": "2025-12-31T04:33:37-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Data Engineer",
-   "location": "Spain",
+   "location": "Croatia",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4746113101",
-   "posted_at": "2025-12-31T04:33:37-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4746112101",
+   "posted_at": "2025-12-31T04:32:25-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51543,20 +51693,20 @@
   },
   {
    "title": "General Ledger Accountant \u2013 Western Europe",
-   "location": "Malta",
+   "location": "Spain",
    "department": "Group Finance Control ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4937239101",
-   "posted_at": "2026-07-24T10:12:38-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4937142101",
+   "posted_at": "2026-07-24T10:16:15-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "General Ledger Accountant \u2013 Western Europe",
-   "location": "Spain",
+   "location": "Malta",
    "department": "Group Finance Control ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4937142101",
-   "posted_at": "2026-07-24T10:16:15-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4937239101",
+   "posted_at": "2026-07-24T10:12:38-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51753,20 +51903,20 @@
   },
   {
    "title": "Lead Product Manager - Game Content Creation",
-   "location": "Croatia",
+   "location": "Belgium",
    "department": "Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807119101",
-   "posted_at": "2026-03-12T06:40:48-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807098101",
+   "posted_at": "2026-03-12T06:40:47-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Lead Product Manager - Game Content Creation",
-   "location": "Belgium",
+   "location": "Croatia",
    "department": "Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807098101",
-   "posted_at": "2026-03-12T06:40:47-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4807119101",
+   "posted_at": "2026-03-12T06:40:48-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51803,20 +51953,20 @@
   },
   {
    "title": "Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Croatia",
+   "location": "Romania",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842232101",
-   "posted_at": "2026-04-15T09:09:36-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842234101",
+   "posted_at": "2026-04-15T09:09:37-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Romania",
+   "location": "Croatia",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842234101",
-   "posted_at": "2026-04-15T09:09:37-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4842232101",
+   "posted_at": "2026-04-15T09:09:36-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51903,10 +52053,10 @@
   },
   {
    "title": "Principal Product Manager - Analytics Platform",
-   "location": "Croatia",
+   "location": "United Kingdom",
    "department": "Data Product Management",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802007101",
-   "posted_at": "2026-03-09T06:06:15-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4863049101",
+   "posted_at": "2026-05-10T10:14:53-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51917,6 +52067,16 @@
    "department": "Data Product Management",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802008101",
    "posted_at": "2026-03-09T06:06:41-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Principal Product Manager - Analytics Platform",
+   "location": "Croatia",
+   "department": "Data Product Management",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4802007101",
+   "posted_at": "2026-03-09T06:06:15-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -51942,16 +52102,6 @@
    "source": "collector"
   },
   {
-   "title": "Principal Product Manager - Analytics Platform",
-   "location": "United Kingdom",
-   "department": "Data Product Management",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4863049101",
-   "posted_at": "2026-05-10T10:14:53-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Product / Commercial Data Scientist",
    "location": "Romania",
    "department": "Data Insights (Data & Analytics)",
@@ -51963,20 +52113,20 @@
   },
   {
    "title": "Product / Commercial Data Scientist ",
-   "location": "Croatia",
+   "location": "Spain",
    "department": "Data Insights (Data & Analytics)",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4942575101",
-   "posted_at": "2026-07-31T08:58:26-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4942479101",
+   "posted_at": "2026-07-31T07:58:08-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Product / Commercial Data Scientist ",
-   "location": "Spain",
+   "location": "Croatia",
    "department": "Data Insights (Data & Analytics)",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4942479101",
-   "posted_at": "2026-07-31T07:58:08-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4942575101",
+   "posted_at": "2026-07-31T08:58:26-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52023,6 +52173,16 @@
   },
   {
    "title": "Project Portfolio Manager (Finance)",
+   "location": "United Kingdom",
+   "department": "Group Finance Control ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906314101",
+   "posted_at": "2026-06-23T11:38:16-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Project Portfolio Manager (Finance)",
    "location": "Croatia",
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4905929101",
@@ -52037,16 +52197,6 @@
    "department": "Group Finance Control ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906064101",
    "posted_at": "2026-06-23T08:13:17-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Project Portfolio Manager (Finance)",
-   "location": "United Kingdom",
-   "department": "Group Finance Control ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906314101",
-   "posted_at": "2026-06-23T11:38:16-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52183,6 +52333,16 @@
   },
   {
    "title": "Senior Business Transformation Lead",
+   "location": "Romania",
+   "department": "Business Transformation",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933669101",
+   "posted_at": "2026-07-21T08:38:45-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Business Transformation Lead",
    "location": "Croatia",
    "department": "Business Transformation",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933675101",
@@ -52212,16 +52372,6 @@
    "source": "collector"
   },
   {
-   "title": "Senior Business Transformation Lead",
-   "location": "Romania",
-   "department": "Business Transformation",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933669101",
-   "posted_at": "2026-07-21T08:38:45-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Senior Compliance Officer",
    "location": "Greece",
    "department": "Compliance",
@@ -52233,10 +52383,10 @@
   },
   {
    "title": "Senior Cybersecurity Engineer",
-   "location": "Romania",
+   "location": "Croatia",
    "department": "Cybersecurity ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4939543101",
-   "posted_at": "2026-07-28T06:13:20-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4939545101",
+   "posted_at": "2026-07-28T06:13:24-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52253,10 +52403,10 @@
   },
   {
    "title": "Senior Cybersecurity Engineer",
-   "location": "Croatia",
+   "location": "Romania",
    "department": "Cybersecurity ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4939545101",
-   "posted_at": "2026-07-28T06:13:24-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4939543101",
+   "posted_at": "2026-07-28T06:13:20-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52323,16 +52473,6 @@
   },
   {
    "title": "Senior Engineering Manager - Data Engineering",
-   "location": "Spain",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4871976101",
-   "posted_at": "2026-05-20T10:28:26-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Engineering Manager - Data Engineering",
    "location": "Croatia",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4871983101",
@@ -52342,21 +52482,11 @@
    "source": "collector"
   },
   {
-   "title": "Senior Engineering Manager - Machine Learning ",
+   "title": "Senior Engineering Manager - Data Engineering",
    "location": "Spain",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874311101",
-   "posted_at": "2026-05-24T10:51:54-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Engineering Manager - Machine Learning ",
-   "location": "United Kingdom",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874318101",
-   "posted_at": "2026-05-24T10:58:30-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4871976101",
+   "posted_at": "2026-05-20T10:28:26-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52373,10 +52503,30 @@
   },
   {
    "title": "Senior Engineering Manager - Machine Learning ",
+   "location": "Spain",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874311101",
+   "posted_at": "2026-05-24T10:51:54-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Engineering Manager - Machine Learning ",
    "location": "Netherlands",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874316101",
    "posted_at": "2026-05-24T10:54:16-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Engineering Manager - Machine Learning ",
+   "location": "United Kingdom",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4874318101",
+   "posted_at": "2026-05-24T10:58:30-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52393,10 +52543,10 @@
   },
   {
    "title": "Senior Engineer, Machine Learning Platform",
-   "location": "United Kingdom",
+   "location": "Croatia",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4928537101",
-   "posted_at": "2026-07-15T06:09:26-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4768338101",
+   "posted_at": "2026-01-28T03:14:56-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52413,20 +52563,10 @@
   },
   {
    "title": "Senior Engineer, Machine Learning Platform",
-   "location": "Croatia",
+   "location": "United Kingdom",
    "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4768338101",
-   "posted_at": "2026-01-28T03:14:56-05:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior iOS Engineer ",
-   "location": "Spain",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665951101",
-   "posted_at": "2025-09-02T06:07:36-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4928537101",
+   "posted_at": "2026-07-15T06:09:26-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52437,6 +52577,16 @@
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665952101",
    "posted_at": "2025-09-02T06:07:37-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior iOS Engineer ",
+   "location": "Spain",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4665951101",
+   "posted_at": "2025-09-02T06:07:36-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52473,20 +52623,20 @@
   },
   {
    "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Romania",
+   "location": "Croatia",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786100101",
-   "posted_at": "2026-02-19T06:03:23-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786082101",
+   "posted_at": "2026-02-19T06:02:16-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "United Kingdom",
+   "location": "Romania",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786081101",
-   "posted_at": "2026-02-19T06:01:37-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786100101",
+   "posted_at": "2026-02-19T06:03:23-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52503,20 +52653,20 @@
   },
   {
    "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Spain",
+   "location": "United Kingdom",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786080101",
-   "posted_at": "2026-02-19T06:00:52-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786081101",
+   "posted_at": "2026-02-19T06:01:37-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Machine Learning Engineer -  Applied ML &  Research",
-   "location": "Croatia",
+   "location": "Spain",
    "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786082101",
-   "posted_at": "2026-02-19T06:02:16-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4786080101",
+   "posted_at": "2026-02-19T06:00:52-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52573,20 +52723,20 @@
   },
   {
    "title": "Senior Product Designer - Social",
-   "location": "Spain",
+   "location": "Croatia",
    "department": "Product Design & Research",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849905101",
-   "posted_at": "2026-04-24T08:08:24-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849915101",
+   "posted_at": "2026-04-24T08:12:28-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Product Designer - Social",
-   "location": "Croatia",
+   "location": "Spain",
    "department": "Product Design & Research",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849915101",
-   "posted_at": "2026-04-24T08:12:28-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4849905101",
+   "posted_at": "2026-04-24T08:08:24-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52633,6 +52783,16 @@
   },
   {
    "title": "Senior Software Engineer (Backend)",
+   "location": "Spain",
+   "department": "Engineering, Gaming",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4521285101",
+   "posted_at": "2025-01-17T07:44:06-05:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Software Engineer (Backend)",
    "location": "Croatia",
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4526821101",
@@ -52647,16 +52807,6 @@
    "department": "Engineering, Gaming",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4860840101",
    "posted_at": "2026-05-06T11:05:09-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Software Engineer (Backend)",
-   "location": "Spain",
-   "department": "Engineering, Gaming",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4521285101",
-   "posted_at": "2025-01-17T07:44:06-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52733,6 +52883,16 @@
   },
   {
    "title": "Staff Machine Learning Engineer - Applied ML & Research",
+   "location": "Croatia",
+   "department": "Engineering, Data",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4637336101",
+   "posted_at": "2025-07-14T11:51:33-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Machine Learning Engineer - Applied ML & Research",
    "location": "United Kingdom",
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4610557101",
@@ -52747,16 +52907,6 @@
    "department": "Engineering, Data",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4610556101",
    "posted_at": "2025-06-20T11:58:17-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Staff Machine Learning Engineer - Applied ML & Research",
-   "location": "Croatia",
-   "department": "Engineering, Data",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4637336101",
-   "posted_at": "2025-07-14T11:51:33-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52833,6 +52983,16 @@
   },
   {
    "title": "Staff Site Reliability Engineer - Cloud Efficiency",
+   "location": "Croatia",
+   "department": "Technology",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902287101",
+   "posted_at": "2026-06-18T05:15:33-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Staff Site Reliability Engineer - Cloud Efficiency",
    "location": "Netherlands",
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4903788101",
@@ -52852,21 +53012,21 @@
    "source": "collector"
   },
   {
-   "title": "Staff Site Reliability Engineer - Cloud Efficiency",
-   "location": "Croatia",
-   "department": "Technology",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4902287101",
-   "posted_at": "2026-06-18T05:15:33-04:00",
+   "title": "Staff Software Engineer",
+   "location": "Netherlands",
+   "department": "Engineering, Data Products",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930297101",
+   "posted_at": "2026-07-16T23:14:40-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Staff Software Engineer",
-   "location": "Netherlands",
+   "location": "Croatia",
    "department": "Engineering, Data Products",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930297101",
-   "posted_at": "2026-07-16T23:14:40-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930300101",
+   "posted_at": "2026-07-16T23:14:41-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52887,16 +53047,6 @@
    "department": "Technology",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4822142101",
    "posted_at": "2026-03-26T05:42:50-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Staff Software Engineer",
-   "location": "Croatia",
-   "department": "Engineering, Data Products",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4930300101",
-   "posted_at": "2026-07-16T23:14:41-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52943,20 +53093,20 @@
   },
   {
    "title": "System Engineer (Cloud & AI)",
-   "location": "Croatia",
+   "location": "Romania",
    "department": "Product & Technology ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906254101",
-   "posted_at": "2026-06-23T11:07:47-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906274101",
+   "posted_at": "2026-06-23T11:10:12-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "System Engineer (Cloud & AI)",
-   "location": "Romania",
+   "location": "Croatia",
    "department": "Product & Technology ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906274101",
-   "posted_at": "2026-06-23T11:10:12-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4906254101",
+   "posted_at": "2026-06-23T11:07:47-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -52993,6 +53143,26 @@
   },
   {
    "title": "Technical Compliance Delivery Manager",
+   "location": "Romania",
+   "department": "Product",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867917101",
+   "posted_at": "2026-05-15T07:54:42-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Compliance Delivery Manager",
+   "location": "Gibraltar",
+   "department": "Product",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862579101",
+   "posted_at": "2026-05-08T09:17:49-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Compliance Delivery Manager",
    "location": "Croatia",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867919101",
@@ -53012,31 +53182,21 @@
    "source": "collector"
   },
   {
-   "title": "Technical Compliance Delivery Manager",
-   "location": "Gibraltar",
-   "department": "Product",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862579101",
-   "posted_at": "2026-05-08T09:17:49-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Technical Compliance Delivery Manager",
-   "location": "Romania",
-   "department": "Product",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4867917101",
-   "posted_at": "2026-05-15T07:54:42-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Technical Compliance Officer",
    "location": "Serbia",
    "department": "Product",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4862559101",
    "posted_at": "2026-05-08T08:59:30-04:00",
+   "company": "Superbet",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Technical Sourcer",
+   "location": "Spain",
+   "department": "Talent Acquisition ",
+   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762247101",
+   "posted_at": "2026-01-20T08:38:46-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -53057,16 +53217,6 @@
    "department": "Talent Acquisition ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762246101",
    "posted_at": "2026-01-20T08:38:45-05:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Technical Sourcer",
-   "location": "Spain",
-   "department": "Talent Acquisition ",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4762247101",
-   "posted_at": "2026-01-20T08:38:46-05:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -53097,16 +53247,6 @@
    "department": "Commercial International Function ",
    "url": "https://job-boards.eu.greenhouse.io/super/jobs/4933768101",
    "posted_at": "2026-07-21T10:17:52-04:00",
-   "company": "Superbet",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "VIP Account Manager, Team Lead - Rio de Janeiro",
-   "location": "Brazil",
-   "department": "Brazil",
-   "url": "https://job-boards.eu.greenhouse.io/super/jobs/4866871101",
-   "posted_at": "2026-05-14T10:00:12-04:00",
    "company": "Superbet",
    "ats": "greenhouse",
    "source": "collector"
@@ -53168,6 +53308,176 @@
    "url": "https://jobs.smartrecruiters.com/talentgrator/743999910236960",
    "posted_at": "2023-05-31T08:48:36.316Z",
    "company": "Talentgrator",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d)",
+   "location": "Bad Soden am Taunus, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141293379",
+   "posted_at": "2026-08-03T15:18:19.313Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
+   "location": "Bad Vilbel, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141292197",
+   "posted_at": "2026-08-03T15:18:00.065Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
+   "location": "Bad Vilbel, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141293229",
+   "posted_at": "2026-08-03T15:17:57.045Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Frankfurt am Main, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141292384",
+   "posted_at": "2026-08-03T15:16:54.193Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Frankfurt am Main, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141292729",
+   "posted_at": "2026-08-03T15:16:01.623Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
+   "location": "Taunusstein, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141291300",
+   "posted_at": "2026-08-03T15:10:45.698Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
+   "location": "Taunusstein, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141289691",
+   "posted_at": "2026-08-03T15:10:30.088Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Taunusstein, DE",
+   "department": "TSAW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141291609",
+   "posted_at": "2026-08-03T15:10:15.122Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
+   "location": "Trossingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141287540",
+   "posted_at": "2026-08-03T15:03:19.808Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
+   "location": "Trossingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141288170",
+   "posted_at": "2026-08-03T15:02:14.522Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Trossingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141289249",
+   "posted_at": "2026-08-03T15:01:03.011Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
+   "location": "\u00dcberlingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141288160",
+   "posted_at": "2026-08-03T14:59:36.950Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
+   "location": "\u00dcberlingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141287762",
+   "posted_at": "2026-08-03T14:58:34.567Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
+   "location": "Tuttlingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141286910",
+   "posted_at": "2026-08-03T14:57:07.390Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
+   "location": "Tuttlingen, DE",
+   "department": "TSASW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141287387",
+   "posted_at": "2026-08-03T14:55:41.707Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
+   "location": "Herten, DE",
+   "department": "TSANW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141263507",
+   "posted_at": "2026-08-03T13:35:29.108Z",
+   "company": "Tipico",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)",
+   "location": "Herten, DE",
+   "department": "TSANW Shops",
+   "url": "https://jobs.smartrecruiters.com/tipico/744000141266564",
+   "posted_at": "2026-08-03T13:34:48.074Z",
+   "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
   },
@@ -53362,56 +53672,6 @@
    "source": "collector"
   },
   {
-   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
-   "location": "Frankfurt am Main, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000139929309",
-   "posted_at": "2026-07-27T07:21:49.773Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
-   "location": "Frankfurt am Main, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000139928749",
-   "posted_at": "2026-07-27T07:18:23.479Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d)",
-   "location": "Bad Vilbel, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000139927734",
-   "posted_at": "2026-07-27T07:16:21.077Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
-   "location": "Bad Vilbel, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000139928259",
-   "posted_at": "2026-07-27T07:16:04.127Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d)",
-   "location": "Bad Soden am Taunus, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000139927044",
-   "posted_at": "2026-07-27T07:15:30.361Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
    "location": "Bad Soden am Taunus, DE",
    "department": "TSAW Shops",
@@ -53437,16 +53697,6 @@
    "department": "TSAW Shops",
    "url": "https://jobs.smartrecruiters.com/tipico/744000139927359",
    "posted_at": "2026-07-27T07:12:07.390Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
-   "location": "Taunusstein, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000139927149",
-   "posted_at": "2026-07-27T07:11:23.188Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -53682,16 +53932,6 @@
    "source": "collector"
   },
   {
-   "title": "Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)",
-   "location": "Duisburg, DE",
-   "department": "TSANW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000138265969",
-   "posted_at": "2026-07-17T07:39:13.129Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
    "location": "Coburg, DE",
    "department": "TSAS DE Shops",
@@ -53772,16 +54012,6 @@
    "source": "collector"
   },
   {
-   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
-   "location": "Duisburg, DE",
-   "department": "TSANW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000137815759",
-   "posted_at": "2026-07-15T07:13:17.187Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": " Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d) ",
    "location": "Bochum, DE",
    "department": "TSAE Shops",
@@ -53797,36 +54027,6 @@
    "department": "TSAE Shops",
    "url": "https://jobs.smartrecruiters.com/tipico/744000137100809",
    "posted_at": "2026-07-10T10:45:51.342Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
-   "location": "Gelsenkirchen, DE",
-   "department": "TSANW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000137085400",
-   "posted_at": "2026-07-10T09:35:36.732Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
-   "location": "Gelsenkirchen, DE",
-   "department": "TSANW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000137085294",
-   "posted_at": "2026-07-10T09:27:21.521Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": " Shopmitarbeiter auf Minijob-Basis - gerne Quereinsteiger (m/w/d) ",
-   "location": "Duisburg, DE",
-   "department": "TSANW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000137082679",
-   "posted_at": "2026-07-10T09:10:26.479Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -53867,16 +54067,6 @@
    "department": "TSAE Shops",
    "url": "https://jobs.smartrecruiters.com/tipico/744000136400304",
    "posted_at": "2026-07-08T07:56:21.343Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Shopmitarbeiter in Teilzeit - gerne Quereinsteiger (m/w/d)",
-   "location": "Herten, DE",
-   "department": "TSANW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000136400444",
-   "posted_at": "2026-07-08T07:54:27.468Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -54117,16 +54307,6 @@
    "department": "TSAN Shops",
    "url": "https://jobs.smartrecruiters.com/tipico/744000134704069",
    "posted_at": "2026-06-29T06:32:38.539Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
-   "location": "Frankfurt am Main, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000133647092",
-   "posted_at": "2026-06-23T16:06:01.167Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -54432,26 +54612,6 @@
    "source": "collector"
   },
   {
-   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
-   "location": "Taunusstein, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000131062885",
-   "posted_at": "2026-06-09T07:40:12.295Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Shopmitarbeiter in Vollzeit - gerne Quereinsteiger (m/w/d)",
-   "location": "Taunusstein, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000131065324",
-   "posted_at": "2026-06-09T07:40:08.932Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": " Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d) ",
    "location": "Berlin, DE",
    "department": "TSAE Shops",
@@ -54672,16 +54832,6 @@
    "source": "collector"
   },
   {
-   "title": "Shopmitarbeiter in Teilzeit auf 20h Basis - gerne Quereinsteiger (m/w/d)",
-   "location": "Frankfurt am Main, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000124380278",
-   "posted_at": "2026-05-04T09:28:55.027Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
    "title": " Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d) ",
    "location": "Hamburg, DE",
    "department": "TSAN Shops",
@@ -54747,16 +54897,6 @@
    "department": "TSAE Shops",
    "url": "https://jobs.smartrecruiters.com/tipico/744000123617659",
    "posted_at": "2026-04-29T07:03:58.665Z",
-   "company": "Tipico",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Studentische Aushilfe im Retail Bereich - gerne Quereinsteiger (m/w/d)",
-   "location": "Bad Vilbel, DE",
-   "department": "TSAW Shops",
-   "url": "https://jobs.smartrecruiters.com/tipico/744000122192767",
-   "posted_at": "2026-04-22T08:20:17.984Z",
    "company": "Tipico",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -55505,6 +55645,39 @@
    "source": "collector"
   },
   {
+   "title": "Customer Care Support",
+   "location": "Tirana - Rruga Dritan - 40h",
+   "department": "",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Tirana---Rruga-Dritan---40h/Customer-Care-Support_JR140594",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Flutter Group (corporate)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Planning & Governance Specialist",
+   "location": "Tirana - Rruga Dritan - 40h",
+   "department": "",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Tirana---Rruga-Dritan---40h/Planning---Governance-Specialist_JR140581",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Flutter Group (corporate)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Finance Manager",
+   "location": "4 Locations",
+   "department": "",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Finance-Manager_JR139942-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Flutter Group (corporate)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Change & Adoption Manager",
    "location": "Leeds, UK",
    "department": "",
@@ -55696,17 +55869,6 @@
    "location": "Saint Julian's, Malta",
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Saint-Julians-Malta/Accounts-Analyst_JR137729-1",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Flutter Group (corporate)",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Delivery & Performance Manager",
-   "location": "2 Locations",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Leeds-UK/Delivery---Performance-Manager_JR139308-2",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
    "company": "Flutter Group (corporate)",
@@ -55907,6 +56069,17 @@
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/SOX-Auditor_JR13419",
    "posted_at": null,
    "posted_text": "Posted 12 Days Ago",
+   "company": "Betway Africa",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Marketing Manager",
+   "location": "Accra",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Accra/Marketing-Manager_JR13502",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -56165,6 +56338,17 @@
    "source": "collector"
   },
   {
+   "title": "Marketing Manager",
+   "location": "Accra",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Accra/Marketing-Manager_JR13502",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Betway Africa",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Head of Tax - Advocacy and Policy",
    "location": "Johannesburg",
    "department": "",
@@ -56352,17 +56536,6 @@
    "source": "collector"
   },
   {
-   "title": "Data Scientist",
-   "location": "Johannesburg",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Data-Scientist_JR13050",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Betway Africa",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Senior Full-Stack Developer \u2014 .NET & React R&D \u00b7 Albania \u00b7 Hybrid",
    "location": "",
    "department": "",
@@ -56397,6 +56570,16 @@
    "location": "",
    "department": "",
    "url": "https://careers.b2tech.com/jobs/7894892-senior-sports-product-manager",
+   "posted_at": null,
+   "company": "B2Tech",
+   "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
+   "title": "Marketing Manager Marketing \u00b7 Kenya",
+   "location": "",
+   "department": "",
+   "url": "https://careers.b2tech.com/jobs/8163424-marketing-manager",
    "posted_at": null,
    "company": "B2Tech",
    "ats": "teamtailor",
@@ -57843,16 +58026,6 @@
    "source": "agency"
   },
   {
-   "title": "Engineering Manager",
-   "location": "",
-   "department": "",
-   "url": "https://www.blip.pt/jobs/5905/engineering-manager/",
-   "posted_at": "2024-09-13T07:00:00+00:00",
-   "company": "Blip.pt",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Software Engineer",
    "location": "",
    "department": "",
@@ -57889,6 +58062,16 @@
    "url": "https://www.blip.pt/jobs/5903/senior-backend-developer/",
    "posted_at": "2024-08-30T07:00:00+00:00",
    "company": "Blip.pt",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Grounds Person",
+   "location": "",
+   "department": "",
+   "url": "https://jobs.careersinracing.com \r\n\t/job/337113/grounds-person/\r\n\r\n\r\n\r\n",
+   "posted_at": null,
+   "company": "Careers in Racing",
    "ats": "agency",
    "source": "agency"
   },
@@ -58457,6 +58640,16 @@
    "location": "",
    "department": "",
    "url": "https://egt-digital.skillie.ai/jobs/10739-commercial-manager",
+   "posted_at": null,
+   "company": "EGT Digital",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Ofis Asistent",
+   "location": "",
+   "department": "",
+   "url": "https://egt-digital.skillie.ai/jobs/11446-ofis-asistent",
    "posted_at": null,
    "company": "EGT Digital",
    "ats": "agency",
@@ -59593,80 +59786,1630 @@
    "source": "agency"
   },
   {
-   "title": "Product Team 32 Jobs",
+   "title": "Professional Cleaner Responsabil Curatenie",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job",
+   "url": "https://arrise.com/careers/job/professional-cleaner-responsabil-curatenie-2035/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers GAME PRESENTER with Korean (Full relocation support to Ras Al Khaimah, UAE) On Site UAE",
+   "title": "Handyman Responsabil Mentenanta",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/game-presenter-with-korean-full-relocation-support-to-ras-al-khaimah-uae-4928",
+   "url": "https://arrise.com/careers/job/handyman-responsabil-mentenanta-485/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers \u00ed\u0095\u009c\u00ea\u00b5\u00ad\u00ec\u0096\u00b4 \u00ea\u00b2\u008c\u00ec\u009e\u0084 \u00ed\u0094\u0084\u00eb \u0088\u00ec \u00ed\u0084\u00b0 (Ras Al Khaimah, UAE\u00ec\u009d\u00b4\u00ec\u00a3\u00bc \u00ec \u0084\u00ec\u0095\u00a1 \u00ec\u00a7\u0080\u00ec\u009b\u0090) On Site UAE",
+   "title": "Makeup Artist Hairdresser",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/hangugeo-geim-peurejenteo-ras-al-khaimah-uaeiju-jeonaeg-jiweon-5323",
+   "url": "https://arrise.com/careers/job/makeup-artist-hairdresser-2285/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers Game Presenter com Espanhol em S\u00c3\u00a3o Paulo On Site Brazil",
+   "title": "Game Presenter With Greek",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/game-presenter-com-espanhol-em-sao-paulo-7287",
+   "url": "https://arrise.com/careers/job/game-presenter-with-greek-2809/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers GAME PRESENTER com Italiano em S\u00c3\u00a3o Paulo On Site Brazil",
+   "title": "Makeup Artist Hairdresser With Turkish",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/game-presenter-com-italiano-em-sao-paulo-7288",
+   "url": "https://arrise.com/careers/job/makeup-artist-hairdresser-with-turkish-3416/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers Game Presenter com Japon\u00c3\u00aas em S\u00c3\u00a3o Paulo On Site Brazil",
+   "title": "Surveillance Operator With Bulgarian",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/game-presenter-com-japones-em-sao-paulo-7182",
+   "url": "https://arrise.com/careers/job/surveillance-operator-with-bulgarian-3723/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers SHUFFLER On Site Canada",
+   "title": "Game Presenter With Russian And English No Previous Job Experience Needed",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/shuffler-7480",
+   "url": "https://arrise.com/careers/job/game-presenter-with-russian-and-english-no-previous-job-experience-needed-4041/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Game Presenters and Shufflers Game Presenter with English (No previous job experience needed!) On Site Romania",
+   "title": "Senior UI Product Designer Slots Arcade",
    "location": "",
    "department": "",
-   "url": "https://arrise.com/careers/job/game-presenter-with-english-no-previous-job-experience-needed-2811",
+   "url": "https://arrise.com/careers/job/senior-ui-product-designer-slots-arcade-4052/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Visual Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-visual-technician-4164/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior UI Motion Designer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-ui-motion-designer-4872/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With Korean Full Relocation Support To Ras Al Khaimah Uae",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-korean-full-relocation-support-to-ras-al-khaimah-uae-4928/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Game Artist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-game-artist-5176/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Lobby Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-lobby-analyst-5189/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Application Security Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-application-security-engineer-5370/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior UI UX Designer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-ui-ux-designer-5475/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "UI UX Designer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/ui-ux-designer-5491/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Team Manager With Russian",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-team-manager-with-russian-5503/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Qc And Training Sr Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/qc-and-training-sr-manager-5514/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Team Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-team-manager-5588/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Country Manager Nordics",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/country-manager-nordics-5452/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Led Coordinator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-led-coordinator-5682/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Facility Supervisor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/facility-supervisor-5693/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With English",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-english-5803/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Trainer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/trainer-5870/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Security Agent",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/security-agent-5877/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Dba Postgres",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/dba-postgres-6084/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Account Manager Russian Language",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/account-manager-russian-language-6123/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Make Up Artist Stylist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/make-up-artist-stylist-4998/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Account Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/account-manager-6125/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Account Manager Spanish Language",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/account-manager-spanish-language-6129/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Recepcionista Administrativo",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/recepcionista-administrativo-5992/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Stylist Shift Supervisor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/stylist-shift-supervisor-6228/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Make Up Artist Hairstylist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/make-up-artist-hairstylist-6265/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Uniform Team Leader Supervisor De Estoquistas",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/uniform-team-leader-supervisor-de-estoquistas-6268/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Appearance Team Leader",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/appearance-team-leader-6269/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Uniform Administrator Estoquista",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/uniform-administrator-estoquista-6270/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Tailor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/tailor-6271/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Appearance Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/appearance-manager-6301/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Data Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/data-analyst-6418/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Product Manager Ecosystem",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/product-manager-ecosystem-6424/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Make Up Artist Hairstylist Team Leader",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/make-up-artist-hairstylist-team-leader-6427/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Shuffler Team Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/shuffler-team-manager-6469/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Mathematician Live Casino",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-mathematician-live-casino-6556/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "System Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/system-administrator-6518/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Lighting Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/lighting-technician-6633/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Lobby",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/head-of-lobby-6624/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Security Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-security-analyst-6734/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Corporate Services Studio Compliance Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/corporate-services-studio-compliance-specialist-6793/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Junior Sales Support",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/junior-sales-support-6881/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Studio Manager With Turkish",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/studio-manager-with-turkish-6787/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Property Supervisor Accommodation",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/property-supervisor-accommodation-6908/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Automation QA Engineer Gs",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/automation-qa-engineer-gs-6942/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Product Owner Roulette",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-product-owner-roulette-6947/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Team Lead Surveillance Controller",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/team-lead-surveillance-controller-6676/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Surveillance Controller",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/surveillance-controller-6679/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Studio Management",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/head-of-studio-management-7060/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Bim Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/bim-technician-7108/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Uniform Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/uniform-administrator-7047/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Process Master",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/process-master-7154/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Hangugeo Geim Peurejenteo Ras Al Khaimah Uaeiju Jeonaeg Jiweon",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/hangugeo-geim-peurejenteo-ras-al-khaimah-uaeiju-jeonaeg-jiweon-5323/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Gerente De Operacoes",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/gerente-de-operacoes-5516/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Tehnik Poddrzhka Na Klimatici",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/tehnik-poddrzhka-na-klimatici-6693/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Tecnico De Reparos Gerais Handyman",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/tecnico-de-reparos-gerais-handyman-6968/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Krojacica Krojac",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/krojacica-krojac-7050/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Visual Specialist Global",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-visual-specialist-global-1437/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Av Technical Trainer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/av-technical-trainer-2743/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Visual Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-visual-engineer-4411/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Surveillance Team Leader",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/surveillance-team-leader-5607/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Surveillance Operator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-surveillance-operator-5608/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Gaming Equipment Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-gaming-equipment-administrator-5609/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Equipment Integrity Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/equipment-integrity-engineer-5610/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Gaming Equipment Administration Team Leader",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/gaming-equipment-administration-team-leader-5616/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Control Room Operator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/control-room-operator-5250/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Cleaning Staff",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/cleaning-staff-5698/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Ocr Shift Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/ocr-shift-manager-5253/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Electrical Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/electrical-engineer-5926/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Electrical Design Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/electrical-design-engineer-5928/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Hvac Design Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/hvac-design-engineer-5929/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Cctv Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/cctv-specialist-6001/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Agente De Seguridad",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/agente-de-seguridad-7168/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Lighting Specialist Global",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/lighting-specialist-global-6116/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Lighting Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/lighting-specialist-6114/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Master Tailor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/master-tailor-6621/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Assistant Tailor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/assistant-tailor-6626/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Workforce Management Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/workforce-management-specialist-6792/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Security Special Agent",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/security-special-agent-6889/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Floor Supervisor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/floor-supervisor-5246/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "VIP Supervisor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/vip-supervisor-6730/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With Russian",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-russian-2818/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With Turkish",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-turkish-2815/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Render Programmer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-render-programmer-6483/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With English No Previous Job Experience Needed",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-english-no-previous-job-experience-needed-2811/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Employee Relations Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/employee-relations-specialist-7190/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Visual R D Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-visual-r-d-specialist-4586/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Uniforms Supervisor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/uniforms-supervisor-6262/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Human Resources Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/human-resources-specialist-7191/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Appearance Quality Control Supervisor",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/appearance-quality-control-supervisor-4933/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Manager Qc And Training",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/manager-qc-and-training-7176/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Video Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-video-technician-5777/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Com Espanhol Em Sao Paulo",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-com-espanhol-em-sao-paulo-7287/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Product Owner Studio Tools",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-product-owner-studio-tools-6079/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Production Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/production-manager-7278/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Mathematician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-mathematician-7281/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Producer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-producer-7284/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Video Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-video-specialist-4784/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Gaming Equipment Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/gaming-equipment-technician-6567/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Led Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/led-technician-7204/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Math Tools Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/math-tools-engineer-7279/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Art Lead",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-art-lead-7280/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Designer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-designer-7282/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Associate Mathematician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/associate-mathematician-7283/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Gaming Equipment Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/gaming-equipment-administrator-7255/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "IT Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/it-specialist-7302/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Com Italiano Em Sao Paulo",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-com-italiano-em-sao-paulo-7288/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Audio Technician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/audio-technician-5329/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Analista De Governaca E Compliemce",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/analista-de-governaca-e-compliemce-5373/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "IT System Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/it-system-administrator-5932/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "IT Network Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/it-network-administrator-5933/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Lighting Specialist Gaffer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/lighting-specialist-gaffer-5997/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Studio Production Governance Specialist Exclusiva Pcd",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/studio-production-governance-specialist-exclusiva-pcd-6296/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Analista De Implantacao De Projetos",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/analista-de-implantacao-de-projetos-7123/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Tecnico De Equipamentos Eletronicos",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/tecnico-de-equipamentos-eletronicos-7124/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "IT Team Leader",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/it-team-leader-7236/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Appearance Assistant",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/appearance-assistant-7310/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Front Desk Officer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/front-desk-officer-7308/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Com Coreano Em Sao Paulo",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-com-coreano-em-sao-paulo-7286/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Project Manager Ecosystem",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/project-manager-ecosystem-7293/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Com Japones Em Sao Paulo",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-com-japones-em-sao-paulo-7182/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Surveillance Operator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/surveillance-operator-7317/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Studio Animations Programmer Dynamic Lighting Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/studio-animations-programmer-dynamic-lighting-specialist-7315/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Product Owner Support Tools",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-product-owner-support-tools-6081c1/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Team Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/team-manager-3399/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Designer Mathematician",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-designer-mathematician-7114c1/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Data Scientist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/data-scientist-7269/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Procurement Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/procurement-specialist-5585/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Manager Equipment Admin",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/manager-equipment-admin-5695/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Contracts Officer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/contracts-officer-6446/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Legal Counsel Employment And Privacy",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-legal-counsel-employment-and-privacy-6701/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Legal Counsel Employment And Privacy",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/legal-counsel-employment-and-privacy-7058/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Procurement Officer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/procurement-officer-7022/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter Com Chines Em Sao Paulo",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-com-chines-em-sao-paulo-7277/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Studio Production Governance Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/studio-production-governance-specialist-7356/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Talent Acquisition Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/talent-acquisition-specialist-4994/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Office HR Administrator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/office-hr-administrator-5902/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Employee Engagement Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/employee-engagement-manager-6085/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "HR Data Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/hr-data-analyst-6400/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "HR Assistant",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/hr-assistant-6467/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With Mandarin",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-mandarin-6511/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Global Mobility Administrator With Russian",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/global-mobility-administrator-with-russian-7207/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With English Full Time Part Time",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-english-full-time-part-time-5704/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Product Compliance Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-product-compliance-manager-4971/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Product Compliance Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/product-compliance-manager-5463/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Rewards Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-rewards-specialist-7016/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Benefits Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-benefits-specialist-7019/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior HR Business Partner",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-hr-business-partner-7374/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Workforce Management Specialist Internal Position",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/workforce-management-specialist-internal-position-7373/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Presenter With Mandarin Cantonese",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-presenter-with-mandarin-cantonese-7165/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Devops Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/devops-engineer-7369/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Delivery Manager",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/delivery-manager-7371/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Full Stack Java Developer",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/full-stack-java-developer-7370/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Product Owner Commercial Tools",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-product-owner-commercial-tools-6080c1/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Application Security Engineer 7342 Othloc",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/senior-application-security-engineer-7342-othloc-c7tayfws/",
+   "posted_at": null,
+   "company": "ARRISE (global)",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Game Release Coordinator",
+   "location": "",
+   "department": "",
+   "url": "https://arrise.com/careers/job/game-release-coordinator-6667c4/",
    "posted_at": null,
    "company": "ARRISE (global)",
    "ats": "agency",
@@ -60013,30 +61756,10 @@
    "source": "agency"
   },
   {
-   "title": "HR Data Analyst",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/hr-data-analyst-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Safer Gambling Advisor",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/safer-gambling-advisor-sydney-eora-nation-nsw-australia-ff4fb329-8229-47d9-80b4-218502d0ecc9",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Executive Assistant to Chief Financial Officer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/executive-assistant-to-chief-financial-officer-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60053,10 +61776,20 @@
    "source": "agency"
   },
   {
-   "title": "Senior Financial Crime Compliance Specialist",
+   "title": "Regulatory Reporting Analyst",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-financial-crime-compliance-specialist-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/regulatory-reporting-analyst-sydney-eora-nation-nsw-australia-646c1ae9-429c-4507-9108-562f598d6007",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "HR Data Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/hr-data-analyst-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60073,40 +61806,30 @@
    "source": "agency"
   },
   {
+   "title": "Senior Financial Crime Compliance Specialist",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-financial-crime-compliance-specialist-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Executive Assistant to Chief Financial Officer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/executive-assistant-to-chief-financial-officer-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Oncourse Casual Lead - Temora",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-temora-regional-nsw-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Regulatory Reporting Analyst",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/regulatory-reporting-analyst-sydney-eora-nation-nsw-australia-646c1ae9-429c-4507-9108-562f598d6007",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Controls Assurance Senior Advisor",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Oncourse Casual Lead",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-regional-nsw-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60123,6 +61846,16 @@
    "source": "agency"
   },
   {
+   "title": "Oncourse Casual Lead",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-regional-nsw-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Policy & Governance Manager",
    "location": "",
    "department": "",
@@ -60133,20 +61866,10 @@
    "source": "agency"
   },
   {
-   "title": "Policy & Governance Advisor",
+   "title": "Controls Assurance Senior Advisor",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/policy-governance-advisor-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Project Coordinator - Remediation",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/project-coordinator-remediation-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60163,50 +61886,10 @@
    "source": "agency"
   },
   {
-   "title": "Senior Manager Compliance and Assurance",
+   "title": "Policy & Governance Advisor",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Associate Trader - Racing",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Trade Marketing Co-ordinator - MAX (4 days/ week)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/trade-marketing-co-ordinator-max-4-days-week-melbourne-kulin-nation-vic-australia-sydney-eora-nation-nsw",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Commercial Wagering Analytics Manager",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/commercial-wagering-analytics-manager-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Manager, Commercial Growth",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-commercial-growth-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/policy-governance-advisor-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60223,10 +61906,80 @@
    "source": "agency"
   },
   {
+   "title": "Senior Manager Compliance and Assurance",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Project Coordinator - Remediation",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/project-coordinator-remediation-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Trade Marketing Co-ordinator - MAX (4 days/ week)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/trade-marketing-co-ordinator-max-4-days-week-melbourne-kulin-nation-vic-australia-sydney-eora-nation-nsw",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Manager, Commercial Growth",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-commercial-growth-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Commercial Wagering Analytics Manager",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/commercial-wagering-analytics-manager-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Associate Trader - Racing",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Venue Support Consultant (MAX - Loyalty)",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Digital Content Co-ordinator",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/digital-content-co-ordinator-frenchs-forest-garigal-country-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60243,10 +61996,10 @@
    "source": "agency"
   },
   {
-   "title": "Digital Content Co-ordinator",
+   "title": "Workshop Technician",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/digital-content-co-ordinator-frenchs-forest-garigal-country-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-adelaide-kaurna-country-sa-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60267,26 +62020,6 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/retail-sales-oncourse-coordinator-darwin-darwin-larrakia-country-nt-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Workshop Technician",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-35733d60-b8e9-49f0-92ea-409b422ab2ad",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Workshop Technician",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-adelaide-kaurna-country-sa-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60323,10 +62056,10 @@
    "source": "agency"
   },
   {
-   "title": "Data Engineer",
+   "title": "Junior Software Engineer (Java)",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
+   "url": "https://careers.sportsbet.com.au/jobs/junior-software-engineer-java-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -60343,10 +62076,20 @@
    "source": "agency"
   },
   {
-   "title": "Junior Software Engineer (Java)",
+   "title": "Data Engineer",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/junior-software-engineer-java-melbourne-vic-australia",
+   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Full Stack Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/senior-full-stack-engineer-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -60363,12 +62106,12 @@
    "source": "agency"
   },
   {
-   "title": "Senior Full Stack Engineer",
-   "location": "",
+   "title": "Account Manager",
+   "location": "Remote",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/senior-full-stack-engineer-melbourne-vic-australia",
+   "url": "https://www.pentasia.com/careers/account-manager-remote-39266-29327",
    "posted_at": null,
-   "company": "Sportsbet",
+   "company": "Pentasia",
    "ats": "agency",
    "source": "agency"
   },
@@ -61043,16 +62786,6 @@
    "source": "agency"
   },
   {
-   "title": "Corporate Service Executive",
-   "location": "Malta",
-   "department": "",
-   "url": "https://www.pentasia.com/careers/corporate-service-executive-europe-malta-39017-29251",
-   "posted_at": null,
-   "company": "Pentasia",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "EU Marketing Manager - Onsite, Malta",
    "location": "Malta",
    "department": "",
@@ -61463,6 +63196,26 @@
    "source": "agency"
   },
   {
+   "title": "Night Operations Agent - Spanish Speaker",
+   "location": "",
+   "department": "",
+   "url": "https://www.bettingjobs.com/jobview/night-operations-agent-spanish-speaker/9b83a580-c87c-4a19-928e-ca942d4c1417/",
+   "posted_at": null,
+   "company": "BettingJobs",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Night Operations Agent - Spanish Speaker",
+   "location": "",
+   "department": "",
+   "url": "https://www.bettingjobs.com/jobview/night-operations-agent-spanish-speaker/c0d8fb70-0414-48ed-8b51-5ae86a24c53e/",
+   "posted_at": null,
+   "company": "BettingJobs",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Venue Manager",
    "location": "",
    "department": "",
@@ -61653,16 +63406,6 @@
    "source": "agency"
   },
   {
-   "title": "Chief Marketing Officer",
-   "location": "",
-   "department": "",
-   "url": "https://www.bettingjobs.com/jobview/chief-marketing-officer/226cdcb2-ea80-4af6-b404-94135682dfd9/",
-   "posted_at": null,
-   "company": "BettingJobs",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Head of Tax",
    "location": "",
    "department": "",
@@ -61697,6 +63440,16 @@
    "location": "",
    "department": "",
    "url": "https://www.bettingjobs.com/jobview/finance-and-accounting-manager/79f1e8f0-0b02-4f36-af3b-18df016ef473/",
+   "posted_at": null,
+   "company": "BettingJobs",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Chief Marketing Officer",
+   "location": "",
+   "department": "",
+   "url": "https://www.bettingjobs.com/jobview/chief-marketing-officer/226cdcb2-ea80-4af6-b404-94135682dfd9/",
    "posted_at": null,
    "company": "BettingJobs",
    "ats": "agency",
