@@ -113,6 +113,26 @@ def _host_is_throttled(url):
     return _host_429.get(_host_of(url), 0) >= _HOST_429_LIMIT
 
 
+# Workable throttles hard when several companies are pulled back to back. The
+# retry helper alone just burns the budget losing the same requests, so pace the
+# requests instead: never hit the same host more often than this.
+_HOST_MIN_GAP = {"apply.workable.com": 6.0}
+_host_last = {}
+
+
+def _pace(url):
+    host = _host_of(url)
+    gap = _HOST_MIN_GAP.get(host)
+    if not gap:
+        return
+    last = _host_last.get(host)
+    if last is not None:
+        wait = gap - (time.time() - last)
+        if wait > 0:
+            time.sleep(wait)
+    _host_last[host] = time.time()
+
+
 class _Throttled:
     """Stands in for a response when we skip a host we know is rate-limiting."""
     status_code = 429
@@ -131,6 +151,7 @@ def _request(method, url, tries=3, probing=False, **kw):
     global _rate_limit_spent
     if probing and _host_is_throttled(url):
         return _Throttled()
+    _pace(url)
     delay = 2.0
     for attempt in range(tries):
         try:
@@ -364,6 +385,10 @@ def probe_recruitee(slug):
 
 
 def probe_workable(slug):
+    # Detection probes on this host cost more than they return: a speculative
+    # miss still counts against the rate limit that the real fetches need.
+    if _host_429.get("apply.workable.com", 0) or _rate_limit_spent > 30:
+        return None
     r = _request("POST", f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
                  json={"query": "", "location": [], "department": []},
                  headers={"Accept": "application/json"}, probing=True)
