@@ -435,6 +435,16 @@ const US_CITIES = ["new york","atlantic city","las vegas","southfield","chicago"
 // invisible the moment any location filter was applied.
 const HUBS = ["Inside the listing","Multiple locations","Remote","United Kingdom","United States"];
 
+const _LOC_PLACEHOLDER = /^(unavailable|unknown|n\/?a|none|null|undefined|tbd|tba|not specified|-{1,3})$/i;
+
+function cleanLoc(loc){
+  if(!loc) return "";
+  const parts = String(loc).split(",")
+    .map(p => p.trim())
+    .filter(p => p && !_LOC_PLACEHOLDER.test(p));
+  return [...new Set(parts)].join(", ");
+}
+
 function bucket(loc){
   // TalentBet emit ", , " — passes a plain emptiness check but names nowhere
   if(!loc || !/[a-z0-9]/i.test(String(loc))) return "Inside the listing";
@@ -651,9 +661,9 @@ function render(){
       <div class="m"><span class="co">${j.c||""}</span>${AGENCIES.has(j.c)?'<span class="agency">agency</span>':""}${OPEN_APP.test(j.t||"")?'<span class="openapp">open application</span>':""}
         ${(() => {
           if(!j.dupes || !j.dupes.length)
-            return j.l ? '<span class="dot">&middot;</span><span>'+j.l+"</span>"
+            return j.l ? '<span class="dot">&middot;</span><span>'+cleanLoc(j.l)+"</span>"
                        : '<span class="dot">&middot;</span><span class="nodate">location in listing</span>';
-          const locs = new Set([j.l, ...j.dupes.map(d => d.l)].filter(Boolean));
+          const locs = new Set([j.l, ...j.dupes.map(d => d.l)].map(cleanLoc).filter(Boolean));
           const n = j.dupes.length + 1;
           return '<span class="dot">&middot;</span><span class="multi">'
                + (locs.size > 1 ? locs.size + " locations" : (j.l || "")) 
