@@ -875,6 +875,178 @@ def fetch_wordpress(token):
     return []
 
 
+def fetch_hibob(token):
+    """HiBob careers boards at {token}.careers.hibob.com.
+
+    The public careers site is an Angular SPA served from a shared build, so the
+    HTML is an empty shell. It calls /api/job-ad, identifying the company through
+    a companyIdentifier header taken from the subdomain — without that header the
+    endpoint answers 401, which is how the pattern was confirmed.
+
+    One board per company, but a single shared platform, so this covers every
+    HiBob customer. Note the subdomain is not always the obvious abbreviation:
+    BetVictor is "bvgroup", not "bvg" (which exists but is empty)."""
+    base = f"https://{token}.careers.hibob.com"
+    try:
+        r = _request("GET", f"{base}/api/job-ad",
+                     headers={**AGENCY_UA, "Accept": "application/json",
+                              "companyIdentifier": token,
+                              "Referer": f"{base}/jobs"})
+    except Exception as e:
+        print(f"      hibob {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      hibob {token}: HTTP {r.status_code}")
+        return []
+    try:
+        d = r.json()
+    except Exception:
+        print(f"      hibob {token}: 200 but not JSON")
+        return []
+
+    # the payload has been seen as a bare list and as a wrapper — accept both
+    items = d if isinstance(d, list) else (
+        d.get("jobAds") or d.get("data") or d.get("items") or d.get("jobs") or [])
+    if not isinstance(items, list):
+        print(f"      hibob {token}: unexpected payload shape {list(d)[:6]}")
+        return []
+
+    out = []
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        title = html.unescape(str(_pick(j, "title", "jobTitle", "name", "positionName") or "")).strip()
+        if not title:
+            continue
+        jid = _pick(j, "id", "jobAdId", "uuid", "externalId") or ""
+        out.append({
+            "title": title,
+            "location": _hibob_location(j),
+            "department": str(_pick(j, "department", "departmentName", "team") or ""),
+            "url": _pick(j, "url", "applyUrl") or f"{base}/jobs/{jid}",
+            "posted_at": _pick(j, "publishedAt", "postedAt", "createdAt", "creationDate"),
+        })
+    if not out:
+        print(f"      hibob {token}: 200 but no usable postings in {len(items)} items")
+    return out
+
+
+def _hibob_location(j):
+    """Location arrives variously as a string, an object, or a list of either."""
+    v = _pick(j, "location", "locations", "site", "office", "city")
+    if isinstance(v, list):
+        v = v[0] if v else None
+    if isinstance(v, dict):
+        parts = [v.get(k) for k in ("name", "city", "state", "country") if v.get(k)]
+        return ", ".join(str(x) for x in parts)
+    return html.unescape(str(v)).strip() if v else ""
+
+
+def _pick(d, *keys):
+    """First present, non-empty value among keys. Tolerates camel/snake variants."""
+    for k in keys:
+        for variant in (k, _snake(k)):
+            if variant in d and d[variant] not in (None, "", [], {}):
+                return d[variant]
+    return None
+
+
+def _snake(name):
+    return re.sub(r"(?<!^)(?=[A-Z])", "_", name).lower()
+
+
+def fetch_pawatalent(token):
+    """pawaTalent — recruitment software pawaTech built themselves, serving their
+    own public board at careers.pawatech.com. Plain GET, no pagination: their
+    /all route is a single unpaginated view and the API matches it."""
+    base = f"https://{token}" if not token.startswith("http") else token
+    try:
+        r = _request("GET", f"{base}/api/public/positions",
+                     headers={**AGENCY_UA, "Accept": "application/json"})
+    except Exception as e:
+        print(f"      pawatalent {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      pawatalent {token}: HTTP {r.status_code}")
+        return []
+    try:
+        items = r.json()
+    except Exception:
+        print(f"      pawatalent {token}: 200 but not JSON")
+        return []
+    if isinstance(items, dict):
+        items = items.get("positions") or items.get("data") or items.get("items") or []
+    if not isinstance(items, list):
+        print(f"      pawatalent {token}: unexpected payload shape")
+        return []
+
+    out = []
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        title = html.unescape(str(_pick(j, "title", "name") or "")).strip()
+        if not title:
+            continue
+        loc = _pick(j, "location", "city") or ""
+        if _pick(j, "remote") is True and "remote" not in str(loc).lower():
+            loc = f"{loc}, Remote".strip(", ")
+        out.append({
+            "title": title,
+            "location": html.unescape(str(loc)).strip(),
+            "department": str(_pick(j, "department", "team") or ""),
+            "url": f"{base}/job/{_pick(j, 'id') or ''}",
+            "posted_at": _pick(j, "createdAt", "publishedAt"),
+        })
+    return out
+
+
+def fetch_pinpoint(token):
+    """Pinpoint ATS at {token}.pinpointhq.com. Documented public JSON endpoint;
+    the careers home page renders its listing dynamically, so the HTML shows only
+    an empty-state message — the JSON is the way in."""
+    base = f"https://{token}.pinpointhq.com" if "." not in token else (
+        token if token.startswith("http") else f"https://{token}")
+    try:
+        r = _request("GET", f"{base}/postings.json",
+                     headers={**AGENCY_UA, "Accept": "application/json",
+                              "X-Requested-With": "XMLHttpRequest"})
+    except Exception as e:
+        print(f"      pinpoint {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      pinpoint {token}: HTTP {r.status_code}")
+        return []
+    try:
+        d = r.json()
+    except Exception:
+        print(f"      pinpoint {token}: 200 but not JSON")
+        return []
+    items = d.get("data") if isinstance(d, dict) else d
+    if not isinstance(items, list):
+        print(f"      pinpoint {token}: unexpected payload shape")
+        return []
+
+    out = []
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        a = j.get("attributes") if isinstance(j.get("attributes"), dict) else j
+        title = html.unescape(str(_pick(a, "title", "name") or "")).strip()
+        if not title:
+            continue
+        loc = _pick(a, "location", "locationName", "city")
+        if isinstance(loc, dict):
+            loc = loc.get("name") or loc.get("city") or ""
+        out.append({
+            "title": title,
+            "location": html.unescape(str(loc or "")).strip(),
+            "department": str(_pick(a, "department", "departmentName", "team") or ""),
+            "url": _pick(a, "url", "applyUrl", "permalink") or f"{base}/jobs",
+            "posted_at": _pick(a, "publishedAt", "createdAt", "postedAt"),
+        })
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json"""
     d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
@@ -1156,6 +1328,9 @@ FETCHERS = {
     "icims": fetch_icims,
     "freshteam": fetch_freshteam,
     "wordpress": fetch_wordpress,
+    "hibob": fetch_hibob,
+    "pawatalent": fetch_pawatalent,
+    "pinpoint": fetch_pinpoint,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
@@ -1278,6 +1453,37 @@ _PAGE_TITLE = re.compile(
 
 # leftovers that mean the parser grabbed markup, not a job
 _MARKUP_JUNK = re.compile(r"[{}]|:is\(|\^=|@media|!important|</|\bdocument\.|\bfunction\s*\(")
+
+
+def _links_first_element(html_text, base, path_marker):
+    """(url, title) where the title is the FIRST block element inside the anchor.
+
+    Some boards put the job title in a heading and then append location,
+    department and work type as siblings, all inside the same <a>. Stripping all
+    tags runs them together; taking the first block keeps just the title."""
+    html_text = _STYLE_SCRIPT.sub(" ", html_text)
+    rx = re.compile(
+        r'href="([^"]*?' + re.escape(path_marker) + r'[^"?#]*)[^"]*"[^>]*>(.*?)</a>',
+        re.S | re.I,
+    )
+    inner_block = re.compile(
+        r"<(h[1-6]|p|div|span|strong|b)\b[^>]*>(.*?)</\1>", re.S | re.I)
+    out, seen = [], set()
+    for href, inner in rx.findall(html_text):
+        m = inner_block.search(inner)
+        raw = m.group(2) if m else inner
+        title = html.unescape(re.sub(r"<[^>]+>", " ", raw))
+        title = re.sub(r"\s+", " ", title).strip()
+        if not title or len(title) < 3 or len(title) > 140:
+            continue
+        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+            continue
+        url = href if href.startswith("http") else base.rstrip("/") + href
+        if url in seen:
+            continue
+        seen.add(url)
+        out.append((url, title))
+    return out
 
 
 def _links_with_titles(html_text, base, path_marker):
@@ -1933,6 +2139,8 @@ CUSTOM_BOARDS = {
     # management, commercial and marketing.
     "Careers in Racing": dict(base="https://jobs.careersinracing.com", marker="/job/",
                          listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3", "/jobs"]),
+    "Legend":       dict(base="https://l1.com", marker="/jobs/",
+                         listing=["/jobs", "/jobs/"], first_element=True),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
                          listing=["/careers/v/", "/careers/", "/careers/v/?page=2"]),
     "UK Tote Group": dict(base="https://careers.uktotegroup.com", marker="/job/",
@@ -2025,6 +2233,19 @@ def scrape_custom(name):
             r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
             if r.status_code != 200:
                 print(f"      {name} {url}: HTTP {r.status_code}")
+                continue
+            if cfg.get("first_element"):
+                found = _links_first_element(r.text, base, marker)
+                new_n = 0
+                for u, t in found:
+                    if u in seen:
+                        continue
+                    seen.add(u)
+                    out.append({"title": t, "location": "", "department": "",
+                                "url": u, "posted_at": None})
+                    new_n += 1
+                if new_n:
+                    print(f"   {name}: first-element titles -> {new_n}")
                 continue
             if cfg.get("slug_titles"):
                 # collect the links only, then name them from their slugs
