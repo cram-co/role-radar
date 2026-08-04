@@ -171,7 +171,7 @@ MERKUR Casino UK,Operator,no,0,skipped on purpose,detect,skip,"WRONG MATCH - mer
 MERKUR GAMING,Supplier - Content,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
 MERKUR GROUP,Operator,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
 New Zealand Thoroughbred Racing Inc,Racing,no,0,skipped on purpose,detect,skip,"WRONG MATCH - slug ""new"" hit an unrelated Greenhouse board."
-PawaTech,Supplier - Platform,no,0,skipped on purpose,detect,skip,"careers.pawatech.com/job/{id}, client-rendered listing so relies on the sitemap rung"
+PawaTech,Supplier - Platform,no,0,skipped on purpose,detect,skip,"Public board on careers.pawatech.com, but client-rendered on their own software (pawaTalent). SPA bundle hunt finds no API - needs the endpoint identifying"
 Pinnacle,Operator,no,0,skipped on purpose,detect,skip,WRONG MATCH - bamboohr:pinnacle is Pinnacle Midlands Health Network (NZ healthcare). Needs the real sportsbook board.
 Pragmatic Solutions,Operator,no,0,skipped on purpose,detect,skip,"DUPLICATE - shares pragmatic.teamtailor.com with Pragmatic Play, so every role was listed twice"
 PredictIt,Operator - Prediction,no,0,skipped on purpose,detect,skip,WRONG MATCH - bamboohr:predictit is a Dutch engineering firm in Delft. Needs the real board.
@@ -251,7 +251,7 @@ Novibet,Operator - Growth,yes,43,producing,detect,workable:novibet,Workable
 Novig,Operator - Prediction,yes,8,producing,greenhouse,,Sports prediction market / betting exchange; CFTC-designated; NY
 Oddin.gg,Sports/Prediction,yes,21,producing,detect,,From LinkedIn follows
 Patrianna,Operator,yes,20,producing,detect,,From LinkedIn follows
-PawaPay,Gaming payments,yes,3,producing,detect,,From LinkedIn follows
+PawaPay,Gaming payments,yes,3,producing,detect,,"Separate company from betPawa/pawaTech; on Greenhouse EU, detected automatically"
 PENN Interactive,Operator,yes,27,producing,detect,,From LinkedIn follows
 Pentasia,Recruitment agency,yes,116,producing,detect,skip,bespoke scraper in collector.py
 Playson,Supplier - Content,yes,22,producing,detect,,
