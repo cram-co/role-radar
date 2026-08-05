@@ -318,6 +318,10 @@ def _sf_try_host(host, company):
     ])
     url = (f"{base}/xi/ajax/remoting/call/plaincall/"
            f"careerJobSearchControllerProxy.getInitialJobSearchData.dwr")
+    have = sorted(session.cookies.get_dict().keys())
+    if "JSESSIONID" not in have:
+        print(f"      sf {company} {host}: no JSESSIONID after the page loads "
+              f"(cookies: {have}) — the session was never established")
     try:
         rp = session.post(url, data=body.encode("utf-8"), timeout=TIMEOUT, headers={
             **AGENCY_UA,
@@ -328,7 +332,11 @@ def _sf_try_host(host, company):
             "x-ajax-token": crb,
             "x-csrf-token": crb,
             "x-sap-page-info": f"companyId={company}",
+            "x-subaction": "0",
             "viewid": "/ui/rcmcareer/pages/careersite/career.jsp.xhtml",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
         })
     except Exception as e:
         print(f"      sf {company} {host}: DWR {type(e).__name__}")
@@ -341,9 +349,17 @@ def _sf_try_host(host, company):
     if jobs:
         print(f"      sf {company} {host}: {len(jobs)} roles")
     else:
-        snippet = re.sub(r"\s+", " ", rp.text)[:220]
         print(f"      sf {company} {host}: DWR 200, {len(rp.text)} bytes but no titles parsed")
-        print(f"         reply began: {snippet!r}")
+        if "<html" in rp.text[:400].lower():
+            # an HTML page rather than a DWR reply — the useful part is its
+            # title and any visible message, not the doctype
+            t = re.search(r"<title[^>]*>(.*?)</title>", rp.text, re.S | re.I)
+            body_txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", rp.text))
+            print(f"         got an HTML page, title={ (t.group(1).strip() if t else '?')!r}")
+            print(f"         page text: {body_txt.strip()[:200]!r}")
+            print(f"         cookies held: {sorted(session.cookies.get_dict().keys())}")
+        else:
+            print(f"         reply began: {re.sub(chr(92)+'s+', ' ', rp.text)[:200]!r}")
     return jobs
 
 
