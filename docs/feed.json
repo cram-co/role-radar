@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-05T16:23:13.145643+00:00",
- "job_count": 6692,
+ "generated_at": "2026-08-05T16:49:24.956536+00:00",
+ "job_count": 6695,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -8022,6 +8022,76 @@
    "source": "collector"
   },
   {
+   "title": "Join Us 2026",
+   "location": "Buenos Aires, Ciudad",
+   "department": "",
+   "url": "https://betwarrior.bamboohr.com/careers/326",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Data Platform Engineer",
+   "location": "",
+   "department": "Product & Tech",
+   "url": "https://betwarrior.bamboohr.com/careers/352",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Paid Media Manager",
+   "location": "Buenos Aires, Ciudad",
+   "department": "Marketing",
+   "url": "https://betwarrior.bamboohr.com/careers/354",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Paid Social Media Sr Analyst",
+   "location": "Buenos Aires, Ciudad",
+   "department": "Marketing",
+   "url": "https://betwarrior.bamboohr.com/careers/356",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "CRM Executive- Argentina",
+   "location": "Buenos Aires, Ciudad",
+   "department": "Marketing",
+   "url": "https://betwarrior.bamboohr.com/careers/359",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Performance Data Analyst",
+   "location": "Buenos Aires, Ciudad",
+   "department": "Marketing",
+   "url": "https://betwarrior.bamboohr.com/careers/360",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Senior QA Automation Engineer",
+   "location": "Buenos Aires, Ciudad",
+   "department": "Product & Tech",
+   "url": "https://betwarrior.bamboohr.com/careers/365",
+   "posted_at": null,
+   "company": "BetWarrior",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
    "title": "Senior Product Owner - RGS",
    "location": "CY - Remote",
    "department": "",
@@ -8144,6 +8214,26 @@
    "source": "collector"
   },
   {
+   "title": "Hotel Houseperson - Day Shift",
+   "location": "Biloxi, MS, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87815",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Hotel Houseperson - Swing",
+   "location": "Biloxi, MS, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87817",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
    "title": "Dealer - Part Time (Harrah's Atlantic City)",
    "location": "Atlantic City, NJ, United States",
    "department": "",
@@ -8198,6 +8288,16 @@
    "location": "Kansas City, MO, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87919",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "DASH - Cashier/Attendant",
+   "location": "Black Hawk, CO, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87927",
    "posted_at": "2026-08-05",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -26936,6 +27036,56 @@
    "source": "collector"
   },
   {
+   "title": "Bookkeeping Assistant ",
+   "location": "Florida, New York",
+   "department": "Finance",
+   "url": "https://world.bamboohr.com/careers/25",
+   "posted_at": null,
+   "company": "World Series of Poker",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Machinist",
+   "location": "Florida, New York",
+   "department": "Production General",
+   "url": "https://world.bamboohr.com/careers/28",
+   "posted_at": null,
+   "company": "World Series of Poker",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Brand Manager ",
+   "location": "Warwick, New York",
+   "department": "Office",
+   "url": "https://world.bamboohr.com/careers/38",
+   "posted_at": null,
+   "company": "World Series of Poker",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Shipping Carrier Relations Manager",
+   "location": "Warwick, New York",
+   "department": "Office",
+   "url": "https://world.bamboohr.com/careers/40",
+   "posted_at": null,
+   "company": "World Series of Poker",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Operations Analyst ",
+   "location": "Warwick, New York",
+   "department": "Office",
+   "url": "https://world.bamboohr.com/careers/41",
+   "posted_at": null,
+   "company": "World Series of Poker",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
    "title": "Software Tester",
    "location": "Krak\u00f3w, PL",
    "department": "Product",
@@ -33005,6 +33155,46 @@
    "posted_at": null,
    "company": "Dabble",
    "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
+   "title": "Database Administrator - 12 Month Contract",
+   "location": "Durban, Pretoria",
+   "department": "Data Support Services_18B",
+   "url": "https://derivco.bamboohr.com/careers/122",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Database Administrator",
+   "location": "Durban, Pretoria",
+   "department": "Data Support Services_18B",
+   "url": "https://derivco.bamboohr.com/careers/131",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Manager: Software Engineering ",
+   "location": "Durban, Kwazulu-Natal",
+   "department": "New PAM_13A",
+   "url": "https://derivco.bamboohr.com/careers/145",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Coordinator: Operations ",
+   "location": "Douglas, Isle of Man",
+   "department": "Platform_20F",
+   "url": "https://derivco.bamboohr.com/careers/146",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
    "source": "collector"
   },
   {
@@ -40330,7 +40520,7 @@
    "source": "collector"
   },
   {
-   "title": "Senior Platform Engineer, Infrastructure - Core   ",
+   "title": "Senior Platform Engineer - Core",
    "location": "New York, NY, United States",
    "department": "Gaming - Core Engineering",
    "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4323906009",
@@ -40751,20 +40941,20 @@
   },
   {
    "title": "Commercial Analyst - Casino ",
-   "location": "Los Angeles, California, United States",
+   "location": "New York City",
    "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953997",
-   "posted_at": "2026-05-22T10:08:47-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953986",
+   "posted_at": "2026-05-22T10:08:46-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Commercial Analyst - Casino ",
-   "location": "New York City",
+   "location": "Los Angeles, California, United States",
    "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953986",
-   "posted_at": "2026-05-22T10:08:46-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7953997",
+   "posted_at": "2026-05-22T10:08:47-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -40911,20 +41101,20 @@
   },
   {
    "title": "Enterprise Security Engineer",
-   "location": "Atlanta",
+   "location": "New York City",
    "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7831604",
-   "posted_at": "2026-04-20T10:11:26-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7687308",
+   "posted_at": "2026-03-06T10:55:12-05:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Enterprise Security Engineer",
-   "location": "New York City",
+   "location": "Atlanta",
    "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7687308",
-   "posted_at": "2026-03-06T10:55:12-05:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7831604",
+   "posted_at": "2026-04-20T10:11:26-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -40961,16 +41151,6 @@
   },
   {
    "title": "Head of Social",
-   "location": "Los Angeles",
-   "department": "Marketing",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7858504",
-   "posted_at": "2026-04-27T12:50:44-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Head of Social",
    "location": "Atlanta",
    "department": "Marketing",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=7858500",
@@ -40985,6 +41165,16 @@
    "department": "Marketing",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=7858483",
    "posted_at": "2026-04-27T12:50:43-04:00",
+   "company": "FanDuel",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Head of Social",
+   "location": "Los Angeles",
+   "department": "Marketing",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7858504",
+   "posted_at": "2026-04-27T12:50:44-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -41051,20 +41241,20 @@
   },
   {
    "title": "Lead Product Manager",
-   "location": "New York City",
+   "location": "Atlanta, Georgia, United States",
    "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7642695",
-   "posted_at": "2026-02-20T14:06:48-05:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7642788",
+   "posted_at": "2026-02-20T14:06:49-05:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Lead Product Manager",
-   "location": "Atlanta, Georgia, United States",
+   "location": "New York City",
    "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7642788",
-   "posted_at": "2026-02-20T14:06:49-05:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7642695",
+   "posted_at": "2026-02-20T14:06:48-05:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -41151,16 +41341,6 @@
   },
   {
    "title": "Product Manager",
-   "location": "New York City",
-   "department": "Product",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8048450",
-   "posted_at": "2026-07-07T10:06:54-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Product Manager",
    "location": "Atlanta, Georgia, United States",
    "department": "Product",
    "url": "https://www.fanduel.careers/open-positions?gh_jid=8048580",
@@ -41170,11 +41350,11 @@
    "source": "collector"
   },
   {
-   "title": "Security Engineer",
+   "title": "Product Manager",
    "location": "New York City",
-   "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8031341",
-   "posted_at": "2026-06-26T15:21:44-04:00",
+   "department": "Product",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8048450",
+   "posted_at": "2026-07-07T10:06:54-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -41190,21 +41370,11 @@
    "source": "collector"
   },
   {
-   "title": "Security Engineering Manager",
+   "title": "Security Engineer",
    "location": "New York City",
    "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7826093",
-   "posted_at": "2026-04-20T09:47:36-04:00",
-   "company": "FanDuel",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Security Engineering Manager",
-   "location": "Atlanta, Georgia, United States",
-   "department": "Cyber Security",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7831561",
-   "posted_at": "2026-04-20T09:49:13-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8031341",
+   "posted_at": "2026-06-26T15:21:44-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -41271,20 +41441,20 @@
   },
   {
    "title": "Senior Observability Engineer",
-   "location": "New York City",
+   "location": "Atlanta, Georgia, United States",
    "department": "Platform Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022182",
-   "posted_at": "2026-06-22T16:01:15-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022195",
+   "posted_at": "2026-06-22T16:01:16-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Observability Engineer",
-   "location": "Atlanta, Georgia, United States",
+   "location": "New York City",
    "department": "Platform Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022195",
-   "posted_at": "2026-06-22T16:01:16-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=8022182",
+   "posted_at": "2026-06-22T16:01:15-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -41441,20 +41611,20 @@
   },
   {
    "title": "Staff Machine Learning Engineer - Search",
-   "location": "Atlanta",
+   "location": "New York City",
    "department": "Data Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7847466",
-   "posted_at": "2026-04-23T13:31:30-04:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7611198",
+   "posted_at": "2026-02-12T12:06:44-05:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Staff Machine Learning Engineer - Search",
-   "location": "New York City",
+   "location": "Atlanta",
    "department": "Data Engineering",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7611198",
-   "posted_at": "2026-02-12T12:06:44-05:00",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7847466",
+   "posted_at": "2026-04-23T13:31:30-04:00",
    "company": "FanDuel",
    "ats": "greenhouse",
    "source": "collector"
@@ -41481,9 +41651,9 @@
   },
   {
    "title": "VIP Team Manager",
-   "location": "Edmonton, Alberta, Canada",
+   "location": "Calgary, Alberta, Canada",
    "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7592457",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7592459",
    "posted_at": "2026-02-05T15:18:30-05:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -41491,9 +41661,9 @@
   },
   {
    "title": "VIP Team Manager",
-   "location": "Calgary, Alberta, Canada",
+   "location": "Edmonton, Alberta, Canada",
    "department": "Commercial ",
-   "url": "https://www.fanduel.careers/open-positions?gh_jid=7592459",
+   "url": "https://www.fanduel.careers/open-positions?gh_jid=7592457",
    "posted_at": "2026-02-05T15:18:30-05:00",
    "company": "FanDuel",
    "ats": "greenhouse",
@@ -59847,6 +60017,17 @@
    "source": "collector"
   },
   {
+   "title": "Social Media Manager",
+   "location": "Lusaka",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Lusaka/Social-Media-Manager_JR13003",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Betway Africa",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Customer Service Host",
    "location": "Accra",
    "department": "",
@@ -60177,6 +60358,17 @@
    "source": "collector"
   },
   {
+   "title": "Social Media Manager",
+   "location": "Lusaka",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Lusaka/Social-Media-Manager_JR13003",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Betway Africa",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Customer Service Host",
    "location": "Accra",
    "department": "",
@@ -60337,17 +60529,6 @@
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Financial-Manager-SA-Ops--Services-_JR13445",
    "posted_at": null,
    "posted_text": "Posted 15 Days Ago",
-   "company": "Betway Africa",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Casino Content Analyst",
-   "location": "Johannesburg",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Casino-Content-Analyst_JR13207",
-   "posted_at": null,
-   "posted_text": "Posted 16 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -62093,16 +62274,6 @@
    "source": "agency"
   },
   {
-   "title": "Full Time Rider",
-   "location": "",
-   "department": "",
-   "url": "https://jobs.careersinracing.com \r\n\t/job/337117/full-time-rider/\r\n\r\n\r\n\r\n",
-   "posted_at": null,
-   "company": "Careers in Racing",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Full Time Riders",
    "location": "",
    "department": "",
@@ -62317,6 +62488,16 @@
    "location": "",
    "department": "",
    "url": "https://jobs.careersinracing.com \r\n\t/job/337059/stallion-handler/\r\n\r\n\r\n\r\n",
+   "posted_at": null,
+   "company": "Careers in Racing",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Facilities Building Fabric Manager",
+   "location": "",
+   "department": "",
+   "url": "https://jobs.careersinracing.com \r\n\t/job/337056/facilities-building-fabric-manager/\r\n\r\n\r\n\r\n",
    "posted_at": null,
    "company": "Careers in Racing",
    "ats": "agency",
@@ -67651,171 +67832,6 @@
    "company": "Van Kaizen",
    "ats": "agency",
    "source": "agency"
-  },
-  {
-   "title": "Bookkeeping Assistant ",
-   "location": "Florida, New York",
-   "department": "Finance",
-   "url": "https://world.bamboohr.com/careers/25",
-   "posted_at": null,
-   "company": "World Series of Poker",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Machinist",
-   "location": "Florida, New York",
-   "department": "Production General",
-   "url": "https://world.bamboohr.com/careers/28",
-   "posted_at": null,
-   "company": "World Series of Poker",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Brand Manager ",
-   "location": "Warwick, New York",
-   "department": "Office",
-   "url": "https://world.bamboohr.com/careers/38",
-   "posted_at": null,
-   "company": "World Series of Poker",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Shipping Carrier Relations Manager",
-   "location": "Warwick, New York",
-   "department": "Office",
-   "url": "https://world.bamboohr.com/careers/40",
-   "posted_at": null,
-   "company": "World Series of Poker",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Operations Analyst ",
-   "location": "Warwick, New York",
-   "department": "Office",
-   "url": "https://world.bamboohr.com/careers/41",
-   "posted_at": null,
-   "company": "World Series of Poker",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Database Administrator - 12 Month Contract",
-   "location": "Durban, Pretoria",
-   "department": "Data Support Services_18B",
-   "url": "https://derivco.bamboohr.com/careers/122",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Database Administrator",
-   "location": "Durban, Pretoria",
-   "department": "Data Support Services_18B",
-   "url": "https://derivco.bamboohr.com/careers/131",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Manager: Software Engineering ",
-   "location": "Durban, Kwazulu-Natal",
-   "department": "New PAM_13A",
-   "url": "https://derivco.bamboohr.com/careers/145",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Coordinator: Operations ",
-   "location": "Douglas, Isle of Man",
-   "department": "Platform_20F",
-   "url": "https://derivco.bamboohr.com/careers/146",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T16:23:13.112459+00:00"
-  },
-  {
-   "title": "Join Us 2026",
-   "location": "Buenos Aires, Ciudad",
-   "department": "",
-   "url": "https://betwarrior.bamboohr.com/careers/326",
-   "posted_at": null,
-   "company": "BetWarrior",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T10:18:49.272038+00:00"
-  },
-  {
-   "title": "Data Platform Engineer",
-   "location": "",
-   "department": "Product & Tech",
-   "url": "https://betwarrior.bamboohr.com/careers/352",
-   "posted_at": null,
-   "company": "BetWarrior",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T10:18:49.272038+00:00"
-  },
-  {
-   "title": "Senior Paid Media Manager",
-   "location": "Buenos Aires, Ciudad",
-   "department": "Marketing",
-   "url": "https://betwarrior.bamboohr.com/careers/354",
-   "posted_at": null,
-   "company": "BetWarrior",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T10:18:49.272038+00:00"
-  },
-  {
-   "title": "Paid Social Media Sr Analyst",
-   "location": "Buenos Aires, Ciudad",
-   "department": "Marketing",
-   "url": "https://betwarrior.bamboohr.com/careers/356",
-   "posted_at": null,
-   "company": "BetWarrior",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T10:18:49.272038+00:00"
-  },
-  {
-   "title": "CRM Executive- Argentina",
-   "location": "Buenos Aires, Ciudad",
-   "department": "Marketing",
-   "url": "https://betwarrior.bamboohr.com/careers/359",
-   "posted_at": null,
-   "company": "BetWarrior",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T10:18:49.272038+00:00"
-  },
-  {
-   "title": "Performance Data Analyst",
-   "location": "Buenos Aires, Ciudad",
-   "department": "Marketing",
-   "url": "https://betwarrior.bamboohr.com/careers/360",
-   "posted_at": null,
-   "company": "BetWarrior",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T10:18:49.272038+00:00"
   },
   {
    "title": "Java Team Lead",

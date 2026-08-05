@@ -346,47 +346,60 @@
   "token": "prizepicks"
  },
  "highbet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "Racing1": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "InPlaySoft": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "4Play Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "unikrn": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "Skilrock Technologies": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "NuxGame": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "Asia Gaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "Picklebet": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "Upgaming": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "SmartSoft": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "PawaPay": {
   "ats": "greenhouse",
   "token": "pawapay"
  },
  "Derivco": {
-  "ats": "unknown"
+  "ats": "bamboohr",
+  "token": "derivco"
  },
  "PointsBet Canada": {
-  "ats": "unknown"
+  "ats": "unknown",
+  "checked": 1785947377.1344368
  },
  "Silverspin": {
   "ats": "teamtailor",
@@ -403,11 +416,11 @@
  },
  "SKS365 Group": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "SkyCity Entertainment Group": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "PENN Interactive": {
   "ats": "greenhouse",
@@ -419,7 +432,7 @@
  },
  "Parimatch Tech": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Jackpot.com": {
   "ats": "greenhouse",
@@ -435,7 +448,7 @@
  },
  "Konami Gaming": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Flutter Southern Europe & Africa (SEA)": {
   "ats": "skip",
@@ -443,43 +456,43 @@
  },
  "The Pools": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Sportium": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "CoinPoker": {
   "ats": "teamtailor",
   "token": "coinpoker"
  },
  "World Series of Poker": {
-  "ats": "unknown",
-  "checked": 1784786160.892168
+  "ats": "bamboohr",
+  "token": "world"
  },
  "WPT Global": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Triton Poker Series": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "BetWarrior": {
-  "ats": "unknown",
-  "checked": 1784786160.892168
+  "ats": "bamboohr",
+  "token": "betwarrior"
  },
  "Racing NSW": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "bragg": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Blueprint Gaming Ltd.": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Oddin.gg": {
   "ats": "lever",
@@ -487,7 +500,7 @@
  },
  "BetMakers Technology Group": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Alea": {
   "ats": "teamtailor",
@@ -503,15 +516,15 @@
  },
  "Amelco Limited": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Racing and Sports": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "Digitain": {
   "ats": "unknown",
-  "checked": 1784786160.892168
+  "checked": 1785947377.1344368
  },
  "The Star Entertainment Group": {
   "ats": "unknown",
