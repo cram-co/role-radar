@@ -166,7 +166,7 @@ Strive Gaming,Supplier - Platform US,no,0,skipped on purpose,detect,skip,SUSPECT
 STS,Operator - Poland,no,0,skipped on purpose,detect,skip,WRONG MATCH - greenhouse:sts resolved to a US plumbing company. Needs the real board.
 Sun International,Operator - Africa,no,0,skipped on purpose,detect,skip,"MCI DirectHire, mostly brick-and-mortar - deliberately not chased"
 "Super Group (Betway, Jackpot City, Spin)",Operator - Tier 1,no,0,skipped on purpose,detect,https://myhcm.wd3.myworkdayjobs.com/Betway,Super Group / Betway Workday tenant (myhcm)
-OPAP,Lottery / Operator,no,0,successfactors board found but empty,detect,successfactors:career2.successfactors.eu|opapsa,"SuccessFactors, but the fetcher finds 0 jobIds - sitemap 404s and the career page is client-rendered. Token is right, the fetcher needs work"
+OPAP,Lottery / Operator,no,0,successfactors board found but empty,detect,successfactors:career2.successfactors.eu|opapsa,"SuccessFactors, now via the DWR job-search call rather than HTML scraping"
 betPawa,Operator - Africa,no,0,workable board found but empty,detect,workable:betpawa,Workable - no openings at time of setup
 Sisal,Operator - Tier 1,no,0,workday board found but empty,detect,https://sisal.wd3.myworkdayjobs.com/sisalcorp,"Workday, CONFIRMED WORKING - cxs/sisal/sisalcorp returns HTTP 200 with 0 results, ie a valid board that is currently empty. The 422s in the log are fallback probes, not the failure. Italy, Morocco, Turkey"
 3 Oaks Gaming,Supplier - Content,yes,1,producing,detect,,From LinkedIn follows
@@ -278,4 +278,4 @@ Growe,Operator,no,0,not probed yet,detect,greenhouse_eu:growe,Greenhouse EU boar
 Careers in Racing,Racing,no,0,not probed yet,detect,skip,British Horseracing Authority official industry board; physical yard roles stripped at collection
 BetVictor (BVGroup),Operator,no,0,not probed yet,detect,hibob:bvgroup,"HiBob. NOTE subdomain is bvgroup, NOT bvg - bvg exists but is empty"
 Legend,Supplier - Content,no,0,not probed yet,detect,skip,Custom Next.js board at l1.com/jobs - scrape_custom with first_element titles
-IGT,Supplier - Content,no,0,not probed yet,detect,skip,"SuccessFactors at career2.successfactors.eu company=igtanevadaP2. PARKED - the successfactors fetcher does not work (see OPAP: fetches 180KB, finds 0 jobIds). Token ready as successfactors:career2.successfactors.eu|igtanevadaP2 once fixed"
+IGT,Supplier - Content,no,0,not probed yet,detect,successfactors:career2.successfactors.eu|igtanevadaP2,SuccessFactors via the DWR call

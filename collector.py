@@ -20,6 +20,7 @@ import json
 import re
 import sys
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -240,112 +241,138 @@ def _sf_parts(token):
 
 
 def fetch_successfactors(token):
-    """SAP SuccessFactors publishes no public jobs API, but career sites expose
-    an XML sitemap carrying title, location and employer. Falls back to parsing
-    jobreqcareer links off the rendered listing."""
+    """SAP SuccessFactors career sites.
+
+    The listing is rendered client-side through a DWR (Direct Web Remoting)
+    call, which is why the old sitemap and HTML-scraping approach found 180KB
+    and zero jobs. Two steps:
+
+      1. GET /career?company=X — establishes a session cookie and returns a page
+         carrying an _s.crb token.
+      2. POST that token as x-ajax-token / x-csrf-token to
+         careerJobSearchControllerProxy.getInitialJobSearchData.dwr
+
+    The reply is JavaScript rather than JSON, assigning properties onto numbered
+    objects (s37.title="..."), so it's parsed by grouping those assignments.
+
+    Token is 'company' or 'host|company'."""
     hosts, company = _sf_parts(token)
-    out = []
     for host in hosts:
-        base = f"https://{host}"
-        # 1) the sitemap (documented as sitemap.xml, occasionally sitemal.xml)
-        for name in ("sitemap.xml", "sitemal.xml"):
-            try:
-                r = session.get(f"{base}/{name}?company={company}",
-                                headers=AGENCY_UA, timeout=TIMEOUT)
-                if r.status_code != 200 or "xml" not in r.headers.get("content-type", ""):
-                    print(f"      sf {company} {host}/{name}: HTTP {r.status_code} "
-                          f"{r.headers.get('content-type','?').split(';')[0]}")
-                    continue
-                blocks = re.findall(r"<url>(.*?)</url>", r.text, re.S)
-                for b in blocks:
-                    loc = re.search(r"<loc>\s*([^<\s]+)\s*</loc>", b)
-                    if not loc or "jobId=" not in loc.group(1):
-                        continue
-                    title = re.search(r"<(?:title|job:title)>(.*?)</", b, re.S)
-                    place = re.search(r"<(?:location|job:location)>(.*?)</", b, re.S)
-                    t = html.unescape(re.sub(r"<[^>]+>", "", title.group(1))).strip() if title else ""
-                    if not t:
-                        continue
-                    out.append({
-                        "title": t,
-                        "location": html.unescape(re.sub(r"<[^>]+>", "", place.group(1))).strip() if place else "",
-                        "department": "",
-                        "url": loc.group(1),
-                        "posted_at": None,
-                    })
-                if out:
-                    print(f"      successfactors {company}: sitemap on {host} -> {len(out)} jobs")
-                    return out
-            except Exception:
-                continue
-        # 2) the rendered listing. SuccessFactors keys a job on ?jobId=NNNN, so the
-        #    query string is the identifier and must be kept — hence a dedicated
-        #    parser rather than the generic link helper, which strips queries.
-        for path in (f"/career?company={company}&career_ns=job_listing_summary",
-                     f"/career?company={company}&career_ns=job_listing",
-                     f"/careers?company={company}",
-                     f"/career?company={company}",
-                     f"/sfcareer/jobreqcareer?company={company}"):
-            try:
-                r = session.get(base + path, headers=AGENCY_UA, timeout=TIMEOUT)
-                if r.status_code != 200:
-                    print(f"      sf {company} {host}{path[:34]}: HTTP {r.status_code}")
-                    continue
-                page = r.text
-                seen_ids = set()
-                for m in re.finditer(
-                    r'href="([^"]*jobreqcareer[^"]*?jobId=(\d+)[^"]*)"[^>]*>(.*?)</a>',
-                    page, re.S | re.I,
-                ):
-                    href, jid, inner = m.group(1), m.group(2), m.group(3)
-                    if jid in seen_ids:
-                        continue
-                    title = html.unescape(re.sub(r"<[^>]+>", " ", inner))
-                    title = re.sub(r"\s+", " ", title).strip()
-                    if not title or len(title) < 3:
-                        continue
-                    seen_ids.add(jid)
-                    url = html.unescape(href)
-                    if not url.startswith("http"):
-                        url = base + ("" if url.startswith("/") else "/") + url.lstrip("/")
-                    out.append({"title": title, "location": "", "department": "",
-                                "url": url, "posted_at": None})
-                if out:
-                    print(f"      successfactors {company}: listing {path[:34]} -> {len(out)} jobs")
-                    return out
-                ids = set(re.findall(r"jobId=(\d+)", page))
-                print(f"      sf {company} {host}{path[:34]}: 200, {len(page)} bytes, "
-                      f"{len(ids)} jobIds, {page.count('<a ')} anchors")
-            except Exception as e:
-                print(f"      sf {company} {host}{path[:34]}: {type(e).__name__}")
-                continue
-    # 3) modern SuccessFactors career sites render client-side — the pages come
-    #    back at 130-200KB with barely any anchors — so go after the API the
-    #    bundle calls, the same way we do for other single-page apps.
-    for host in hosts[:2]:
-        base = f"https://{host}"
-        hits = _spa_api_hunt(f"{base}/career?company={company}", f"SF/{company}")
-        for u in hits:
-            if not re.search(r"(job|search|requisition|posting)", u, re.I):
-                continue
-            for sep in ("?" if "?" not in u else "&",):
-                probe = f"{u}{sep}company={company}"
-            data = _try_json(probe, probe) or _try_json(u, u)
-            if data:
-                jobs = _normalise(data, base, f"SF/{company}")
-                if jobs:
-                    print(f"      successfactors {company}: bundle API -> {len(jobs)} jobs")
-                    return jobs
-            time.sleep(REQUEST_DELAY)
+        out = _sf_try_host(host, company)
+        if out:
+            return out
+    return []
 
-    print(f"      successfactors {company}: nothing found across {len(hosts)} host(s)")
+
+_SF_CRB = re.compile(r"_s\.crb=([^\"'&\\\s]+)")
+
+
+def _sf_try_host(host, company):
+    base = f"https://{host}"
+    listing = f"{base}/career?company={company}"
+    try:
+        r = session.get(listing, headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      sf {company} {host}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      sf {company} {host}: HTTP {r.status_code} on the career page")
+        return []
+
+    m = _SF_CRB.search(r.text)
+    if not m:
+        print(f"      sf {company} {host}: no _s.crb token in {len(r.text)} bytes")
+        return []
+    crb = m.group(1)
+
+    page = (f"/career?company={company}&career%5Fns=job%5Flisting%5Fsummary"
+            f"&navBarLevel=JOB%5FSEARCH&_s.crb={crb}")
+    body = "\n".join([
+        "callCount=1",
+        f"page={page}",
+        "httpSessionId=",
+        f"scriptSessionId={uuid.uuid4().hex.upper()[:24]}",
+        "c0-scriptName=careerJobSearchControllerProxy",
+        "c0-methodName=getInitialJobSearchData",
+        "c0-id=0",
+        "c0-e1=string:",
+        "c0-e2=string:",
+        "c0-e3=string:",
+        "c0-e4=string:Europe%2FLondon",
+        ("c0-param0=Object_Object:{filterOnly:reference:c0-e1, "
+         "jobAlertId:reference:c0-e2, returnToList:reference:c0-e3, "
+         "browserTimeZone:reference:c0-e4}"),
+        "batchId=0",
+        "",
+    ])
+    url = (f"{base}/xi/ajax/remoting/call/plaincall/"
+           f"careerJobSearchControllerProxy.getInitialJobSearchData.dwr")
+    try:
+        rp = session.post(url, data=body.encode("utf-8"), timeout=TIMEOUT, headers={
+            **AGENCY_UA,
+            "Accept": "*/*",
+            "Content-Type": "text/plain",
+            "Origin": base,
+            "Referer": base + page,
+            "x-ajax-token": crb,
+            "x-csrf-token": crb,
+            "x-sap-page-info": f"companyId={company}",
+            "viewid": "/ui/rcmcareer/pages/careersite/career.jsp.xhtml",
+        })
+    except Exception as e:
+        print(f"      sf {company} {host}: DWR {type(e).__name__}")
+        return []
+    if rp.status_code != 200:
+        print(f"      sf {company} {host}: DWR HTTP {rp.status_code}")
+        return []
+
+    jobs = _sf_parse_dwr(rp.text, base, company)
+    if jobs:
+        print(f"      sf {company} {host}: {len(jobs)} roles")
+    else:
+        print(f"      sf {company} {host}: DWR 200, {len(rp.text)} bytes but no titles parsed")
+    return jobs
+
+
+def _sf_parse_dwr(text, base, company):
+    """DWR replies assign onto numbered objects: s37.title="Product Owner".
+    Group the assignments by object, then keep those that look like a posting."""
+    objs = {}
+    for idx, key, val in re.findall(
+            r"\bs(\d+)\.([A-Za-z_][\w]*)\s*=\s*(\"(?:[^\"\\\\]|\\\\.)*\"|[^;\n]+);",
+            text):
+        v = val.strip()
+        if v.startswith('"') and v.endswith('"'):
+            v = v[1:-1]
+            v = v.encode("utf-8").decode("unicode_escape", "ignore")
+        objs.setdefault(idx, {})[key] = v.strip()
+
+    out, seen = [], set()
+    for o in objs.values():
+        title = html.unescape(str(o.get("title") or "")).strip()
+        if not title or len(title) < 3 or len(title) > 160:
+            continue
+        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+            continue
+        jid = (o.get("jobReqId") or o.get("jobId") or o.get("id") or "").strip().strip('"')
+        if not re.fullmatch(r"\d{2,}", jid or ""):
+            continue
+        if jid in seen:
+            continue
+        seen.add(jid)
+        loc = ""
+        for k in ("location", "locationName", "city", "geozoneDescription", "country"):
+            if o.get(k):
+                loc = html.unescape(str(o[k])).strip().strip('[]"')
+                break
+        out.append({
+            "title": title,
+            "location": loc,
+            "department": html.unescape(str(o.get("department") or "")).strip(),
+            "url": f"{base}/career?company={company}&career_job_req_id={jid}",
+            "posted_at": o.get("postedDate") or o.get("jobStartDate") or None,
+        })
     return out
-
-
-# NB: deliberately absent from PROBES. Auto-detection would mean 6 hosts x 3
-# paths per company, and SuccessFactors IDs are never derivable from the company
-# name (OPAP is "opapsa"), so this lane is manual-pin only.
-
 
 def probe_breezy(slug):
     r = session.get(f"https://{slug}.breezy.hr/json", timeout=TIMEOUT)
