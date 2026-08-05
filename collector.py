@@ -741,28 +741,89 @@ def fetch_freshteam(token):
 
 
 def fetch_jobvite(token):
-    """Jobvite careers portal at jobs.jobvite.com/<token>. Server-rendered list."""
+    """Jobvite careers portal.
+
+    The listing is at jobs.jobvite.com/<token>/JOBS, not the bare token URL —
+    that missing segment is why AGS silently returned nothing for weeks. The
+    page is server-rendered as tables grouped by category, with the location in
+    the second column. Categories holding more than 20 roles show a "Show More"
+    link to /search?c=<category>&p=N, which is followed and paged."""
     base = f"https://jobs.jobvite.com/{token}"
+    out, seen = [], set()
+
+    row_rx = re.compile(
+        r'href="([^"]*?/job/[^"?#]+)"[^>]*>(.*?)</a>\s*</td>\s*<td[^>]*>(.*?)</td>',
+        re.S | re.I)
+    link_rx = re.compile(r'href="([^"]*?/job/[^"?#]+)"[^>]*>(.*?)</a>', re.S | re.I)
+
+    def clean(v):
+        return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", v or ""))).strip()
+
+    def harvest(text):
+        added = 0
+        # preferred: title and location from the same table row
+        for href, title_html, loc_html in row_rx.findall(text):
+            title, loc = clean(title_html), clean(loc_html)
+            if not title or len(title) < 3 or len(title) > 140:
+                continue
+            if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+                continue
+            u = href if href.startswith("http") else "https://jobs.jobvite.com" + href
+            if u in seen:
+                continue
+            seen.add(u)
+            out.append({"title": title, "location": loc, "department": "",
+                        "url": u, "posted_at": None})
+            added += 1
+        # fallback for any link the row pattern missed
+        for href, title_html in link_rx.findall(text):
+            title = clean(title_html)
+            if not title or len(title) < 3 or len(title) > 140:
+                continue
+            if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+                continue
+            u = href if href.startswith("http") else "https://jobs.jobvite.com" + href
+            if u in seen:
+                continue
+            seen.add(u)
+            out.append({"title": title, "location": "", "department": "",
+                        "url": u, "posted_at": None})
+            added += 1
+        return added
+
     try:
-        r = session.get(base, headers=AGENCY_UA, timeout=TIMEOUT)
+        r = _request("GET", f"{base}/jobs", headers=AGENCY_UA)
     except Exception as e:
         print(f"      jobvite {token}: {type(e).__name__}")
         return []
     if r.status_code != 200:
         print(f"      jobvite {token}: HTTP {r.status_code}")
         return []
-    out, seen = [], set()
-    for url, title in _links_with_titles(r.text, "https://jobs.jobvite.com", "/job/"):
-        if url in seen:
-            continue
-        seen.add(url)
-        out.append({"title": title, "location": "", "department": "",
-                    "url": url, "posted_at": None})
-    if not out:
-        print(f"      jobvite {token}: 200, {len(r.text)} bytes")
+    harvest(r.text)
+
+    # categories capped at 20 link out to a paged search
+    more = set(re.findall(r'href="([^"]*?/search\?c=[^"]+)"', r.text, re.I))
+    for link in sorted(more):
+        cat = re.sub(r".*[?&]c=([^&]*).*", r"\1", link)
+        for page in range(20):
+            u = f"https://jobs.jobvite.com{link}" if link.startswith("/") else link
+            u = re.sub(r"[?&]p=\d+", "", u) + f"&p={page}"
+            try:
+                rp = _request("GET", u, headers=AGENCY_UA)
+            except Exception:
+                break
+            if rp.status_code != 200:
+                break
+            if not harvest(rp.text):
+                break
+            time.sleep(REQUEST_DELAY)
+
+    if out:
+        print(f"      jobvite {token}: {len(out)} roles across {len(more) + 1} listings")
+    else:
+        print(f"      jobvite {token}: 200, {len(r.text)} bytes but no /job/ links")
         print(f"         link shapes: {_href_shapes(r.text)}")
     return out
-
 
 def fetch_betterteam(token):
     """Betterteam board at <token>.betterteam.com — a simple server-rendered list."""
