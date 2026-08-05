@@ -945,9 +945,13 @@ def fetch_wordpress(token):
     REST API. Token is the host. Huddle's filter labels (Departments, Locations,
     Employment Types) are the WP Job Openings defaults, so that post type is
     tried first, then the other common ones."""
+    # token may name the post type: "jobs.888.com|888-position"
+    token, _, custom_type = token.partition("|")
     base = f"https://{token}" if not token.startswith("http") else token
     TYPES = ["awsm_job_openings", "job_listing", "jobs", "job", "career",
              "careers", "vacancy", "vacancies", "position", "open-roles"]
+    if custom_type.strip():
+        TYPES = [custom_type.strip()] + [t for t in TYPES if t != custom_type.strip()]
     for t in TYPES:
         items, page = [], 1
         while page <= 10:
@@ -973,7 +977,11 @@ def fetch_wordpress(token):
             continue
         out = []
         for j in items:
-            title = html.unescape(str((j.get("title") or {}).get("rendered") or "")).strip()
+            if not isinstance(j, dict):
+                continue
+            t = j.get("title")
+            t = t.get("rendered") if isinstance(t, dict) else t
+            title = html.unescape(str(t or "")).strip()
             if not title:
                 continue
             # taxonomy terms arrive under _embedded when _embed=1 is asked for
@@ -2697,6 +2705,10 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3", "/jobs"]),
     "Legend":       dict(base="https://l1.com", marker="/jobs/",
                          listing=["/jobs", "/jobs/"], first_element=True),
+    # Isle of Man social casino studio. No ATS but fully server-rendered:
+    # /careers lists each role as a link to /vacancy{N} with a clean title.
+    "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
+                         listing=["/careers"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
                          listing=["/careers/v/", "/careers/", "/careers/v/?page=2"]),
     "UK Tote Group": dict(base="https://careers.uktotegroup.com", marker="/job/",
@@ -2889,6 +2901,26 @@ def _is_physical_racing(title):
 # hadn't been withdrawn, we just couldn't reach them. Carry the previous run's
 # roles forward for a few days, then let them go.
 _CARRY_DAYS = 3
+
+
+# Boards keep postings up long after they're filled. The oldest in the feed was
+# dated Sept 2015 — nearly eleven years. His call: drop anything over two years.
+# Only ever applies to roles that carry a date; undated postings are untouched,
+# since an absent date says nothing about whether the role is live.
+_MAX_AGE_DAYS = 730
+
+
+def _too_old(job):
+    p = job.get("posted_at")
+    if not p:
+        return False
+    try:
+        d = datetime.fromisoformat(str(p).replace("Z", "+00:00"))
+    except Exception:
+        return False
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - d).days > _MAX_AGE_DAYS
 
 
 def _carry_forward(all_jobs, feed_path, skipped=()):
@@ -3118,6 +3150,12 @@ def main():
         (c.get("company") or "").strip() for c in companies
         if (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-")}
     all_jobs = _carry_forward(all_jobs, FEED_FILE, deliberately_skipped)
+
+    before = len(all_jobs)
+    all_jobs = [j for j in all_jobs if not _too_old(j)]
+    if before != len(all_jobs):
+        print(f"\ndropped {before - len(all_jobs)} postings older than "
+              f"{_MAX_AGE_DAYS // 365} years")
 
     before = len(all_jobs)
     all_jobs = [j for j in all_jobs if not _is_physical_racing(j.get("title"))]
