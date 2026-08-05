@@ -1107,15 +1107,26 @@ def fetch_avature(token):
             break
         page_new = 0
         body = _STYLE_SCRIPT.sub(" ", r.text)
-        matches = list(job_rx.finditer(body))
+        raw_matches = list(job_rx.finditer(body))
+        # each job is linked twice — once from its title, once from Apply — so
+        # collapse to the first match per URL. Counting both double-advanced the
+        # offset (skipping roles) and left a one-space window for the location.
+        matches, seen_here = [], set()
+        for mt in raw_matches:
+            href = mt.group(1)
+            u_key = href if href.startswith("http") else base + href
+            if u_key in seen_here:
+                continue
+            seen_here.add(u_key)
+            matches.append(mt)
         if not matches:
             print(f"      avature {tenant}: 200 ({len(body)} bytes) but no /careers/JobDetail/ links")
             print("        " + _href_shapes(body))
         for i, mt in enumerate(matches):
             href, inner = mt.group(1), mt.group(2)
             # everything between this link and the next is where the location sits
-            nxt = matches[i + 1].start() if i + 1 < len(matches) else min(mt.end() + 800, len(body))
-            tail = body[mt.end():nxt][:800]
+            nxt = matches[i + 1].start() if i + 1 < len(matches) else min(mt.end() + 1200, len(body))
+            tail = body[mt.end():nxt][:1200]
             title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
             if not title or len(title) < 3 or len(title) > 140:
                 continue
@@ -2642,10 +2653,14 @@ def _is_physical_racing(title):
 _CARRY_DAYS = 3
 
 
-def _carry_forward(all_jobs, feed_path):
+def _carry_forward(all_jobs, feed_path, skipped=()):
     """Re-add roles for companies that returned nothing this run but had roles
     in the last feed. Only applies where the company produced before, so a board
-    that is genuinely empty still shows as empty."""
+    that is genuinely empty still shows as empty.
+
+    Companies deliberately set to skip are excluded: they return nothing by
+    design, and carrying them forward would resurrect rows that were removed
+    on purpose."""
     try:
         with open(feed_path, encoding="utf-8") as f:
             prev = json.load(f).get("jobs") or []
@@ -2660,8 +2675,12 @@ def _carry_forward(all_jobs, feed_path):
     for j in prev:
         by_co.setdefault(j["company"], []).append(j)
 
+    skipped = set(skipped)
     carried = 0
     for co, jobs in by_co.items():
+        if co in skipped:
+            print(f"   not carrying {co} forward — set to skip")
+            continue
         if co in have:
             continue
         kept = []
@@ -2857,7 +2876,10 @@ def main():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
 
-    all_jobs = _carry_forward(all_jobs, FEED_FILE)
+    deliberately_skipped = {
+        (c.get("company") or "").strip() for c in companies
+        if (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-")}
+    all_jobs = _carry_forward(all_jobs, FEED_FILE, deliberately_skipped)
 
     before = len(all_jobs)
     all_jobs = [j for j in all_jobs if not _is_physical_racing(j.get("title"))]
