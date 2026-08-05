@@ -900,11 +900,13 @@ def fetch_hibob(token):
     HiBob customer. Note the subdomain is not always the obvious abbreviation:
     BetVictor is "bvgroup", not "bvg" (which exists but is empty)."""
     base = f"https://{token}.careers.hibob.com"
+    hdr = {**AGENCY_UA, "Accept": "application/json",
+           "companyIdentifier": token, "Referer": f"{base}/jobs"}
+    # /api/job-ad answered 200 but yielded nothing on the first run. It may be
+    # the single-ad route with the list living at the plural path, so try both
+    # and keep whichever returns usable JSON.
     try:
-        r = _request("GET", f"{base}/api/job-ad",
-                     headers={**AGENCY_UA, "Accept": "application/json",
-                              "companyIdentifier": token,
-                              "Referer": f"{base}/jobs"})
+        r = _request("GET", f"{base}/api/job-ad", headers=hdr)
     except Exception as e:
         print(f"      hibob {token}: {type(e).__name__}")
         return []
@@ -919,8 +921,8 @@ def fetch_hibob(token):
 
     # the payload has been seen as a bare list and as a wrapper — accept both
     items = d if isinstance(d, list) else (
-        d.get("jobAds") or d.get("data") or d.get("items") or d.get("jobs")
-        or d.get("results") or d.get("positions") or d.get("openings") or [])
+        d.get("jobAdDetails") or d.get("jobAds") or d.get("data")
+        or d.get("items") or d.get("jobs") or d.get("results") or [])
     if not isinstance(items, list):
         print(f"      hibob {token}: unexpected payload shape {list(d)[:8]}")
         return []
@@ -1024,6 +1026,8 @@ def fetch_pinpoint(token):
     """Pinpoint ATS at {token}.pinpointhq.com. Documented public JSON endpoint;
     the careers home page renders its listing dynamically, so the HTML shows only
     an empty-state message — the JSON is the way in."""
+    token, _, title_filter = token.partition("|")
+    title_filter = title_filter.strip().lower()
     base = f"https://{token}.pinpointhq.com" if "." not in token else (
         token if token.startswith("http") else f"https://{token}")
     try:
@@ -1047,12 +1051,16 @@ def fetch_pinpoint(token):
         return []
 
     out = []
+    skipped = 0
     for j in items:
         if not isinstance(j, dict):
             continue
         a = j.get("attributes") if isinstance(j.get("attributes"), dict) else j
         title = html.unescape(str(_pick(a, "title", "name") or "")).strip()
         if not title:
+            continue
+        if title_filter and title_filter not in title.lower():
+            skipped += 1
             continue
         loc = _pick(a, "location", "locationName", "city")
         if isinstance(loc, dict):
@@ -1064,6 +1072,162 @@ def fetch_pinpoint(token):
             "url": _pick(a, "url", "applyUrl", "permalink") or f"{base}/jobs",
             "posted_at": _pick(a, "publishedAt", "createdAt", "postedAt"),
         })
+    if title_filter:
+        print(f"      pinpoint {token}: {len(out)} matched '{title_filter}', {skipped} others skipped")
+    return out
+
+
+def fetch_avature(token):
+    """Avature enterprise portals at {tenant}.avature.net.
+
+    Server-rendered, which makes it one of the easier boards: the listing lives
+    at /careers/SearchJobs and pages via jobOffset. Job URLs carry the title as
+    a slug (/careers/JobDetail/Art-Director/41215) and the location sits on the
+    line beneath each heading as "address - country - hours".
+
+    Token is the tenant, optionally with a culture code: "amswh" or
+    "amswh|en-GB"."""
+    tenant, _, culture = token.partition("|")
+    base = f"https://{tenant}.avature.net"
+    path = f"/{culture}/careers/SearchJobs" if culture else "/careers/SearchJobs"
+
+    job_rx = re.compile(
+        r'href="([^"]*?/careers/JobDetail/[^"?#]+)"[^>]*>(.*?)</a>(.{0,600}?)(?=<h[23]|</li>|$)',
+        re.S | re.I)
+    out, seen = [], set()
+    per, offset = 50, 0
+    for _ in range(12):                      # 600 roles is more than any tenant here
+        url = f"{base}{path}?jobRecordsPerPage={per}&jobOffset={offset}"
+        try:
+            r = _request("GET", url, headers=AGENCY_UA)
+        except Exception as e:
+            print(f"      avature {tenant}: {type(e).__name__}")
+            break
+        if r.status_code != 200:
+            print(f"      avature {tenant}: HTTP {r.status_code} at offset {offset}")
+            break
+        page_new = 0
+        for href, inner, tail in job_rx.findall(_STYLE_SCRIPT.sub(" ", r.text)):
+            title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
+            if not title or len(title) < 3 or len(title) > 140:
+                continue
+            if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+                continue
+            u = href if href.startswith("http") else base + href
+            if u in seen:
+                continue
+            seen.add(u)
+            out.append({"title": title, "location": _avature_loc(tail),
+                        "department": "", "url": u, "posted_at": None})
+            page_new += 1
+        if not page_new:
+            break
+        offset += per
+        time.sleep(REQUEST_DELAY)
+    if out:
+        print(f"      avature {tenant}: {len(out)} roles")
+    else:
+        print(f"      avature {tenant}: nothing found at {path}")
+    return out
+
+
+def _avature_loc(tail):
+    """The line under an Avature heading reads "address - country - hours".
+    Keep the place, drop the hours, and prefer the country over a street."""
+    txt = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", tail or ""))).strip()
+    if not txt:
+        return ""
+    parts = [p.strip() for p in re.split(r"[\u2022\u00b7|]", txt) if p.strip()]
+    # drop anything that's just an hours figure like "37.5" or "18- 30"
+    parts = [p for p in parts if not re.fullmatch(r"[\d.\s-]+", p)]
+    if not parts:
+        return ""
+    if len(parts) >= 2:
+        place, country = parts[0], parts[1]
+        if len(place) > 40:
+            # a full street address — keep the town, not the postcode
+            segs = [x.strip() for x in place.split(",") if x.strip()]
+            segs = [x for x in segs if not _POSTCODE.fullmatch(x)]
+            place = segs[-1] if segs else place
+        return f"{place}, {country}"
+    return parts[0][:120]
+
+
+# UK/US/CA postcodes and similar, so a shop address doesn't display as "G78 1SN"
+_POSTCODE = re.compile(
+    r"[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}|\d{5}(-\d{4})?|[A-Z]\d[A-Z]\s*\d[A-Z]\d", re.I)
+
+
+def fetch_dayforce(token):
+    """Dayforce HCM candidate portals. The board is client-rendered but there is
+    a public POST search endpoint that returns everything in one call.
+
+    Token is the client namespace, optionally with a board code and culture:
+    "rankgroup" or "rankgroup|CANDIDATEPORTAL|en-GB"."""
+    parts = token.split("|")
+    ns = parts[0]
+    board = parts[1] if len(parts) > 1 and parts[1] else "CANDIDATEPORTAL"
+    culture = parts[2] if len(parts) > 2 and parts[2] else "en-US"
+    url = f"https://jobs.dayforcehcm.com/api/geo/{ns}/jobposting/search"
+
+    out, seen = [], set()
+    start = 0
+    for _ in range(12):
+        payload = {"clientNamespace": ns, "jobBoardCode": board,
+                   "cultureCode": culture, "distanceUnit": 0,
+                   "paginationStart": start}
+        try:
+            r = _request("POST", url, json=payload,
+                         headers={**AGENCY_UA, "Accept": "application/json",
+                                  "Content-Type": "application/json"})
+        except Exception as e:
+            print(f"      dayforce {ns}: {type(e).__name__}")
+            break
+        if r.status_code != 200:
+            print(f"      dayforce {ns}: HTTP {r.status_code}")
+            break
+        try:
+            d = r.json()
+        except Exception:
+            print(f"      dayforce {ns}: 200 but not JSON")
+            break
+        items = (d.get("results") or d.get("jobPostings") or d.get("data")
+                 or d.get("items") or d.get("jobs") or [])
+        if not isinstance(items, list) or not items:
+            if start == 0:
+                print(f"      dayforce {ns}: 200 but nothing extracted — keys {list(d)[:8]}")
+            break
+        page_new = 0
+        for j in items:
+            if not isinstance(j, dict):
+                continue
+            title = html.unescape(str(_pick(j, "title", "jobTitle", "Title") or "")).strip()
+            if not title:
+                continue
+            jid = _pick(j, "id", "jobPostingId", "referenceNumber", "ReferenceNumber") or ""
+            u = (_pick(j, "jobDetailsUrl", "JobDetailsUrl", "url")
+                 or f"https://jobs.dayforcehcm.com/{culture}/{ns}/{board}/jobs/{jid}")
+            if u in seen:
+                continue
+            seen.add(u)
+            bits = [_pick(j, "city", "City"), _pick(j, "state", "State"),
+                    _pick(j, "country", "Country")]
+            out.append({
+                "title": title,
+                "location": ", ".join(str(b) for b in bits if b) or _flatten_loc(_pick(j, "location")),
+                "department": str(_pick(j, "department", "Department") or ""),
+                "url": u,
+                "posted_at": _pick(j, "datePosted", "DatePosted", "postedDate"),
+            })
+            page_new += 1
+        if not page_new:
+            break
+        start += len(items)
+        if start >= int(d.get("maxCount") or 0):
+            break
+        time.sleep(REQUEST_DELAY)
+    if out:
+        print(f"      dayforce {ns}: {len(out)} roles")
     return out
 
 
@@ -1351,6 +1515,8 @@ FETCHERS = {
     "hibob": fetch_hibob,
     "pawatalent": fetch_pawatalent,
     "pinpoint": fetch_pinpoint,
+    "avature": fetch_avature,
+    "dayforce": fetch_dayforce,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,

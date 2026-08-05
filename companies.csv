@@ -23,7 +23,6 @@ APE | Poker Technology,Poker,no,0,no board found,detect,,From LinkedIn follows
 Aristocrat Interactive,Supplier - Content,no,0,no board found,detect,https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite,"Aristocrat group Workday tenant - may include land-based slot roles, watch the mix"
 ARRISE,Operator,no,0,no board found,detect,freshteam:arrise,"Services group powering Pragmatic Play, 6,000+ staff. Freshteam board is the India entity (Hyderabad, Kolkata, Noida)"
 Asia Gaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
-Aspire Global,Operator,no,0,no board found,detect,,From LinkedIn follows
 Bally's Interactive,Operator,no,0,no board found,detect,ultipro:TWI1006TRWH|b9cc79c4-75a2-4800-8508-16504f7a2d90,UKG/UltiPro job board
 Banijay Gaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 Betano,Operator,no,0,no board found,detect,skip,roles come through Kaizen Gaming
@@ -43,18 +42,18 @@ Brightstar Lottery,Lottery,no,0,no board found,detect,,From LinkedIn follows
 BSQ Talent,Recruitment agency,no,0,no board found,detect,,iGaming recruitment
 Caesars Digital,Operator - US,no,0,no board found,detect,oracle:edmn.fa.us2.oraclecloud.com|CX_1,"Oracle HCM. Group tenant, so expect heavy brick-and-mortar volume - the Retail & Venue floor filter is the guard"
 Churchill Downs / TwinSpires,Racing - US,no,0,no board found,detect,,
-CODERE,Operator,no,0,no board found,detect,,From LinkedIn follows
-DAZN,Operator,no,0,no board found,detect,,From LinkedIn follows
-DAZN Bet,Operator,no,0,no board found,detect,,From LinkedIn follows
+CODERE,Operator,no,0,no board found,detect,skip,LinkedIn only - no public ATS or careers board. Wont be found
+DAZN,Operator,no,0,no board found,detect,skip,"Parent is a sports streaming business, not gaming. The gaming roles come through the DAZN Bet row"
+DAZN Bet,Operator,no,0,no board found,detect,pinpoint:careers.dazn.com|dazn bet,"Pinpoint on a custom domain, shared with all of DAZN. Title filter keeps only roles suffixed ""- DAZN Bet"""
 DigiOutsource,Operator,no,0,no board found,detect,https://myhcm.wd3.myworkdayjobs.com/digioutsource,Super Group tech arm; own Workday tenant on myhcm
 Digitain,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 EGT Digital,Supplier - Content,no,0,no board found,detect,skip,"egt-digital.com/careers lists only CURRENT roles and links to skillie.ai - use it as the live filter, since the skillie sitemap holds every job ever posted"
 Emerald Zebra,Recruitment agency,no,0,no board found,detect,,Cyprus; iGaming fintech and tech
 EvenBet Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, handled by scrape_custom"
-evoke,Operator,no,0,no board found,detect,,From LinkedIn follows
+evoke,Operator,no,0,no board found,detect,avature:amswh,"Avature at amswh.avature.net (William Hill/888/Mr Green). NOTE williamhillinternational.com is a SEPARATE second board, not yet added"
 Evoplay,Supplier - Content,no,0,no board found,detect,greenhouse:evoplaygames,"Greenhouse, EU-hosted board"
 EyeSpy Recruitment,Recruitment agency,no,0,no board found,detect,,Gibraltar/UK iGaming specialist
-Fanatics,Operator,no,0,no board found,detect,,From LinkedIn follows
+Fanatics,Operator,no,0,no board found,detect,skip,"SKIP - parent company, mostly memorabilia and collectibles roles. The gaming arm is the separate ""Fanatics Betting & Gaming"" row, which produces"
 FEG,Operator,no,0,no board found,detect,,From LinkedIn follows
 Fennica Gaming,Supplier - Content,no,0,no board found,detect,skip,Veikkaus B2B arm - roles come through the Veikkaus Oracle site
 FIRST.bet,Operator,no,0,no board found,detect,,From LinkedIn follows
@@ -102,7 +101,7 @@ OlyBet Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 OnAim,Operator,no,0,no board found,detect,,From LinkedIn follows
 OpenBet,Supplier - Sportsbook,no,0,no board found,detect,workable:openbet-1,"Workable, note the -1 suffix"
 Opinion,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
-Parimatch,Operator,no,0,no board found,detect,,From LinkedIn follows
+Parimatch,Operator,no,0,no board found,detect,teamtailor:talent.pm.group,Teamtailor on a custom domain (talent.pm.group)
 Parimatch Tech,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 Picklebet,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 PKR Technologies Ltd,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
@@ -137,7 +136,7 @@ SPRIBE,Supplier - Content,no,0,no board found,detect,skip,"hurma.work, handled b
 The Jockey Club,Racing - UK,no,0,no board found,detect,,
 The Lottery Corporation,Lottery - Australia,no,0,no board found,detect,,
 The Pools,Operator,no,0,no board found,detect,,From LinkedIn follows
-The Rank Group plc,Operator,no,0,no board found,detect,,From LinkedIn follows
+The Rank Group plc,Operator,no,0,no board found,detect,dayforce:rankgroup|CANDIDATEPORTAL|en-GB,Dayforce HCM candidate portal
 The Star Entertainment Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 Tipwin Limited,Operator,no,0,no board found,detect,,From LinkedIn follows
 TopSport,Operator - Baltics,no,0,no board found,detect,,
