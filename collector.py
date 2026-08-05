@@ -920,9 +920,14 @@ def fetch_hibob(token):
         return []
 
     # the payload has been seen as a bare list and as a wrapper — accept both
-    items = d if isinstance(d, list) else (
-        d.get("jobAdDetails") or d.get("jobAds") or d.get("data")
-        or d.get("items") or d.get("jobs") or d.get("results") or [])
+    if isinstance(d, list):
+        items = d
+    elif isinstance(d, dict):
+        items = (d.get("jobAdDetails") or d.get("jobAds") or d.get("data")
+                 or d.get("items") or d.get("jobs") or d.get("results") or [])
+    else:
+        print(f"      hibob {token}: 200 but payload is {type(d).__name__}")
+        return []
     if not isinstance(items, list):
         print(f"      hibob {token}: unexpected payload shape {list(d)[:8]}")
         return []
@@ -1252,11 +1257,21 @@ def fetch_dayforce(token):
         except Exception:
             print(f"      dayforce {ns}: 200 but not JSON")
             break
-        items = (d.get("results") or d.get("jobPostings") or d.get("data")
-                 or d.get("items") or d.get("jobs") or [])
+        # the payload has always been a dict, but a bare list would have made
+        # .get() raise and taken the whole run down with it
+        if isinstance(d, list):
+            items = d
+        elif isinstance(d, dict):
+            items = (d.get("results") or d.get("jobPostings") or d.get("data")
+                     or d.get("items") or d.get("jobs") or [])
+        else:
+            print(f"      dayforce {ns}: 200 but payload is {type(d).__name__}")
+            break
         if not isinstance(items, list) or not items:
             if start == 0:
-                print(f"      dayforce {ns}: 200 but nothing extracted — keys {list(d)[:8]}")
+                shape = (f"keys {list(d)[:8]}" if isinstance(d, dict)
+                         else f"{type(d).__name__} len {len(d) if hasattr(d,'__len__') else '?'}")
+                print(f"      dayforce {ns}: 200 but nothing extracted — {shape}")
             break
         page_new = 0
         for j in items:
@@ -1284,8 +1299,10 @@ def fetch_dayforce(token):
         if not page_new:
             break
         start += len(items)
-        if start >= int(d.get("maxCount") or 0):
+        if isinstance(d, dict) and start >= int(d.get("maxCount") or 0):
             break
+        if isinstance(d, list):
+            break                            # a bare list is the whole payload
         time.sleep(REQUEST_DELAY)
     if out:
         print(f"      dayforce {ns}: {len(out)} roles")
