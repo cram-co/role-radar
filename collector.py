@@ -1094,9 +1094,9 @@ def fetch_avature(token):
     job_rx = re.compile(
         r'href="([^"]*?/careers/JobDetail/[^"?#]+)"[^>]*>(.*?)</a>', re.S | re.I)
     out, seen = [], set()
-    per, offset = 50, 0
-    for _ in range(12):                      # 600 roles is more than any tenant here
-        url = f"{base}{path}?jobRecordsPerPage={per}&jobOffset={offset}"
+    per, offset, total = 5, 0, None
+    for _ in range(60):                      # 5 a page, so allow for a big board
+        url = f"{base}{path}/?jobRecordsPerPage={per}&jobOffset={offset}"
         try:
             r = _request("GET", url, headers=AGENCY_UA)
         except Exception as e:
@@ -1125,12 +1125,23 @@ def fetch_avature(token):
             if u in seen:
                 continue
             seen.add(u)
-            out.append({"title": title, "location": _avature_loc(tail),
+            loc = _avature_loc(tail)
+            if not loc and not out and tail.strip():
+                snip = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", tail))[:150]
+                print(f"        no location parsed; window began: {snip!r}")
+            out.append({"title": title, "location": loc,
                         "department": "", "url": u, "posted_at": None})
             page_new += 1
+        if total is None:
+            mt_total = re.search(r"There (?:are|is)\s+(\d+)\s+jobs?", body, re.I)
+            if mt_total:
+                total = int(mt_total.group(1))
+                print(f"      avature {tenant}: board reports {total} jobs")
         if not page_new:
             break
-        offset += per
+        offset += len(matches)
+        if total and len(out) >= total:
+            break
         time.sleep(REQUEST_DELAY)
     if out:
         print(f"      avature {tenant}: {len(out)} roles")
@@ -1141,11 +1152,25 @@ def fetch_avature(token):
 
 def _avature_loc(tail):
     """The line under an Avature heading reads "address - country - hours".
-    Keep the place, drop the hours, and prefer the country over a street."""
-    txt = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", tail or ""))).strip()
+    Keep the place, drop the hours, and prefer the country over a street.
+
+    The window after a heading also contains the job description, so find the
+    bullet-separated line specifically rather than splitting the whole block."""
+    if not tail:
+        return ""
+    # break into lines at block boundaries, then take the first with bullets
+    marked = re.sub(r"</(p|div|li|h[1-6]|span)\s*>|<br\s*/?>", "\n", tail, flags=re.I)
+    plain = html.unescape(re.sub(r"<[^>]+>", " ", marked))
+    line = ""
+    for ln in plain.split("\n"):
+        ln = re.sub(r"[ \t]+", " ", ln).strip()
+        if ln.count("\u2022") >= 1 or ln.count("\u00b7") >= 1:
+            line = ln
+            break
+    txt = line or re.sub(r"\s+", " ", plain).strip()
     if not txt:
         return ""
-    parts = [p.strip() for p in re.split(r"[\u2022\u00b7|]", txt) if p.strip()]
+    parts = [p.strip() for p in re.split(r"[\u2022\u00b7|\u2013\u2014]|\s{3,}", txt) if p.strip()]
     # drop anything that's just an hours figure like "37.5" or "18- 30"
     parts = [p for p in parts if not re.fullmatch(r"[\d.\s-]+", p)]
     if not parts:
@@ -1178,6 +1203,14 @@ def fetch_dayforce(token):
     culture = parts[2] if len(parts) > 2 and parts[2] else "en-US"
     url = f"https://jobs.dayforcehcm.com/api/geo/{ns}/jobposting/search"
 
+    portal = f"https://jobs.dayforcehcm.com/{culture}/{ns}/{board}"
+    # a bare POST gets 403 even with browser headers — load the portal first so
+    # the session picks up whatever cookie their edge expects
+    try:
+        session.get(portal, headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception:
+        pass
+
     out, seen = [], set()
     start = 0
     for _ in range(12):
@@ -1185,7 +1218,6 @@ def fetch_dayforce(token):
                    "cultureCode": culture, "distanceUnit": 0,
                    "paginationStart": start}
         try:
-            portal = f"https://jobs.dayforcehcm.com/{culture}/{ns}/{board}"
             r = _request("POST", url, json=payload,
                          headers={**AGENCY_UA, "Accept": "application/json",
                                   "Content-Type": "application/json",

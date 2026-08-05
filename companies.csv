@@ -159,7 +159,7 @@ WPT Global,Poker,no,0,no board found,detect,,From LinkedIn follows
 Yggdrasil,Supplier - Content,no,0,no board found,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id"
 Yolo Group,Operator / Supplier - Crypto,no,0,no board found,detect,,
 Allwyn,Lottery,no,0,skipped on purpose,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded"
-bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,"in-house careers site, handled by scrape_custom"
+bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,KingMakers brand - roles come through the KingMakers row
 Betfred,Operator,no,0,skipped on purpose,detect,skip,"Talos ATS at betfredgroup.talosats-careers.com/job/{id}. Client-rendered SPA, needs the API finding - PARKED"
 Betika,Operator,no,0,skipped on purpose,detect,skip,"SeamlessHiring, handled by scrape_custom"
 Cirsa,Operator - Spain/LatAm,no,0,skipped on purpose,detect,skip,"Allibo joblink board, handled by scrape_custom"
@@ -192,7 +192,7 @@ Arena Racing Company,Racing - UK,yes,18,producing,detect,,
 ATG,Racing / Operator - Sweden,yes,6,producing,detect,,
 B2Spin Limited,Supplier - Content,yes,15,producing,detect,,From LinkedIn follows
 bet365,Operator - Tier 1,yes,95,producing,detect,smartrecruiters:Bet3651,"SmartRecruiters ID is Bet3651 - trailing 1 and capitalised, not guessable"
-BetKing,Operator - Africa,yes,5,producing,detect,workable:kingmakers,"Workable, under parent KingMakers"
+BetKing,Operator - Africa,yes,5,producing,detect,skip,Roles come through the KingMakers row - both rows resolved to apply.workable.com/kingmakers and returned the identical 10 roles
 BetMGM,Operator - Tier 1,yes,22,producing,detect,https://betmgminc.wd5.myworkdayjobs.com/en-US/BetMGM,Entain/MGM JV
 betr,Operator,yes,11,producing,detect,,From LinkedIn follows
 Betsson Group,Operator - Tier 1,yes,127,producing,teamtailor (likely),,
