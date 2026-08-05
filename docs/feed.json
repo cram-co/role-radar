@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-05T00:02:31.477289+00:00",
- "job_count": 6334,
+ "generated_at": "2026-08-05T00:33:36.601421+00:00",
+ "job_count": 6337,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -2126,6 +2126,36 @@
    "source": "collector"
   },
   {
+   "title": "Dealer (Part Time) Guaranteed Toke Rate****",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=a94c39d6-1600-483c-9940-614d14682515",
+   "posted_at": "2026-08-05T00:20:29.142Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
+   "title": "Dealer (Full Time) Guaranteed Toke Rate****",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=9d0d4d91-fa56-4015-a0b6-18667ac48a68",
+   "posted_at": "2026-08-05T00:17:55.772Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
+   "title": "Dealer (FT) - Multi Game Exp Required - Guarantee Toke Rate plus up to $1,250 Sign On Bonus",
+   "location": "",
+   "department": "",
+   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=ef753c3c-244a-4da8-8af1-aa99045d1c95",
+   "posted_at": "2026-08-05T00:14:43.635Z",
+   "company": "Bally's Interactive",
+   "ats": "ultipro",
+   "source": "collector"
+  },
+  {
    "title": "Manager - Surveillance",
    "location": "",
    "department": "",
@@ -2851,26 +2881,6 @@
    "department": "",
    "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=3d5bca1a-8e95-4e86-9982-a42bd461380c",
    "posted_at": "2026-07-29T17:55:18.226Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
-   "title": "Table Games Dealer (Part Time) Guaranteed Toke Rate****",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=a94c39d6-1600-483c-9940-614d14682515",
-   "posted_at": "2026-07-29T17:54:57.394Z",
-   "company": "Bally's Interactive",
-   "ats": "ultipro",
-   "source": "collector"
-  },
-  {
-   "title": "Table Games Dealer (Full Time) Guaranteed Toke Rate****",
-   "location": "",
-   "department": "",
-   "url": "https://recruiting.ultipro.com/TWI1006TRWH/JobBoard/b9cc79c4-75a2-4800-8508-16504f7a2d90/OpportunityDetail?opportunityId=9d0d4d91-fa56-4015-a0b6-18667ac48a68",
-   "posted_at": "2026-07-29T17:54:48.046Z",
    "company": "Bally's Interactive",
    "ats": "ultipro",
    "source": "collector"
@@ -24461,7 +24471,7 @@
   },
   {
    "title": "L1 Customer Support Agent - BOTSWANA",
-   "location": "['Gaborone, Botswana']",
+   "location": "Gaborone, Botswana",
    "department": "Customer Support",
    "url": "https://careers.pawatech.com/job/164",
    "posted_at": "2026-08-04T09:41:56.548Z",
@@ -24471,7 +24481,7 @@
   },
   {
    "title": "L1 Customer Support Agent - SOUTH SUDAN",
-   "location": "['Juba, South Sudan']",
+   "location": "Juba, South Sudan",
    "department": "Customer Support",
    "url": "https://careers.pawatech.com/job/163",
    "posted_at": "2026-08-04T09:41:15.123Z",
@@ -24481,7 +24491,7 @@
   },
   {
    "title": "L1 Manager- Botswana",
-   "location": "['Gaborone, Botswana']",
+   "location": "Gaborone, Botswana",
    "department": "Customer Support",
    "url": "https://careers.pawatech.com/job/162",
    "posted_at": "2026-07-29T09:50:10.569Z",
@@ -24491,7 +24501,7 @@
   },
   {
    "title": "L1 Manager- South Sudan",
-   "location": "['Juba, South Sudan']",
+   "location": "Juba, South Sudan",
    "department": "Customer Support",
    "url": "https://careers.pawatech.com/job/161",
    "posted_at": "2026-07-27T08:22:42.292Z",
@@ -24501,7 +24511,7 @@
   },
   {
    "title": "Finance Assistant",
-   "location": "['Tallinn, Estonia']",
+   "location": "Tallinn, Estonia",
    "department": "Finance",
    "url": "https://careers.pawatech.com/job/160",
    "posted_at": "2026-07-22T13:12:03.755Z",
@@ -24511,7 +24521,7 @@
   },
   {
    "title": "Software Engineer (Regulatory)",
-   "location": "['Tallinn, Estonia']",
+   "location": "Tallinn, Estonia",
    "department": "Engineering",
    "url": "https://careers.pawatech.com/job/158",
    "posted_at": "2026-07-20T12:46:05.685Z",
@@ -24521,7 +24531,7 @@
   },
   {
    "title": "Software Engineer (Regulatory)",
-   "location": "['Remote, Europe']",
+   "location": "Remote, Europe",
    "department": "Engineering",
    "url": "https://careers.pawatech.com/job/157",
    "posted_at": "2026-07-20T12:32:23.013Z",
@@ -24531,7 +24541,7 @@
   },
   {
    "title": "Business Analyst (GA4 and BigQuery)",
-   "location": "['Remote, Europe']",
+   "location": "Remote, Europe",
    "department": "Business Development",
    "url": "https://careers.pawatech.com/job/155",
    "posted_at": "2026-07-09T13:47:03.106Z",
@@ -24541,7 +24551,7 @@
   },
   {
    "title": "AML/KYC Junior Manager",
-   "location": "['Remote, Europe']",
+   "location": "Remote, Europe",
    "department": "Risk & Compliance",
    "url": "https://careers.pawatech.com/job/153",
    "posted_at": "2026-07-08T13:03:28.022Z",
@@ -24551,7 +24561,7 @@
   },
   {
    "title": "Senior BI Data Analyst (Product)",
-   "location": "['Remote, Europe']",
+   "location": "Remote, Europe",
    "department": "Engineering",
    "url": "https://careers.pawatech.com/job/151",
    "posted_at": "2026-07-06T11:51:47.017Z",
@@ -24561,7 +24571,7 @@
   },
   {
    "title": "SOC L1 Analyst",
-   "location": "['Tallinn, Estonia']",
+   "location": "Tallinn, Estonia",
    "department": "Security",
    "url": "https://careers.pawatech.com/job/149",
    "posted_at": "2026-06-16T09:02:45.724Z",
@@ -24571,7 +24581,7 @@
   },
   {
    "title": "Customer Support Quality Lead",
-   "location": "['Remote, Europe']",
+   "location": "Remote, Europe",
    "department": "Customer Support",
    "url": "https://careers.pawatech.com/job/145",
    "posted_at": "2026-06-11T14:25:43.855Z",
@@ -24581,7 +24591,7 @@
   },
   {
    "title": "Manual QA Specialist",
-   "location": "['Tallinn, Estonia']",
+   "location": "Tallinn, Estonia",
    "department": "Engineering",
    "url": "https://careers.pawatech.com/job/144",
    "posted_at": "2026-06-03T11:59:24.789Z",
@@ -24591,7 +24601,7 @@
   },
   {
    "title": "Operations Manager (Compliance)",
-   "location": "['Remote, Europe']",
+   "location": "Remote, Europe",
    "department": "Risk & Compliance",
    "url": "https://careers.pawatech.com/job/107",
    "posted_at": "2026-03-03T16:56:26.332Z",
@@ -24601,7 +24611,7 @@
   },
   {
    "title": "Open Application",
-   "location": "['Africa']",
+   "location": "Africa",
    "department": "All Departments",
    "url": "https://careers.pawatech.com/job/104",
    "posted_at": "2026-02-19T13:04:27.507Z",
@@ -24611,7 +24621,7 @@
   },
   {
    "title": "Open Application",
-   "location": "['Tallinn, Estonia']",
+   "location": "Tallinn, Estonia",
    "department": "All Departments",
    "url": "https://careers.pawatech.com/job/94",
    "posted_at": "2026-02-16T12:28:33.212Z",
@@ -29771,6 +29781,56 @@
    "source": "collector"
   },
   {
+   "title": "Database Administrator - 12 Month Contract",
+   "location": "Durban, Pretoria",
+   "department": "Data Support Services_18B",
+   "url": "https://derivco.bamboohr.com/careers/122",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Database Administrator",
+   "location": "Durban, Pretoria",
+   "department": "Data Support Services_18B",
+   "url": "https://derivco.bamboohr.com/careers/131",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Manager: Information Security",
+   "location": "Durban, Douglas",
+   "department": "Information Security_18C",
+   "url": "https://derivco.bamboohr.com/careers/142",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Manager: Software Engineering ",
+   "location": "Durban, Kwazulu-Natal",
+   "department": "New PAM_13A",
+   "url": "https://derivco.bamboohr.com/careers/145",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
+   "title": "Coordinator: Operations ",
+   "location": "Douglas, Isle of Man",
+   "department": "Platform_20F",
+   "url": "https://derivco.bamboohr.com/careers/146",
+   "posted_at": null,
+   "company": "Derivco",
+   "ats": "bamboohr",
+   "source": "collector"
+  },
+  {
    "title": "Senior Associate, Risk Enablement",
    "location": "2 Locations",
    "department": "",
@@ -30995,16 +31055,6 @@
    "department": "Business Intelligence ",
    "url": "https://job-boards.greenhouse.io/easygo/jobs/5097649007",
    "posted_at": "2026-04-02T00:15:23-04:00",
-   "company": "Easygo",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Frontend Engineer - KICK Discovery & Presence",
-   "location": "Melbourne, Australia",
-   "department": "Engineering",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5174811007",
-   "posted_at": "2026-07-15T00:25:10-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -58754,7 +58804,7 @@
   },
   {
    "title": "Head of Account Management",
-   "location": "",
+   "location": "St Julians, Malta Commercial Full-time remote",
    "department": "",
    "url": "https://l1.com/jobs/15c03a37-d588-49a9-8f21-6dc10f9cb2ac",
    "posted_at": null,
@@ -58764,7 +58814,7 @@
   },
   {
    "title": "Head of Account Management",
-   "location": "",
+   "location": "London, England Commercial Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/176b7d04-5a67-4eae-b99d-62c19c57f415",
    "posted_at": null,
@@ -58774,7 +58824,7 @@
   },
   {
    "title": "Senior Data Analyst",
-   "location": "",
+   "location": "Halifax, Canada Analytics Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/1c97579a-0551-4b7e-a3e9-4e8e5d98be7b",
    "posted_at": null,
@@ -58784,7 +58834,7 @@
   },
   {
    "title": "Account Operations Executive",
-   "location": "",
+   "location": "St Helier, Jersey Commercial onsite",
    "department": "",
    "url": "https://l1.com/jobs/b85bdcf9-c251-4ac1-9d29-35d7fcc8276b",
    "posted_at": null,
@@ -58794,7 +58844,7 @@
   },
   {
    "title": "Commercial Operations Executive",
-   "location": "",
+   "location": "Varna, Bulgaria Commercial Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/d81dd2d3-8b1a-4a1c-8186-10ed8df03873",
    "posted_at": null,
@@ -58804,7 +58854,7 @@
   },
   {
    "title": "Junior Data Operator",
-   "location": "",
+   "location": "Varna, Bulgaria Commercial Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/64e3e32f-2d22-4ac2-9b28-a3a197f7a8f3",
    "posted_at": null,
@@ -58814,7 +58864,7 @@
   },
   {
    "title": "Senior Lifecycle Marketing Manager",
-   "location": "",
+   "location": "Toronto, Canada Performance Marketing Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/36e13849-d63e-4849-8947-22588962a722",
    "posted_at": null,
@@ -58824,7 +58874,7 @@
   },
   {
    "title": "Financial Accountant",
-   "location": "",
+   "location": "St Helier, Jersey Finance Full-time onsite",
    "department": "",
    "url": "https://l1.com/jobs/21b03047-4de1-4a4f-a866-dd313eb2c5be",
    "posted_at": null,
@@ -58834,7 +58884,7 @@
   },
   {
    "title": "Financial Accountant",
-   "location": "",
+   "location": "London, England Finance Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/e6cd15a4-e689-4cb6-8f6b-4caad1d4ef4c",
    "posted_at": null,
@@ -58844,7 +58894,7 @@
   },
   {
    "title": "Group Accounts Payable",
-   "location": "",
+   "location": "Varna, Bulgaria Finance Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/2dcbfe06-0c00-46d5-84c3-79d2231f36c0",
    "posted_at": null,
@@ -58854,7 +58904,7 @@
   },
   {
    "title": "Group Accounts Receivable",
-   "location": "",
+   "location": "Varna, Bulgaria Finance Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/2a4b0248-6b92-4b29-acc6-d5768b45dcda",
    "posted_at": null,
@@ -58864,7 +58914,7 @@
   },
   {
    "title": "Group Accounts Receivable",
-   "location": "",
+   "location": "Varna, Bulgaria Finance Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/856626bd-9c37-403b-af88-a3d161c71f17",
    "posted_at": null,
@@ -58874,7 +58924,7 @@
   },
   {
    "title": "Group Accounts Receivable",
-   "location": "",
+   "location": "Varna, Bulgaria Finance Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/cd0b3f90-9971-40cb-bcee-4b900922859e",
    "posted_at": null,
@@ -58884,7 +58934,7 @@
   },
   {
    "title": "Commercial Finance Analyst",
-   "location": "",
+   "location": "London, England Finance Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/885f2488-67ff-4ca4-8dc2-173b2962f64d",
    "posted_at": null,
@@ -58894,7 +58944,7 @@
   },
   {
    "title": "Associate Legal Counsel",
-   "location": "",
+   "location": "London, England Legal Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/6ee91012-65ae-4af2-8327-e4599cd50356",
    "posted_at": null,
@@ -58904,7 +58954,7 @@
   },
   {
    "title": "Associate Legal Counsel",
-   "location": "",
+   "location": "St Helier, Jersey Legal Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/b7a8fec4-83f1-4239-843b-653bdb232e10",
    "posted_at": null,
@@ -58914,7 +58964,7 @@
   },
   {
    "title": "Senior Organic Specialist",
-   "location": "",
+   "location": "Toronto, Canada Organic & Digital PR Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/decbf5a1-f21a-470f-86eb-b6d00438695b",
    "posted_at": null,
@@ -58924,7 +58974,7 @@
   },
   {
    "title": "Can't find a job that suits you?",
-   "location": "",
+   "location": "General Application Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/111c951a-e6f9-418f-a873-692804d4d3dd",
    "posted_at": null,
@@ -58934,7 +58984,7 @@
   },
   {
    "title": "Senior Product Manager",
-   "location": "",
+   "location": "St Julians, Malta Product Management Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/3646ccd8-aafd-44ba-ab60-15dac0d8f6c7",
    "posted_at": null,
@@ -58944,7 +58994,7 @@
   },
   {
    "title": "Senior Product Manager",
-   "location": "",
+   "location": "Bratislava, Slovakia Product Management Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/fb8be70f-92b4-4e7b-866b-458951a491d3",
    "posted_at": null,
@@ -58954,7 +59004,7 @@
   },
   {
    "title": "Principal AI Productivity & Automation Architect",
-   "location": "",
+   "location": "United Kingdom Delivery Full-time remote",
    "department": "",
    "url": "https://l1.com/jobs/5b024b16-75b6-45a4-a859-c2d1718d1fad",
    "posted_at": null,
@@ -58964,7 +59014,7 @@
   },
   {
    "title": "Principal AI Productivity & Automation Architect",
-   "location": "",
+   "location": "St Julians, Malta Delivery Full-time remote",
    "department": "",
    "url": "https://l1.com/jobs/5c76abae-38d9-474b-bfed-bca1e16905cb",
    "posted_at": null,
@@ -58974,7 +59024,7 @@
   },
   {
    "title": "Principal AI Productivity & Automation Architect",
-   "location": "",
+   "location": "Bratislava, Slovakia Delivery Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/98a75720-67cb-409c-9c15-f5079befd311",
    "posted_at": null,
@@ -58984,7 +59034,7 @@
   },
   {
    "title": "Backend Software Engineer",
-   "location": "",
+   "location": "Halifax, Canada Engineering Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/9f047636-1c27-448e-b778-46db00aef81f",
    "posted_at": null,
@@ -58994,7 +59044,7 @@
   },
   {
    "title": "Staff Software Engineer",
-   "location": "",
+   "location": "Bratislava, Slovakia Engineering Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/e3d0aca8-3887-4db8-96c6-5703c12d0278",
    "posted_at": null,
@@ -59004,7 +59054,7 @@
   },
   {
    "title": "Staff Software Engineer - Fast Response",
-   "location": "",
+   "location": "Bratislava, Slovakia Engineering Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/775b6c83-f833-413f-8ec2-c2fbe28a9fcd",
    "posted_at": null,
@@ -59014,7 +59064,7 @@
   },
   {
    "title": "Staff Software Engineer - Node.JS",
-   "location": "",
+   "location": "Bratislava, Slovakia Engineering Full-time remote",
    "department": "",
    "url": "https://l1.com/jobs/0588c4de-e09e-4e3c-9f4e-c0a34d26361a",
    "posted_at": null,
@@ -59024,7 +59074,7 @@
   },
   {
    "title": "VP Engineering",
-   "location": "",
+   "location": "Vienna, Austria Engineering Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/ab9cbaae-bc85-4d14-9da8-70174192e16a",
    "posted_at": null,
@@ -59034,7 +59084,7 @@
   },
   {
    "title": "Talent Partner",
-   "location": "",
+   "location": "Bratislava, Slovakia People Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/348fe582-e55f-42ff-bff5-4bcc6b4e917f",
    "posted_at": null,
@@ -59599,6 +59649,16 @@
    "url": "https://egt-digital.skillie.ai/jobs/9479-product-owner-online-games-department",
    "posted_at": null,
    "company": "EGT Digital",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Partnership Manager",
+   "location": "UNAVAILABLE, UNAVAILABLE, United States",
+   "department": "",
+   "url": "https://careers.gamesglobal.com/jobs/1713?lang=en-us",
+   "posted_at": "2026-08-04T18:42:00+0000",
+   "company": "Games Global",
    "ats": "agency",
    "source": "agency"
   },
@@ -60833,16 +60893,6 @@
    "source": "agency"
   },
   {
-   "title": "Head of Media Investment, Operations & Insights",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/head-of-media-investment-operations-insights-sydney-eora-nation-nsw-australia-ann-street-qld",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Head of Brand and Content",
    "location": "",
    "department": "",
@@ -60853,30 +60903,10 @@
    "source": "agency"
   },
   {
-   "title": "Executive Assistant to Chief Financial Officer",
+   "title": "Head of Media Investment, Operations & Insights",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/executive-assistant-to-chief-financial-officer-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Risk Partner - Technology",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/risk-partner-technology-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "HR Data Analyst",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/hr-data-analyst-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/head-of-media-investment-operations-insights-sydney-eora-nation-nsw-australia-ann-street-qld",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60893,10 +60923,10 @@
    "source": "agency"
   },
   {
-   "title": "Oncourse Casual Lead - Temora",
+   "title": "Risk Partner - Technology",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-temora-regional-nsw-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/risk-partner-technology-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60923,6 +60953,26 @@
    "source": "agency"
   },
   {
+   "title": "Executive Assistant to Chief Financial Officer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/executive-assistant-to-chief-financial-officer-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "HR Data Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/hr-data-analyst-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Regulatory Reporting Analyst",
    "location": "",
    "department": "",
@@ -60933,10 +60983,10 @@
    "source": "agency"
   },
   {
-   "title": "Controls Assurance Senior Advisor",
+   "title": "Oncourse Casual Lead - Temora",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-temora-regional-nsw-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60953,20 +61003,20 @@
    "source": "agency"
   },
   {
-   "title": "Project Coordinator - Remediation",
+   "title": "Policy & Governance Manager",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/project-coordinator-remediation-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/policy-governance-manager-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Policy & Governance Manager",
+   "title": "Controls Assurance Senior Advisor",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/policy-governance-manager-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -60993,10 +61043,10 @@
    "source": "agency"
   },
   {
-   "title": "Senior Manager Compliance and Assurance",
+   "title": "Project Coordinator - Remediation",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
+   "url": "https://careers.tabcorp.com.au/jobs/project-coordinator-remediation-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61007,6 +61057,26 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/policy-governance-advisor-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Manager Compliance and Assurance",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Manager, Commercial Growth",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-commercial-growth-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61033,46 +61103,6 @@
    "source": "agency"
   },
   {
-   "title": "Associate Trader - Racing",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Senior Manager, Commercial Growth",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-commercial-growth-melbourne-kulin-nation-vic-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Field Technician (6-12 months Opportunity)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/field-technician-contract-granville-darug-country-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Venue Support Consultant (MAX - Loyalty)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Commercial Wagering Analytics Manager",
    "location": "",
    "department": "",
@@ -61083,20 +61113,10 @@
    "source": "agency"
   },
   {
-   "title": "Digital Content Co-ordinator",
+   "title": "Associate Trader - Racing",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/digital-content-co-ordinator-frenchs-forest-garigal-country-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Workshop Technician",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-5448eeba-351a-4b46-be4f-be2ffbc05a0e",
+   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61113,22 +61133,52 @@
    "source": "agency"
   },
   {
-   "title": "Retail Sales & Oncourse Coordinator (Darwin)",
+   "title": "Digital Content Co-ordinator",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/retail-sales-oncourse-coordinator-darwin-darwin-larrakia-country-nt-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/digital-content-co-ordinator-frenchs-forest-garigal-country-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
   {
-   "title": "Head of Line 1 Risk & Compliance",
+   "title": "Venue Support Consultant (MAX - Loyalty)",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/head-of-line-1-risk-compliance-melbourne-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
    "posted_at": null,
-   "company": "Sportsbet",
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Field Technician (6-12 months Opportunity)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/field-technician-contract-granville-darug-country-nsw-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Workshop Technician",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-5448eeba-351a-4b46-be4f-be2ffbc05a0e",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Retail Sales & Oncourse Coordinator (Darwin)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/retail-sales-oncourse-coordinator-darwin-darwin-larrakia-country-nt-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
    "ats": "agency",
    "source": "agency"
   },
@@ -61143,10 +61193,10 @@
    "source": "agency"
   },
   {
-   "title": "Social Content Production Manager (Traffic Coordination)",
+   "title": "Head of Line 1 Risk & Compliance",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/social-content-production-manager-traffic-coordination-melbourne-vic-australia",
+   "url": "https://careers.sportsbet.com.au/jobs/head-of-line-1-risk-compliance-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -61163,6 +61213,16 @@
    "source": "agency"
   },
   {
+   "title": "Social Content Production Manager (Traffic Coordination)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/social-content-production-manager-traffic-coordination-melbourne-vic-australia",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Risk & Compliance Manager (Corporate Functions Line 1) \u2013 12 month FTC",
    "location": "",
    "department": "",
@@ -61173,10 +61233,10 @@
    "source": "agency"
   },
   {
-   "title": "Data Engineer",
+   "title": "Payroll Officer",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
+   "url": "https://careers.sportsbet.com.au/jobs/payroll-officer-melbourne-vic-australia-26625c28-293a-499b-b4c9-3f7db26d9963",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -61193,10 +61253,10 @@
    "source": "agency"
   },
   {
-   "title": "Payroll Officer",
+   "title": "Data Engineer",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/payroll-officer-melbourne-vic-australia-26625c28-293a-499b-b4c9-3f7db26d9963",
+   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -64183,39 +64243,6 @@
    "posted_at": "2024-06-05T04:28:39-04:00",
    "company": "Delasport",
    "ats": "greenhouse",
-   "source": "collector",
-   "carried_since": "2026-08-05T00:02:31.448413+00:00"
-  },
-  {
-   "title": "Manager: Information Security",
-   "location": "Durban, Douglas",
-   "department": "Information Security_18C",
-   "url": "https://derivco.bamboohr.com/careers/142",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T00:02:31.448413+00:00"
-  },
-  {
-   "title": "Manager: Software Engineering ",
-   "location": "Durban, Kwazulu-Natal",
-   "department": "New PAM_13A",
-   "url": "https://derivco.bamboohr.com/careers/145",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
-   "source": "collector",
-   "carried_since": "2026-08-05T00:02:31.448413+00:00"
-  },
-  {
-   "title": "Coordinator: Operations ",
-   "location": "Douglas, Isle of Man",
-   "department": "Platform_20F",
-   "url": "https://derivco.bamboohr.com/careers/146",
-   "posted_at": null,
-   "company": "Derivco",
-   "ats": "bamboohr",
    "source": "collector",
    "carried_since": "2026-08-05T00:02:31.448413+00:00"
   }
