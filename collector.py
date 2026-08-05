@@ -1169,9 +1169,15 @@ def _avature_loc(tail):
     bullet-separated line specifically rather than splitting the whole block."""
     if not tail:
         return ""
+    # unescape FIRST: an escaped &lt;span&gt; survives a tag strip and then
+    # becomes a real tag afterwards, which is how '<span class="separator"'
+    # ended up inside evoke's location strings
+    raw = html.unescape(tail)
     # break into lines at block boundaries, then take the first with bullets
-    marked = re.sub(r"</(p|div|li|h[1-6]|span)\s*>|<br\s*/?>", "\n", tail, flags=re.I)
-    plain = html.unescape(re.sub(r"<[^>]+>", " ", marked))
+    # span is inline and holds the separator bullets — treating it as a line
+    # break split "address <span>bullet</span> country" across two lines
+    marked = re.sub(r"</(p|div|li|h[1-6])\s*>|<br\s*/?>", "\n", raw, flags=re.I)
+    plain = re.sub(r"<[^>]+>", " ", marked)
     line = ""
     for ln in plain.split("\n"):
         ln = re.sub(r"[ \t]+", " ", ln).strip()
