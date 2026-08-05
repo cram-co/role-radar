@@ -53,7 +53,7 @@ FEG,Operator,no,0,no board found,detect,skip,"Custom Azure-hosted easyapply app 
 Fennica Gaming,Supplier - Content,no,0,no board found,detect,skip,Veikkaus B2B arm - roles come through the Veikkaus Oracle site
 FIRST.bet,Operator,no,0,no board found,detect,bamboohr:coretech,BambooHR at coretech.bamboohr.com
 Flutter International,Operator,no,0,no board found,detect,skip,same tenant as the Flutter International row - would duplicate
-Flutter Southern Europe & Africa (SEA),Operator,no,0,no board found,detect,,From LinkedIn follows
+Flutter Southern Europe & Africa (SEA),Operator,no,0,no board found,detect,skip,"Sisal and Snai division. Snaitech routes to the Flutter International tenant; Sisal has its own Workday board, confirmed working but currently empty. Covered by those two rows"
 Flutter UK & Ireland,Operator,no,0,no board found,detect,skip,same tenant as the Flutter UK & Ireland row - would duplicate
 FSB Technology,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 FunFair Technologies,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
@@ -64,36 +64,29 @@ GeoComply,Compliance / Geo,no,0,no board found,detect,,
 GGNetwork,Poker,no,0,no board found,detect,,From LinkedIn follows
 GGPoker (NSUS Group),Poker,no,0,no board found,detect,,
 GiG (platform),Supplier - Platform,no,0,no board found,detect,skip,"DUPLICATE of Gaming Innovation Group - use that row. GiG and Gentoo Media demerged, they are separate companies now"
-GoldBet,Operator,no,0,no board found,detect,,From LinkedIn follows
+GoldBet,Operator,no,0,no board found,detect,skip,"Lottomatica Group brand - roles come through the Lottomatica row (Workday, producing 45)"
 Greentube (Novomatic),Supplier - Content,no,0,no board found,detect,skip,careers.greentube.com - handled by scrape_custom
 Hacksaw Gaming,Supplier - Content,no,0,no board found,detect,bamboohr:hacksawoperations,BambooHR
 Hedgehog Markets,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
 highbet,Operator,no,0,no board found,detect,,From LinkedIn follows
-Hub88,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-IGT PlayDigital,Operator,no,0,no board found,detect,,From LinkedIn follows
 InPlaySoft,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 Inspired Entertainment,Supplier,no,0,no board found,detect,skip,"careers.inseinc.com, handled by scrape_custom"
 Jeton,Gaming payments,no,0,no board found,detect,,
 Junglee Games,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 KamaGames,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
-KICK,Operator,no,0,no board found,detect,,From LinkedIn follows
-KKCG Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 Konami Gaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
-Live88,Operator,no,0,no board found,detect,,From LinkedIn follows
 LSports,Sports data,no,0,no board found,detect,,
-Luckia,Operator,no,0,no board found,detect,,From LinkedIn follows
+Luckia,Operator,no,0,no board found,detect,skip,jobs.luckiagaminggroup.com - SuccessFactors shape (/go/Category/ID/) but the tenant is not yet identified. Mostly retail casino with an Online section. PARKED pending the company/tenant id
 Manifold Markets,Operator - Prediction,no,0,no board found,detect,,Prediction market; small team
-MaxBet,Operator,no,0,no board found,detect,,From LinkedIn follows
-Monkey Tilt,Operator,no,0,no board found,detect,,From LinkedIn follows
+MaxBet,Operator,no,0,no board found,detect,skip,Zoho Recruit at maxbet.zohorecruit.eu - platform not supported. PARKED
 MuchBetter,Gaming payments,no,0,no board found,detect,,Prior COO role
 Myriad,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
 Neds,Operator,no,0,no board found,detect,workable:entaingroup,Entain Australia & New Zealand board - CHECK next run for overlap with the Entain row
 Nolimit City®,Supplier - Content,no,0,no board found,detect,skip,"career.nolimitcity.com static pages, handled by scrape_custom - low expectation"
-NSUS Group,Operator,no,0,no board found,detect,,From LinkedIn follows
+NSUS Group,Operator,no,0,no board found,detect,skip,Humi at nsusgroup.applytojobs.ca - platform not supported. PARKED. Only one role live but he rates the company
 NSUSLAB Korea,Operator,no,0,no board found,detect,,From LinkedIn follows
 NuxGame,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-OlyBet Group,Operator,no,0,no board found,detect,,From LinkedIn follows
-OnAim,Operator,no,0,no board found,detect,,From LinkedIn follows
+OlyBet Group,Operator,no,0,no board found,detect,skip,Cornerstone OnDemand at olympic.csod.com - platform not supported. PARKED
 OpenBet,Supplier - Sportsbook,no,0,no board found,detect,workable:openbet-1,"Workable, note the -1 suffix"
 Opinion,Operator - Prediction,no,0,no board found,detect,,Prediction market platform
 Parimatch,Operator,no,0,no board found,detect,teamtailor:talent.pm.group,Teamtailor on a custom domain (talent.pm.group)
@@ -102,7 +95,6 @@ Picklebet,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 PKR Technologies Ltd,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
 Play'n GO,Supplier - Content,no,0,no board found,detect,skip,"talenthub.playngo.com, handled by scrape_custom"
 Playnetic,Operator,no,0,no board found,detect,,From LinkedIn follows
-PlayOJO,Operator,no,0,no board found,detect,,From LinkedIn follows
 PointsBet,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 PointsBet Canada,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 Push Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, no open roles at setup - handled by scrape_custom"
@@ -121,7 +113,7 @@ Skilrock Technologies,Supplier - Platform,no,0,no board found,detect,,From Linke
 SKS365 Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 SkyCity Entertainment Group,Operator,no,0,no board found,detect,,From LinkedIn follows
 SmartSoft,Supplier - Platform,no,0,no board found,detect,,From LinkedIn follows
-Snaitech,Operator - Tier 1,no,0,no board found,detect,,Flutter brand - Italy
+Snaitech,Operator - Tier 1,no,0,no board found,detect,skip,CONFIRMED: careers site redirects to the Flutter International Workday tenant - roles come through that row
 SoftConstruct,Supplier - Platform,no,0,no board found,detect,skip,"PeopleForce at peopleforce.softconstruct.com, handled by scrape_custom"
 SoftGamings,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 Sportingtech,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
@@ -152,7 +144,7 @@ Winna.com,Operator,no,0,no board found,detect,,From LinkedIn follows
 World Series of Poker,Poker,no,0,no board found,detect,,From LinkedIn follows
 WPT Global,Poker,no,0,no board found,detect,,From LinkedIn follows
 Yggdrasil,Supplier - Content,no,0,no board found,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id"
-Yolo Group,Operator / Supplier - Crypto,no,0,no board found,detect,,
+Yolo Group,Operator / Supplier - Crypto,no,0,no board found,detect,,"Live88 and Hub88 were their arms and have been removed - focus here. Currently returning nothing, board not yet identified"
 Allwyn,Lottery,no,0,skipped on purpose,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded"
 bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,KingMakers brand - roles come through the KingMakers row
 Betfred,Operator,no,0,skipped on purpose,detect,skip,"Talos ATS at betfredgroup.talosats-careers.com/job/{id}. Client-rendered SPA, needs the API finding - PARKED"
@@ -163,20 +155,20 @@ iGaming Recruitment,Recruitment agency,no,0,skipped on purpose,detect,skip,"Word
 KingMakers,Operator - Africa,no,0,skipped on purpose,detect,workable:kingmakers,Workable. Parent of bet9ja
 MERKUR Casino UK,Operator,no,0,skipped on purpose,detect,https://merkurcasinouk.wd103.myworkdayjobs.com/MCEC,"Workday. All land-based slots/arcade roles - kept so an online role would surface, the retail exclusion hides the rest. NOTE: never resolve MERKUR by slug, an earlier probe matched an Austrian insurer"
 MERKUR GAMING,Supplier - Content,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
-MERKUR GROUP,Operator,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
+MERKUR GROUP,Operator,no,0,skipped on purpose,detect,skip,"Gauselmann group. Roles at merkur.group/career apply through gauselmann.softgarden.io - SOFTGARDEN, a platform we do not support. PARKED"
 New Zealand Thoroughbred Racing Inc,Racing,no,0,skipped on purpose,detect,skip,"WRONG MATCH - slug ""new"" hit an unrelated Greenhouse board."
 PawaTech,Supplier - Platform,no,0,skipped on purpose,detect,pawatalent:careers.pawatech.com,"pawaTalent, their own recruitment software. Endpoint /api/public/positions"
 Pinnacle,Operator,no,0,skipped on purpose,detect,orangehrm:pinnacle,OrangeHRM. Uses their documented RSS feed at /recruitmentApply/jobs.rss. NOTE: never resolve Pinnacle by slug - an earlier probe matched a NZ healthcare provider
 Pragmatic Solutions,Operator,no,0,skipped on purpose,detect,skip,"DUPLICATE - shares pragmatic.teamtailor.com with Pragmatic Play, so every role was listed twice"
 PredictIt,Operator - Prediction,no,0,skipped on purpose,detect,skip,WRONG MATCH - bamboohr:predictit is a Dutch engineering firm in Delft. Needs the real board.
-Snai,Operator,no,0,skipped on purpose,detect,skip,roles appear under the Flutter International Workday tenant
+Snai,Operator,no,0,skipped on purpose,detect,skip,"CONFIRMED: their careers site redirects to flutterbe.wd3.myworkdayjobs.com/FlutterInt_External, so roles come through the Flutter International row"
 Strive Gaming,Supplier - Platform US,no,0,skipped on purpose,detect,skip,SUSPECT - breezy:strive returned a generic Laravel role; verify before re-enabling.
 STS,Operator - Poland,no,0,skipped on purpose,detect,skip,WRONG MATCH - greenhouse:sts resolved to a US plumbing company. Needs the real board.
 Sun International,Operator - Africa,no,0,skipped on purpose,detect,skip,"MCI DirectHire, mostly brick-and-mortar - deliberately not chased"
 "Super Group (Betway, Jackpot City, Spin)",Operator - Tier 1,no,0,skipped on purpose,detect,https://myhcm.wd3.myworkdayjobs.com/Betway,Super Group / Betway Workday tenant (myhcm)
-OPAP,Lottery / Operator,no,0,successfactors board found but empty,detect,successfactors:career2.successfactors.eu|opapsa,"SuccessFactors, company id opapsa (not opap)"
+OPAP,Lottery / Operator,no,0,successfactors board found but empty,detect,successfactors:career2.successfactors.eu|opapsa,"SuccessFactors, but the fetcher finds 0 jobIds - sitemap 404s and the career page is client-rendered. Token is right, the fetcher needs work"
 betPawa,Operator - Africa,no,0,workable board found but empty,detect,workable:betpawa,Workable - no openings at time of setup
-Sisal,Operator - Tier 1,no,0,workday board found but empty,detect,https://sisal.wd3.myworkdayjobs.com/sisalcorp,Workday tenant
+Sisal,Operator - Tier 1,no,0,workday board found but empty,detect,https://sisal.wd3.myworkdayjobs.com/sisalcorp,"Workday, CONFIRMED WORKING - cxs/sisal/sisalcorp returns HTTP 200 with 0 results, ie a valid board that is currently empty. The 422s in the log are fallback probes, not the failure. Italy, Morocco, Turkey"
 3 Oaks Gaming,Supplier - Content,yes,1,producing,detect,,From LinkedIn follows
 Alea,Operator,yes,6,producing,detect,,From LinkedIn follows
 Altenar,Supplier - Sportsbook,yes,22,producing,detect,,
@@ -278,7 +270,7 @@ Wildz Group,Operator,yes,1,producing,detect,teamtailor:careers.wildz.group,Teamt
 ZEAL Network,Lottery,yes,16,producing,detect,,
 Flutter Group (corporate),Operator - Tier 1,no,0,not probed yet,detect,https://flutterbe.wd3.myworkdayjobs.com/Group_External,Flutter plc group functions; third Workday tenant alongside FlutterInt and FlutterUKI
 Betway Africa,Operator - Africa,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjobs.com/Betway_Africa,Super Group; own Workday tenant
-Jumpman Gaming,Operator,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjobs.com/jumpman,"Super Group; own Workday tenant, no open roles at time of setup"
+Jumpman Gaming,Operator,no,0,not probed yet,detect,https://myhcm.wd3.myworkdayjobs.com/jumpman,"Workday, proper careers page but no open roles at time of check - keep, worth re-testing"
 ARRISE (global),Supplier - Content,no,0,not probed yet,detect,skip,"arrise.com/careers blocks bots - handled by scrape_custom; global roles across Gibraltar, Malta, Romania, Serbia, Bulgaria"
 B2Tech,Supplier - Platform,no,0,not probed yet,detect,teamtailor:careers.b2tech.com,Teamtailor on a custom domain (careers.b2tech.com) - looked like a bespoke site
 Huddle,Supplier - Content,no,0,not probed yet,detect,wordpress:huddle.tech,"WordPress + WP Job Openings plugin (no ATS). NOT apply.workable.com/huddle - that is a different Huddle, the UK document-collaboration firm"
@@ -286,3 +278,4 @@ Growe,Operator,no,0,not probed yet,detect,greenhouse_eu:growe,Greenhouse EU boar
 Careers in Racing,Racing,no,0,not probed yet,detect,skip,British Horseracing Authority official industry board; physical yard roles stripped at collection
 BetVictor (BVGroup),Operator,no,0,not probed yet,detect,hibob:bvgroup,"HiBob. NOTE subdomain is bvgroup, NOT bvg - bvg exists but is empty"
 Legend,Supplier - Content,no,0,not probed yet,detect,skip,Custom Next.js board at l1.com/jobs - scrape_custom with first_element titles
+IGT,Supplier - Content,no,0,not probed yet,detect,skip,"SuccessFactors at career2.successfactors.eu company=igtanevadaP2. PARKED - the successfactors fetcher does not work (see OPAP: fetches 180KB, finds 0 jobIds). Token ready as successfactors:career2.successfactors.eu|igtanevadaP2 once fixed"
