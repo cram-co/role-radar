@@ -268,10 +268,18 @@ _SF_CRB = re.compile(r"_s\.crb=([^\"'&\\\s]+)")
 
 
 def _sf_try_host(host, company):
+    """Uses its OWN session, not the shared one.
+
+    The shared session accumulates cookies from every board in the run — by the
+    time SuccessFactors is reached it holds a JSESSIONID that may belong to
+    Workday, plus thirty others. SAP replies "you are not authorized to access
+    the functionality you have requested", so a clean jar removes the most
+    likely cause before anything more elaborate is tried."""
+    sf = requests.Session()
     base = f"https://{host}"
     listing = f"{base}/career?company={company}"
     try:
-        r = session.get(listing, headers=AGENCY_UA, timeout=TIMEOUT)
+        r = sf.get(listing, headers=AGENCY_UA, timeout=TIMEOUT)
     except Exception as e:
         print(f"      sf {company} {host}: {type(e).__name__}")
         return []
@@ -289,7 +297,7 @@ def _sf_try_host(host, company):
             f"&navBarLevel=JOB%5FSEARCH&_s.crb={crb}")
     # load the listing page itself before calling its backend
     try:
-        rl = session.get(base + page, headers={**AGENCY_UA, "Referer": listing},
+        rl = sf.get(base + page, headers={**AGENCY_UA, "Referer": listing},
                          timeout=TIMEOUT)
         m2 = _SF_CRB.search(rl.text)
         if m2:
@@ -318,12 +326,12 @@ def _sf_try_host(host, company):
     ])
     url = (f"{base}/xi/ajax/remoting/call/plaincall/"
            f"careerJobSearchControllerProxy.getInitialJobSearchData.dwr")
-    have = sorted(session.cookies.get_dict().keys())
+    have = sorted(sf.cookies.get_dict().keys())
     if "JSESSIONID" not in have:
         print(f"      sf {company} {host}: no JSESSIONID after the page loads "
               f"(cookies: {have}) — the session was never established")
     try:
-        rp = session.post(url, data=body.encode("utf-8"), timeout=TIMEOUT, headers={
+        rp = sf.post(url, data=body.encode("utf-8"), timeout=TIMEOUT, headers={
             **AGENCY_UA,
             "Accept": "*/*",
             "Content-Type": "text/plain",
@@ -357,7 +365,7 @@ def _sf_try_host(host, company):
             body_txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", rp.text))
             print(f"         got an HTML page, title={ (t.group(1).strip() if t else '?')!r}")
             print(f"         page text: {body_txt.strip()[:200]!r}")
-            print(f"         cookies held: {sorted(session.cookies.get_dict().keys())}")
+            print(f"         cookies held: {sorted(sf.cookies.get_dict().keys())}")
         else:
             print(f"         reply began: {re.sub(chr(92)+'s+', ' ', rp.text)[:200]!r}")
     return jobs
