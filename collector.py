@@ -1008,7 +1008,7 @@ def _flatten_loc(v):
         parts = [_flatten_loc(x) for x in v]
         return "; ".join(p for p in parts if p)
     if isinstance(v, dict):
-        bits = [v.get(k) for k in ("name", "city", "state", "region", "country") if v.get(k)]
+        bits = [v.get(k) for k in ("name", "town", "city", "state", "region", "country") if v.get(k)]
         return ", ".join(str(b) for b in bits)
     return html.unescape(str(v)).strip()
 
@@ -1497,6 +1497,93 @@ def fetch_orangehrm(token):
     return out
 
 
+def fetch_talos(token):
+    """Talos360 careers sites.
+
+    The board is a client-rendered shell, but it calls a plain public JSON API
+    with no cookies, session or CSRF token at all. Each careers site is keyed by
+    a "careersSiteObfuscatedId" UUID, which is the only thing needed.
+
+    Companies can white-label onto their own domain: Betfred sit on
+    betfredgroup.talosats-careers.com while UK Tote use careers.uktotegroup.com,
+    but the page shells are byte-identical and both hit the same API.
+
+    Token is 'uuid|host' — the host is only used to build job links, e.g.
+    'f08b3d92-b104-43d5-bb6e-266542f8affa|careers.uktotegroup.com'."""
+    site_id, _, host = token.partition("|")
+    site_id = site_id.strip()
+    host = (host or "").strip().replace("https://", "").rstrip("/")
+    base = f"https://{host}" if host else ""
+
+    try:
+        r = _request("POST", "https://api-careers-sites.talos360.com/api/careerssite/vacancies/search",
+                     json={"careersSiteObfuscatedId": site_id, "whereCriteria": None,
+                           "metadataFilters": [], "preFilters": [], "siteType": "External"},
+                     headers={**AGENCY_UA, "Accept": "application/json, text/plain, */*",
+                              "Content-Type": "application/json",
+                              "Origin": base or "https://careers.uktotegroup.com",
+                              "Referer": (base or "https://careers.uktotegroup.com") + "/"})
+    except Exception as e:
+        print(f"      talos {site_id[:8]}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      talos {site_id[:8]}: HTTP {r.status_code}")
+        return []
+    try:
+        d = r.json()
+    except Exception:
+        print(f"      talos {site_id[:8]}: 200 but not JSON")
+        return []
+
+    items = _talos_items(d)
+    if not items:
+        shape = (f"dict keys {list(d)[:10]}" if isinstance(d, dict)
+                 else f"{type(d).__name__} len {len(d) if hasattr(d, '__len__') else '?'}")
+        print(f"      talos {site_id[:8]}: 200 but nothing extracted — payload is {shape}")
+        return []
+
+    out, seen = [], set()
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        title = html.unescape(str(_pick(j, "title", "vacancyTitle", "jobTitle", "name") or "")).strip()
+        if not title or _MARKUP_JUNK.search(title):
+            continue
+        jid = str(_pick(j, "id", "vacancyId", "jobId", "reference", "obfuscatedId") or "").strip()
+        url = _pick(j, "url", "applyUrl", "link")
+        if not url:
+            url = f"{base}/job/{jid}" if base and jid else base
+        if not url or url in seen:
+            continue
+        seen.add(url)
+        out.append({
+            "title": title,
+            "location": _flatten_loc(_pick(j, "location", "locations", "town", "city", "region")),
+            "department": str(_pick(j, "department", "category", "function") or ""),
+            "url": url,
+            "posted_at": _pick(j, "publishedDate", "datePosted", "createdDate", "liveDate"),
+        })
+    print(f"      talos {site_id[:8]}: {len(out)} roles")
+    return out
+
+
+def _talos_items(d):
+    """Find the vacancy list wherever it sits in the payload."""
+    if isinstance(d, list):
+        return d
+    if not isinstance(d, dict):
+        return []
+    for k in ("vacancies", "results", "data", "items", "jobs", "records", "searchResults"):
+        v = d.get(k)
+        if isinstance(v, list) and v:
+            return v
+        if isinstance(v, dict):                 # sometimes nested one deeper
+            for k2 in ("vacancies", "results", "data", "items"):
+                if isinstance(v.get(k2), list) and v[k2]:
+                    return v[k2]
+    return []
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json"""
     d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
@@ -1784,6 +1871,7 @@ FETCHERS = {
     "avature": fetch_avature,
     "dayforce": fetch_dayforce,
     "orangehrm": fetch_orangehrm,
+    "talos": fetch_talos,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
