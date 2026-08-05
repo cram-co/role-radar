@@ -1573,7 +1573,9 @@ def _talos_items(d):
         return d
     if not isinstance(d, dict):
         return []
-    for k in ("vacancies", "results", "data", "items", "jobs", "records", "searchResults"):
+    # careersSiteVacancies is the real key, named by the 5 Aug run's diagnostic
+    for k in ("careersSiteVacancies", "vacancies", "results", "data", "items",
+              "jobs", "records", "searchResults"):
         v = d.get(k)
         if isinstance(v, list) and v:
             return v
