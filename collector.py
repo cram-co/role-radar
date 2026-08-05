@@ -875,6 +875,19 @@ def fetch_wordpress(token):
     return []
 
 
+def _flatten_loc(v):
+    """Locations arrive as a string, a dict, or a list of either."""
+    if v is None:
+        return ""
+    if isinstance(v, list):
+        parts = [_flatten_loc(x) for x in v]
+        return "; ".join(p for p in parts if p)
+    if isinstance(v, dict):
+        bits = [v.get(k) for k in ("name", "city", "state", "region", "country") if v.get(k)]
+        return ", ".join(str(b) for b in bits)
+    return html.unescape(str(v)).strip()
+
+
 def fetch_hibob(token):
     """HiBob careers boards at {token}.careers.hibob.com.
 
@@ -906,9 +919,16 @@ def fetch_hibob(token):
 
     # the payload has been seen as a bare list and as a wrapper — accept both
     items = d if isinstance(d, list) else (
-        d.get("jobAds") or d.get("data") or d.get("items") or d.get("jobs") or [])
+        d.get("jobAds") or d.get("data") or d.get("items") or d.get("jobs")
+        or d.get("results") or d.get("positions") or d.get("openings") or [])
     if not isinstance(items, list):
-        print(f"      hibob {token}: unexpected payload shape {list(d)[:6]}")
+        print(f"      hibob {token}: unexpected payload shape {list(d)[:8]}")
+        return []
+    if not items:
+        # say what came back, so one more run identifies the real shape
+        shape = (f"dict keys {list(d)[:10]}" if isinstance(d, dict)
+                 else f"{type(d).__name__} len {len(d) if hasattr(d,'__len__') else '?'}")
+        print(f"      hibob {token}: 200 but nothing extracted — payload is {shape}")
         return []
 
     out = []
@@ -987,12 +1007,12 @@ def fetch_pawatalent(token):
         title = html.unescape(str(_pick(j, "title", "name") or "")).strip()
         if not title:
             continue
-        loc = _pick(j, "location", "city") or ""
-        if _pick(j, "remote") is True and "remote" not in str(loc).lower():
+        loc = _flatten_loc(_pick(j, "location", "city", "locations"))
+        if _pick(j, "remote") is True and "remote" not in loc.lower():
             loc = f"{loc}, Remote".strip(", ")
         out.append({
             "title": title,
-            "location": html.unescape(str(loc)).strip(),
+            "location": loc,
             "department": str(_pick(j, "department", "team") or ""),
             "url": f"{base}/job/{_pick(j, 'id') or ''}",
             "posted_at": _pick(j, "createdAt", "publishedAt"),
@@ -1470,20 +1490,33 @@ def _links_first_element(html_text, base, path_marker):
         r"<(h[1-6]|p|div|span|strong|b)\b[^>]*>(.*?)</\1>", re.S | re.I)
     out, seen = [], set()
     for href, inner in rx.findall(html_text):
-        m = inner_block.search(inner)
-        raw = m.group(2) if m else inner
-        title = html.unescape(re.sub(r"<[^>]+>", " ", raw))
-        title = re.sub(r"\s+", " ", title).strip()
+        blocks = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", b[1]))).strip()
+                  for b in inner_block.findall(inner)]
+        blocks = [b for b in blocks if b]
+        if blocks:
+            title = blocks[0]
+            rest = blocks[1:]
+        else:
+            title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
+            rest = []
         if not title or len(title) < 3 or len(title) > 140:
             continue
         if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
             continue
+        # the remaining blocks are location, department and work type in some
+        # order; the one naming a place is whichever isn't an employment type
+        loc = next((b for b in rest if not _EMPLOYMENT_TYPE.fullmatch(b)), "")
         url = href if href.startswith("http") else base.rstrip("/") + href
         if url in seen:
             continue
         seen.add(url)
-        out.append((url, title))
+        out.append((url, title, loc))
     return out
+
+
+_EMPLOYMENT_TYPE = re.compile(
+    r"(full[- ]?time|part[- ]?time|contract|permanent|temporary|intern(ship)?|"
+    r"freelance|remote|hybrid|on[- ]?site|casual)", re.I)
 
 
 def _links_with_titles(html_text, base, path_marker):
@@ -2237,11 +2270,11 @@ def scrape_custom(name):
             if cfg.get("first_element"):
                 found = _links_first_element(r.text, base, marker)
                 new_n = 0
-                for u, t in found:
+                for u, t, loc in found:
                     if u in seen:
                         continue
                     seen.add(u)
-                    out.append({"title": t, "location": "", "department": "",
+                    out.append({"title": t, "location": loc, "department": "",
                                 "url": u, "posted_at": None})
                     new_n += 1
                 if new_n:
