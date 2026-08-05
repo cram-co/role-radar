@@ -445,6 +445,22 @@ function cleanLoc(loc){
   return [...new Set(parts)].join(", ");
 }
 
+function bucketsOf(loc){
+  if(!loc || !/[a-z0-9]/i.test(String(loc))) return ["Inside the listing"];
+  const raw = String(loc);
+  // several boards separate multiple sites with semicolons
+  if(raw.includes(";")){
+    const parts = raw.split(";").map(p => p.trim()).filter(Boolean);
+    const set = new Set();
+    for(const p of parts){ const b = bucket(p); if(b) set.add(b); }
+    // it belongs to every country named, AND reads as multi-site
+    if(set.size > 1) set.add("Multiple locations");
+    return set.size ? [...set] : [bucket(raw)];
+  }
+  const b = bucket(raw);
+  return b ? [b] : [];
+}
+
 function bucket(loc){
   // TalentBet emit ", , " — passes a plain emptiness check but names nowhere
   if(!loc || !/[a-z0-9]/i.test(String(loc))) return "Inside the listing";
@@ -594,7 +610,7 @@ function render(){
   const leadOnly = document.getElementById("lead").checked;
   let out = JOBS;
   if(leadOnly) out = out.filter(j => SENIORITY.test(j.t||""));
-  if(selectedLocs.length) out = out.filter(j => selectedLocs.includes(bucket(j.l)));
+  if(selectedLocs.length) out = out.filter(j => bucketsOf(j.l).some(b => selectedLocs.includes(b)));
   if(excluded.size){
     out = out.filter(j => !excluded.has(groupOf(j.t)));
   }
@@ -715,7 +731,7 @@ function buildExcludes(){
 
 function buildLocations(){
   LOC_COUNTS = {};
-  JOBS.forEach(j => { const b = bucket(j.l); if(b) LOC_COUNTS[b] = (LOC_COUNTS[b]||0)+1; });
+  JOBS.forEach(j => { for(const b of bucketsOf(j.l)) LOC_COUNTS[b] = (LOC_COUNTS[b]||0)+1; });
   // keep remembered picks even if this run has none of them
   selectedLocs = selectedLocs.filter(k => k in LOC_COUNTS || true);
   drawLocations();
