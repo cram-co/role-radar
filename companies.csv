@@ -131,7 +131,7 @@ SoftConstruct,Supplier - Platform,no,0,no board found,detect,skip,"PeopleForce a
 SoftGamings,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
 Sportingtech,Sports/Prediction,no,0,no board found,detect,,From LinkedIn follows
 Sportium,Operator,no,0,no board found,detect,,From LinkedIn follows
-SportPesa,Operator,no,0,no board found,detect,,From LinkedIn follows
+SportPesa,Operator,no,0,no board found,detect,skip,LinkedIn only - no public ATS or careers board. Wont be found
 SPRIBE,Supplier - Content,no,0,no board found,detect,skip,"hurma.work, handled by scrape_custom"
 The Jockey Club,Racing - UK,no,0,no board found,detect,,
 The Lottery Corporation,Lottery - Australia,no,0,no board found,detect,,
@@ -160,18 +160,18 @@ Yggdrasil,Supplier - Content,no,0,no board found,detect,smartrecruiters:Yggdrasi
 Yolo Group,Operator / Supplier - Crypto,no,0,no board found,detect,,
 Allwyn,Lottery,no,0,skipped on purpose,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded"
 bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,"in-house careers site, handled by scrape_custom"
-Betfred,Operator,no,0,skipped on purpose,detect,skip,"TalosATS client-rendered app, handled by scrape_betfred"
+Betfred,Operator,no,0,skipped on purpose,detect,skip,"Talos ATS at betfredgroup.talosats-careers.com/job/{id}. Client-rendered SPA, needs the API finding - PARKED"
 Betika,Operator,no,0,skipped on purpose,detect,skip,"SeamlessHiring, handled by scrape_custom"
 Cirsa,Operator - Spain/LatAm,no,0,skipped on purpose,detect,skip,"Allibo joblink board, handled by scrape_custom"
 Fortuna Entertainment Group,Operator - CEE,no,0,skipped on purpose,detect,skip," | bespoke Azure Easy Apply app, handled by scrape_fortuna"
 iGaming Recruitment,Recruitment agency,no,0,skipped on purpose,detect,skip,"WordPress jobs board, handled by scrape_custom"
-KingMakers,Operator - Africa,no,0,skipped on purpose,detect,skip,same Workable board as BetKing
-MERKUR Casino UK,Operator,no,0,skipped on purpose,detect,skip,"WRONG MATCH - merkur.recruitee.com is Merkur Versicherung, an Austrian insurance company (life insurance, property, construction)"
+KingMakers,Operator - Africa,no,0,skipped on purpose,detect,workable:kingmakers,Workable. Parent of bet9ja
+MERKUR Casino UK,Operator,no,0,skipped on purpose,detect,https://merkurcasinouk.wd103.myworkdayjobs.com/MCEC,"Workday. All land-based slots/arcade roles - kept so an online role would surface, the retail exclusion hides the rest. NOTE: never resolve MERKUR by slug, an earlier probe matched an Austrian insurer"
 MERKUR GAMING,Supplier - Content,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
 MERKUR GROUP,Operator,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
 New Zealand Thoroughbred Racing Inc,Racing,no,0,skipped on purpose,detect,skip,"WRONG MATCH - slug ""new"" hit an unrelated Greenhouse board."
 PawaTech,Supplier - Platform,no,0,skipped on purpose,detect,pawatalent:careers.pawatech.com,"pawaTalent, their own recruitment software. Endpoint /api/public/positions"
-Pinnacle,Operator,no,0,skipped on purpose,detect,skip,WRONG MATCH - bamboohr:pinnacle is Pinnacle Midlands Health Network (NZ healthcare). Needs the real sportsbook board.
+Pinnacle,Operator,no,0,skipped on purpose,detect,orangehrm:pinnacle,OrangeHRM. Uses their documented RSS feed at /recruitmentApply/jobs.rss. NOTE: never resolve Pinnacle by slug - an earlier probe matched a NZ healthcare provider
 Pragmatic Solutions,Operator,no,0,skipped on purpose,detect,skip,"DUPLICATE - shares pragmatic.teamtailor.com with Pragmatic Play, so every role was listed twice"
 PredictIt,Operator - Prediction,no,0,skipped on purpose,detect,skip,WRONG MATCH - bamboohr:predictit is a Dutch engineering firm in Delft. Needs the real board.
 Snai,Operator,no,0,skipped on purpose,detect,skip,roles appear under the Flutter International Workday tenant

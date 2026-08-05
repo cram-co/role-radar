@@ -1092,8 +1092,7 @@ def fetch_avature(token):
     path = f"/{culture}/careers/SearchJobs" if culture else "/careers/SearchJobs"
 
     job_rx = re.compile(
-        r'href="([^"]*?/careers/JobDetail/[^"?#]+)"[^>]*>(.*?)</a>(.{0,600}?)(?=<h[23]|</li>|$)',
-        re.S | re.I)
+        r'href="([^"]*?/careers/JobDetail/[^"?#]+)"[^>]*>(.*?)</a>', re.S | re.I)
     out, seen = [], set()
     per, offset = 50, 0
     for _ in range(12):                      # 600 roles is more than any tenant here
@@ -1107,7 +1106,16 @@ def fetch_avature(token):
             print(f"      avature {tenant}: HTTP {r.status_code} at offset {offset}")
             break
         page_new = 0
-        for href, inner, tail in job_rx.findall(_STYLE_SCRIPT.sub(" ", r.text)):
+        body = _STYLE_SCRIPT.sub(" ", r.text)
+        matches = list(job_rx.finditer(body))
+        if not matches:
+            print(f"      avature {tenant}: 200 ({len(body)} bytes) but no /careers/JobDetail/ links")
+            print("        " + _href_shapes(body))
+        for i, mt in enumerate(matches):
+            href, inner = mt.group(1), mt.group(2)
+            # everything between this link and the next is where the location sits
+            nxt = matches[i + 1].start() if i + 1 < len(matches) else min(mt.end() + 800, len(body))
+            tail = body[mt.end():nxt][:800]
             title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
             if not title or len(title) < 3 or len(title) > 140:
                 continue
@@ -1177,9 +1185,13 @@ def fetch_dayforce(token):
                    "cultureCode": culture, "distanceUnit": 0,
                    "paginationStart": start}
         try:
+            portal = f"https://jobs.dayforcehcm.com/{culture}/{ns}/{board}"
             r = _request("POST", url, json=payload,
                          headers={**AGENCY_UA, "Accept": "application/json",
-                                  "Content-Type": "application/json"})
+                                  "Content-Type": "application/json",
+                                  "Origin": "https://jobs.dayforcehcm.com",
+                                  "Referer": portal,
+                                  "X-Requested-With": "XMLHttpRequest"})
         except Exception as e:
             print(f"      dayforce {ns}: {type(e).__name__}")
             break
@@ -1228,6 +1240,69 @@ def fetch_dayforce(token):
         time.sleep(REQUEST_DELAY)
     if out:
         print(f"      dayforce {ns}: {len(out)} roles")
+    return out
+
+
+def fetch_orangehrm(token):
+    """OrangeHRM publishes vacancies as RSS at /recruitmentApply/jobs.rss —
+    documented by them as the way to syndicate openings to websites and job
+    boards, so it's the intended route rather than scraping the app.
+
+    Token is the host: "pinnacle" or "pinnacle.orangehrmlive.com"."""
+    base = (f"https://{token}.orangehrmlive.com" if "." not in token
+            else (token if token.startswith("http") else f"https://{token}"))
+    try:
+        r = _request("GET", f"{base}/recruitmentApply/jobs.rss",
+                     headers={**AGENCY_UA, "Accept": "application/rss+xml, application/xml"})
+    except Exception as e:
+        print(f"      orangehrm {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      orangehrm {token}: HTTP {r.status_code}")
+        return []
+
+    items = re.findall(r"<item>(.*?)</item>", r.text, re.S | re.I)
+    if not items:
+        print(f"      orangehrm {token}: 200 but no <item> in the feed")
+        return []
+
+    def tag(block, name, keep_breaks=False):
+        m = re.search(rf"<{name}[^>]*>(.*?)</{name}>", block, re.S | re.I)
+        if not m:
+            return ""
+        v = re.sub(r"<!\[CDATA\[(.*?)\]\]>", r"\1", m.group(1), flags=re.S)
+        v = html.unescape(v)
+        if keep_breaks:
+            # mark block boundaries before stripping, so "Location: Curacao"
+            # doesn't run into the next paragraph
+            v = re.sub(r"</(p|div|li|h[1-6])\s*>|<br\s*/?>", "\n", v, flags=re.I)
+        v = re.sub(r"<[^>]+>", " ", v)
+        v = re.sub(r"[ \t]+", " ", v)
+        return v.strip() if keep_breaks else re.sub(r"\s+", " ", v).strip()
+
+    out, seen = [], set()
+    for block in items:
+        title = tag(block, "title")
+        if not title or _MARKUP_JUNK.search(title):
+            continue
+        link = tag(block, "link") or base
+        if link in seen:
+            continue
+        seen.add(link)
+        # the description often carries "Location: X" or similar
+        desc = tag(block, "description", keep_breaks=True)
+        loc = ""
+        m = re.search(r"(?:location|city|based in)\s*[:\-]\s*([^\n.,;|]{2,40})", desc, re.I)
+        if m:
+            loc = m.group(1).strip()
+        out.append({
+            "title": title,
+            "location": loc,
+            "department": tag(block, "category"),
+            "url": link,
+            "posted_at": tag(block, "pubDate") or None,
+        })
+    print(f"      orangehrm {token}: {len(out)} roles")
     return out
 
 
@@ -1517,6 +1592,7 @@ FETCHERS = {
     "pinpoint": fetch_pinpoint,
     "avature": fetch_avature,
     "dayforce": fetch_dayforce,
+    "orangehrm": fetch_orangehrm,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
