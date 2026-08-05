@@ -287,6 +287,17 @@ def _sf_try_host(host, company):
 
     page = (f"/career?company={company}&career%5Fns=job%5Flisting%5Fsummary"
             f"&navBarLevel=JOB%5FSEARCH&_s.crb={crb}")
+    # load the listing page itself before calling its backend
+    try:
+        rl = session.get(base + page, headers={**AGENCY_UA, "Referer": listing},
+                         timeout=TIMEOUT)
+        m2 = _SF_CRB.search(rl.text)
+        if m2:
+            crb = m2.group(1)          # the listing page may issue a fresher token
+            page = (f"/career?company={company}&career%5Fns=job%5Flisting%5Fsummary"
+                    f"&navBarLevel=JOB%5FSEARCH&_s.crb={crb}")
+    except Exception:
+        pass
     body = "\n".join([
         "callCount=1",
         f"page={page}",
@@ -330,7 +341,9 @@ def _sf_try_host(host, company):
     if jobs:
         print(f"      sf {company} {host}: {len(jobs)} roles")
     else:
+        snippet = re.sub(r"\s+", " ", rp.text)[:220]
         print(f"      sf {company} {host}: DWR 200, {len(rp.text)} bytes but no titles parsed")
+        print(f"         reply began: {snippet!r}")
     return jobs
 
 
