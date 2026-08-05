@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-05T01:56:41.793190+00:00",
- "job_count": 6462,
+ "generated_at": "2026-08-05T07:09:24.202107+00:00",
+ "job_count": 6494,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -20,6 +20,17 @@
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Sr-Technical-Lead---Workday_R0017690-1",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
+   "company": "Aristocrat Interactive",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Tax Manager APAC",
+   "location": "North Ryde, NSW, AU",
+   "department": "",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/North-Ryde-NSW-AU/Tax-Manager-APAC_R0022183-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "Aristocrat Interactive",
    "ats": "workday",
    "source": "collector"
@@ -1455,12 +1466,12 @@
    "source": "collector"
   },
   {
-   "title": "Senior Game Explorer",
-   "location": "Krakow, Poland",
+   "title": "",
+   "location": "",
    "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Krakow-Poland/Senior-Game-Explorer_R0021662",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite",
    "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
+   "posted_text": "",
    "company": "Aristocrat Interactive",
    "ats": "workday",
    "source": "collector"
@@ -1752,17 +1763,6 @@
    "source": "collector"
   },
   {
-   "title": "Associate Principal QA Engineer - Game Testing",
-   "location": "Noida, UP, IN",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Associate-Principal-QA-Engineer---Game-Testing_R0021309",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Principal Engineer",
    "location": "Franklin, TN, US",
    "department": "",
@@ -1923,6 +1923,17 @@
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Sr-Technical-Lead---Workday_R0017690-1",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
+   "company": "Aristocrat Interactive",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Tax Manager APAC",
+   "location": "North Ryde, NSW, AU",
+   "department": "",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/North-Ryde-NSW-AU/Tax-Manager-APAC_R0022183-1",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "Aristocrat Interactive",
    "ats": "workday",
    "source": "collector"
@@ -2108,17 +2119,6 @@
    "location": "Bulgaria - Sofia",
    "department": "",
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Bulgaria---Sofia/QA-Engineer_R0022088",
-   "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Tech Lead - SFDC Developer (CPQ)",
-   "location": "Noida, UP, IN",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Tech-Lead---SFDC-Developer_R0021871",
    "posted_at": null,
    "posted_text": "Posted 4 Days Ago",
    "company": "Aristocrat Interactive",
@@ -21930,17 +21930,6 @@
    "source": "collector"
   },
   {
-   "title": "EDD Specialist HVC",
-   "location": "Cape Town",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Priority-Engagement-Specialist_JR12447",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "DigiOutsource",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Financial Accountant: SPIN",
    "location": "Cape Town",
    "department": "",
@@ -22346,6 +22335,206 @@
    "title": "Customer Service Representative",
    "location": "",
    "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41502",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41503",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Team Leader",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Team-Leader/41474",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41499",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41501",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "General Ledger Analyst",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/General-Ledger-Analyst/41491",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41463",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Enterprise Risk Manager",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Senior-Enterprise-Risk-Manager/41455",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41458",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41460",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Operational Assurance Manager - 12m FTC",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Operational-Assurance-Manager-12m-FTC/41444",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41435",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41418",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41419",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Traffic Manager",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Traffic-Manager/41211",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Video & Sound Editor",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Video-Sound-Editor/41220",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41408",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41409",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41400",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41392",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
    "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41375",
    "posted_at": null,
    "company": "evoke",
@@ -22387,6 +22576,156 @@
    "location": "",
    "department": "",
    "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Team-Leader/41335",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41320",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41308",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Finance Systems Lead",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Finance-Systems-Lead/41303",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Area Operations Manager",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Area-Operations-Manager/41267",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Cloud Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Cloud-Engineer/41278",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Controls Testing Manager - Technology - 6m FTC",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Controls-Testing-Manager-Technology-6m-FTC/41259",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41241",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Econometrician",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Senior-Econometrician/41246",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41224",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Team Manager - Controllership",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Senior-Team-Manager-Controllership/41236",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Cloud Engineer - AI",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Cloud-Engineer-AI/41164",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41155",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Service Representative",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/40975",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Solutions Architect - Team Lead",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Solutions-Architect-Team-Lead/40371",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
+   "title": "Enterprise Architect",
+   "location": "",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Enterprise-Architect/40354",
    "posted_at": null,
    "company": "evoke",
    "ats": "avature",
@@ -22748,16 +23087,6 @@
    "department": "Trackside",
    "url": "https://apply.workable.com/entaingroup/j/3180D87339/",
    "posted_at": "2026-07-14T00:00:00.000Z",
-   "company": "Neds",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Marketing Operations Manager",
-   "location": "Brisbane, Queensland, Australia",
-   "department": "Marketing & Content",
-   "url": "https://apply.workable.com/entaingroup/j/5674A84E75/",
-   "posted_at": "2026-07-10T00:00:00.000Z",
    "company": "Neds",
    "ats": "workable",
    "source": "collector"
@@ -28145,106 +28474,6 @@
    "source": "collector"
   },
   {
-   "title": "People Partner (South Africa & Zambia)",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "KingMakers",
-   "url": "https://apply.workable.com/kingmakers/j/DB69E08522/",
-   "posted_at": "2026-08-04T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Product Manager - Agency",
-   "location": "Lagos, Lagos, Nigeria",
-   "department": "BetKing",
-   "url": "https://apply.workable.com/kingmakers/j/FEFE367AF9/",
-   "posted_at": "2026-08-03T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Trade Marketing Specialist - Agency",
-   "location": "Lagos, Lagos, Nigeria",
-   "department": "BetKing",
-   "url": "https://apply.workable.com/kingmakers/j/260D8A2864/",
-   "posted_at": "2026-07-31T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Performance Marketing Specialist",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "KingMakers",
-   "url": "https://apply.workable.com/kingmakers/j/9B6879D8EE/",
-   "posted_at": "2026-07-30T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Backend Software Engineer",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "KingMakers",
-   "url": "https://apply.workable.com/kingmakers/j/C3539E9A4A/",
-   "posted_at": "2026-07-29T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Casino Specialist",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "KingMakers",
-   "url": "https://apply.workable.com/kingmakers/j/A64BA8EE7B/",
-   "posted_at": "2026-07-28T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Principal Backend Software Engineer",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "KingMakers",
-   "url": "https://apply.workable.com/kingmakers/j/B01D5686AE/",
-   "posted_at": "2026-07-23T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Principal Front End Software Engineer",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "KingMakers",
-   "url": "https://apply.workable.com/kingmakers/j/97202B999F/",
-   "posted_at": "2026-07-23T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "3D Motion Designer",
-   "location": "Lagos, Lagos, Nigeria",
-   "department": "BetKing",
-   "url": "https://apply.workable.com/kingmakers/j/E5A5650A2D/",
-   "posted_at": "2026-07-22T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
-   "title": "Social Media Specialist (SuperSportBet)",
-   "location": "Cape Town, Western Cape, South Africa",
-   "department": "SuperSportBet",
-   "url": "https://apply.workable.com/kingmakers/j/C78243C848/",
-   "posted_at": "2026-07-22T00:00:00.000Z",
-   "company": "BetKing",
-   "ats": "workable",
-   "source": "collector"
-  },
-  {
    "title": "Director, AI Platform and Portfolio Delivery",
    "location": "3 Locations",
    "department": "",
@@ -28653,20 +28882,20 @@
   },
   {
    "title": "Backend Software Engineer Team Lead",
-   "location": "Stockholm",
+   "location": "Malaga",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073934",
-   "posted_at": "2026-07-20T02:17:24-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059576",
+   "posted_at": "2026-07-20T02:17:23-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Backend Software Engineer Team Lead",
-   "location": "Malaga",
+   "location": "Stockholm",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8059576",
-   "posted_at": "2026-07-20T02:17:23-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073934",
+   "posted_at": "2026-07-20T02:17:24-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28742,6 +28971,16 @@
    "source": "collector"
   },
   {
+   "title": "CRM Project Manager \u2013 Gamification",
+   "location": "Malta",
+   "department": "Commercial",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7923151",
+   "posted_at": "2026-05-26T09:13:00-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Crypto Business Development Manager ",
    "location": "Malta",
    "department": "Business Development",
@@ -28765,8 +29004,8 @@
    "title": " Customer Service Agent - Estonian Speaking",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002345",
-   "posted_at": "2026-06-12T06:37:28-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002347",
+   "posted_at": "2026-06-12T06:37:25-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28775,8 +29014,8 @@
    "title": " Customer Service Agent - Estonian Speaking",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002347",
-   "posted_at": "2026-06-12T06:37:25-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8002345",
+   "posted_at": "2026-06-12T06:37:28-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28795,8 +29034,8 @@
    "title": "Danish speaking - Customer Service (inc relocation to Malta)",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839570",
-   "posted_at": "2025-04-28T05:49:07-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839573",
+   "posted_at": "2025-04-28T05:49:10-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28815,8 +29054,8 @@
    "title": "Danish speaking - Customer Service (inc relocation to Malta)",
    "location": "Malta",
    "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839573",
-   "posted_at": "2025-04-28T05:49:10-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/6839570",
+   "posted_at": "2025-04-28T05:49:07-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28833,16 +29072,6 @@
   },
   {
    "title": "DevOps Engineer",
-   "location": "Budapest",
-   "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7984465",
-   "posted_at": "2026-06-10T04:53:02-04:00",
-   "company": "Betsson Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "DevOps Engineer",
    "location": "Malta",
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/7984463",
@@ -28852,11 +29081,11 @@
    "source": "collector"
   },
   {
-   "title": "DevOps Engineer - Player Account Management",
-   "location": "Athens",
+   "title": "DevOps Engineer",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8081413",
-   "posted_at": "2026-07-29T03:22:53-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7984465",
+   "posted_at": "2026-06-10T04:53:02-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28877,6 +29106,16 @@
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/8093761",
    "posted_at": "2026-07-29T04:39:04-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "DevOps Engineer - Player Account Management",
+   "location": "Athens",
+   "department": "Product Development",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8081413",
+   "posted_at": "2026-07-29T03:22:53-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -28933,9 +29172,9 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957204",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
    "posted_at": "2026-05-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -28953,9 +29192,9 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957204",
    "posted_at": "2026-05-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -28983,16 +29222,6 @@
   },
   {
    "title": "Frontend Software Engineer",
-   "location": "Budapest",
-   "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071571",
-   "posted_at": "2026-07-17T10:15:02-04:00",
-   "company": "Betsson Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Frontend Software Engineer",
    "location": "Malta",
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/8071613",
@@ -29007,6 +29236,16 @@
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/8071617",
    "posted_at": "2026-07-17T10:15:03-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Frontend Software Engineer",
+   "location": "Budapest",
+   "department": "Product Development",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071571",
+   "posted_at": "2026-07-17T10:15:02-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29173,20 +29412,20 @@
   },
   {
    "title": "Machine Learning Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7814134",
-   "posted_at": "2026-04-14T04:33:28-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7721239",
+   "posted_at": "2026-04-01T03:27:20-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Machine Learning Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7721239",
-   "posted_at": "2026-04-01T03:27:20-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7814134",
+   "posted_at": "2026-04-14T04:33:28-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29363,20 +29602,20 @@
   },
   {
    "title": "Player Management - Backend Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8053098",
-   "posted_at": "2026-07-14T09:59:14-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7092345",
+   "posted_at": "2025-07-24T08:56:10-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Player Management - Backend Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7092345",
-   "posted_at": "2025-07-24T08:56:10-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8053098",
+   "posted_at": "2026-07-14T09:59:14-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29443,9 +29682,9 @@
   },
   {
    "title": "Salesforce Marketing Cloud Developer ",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074165",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074160",
    "posted_at": "2026-07-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -29453,9 +29692,9 @@
   },
   {
    "title": "Salesforce Marketing Cloud Developer ",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074160",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074165",
    "posted_at": "2026-07-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -29523,20 +29762,20 @@
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
-   "posted_at": "2026-07-21T03:38:56-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
+   "posted_at": "2026-07-21T03:38:54-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
-   "posted_at": "2026-07-21T03:38:54-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
+   "posted_at": "2026-07-21T03:38:56-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29613,10 +29852,10 @@
   },
   {
    "title": "Site Reliability Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823808",
-   "posted_at": "2026-04-17T05:10:12-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823478",
+   "posted_at": "2026-04-17T05:10:11-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29633,10 +29872,10 @@
   },
   {
    "title": "Site Reliability Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823478",
-   "posted_at": "2026-04-17T05:10:11-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823808",
+   "posted_at": "2026-04-17T05:10:12-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29653,20 +29892,20 @@
   },
   {
    "title": "Sportsbook - Backend Software Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071581",
-   "posted_at": "2026-07-20T03:28:05-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073961",
+   "posted_at": "2026-07-20T03:28:06-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Sportsbook - Backend Software Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8073961",
-   "posted_at": "2026-07-20T03:28:06-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071581",
+   "posted_at": "2026-07-20T03:28:05-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -29723,9 +29962,9 @@
   },
   {
    "title": "Sportsbook - Performance Architect",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735145",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735116",
    "posted_at": "2026-03-23T19:00:01-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -29743,9 +29982,9 @@
   },
   {
    "title": "Sportsbook - Performance Architect",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735116",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7735145",
    "posted_at": "2026-03-23T19:00:01-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -30977,7 +31216,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Senior-Associate--Risk-Enablement_JR14707-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -30988,7 +31227,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Canada/Software-Engineer--AI-Platform_JR14759-2",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -30999,7 +31238,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Bulgaria/Senior-Site-Reliability-Engineer--SRE-Infrastructure-_JR14751-2",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31010,7 +31249,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Procurement-Business-Partner--Marketing_JR14791-2",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31021,7 +31260,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Procurement-Business-Partner--Technology_JR14789-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31032,7 +31271,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Procurement-Analyst--Operations_JR14792-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31043,7 +31282,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Procurement-Analyst--Marketing_JR14790-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31054,7 +31293,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Procurement-Analyst--Technology_JR14788-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31065,7 +31304,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Player-Development-Executive_JR14731-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31076,7 +31315,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/VIP-Host_JR14730-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31087,7 +31326,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Plovdiv-BG/Finance-Data-Analyst_JR14357-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31098,7 +31337,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Plovdiv-BG/Sportsbook-Promo-Ops-Associate_JR14565-2",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31109,7 +31348,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Database-Reliability-Engineer_JR14784-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31120,7 +31359,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Manager--HR-Systems_JR14740-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31131,7 +31370,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Data-Science-Engineer_JR14290-1",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31142,7 +31381,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Canada/Senior-Data-Science-Engineer--Personalization_JR14647-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31153,7 +31392,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Canada/Senior-Data-Engineer_JR14471-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31164,7 +31403,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Lead-Software-Engineer--Backend_JR14687",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31175,7 +31414,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Ukraine/Lead-NetOps-Engineer_JR14563-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31186,7 +31425,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Nashua-NH/Security-Technology-Engineer_JR14036-1",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31197,7 +31436,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Hoboken-NJ/VIP-Casino-Host--Hoboken_JR14701-1",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31208,7 +31447,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Associate-Corporate-Counsel--Marketing--Bilingual-_JR14659-2",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31219,7 +31458,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Accountant_JR14746",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31230,7 +31469,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/VIP-Host--Predictions_JR14709-1",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31241,7 +31480,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/VIP-Lifecycle-Associate--Predictions_JR14711-1",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31252,7 +31491,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/New-Business-Executive--Predictions_JR14743-1",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31263,7 +31502,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Sofia-BG/DKeX-Market-Ops-Specialist--On-shifts-_JR14469",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31274,7 +31513,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Marketing-Technology-Specialist_JR14345-1",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31285,7 +31524,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Sofia-BG/Senior-Lead-Technical-Operations-Engineer--IT---Enterprise-Infrastructure_JR14619-4",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31296,7 +31535,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/New-York-NY/Prediction-Markets-Manager_JR14682",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31307,7 +31546,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/London-UK/Senior-Data-Science-Engineer_JR14490-1",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31318,7 +31557,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Bulgaria/Lead-iOS-Engineer_JR14684-2",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31329,7 +31568,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/North-Andover-MA/Operations-Associate--Jackpocket--PM-Shift-_JR14739-1",
    "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
+   "posted_text": "Posted 13 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31340,7 +31579,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/North-Andover-MA/Operations-Associate--Jackpocket--AM-Shift-_JR14736-1",
    "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
+   "posted_text": "Posted 13 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31351,7 +31590,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/VIP-Host--Arizona_JR14667-1",
    "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
+   "posted_text": "Posted 13 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31362,7 +31601,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Las-Vegas-NV/Lifecycle-Associate_JR14590-2",
    "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
+   "posted_text": "Posted 13 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31373,7 +31612,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Player-Development-Executive--Ohio_JR14587-1",
    "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
+   "posted_text": "Posted 13 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31384,7 +31623,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/North-Andover-MA/Operations-Supervisor--Jackpocket_JR14719-1",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31395,7 +31634,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Ralston-NE/Lottery-Fulfillment-Associate_JR14549",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31406,7 +31645,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Tempe-AZ/Lottery-Fulfillment-Supervisor_JR14680-3",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31417,7 +31656,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Director--Leadership-Effectiveness_JR14689-1",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31428,7 +31667,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Vice-President--iGaming-Revenue-Operations_JR14149",
    "posted_at": null,
-   "posted_text": "Posted 14 Days Ago",
+   "posted_text": "Posted 15 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31439,7 +31678,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Accountant_JR14438-1",
    "posted_at": null,
-   "posted_text": "Posted 14 Days Ago",
+   "posted_text": "Posted 15 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31450,7 +31689,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Associate--Digital-Casino-Partnerships_JR14656-1",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31461,7 +31700,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Associate--Digital-Sports-Partnerships_JR14681-1",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31472,7 +31711,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Software-Architect_JR14613",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31483,7 +31722,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Product-Manager--Access---Identity_JR14316-1",
    "posted_at": null,
-   "posted_text": "Posted 16 Days Ago",
+   "posted_text": "Posted 17 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31494,7 +31733,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Senior-Lead-Database-Reliability-Engineer_JR14624-1",
    "posted_at": null,
-   "posted_text": "Posted 18 Days Ago",
+   "posted_text": "Posted 19 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31505,7 +31744,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Corporate-Counsel--Commercial-Transactions_JR14673-1",
    "posted_at": null,
-   "posted_text": "Posted 18 Days Ago",
+   "posted_text": "Posted 19 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31516,7 +31755,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Senior-Manager--Analytics_JR14531",
    "posted_at": null,
-   "posted_text": "Posted 19 Days Ago",
+   "posted_text": "Posted 20 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31527,7 +31766,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Analyst--Financial-Platform_JR14631",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31538,7 +31777,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Corporate-Counsel--Prediction-Markets_JR14655-1",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31549,7 +31788,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Staff-Security-Engineer--AI_JR14612-2",
    "posted_at": null,
-   "posted_text": "Posted 21 Days Ago",
+   "posted_text": "Posted 22 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31560,7 +31799,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/London-UK/Senior-Data-Platform-Engineer_JR14227-1",
    "posted_at": null,
-   "posted_text": "Posted 21 Days Ago",
+   "posted_text": "Posted 22 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31571,7 +31810,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/VIP-Host--Denver_JR14629",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31582,7 +31821,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Product-Manager-II_JR14595-1",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31593,7 +31832,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Site-Reliability-Engineer_JR14235-1",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31604,7 +31843,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Canada/Senior-Software-Engineer--IOS_JR14529-1",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31615,7 +31854,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Manager--End-User-Computing_JR14627-3",
    "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
+   "posted_text": "Posted 26 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31626,7 +31865,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Accountant_JR14500-1",
    "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
+   "posted_text": "Posted 26 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31637,7 +31876,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Analyst-I--Research-and-Partnerships_JR14592-1",
    "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
+   "posted_text": "Posted 26 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31648,7 +31887,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Administrative-Assistant_JR14542-1",
    "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
+   "posted_text": "Posted 26 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31659,7 +31898,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Compliance-Manager--Predictions_JR14621-1",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31670,7 +31909,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/New-York-NY/Trading-Compliance-Specialist_JR14462-1",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31681,7 +31920,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Designer_JR14593-1",
    "posted_at": null,
-   "posted_text": "Posted 27 Days Ago",
+   "posted_text": "Posted 28 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31692,7 +31931,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Non-Sports-Manager--Predictions-Operations_JR14436-1",
    "posted_at": null,
-   "posted_text": "Posted 27 Days Ago",
+   "posted_text": "Posted 28 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31703,7 +31942,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Player-Development-Manager_JR14557-1",
    "posted_at": null,
-   "posted_text": "Posted 28 Days Ago",
+   "posted_text": "Posted 29 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31714,7 +31953,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---US/Player-Development-Executive--Casino_JR14464-1",
    "posted_at": null,
-   "posted_text": "Posted 28 Days Ago",
+   "posted_text": "Posted 29 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31725,7 +31964,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Senior-Data-Engineer_JR14519-1",
    "posted_at": null,
-   "posted_text": "Posted 28 Days Ago",
+   "posted_text": "Posted 29 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31736,7 +31975,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Remote---Bulgaria/Senior-Data-Engineer_JR14518-1",
    "posted_at": null,
-   "posted_text": "Posted 28 Days Ago",
+   "posted_text": "Posted 29 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31747,7 +31986,7 @@
    "department": "",
    "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Director--HR-Business-Partnership_JR14600-1",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "DraftKings",
    "ats": "workday",
    "source": "collector"
@@ -31952,20 +32191,20 @@
   },
   {
    "title": "Account Manager - Juice",
-   "location": "Melbourne, Australia",
+   "location": "Remote",
    "department": "Strategy ",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184076007",
-   "posted_at": "2026-07-10T00:55:54-04:00",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184079007",
+   "posted_at": "2026-07-10T01:04:03-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Account Manager - Juice",
-   "location": "Remote",
+   "location": "Melbourne, Australia",
    "department": "Strategy ",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184079007",
-   "posted_at": "2026-07-10T01:04:03-04:00",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184076007",
+   "posted_at": "2026-07-10T00:55:54-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -32036,16 +32275,6 @@
    "department": "Finance ",
    "url": "https://job-boards.greenhouse.io/easygo/jobs/5153860007",
    "posted_at": "2026-06-02T21:28:40-04:00",
-   "company": "Easygo",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Financial Transformation Analyst",
-   "location": "Melbourne, Australia",
-   "department": "Finance ",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5156522007",
-   "posted_at": "2026-06-05T02:56:25-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -32156,16 +32385,6 @@
    "department": "People & Culture",
    "url": "https://job-boards.greenhouse.io/easygo/jobs/5193165007",
    "posted_at": "2026-07-22T08:12:24-04:00",
-   "company": "Easygo",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Racing Analyst",
-   "location": "Melbourne, Australia",
-   "department": "Wagering",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5188398007",
-   "posted_at": "2026-07-16T04:21:54-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -32331,31 +32550,11 @@
    "source": "collector"
   },
   {
-   "title": "Staff Software Engineer - Frontend Web Platform KICK",
-   "location": "Melbourne, Australia",
-   "department": "Engineering",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5097647007",
-   "posted_at": "2026-04-02T00:02:37-04:00",
-   "company": "Easygo",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "Staff Software Engineer, (Full-Stack) - Engagement team",
    "location": "Melbourne, Australia",
    "department": "Engineering",
    "url": "https://job-boards.greenhouse.io/easygo/jobs/5103198007",
    "posted_at": "2026-04-09T00:57:30-04:00",
-   "company": "Easygo",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Staff Software Engineer - Payments (Crypto & Fiat)",
-   "location": "Melbourne, Australia ",
-   "department": "Engineering",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5153931007",
-   "posted_at": "2026-06-03T05:13:38-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -35846,16 +36045,6 @@
    "department": "Products",
    "url": "https://jobs.smartrecruiters.com/evolution/744000137696679",
    "posted_at": "2026-07-14T15:30:31.978Z",
-   "company": "Evolution",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Card Inspector",
-   "location": "Birkirkara, MT",
-   "department": "Operations",
-   "url": "https://jobs.smartrecruiters.com/evolution/744000137686941",
-   "posted_at": "2026-07-14T14:50:56.441Z",
    "company": "Evolution",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -39396,7 +39585,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Senior-Product-Director_JR103037",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39407,7 +39596,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Delivery-Lead---PAM_JR103279",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39418,7 +39607,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Product-Engineering-Lead--Customer-Operations_JR103076",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39429,7 +39618,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/AI-Enablement-Lead_JR103085-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39440,7 +39629,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/PAM-AI-Lead_JR103103",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39451,7 +39640,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Devops-Engineer_JR103096",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39462,7 +39651,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT-ADSTELLAM/Business-Developer---F-H---CDD_JR103434",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39473,7 +39662,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/AML---RG-Specialist---DK_JR103188",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39484,7 +39673,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/SEO-Executive-Dutch-Speaking_JR103150",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39495,7 +39684,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Customer-Service-Agent---NL---BENL_JR103192",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39506,7 +39695,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Juriste---F-H---CDI_JR102917",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39517,7 +39706,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/AML---RG-Specialist---FR_JR103204",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39528,7 +39717,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Gibraltar-WTC/Customer-Sustainability-Partner---UK_JR103288",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39539,7 +39728,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX-ALEDA/Technicien-Support-Client-N1---F-H---CDI_JR102762",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39550,7 +39739,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX/Technicien-Helpdesk-N1---H-F---CDI_JR102696",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39561,7 +39750,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX/Technicien-Helpdesk-N3---F-H---CDI_JR102928",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39572,7 +39761,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/FDP-DELTA-BOULOGNE/Charg-de-Planification-Commerciale---F-H---CDI_JR102438-1",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39583,7 +39772,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Director-of-Sportsbook-Product_JR103038",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39594,7 +39783,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Head-of-UX-and-UI-Strategy_JR103039",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39605,7 +39794,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Head-of-Lottery-Cybersecurity---F-H---CDI_JR102946",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39616,7 +39805,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Responsable-Grands-Comptes---Dveloppement-Enseignes---F-H---CDD_JR103257",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39627,7 +39816,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Analyste-M-A---F-H---Stage_JR103323",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39638,7 +39827,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Product-Owner_JR103046",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39649,7 +39838,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Romanian-Speaking-Customer-Service-Agent_JR103202",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39660,7 +39849,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Danish-Speaking-Customer-Service-Agent_JR103236",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39671,7 +39860,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/AML---RG-Specialist---Market-Portfolio_JR103224-1",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39682,7 +39871,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/People-Systems-Analyst_JR103036",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39693,7 +39882,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/Head-of-UK-Compliance--MLRO_JR103265",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39704,7 +39893,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/FDJ-SERVICES-BOULOGNE/Product-Manager-Growth---Flux---F-H---CDD_JR103015",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39715,7 +39904,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/Senior-Software-Engineer--Java_JR103067",
    "posted_at": null,
-   "posted_text": "Posted 14 Days Ago",
+   "posted_text": "Posted 15 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39726,7 +39915,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Technical-Engineering-Manager_JR103062",
    "posted_at": null,
-   "posted_text": "Posted 19 Days Ago",
+   "posted_text": "Posted 20 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39737,7 +39926,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/Senior-Data-Engineer_JR103200",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39748,7 +39937,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Offsite-Serbia/Senior-Data-Platform-Engineer--Python-_JR103282",
    "posted_at": null,
-   "posted_text": "Posted 21 Days Ago",
+   "posted_text": "Posted 22 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39759,7 +39948,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Offsite-Serbia/Senior-Data-Engineer_JR103277",
    "posted_at": null,
-   "posted_text": "Posted 21 Days Ago",
+   "posted_text": "Posted 22 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39770,7 +39959,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/Senior-software-engineer--iOS_JR103072",
    "posted_at": null,
-   "posted_text": "Posted 21 Days Ago",
+   "posted_text": "Posted 22 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39781,7 +39970,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Rfrent-Solution-Finance-Oracle-Cloud---F-H---CDI_JR102940",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39792,7 +39981,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX-ALEDA/EdgeOps---F-H---CDI_JR102792",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39803,7 +39992,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT-ADSTELLAM/Charg-de-Marketing-Digital---F-H---Alternance_JR102765",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39814,7 +40003,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX-ALEDA/DevSecOps---F-H---CDI_JR102791",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39825,7 +40014,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT-ADSTELLAM/Charg-de-Communication---F-H---Alternance_JR102622",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39836,7 +40025,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX-ALEDA/Lead-Dveloppeur-Full-Stack---F-H---CDI_JR102381",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39847,7 +40036,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/KYC-Investigations-Analyst_JR103152",
    "posted_at": null,
-   "posted_text": "Posted 27 Days Ago",
+   "posted_text": "Posted 28 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39858,7 +40047,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Site-Reliability-Engineer_JR103066",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39869,7 +40058,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Senior-Software-Engineer--Java_JR103102",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -39880,7 +40069,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/Data-Engineer_JR103060",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40100,7 +40289,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Senior-Product-Director_JR103037",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40111,7 +40300,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Delivery-Lead---PAM_JR103279",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40122,7 +40311,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Product-Engineering-Lead--Customer-Operations_JR103076",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40133,7 +40322,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/London/AI-Enablement-Lead_JR103085-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40144,7 +40333,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/PAM-AI-Lead_JR103103",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40155,7 +40344,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Stockholm/Devops-Engineer_JR103096",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40166,7 +40355,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT-ADSTELLAM/Business-Developer---F-H---CDD_JR103434",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40177,7 +40366,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/AML---RG-Specialist---DK_JR103188",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40188,7 +40377,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/SEO-Executive-Dutch-Speaking_JR103150",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40199,7 +40388,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Customer-Service-Agent---NL---BENL_JR103192",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40210,7 +40399,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Juriste---F-H---CDI_JR102917",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40221,7 +40410,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/AML---RG-Specialist---FR_JR103204",
    "posted_at": null,
-   "posted_text": "Posted 4 Days Ago",
+   "posted_text": "Posted 5 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40232,7 +40421,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Gibraltar-WTC/Customer-Sustainability-Partner---UK_JR103288",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40243,7 +40432,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX-ALEDA/Technicien-Support-Client-N1---F-H---CDI_JR102762",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40254,7 +40443,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX/Technicien-Helpdesk-N1---H-F---CDI_JR102696",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40265,7 +40454,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BORDEAUX/Technicien-Helpdesk-N3---F-H---CDI_JR102928",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40276,7 +40465,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/FDP-DELTA-BOULOGNE/Charg-de-Planification-Commerciale---F-H---CDI_JR102438-1",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40287,7 +40476,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Director-of-Sportsbook-Product_JR103038",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40298,7 +40487,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/Malta/Head-of-UX-and-UI-Strategy_JR103039",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40309,7 +40498,7 @@
    "department": "",
    "url": "https://groupefdj.wd103.myworkdayjobs.com/FDJ-UNITED/job/BOULOGNE-BILLANCOURT/Head-of-Lottery-Cybersecurity---F-H---CDI_JR102946",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "FDJ United",
    "ats": "workday",
    "source": "collector"
@@ -40320,7 +40509,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Leeds-UK/Shooting-Producer---Editor_JR137987-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40331,7 +40520,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tirana---Rruga-Dritan---40h/Production-Quality-Associate-Manager_JR140588",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40342,7 +40531,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tirana---Rruga-Dritan---40h/Customer-Care-Support_JR140594-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40353,7 +40542,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tirana---Rruga-Dritan---40h/Planning---Governance-Specialist_JR140581-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40364,7 +40553,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tirana---Rruga-Dritan---36h/Customer-Care-Agent_JR140591-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40375,7 +40564,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Senior-Product-Designer_JR140620-1",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40386,7 +40575,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Skopje-North-Macedonia/Senior-Front-end-Developer_JR140420",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40397,7 +40586,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Isle-of-Man/Traffic-Manager--6M-FTC-_JR139495",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40408,7 +40597,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Node-JS-Developer_JR140523",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40419,7 +40608,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Sofia-Bulgaria/E-commerce-Project-Manager----Maternity-Cover--Fixed-term_JR140484-2",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40430,7 +40619,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Junglee-Gurgaon/Legal-Intern_JR140326-1",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40441,7 +40630,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Senior-Back-End-Engineer_JR140535",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40452,7 +40641,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/CEE-Technology-Risk---Assurance-Officer_JR140411",
    "posted_at": null,
-   "posted_text": "Posted 12 Days Ago",
+   "posted_text": "Posted 13 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40463,7 +40652,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Yerevan-Office/Customer-Service-Agent_JR140536",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40474,7 +40663,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Data-Analyst_JR140305",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40485,7 +40674,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Sofia-Bulgaria/Promotions---Operations-Coordinator--Merchandising---FTC--Maternity-cover-_JR140485-1",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40496,7 +40685,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Leeds-UK/Senior-Motion-Designer_JR140442-1",
    "posted_at": null,
-   "posted_text": "Posted 19 Days Ago",
+   "posted_text": "Posted 20 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40507,7 +40696,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Dublin-Ireland/Brand-Management-Lead_JR137968",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40518,7 +40707,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/FinOps-Specialist_JR139796",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -40529,7 +40718,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterInt_External/job/Tbilisi-Georgia/Senior-Back-end-Engineer_JR139229",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "Flutter International (PokerStars, Betfair Int, Adjarabet)",
    "ats": "workday",
    "source": "collector"
@@ -45862,7 +46051,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/CRM-Designer_JR100362",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45873,7 +46062,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/AWP-Accounting_JR100350",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45884,7 +46073,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Gaming-Platforms_JR100351",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45895,7 +46084,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Front-End-Digital-Customer-Care-Operator_JR100358",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45906,7 +46095,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Brand-Portfolio---Creative-Supervisor_JR100301",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45917,7 +46106,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Technical-Support_JR100357",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45928,7 +46117,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Tito-Scalo---Contrada-Santa-Loja-SNC/Customer-Support-Trainee_JR100354",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45939,7 +46128,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Tito-Scalo---Contrada-Santa-Loja-SNC/Customer-Support_JR100352",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -45950,7 +46139,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Corporate-Portal-Expert_JR100345",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46137,7 +46326,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/CRM-Designer_JR100362",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46148,7 +46337,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/AWP-Accounting_JR100350",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46159,7 +46348,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Gaming-Platforms_JR100351",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46170,7 +46359,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Front-End-Digital-Customer-Care-Operator_JR100358",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46181,7 +46370,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Brand-Portfolio---Creative-Supervisor_JR100301",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46192,7 +46381,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Technical-Support_JR100357",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46203,7 +46392,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Tito-Scalo---Contrada-Santa-Loja-SNC/Customer-Support-Trainee_JR100354",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46214,7 +46403,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Tito-Scalo---Contrada-Santa-Loja-SNC/Customer-Support_JR100352",
    "posted_at": null,
-   "posted_text": "Posted 8 Days Ago",
+   "posted_text": "Posted 9 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -46225,7 +46414,7 @@
    "department": "",
    "url": "https://lottomaticagroup.wd103.myworkdayjobs.com/LottomaticaCareers/job/Roma---Via-degli-Aldobrandeschi/Corporate-Portal-Expert_JR100345",
    "posted_at": null,
-   "posted_text": "Posted 22 Days Ago",
+   "posted_text": "Posted 23 Days Ago",
    "company": "Lottomatica",
    "ats": "workday",
    "source": "collector"
@@ -48222,6 +48411,16 @@
    "source": "collector"
   },
   {
+   "title": "Italian speaking Game presenter",
+   "location": "Riga, LV",
+   "department": "Live operations",
+   "url": "https://jobs.smartrecruiters.com/playtech/744000141647879",
+   "posted_at": "2026-08-05T06:55:20.155Z",
+   "company": "Playtech",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "Junior Night-Time Trader",
    "location": "Sofia, BG",
    "department": "Customer Support",
@@ -49724,7 +49923,7 @@
   {
    "title": "Senior Quantitative Developer",
    "location": "New York",
-   "department": "Engineering",
+   "department": "Data",
    "url": "https://jobs.ashbyhq.com/polymarket/5e1e9721-b721-46e1-8941-5864680ed408",
    "posted_at": "2026-06-16T01:50:10.614+00:00",
    "company": "Polymarket",
@@ -49757,16 +49956,6 @@
    "department": "Compliance",
    "url": "https://jobs.ashbyhq.com/polymarket/82d6403d-a0a0-4032-a666-2bdf4e694687",
    "posted_at": "2026-06-29T16:36:24.508+00:00",
-   "company": "Polymarket",
-   "ats": "ashby",
-   "source": "collector"
-  },
-  {
-   "title": "People Operations Manager",
-   "location": "New York",
-   "department": "Talent",
-   "url": "https://jobs.ashbyhq.com/polymarket/ba229902-e9db-4946-b967-074d2df5c04d",
-   "posted_at": "2026-06-18T15:37:26.204+00:00",
    "company": "Polymarket",
    "ats": "ashby",
    "source": "collector"
@@ -49884,7 +50073,7 @@
   {
    "title": "Staff Data Analyst",
    "location": "New York",
-   "department": "Operations",
+   "department": "Data",
    "url": "https://jobs.ashbyhq.com/polymarket/76cd3f11-bb4d-41dc-beae-9327beab91e0",
    "posted_at": "2026-06-15T14:46:45.834+00:00",
    "company": "Polymarket",
@@ -50287,16 +50476,6 @@
    "department": "Engineering",
    "url": "http://prizepicks.com/position?gh_jid=7701127003",
    "posted_at": "2026-04-20T16:00:10-04:00",
-   "company": "PrizePicks",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Game Operations Analyst - Trading Optimization",
-   "location": "Atlanta, GA preferred, Remote",
-   "department": "Game Operations",
-   "url": "http://prizepicks.com/position?gh_jid=7791656003",
-   "posted_at": "2026-07-01T15:11:13-04:00",
    "company": "PrizePicks",
    "ats": "greenhouse",
    "source": "collector"
@@ -50917,7 +51096,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Dublin-Ireland/Associate-Trading-Operations-Executive---Exchange_JR139760-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola)",
    "ats": "workday",
    "source": "collector"
@@ -50928,7 +51107,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Leeds-UK/Sports-trading-operations-executive_JR140592-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola)",
    "ats": "workday",
    "source": "collector"
@@ -50939,7 +51118,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/FlutterUKI_External/job/Dublin-Ireland/Trading-Operations-Associate_JR139801-1",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola)",
    "ats": "workday",
    "source": "collector"
@@ -52711,6 +52890,16 @@
    "department": "Product Management",
    "url": "https://stake.breezy.hr/p/35294b397be2-product-manager-growth",
    "posted_at": "2026-07-02T11:55:11.559Z",
+   "company": "Stake (Easygo)",
+   "ats": "breezy",
+   "source": "collector"
+  },
+  {
+   "title": "SMSF Accountant - India",
+   "location": "Pune, India",
+   "department": "Finance",
+   "url": "https://stake.breezy.hr/p/b460d103e142-smsf-accountant-india",
+   "posted_at": "2026-08-05T05:10:09.155Z",
    "company": "Stake (Easygo)",
    "ats": "breezy",
    "source": "collector"
@@ -57061,7 +57250,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/AI-Engineer---Finance-Technology_JR139790-2",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57072,7 +57261,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Technical-Specialist---People-Analytics_JR139868-1",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57083,7 +57272,18 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Global-Finance-Training-Manager_JR136885",
    "posted_at": null,
-   "posted_text": "Posted 27 Days Ago",
+   "posted_text": "Posted 28 Days Ago",
+   "company": "Flutter Group (corporate)",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "Associate People Business Partner",
+   "location": "Hyderabad, India",
+   "department": "",
+   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Associate-People-Business-Partner_JR140654",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57094,18 +57294,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Leeds-UK/Internal-Audit-Manager_JR140541",
    "posted_at": null,
-   "posted_text": "Posted Today",
-   "company": "Flutter Group (corporate)",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Insights Analyst\u00a0",
-   "location": "Hyderabad, India",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Insights-Analyst-_JR140017",
-   "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57116,7 +57305,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Tirana---Rruga-Dritan---40h/Customer-Care-Support_JR140594",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57127,7 +57316,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Tirana---Rruga-Dritan---40h/Planning---Governance-Specialist_JR140581",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57138,7 +57327,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Finance-Manager_JR139942-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57149,7 +57338,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Leeds-UK/Change---Adoption-Manager_JR140644-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57159,17 +57348,6 @@
    "location": "Dublin, Ireland",
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Business-Senior-Auditor_JR139061-2",
-   "posted_at": null,
-   "posted_text": "Posted 3 Days Ago",
-   "company": "Flutter Group (corporate)",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "People Business Partner",
-   "location": "Hyderabad, India",
-   "department": "",
-   "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/People-Business-Partner_JR135518-1",
    "posted_at": null,
    "posted_text": "Posted 4 Days Ago",
    "company": "Flutter Group (corporate)",
@@ -57182,7 +57360,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Project-Manager_JR140378-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57193,7 +57371,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Tirana---Rruga-Dritan---36h/Customer-Care-Agent_JR140591",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57204,7 +57382,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Salesforce-Mulesoft-Developer_JR139645",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57215,7 +57393,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Finance-EPM-ARCS-Senior-Analyst_JR139840",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57226,7 +57404,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/EPM-Planning-Lead-Analyst_JR139839-1",
    "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
+   "posted_text": "Posted 6 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57237,7 +57415,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/Due-Diligence-Analyst_JR139799",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57248,7 +57426,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/People-Product---Innovation-Lead_JR137607",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57259,7 +57437,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Hyderabad-India/GSOC-Operator---Physical-Security_JR140504-1",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57270,7 +57448,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Strategic-Intelligence-Partner_JR139779",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57281,7 +57459,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Leeds-UK/Category-Manager---Technology_JR138296-1",
    "posted_at": null,
-   "posted_text": "Posted 14 Days Ago",
+   "posted_text": "Posted 15 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57292,7 +57470,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Financial-Accountant---Global-Intercompany---Statutory-Reporting_JR139979",
    "posted_at": null,
-   "posted_text": "Posted 19 Days Ago",
+   "posted_text": "Posted 20 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57303,7 +57481,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Finance-Manager---Global-Intercompany---Statutory-Reporting_JR139938-1",
    "posted_at": null,
-   "posted_text": "Posted 21 Days Ago",
+   "posted_text": "Posted 22 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57314,7 +57492,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Leeds-UK/Business-Change-Lead_JR139895-1",
    "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
+   "posted_text": "Posted 26 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57325,7 +57503,7 @@
    "department": "",
    "url": "https://flutterbe.wd3.myworkdayjobs.com/Group_External/job/Dublin-Ireland/Change---Planning-Lead_JR136232-2",
    "posted_at": null,
-   "posted_text": "Posted 26 Days Ago",
+   "posted_text": "Posted 27 Days Ago",
    "company": "Flutter Group (corporate)",
    "ats": "workday",
    "source": "collector"
@@ -57512,7 +57690,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Brand-Operations-Lead---Global_JR13204",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57523,7 +57701,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Cape-Town/Open-Day--Risk---Fraud---AML---Responsible-Gambling---Financial-Crime-Opportunities_JR13497-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57534,7 +57712,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/SOX-Auditor_JR13419",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57545,7 +57723,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Conversion-Marketer_JR13407",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57556,7 +57734,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Banking-Commercial-Manager---South_JR13542",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57567,7 +57745,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Accra/Marketing-Manager_JR13502",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57578,7 +57756,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Head-of-Tax---Advocacy-and-Policy_JR13487",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57589,7 +57767,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Tax-Specialist---Advocacy-and-Policy_JR13486",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57600,7 +57778,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Head-of-Tax---Advisory-and-New-Markets_JR13483",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57611,7 +57789,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Tax-Specialist--Projects---Administration_JR13481",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57622,7 +57800,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Tax-Specialist---Audit--Controversy---Defence_JR13480-1",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57633,7 +57811,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Cape-Town/Senior-DevSecOps-Engineer_JR13433",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57644,7 +57822,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Social-Media-Designer_JR13347",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57655,7 +57833,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Retention-Marketer_JR13399",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57666,7 +57844,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Dar-es-Salaam/Operations-Manager_JR13338",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57677,7 +57855,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Financial-Manager-SA-Ops--Services-_JR13445",
    "posted_at": null,
-   "posted_text": "Posted 14 Days Ago",
+   "posted_text": "Posted 15 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57688,7 +57866,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Casino-Content-Analyst_JR13207",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57699,7 +57877,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Head-of-Banking-Platform_JR13346",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57710,7 +57888,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Product-Analyst---Banking_JR13352",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57721,7 +57899,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Cape-Town/Head-of-Influencer---Streamer-Partnerships_JR12934",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57732,7 +57910,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Legal-Officer---Southern-Africa_JR13308",
    "posted_at": null,
-   "posted_text": "Posted 25 Days Ago",
+   "posted_text": "Posted 26 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57743,7 +57921,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Junior-ASO-Specialist_JR13317",
    "posted_at": null,
-   "posted_text": "Posted 28 Days Ago",
+   "posted_text": "Posted 29 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57754,7 +57932,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Data-Scientist_JR13049",
    "posted_at": null,
-   "posted_text": "Posted 29 Days Ago",
+   "posted_text": "Posted 30 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57809,7 +57987,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Brand-Operations-Lead---Global_JR13204",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57820,7 +57998,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Cape-Town/Open-Day--Risk---Fraud---AML---Responsible-Gambling---Financial-Crime-Opportunities_JR13497-1",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57831,7 +58009,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/SOX-Auditor_JR13419",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57842,7 +58020,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Conversion-Marketer_JR13407",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57853,7 +58031,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Banking-Commercial-Manager---South_JR13542",
    "posted_at": null,
-   "posted_text": "Posted Today",
+   "posted_text": "Posted Yesterday",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57864,7 +58042,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Accra/Marketing-Manager_JR13502",
    "posted_at": null,
-   "posted_text": "Posted Yesterday",
+   "posted_text": "Posted 2 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57875,7 +58053,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Head-of-Tax---Advocacy-and-Policy_JR13487",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57886,7 +58064,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Tax-Specialist---Advocacy-and-Policy_JR13486",
    "posted_at": null,
-   "posted_text": "Posted 6 Days Ago",
+   "posted_text": "Posted 7 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57897,7 +58075,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Head-of-Tax---Advisory-and-New-Markets_JR13483",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57908,7 +58086,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Tax-Specialist--Projects---Administration_JR13481",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57919,7 +58097,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Tax-Specialist---Audit--Controversy---Defence_JR13480-1",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57930,7 +58108,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Cape-Town/Senior-DevSecOps-Engineer_JR13433",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57941,7 +58119,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Social-Media-Designer_JR13347",
    "posted_at": null,
-   "posted_text": "Posted 7 Days Ago",
+   "posted_text": "Posted 8 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57952,7 +58130,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Retention-Marketer_JR13399",
    "posted_at": null,
-   "posted_text": "Posted 11 Days Ago",
+   "posted_text": "Posted 12 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57963,7 +58141,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Dar-es-Salaam/Operations-Manager_JR13338",
    "posted_at": null,
-   "posted_text": "Posted 13 Days Ago",
+   "posted_text": "Posted 14 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57974,7 +58152,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Financial-Manager-SA-Ops--Services-_JR13445",
    "posted_at": null,
-   "posted_text": "Posted 14 Days Ago",
+   "posted_text": "Posted 15 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57985,7 +58163,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Casino-Content-Analyst_JR13207",
    "posted_at": null,
-   "posted_text": "Posted 15 Days Ago",
+   "posted_text": "Posted 16 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -57996,7 +58174,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Head-of-Banking-Platform_JR13346",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -58007,7 +58185,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Johannesburg/Product-Analyst---Banking_JR13352",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -58018,7 +58196,7 @@
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/Betway_Africa/job/Cape-Town/Head-of-Influencer---Streamer-Partnerships_JR12934",
    "posted_at": null,
-   "posted_text": "Posted 20 Days Ago",
+   "posted_text": "Posted 21 Days Ago",
    "company": "Betway Africa",
    "ats": "workday",
    "source": "collector"
@@ -58201,6 +58379,56 @@
    "posted_at": null,
    "company": "B2Tech",
    "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: DevOps \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/devops-talent-pool/",
+   "posted_at": "2026-05-11T09:52:58",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Backend Engineering \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/be-talent-pool/",
+   "posted_at": "2026-05-11T09:52:55",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Quantitative Analytics \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/quant-talent-pool/",
+   "posted_at": "2026-05-11T09:52:52",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Data Engineering \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/de-talent-pool/",
+   "posted_at": "2026-05-11T09:52:48",
+   "company": "Huddle",
+   "ats": "wordpress",
+   "source": "collector"
+  },
+  {
+   "title": "Open Application: Frontend Engineering \u2013 Talent Pool",
+   "location": "Croatia",
+   "department": "",
+   "url": "https://huddle.tech/careers/fe-talent-pool/",
+   "posted_at": "2026-05-11T09:52:24",
+   "company": "Huddle",
+   "ats": "wordpress",
    "source": "collector"
   },
   {
@@ -59908,6 +60136,26 @@
    "location": "St Helier, Jersey Legal Full-time hybrid",
    "department": "",
    "url": "https://l1.com/jobs/b7a8fec4-83f1-4239-843b-653bdb232e10",
+   "posted_at": null,
+   "company": "Legend",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Legal Assistant",
+   "location": "London, England Legal Full-time hybrid",
+   "department": "",
+   "url": "https://l1.com/jobs/8a869ba0-dc1e-4089-bad2-184a013f485e",
+   "posted_at": null,
+   "company": "Legend",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Legal Assistant",
+   "location": "St Helier, Jersey Legal Full-time hybrid",
+   "department": "",
+   "url": "https://l1.com/jobs/9fbe5974-dedf-4088-bf18-a50d5ff9d026",
    "posted_at": null,
    "company": "Legend",
    "ats": "agency",
@@ -61844,10 +62092,10 @@
    "source": "agency"
   },
   {
-   "title": "Head of Brand and Content",
+   "title": "Oncourse Operator (Casual) Sydney",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/head-of-brand-and-content-sydney-eora-nation-nsw-australia-ann-street-qld-melbourne-kulin-nation-vic",
+   "url": "https://careers.tabcorp.com.au/jobs/oncourse-operator-casual-sydney-sydney-eora-nation-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61864,10 +62112,20 @@
    "source": "agency"
   },
   {
-   "title": "Oncourse Casual Lead - Temora",
+   "title": "Head of Brand and Content",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-temora-regional-nsw-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/head-of-brand-and-content-sydney-eora-nation-nsw-australia-ann-street-qld-melbourne-kulin-nation-vic",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Safer Gambling Advisor",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/safer-gambling-advisor-sydney-eora-nation-nsw-australia-ff4fb329-8229-47d9-80b4-218502d0ecc9",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61894,16 +62152,6 @@
    "source": "agency"
   },
   {
-   "title": "Safer Gambling Advisor",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/safer-gambling-advisor-sydney-eora-nation-nsw-australia-ff4fb329-8229-47d9-80b4-218502d0ecc9",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "HR Data Analyst",
    "location": "",
    "department": "",
@@ -61924,10 +62172,10 @@
    "source": "agency"
   },
   {
-   "title": "Controls Assurance Senior Advisor",
+   "title": "Senior Financial Crime Compliance Specialist",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-financial-crime-compliance-specialist-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61944,10 +62192,10 @@
    "source": "agency"
   },
   {
-   "title": "Senior Financial Crime Compliance Specialist",
+   "title": "Oncourse Casual Lead - Temora",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-financial-crime-compliance-specialist-melbourne-kulin-nation-vic-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/oncourse-casual-lead-temora-regional-nsw-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -61968,6 +62216,16 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/financial-crime-controls-assurance-manager-melbourne-kulin-nation-vic-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Controls Assurance Senior Advisor",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/controls-assurance-senior-advisor-melbourne-kulin-nation-vic-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -62004,16 +62262,6 @@
    "source": "agency"
   },
   {
-   "title": "Senior Manager Compliance and Assurance",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Project Coordinator - Remediation",
    "location": "",
    "department": "",
@@ -62024,10 +62272,20 @@
    "source": "agency"
   },
   {
-   "title": "Field Technician (6-12 months Opportunity)",
+   "title": "Senior Manager Compliance and Assurance",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/field-technician-contract-granville-darug-country-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/senior-manager-compliance-and-assurance-sydney-eora-nation-nsw-australia-melbourne-kulin-nation-vic",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Customer Engagement Ambassador",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/customer-engagement-ambassador-brisbane-turrbal-country-qld-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -62038,16 +62296,6 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/trade-marketing-co-ordinator-max-4-days-week-melbourne-kulin-nation-vic-australia-sydney-eora-nation-nsw",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Associate Trader - Racing",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -62074,10 +62322,20 @@
    "source": "agency"
   },
   {
-   "title": "Customer Engagement Ambassador",
+   "title": "Associate Trader - Racing",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/customer-engagement-ambassador-brisbane-turrbal-country-qld-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/associate-trader-racing-sydney-eora-nation-nsw-australia-6cbfb246-40f6-403d-b206-1c05f357b4a0",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Field Technician (6-12 months Opportunity)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/field-technician-contract-granville-darug-country-nsw-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -62088,16 +62346,6 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/digital-content-co-ordinator-frenchs-forest-garigal-country-nsw-australia",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Venue Support Consultant (MAX - Loyalty)",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -62124,12 +62372,42 @@
    "source": "agency"
   },
   {
+   "title": "Venue Support Consultant (MAX - Loyalty)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.tabcorp.com.au/jobs/venue-support-consultant-max-loyalty-brisbane-turrbal-country-qld-australia",
+   "posted_at": null,
+   "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Workshop Technician",
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/workshop-technician-brisbane-turrbal-country-qld-australia-5448eeba-351a-4b46-be4f-be2ffbc05a0e",
    "posted_at": null,
    "company": "Tabcorp",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Service Reliability Manager",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/service-reliability-manager-melbourne-vic-australia",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Social Content Production Manager (Traffic Coordination)",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/social-content-production-manager-traffic-coordination-melbourne-vic-australia",
+   "posted_at": null,
+   "company": "Sportsbet",
    "ats": "agency",
    "source": "agency"
   },
@@ -62154,10 +62432,10 @@
    "source": "agency"
   },
   {
-   "title": "Social Content Production Manager (Traffic Coordination)",
+   "title": "Data Engineer",
    "location": "",
    "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/social-content-production-manager-traffic-coordination-melbourne-vic-australia",
+   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -62184,30 +62462,20 @@
    "source": "agency"
   },
   {
-   "title": "Senior Full Stack Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/senior-full-stack-engineer-melbourne-vic-australia",
-   "posted_at": null,
-   "company": "Sportsbet",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Data Engineer",
-   "location": "",
-   "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/data-engineer-melbourne-vic-australia-18a17242-15ab-4246-916e-972342614c20",
-   "posted_at": null,
-   "company": "Sportsbet",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Payroll Officer",
    "location": "",
    "department": "",
    "url": "https://careers.sportsbet.com.au/jobs/payroll-officer-melbourne-vic-australia-26625c28-293a-499b-b4c9-3f7db26d9963",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Senior Full Stack Engineer",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/senior-full-stack-engineer-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -65044,59 +65312,114 @@
    "source": "agency"
   },
   {
-   "title": "Open Application: DevOps \u2013 Talent Pool",
-   "location": "Croatia",
-   "department": "",
-   "url": "https://huddle.tech/careers/devops-talent-pool/",
-   "posted_at": "2026-05-11T09:52:58",
-   "company": "Huddle",
-   "ats": "wordpress",
+   "title": "People Partner (South Africa & Zambia)",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/DB69E08522/",
+   "posted_at": "2026-08-04T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
    "source": "collector",
-   "carried_since": "2026-08-05T01:56:41.762006+00:00"
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
   },
   {
-   "title": "Open Application: Backend Engineering \u2013 Talent Pool",
-   "location": "Croatia",
-   "department": "",
-   "url": "https://huddle.tech/careers/be-talent-pool/",
-   "posted_at": "2026-05-11T09:52:55",
-   "company": "Huddle",
-   "ats": "wordpress",
+   "title": "Senior Product Manager - Agency",
+   "location": "Lagos, Lagos, Nigeria",
+   "department": "BetKing",
+   "url": "https://apply.workable.com/kingmakers/j/FEFE367AF9/",
+   "posted_at": "2026-08-03T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
    "source": "collector",
-   "carried_since": "2026-08-05T01:56:41.762006+00:00"
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
   },
   {
-   "title": "Open Application: Quantitative Analytics \u2013 Talent Pool",
-   "location": "Croatia",
-   "department": "",
-   "url": "https://huddle.tech/careers/quant-talent-pool/",
-   "posted_at": "2026-05-11T09:52:52",
-   "company": "Huddle",
-   "ats": "wordpress",
+   "title": "Trade Marketing Specialist - Agency",
+   "location": "Lagos, Lagos, Nigeria",
+   "department": "BetKing",
+   "url": "https://apply.workable.com/kingmakers/j/260D8A2864/",
+   "posted_at": "2026-07-31T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
    "source": "collector",
-   "carried_since": "2026-08-05T01:56:41.762006+00:00"
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
   },
   {
-   "title": "Open Application: Data Engineering \u2013 Talent Pool",
-   "location": "Croatia",
-   "department": "",
-   "url": "https://huddle.tech/careers/de-talent-pool/",
-   "posted_at": "2026-05-11T09:52:48",
-   "company": "Huddle",
-   "ats": "wordpress",
+   "title": "Performance Marketing Specialist",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/9B6879D8EE/",
+   "posted_at": "2026-07-30T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
    "source": "collector",
-   "carried_since": "2026-08-05T01:56:41.762006+00:00"
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
   },
   {
-   "title": "Open Application: Frontend Engineering \u2013 Talent Pool",
-   "location": "Croatia",
-   "department": "",
-   "url": "https://huddle.tech/careers/fe-talent-pool/",
-   "posted_at": "2026-05-11T09:52:24",
-   "company": "Huddle",
-   "ats": "wordpress",
+   "title": "Senior Backend Software Engineer",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/C3539E9A4A/",
+   "posted_at": "2026-07-29T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
    "source": "collector",
-   "carried_since": "2026-08-05T01:56:41.762006+00:00"
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
+  },
+  {
+   "title": "Casino Specialist",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/A64BA8EE7B/",
+   "posted_at": "2026-07-28T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
+   "source": "collector",
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
+  },
+  {
+   "title": "Principal Backend Software Engineer",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/B01D5686AE/",
+   "posted_at": "2026-07-23T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
+   "source": "collector",
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
+  },
+  {
+   "title": "Principal Front End Software Engineer",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "KingMakers",
+   "url": "https://apply.workable.com/kingmakers/j/97202B999F/",
+   "posted_at": "2026-07-23T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
+   "source": "collector",
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
+  },
+  {
+   "title": "3D Motion Designer",
+   "location": "Lagos, Lagos, Nigeria",
+   "department": "BetKing",
+   "url": "https://apply.workable.com/kingmakers/j/E5A5650A2D/",
+   "posted_at": "2026-07-22T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
+   "source": "collector",
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
+  },
+  {
+   "title": "Social Media Specialist (SuperSportBet)",
+   "location": "Cape Town, Western Cape, South Africa",
+   "department": "SuperSportBet",
+   "url": "https://apply.workable.com/kingmakers/j/C78243C848/",
+   "posted_at": "2026-07-22T00:00:00.000Z",
+   "company": "BetKing",
+   "ats": "workable",
+   "source": "collector",
+   "carried_since": "2026-08-05T07:09:24.172241+00:00"
   },
   {
    "title": "Sportsbook Manager",
