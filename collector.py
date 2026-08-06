@@ -958,8 +958,17 @@ def fetch_wordpress(token):
             url = f"{base}/wp-json/wp/v2/{t}?per_page=100&page={page}&_embed=1"
             try:
                 r = _request("GET", url, headers={**AGENCY_UA, "Accept": "application/json"})
-            except Exception:
-                break
+            except Exception as e:
+                # the host is unreachable, not just missing this post type —
+                # trying nine more costs ~50s each on timeouts and retries.
+                # Huddle spent 511s this way for nothing.
+                print(f"      wordpress {token}: {type(e).__name__} on {t}, "
+                      f"host unreachable — skipping the remaining types")
+                return []
+            if r.status_code in (429, 500, 502, 503, 504) and page == 1:
+                print(f"      wordpress {token}: HTTP {r.status_code} on {t}, "
+                      f"host is struggling — skipping the remaining types")
+                return []
             if r.status_code != 200:
                 break
             try:
@@ -2712,6 +2721,11 @@ CUSTOM_BOARDS = {
     # location, type and date together, so the slug gives the cleaner title.
     "Newfield":     dict(base="https://employmenthero.com", marker="/jobs/position/",
                          listing=["/jobs/organisations/newfield-ltd/"], slug_titles=True),
+    # Their /wp-json/ endpoint hangs (511s of timeouts across ten post types)
+    # while huddle.tech itself is fine, so read the careers page directly.
+    # Roles live at /careers/{slug}/ and are mostly talent pools.
+    "Huddle":       dict(base="https://huddle.tech", marker="/careers/",
+                         listing=["/careers/", "/careers"]),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
@@ -3170,8 +3184,12 @@ def main():
     # It's the host+tenant pair that signals a duplicate or wrong match.
     boards = {}
     for j in all_jobs:
-        m = re.match(r"https?://([^/]+)(/[^/?#]*)?", j.get("url") or "")
+        m = re.match(r"https?://([^/]+)((?:/[^/?#]*){1,2})?", j.get("url") or "")
         if m:
+            # two path segments, not one: ats.rippling.com/en-GB is a locale,
+            # so the tenant only appears in the segment after it. Comparing on
+            # one segment flagged BetMakers and White Hat every run as sharing
+            # a board when their tenants are betmakers and whitehatgaming.
             key = m.group(1) + (m.group(2) or "")
             boards.setdefault(key, set()).add(j["company"])
     for host, cos in boards.items():
