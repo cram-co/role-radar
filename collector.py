@@ -2725,7 +2725,18 @@ CUSTOM_BOARDS = {
     # while huddle.tech itself is fine, so read the careers page directly.
     # Roles live at /careers/{slug}/ and are mostly talent pools.
     "Huddle":       dict(base="https://huddle.tech", marker="/careers/",
-                         listing=["/careers/", "/careers"]),
+                         listing=["/careers/", "/careers"], prefer_sitemap=True),
+    # Server-rendered listing, roles at /careers/{slug}. The link text runs
+    # title, employment type and seniority together ("Chief Commercial Officer
+    # Full-time Senior"), so the slug gives the cleaner title.
+    "BGaming":      dict(base="https://bgaming.com", marker="/careers/",
+                         listing=["/careers"], slug_titles=True),
+    # 38 roles at /career/all-offers, individual roles at /career/{Slug}
+    "Wazdan":       dict(base="https://wazdan.com", marker="/career/",
+                         listing=["/career/all-offers", "/career"], slug_titles=True),
+    # 9 roles at /career/all, individual roles at /career/{slug}
+    "Upgaming":     dict(base="https://lifeat.upgaming.com", marker="/career/",
+                         listing=["/career/all", "/career"], slug_titles=True),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
@@ -2791,6 +2802,16 @@ def scrape_custom(name):
             return ld
 
     urls = _sitemap_job_urls(base, marker)
+    # Boards whose listing renders client-side expose only a stray link or two
+    # in the static HTML, so link parsing "succeeds" with a fraction of the
+    # roles and the sitemap fallback never runs. Huddle returned 1 of 6 that
+    # way. Where the config says so, take the sitemap as the fuller source.
+    if urls and cfg.get("prefer_sitemap"):
+        derived = _titles_from_urls(urls, name)
+        if derived:
+            print(f"   {name}: sitemap preferred -> {len(derived)} roles "
+                  f"(listing is client-rendered)")
+            return derived
     if urls:
         detailed = []
         for u in urls[:80]:

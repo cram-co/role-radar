@@ -36,7 +36,6 @@ EvenBet Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, han
 evoke,Operator,no,0,no board found,detect,avature:amswh,"Avature at amswh.avature.net (William Hill/888/Mr Green). NOTE williamhillinternational.com is a SEPARATE second board, not yet added"
 Evoplay,Supplier - Content,no,0,no board found,detect,greenhouse:evoplaygames,"Greenhouse, EU-hosted board"
 EyeSpy Recruitment,Recruitment agency,no,0,no board found,detect,skip,PARKED [ATS: unidentified] - eyespyrecruitment.com/jobs/{id} with a /search page
-Fanatics,Operator,no,0,no board found,detect,skip,"SKIP - parent company, mostly memorabilia and collectibles roles. The gaming arm is the separate ""Fanatics Betting & Gaming"" row, which produces"
 FEG,Operator,no,0,no board found,detect,skip,PARKED [ATS: custom Azure easyapply] - app-azeun-p-hr-easyapply-fe.azurewebsites.net/easyapply/form?jobReqId=N. Not a known platform
 Fennica Gaming,Supplier - Content,no,0,no board found,detect,skip,Veikkaus B2B arm - roles come through the Veikkaus Oracle site
 FIRST.bet,Operator,no,0,no board found,detect,bamboohr:coretech,BambooHR at coretech.bamboohr.com
@@ -69,7 +68,7 @@ PointsBet,Sports/Prediction,no,0,no board found,detect,skip,"PARKED [ATS: aptrac
 Push Gaming,Supplier - Content,no,0,no board found,detect,skip,"own site, no open roles at setup - handled by scrape_custom"
 Racing Post / Spotlight Sports,Racing / Media,no,0,no board found,detect,workable:spotlightsportsgroup,"Workable. KEPT despite the racing cull - they are a content and data provider, not a racecourse operator"
 Racing1,Racing,no,0,no board found,detect,skip,No roles open. Kept as a data/markets provider rather than a racecourse operator
-Red Tiger,Supplier - Content,no,0,no board found,detect,skip,Evolution-owned; their roles sit on jobs.smartrecruiters.com/Evolution and already arrive through the Evolution row
+Red Tiger,Supplier - Content,no,0,no board found,detect,skip,"CONFIRMED DUPLICATE - their roles sit on jobs.smartrecruiters.com/Evolution, which IS the Evolution board. Pinning this row would duplicate all ~279 Evolution roles. Checked: the Senior Game Mathematician role is already in the feed under Evolution"
 Relax Gaming,Supplier - Content,no,0,no board found,detect,teamtailor:careers.relax-gaming.com,Teamtailor on a custom domain
 SCIENTIFIC GAMES,Supplier - Content,no,0,no board found,detect,https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers,Workday
 SkillOnNet,Operator,no,0,no board found,detect,teamtailor:skillonnet-1744715103.teamtailor.com,Teamtailor
@@ -87,11 +86,11 @@ TopSport,Operator - Baltics,no,0,no board found,detect,skip,"PARKED [ATS: none] 
 Triton Poker Series,Poker,no,0,no board found,detect,skip,"PARKED [ATS: none] - tritonpokerseries.com/en-US/about/careers, clean page format, apply is a mailto. He thinks an easy scrape"
 UK Tote Group,Racing,no,0,no board found,detect,talos:f08b3d92-b104-43d5-bb6e-266542f8affa|careers.uktotegroup.com,"Talos360. Public JSON API, no auth: POST api-careers-sites.talos360.com/api/careerssite/vacancies/search with careersSiteObfuscatedId"
 UltraPlay,Operator,no,0,no board found,detect,skip,"PARKED [ATS: unidentified] - has a careers site but no roles live, so the platform cannot be confirmed. Re-test when they post"
-Upgaming,Supplier - Content,no,0,no board found,detect,,From LinkedIn follows
+Upgaming,Supplier - Content,no,0,no board found,detect,skip,"lifeat.upgaming.com/career/all, ~9 roles, handled by scrape_custom with slug titles. Config not yet verified against the live page - the run log will confirm"
 VBET,Operator,no,0,no board found,detect,skip,roles come through SoftConstruct
 Veikkaus (incl. Fennica Gaming),Lottery,no,0,no board found,detect,oracle:fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com|CX_2,Oracle HCM Cloud
 WA.Technology,Supplier - Platform,no,0,no board found,detect,ashby:WA.Technology,Ashby
-Wazdan,Supplier - Content,no,0,no board found,detect,,
+Wazdan,Supplier - Content,no,0,no board found,detect,skip,"wazdan.com/career/all-offers, ~38 roles, handled by scrape_custom with slug titles. Config not yet verified against the live page - the run log will confirm"
 White Hat Gaming,Supplier - Platform,no,0,no board found,detect,rippling:whitehatgaming,Rippling ATS
 Winna.com,Operator,no,0,no board found,detect,teamtailor:careers.winna.com,Teamtailor on a custom domain
 World Series of Poker,Poker,no,0,no board found,detect,,From LinkedIn follows
@@ -107,15 +106,11 @@ Fortuna Entertainment Group,Operator - CEE,no,0,skipped on purpose,detect,skip,"
 iGaming Recruitment,Recruitment agency,no,0,skipped on purpose,detect,skip,"WordPress jobs board, handled by scrape_custom"
 KingMakers,Operator - Africa,no,0,skipped on purpose,detect,workable:kingmakers,Workable. Parent of bet9ja
 MERKUR Casino UK,Operator,no,0,skipped on purpose,detect,https://merkurcasinouk.wd103.myworkdayjobs.com/MCEC,"Workday. All land-based slots/arcade roles - kept so an online role would surface, the retail exclusion hides the rest. NOTE: never resolve MERKUR by slug, an earlier probe matched an Austrian insurer"
-MERKUR GAMING,Supplier - Content,no,0,skipped on purpose,detect,skip,WRONG MATCH - same Austrian insurance board as MERKUR Casino UK
 MERKUR GROUP,Operator,no,0,skipped on purpose,detect,skip,PARKED [ATS: Softgarden] - merkur.group/career applies via gauselmann.softgarden.io. Platform not supported
-New Zealand Thoroughbred Racing Inc,Racing,no,0,skipped on purpose,detect,skip,"WRONG MATCH - slug ""new"" hit an unrelated Greenhouse board."
 PawaTech,Supplier - Platform,no,0,skipped on purpose,detect,pawatalent:careers.pawatech.com,"pawaTalent, their own recruitment software. Endpoint /api/public/positions"
 Pinnacle,Operator,no,0,skipped on purpose,detect,orangehrm:pinnacle,OrangeHRM. Uses their documented RSS feed at /recruitmentApply/jobs.rss. NOTE: never resolve Pinnacle by slug - an earlier probe matched a NZ healthcare provider
-PredictIt,Operator - Prediction,no,0,skipped on purpose,detect,skip,WRONG MATCH - bamboohr:predictit is a Dutch engineering firm in Delft. Needs the real board.
-Strive Gaming,Supplier - Platform US,no,0,skipped on purpose,detect,skip,SUSPECT - breezy:strive returned a generic Laravel role; verify before re-enabling.
-STS,Operator - Poland,no,0,skipped on purpose,detect,skip,WRONG MATCH - greenhouse:sts resolved to a US plumbing company. Needs the real board.
-Sun International,Operator - Africa,no,0,skipped on purpose,detect,skip,"MCI DirectHire, mostly brick-and-mortar - deliberately not chased"
+Strive Gaming,Supplier - Platform US,no,0,skipped on purpose,detect,bamboohr:strivegaming,BambooHR at strivegaming.bamboohr.com
+Sun International,Operator - Africa,no,0,skipped on purpose,detect,skip,"PARKED [ATS: MCI DirectHire] - suninternationaljobs.mcidirecthire.com/Vacancy. Platform not supported, and mostly land-based"
 "Super Group (Betway, Jackpot City, Spin)",Operator - Tier 1,no,0,skipped on purpose,detect,https://myhcm.wd3.myworkdayjobs.com/Betway,Super Group / Betway Workday tenant (myhcm)
 OPAP,Lottery / Operator,no,0,successfactors board found but empty,detect,successfactors:career2.successfactors.eu|opapsa,"PARKED [ATS: SuccessFactors] - career2.successfactors.eu company=opapsa. Fetcher built via DWR but SAP returns ""not authorized"""
 betPawa,Operator - Africa,no,0,workable board found but empty,detect,workable:betpawa,Workable - no openings at time of setup
@@ -134,10 +129,10 @@ BetKing,Operator - Africa,yes,5,producing,detect,skip,Roles come through the Kin
 BetMGM,Operator - Tier 1,yes,22,producing,detect,https://betmgminc.wd5.myworkdayjobs.com/en-US/BetMGM,Entain/MGM JV
 betr,Operator,yes,11,producing,detect,,From LinkedIn follows
 Betsson Group,Operator - Tier 1,yes,127,producing,teamtailor (likely),,
-Betting Connections,Recruitment agency,yes,2,producing,detect,,Malta; one of the largest iGaming agencies
+Betting Connections,Recruitment agency,yes,2,producing,detect,skip,"PARKED [ATS: JOIN] - join.com/companies/bettingconnections. Platform not supported, and no vacancies listed at time of check"
 BettingJobs,Recruitment agency,yes,87,producing,detect,skip,bespoke scraper in collector.py
 Betty,Operator,yes,24,producing,detect,greenhouse:bettyjobboard,"Greenhouse; token is bettyjobboard, not betty"
-BGaming,Supplier - Content,yes,1,producing,detect,,
+BGaming,Supplier - Content,yes,1,producing,detect,skip,"Server-rendered careers page at bgaming.com/careers, roles at /careers/{slug}, handled by scrape_custom with slug titles. Malta HQ with Poland and Georgia offices. 11 roles at time of adding including a Chief Commercial Officer"
 Blip.pt,Supplier - Platform,yes,18,producing,detect,skip,Flutter's Porto engineering hub; own board at blip.pt/jobs/ (greenhouse:blip is a different company)
 Bullfinch Recruitment,Recruitment agency,yes,41,producing,breezy,,Breezy board; IOM/Gib/Malta/Cyprus focus
 Caliente,Operator - Mexico,yes,7,producing,detect,,
@@ -211,7 +206,7 @@ Stats Perform,Sports data,yes,14,producing,detect,,
 Superbet,Operator - Growth,yes,189,producing,detect,greenhouse:super,
 Tabcorp,Operator - Australia,yes,29,producing,detect,skip,"server-rendered careers site (PageUp behind it), handled by scrape_tabcorp"
 TalentBet,Recruitment agency,yes,35,producing,detect,skip,"WordPress jobs board, handled by scrape_custom"
-Talentgrator,Recruitment agency,yes,3,producing,detect,,iGaming recruitment platform
+Talentgrator,Recruitment agency,yes,3,producing,detect,workable:talentgratorjobs,Workable. Agency
 Tipico,Operator - Tier 1,yes,183,producing,detect,,
 Underdog,Operator - US,yes,11,producing,greenhouse (likely),greenhouse:underdogfantasy,Greenhouse
 Van Kaizen,Recruitment agency,yes,61,producing,detect,skip,bespoke scraper in collector.py
@@ -230,7 +225,7 @@ Careers in Racing,Racing,no,0,not probed yet,detect,skip,British Horseracing Aut
 BetVictor (BVGroup),Operator,no,0,not probed yet,detect,hibob:bvgroup,"HiBob. NOTE subdomain is bvgroup, NOT bvg - bvg exists but is empty"
 Legend,Supplier - Content,no,0,not probed yet,detect,skip,Custom Next.js board at l1.com/jobs - scrape_custom with first_element titles
 IGT,Supplier - Content,no,0,not probed yet,detect,successfactors:career2.successfactors.eu|igtanevadaP2,"PARKED [ATS: SuccessFactors] - career2.successfactors.eu company=igtanevadaP2. Fetcher built via DWR but SAP returns ""not authorized"""
-Inplay Recruit,Agency,no,0,not probed yet,detect,skip,"Agency with a good range of roles - inplayrecruit.com/jobs, job pages at /job/{slug}"
 Inplay Matrix,Supplier - Platform,no,0,not probed yet,detect,skip,"inplaymatrix.com/jobs - no roles open at time of adding, keep on the list"
 888,Operator,no,0,not probed yet,detect,wordpress:jobs.888.com|888-position,"WordPress with a 888-position post type. THIRD evoke board - separate from evoke (Avature, William Hill side) and evoke plc (BambooHR, Spectate). Israel, Gibraltar, Ceuta, NY, NJ"
 Newfield,Supplier - Data,no,0,not probed yet,detect,skip,"Employment Hero at employmenthero.com/jobs/organisations/newfield-ltd. Server-rendered, handled by scrape_custom with slug titles. Isle of Man, 140 staff, international racing events and their own IT platform"
+iGate,Supplier - Platform,no,0,not probed yet,greenhouse_eu,greenhouse_eu:igate,Greenhouse EU at job-boards.eu.greenhouse.io/igate
