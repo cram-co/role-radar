@@ -24,7 +24,12 @@ jobs:
       - name: Run collector
         run: python collector.py
 
+      # if: always() makes this step run even when the collector crashes. The
+      # collector writes docs/run-log.txt in a finally block, so the log
+      # survives a failure — but without this the commit is skipped and the
+      # diagnostics die with the runner, which is exactly when they matter.
       - name: Commit updated feed
+        if: always()
         run: |
           git config user.name "role-radar-bot"
           git config user.email "actions@github.com"
