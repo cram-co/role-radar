@@ -28,7 +28,7 @@ import requests
 from collections import Counter
 
 ROOT = Path(__file__).parent
-DOCS = ROOT / "docs"
+DOCS = ROOT / "docs" if: always()
 DOCS.mkdir(exist_ok=True)
 COMPANIES_CSV = ROOT / "companies.csv"
 CACHE_FILE = DOCS / "detected.json"
