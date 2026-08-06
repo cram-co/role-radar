@@ -117,7 +117,7 @@ def _host_is_throttled(url):
 # Workable throttles hard when several companies are pulled back to back. The
 # retry helper alone just burns the budget losing the same requests, so pace the
 # requests instead: never hit the same host more often than this.
-_HOST_MIN_GAP = {"apply.workable.com": 12.0}
+_HOST_MIN_GAP = {"apply.workable.com": 5.0}
 _host_last = {}
 
 
@@ -3085,7 +3085,15 @@ def main():
             cache[name] = {"ats": "workday_pending"}  # needs a URL in the CSV
             continue
         print(f"Detecting: {name}")
-        result = detect(name, hint)
+        t0 = time.time()
+        try:
+            result = detect(name, hint)
+        except Exception as e:
+            print(f"  ! detect failed for {name}: {type(e).__name__}: {e}")
+            result = None
+        took = time.time() - t0
+        if took > 20:
+            print(f"  .. {name} took {took:.0f}s to detect")
         cache[name] = result or {"ats": "unknown", "checked": now}
         probed += 1
 
@@ -3104,7 +3112,11 @@ def main():
     hints = {c["company"].strip(): (c.get("ats_hint") or "") for c in companies}
     for name in stale[:RETRY_PER_RUN]:
         print(f"Re-probing (was unknown): {name}")
-        result = detect(name, hints.get(name, ""))
+        try:
+            result = detect(name, hints.get(name, ""))
+        except Exception as e:
+            print(f"  ! re-probe failed for {name}: {type(e).__name__}: {e}")
+            result = None
         cache[name] = result or {"ats": "unknown", "checked": now}
 
     CACHE_FILE.write_text(json.dumps(cache, indent=1))
@@ -3121,6 +3133,7 @@ def main():
         name = c["company"].strip()
         info = cache.get(name) or {}
         ats = info.get("ats")
+        _t0 = time.time()
         try:
             if ats == "workday":
                 jobs = fetch_workday(info["url"])
@@ -3131,7 +3144,9 @@ def main():
             for j in jobs:
                 j.update(company=name, ats=ats, source="collector")
             all_jobs.extend(jobs)
-            print(f"{name}: {len(jobs)} roles ({ats})")
+            took = time.time() - _t0
+            slow = f"  [{took:.0f}s]" if took > 20 else ""
+            print(f"{name}: {len(jobs)} roles ({ats}){slow}")
             time.sleep(REQUEST_DELAY)
         except Exception as e:
             print(f"{name}: FAILED ({e})")
@@ -3180,7 +3195,10 @@ def main():
         print(f"\ndropped {before - len(all_jobs)} physical racing roles "
               f"(stable, yard, raceday, track)")
 
-    _write_company_status(companies, all_jobs, cache)
+    try:
+        _write_company_status(companies, all_jobs, cache)
+    except Exception as e:
+        print(f"!! company status write failed: {type(e).__name__}: {e}")
 
     feed = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
