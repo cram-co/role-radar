@@ -24,31 +24,11 @@ jobs:
       - name: Run collector
         run: python collector.py
 
-      # if: always() makes this step run even when the collector crashes. The
-      # collector writes docs/run-log.txt in a finally block, so the log
-      # survives a failure — but without this the commit is skipped and the
-      # diagnostics die with the runner, which is exactly when they matter.
-      #
-      # The rebase-and-retry handles the other failure mode: a run takes ~15
-      # minutes, and any commit made in that window (a file edited in the web
-      # UI, say) leaves the runner's push rejected as non-fast-forward. Pull
-      # the remote's work in and try again rather than losing the whole run.
       - name: Commit updated feed
         if: always()
         run: |
           git config user.name "role-radar-bot"
           git config user.email "actions@github.com"
-          git add docs/ companies.csv
-          git diff --cached --quiet && echo "nothing to commit" && exit 0
-          git commit -m "Daily feed update"
-          for attempt in 1 2 3; do
-            if git push; then
-              echo "pushed on attempt $attempt"
-              exit 0
-            fi
-            echo "push rejected, rebasing onto the remote and retrying"
-            git pull --rebase origin main
-            sleep 5
-          done
-          echo "could not push after 3 attempts"
-          exit 1
+          git add docs/
+          git diff --cached --quiet || git commit -m "Daily feed update"
+          git push
