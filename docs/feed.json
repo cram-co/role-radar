@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-05T22:59:45.360943+00:00",
- "job_count": 6869,
+ "generated_at": "2026-08-06T07:04:55.695889+00:00",
+ "job_count": 6881,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -20,6 +20,17 @@
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Noida-UP-IN/Sr-Technical-Lead---Workday_R0017690-1",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
+   "company": "Aristocrat Interactive",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
+   "title": "UX/UI Designer",
+   "location": "Bulgaria - Sofia",
+   "department": "",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Bulgaria---Sofia/UX-UI-Designer_R0022273",
+   "posted_at": null,
+   "posted_text": "Posted Today",
    "company": "Aristocrat Interactive",
    "ats": "workday",
    "source": "collector"
@@ -1862,6 +1873,17 @@
    "source": "collector"
   },
   {
+   "title": "UX/UI Designer",
+   "location": "Bulgaria - Sofia",
+   "department": "",
+   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Bulgaria---Sofia/UX-UI-Designer_R0022273",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "Aristocrat Interactive",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "MTO Service Support Representative",
    "location": "Las Vegas, NV, US",
    "department": "",
@@ -2042,17 +2064,6 @@
    "location": "London, United Kingdom",
    "department": "",
    "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/London-United-Kingdom/Senior-Product-Solutions-Manager--Content-Distribution_R0022137",
-   "posted_at": null,
-   "posted_text": "Posted 5 Days Ago",
-   "company": "Aristocrat Interactive",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Account and Customer Success Manager",
-   "location": "Bulgaria - Sofia",
-   "department": "",
-   "url": "https://aristocrat.wd3.myworkdayjobs.com/AristocratExternalCareersSite/job/Bulgaria---Sofia/Account-and-Customer-Success-Manager_R0021722",
    "posted_at": null,
    "posted_text": "Posted 5 Days Ago",
    "company": "Aristocrat Interactive",
@@ -2590,16 +2601,6 @@
    "source": "collector"
   },
   {
-   "title": "Gaming Equipment Technician",
-   "location": "Sofia, Bulgaria",
-   "department": "",
-   "url": "https://jobs.jobvite.com/pragmaticplay/job/ooDlAfwG",
-   "posted_at": null,
-   "company": "ARRISE",
-   "ats": "jobvite",
-   "source": "collector"
-  },
-  {
    "title": "Graphic Designer",
    "location": "Global remote, Malta",
    "department": "",
@@ -2684,6 +2685,16 @@
    "location": "Global remote, Malta",
    "department": "",
    "url": "https://jobs.jobvite.com/pragmaticplay/job/oSNTzfwR",
+   "posted_at": null,
+   "company": "ARRISE",
+   "ats": "jobvite",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Product Owner (Roulette)",
+   "location": "Global remote, Malta",
+   "department": "",
+   "url": "https://jobs.jobvite.com/pragmaticplay/job/owB8zfwy",
    "posted_at": null,
    "company": "ARRISE",
    "ats": "jobvite",
@@ -3084,16 +3095,6 @@
    "location": "Bucharest, Romania",
    "department": "",
    "url": "https://jobs.jobvite.com/pragmaticplay/job/ovgvAfwA",
-   "posted_at": null,
-   "company": "ARRISE",
-   "ats": "jobvite",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Product Owner (Roulette)",
-   "location": "Global remote, Malta",
-   "department": "",
-   "url": "https://jobs.jobvite.com/pragmaticplay/job/owB8zfwy",
    "posted_at": null,
    "company": "ARRISE",
    "ats": "jobvite",
@@ -8032,6 +8033,16 @@
    "source": "collector"
   },
   {
+   "title": "Security Shift Manager - Full Time (Caesars Palace LV)",
+   "location": "Las Vegas, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87906",
+   "posted_at": "2026-08-06",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
    "title": "Sportsbook Ticket Writer - Full Time (Jerry's Nugget)",
    "location": "North Las Vegas, NV, United States",
    "department": "",
@@ -8062,10 +8073,30 @@
    "source": "collector"
   },
   {
+   "title": "Lounge Server-Gigolo's-Steady Extra (The Vanderpump Hotel LV)",
+   "location": "Las Vegas, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/86171",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
    "title": "Crowd Control Specialist - Part Time (Tropicana Atlantic City)",
    "location": "Atlantic City, NJ, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87021",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Fountain Worker-Starbucks-Steady Extra (The Vanderpump Hotel LV)",
+   "location": "Las Vegas, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87225",
    "posted_at": "2026-08-05",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -8486,6 +8517,46 @@
    "location": "Las Vegas, NV, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87937",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Assistant Restaurant Manager Carnegies Cafe (Tropicana Laughlin)",
+   "location": "Laughlin, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87945",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Host Cashier Carnegies Cafe - Part Time (Tropicana Laughlin)",
+   "location": "Laughlin, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87944",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Food Server Brew Brothers - Part Time (Tropicana Laughlin)",
+   "location": "Laughlin, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87947",
+   "posted_at": "2026-08-05",
+   "company": "Caesars Digital",
+   "ats": "oracle",
+   "source": "collector"
+  },
+  {
+   "title": "Senior Analyst, Gaming Analytics - Corporate (Las Vegas)",
+   "location": "Las Vegas, NV, United States",
+   "department": "",
+   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/87959",
    "posted_at": "2026-08-05",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -20222,16 +20293,6 @@
    "source": "collector"
   },
   {
-   "title": "Barista-Starbucks-Steady Extra (Caesars Palace/The Vanderpump Hotel LV)",
-   "location": "Las Vegas, NV, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/84117",
-   "posted_at": "2026-05-08",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
    "title": "Cook III - Full Time - Harrah's Gulf Coast",
    "location": "Biloxi, MS, United States",
    "department": "",
@@ -20286,26 +20347,6 @@
    "location": "Joliet, IL, United States",
    "department": "",
    "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/83613",
-   "posted_at": "2026-05-06",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Specialist Crowd Control- On Call (Caesars Atlantic City)",
-   "location": "Atlantic City, NJ, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/83871",
-   "posted_at": "2026-05-06",
-   "company": "Caesars Digital",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Surveillance Officer- On Call (Harrah's Atlantic City)",
-   "location": "Atlantic City, NJ, United States",
-   "department": "",
-   "url": "https://edmn.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/83914",
    "posted_at": "2026-05-06",
    "company": "Caesars Digital",
    "ats": "oracle",
@@ -22212,6 +22253,17 @@
    "source": "collector"
   },
   {
+   "title": "Tax Compliance Specialist - Rest of Africa",
+   "location": "Cape Town",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Tax-Compliance-Specialist---Rest-of-Africa_JR13133",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "DigiOutsource",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Open Day: Risk | Fraud | AML | Responsible Gambling | Financial Crime Opportunities",
    "location": "Cape Town",
    "department": "",
@@ -23356,6 +23408,17 @@
    "source": "collector"
   },
   {
+   "title": "Tax Compliance Specialist - Rest of Africa",
+   "location": "Cape Town",
+   "department": "",
+   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Tax-Compliance-Specialist---Rest-of-Africa_JR13133",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "DigiOutsource",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Open Day: Risk | Fraud | AML | Responsible Gambling | Financial Crime Opportunities",
    "location": "Cape Town",
    "department": "",
@@ -23558,17 +23621,6 @@
    "location": "Cape Town",
    "department": "",
    "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Financial-Accountant_JR13027",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "DigiOutsource",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Project Manager",
-   "location": "Cape Town",
-   "department": "",
-   "url": "https://myhcm.wd3.myworkdayjobs.com/digioutsource/job/Cape-Town/Senior-Project-Manager_JR12324",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
    "company": "DigiOutsource",
@@ -34245,17 +34297,6 @@
    "source": "collector"
   },
   {
-   "title": "Procurement Business Partner, Technology",
-   "location": "Boston, MA",
-   "department": "",
-   "url": "https://draftkings.wd1.myworkdayjobs.com/DraftKings/job/Boston-MA/Procurement-Business-Partner--Technology_JR14789-1",
-   "posted_at": null,
-   "posted_text": "Posted Yesterday",
-   "company": "DraftKings",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
    "title": "Senior Procurement Analyst, Operations",
    "location": "Boston, MA",
    "department": "",
@@ -35181,20 +35222,20 @@
   },
   {
    "title": "Account Manager - Juice",
-   "location": "Remote",
+   "location": "Melbourne, Australia",
    "department": "Strategy ",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184079007",
-   "posted_at": "2026-07-10T01:04:03-04:00",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184076007",
+   "posted_at": "2026-07-10T00:55:54-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Account Manager - Juice",
-   "location": "Melbourne, Australia",
+   "location": "Remote",
    "department": "Strategy ",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184076007",
-   "posted_at": "2026-07-10T00:55:54-04:00",
+   "url": "https://job-boards.greenhouse.io/easygo/jobs/5184079007",
+   "posted_at": "2026-07-10T01:04:03-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -35215,16 +35256,6 @@
    "department": "Legal - Compliance ",
    "url": "https://job-boards.greenhouse.io/easygo/jobs/5180074007",
    "posted_at": "2026-07-06T02:31:46-04:00",
-   "company": "Easygo",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Atlassian Engineer",
-   "location": "Melbourne, Australia",
-   "department": "Finance ",
-   "url": "https://job-boards.greenhouse.io/easygo/jobs/5153842007",
-   "posted_at": "2026-06-03T01:54:04-04:00",
    "company": "Easygo",
    "ats": "greenhouse",
    "source": "collector"
@@ -41091,6 +41122,16 @@
   },
   {
    "title": "Fanatics Markets Relationship Executive",
+   "location": "Dallas, TX, United States",
+   "department": "Gaming - Non-Tech",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4355420009",
+   "posted_at": "2026-08-04T18:36:27-04:00",
+   "company": "Fanatics Betting & Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Fanatics Markets Relationship Executive",
    "location": "Miami, FL, United States",
    "department": "Gaming - Business Development",
    "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4355293009",
@@ -41101,10 +41142,10 @@
   },
   {
    "title": "Fanatics Markets Relationship Executive",
-   "location": "Dallas, TX, United States",
+   "location": "San Francisco, CA, United States",
    "department": "Gaming - Non-Tech",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4355420009",
-   "posted_at": "2026-08-04T18:36:27-04:00",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4355411009",
+   "posted_at": "2026-08-04T18:26:44-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -41125,16 +41166,6 @@
    "department": "Gaming - Non-Tech",
    "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4355374009",
    "posted_at": "2026-08-04T18:11:47-04:00",
-   "company": "Fanatics Betting & Gaming",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Fanatics Markets Relationship Executive",
-   "location": "San Francisco, CA, United States",
-   "department": "Gaming - Non-Tech",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4355411009",
-   "posted_at": "2026-08-04T18:26:44-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -41361,20 +41392,20 @@
   },
   {
    "title": "Senior Manager, Customer Experience ",
-   "location": "Denver, CO, United States",
+   "location": "Jersey City, NJ, United States",
    "department": "Gaming - Customer Experience",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4245881009",
-   "posted_at": "2026-05-12T18:54:07-04:00",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4342706009",
+   "posted_at": "2026-08-05T17:47:46-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Manager, Customer Experience ",
-   "location": "Jersey City, NJ, United States",
+   "location": "Denver, CO, United States",
    "department": "Gaming - Customer Experience",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4342706009",
-   "posted_at": "2026-08-05T17:47:46-04:00",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4245881009",
+   "posted_at": "2026-05-12T18:54:07-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -41530,6 +41561,16 @@
    "source": "collector"
   },
   {
+   "title": "Senior Systems Engineer",
+   "location": "Atlanta, GA, United States",
+   "department": "Gaming - Shared Services - IT",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4357095009",
+   "posted_at": "2026-08-06T00:20:44-04:00",
+   "company": "Fanatics Betting & Gaming",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
    "title": "Service Desk Analyst III - Leeds, UK",
    "location": "Leeds, England, United Kingdom",
    "department": "Gaming - Shared Services - IT",
@@ -41601,20 +41642,20 @@
   },
   {
    "title": "Staff Engineer-FBG-Trading",
-   "location": "Dublin, Ireland",
+   "location": "London, England, United Kingdom",
    "department": "Gaming - Trading",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4221929009",
-   "posted_at": "2026-04-15T10:21:36-04:00",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4212631009",
+   "posted_at": "2026-04-09T12:10:20-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Staff Engineer-FBG-Trading",
-   "location": "London, England, United Kingdom",
+   "location": "Dublin, Ireland",
    "department": "Gaming - Trading",
-   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4212631009",
-   "posted_at": "2026-04-09T12:10:20-04:00",
+   "url": "https://job-boards.greenhouse.io/fanaticsfbg/jobs/4221929009",
+   "posted_at": "2026-04-15T10:21:36-04:00",
    "company": "Fanatics Betting & Gaming",
    "ats": "greenhouse",
    "source": "collector"
@@ -61119,31 +61160,31 @@
    "source": "collector"
   },
   {
-   "title": "Regional Lead - Government & Industry Affairs ",
-   "location": "Georgia",
-   "department": "GOV & INDUSTRY AFFAIRS",
-   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576059002",
-   "posted_at": "2026-06-16T21:30:41-04:00",
+   "title": "General Manager, Chumba Casino",
+   "location": "Las Vegas",
+   "department": "PRODUCT & REVENUE",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8670835002",
+   "posted_at": "2026-08-05T20:49:51-04:00",
    "company": "VGW",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
-   "title": "Regional Lead - Government & Industry Affairs ",
-   "location": "Illinois",
-   "department": "GOV & INDUSTRY AFFAIRS",
-   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576060002",
-   "posted_at": "2026-06-16T21:30:42-04:00",
+   "title": "General Manager, Chumba Casino",
+   "location": "Austin",
+   "department": "PRODUCT & REVENUE",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8670836002",
+   "posted_at": "2026-08-05T20:50:03-04:00",
    "company": "VGW",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
-   "title": "Regional Lead - Government & Industry Affairs ",
-   "location": "Iowa",
-   "department": "GOV & INDUSTRY AFFAIRS",
-   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576061002",
-   "posted_at": "2026-06-16T21:36:04-04:00",
+   "title": "General Manager, Chumba Casino",
+   "location": "Cedar Falls",
+   "department": "PRODUCT & REVENUE",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8670838002",
+   "posted_at": "2026-08-05T20:50:17-04:00",
    "company": "VGW",
    "ats": "greenhouse",
    "source": "collector"
@@ -61170,10 +61211,10 @@
   },
   {
    "title": "Regional Lead - Government & Industry Affairs ",
-   "location": "Kentucky",
+   "location": "Georgia",
    "department": "GOV & INDUSTRY AFFAIRS",
-   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576064002",
-   "posted_at": "2026-06-16T21:44:54-04:00",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576059002",
+   "posted_at": "2026-06-16T21:30:41-04:00",
    "company": "VGW",
    "ats": "greenhouse",
    "source": "collector"
@@ -61184,6 +61225,36 @@
    "department": "GOV & INDUSTRY AFFAIRS",
    "url": "https://job-boards.greenhouse.io/vgw/jobs/8576065002",
    "posted_at": "2026-06-16T21:46:21-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Kentucky",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576064002",
+   "posted_at": "2026-06-16T21:44:54-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Illinois",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576060002",
+   "posted_at": "2026-06-16T21:30:42-04:00",
+   "company": "VGW",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Regional Lead - Government & Industry Affairs ",
+   "location": "Iowa",
+   "department": "GOV & INDUSTRY AFFAIRS",
+   "url": "https://job-boards.greenhouse.io/vgw/jobs/8576061002",
+   "posted_at": "2026-06-16T21:36:04-04:00",
    "company": "VGW",
    "ats": "greenhouse",
    "source": "collector"
@@ -62726,16 +62797,6 @@
    "source": "collector"
   },
   {
-   "title": "Middle Atlassian Engineer",
-   "location": "Europe",
-   "department": "",
-   "url": "https://job-boards.eu.greenhouse.io/growe/jobs/4902746101",
-   "posted_at": "2026-06-26T10:20:32-04:00",
-   "company": "Growe",
-   "ats": "greenhouse_eu",
-   "source": "collector"
-  },
-  {
    "title": "Middle Data Analyst",
    "location": "Anywhere",
    "department": "",
@@ -64266,16 +64327,6 @@
    "source": "agency"
   },
   {
-   "title": "Senior Finance Business Partner",
-   "location": "",
-   "department": "",
-   "url": "https://jobs.careersinracing.com \r\n\t/job/337078/senior-finance-business-partner/\r\n\r\n\r\n\r\n",
-   "posted_at": null,
-   "company": "Careers in Racing",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
    "title": "Digital Designer",
    "location": "",
    "department": "",
@@ -64380,6 +64431,16 @@
    "location": "",
    "department": "",
    "url": "https://jobs.careersinracing.com \r\n\t/job/337056/facilities-building-fabric-manager/\r\n\r\n\r\n\r\n",
+   "posted_at": null,
+   "company": "Careers in Racing",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Event Sales Executive (maternity cover)",
+   "location": "",
+   "department": "",
+   "url": "https://jobs.careersinracing.com \r\n\t/job/337055/event-sales-executive-maternity-cover-/\r\n\r\n\r\n\r\n",
    "posted_at": null,
    "company": "Careers in Racing",
    "ats": "agency",
@@ -66486,10 +66547,10 @@
    "source": "agency"
   },
   {
-   "title": "Oncourse Operator (Casual) Sydney",
+   "title": "Head of Media Investment, Operations & Insights",
    "location": "",
    "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/oncourse-operator-casual-sydney-sydney-eora-nation-nsw-australia",
+   "url": "https://careers.tabcorp.com.au/jobs/head-of-media-investment-operations-insights-sydney-eora-nation-nsw-australia-ann-street-qld",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -66500,16 +66561,6 @@
    "location": "",
    "department": "",
    "url": "https://careers.tabcorp.com.au/jobs/head-of-brand-and-content-sydney-eora-nation-nsw-australia-ann-street-qld-melbourne-kulin-nation-vic",
-   "posted_at": null,
-   "company": "Tabcorp",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Head of Media Investment, Operations & Insights",
-   "location": "",
-   "department": "",
-   "url": "https://careers.tabcorp.com.au/jobs/head-of-media-investment-operations-insights-sydney-eora-nation-nsw-australia-ann-street-qld",
    "posted_at": null,
    "company": "Tabcorp",
    "ats": "agency",
@@ -66776,6 +66827,16 @@
    "source": "agency"
   },
   {
+   "title": "Service Reliability Manager",
+   "location": "",
+   "department": "",
+   "url": "https://careers.sportsbet.com.au/jobs/service-reliability-manager-melbourne-vic-australia",
+   "posted_at": null,
+   "company": "Sportsbet",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Safer Gambling Specialist",
    "location": "",
    "department": "",
@@ -66790,16 +66851,6 @@
    "location": "",
    "department": "",
    "url": "https://careers.sportsbet.com.au/jobs/head-of-line-1-risk-compliance-melbourne-vic-australia",
-   "posted_at": null,
-   "company": "Sportsbet",
-   "ats": "agency",
-   "source": "agency"
-  },
-  {
-   "title": "Service Reliability Manager",
-   "location": "",
-   "department": "",
-   "url": "https://careers.sportsbet.com.au/jobs/service-reliability-manager-melbourne-vic-australia",
    "posted_at": null,
    "company": "Sportsbet",
    "ats": "agency",
@@ -69046,6 +69097,16 @@
    "source": "agency"
   },
   {
+   "title": "Chief Marketing Officer Prediction Market",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/chief-marketing-officer-prediction-market",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Chief Product Officer",
    "location": "",
    "department": "",
@@ -69080,6 +69141,16 @@
    "location": "",
    "department": "",
    "url": "https://vankaizen.com/vacancies/compliance-manager-mlro",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Controller",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/controller",
    "posted_at": null,
    "company": "Van Kaizen",
    "ats": "agency",
@@ -69266,10 +69337,40 @@
    "source": "agency"
   },
   {
+   "title": "Head Of Compliance Prediction Markets",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-compliance-prediction-markets",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Content",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-content",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Head Of CRM",
    "location": "",
    "department": "",
    "url": "https://vankaizen.com/vacancies/head-of-crm-2",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of CRM Prediction Markets",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-crm-prediction-markets",
    "posted_at": null,
    "company": "Van Kaizen",
    "ats": "agency",
@@ -69296,10 +69397,30 @@
    "source": "agency"
   },
   {
+   "title": "Head Of Growth Marketing Prediction Markets",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-growth-marketing-prediction-markets",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
    "title": "Head Of Product Commerical Analytics",
    "location": "",
    "department": "",
    "url": "https://vankaizen.com/vacancies/head-of-product-commerical-analytics",
+   "posted_at": null,
+   "company": "Van Kaizen",
+   "ats": "agency",
+   "source": "agency"
+  },
+  {
+   "title": "Head Of Social Marketing Prediction Markets",
+   "location": "",
+   "department": "",
+   "url": "https://vankaizen.com/vacancies/head-of-social-marketing-prediction-markets",
    "posted_at": null,
    "company": "Van Kaizen",
    "ats": "agency",
