@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-08-06T12:29:26.356480+00:00",
- "job_count": 6906,
+ "generated_at": "2026-08-06T12:43:27.576468+00:00",
+ "job_count": 6910,
  "jobs": [
   {
    "title": "Salesforce and FSL Support Analyst",
@@ -24985,6 +24985,16 @@
    "source": "collector"
   },
   {
+   "title": "Customer Service Representative",
+   "location": "22/24, Strutton Ground, Westminster, London, England, SW1P 2HR <span class",
+   "department": "",
+   "url": "https://amswh.avature.net/careers/JobDetail/Customer-Service-Representative/41333",
+   "posted_at": null,
+   "company": "evoke",
+   "ats": "avature",
+   "source": "collector"
+  },
+  {
    "title": "Financial Planning Analyst",
    "location": "Aseana 3, Paranaque City, Metro Manila <span class=\"separator\" aria-hidden",
    "department": "",
@@ -26513,6 +26523,17 @@
    "source": "collector"
   },
   {
+   "title": "Specialist ITSM Engineer",
+   "location": "Bangalore, India",
+   "department": "",
+   "url": "https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers/job/Bangalore-India/Specialist-ITSM-Engineer_R505007",
+   "posted_at": null,
+   "posted_text": "Posted Today",
+   "company": "SCIENTIFIC GAMES",
+   "ats": "workday",
+   "source": "collector"
+  },
+  {
    "title": "Senior Data Analyst",
    "location": "Bangalore, India",
    "department": "",
@@ -27971,216 +27992,6 @@
    "posted_at": null,
    "company": "UK Tote Group",
    "ats": "talos",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Product Designer, iCasino",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/447",
-   "posted_at": "2026-08-05",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Quality Specialist",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/753",
-   "posted_at": "2026-07-31",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Product Owner, Web Channel",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/720",
-   "posted_at": "2026-07-27",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Head of Insight and Growth",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/733",
-   "posted_at": "2026-07-27",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Customer Journey Manager",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/735",
-   "posted_at": "2026-07-27",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Product Designer, Sports Betting",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/609",
-   "posted_at": "2026-07-17",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Pelisaliasiakaspalvelija, Rovaniemi, m\u00e4\u00e4r\u00e4aikaisuus",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/751",
-   "posted_at": "2026-07-16",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Junior Product Manager / Product Manager",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/206",
-   "posted_at": "2026-07-15",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Pelisaliasiakaspalvelija, Rovaniemi",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/749",
-   "posted_at": "2026-07-15",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Sportsbook Risk Management Manager",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/722",
-   "posted_at": "2026-07-03",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Advanced Analytics Specialist",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/737",
-   "posted_at": "2026-07-03",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Lead Data Engineer",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/674",
-   "posted_at": "2026-07-02",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Viestint\u00e4p\u00e4\u00e4llikk\u00f6",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/725",
-   "posted_at": "2026-06-29",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Senior viestint\u00e4asiantuntija",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/726",
-   "posted_at": "2026-06-29",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Data Engineer",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/667",
-   "posted_at": "2026-06-26",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Chief Architect",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/719",
-   "posted_at": "2026-06-23",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Senior Developer, integration platform development",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/652",
-   "posted_at": "2026-06-18",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Lead Developer, AI",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/163",
-   "posted_at": "2026-06-17",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Game Developer",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/708",
-   "posted_at": "2026-06-12",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Avoin hakemus asiakaspalveluteht\u00e4viin",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/51",
-   "posted_at": "2025-01-02",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
-   "source": "collector"
-  },
-  {
-   "title": "Open application",
-   "location": "Finland",
-   "department": "",
-   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/52",
-   "posted_at": "2025-01-02",
-   "company": "Veikkaus (incl. Fennica Gaming)",
-   "ats": "oracle",
    "source": "collector"
   },
   {
@@ -30820,6 +30631,26 @@
    "source": "collector"
   },
   {
+   "title": "Regulatory Data Developer (GCP)",
+   "location": "Manchester, GB",
+   "department": "Data Engineering",
+   "url": "https://jobs.smartrecruiters.com/Bet3651/744000141907160",
+   "posted_at": "2026-08-06T12:19:59.143Z",
+   "company": "bet365",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Regulatory Data Developer (GCP)",
+   "location": "Stoke-on-Trent, GB",
+   "department": "Data Engineering",
+   "url": "https://jobs.smartrecruiters.com/Bet3651/744000141907559",
+   "posted_at": "2026-08-06T12:17:46.904Z",
+   "company": "bet365",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "Payroll Officer, Colombian Payroll",
    "location": "Sliema, MT",
    "department": "Administration (Malta)",
@@ -32317,20 +32148,20 @@
   },
   {
    "title": "DevOps Engineer - Player Account Management",
-   "location": "Malta",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8093764",
-   "posted_at": "2026-07-29T08:59:12-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8081413",
+   "posted_at": "2026-07-29T03:22:53-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "DevOps Engineer - Player Account Management",
-   "location": "Athens",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8081413",
-   "posted_at": "2026-07-29T03:22:53-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8093764",
+   "posted_at": "2026-07-29T08:59:12-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -32397,9 +32228,9 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7946340",
    "posted_at": "2026-05-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -32417,9 +32248,9 @@
   },
   {
    "title": "Frontend QA Engineer",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7946340",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7957207",
    "posted_at": "2026-05-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -32457,20 +32288,20 @@
   },
   {
    "title": "Frontend Software Engineer",
-   "location": "Malta",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071613",
-   "posted_at": "2026-07-20T03:42:00-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071617",
+   "posted_at": "2026-07-17T10:15:03-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Frontend Software Engineer",
-   "location": "Athens",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071617",
-   "posted_at": "2026-07-17T10:15:03-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8071613",
+   "posted_at": "2026-07-20T03:42:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -32667,20 +32498,20 @@
   },
   {
    "title": "Machine Learning Tech Lead",
-   "location": "Malta",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7860963",
-   "posted_at": "2026-06-10T07:08:46-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7995189",
+   "posted_at": "2026-06-10T07:10:24-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Machine Learning Tech Lead",
-   "location": "Budapest",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7995189",
-   "posted_at": "2026-06-10T07:10:24-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7860963",
+   "posted_at": "2026-06-10T07:08:46-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -32777,20 +32608,20 @@
   },
   {
    "title": "Platform Database Engineer - Infra",
-   "location": "Athens",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7946220",
-   "posted_at": "2026-05-20T06:28:28-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7842115",
+   "posted_at": "2026-05-20T04:46:49-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Platform Database Engineer - Infra",
-   "location": "Malta",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7842115",
-   "posted_at": "2026-05-20T04:46:49-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7946220",
+   "posted_at": "2026-05-20T06:28:28-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -32876,16 +32707,6 @@
    "source": "collector"
   },
   {
-   "title": "Product Owner - Payments",
-   "location": "Malta",
-   "department": "Operations",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7870971",
-   "posted_at": "2026-06-05T06:15:30-04:00",
-   "company": "Betsson Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
    "title": "QA Engineer - Zecure Gaming",
    "location": "Malta",
    "department": "Zecure Gaming",
@@ -32907,9 +32728,9 @@
   },
   {
    "title": "Salesforce Marketing Cloud Developer ",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074160",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074165",
    "posted_at": "2026-07-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -32917,9 +32738,9 @@
   },
   {
    "title": "Salesforce Marketing Cloud Developer ",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074165",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8074160",
    "posted_at": "2026-07-30T18:00:00-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
@@ -32997,20 +32818,20 @@
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Athens",
+   "location": "Budapest",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
-   "posted_at": "2026-07-21T03:38:54-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
+   "posted_at": "2026-07-21T03:38:56-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Fullstack Software Engineer",
-   "location": "Budapest",
+   "location": "Athens",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076447",
-   "posted_at": "2026-07-21T03:38:56-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/8076444",
+   "posted_at": "2026-07-21T03:38:54-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -33037,20 +32858,20 @@
   },
   {
    "title": "Senior Network Engineer - Infra",
-   "location": "Stockholm",
+   "location": "Malta",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7966726",
-   "posted_at": "2026-06-01T02:32:39-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7936358",
+   "posted_at": "2026-05-29T09:53:40-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
   },
   {
    "title": "Senior Network Engineer - Infra",
-   "location": "Malta",
+   "location": "Stockholm",
    "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7936358",
-   "posted_at": "2026-05-29T09:53:40-04:00",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7966726",
+   "posted_at": "2026-06-01T02:32:39-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -33087,16 +32908,6 @@
   },
   {
    "title": "Site Reliability Engineer",
-   "location": "Budapest",
-   "department": "Product Development",
-   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823478",
-   "posted_at": "2026-04-17T05:10:11-04:00",
-   "company": "Betsson Group",
-   "ats": "greenhouse",
-   "source": "collector"
-  },
-  {
-   "title": "Site Reliability Engineer",
    "location": "Athens",
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/7823820",
@@ -33111,6 +32922,16 @@
    "department": "Product Development",
    "url": "https://job-boards.greenhouse.io/betsson/jobs/7823808",
    "posted_at": "2026-04-17T05:10:12-04:00",
+   "company": "Betsson Group",
+   "ats": "greenhouse",
+   "source": "collector"
+  },
+  {
+   "title": "Site Reliability Engineer",
+   "location": "Budapest",
+   "department": "Product Development",
+   "url": "https://job-boards.greenhouse.io/betsson/jobs/7823478",
+   "posted_at": "2026-04-17T05:10:11-04:00",
    "company": "Betsson Group",
    "ats": "greenhouse",
    "source": "collector"
@@ -34003,6 +33824,16 @@
    "posted_at": null,
    "company": "CoinPoker",
    "ats": "teamtailor",
+   "source": "collector"
+  },
+  {
+   "title": "Customer Support Specialist - Malta",
+   "location": "St. Julian's, St. Julian's, Malta",
+   "department": "Operations",
+   "url": "https://apply.workable.com/comeon-group/j/7AD6329E53/",
+   "posted_at": "2026-08-06T00:00:00.000Z",
+   "company": "ComeOn Group",
+   "ats": "workable",
    "source": "collector"
   },
   {
@@ -35787,6 +35618,26 @@
    "source": "collector"
   },
   {
+   "title": "Head of Design",
+   "location": "London, GB",
+   "department": "Management",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141909309",
+   "posted_at": "2026-08-06T12:27:18.716Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
+   "title": "Retail Customer Service",
+   "location": "Galston, GB",
+   "department": "Customer Service",
+   "url": "https://jobs.smartrecruiters.com/entain/744000141908479",
+   "posted_at": "2026-08-06T12:22:11.570Z",
+   "company": "Entain",
+   "ats": "smartrecruiters",
+   "source": "collector"
+  },
+  {
    "title": "Manager, Corporate Strategy",
    "location": "London, GB",
    "department": "Strategy/Planning",
@@ -37462,16 +37313,6 @@
    "department": "Customer Service",
    "url": "https://jobs.smartrecruiters.com/entain/744000137929089",
    "posted_at": "2026-07-15T15:23:46.952Z",
-   "company": "Entain",
-   "ats": "smartrecruiters",
-   "source": "collector"
-  },
-  {
-   "title": "Head of Design - Coral & Ladbrokes",
-   "location": "London, GB",
-   "department": "Management",
-   "url": "https://jobs.smartrecruiters.com/entain/744000137861629",
-   "posted_at": "2026-07-15T10:49:07.467Z",
    "company": "Entain",
    "ats": "smartrecruiters",
    "source": "collector"
@@ -49362,17 +49203,6 @@
    "location": "Austin, Texas",
    "department": "",
    "url": "https://lnw.wd5.myworkdayjobs.com/LightWonderExternalCareers/job/Austin-Texas/Senior-Generative-AI-Engineer_R322118",
-   "posted_at": null,
-   "posted_text": "Posted 30+ Days Ago",
-   "company": "Light & Wonder",
-   "ats": "workday",
-   "source": "collector"
-  },
-  {
-   "title": "Partner Operations Executive",
-   "location": "Chiswick, United Kingdom",
-   "department": "",
-   "url": "https://lnw.wd5.myworkdayjobs.com/LightWonderExternalCareers/job/Chiswick-United-Kingdom/Partner-Operations-Executive_R322280",
    "posted_at": null,
    "posted_text": "Posted 30+ Days Ago",
    "company": "Light & Wonder",
@@ -70083,6 +69913,237 @@
    "company": "Van Kaizen",
    "ats": "agency",
    "source": "agency"
+  },
+  {
+   "title": "Senior Product Designer, iCasino",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/447",
+   "posted_at": "2026-08-05",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Quality Specialist",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/753",
+   "posted_at": "2026-07-31",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Senior Product Owner, Web Channel",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/720",
+   "posted_at": "2026-07-27",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Head of Insight and Growth",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/733",
+   "posted_at": "2026-07-27",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Customer Journey Manager",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/735",
+   "posted_at": "2026-07-27",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Senior Product Designer, Sports Betting",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/609",
+   "posted_at": "2026-07-17",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Pelisaliasiakaspalvelija, Rovaniemi, m\u00e4\u00e4r\u00e4aikaisuus",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/751",
+   "posted_at": "2026-07-16",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Junior Product Manager / Product Manager",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/206",
+   "posted_at": "2026-07-15",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Pelisaliasiakaspalvelija, Rovaniemi",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/749",
+   "posted_at": "2026-07-15",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Sportsbook Risk Management Manager",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/722",
+   "posted_at": "2026-07-03",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Advanced Analytics Specialist",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/737",
+   "posted_at": "2026-07-03",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Lead Data Engineer",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/674",
+   "posted_at": "2026-07-02",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Viestint\u00e4p\u00e4\u00e4llikk\u00f6",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/725",
+   "posted_at": "2026-06-29",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Senior viestint\u00e4asiantuntija",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/726",
+   "posted_at": "2026-06-29",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Senior Data Engineer",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/667",
+   "posted_at": "2026-06-26",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Chief Architect",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/719",
+   "posted_at": "2026-06-23",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Senior Developer, integration platform development",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/652",
+   "posted_at": "2026-06-18",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Lead Developer, AI",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/163",
+   "posted_at": "2026-06-17",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Game Developer",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/708",
+   "posted_at": "2026-06-12",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Avoin hakemus asiakaspalveluteht\u00e4viin",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/51",
+   "posted_at": "2025-01-02",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
+  },
+  {
+   "title": "Open application",
+   "location": "Finland",
+   "department": "",
+   "url": "https://fa-exdl-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2/job/52",
+   "posted_at": "2025-01-02",
+   "company": "Veikkaus (incl. Fennica Gaming)",
+   "ats": "oracle",
+   "source": "collector",
+   "carried_since": "2026-08-06T12:43:27.530405+00:00"
   },
   {
    "title": "Middle QA Engineer",

@@ -1,12 +1,6 @@
-role-radar collector run: 2026-08-06T12:29:26.400636+00:00
+role-radar collector run: 2026-08-06T12:43:27.617212+00:00
 ============================================================
 
-Detecting: Arena Racing Company
-Re-probing (was unknown): Wazdan
-Re-probing (was unknown): Upgaming
-Re-probing (was unknown): Derivco
-Re-probing (was unknown): World Series of Poker
-Re-probing (was unknown): BetWarrior
       jobvite agscareer: 200, 101858 bytes but no /job/ links
          link shapes: /d3igejkwe1ucjd.cloudfront.net/* x5, /careers.jobvite.com/* x5, /releases/* x2, /agscareer/* x2, /agscareer x2, /privacy-policy x1, /terms-of-service x1, /AmericanGamingSystems x1, /play_ags x1, /company/* x1, /user/* x1, /Overview/* x1
 AGS: 0 roles (jobvite)
@@ -27,10 +21,10 @@ Caesars Digital: 1425 roles (oracle)
 DAZN Bet: 3 roles (pinpoint)
 DigiOutsource: 124 roles (workday)
 Digitain: 89 roles (bamboohr)
-      avature amswh: 200 (39593 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39591 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
-      avature amswh: 82 roles
-evoke: 82 roles (avature)  [35s]
+      avature amswh: 83 roles
+evoke: 83 roles (avature)  [35s]
 Evoplay: 1 roles (greenhouse)
 FIRST.bet: 17 roles (bamboohr)
 Gaming Innovation Group: 28 roles (pinpoint)
@@ -42,14 +36,14 @@ Parimatch: 21 roles (teamtailor)
 Playnetic: 8 roles (teamtailor)
 Racing Post / Spotlight Sports: 8 roles (workable)
 Relax Gaming: 5 roles (teamtailor)
-SCIENTIFIC GAMES: 109 roles (workday)
+SCIENTIFIC GAMES: 110 roles (workday)
 SkillOnNet: 21 roles (teamtailor)
 The Lottery Corporation: 13 roles (oracle)
       dayforce rankgroup: HTTP 403
 The Rank Group plc: 0 roles (dayforce)
       talos f08b3d92: 1 roles
 UK Tote Group: 1 roles (talos)
-Veikkaus (incl. Fennica Gaming): 21 roles (oracle)
+Veikkaus (incl. Fennica Gaming): 0 roles (oracle)
 WA.Technology: 6 roles (ashby)
 White Hat Gaming: 3 roles (rippling)
 Winna.com: 5 roles (teamtailor)
@@ -82,24 +76,24 @@ ARB Interactive: 6 roles (ashby)
 Arena Racing Company: 16 roles (ashby)
 ATG: 7 roles (ashby)
 B2Spin Limited: 17 roles (ashby)
-bet365: 94 roles (smartrecruiters)
+bet365: 96 roles (smartrecruiters)
 BetMGM: 16 roles (workday)
 betr: 14 roles (lever)
-Betsson Group: 123 roles (greenhouse)
+Betsson Group: 122 roles (greenhouse)
 Betting Connections: 2 roles (smartrecruiters)
 Betty: 25 roles (greenhouse)
 BGaming: 1 roles (smartrecruiters)
 Bullfinch Recruitment: 38 roles (breezy)
 Caliente: 5 roles (bamboohr)
 CoinPoker: 7 roles (teamtailor)
-ComeOn Group: 27 roles (workable)
+ComeOn Group: 28 roles (workable)
 Continent 8: 3 roles (bamboohr)
 Dabble: 7 roles (teamtailor)
 Delasport: 0 roles (greenhouse)
 Derivco: 4 roles (bamboohr)
 DraftKings: 91 roles (workday)
 Easygo: 37 roles (greenhouse)
-Entain: 235 roles (smartrecruiters)
+Entain: 236 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
 evoke plc: 1 roles (bamboohr)
 Evolution: 286 roles (smartrecruiters)
@@ -122,7 +116,7 @@ Kambi: 4 roles (greenhouse)
 Kerma Games: 13 roles (greenhouse)
 Kindred Group: 4 roles (ashby)
 LeoVegas Group: 72 roles (ashby)
-Light & Wonder: 124 roles (workday)
+Light & Wonder: 123 roles (workday)
 LionHires: 48 roles (greenhouse)
 LiveScore Group: 14 roles (greenhouse)
 Lottoland: 1 roles (greenhouse)
@@ -130,7 +124,7 @@ Lottomatica: 47 roles (workday)
 Midnite: 18 roles (ashby)
 MiFinity: 14 roles (bamboohr)
 MrQ: 8 roles (teamtailor)
-Novibet: 43 roles (workable)  [38s]
+Novibet: 43 roles (workable)  [21s]
 Novig: 11 roles (ashby)
 Oddin.gg: 21 roles (lever)
 Patrianna: 22 roles (ashby)
@@ -180,24 +174,6 @@ IGT: 0 roles (successfactors)
       Fortuna: 1 script bundle(s) referenced, checking 4
       Fortuna: API-looking URLs in bundle:
          https://app-azeun-p-hr-easyapply-be.azurewebsites.net
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Vacancies: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/positions: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobOffers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/joboffers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/adverts: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/GetAll: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/List: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobAds: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobads: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publication: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publications: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/vacancies: HTTP 500
@@ -216,6 +192,24 @@ IGT: 0 roles (successfactors)
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/offers: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Recruitment/Jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/job/search: HTTP 500
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Vacancies: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/positions: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobOffers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/joboffers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/adverts: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/GetAll: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/List: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobAds: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobads: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publication: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publications: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
 Fortuna Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://joblink.allibo.com/ats2/: HTTP 403
       Cirsa: 1 script bundle(s) referenced, checking 4
@@ -417,7 +411,7 @@ Newfield: 1 roles (agency board)
          https://www.youtube.com/iframe_api
    Huddle: link parse -> 1
 Huddle: 1 roles (agency board)
-      KamaGames: 4 script bundle(s) referenced, checking 4
+      KamaGames: 6 script bundle(s) referenced, checking 4
       KamaGames: API-looking URLs in bundle:
          http://imakewebthings.com/waypoints/api/context
          http://imakewebthings.com/waypoints/api/context-destroy
@@ -442,7 +436,7 @@ Huddle: 1 roles (agency board)
          https://stackoverflow.com/questions/9951045/pinterest-api-documentation
          https://www.reddit.com/dev/api
          https://www.reddit.com/dev/api/
-      KamaGames https://www.kamagames.com/careers: 200, 72482 bytes, 0 '/vacancy' refs
+      KamaGames https://www.kamagames.com/careers: 200, 75851 bytes, 0 '/vacancy' refs
          link shapes present: /images/* x13, /kamagames x4, /dist/* x2, /about_us x2, /games x2, /pokerist x2, /blackjackist x2, /slots x2, /video_poker x2, /roulettist x2, /baccarist x2, /setpoker x2
 KamaGames: 0 roles (agency board)  <-- CHECK: returned nothing
       SoftConstruct: shell HTTP 403
@@ -587,6 +581,13 @@ Allwyn: 4 roles (agency board)
          https://maps.googleapis.com/maps/api/js
          https://postingpandajobboard-live.azurewebsites.net/bundles/SelfBuildAppForms
       https://postingpandajobboard-live.azurewebsites.net/bundles/SelfBuildAppForms: 200 but text/javascript (not json)
+      https://maps.googleapis.com/api/jobs: HTTP 404
+      https://maps.googleapis.com/api/Jobs: HTTP 404
+      https://maps.googleapis.com/api/vacancies: HTTP 404
+      https://maps.googleapis.com/api/job/search: HTTP 404
+      https://maps.googleapis.com/api/jobs/search: HTTP 404
+      https://maps.googleapis.com/api/v1/jobs: HTTP 404
+      https://maps.googleapis.com/api/adverts: HTTP 404
       https://postingpandajobboard-live.azurewebsites.net/api/jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/Jobs: 200 but text/html (not json)
       https://postingpandajobboard-live.azurewebsites.net/api/vacancies: 200 but text/html (not json)
@@ -601,13 +602,6 @@ Allwyn: 4 roles (agency board)
       https://betfredgroup.talosats-careers.com/api/jobs/search: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/v1/jobs: 200 but text/html (not json)
       https://betfredgroup.talosats-careers.com/api/adverts: 200 but text/html (not json)
-      https://maps.googleapis.com/api/jobs: HTTP 404
-      https://maps.googleapis.com/api/Jobs: HTTP 404
-      https://maps.googleapis.com/api/vacancies: HTTP 404
-      https://maps.googleapis.com/api/job/search: HTTP 404
-      https://maps.googleapis.com/api/jobs/search: HTTP 404
-      https://maps.googleapis.com/api/v1/jobs: HTTP 404
-      https://maps.googleapis.com/api/adverts: HTTP 404
 Betfred: 0 roles (agency board)  <-- CHECK: returned nothing
 Tabcorp: 29 roles (agency board)
 Sportsbet: 9 roles (agency board)
@@ -618,16 +612,41 @@ BettingJobs: 104 roles (agency board)
    Van Kaizen: strategy 1 — JSON-LD
    Van Kaizen: strategy 2 — sitemap
       sitemap https://www.vankaizen.com: 79 job URLs
+      json-ld https://vankaizen.com/vacancies/proposal-specialist: HTTP 429
+      json-ld https://vankaizen.com/vacancies/quality-engineer-ii: HTTP 429
+      json-ld https://vankaizen.com/vacancies/quantity-surveyor: HTTP 429
+      json-ld https://vankaizen.com/vacancies/sales-executive-2: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-account-manager-crypto-casino: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-account-manager-sweepstakes: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-affiliate-manager-finland: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-commercial-leadership: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-company-administrator-assistant-manager: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-engineer: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-front-end-developer-1: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-infrastructure-engineer-l3: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-operations-manager-casino-sportsbook: HTTP 429
+      json-ld https://vankaizen.com/vacancies/senior-product-manager-2: HTTP 429
+      json-ld https://vankaizen.com/vacancies/service-developer: HTTP 429
+      json-ld https://vankaizen.com/vacancies/speech-systems-senior-ai-engineer-stt-tts-vad: HTTP 429
+      json-ld https://vankaizen.com/vacancies/sr-seo-manager: HTTP 429
+      json-ld https://vankaizen.com/vacancies/swedish-account-manager-vip: HTTP 429
+      json-ld https://vankaizen.com/vacancies/vip-manager-2: HTTP 429
+      json-ld https://vankaizen.com/vacancies/vp-of-digital-marketing: HTTP 429
+      json-ld https://vankaizen.com/vacancies/vp-of-product-wondr-nation: HTTP 429
+      json-ld https://vankaizen.com/vacancies/vp-sales-revenue: HTTP 429
 Van Kaizen: 78 roles (agency board)
+   carried forward 21 roles for Veikkaus (incl. Fennica Gaming) (unreachable this run)
    not carrying Codere Online forward — set to skip
    not carrying Casumo forward — set to skip
    not carrying Lucky Group forward — set to skip
    not carrying Exacta Solutions forward — set to skip
    not carrying TalentBet forward — set to skip
+   not carrying iGaming Recruitment forward — set to skip
    not carrying Blip.pt forward — set to skip
    not carrying Careers in Racing forward — set to skip
    not carrying Legend forward — set to skip
    not carrying Newfield forward — set to skip
+   not carrying Huddle forward — set to skip
    not carrying SoftConstruct forward — set to skip
    not carrying Greentube (Novomatic) forward — set to skip
    not carrying EGT Digital forward — set to skip
@@ -644,10 +663,9 @@ Van Kaizen: 78 roles (agency board)
    not carrying Pentasia forward — set to skip
    not carrying BettingJobs forward — set to skip
    not carrying Van Kaizen forward — set to skip
-   not carrying Huddle forward — set to skip
    carried forward 1 roles for Delasport (unreachable this run)
 
-carried 1 roles forward from the previous feed
+carried 22 roles forward from the previous feed
 
 dropped 52 postings older than 2 years
 
@@ -655,5 +673,5 @@ dropped 35 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 152 returning, 83 not
 
-Feed written: 6906 jobs
+Feed written: 6910 jobs
 Unresolved companies (2): Wazdan, Upgaming
