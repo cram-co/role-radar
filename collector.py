@@ -2707,6 +2707,11 @@ CUSTOM_BOARDS = {
                          listing=["/jobs", "/jobs/"], first_element=True),
     # Isle of Man social casino studio. No ATS but fully server-rendered:
     # /careers lists each role as a link to /vacancy{N} with a clean title.
+    # Employment Hero boards are server-rendered at /jobs/organisations/{org}/
+    # with job links at /jobs/position/{slug}/. The link text runs title,
+    # location, type and date together, so the slug gives the cleaner title.
+    "Newfield":     dict(base="https://employmenthero.com", marker="/jobs/position/",
+                         listing=["/jobs/organisations/newfield-ltd/"], slug_titles=True),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
@@ -2910,7 +2915,19 @@ _CARRY_DAYS = 3
 _MAX_AGE_DAYS = 730
 
 
+# Expression-of-interest listings are evergreen by design — a company leaves one
+# up for years on purpose, so an old date says nothing about whether it's live.
+# They stay in the feed regardless of age, and carry an "open application" badge.
+_OPEN_APPLICATION = re.compile(
+    r"\btalent\s*(pool|community|network|bank)\b|\bopen\s+application\b"
+    r"|\bspeculative\b|\bgeneral\s+interest\b|\bexpression\s+of\s+interest\b"
+    r"|\bfuture\s+opportunit\w*\b|\bregister\s+your\s+interest\b"
+    r"|\bjoin\s+our\s+talent\b", re.I)
+
+
 def _too_old(job):
+    if _OPEN_APPLICATION.search(job.get("title") or ""):
+        return False
     p = job.get("posted_at")
     if not p:
         return False
