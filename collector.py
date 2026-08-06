@@ -267,46 +267,6 @@ def fetch_successfactors(token):
 _SF_CRB = re.compile(r"_s\.crb=([^\"'&\\\s]+)")
 
 
-def _dwr_script_session_id(sess, base, page):
-    """Ask DWR's __System.generateId for a server-registered scriptSessionId.
-
-    The reply is JavaScript of the form
-        dwr.engine.remote.handleCallback("0","0","B0BEA1F...");
-    so the id is the third quoted argument."""
-    url = f"{base}/xi/ajax/remoting/call/plaincall/__System.generateId.dwr"
-    body = "\n".join([
-        "callCount=1",
-        f"page={page}",
-        "httpSessionId=",
-        "scriptSessionId=",
-        "c0-scriptName=__System",
-        "c0-methodName=generateId",
-        "c0-id=0",
-        "batchId=0",
-        "",
-    ])
-    try:
-        r = sess.post(url, data=body.encode("utf-8"), timeout=TIMEOUT, headers={
-            **AGENCY_UA, "Accept": "*/*", "Content-Type": "text/plain",
-            "Origin": base, "Referer": base + page,
-        })
-    except Exception as e:
-        print(f"      sf: generateId {type(e).__name__}")
-        return None
-    if r.status_code != 200:
-        print(f"      sf: generateId HTTP {r.status_code}")
-        return None
-    m = re.search(r'handleCallback\(\s*"[^"]*"\s*,\s*"[^"]*"\s*,\s*"([^"]+)"', r.text)
-    if not m:
-        m = re.search(r'"([A-Za-z0-9_/+-]{16,64})"\s*\)\s*;', r.text)
-    if m:
-        print(f"      sf: generateId issued {m.group(1)[:14]}...")
-        return m.group(1)
-    print(f"      sf: generateId 200 but no id parsed from {len(r.text)} bytes: "
-          f"{re.sub(chr(92)+'s+', ' ', r.text)[:120]!r}")
-    return None
-
-
 def _sf_try_host(host, company):
     """Uses its OWN session, not the shared one.
 
@@ -346,17 +306,11 @@ def _sf_try_host(host, company):
                     f"&navBarLevel=JOB%5FSEARCH&_s.crb={crb}")
     except Exception:
         pass
-    # DWR does not let the client invent a scriptSessionId — the server issues
-    # one through __System.generateId, and calls carrying an unregistered id are
-    # refused. "You are not authorized to access the functionality you have
-    # requested" is how DWR words that refusal, which is what we kept hitting
-    # with a random hex string. Ask for a real one first.
-    ssid = _dwr_script_session_id(sf, base, page) or uuid.uuid4().hex.upper()[:24]
     body = "\n".join([
         "callCount=1",
         f"page={page}",
         "httpSessionId=",
-        f"scriptSessionId={ssid}",
+        f"scriptSessionId={uuid.uuid4().hex.upper()[:24]}",
         "c0-scriptName=careerJobSearchControllerProxy",
         "c0-methodName=getInitialJobSearchData",
         "c0-id=0",
@@ -2736,6 +2690,8 @@ CUSTOM_BOARDS = {
     # listing is client-rendered; the sitemap rung is what should catch /job/{id}
     "PawaTech":     dict(base="https://careers.pawatech.com", marker="/job/",
                          listing=["/", "/job/", "/jobs/", "/careers"]),
+    "Lucky Group":  dict(base="https://careers.lckygroup.com", marker="/jobs/",
+                         listing=["/jobs/"]),
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
                          listing=["/JobApplications/Apply/", "/"]),
     "Exacta Solutions": dict(base="https://www.exactasolutions.com", marker="/vacancies/",
@@ -2781,11 +2737,6 @@ CUSTOM_BOARDS = {
     # 9 roles at /career/all, individual roles at /career/{slug}
     "Upgaming":     dict(base="https://lifeat.upgaming.com", marker="/career/",
                          listing=["/career/all", "/career"], slug_titles=True),
-    # Yolo Group's B2B aggregator arm, and the only part of that group with a
-    # findable board. Server-rendered; the link text is "View vacancy: X" so
-    # the slug gives the cleaner title.
-    "Hub88":        dict(base="https://hub88.io", marker="/careers/",
-                         listing=["/careers/"], slug_titles=True),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
