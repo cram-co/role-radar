@@ -367,6 +367,10 @@ Object.assign(ISO, {si:"Slovenia", ba:"Bosnia & Herzegovina", cr:"Costa Rica", u
 // Feeds carry bare city names and local-language country names. Map the ones
 // that actually appear rather than leaving them as separate one-off buckets.
 const CITY_COUNTRY = {
+  // regions that name no country: evoke's Manila office arrives as
+  // "Aseana 3, Paranaque City, Metro Manila"
+  "metro manila":"Philippines", "paranaque city":"Philippines",
+  "parañaque city":"Philippines", "greater london":"United Kingdom",
   "new york":"United States", "new york city":"United States", "bay area":"United States",
   "new jersey":"United States", "las vegas":"United States", "boston":"United States",
   "chicago":"United States", "los angeles":"United States", "san francisco":"United States",
@@ -437,7 +441,26 @@ const HUBS = ["Inside the listing","Multiple locations","Remote","United Kingdom
 
 const _LOC_PLACEHOLDER = /^(unavailable|unknown|n\/?a|none|null|undefined|tbd|tba|not specified|-{1,3})$/i;
 
+// Location strings arrive damaged in ways the collector hasn't caught yet:
+// a window cut mid-tag leaves "Leeds, UK, </" or "...Manila <span class=", and
+// some boards run the location into the department and work type
+// ("Varna, Bulgaria Finance Full-time hybrid"). Repair here so one bad source
+// can't invent countries — the collector fixes follow, this is the safety net.
+const LOC_TRAILING = /\s+(Analytics|Commercial|Compliance|Customer|Delivery|Design|Engineering|Finance|HR|Legal|Marketing|Operations|People|Product(?:\s+Management)?|Risk|Sales|Support|Tech(?:nology)?|Trading)?\s*(Full[- ]?time|Part[- ]?time|Contract|Permanent|Temporary|Intern(?:ship)?|Freelance)?\s*(remote|hybrid|on[- ]?site)?\s*$/i;
+
+function repairLoc(loc){
+  let v = String(loc || "");
+  v = v.split("<")[0];                       // drop a truncated tag and all after
+  v = v.replace(/&#?\w{0,8};?\s*$/, "");      // and a half-written entity
+  v = v.replace(/&#39;|&#34;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ");
+  const before = v;
+  v = v.replace(LOC_TRAILING, "");
+  if(!v.trim() && before.trim()) v = before;  // never blank it entirely
+  return v.replace(/[\s,;·]+$/, "").trim();
+}
+
 function cleanLoc(loc){
+  loc = repairLoc(loc);
   if(!loc) return "";
   const parts = String(loc).split(",")
     .map(p => p.trim())
@@ -462,8 +485,13 @@ function bucketsOf(loc){
 }
 
 function bucket(loc){
+  loc = repairLoc(loc);
   // TalentBet emit ", , " — passes a plain emptiness check but names nowhere
   if(!loc || !/[a-z0-9]/i.test(String(loc))) return "Inside the listing";
+  // a UK postcode anywhere means the UK, whatever the rest of the address says.
+  // evoke's betting-shop addresses end in a town, so without this every shop
+  // invented a country: Cwmbran, Bridgwater, Croydon.
+  if(/\b[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}\b/i.test(String(loc))) return "United Kingdom";
   // some feeds arrive with entities intact: "St. Julian&#39;s" -> "St. Julian's"
   const s = String(loc).replace(/&#3[49];/g, "'").replace(/&amp;/g, "&")
                        .replace(/&nbsp;/g, " ").trim();
@@ -479,7 +507,14 @@ function bucket(loc){
     if(new RegExp("\\b"+n.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b").test(low)) return n;
   }
   const parts = s.split(",").map(x=>x.trim());
-  const tail = (parts[parts.length-1]||"").toLowerCase();
+  // Walk backwards for the first segment that names somewhere. SuccessFactors
+  // appends a postcode — "Providence, RI, US, 02903", "Belgrade, RS, 11000" —
+  // so taking only the last segment invented countries called "02903" and
+  // "11000". The country is usually one step further back.
+  const looksPostal = v => /^[\d\s-]+$/.test(v) || /^[a-z]{1,3}[\d-]{2,}$/i.test(v);
+  let tailIdx = parts.length - 1;
+  while(tailIdx > 0 && looksPostal(parts[tailIdx])) tailIdx--;
+  const tail = (parts[tailIdx]||"").toLowerCase();
   // check state/province before the country map, since PA and MA are both
   // US states and country codes — in a "City, XX" string the state wins
   if(ISO[tail]) return ISO[tail];
@@ -617,9 +652,10 @@ function render(){
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
   // Teamtailor, the agency boards) simply don't publish one. Sorting those to
-  // the bottom hid whole sources, so undated roles rank just below anything
-  // posted today rather than last.
-  const UNDATED = Date.now() - 36*3600*1000;          // "sometime in the last day or two"
+  // the bottom hid whole sources entirely, so they are ranked as if a week old:
+  // everything genuinely posted in the last 7 days sits above them, and only
+  // roles older than that fall below.
+  const UNDATED = Date.now() - 7*24*3600*1000;
   const when = j => j.p ? (Date.parse(j.p) || UNDATED) : UNDATED;
   const mode = document.getElementById("sort").value;
   out = out.slice();
