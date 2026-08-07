@@ -117,10 +117,7 @@ def _host_is_throttled(url):
 # Workable throttles hard when several companies are pulled back to back. The
 # retry helper alone just burns the budget losing the same requests, so pace the
 # requests instead: never hit the same host more often than this.
-_HOST_MIN_GAP = {"apply.workable.com": 5.0,
-                 # 76 detail pages back to back returned 429 every time, losing
-                 # the locations for all 75 of their roles
-                 "www.vankaizen.com": 1.2, "vankaizen.com": 1.2}
+_HOST_MIN_GAP = {"apply.workable.com": 5.0}
 _host_last = {}
 
 
@@ -698,7 +695,8 @@ def _ultipro_loc(j):
     is present rather than assuming one shape."""
     def name(v):
         if isinstance(v, dict):
-            return v.get("Name") or v.get("name") or v.get("Description") or ""
+            return (v.get("Name") or v.get("name") or v.get("Description")
+                    or v.get("Code") or v.get("code") or "")
         return v if isinstance(v, str) else ""
 
     src = None
@@ -720,6 +718,12 @@ def _ultipro_loc(j):
                 return html.unescape(v).strip()
     if src is None:
         src = j                                   # flat fields on the record
+
+    # UKG nest the real fields under Address on some tenants
+    for wrap in ("Address", "address", "LocationAddress"):
+        if isinstance(src.get(wrap), dict):
+            src = {**src, **src[wrap]}
+            break
 
     parts = [name(src.get(k)) for k in
              ("City", "city", "Municipality", "State", "state", "StateProvince",
@@ -784,10 +788,19 @@ def fetch_ultipro(token):
                 continue
             loc = _ultipro_loc(j)
             if not loc and not out:
-                # Bally's returned 436 roles with no location at all, so say
-                # what the record actually offers rather than guessing again
-                print(f"      ultipro {company}: no location parsed — keys "
-                      f"{sorted(j)[:14]}")
+                # Naming the top-level keys wasn't enough: Bally's have both
+                # Locations and MatchedLocations and NEITHER yielded anything,
+                # so print what is actually inside them.
+                shape = {}
+                for k in ("Locations", "MatchedLocations", "Location",
+                          "JobLocationType", "City", "Country"):
+                    if k in j:
+                        v = j[k]
+                        shape[k] = (f"list[{len(v)}] {str(v[:1])[:160]}"
+                                    if isinstance(v, list) else str(v)[:120])
+                print(f"      ultipro {company}: no location parsed")
+                for k, v in shape.items():
+                    print(f"         {k} = {v}")
             out.append({
                 "title": html.unescape(str(title)).strip(),
                 "location": loc,
@@ -1099,8 +1112,13 @@ def fetch_wordpress(token):
     # token may name the post type: "jobs.888.com|888-position"
     token, _, custom_type = token.partition("|")
     base = f"https://{token}" if not token.startswith("http") else token
-    TYPES = ["awsm_job_openings", "job_listing", "jobs", "job", "career",
-             "careers", "vacancy", "vacancies", "position", "open-roles"]
+    # WordPress serves a post type at its REST_BASE, not its slug, and the two
+    # often differ: WP Job Manager registers the type "job_listing" but exposes
+    # it at /wp/v2/JOB-LISTINGS. Asking for the slug 404s. Inspired sat at zero
+    # for exactly this reason. The rest_base forms are tried first.
+    TYPES = ["job-listings", "awsm_job_openings", "job-openings", "job_listing",
+             "jobs", "job", "career", "careers", "vacancy", "vacancies",
+             "position", "positions", "open-roles", "job-postings"]
     if custom_type.strip():
         TYPES = [custom_type.strip()] + [t for t in TYPES if t != custom_type.strip()]
     for t in TYPES:
@@ -1149,7 +1167,8 @@ def fetch_wordpress(token):
             for group in ((j.get("_embedded") or {}).get("wp:term") or []):
                 for term in group or []:
                     tax = str(term.get("taxonomy") or "")
-                    if "location" in tax or "city" in tax or "country" in tax:
+                    if any(k in tax for k in ("location", "city", "country",
+                                              "region", "office", "site")):
                         loc = html.unescape(str(term.get("name") or ""))
                         break
                 if loc:
@@ -1974,6 +1993,111 @@ def _sfcsb_date(txt):
     return f"{year}-{num:02d}-{int(day):02d}T00:00:00+00:00"
 
 
+def fetch_hurma(token):
+    """Hurma — an HR platform serving careers sites at {tenant}.hurma.work.
+
+    A Laravel app: the XSRF-TOKEN and hurma_session cookies give it away. The
+    listing calls /api/v1/public-vacancies?page=N&per_page=M, paginated in the
+    usual Laravel shape. Loading the careers page first establishes the session
+    and issues the XSRF token, which is echoed back in the X-XSRF-TOKEN header.
+
+    Its own session, not the shared one — the same reason SuccessFactors needed
+    one: a jar carrying thirty other sites' cookies is asking for trouble.
+
+    Token is the tenant: "spribe", or a full host."""
+    from urllib.parse import unquote
+    host = token.strip().replace("https://", "").rstrip("/")
+    base = f"https://{host}" if "." in host else f"https://{host}.hurma.work"
+
+    hs = requests.Session()
+    listing = f"{base}/public-vacancies"
+    try:
+        hs.get(listing, headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      hurma {token}: {type(e).__name__} on the careers page")
+        return []
+    xsrf = unquote(hs.cookies.get("XSRF-TOKEN") or "")
+
+    hdr = {**AGENCY_UA, "Accept": "application/json, text/plain, */*",
+           "X-Requested-With": "XMLHttpRequest", "Referer": listing}
+    if xsrf:
+        hdr["X-XSRF-TOKEN"] = xsrf
+
+    out, seen, total = [], set(), None
+    for page in range(1, 21):
+        url = f"{base}/api/v1/public-vacancies?page={page}&per_page=50"
+        try:
+            r = hs.get(url, headers=hdr, timeout=TIMEOUT)
+        except Exception as e:
+            print(f"      hurma {token}: {type(e).__name__}")
+            break
+        if r.status_code != 200:
+            print(f"      hurma {token}: HTTP {r.status_code} on page {page}")
+            break
+        try:
+            d = r.json()
+        except Exception:
+            print(f"      hurma {token}: 200 but not JSON")
+            break
+
+        items = d
+        if isinstance(d, dict):
+            for k in ("data", "vacancies", "items", "results", "list"):
+                if isinstance(d.get(k), list):
+                    items = d[k]
+                    break
+            meta = d.get("meta") if isinstance(d.get("meta"), dict) else d
+            if total is None and isinstance(meta, dict):
+                total = meta.get("total") or meta.get("total_count")
+                if total:
+                    print(f"      hurma {token}: board reports {total} vacancies")
+        if not isinstance(items, list):
+            print(f"      hurma {token}: unexpected payload {type(items).__name__}")
+            break
+        if not items:
+            break
+
+        page_new = 0
+        for j in items:
+            if not isinstance(j, dict):
+                continue
+            title = html.unescape(str(_pick(j, "name", "title", "position",
+                                            "vacancy_name") or "")).strip()
+            if not title or _MARKUP_JUNK.search(title):
+                continue
+            jid = str(_pick(j, "id", "slug", "uuid", "vacancy_id") or "").strip()
+            u = _pick(j, "url", "link", "public_url")
+            if not u:
+                u = f"{base}/public-vacancies/{jid}" if jid else listing
+            if u in seen:
+                continue
+            seen.add(u)
+            out.append({
+                "title": title,
+                "location": _flatten_loc(_pick(j, "city", "location", "cities",
+                                               "locations", "country", "office")),
+                "department": str(_pick(j, "department", "category", "unit") or ""),
+                "url": u,
+                "posted_at": _pick(j, "published_at", "created_at", "date_start"),
+            })
+            page_new += 1
+
+        if not page_new:
+            if page == 1:
+                shape = (f"dict keys {list(d)[:10]}" if isinstance(d, dict)
+                         else f"{type(d).__name__}")
+                print(f"      hurma {token}: 200 but nothing extracted — {shape}")
+                if isinstance(items, list) and items and isinstance(items[0], dict):
+                    print(f"         first record keys: {sorted(items[0])[:14]}")
+            break
+        if total and len(out) >= int(total):
+            break
+        time.sleep(REQUEST_DELAY)
+
+    print(f"      hurma {token}: {len(out)} roles")
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json
 
@@ -2321,6 +2445,7 @@ FETCHERS = {
     "dayforce": fetch_dayforce,
     "orangehrm": fetch_orangehrm,
     "talos": fetch_talos,
+    "hurma": fetch_hurma,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
@@ -2664,11 +2789,19 @@ def _sitemap_job_urls(base, must_contain, limit=600):
     return found[:limit]
 
 
-def _titles_from_urls(urls, source):
+_UUID_RX = re.compile(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", re.I)
+
+
+def _titles_from_urls(urls, source, loc_index=None):
     """Derive a title from a job URL slug — last resort, gives title only."""
     out, seen = [], set()
     for u in urls:
-        slug = u.rstrip("/").rsplit("/", 1)[-1]
+        segs = [x for x in u.rstrip("/").split("/") if x]
+        slug = segs[-1] if segs else ""
+        # Bally's end their job URLs with a UUID and put the title one segment
+        # back: /…/interactive/customer-service-representative/fad57a20-f86a-…
+        if _UUID_RX.fullmatch(slug) and len(segs) > 1:
+            slug = segs[-2]
         if slug.lower() in _NOT_A_JOB:
             continue
         # agency reference codes first, e.g. "-qvv8x9w6", "-es6649", "-5wryr53r".
@@ -2688,7 +2821,16 @@ def _titles_from_urls(urls, source):
         if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
             continue
         seen.add(title.lower())
-        out.append({"title": title, "location": "", "department": "",
+        loc = ""
+        if loc_index is not None:
+            try:
+                raw = segs[loc_index]
+                loc = " ".join(w.capitalize() for w in re.split(r"[-_]+", raw) if w)
+                if len(loc) > 40 or _UUID_RX.fullmatch(raw):
+                    loc = ""
+            except Exception:
+                loc = ""
+        out.append({"title": title, "location": loc, "department": "",
                     "url": u, "posted_at": None})
     return out
 
@@ -2885,9 +3027,80 @@ def scrape_bettingjobs():
     return []
 
 
+def _vankaizen_api():
+    """Van Kaizen run a Nuxt site backed by a PUBLIC API — the app config names
+    it outright (apiUrl: https://ats.vankaizen.com/api/public), and the page's
+    __NUXT_DATA__ block carries every field as structured data:
+
+        {"slug": "...", "name": "...", "remote": "Remote (regional)",
+         "locations": [{"code": "CR", "name": "Costa Rica"}], ...}
+
+    Far better than the markup: their rendered HTML wraps the location in Vue
+    comment markers, and the sitemap route gave titles only. Their 74 roles had
+    no location at all until this."""
+    base = "https://ats.vankaizen.com/api/public"
+    for path in ("/vacancies", "/vacancy", "/jobs", "/roles", "/positions"):
+        try:
+            r = _request("GET", base + path,
+                         headers={**AGENCY_UA, "Accept": "application/json"})
+        except Exception:
+            continue
+        if r.status_code != 200:
+            continue
+        try:
+            d = r.json()
+        except Exception:
+            continue
+        items = d
+        if isinstance(d, dict):
+            for k in ("data", "vacancies", "results", "items", "jobs"):
+                if isinstance(d.get(k), list):
+                    items = d[k]
+                    break
+        if not isinstance(items, list) or not items:
+            continue
+
+        out = []
+        for j in items:
+            if not isinstance(j, dict):
+                continue
+            title = html.unescape(str(j.get("name") or j.get("title") or "")).strip()
+            slug = str(j.get("slug") or "").strip()
+            if not title or not slug:
+                continue
+            if j.get("active") is False:
+                continue
+            locs = j.get("locations")
+            names = []
+            if isinstance(locs, list):
+                for L in locs:
+                    n = L.get("name") if isinstance(L, dict) else L
+                    if n and str(n).strip():
+                        names.append(str(n).strip())
+            loc = ", ".join(names)
+            if not loc:
+                loc = str(j.get("city") or j.get("remote") or "").strip()
+            spec = j.get("specialisms")
+            dept = ", ".join(str(x) for x in spec) if isinstance(spec, list) else str(spec or "")
+            out.append({
+                "title": title,
+                "location": loc,
+                "department": dept[:80],
+                "url": f"https://vankaizen.com/vacancies/{slug}",
+                "posted_at": j.get("published_at") or j.get("created_at"),
+            })
+        if out:
+            print(f"   Van Kaizen: public API {path} -> {len(out)} roles")
+            return out
+    return []
+
+
 def scrape_vankaizen():
     """vankaizen.com — bespoke board with load-more pagination."""
     base = "https://www.vankaizen.com"
+    api = _vankaizen_api()
+    if api:
+        return api
     print("   Van Kaizen: strategy 1 — JSON-LD")
     jobs = _jsonld_jobs(base + "/vacancies", "Van Kaizen")
     if jobs:
@@ -2895,9 +3108,14 @@ def scrape_vankaizen():
     print("   Van Kaizen: strategy 2 — sitemap")
     urls = _sitemap_job_urls(base, "/vacanc")
     if urls:
-        detailed = []
+        detailed, misses = [], 0
         for u in urls[:120]:
-            detailed.extend(_jsonld_jobs(u, "Van Kaizen"))
+            found = _jsonld_jobs(u, "Van Kaizen")
+            detailed.extend(found)
+            misses = 0 if found else misses + 1
+            if misses >= 4 and not detailed:
+                print("   Van Kaizen: no JSON-LD on their job pages, skipping the rest")
+                break
             time.sleep(REQUEST_DELAY)
         if detailed:
             return detailed
@@ -3178,10 +3396,40 @@ CUSTOM_BOARDS = {
     # the slug gives the cleaner title.
     "Hub88":        dict(base="https://hub88.io", marker="/careers/",
                          listing=["/careers/"], slug_titles=True),
+    # Their full careers site is 445 roles of mostly land-based resort work.
+    # This is the Interactive career area only — the digital business — which
+    # is the part worth surfacing. Server-rendered; link text is "View Job" so
+    # the title comes from the slug, and the country sits four segments from
+    # the end of the URL.
+    "Bally's Interactive": dict(base="https://careers.ballys.com", marker="/job/",
+                         listing=["/career-areas/interactive"],
+                         slug_titles=True, url_loc_index=-4),
+    # PARKED WRONGLY as "Softgarden, unsupported" — that is only where the
+    # APPLY button goes. Their listing is fully server-rendered with data-*
+    # attributes carrying title, city and full address.
+    "MERKUR GROUP":  dict(base="https://merkur.group", marker="stellenanzeige",
+                         listing=["/career/our-jobs/job-vacancies/",
+                                  "/career/job-vacancies/find-a-job/",
+                                  "/en/career/our-jobs/job-vacancies/"],
+                         data_attrs=True),
+    # PARKED WRONGLY as "PeopleHR, unsupported" — that is only the apply
+    # destination. Their listing is server-rendered: title in the anchor,
+    # location in a sibling <p class="locations">.
+    "Sportingtech": dict(base="https://sportingtech.com", marker="/careers/roles/",
+                         listing=["/resources/careers/roles/"], loc_class="locations"),
+    # PARKED WRONGLY as "PeopleForce, unsupported" — that is only the apply
+    # platform. Their listing is server-rendered: title in the anchor, location
+    # in a sibling div carrying PeopleForce's own utility class.
+    "NuxGame":      dict(base="https://careers.nuxgame.com", marker="/v/",
+                         listing=["/", "/vacancies", "/careers"],
+                         loc_class="tw-text-neutral-dark-80"),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
+    # also PeopleForce, so the same sibling class should carry the location —
+    # their 20 roles have arrived blank until now
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
-                         listing=["/careers/v/", "/careers/", "/careers/v/?page=2"]),
+                         listing=["/careers/v/", "/careers/", "/careers/v/?page=2"],
+                         loc_class="tw-text-neutral-dark-80"),
     "Greentube (Novomatic)": dict(base="https://careers.greentube.com", marker="/job",
                          listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
     # careers.gamesglobal.com is the listing; careers-gamesglobal.icims.com is
@@ -3196,8 +3444,6 @@ CUSTOM_BOARDS = {
                          listing=["/jobs", "/jobs?lang=en-us", "/", "/search"]),
     "Play'n GO":    dict(base="https://talenthub.playngo.com", marker="/job",
                          listing=["/jobs/", "/jobs", "/"]),
-    "SPRIBE":       dict(base="https://spribe.hurma.work", marker="/vacanc",
-                         listing=["/public-vacancies/", "/public-vacancies"]),
     "EvenBet Gaming": dict(base="https://evenbetgaming.com", marker="/vacanc",
                          listing=["/vacancies/", "/vacancies"]),
     "Nolimit City®": dict(base="https://career.nolimitcity.com", marker="/career/",
@@ -3221,6 +3467,110 @@ CUSTOM_BOARDS = {
                          listing=["/allwyn", "/allwyn/"],
                          extra=["https://www.allwyn.co.uk/job-board"]),
 }
+
+
+# Country names as some boards write them in their own language. MERKUR's
+# German addresses end "Österreich" or "Deutschland"; without this the country
+# never resolves and the role lands in the catch-all bucket.
+_COUNTRY_NATIVE = {
+    "osterreich": "Austria", "österreich": "Austria",
+    "deutschland": "Germany", "schweiz": "Switzerland",
+    "belgien": "Belgium", "niederlande": "Netherlands", "nederland": "Netherlands",
+    "spanien": "Spain", "espana": "Spain", "españa": "Spain",
+    "italien": "Italy", "italia": "Italy", "frankreich": "France",
+    "polen": "Poland", "polska": "Poland", "tschechien": "Czechia",
+    "danemark": "Denmark", "dänemark": "Denmark", "danmark": "Denmark",
+    "schweden": "Sweden", "sverige": "Sweden", "norwegen": "Norway",
+    "grossbritannien": "United Kingdom", "großbritannien": "United Kingdom",
+    "vereinigtes konigreich": "United Kingdom", "kroatien": "Croatia",
+    "rumanien": "Romania", "rumänien": "Romania", "ungarn": "Hungary",
+    "griechenland": "Greece", "turkei": "Turkey", "türkei": "Turkey",
+    "brasil": "Brazil", "brasilien": "Brazil", "mexiko": "Mexico",
+}
+
+
+def _native_country(v):
+    return _COUNTRY_NATIVE.get((v or "").strip().lower(), (v or "").strip())
+
+
+def _links_from_data_attrs(html_text, base, cfg):
+    """Some boards render each job as a div carrying data-* attributes rather
+    than putting anything useful in the anchor. MERKUR do exactly this, and it
+    is richer than their markup: title, city and full address all present.
+
+        <div class="job-item" data-title="..." data-city="Raaba"
+             data-geo_name="…, 8074 Raaba, Österreich" data-joburl="...">
+    """
+    out, seen = [], set()
+    block_rx = re.compile(r"<div\b[^>]*\bdata-title=[^>]*>", re.I)
+    def attr(block, name):
+        m = re.search(rf'data-{name}\s*=\s*"([^"]*)"', block, re.I)
+        return html.unescape(m.group(1)).strip() if m else ""
+
+    for mt in block_rx.finditer(html_text):
+        block = mt.group(0)
+        title = attr(block, "title")
+        if not title or len(title) < 3 or _MARKUP_JUNK.search(title):
+            continue
+        href = attr(block, cfg.get("url_attr", "joburl"))
+        if href.startswith("http"):
+            u = href
+        else:
+            u = base.rstrip("/") + "/" + re.sub(r"^(\.\./)+", "", href).lstrip("/")
+        if u in seen:
+            continue
+        seen.add(u)
+        city = attr(block, "city")
+        geo = attr(block, "geo_name")
+        country = ""
+        if geo and "," in geo:
+            country = _native_country(geo.rsplit(",", 1)[-1])
+        loc = ", ".join(x for x in (city, country) if x) or city or country
+        out.append({"title": title, "location": loc,
+                    "department": attr(block, "jobCategories"),
+                    "url": u, "posted_at": None})
+    return out
+
+
+def _links_with_loc_class(html_text, base, marker, loc_class):
+    """(url, title, location) where the location sits in a sibling element
+    carrying a known class, after the job link.
+
+        <h4><a href="/careers/roles/data-engineer/">Data Engineer</a></h4>
+        <p class="locations">Sofia</p>
+
+    Sportingtech do this, and it is the third distinct shape after Teamtailor's
+    bullet-separated meta and MERKUR's data-* attributes. Bounded at the next
+    job link so a window never swallows the following card."""
+    body = _STYLE_SCRIPT.sub(" ", html_text)
+    link_rx = re.compile(
+        r'href="([^"]*?' + re.escape(marker) + r'[^"?#]*)"[^>]*>(.*?)</a>', re.S | re.I)
+    loc_rx = re.compile(
+        r'<[a-z]+[^>]*class="[^"]*\b' + re.escape(loc_class) + r'\b[^"]*"[^>]*>(.*?)</[a-z]+>',
+        re.S | re.I)
+    marks = list(link_rx.finditer(body))
+    out, seen = [], set()
+    for i, mt in enumerate(marks):
+        href, inner = mt.group(1), mt.group(2)
+        title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
+        if not title or len(title) < 3 or len(title) > 140:
+            continue
+        if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+            continue
+        u = href if href.startswith("http") else base.rstrip("/") + href
+        if u in seen or u.rstrip("/") == base.rstrip("/"):
+            continue
+        seen.add(u)
+        nxt = marks[i + 1].start() if i + 1 < len(marks) else min(mt.end() + 800, len(body))
+        window = body[mt.end():max(nxt, mt.end())][:800]
+        lm = loc_rx.search(window)
+        loc = ""
+        if lm:
+            loc = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", lm.group(1)))).strip()
+            loc = _strip_tag_debris(loc)[:60]
+        out.append({"title": title, "location": loc, "department": "",
+                    "url": u, "posted_at": None})
+    return out
 
 
 def scrape_custom(name):
@@ -3248,9 +3598,17 @@ def scrape_custom(name):
                   f"(listing is client-rendered)")
             return derived
     if urls:
-        detailed = []
+        detailed, misses = [], 0
         for u in urls[:80]:
-            detailed.extend(_jsonld_jobs(u, name))
+            found = _jsonld_jobs(u, name)
+            detailed.extend(found)
+            # a site either publishes JobPosting markup or it does not — if the
+            # first few pages have none, the other 75 won't either. Van Kaizen
+            # spent ~144s a run proving that.
+            misses = 0 if found else misses + 1
+            if misses >= 4 and not detailed:
+                print(f"      {name}: no JSON-LD after {misses} pages, skipping the rest")
+                break
             time.sleep(REQUEST_DELAY)
             if len(detailed) >= 80:
                 break
@@ -3290,11 +3648,40 @@ def scrape_custom(name):
                 if new_n:
                     print(f"   {name}: first-element titles -> {new_n}")
                 continue
+            if cfg.get("loc_class"):
+                found = _links_with_loc_class(r.text, base, marker, cfg["loc_class"])
+                new_n = 0
+                for j in found:
+                    if j["url"] in seen:
+                        continue
+                    seen.add(j["url"])
+                    out.append(j)
+                    new_n += 1
+                if new_n:
+                    got = sum(1 for j in out if j["location"])
+                    print(f"   {name}: link + .{cfg['loc_class']} -> {new_n} roles "
+                          f"({got} with a location)")
+                continue
+            if cfg.get("data_attrs"):
+                found = _links_from_data_attrs(r.text, base, cfg)
+                new_n = 0
+                for j in found:
+                    if j["url"] in seen:
+                        continue
+                    seen.add(j["url"])
+                    out.append(j)
+                    new_n += 1
+                if new_n:
+                    got = sum(1 for j in out if j["location"])
+                    print(f"   {name}: data attributes -> {new_n} roles "
+                          f"({got} with a location)")
+                continue
             if cfg.get("slug_titles"):
                 # collect the links only, then name them from their slugs
                 links = re.findall(r'href="([^"]*' + re.escape(marker) + r'[^"?#]*)', r.text)
                 links = [u if u.startswith("http") else base.rstrip("/") + u for u in links]
-                derived = _titles_from_urls(sorted(set(links)), name)
+                derived = _titles_from_urls(sorted(set(links)), name,
+                                            loc_index=cfg.get("url_loc_index"))
                 for j in derived:
                     if j["url"] in seen:
                         continue
