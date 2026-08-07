@@ -702,7 +702,10 @@ def _ultipro_loc(j):
         return v if isinstance(v, str) else ""
 
     src = None
-    for key in ("Locations", "locations"):
+    # Bally's send Locations: [] alongside a populated MatchedLocations — the
+    # diagnostic named both keys, and reading only the first gave 436 roles
+    # with no location at all
+    for key in ("Locations", "locations", "MatchedLocations", "matchedLocations"):
         v = j.get(key)
         if isinstance(v, list) and v:
             src = v[0] if isinstance(v[0], dict) else {"City": v[0]}
