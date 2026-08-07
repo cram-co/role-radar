@@ -117,7 +117,10 @@ def _host_is_throttled(url):
 # Workable throttles hard when several companies are pulled back to back. The
 # retry helper alone just burns the budget losing the same requests, so pace the
 # requests instead: never hit the same host more often than this.
-_HOST_MIN_GAP = {"apply.workable.com": 5.0}
+_HOST_MIN_GAP = {"apply.workable.com": 5.0,
+                 # 76 detail pages back to back returned 429 every time, losing
+                 # the locations for all 75 of their roles
+                 "www.vankaizen.com": 1.2, "vankaizen.com": 1.2}
 _host_last = {}
 
 
@@ -2438,7 +2441,7 @@ def _jsonld_jobs(url, source):
     embed these for Google for Jobs, and Google doesn't reliably run JavaScript,
     so the markup is usually server-rendered even when the listing isn't."""
     try:
-        r = session.get(url, headers=AGENCY_UA, timeout=TIMEOUT)
+        r = _request("GET", url, headers=AGENCY_UA)
         if r.status_code != 200:
             print(f"      json-ld {url}: HTTP {r.status_code}")
             return []
@@ -2985,10 +2988,10 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"], extra=["https://codereargentina.hiringroom.com/jobs/"]),
     "Casumo":       dict(base="https://www.casumocareers.com", marker="/jobs/",
                          listing=["/jobs/"]),
-    "Betika":       dict(base="https://betika.seamlesshiring.com", marker="/job",
-                         listing=["/", "/jobs", "/careers", "/h"]),
-    "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
-                         listing=["/JobApplications/Apply/", "/"]),
+    # their own careers site links "Vacancies" to /home/search — the
+    # /JobApplications/ path we were trying appears nowhere on it
+    "bet9ja":       dict(base="https://bet9jacareers.com", marker="/home/",
+                         listing=["/home/search", "/Home/search", "/"]),
     "Exacta Solutions": dict(base="https://www.exactasolutions.com", marker="/vacancies/",
                          listing=["/vacancies/", "/vacancies/page/2/", "/vacancies/page/3/",
                                   "/vacancies/page/4/", "/vacancies/page/5/"]),
@@ -3057,8 +3060,6 @@ CUSTOM_BOARDS = {
                          listing=["/public-vacancies/", "/public-vacancies"]),
     "EvenBet Gaming": dict(base="https://evenbetgaming.com", marker="/vacanc",
                          listing=["/vacancies/", "/vacancies"]),
-    "Inspired Entertainment": dict(base="https://careers.inseinc.com", marker="/job/",
-                         listing=["/", "/jobs", "/search"]),
     "Nolimit City®": dict(base="https://career.nolimitcity.com", marker="/career/",
                          listing=["/", "/career/"]),
     "Push Gaming":  dict(base="https://www.pushgaming.com", marker="/careers/",

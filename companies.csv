@@ -49,7 +49,7 @@ GoldBet,Operator,no,0,no board found,detect,skip,"Lottomatica Group brand - role
 Greentube (Novomatic),Supplier - Content,no,0,no board found,detect,skip,careers.greentube.com - handled by scrape_custom
 Hacksaw Gaming,Supplier - Content,no,0,no board found,detect,bamboohr:hacksawoperations,BambooHR
 highbet,Operator,no,0,no board found,detect,bamboohr:avidlionz,BambooHR at avidlionz.bamboohr.com
-Inspired Entertainment,Supplier,no,0,no board found,detect,skip,"careers.inseinc.com, handled by scrape_custom"
+Inspired Entertainment,Supplier,no,0,no board found,detect,wordpress:careers.inseinc.com,"WordPress with a job-board plugin at careers.inseinc.com/find-a-job/. The listing is CLIENT-RENDERED - the page says ""JavaScript must be enabled in order to view listings"" - so no path guessing works and the old custom board was never going to return anything. NOTE their board is largely the UK Playnation arcade and holiday-park operation (Craig Tara, Drimsynie, Tummel Valley), so expect retail roles the exclusion hides, plus a few in Greece, Milan, Rome, Illinois and New York"
 KamaGames,Supplier - Content,no,0,no board found,detect,skip,"No ATS but fully server-rendered - handled by scrape_custom off /careers. Isle of Man based, 7 roles at time of adding"
 LSports,Sports data,no,0,no board found,detect,skip,PARKED [ATS: Comeet] - lsports.eu/careers uses comeet_pos/comeet_cat parameters. Platform not supported
 Luckia,Operator,no,0,no board found,detect,sfcsb:jobs.luckiagaminggroup.com,"SuccessFactors CAREER SITE BUILDER at jobs.luckiagaminggroup.com. Table layout with locations and Spanish dates. Mostly retail casino (croupiers, slot attendants, SAT technicians) - the Shops/Casino Floor exclusion will hide most of it, which is correct"
@@ -97,9 +97,9 @@ WPT Global,Poker,no,0,no board found,detect,workable:wpt-global,Workable. No rol
 Yggdrasil,Supplier - Content,no,0,no board found,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id"
 Yolo Group,Operator / Supplier - Crypto,no,0,no board found,detect,skip,"NO PUBLIC BOARD for the B2C brands (Bitcasino, Sportsbet.io). Their B2B arm HUB88 has its own row and board. CAUTION: jobs.yolo.io is YOLO INVESTMENTS, a VC portfolio board, not the gaming group - useful only as a discovery source, its Gambling & Casinos filter names Enteractive, Next.IO and Kalamba Games as untracked companies"
 Allwyn,Lottery,no,0,skipped on purpose,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded"
-bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,KingMakers brand - roles come through the KingMakers row
+bet9ja,Operator - Africa,no,0,skipped on purpose,detect,skip,"Own careers site at bet9jacareers.com, vacancies at /home/search (NOT /JobApplications/, which was the old wrong path). Nigerian entity KC Gaming Networks, 1,000+ staff, 50+ retail outlets. Separate from the KingMakers Workable board"
 Betfred,Operator,no,0,skipped on purpose,detect,talos:38ed147c-1c26-44e9-a4f9-b3fca4d8f7f2|betfredgroup.talosats-careers.com,"Talos360, same platform as UK Tote"
-Betika,Operator,no,0,skipped on purpose,detect,skip,"No roles found - keep the row, he wants them tracked"
+Betika,Operator,no,0,skipped on purpose,detect,skip,"FALSE MATCH removed 7 Aug: betika.seamlesshiring.com belongs to SHOP AND DELIVER LIMITED, not Betika - the page title says so. Their real careers board is unknown. Needs a job URL from betika.com"
 Cirsa,Operator - Spain/LatAm,no,0,skipped on purpose,detect,skip,"Allibo joblink board, handled by scrape_custom"
 Fortuna Entertainment Group,Operator - CEE,no,0,skipped on purpose,detect,skip,"PARKED [ATS: custom Azure easyapply] - app-azeun-p-hr-easyapply-fe.azurewebsites.net, handled by scrape_fortuna which finds no API. A separate ""FEG"" row was the same company (same Azure host) and has been removed"
 iGaming Recruitment,Recruitment agency,no,0,skipped on purpose,detect,skip,"WordPress jobs board, handled by scrape_custom"
