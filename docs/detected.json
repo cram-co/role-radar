@@ -332,7 +332,7 @@
  },
  "Amusnet": {
   "ats": "sfcsb",
-  "token": "jobs.amusnet.com|/Interactive",
+  "token": "jobs.amusnet.com|/Interactive,",
   "manual": true
  },
  "Aristocrat Interactive": {
