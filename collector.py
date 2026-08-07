@@ -568,6 +568,41 @@ def detect(name, hint=""):
 
 # ---------------------------------------------------------------- fetchers
 
+def _json_list(url, label, key=None, **kw):
+    """GET a board's JSON and hand back a list, or [] with a reason logged.
+
+    The original seven fetchers (greenhouse, bamboohr, lever, ashby,
+    smartrecruiters, recruitee, workable) called .json() straight off the
+    response with no status check, so any 404, HTML error page or odd payload
+    raised. They were caught per-company so a run survived, but the log said
+    only "FAILED" instead of naming the problem — and they are our
+    highest-volume platforms."""
+    try:
+        r = _request("GET", url, **kw)
+    except Exception as e:
+        print(f"      {label}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      {label}: HTTP {r.status_code}")
+        return []
+    try:
+        d = r.json()
+    except Exception:
+        print(f"      {label}: 200 but not JSON")
+        return []
+    if key:
+        if not isinstance(d, dict):
+            print(f"      {label}: 200 but payload is {type(d).__name__}")
+            return []
+        d = d.get(key)
+    if d is None:
+        return []
+    if not isinstance(d, list):
+        print(f"      {label}: expected a list, got {type(d).__name__}")
+        return []
+    return [x for x in d if isinstance(x, dict)]
+
+
 def _greenhouse_payload(token, host="boards-api.greenhouse.io"):
     """Greenhouse's plain jobs endpoint only exposes `updated_at`, which resets
     whenever a posting is edited — so a bulk edit makes an entire board look
@@ -587,7 +622,14 @@ def _greenhouse_payload(token, host="boards-api.greenhouse.io"):
 
 
 def fetch_greenhouse(token):
-    d = _greenhouse_payload(token)
+    try:
+        d = _greenhouse_payload(token)
+    except Exception as e:
+        print(f"      greenhouse {token}: {type(e).__name__}")
+        return []
+    if not isinstance(d, dict):
+        print(f"      greenhouse {token}: unexpected payload {type(d).__name__}")
+        return []
     dept = {}
     try:
         dd = session.get(
@@ -628,8 +670,8 @@ def fetch_greenhouse_eu(token):
 
 def fetch_bamboohr(token):
     """BambooHR public careers list: https://<token>.bamboohr.com/careers/list"""
-    d = session.get(f"https://{token}.bamboohr.com/careers/list", timeout=TIMEOUT).json()
-    items = d.get("result") if isinstance(d, dict) else d
+    items = _json_list(f"https://{token}.bamboohr.com/careers/list",
+                       f"bamboohr {token}", key="result")
     out = []
     for j in items or []:
         loc = j.get("location") or {}
@@ -648,6 +690,50 @@ def fetch_bamboohr(token):
             "posted_at": j.get("datePosted") or j.get("originalOpenDate"),
         })
     return out
+
+
+def _ultipro_loc(j):
+    """UKG's payload has shifted between tenants: some send Locations[], some a
+    flat Location object, some plain City/State/Country fields. Read whichever
+    is present rather than assuming one shape."""
+    def name(v):
+        if isinstance(v, dict):
+            return v.get("Name") or v.get("name") or v.get("Description") or ""
+        return v if isinstance(v, str) else ""
+
+    src = None
+    for key in ("Locations", "locations"):
+        v = j.get(key)
+        if isinstance(v, list) and v:
+            src = v[0] if isinstance(v[0], dict) else {"City": v[0]}
+            break
+    if src is None:
+        for key in ("Location", "location", "PrimaryLocation", "JobLocation"):
+            v = j.get(key)
+            if isinstance(v, dict):
+                src = v
+                break
+            if isinstance(v, str) and v.strip():
+                return html.unescape(v).strip()
+    if src is None:
+        src = j                                   # flat fields on the record
+
+    parts = [name(src.get(k)) for k in
+             ("City", "city", "Municipality", "State", "state", "StateProvince",
+              "Country", "country")]
+    seen, bits = set(), []
+    for x in parts:
+        x = (x or "").strip()
+        if x and x.lower() not in seen:
+            seen.add(x.lower())
+            bits.append(x)
+    out = ", ".join(bits)
+    if not out:
+        for k in ("Address", "FormattedAddress", "LocationName", "WorkLocation"):
+            v = name(src.get(k)) or name(j.get(k))
+            if v:
+                return html.unescape(v).strip()
+    return html.unescape(out).strip()
 
 
 def fetch_ultipro(token):
@@ -678,20 +764,27 @@ def fetch_ultipro(token):
         except Exception as e:
             print(f"      ultipro {company}: {type(e).__name__}")
             break
-        items = (d.get("opportunities") or d.get("Opportunities") or [])
+        if isinstance(d, list):
+            items = d
+        elif isinstance(d, dict):
+            items = (d.get("opportunities") or d.get("Opportunities") or [])
+        else:
+            print(f"      ultipro {company}: 200 but payload is {type(d).__name__}")
+            break
         if not items:
             break
         for j in items:
+            if not isinstance(j, dict):
+                continue
             title = j.get("Title") or j.get("title") or ""
             if not title:
                 continue
-            locs = j.get("Locations") or []
-            loc = ""
-            if isinstance(locs, list) and locs:
-                a = locs[0] or {}
-                parts = [a.get("City"), (a.get("State") or {}).get("Name") if isinstance(a.get("State"), dict) else a.get("State"),
-                         (a.get("Country") or {}).get("Name") if isinstance(a.get("Country"), dict) else a.get("Country")]
-                loc = ", ".join([str(x) for x in parts if isinstance(x, str) and x])
+            loc = _ultipro_loc(j)
+            if not loc and not out:
+                # Bally's returned 436 roles with no location at all, so say
+                # what the record actually offers rather than guessing again
+                print(f"      ultipro {company}: no location parsed — keys "
+                      f"{sorted(j)[:14]}")
             out.append({
                 "title": html.unescape(str(title)).strip(),
                 "location": loc,
@@ -787,13 +880,19 @@ def fetch_oracle(token):
         except Exception as e:
             print(f"      oracle {site}: {type(e).__name__}")
             break
+        if not isinstance(d, dict):
+            print(f"      oracle {site}: 200 but payload is {type(d).__name__}")
+            break
         items = d.get("items") or []
         reqs = []
         for it in items:
-            reqs.extend(it.get("requisitionList") or [])
+            if isinstance(it, dict):
+                reqs.extend(it.get("requisitionList") or [])
         if not reqs:
             break
         for j in reqs:
+            if not isinstance(j, dict):
+                continue
             title = html.unescape(str(j.get("Title") or "")).strip()
             if not title:
                 continue
@@ -1923,9 +2022,8 @@ def fetch_breezy(token):
 
 
 def fetch_lever(token):
-    d = session.get(
-        f"https://api.lever.co/v0/postings/{token}?mode=json", timeout=TIMEOUT
-    ).json()
+    d = _json_list(f"https://api.lever.co/v0/postings/{token}?mode=json",
+                   f"lever {token}")
     return [
         {
             "title": j.get("text", ""),
@@ -1945,9 +2043,8 @@ def fetch_lever(token):
 
 
 def fetch_ashby(token):
-    d = session.get(
-        f"https://api.ashbyhq.com/posting-api/job-board/{token}", timeout=TIMEOUT
-    ).json()
+    d = {"jobs": _json_list(f"https://api.ashbyhq.com/posting-api/job-board/{token}",
+                            f"ashby {token}", key="jobs")}
     return [
         {
             "title": j.get("title", ""),
@@ -1963,12 +2060,9 @@ def fetch_ashby(token):
 def fetch_smartrecruiters(token):
     out, offset = [], 0
     while True:
-        d = session.get(
+        batch = _json_list(
             f"https://api.smartrecruiters.com/v1/companies/{token}/postings"
-            f"?limit=100&offset={offset}",
-            timeout=TIMEOUT,
-        ).json()
-        batch = d.get("content", [])
+            f"?limit=100&offset={offset}", f"smartrecruiters {token}", key="content")
         out.extend(batch)
         if len(batch) < 100 or offset > 900:
             break
@@ -1995,7 +2089,8 @@ def fetch_smartrecruiters(token):
 
 
 def fetch_recruitee(token):
-    d = session.get(f"https://{token}.recruitee.com/api/offers/", timeout=TIMEOUT).json()
+    d = {"offers": _json_list(f"https://{token}.recruitee.com/api/offers/",
+                              f"recruitee {token}", key="offers")}
     return [
         {
             "title": j.get("title", ""),
@@ -2035,7 +2130,11 @@ def fetch_workable(token):
         except Exception as e:
             print(f"      workable {token}: {type(e).__name__}")
             break
+        if not isinstance(d, dict):
+            print(f"      workable {token}: payload is {type(d).__name__}")
+            break
         batch = d.get("results") or d.get("jobs") or []
+        batch = [x for x in batch if isinstance(x, dict)]
         out.extend(batch)
         page_token = d.get("nextPage")
         if not page_token or not batch:
@@ -2089,19 +2188,57 @@ def fetch_workable(token):
 
 def fetch_teamtailor(token):
     """Teamtailor has no public JSON API — parse the careers page HTML.
-    Works for <token>.teamtailor.com and for boards on a customer's own domain."""
+    Works for <token>.teamtailor.com and for boards on a customer's own domain.
+
+    Each card reads "{Title} {Department} · {Location}", but the department and
+    location sit in siblings AFTER the anchor rather than inside it. So the
+    title comes from the link and the rest from the window up to the next link
+    — the same approach the Avature fetcher uses. Without this every Teamtailor
+    company arrived with no location at all: 94 roles across nine of them."""
     base = _tt_base(token)
     try:
         page = session.get(f"{base}/jobs", headers=AGENCY_UA, timeout=TIMEOUT).text
     except Exception:
         return []
-    jobs = []
+    body = _STYLE_SCRIPT.sub(" ", page)
+    link_rx = re.compile(r'href="([^"]*?/jobs/[^"?#]+)"', re.I)
+    marks = [(mt.group(1), mt.end(), mt.start()) for mt in link_rx.finditer(body)]
+
+    jobs, seen = [], set()
     for url, title in _links_with_titles(page, base, "/jobs/"):
-        if url.rstrip("/").endswith("/jobs"):
+        if url.rstrip("/").endswith("/jobs") or url in seen:
             continue
-        jobs.append({"title": title, "location": "", "department": "",
-                     "url": url, "posted_at": None})
+        seen.add(url)
+        jobs.append({"title": title, "location": _tt_meta(body, marks, url, base),
+                     "department": "", "url": url, "posted_at": None})
     return jobs
+
+
+def _tt_meta(body, marks, url, base):
+    """Pull the location out of the window following a job link. The card meta
+    reads "Department · Location", occasionally with several locations."""
+    path = url[len(base):] if url.startswith(base) else url
+    span = None
+    for i, (href, pos, _st) in enumerate(marks):
+        if href == path or href == url:
+            # bound at where the NEXT link BEGINS, not where it ends, or the
+            # window swallows the following card's title and location too
+            nxt = marks[i + 1][2] if i + 1 < len(marks) else min(pos + 600, len(body))
+            span = (pos, max(nxt, pos))
+            break
+    if not span:
+        return ""
+    window = body[span[0]:span[1]][:600]
+    txt = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", window))).strip()
+    if "\u00b7" not in txt and "·" not in txt:
+        return ""
+    tail = re.split(r"\s*[\u00b7·]\s*", txt, maxsplit=1)[-1]
+    # the window runs on into the next card, so stop at the following title
+    tail = re.split(r"\s{3,}", tail)[0]
+    tail = _strip_tag_debris(tail)[:80].strip(" ,;-")
+    if not tail or len(tail) < 2 or _MARKUP_JUNK.search(tail):
+        return ""
+    return tail
 
 
 def fetch_workday(url):
