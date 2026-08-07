@@ -526,7 +526,21 @@ function bucketsOf(loc){
   }
   const b = bucket(raw);
   if(!b) return [];
-  return [isKnownPlace(b) ? b : "Inside the listing"];
+  const out = [isKnownPlace(b) ? b : "Inside the listing"];
+  // "United States (Remote)" is both. Remote wins the single bucket because
+  // it is checked first, which hid the country — so when a string says remote
+  // AND names somewhere, list it under both rather than choosing.
+  if(out[0] === "Remote"){
+    const stripped = repairLoc(raw)
+      .replace(/\(?\s*(fully\s+)?remote(\s+first)?\s*\)?/ig, " ")
+      .replace(/\b(anywhere|work from home|wfh|home based)\b/ig, " ")
+      .replace(/^[\s,;·\-]+|[\s,;·\-]+$/g,"").trim();
+    if(stripped && /[a-z]{2}/i.test(stripped)){   // "UK" and "US" are two
+      const c = bucket(stripped);
+      if(c && c !== "Remote" && isKnownPlace(c)) out.push(c);
+    }
+  }
+  return out;
 }
 
 function bucket(loc){
@@ -545,9 +559,18 @@ function bucket(loc){
      || /^all locations?$/i.test(s)) return "Multiple locations";
   // "Stockholm; Uppsala" — take the first, it's the primary site
   if(s.includes(";")) return bucket(s.split(";")[0]);
-  if(low.includes("remote") || low.includes("anywhere")) return "Remote";
+  if(low.includes("remote") || low.includes("anywhere")
+     || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(low)) return "Remote";
   if(low.includes("european union")) return "European Union";
   if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "UAE";
+  // "USA - Georgia" is the STATE. This has to run before the country-name scan
+  // below, or Georgia the country wins and a Florida role lands in Tbilisi.
+  if(/\busa\s*[-–]|^usa\b|\bunited states\b/i.test(low)) return "United States";
+  // "Atlanta, Georgia, US" — a trailing US/USA settles it before the country
+  // scan can claim Georgia
+  if(/,\s*(us|usa|u\.s\.a?\.?)\s*$/i.test(s.trim())) return "United States";
+  if(/,\s*(ca|can)\s*$/i.test(s.trim()) && /,/.test(s)) return "Canada";
+  if(/\bcan(ada)?\s*[-–]/i.test(low) && !/\bcanary\b/i.test(low)) return "Canada";
   for(const n of NAMES){
     if(new RegExp("\\b"+n.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b").test(low)) return n;
   }
