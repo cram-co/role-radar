@@ -998,5 +998,14 @@
  "Arena Racing Company": {
   "ats": "ashby",
   "token": "arena"
+ },
+ "LCKY Group (ex-Glitnor)": {
+  "ats": "teamtailor",
+  "token": "careers.lckygroup.com",
+  "manual": true
+ },
+ "Hub88": {
+  "ats": "skip",
+  "manual": true
  }
 }
