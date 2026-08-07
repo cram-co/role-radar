@@ -1,10 +1,6 @@
-role-radar collector run: 2026-08-07T09:15:33.990769+00:00
+role-radar collector run: 2026-08-07T09:48:51.086155+00:00
 ============================================================
 
-Detecting: Arena Racing Company
-Re-probing (was unknown): Derivco
-Re-probing (was unknown): World Series of Poker
-Re-probing (was unknown): BetWarrior
 Betclic (Banijay Gaming): 66 roles (breezy)
       jobvite agscareer: 200, 101858 bytes but no /job/ links
          link shapes: /d3igejkwe1ucjd.cloudfront.net/* x5, /careers.jobvite.com/* x5, /releases/* x2, /agscareer/* x2, /agscareer x2, /privacy-policy x1, /terms-of-service x1, /AmericanGamingSystems x1, /play_ags x1, /company/* x1, /user/* x1, /Overview/* x1
@@ -20,6 +16,7 @@ Amusnet: 16 roles (sfcsb)
 Aristocrat Interactive: 192 roles (workday)
       jobvite pragmaticplay: 127 roles across 4 listings
 ARRISE: 127 roles (jobvite)
+      ultipro TWI1006TRWH: no location parsed — keys ['BriefDescription', 'Distance', 'Featured', 'FullTime', 'Id', 'JobCategoryName', 'JobLocationType', 'Locations', 'MatchScore', 'MatchedLocations', 'OpportunityType', 'PostedDate', 'RequisitionNumber', 'Title']
 Bally's Interactive: 445 roles (ultipro)
 BetMakers Technology Group: 2 roles (rippling)
 BetWarrior: 7 roles (bamboohr)
@@ -33,15 +30,17 @@ Caesars Digital: 1429 roles (oracle)
 DAZN Bet: 3 roles (pinpoint)
 DigiOutsource: 124 roles (workday)
 Digitain: 89 roles (bamboohr)
-      avature amswh: 200 (39600 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39598 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
-      avature amswh: 83 roles
-evoke: 83 roles (avature)  [37s]
+      avature amswh: 82 roles
+evoke: 82 roles (avature)  [36s]
 Evoplay: 1 roles (greenhouse)
 FIRST.bet: 17 roles (bamboohr)
-Gaming Innovation Group: 29 roles (pinpoint)
+Gaming Innovation Group: 28 roles (pinpoint)
 Hacksaw Gaming: 3 roles (bamboohr)
 highbet: 7 roles (bamboohr)
+      wordpress careers.inseinc.com: no job post type found among 10 tried
+Inspired Entertainment: 0 roles (wordpress)
       sfcsb jobs.luckiagaminggroup.com: 30 roles
 Luckia: 30 roles (sfcsb)
 Neds: 11 roles (workable)
@@ -67,7 +66,7 @@ Yggdrasil: 6 roles (smartrecruiters)
       talos 38ed147c: 1 roles
 Betfred: 1 roles (talos)
 KingMakers: 10 roles (workable)
-MERKUR Casino UK: 50 roles (workday)
+MERKUR Casino UK: 45 roles (workday)
 PawaTech: 16 roles (pawatalent)
       orangehrm pinnacle: 17 roles
 Pinnacle: 17 roles (orangehrm)
@@ -107,7 +106,7 @@ Delasport: 0 roles (greenhouse)
 Derivco: 4 roles (bamboohr)
 DraftKings: 95 roles (workday)
 Easygo: 37 roles (greenhouse)
-Entain: 229 roles (smartrecruiters)
+Entain: 228 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
 evoke plc: 1 roles (bamboohr)
 Evolution: 290 roles (smartrecruiters)
@@ -166,7 +165,7 @@ Talentgrator: 60 roles (workable)  [26s]
 Tipico: 183 roles (smartrecruiters)
 Underdog: 14 roles (greenhouse)
 VGW: 10 roles (greenhouse)
-Videoslots: 13 roles (bamboohr)
+Videoslots: 14 roles (bamboohr)
 Wildz Group: 4 roles (teamtailor)
 ZEAL Network: 12 roles (ashby)
 Flutter Group (corporate): 36 roles (workday)
@@ -236,31 +235,21 @@ Cirsa: 0 roles (agency board)  <-- CHECK: returned nothing
       Codere Online: no API URLs found in bundle
    Codere Online: link parse -> 2
 Codere Online: 2 roles (agency board)
-      sitemap https://www.casumocareers.com: 3 job URLs
-      json-ld https://www.casumocareers.com/jobs/8049683-multimedia-designer: 1 JobPosting blocks  <-- USABLE
-      json-ld https://www.casumocareers.com/jobs/7922995-business-intelligence-analyst: 1 JobPosting blocks  <-- USABLE
+      sitemap https://www.casumocareers.com: 8 job URLs
+      json-ld https://www.casumocareers.com/jobs/7873243-risk-fraud-payments-analyst: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7707249-platform-engineer: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7696971-casino-coordinator: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7693327-quality-assurance-specialist: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7693168-ai-engineer: HTTP 410
       json-ld https://www.casumocareers.com/jobs/7691557-casino-manager: 1 JobPosting blocks  <-- USABLE
-   Casumo: sitemap + JSON-LD -> 3
-Casumo: 3 roles (agency board)
-      json-ld https://betika.seamlesshiring.com/jobs: HTTP 404
-      json-ld https://betika.seamlesshiring.com/careers: HTTP 404
-      json-ld https://betika.seamlesshiring.com/h: HTTP 404
-      Betika: 7 script bundle(s) referenced, checking 4
-      Betika: API-looking URLs in bundle:
-         https://www.sis.se/api/document/preview/911952/
-         https://www.youtube.com/iframe_api
-      Betika https://betika.seamlesshiring.com/: 200, 9669 bytes, 0 '/job' refs
-         link shapes present: /img/* x1, /apple-touch-icon-precomposed.png x1, /css2 x1, /refactor/* x1, /css/* x1
-      Betika https://betika.seamlesshiring.com/jobs: HTTP 404
-      Betika https://betika.seamlesshiring.com/careers: HTTP 404
-      Betika https://betika.seamlesshiring.com/h: HTTP 404
-Betika: 0 roles (agency board)  <-- CHECK: returned nothing
-      json-ld https://bet9jacareers.com/JobApplications/Apply/: HTTP 400
+      json-ld https://www.casumocareers.com/jobs/7659688-site-reliability-engineer: HTTP 410
+      json-ld https://www.casumocareers.com/jobs/7622742-information-security-engineer: HTTP 410
+   Casumo: sitemap + JSON-LD -> 1
+Casumo: 1 roles (agency board)
       bet9ja: 14 script bundle(s) referenced, checking 6
       bet9ja: no API URLs found in bundle
-      bet9ja https://bet9jacareers.com/JobApplications/Apply/: HTTP 400
-      bet9ja https://bet9jacareers.com/: 200, 57955 bytes, 0 '/JobApplications/' refs
-         link shapes present: /assets2/* x14, /css x2, /Vacancy-new.html x2, /../* x2, /ajax/* x1, /Home x1, /index-3.html x1, /RECRUITMENTPRIVACYPOLICY.pdf x1, /responsible-gaming x1, /general-tcs x1, /privacy/* x1
+   bet9ja: link parse -> 2
+      bet9ja: dropped 2 navigation link(s)
 bet9ja: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://www.exactasolutions.com/vacancies/page/4/: HTTP 404
       json-ld https://www.exactasolutions.com/vacancies/page/5/: HTTP 404
@@ -484,7 +473,7 @@ EGT Digital: 33 roles (agency board)
       json-ld https://careers.gamesglobal.com/jobs/1703?lang=en-us: 1 JobPosting blocks  <-- USABLE
       json-ld https://careers.gamesglobal.com/jobs/1704?lang=en-us: 1 JobPosting blocks  <-- USABLE
       json-ld https://careers.gamesglobal.com/jobs/1697?lang=en-us: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.gamesglobal.com/jobs/1702?lang=en-us: 1 JobPosting blocks  <-- USABLE
+      json-ld https://careers.gamesglobal.com/jobs/1702?lang=en-us: HTTP 404
       json-ld https://careers.gamesglobal.com/jobs/1699?lang=en-us: 1 JobPosting blocks  <-- USABLE
       json-ld https://careers.gamesglobal.com/jobs/1695?lang=en-us: 1 JobPosting blocks  <-- USABLE
       json-ld https://careers.gamesglobal.com/jobs/1692?lang=en-us: 1 JobPosting blocks  <-- USABLE
@@ -507,8 +496,8 @@ EGT Digital: 33 roles (agency board)
       json-ld https://careers.gamesglobal.com/jobs/1619?lang=en-us: 1 JobPosting blocks  <-- USABLE
       json-ld https://careers.gamesglobal.com/jobs/1598?lang=en-us: 1 JobPosting blocks  <-- USABLE
       json-ld https://careers.gamesglobal.com/jobs/1615?lang=en-us: 1 JobPosting blocks  <-- USABLE
-   Games Global: sitemap + JSON-LD -> 32
-Games Global: 32 roles (agency board)
+   Games Global: sitemap + JSON-LD -> 31
+Games Global: 31 roles (agency board)
       sitemap https://talenthub.playngo.com: 2 job URLs
       json-ld https://talenthub.playngo.com/jobs/7937264-senior-microsoft-platform-security-engineer: 1 JobPosting blocks  <-- USABLE
    Play'n GO: sitemap + JSON-LD -> 1
@@ -529,17 +518,6 @@ SPRIBE: 0 roles (agency board)  <-- CHECK: returned nothing
       EvenBet Gaming https://evenbetgaming.com/vacancies: HTTP 404
    EvenBet Gaming: sitemap slugs -> 5 (unverified, may include closed roles)
 EvenBet Gaming: 5 roles (agency board)
-      json-ld https://careers.inseinc.com/jobs: HTTP 404
-      json-ld https://careers.inseinc.com/search: HTTP 404
-      Inspired Entertainment: 8 script bundle(s) referenced, checking 4
-      Inspired Entertainment: API-looking URLs in bundle:
-         https://player.vimeo.com/api/player
-         https://www.youtube.com/iframe_api
-      Inspired Entertainment https://careers.inseinc.com/: 200, 81750 bytes, 0 '/job/' refs
-         link shapes present: /wp-content/* x8, /wp-json/* x3, /careers.inseinc.com/* x3, /find-a-job x3, /wp-json x1, /core-principles x1, /benefits x1, /genderpaygap x1, /author/* x1, /office-locator x1, /about-us/* x1, /inspired_news x1
-      Inspired Entertainment https://careers.inseinc.com/jobs: HTTP 404
-      Inspired Entertainment https://careers.inseinc.com/search: HTTP 404
-Inspired Entertainment: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://career.nolimitcity.com/career/: HTTP 403
       Nolimit City®: 4 script bundle(s) referenced, checking 4
       Nolimit City®: no API URLs found in bundle
@@ -584,15 +562,6 @@ BettingJobs: 103 roles (agency board)
    Van Kaizen: strategy 1 — JSON-LD
    Van Kaizen: strategy 2 — sitemap
       sitemap https://www.vankaizen.com: 75 job URLs
-      json-ld https://vankaizen.com/vacancies/quantity-surveyor: HTTP 429
-      json-ld https://vankaizen.com/vacancies/sales-executive-2: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-account-manager-crypto-casino: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-account-manager-sweepstakes: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-affiliate-manager-finland: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-commercial-leadership: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-company-administrator-assistant-manager: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-engineer: HTTP 429
-      json-ld https://vankaizen.com/vacancies/senior-front-end-developer-1: HTTP 429
 Van Kaizen: 74 roles (agency board)
    not carrying Codere Online forward — set to skip
    not carrying Casumo forward — set to skip
@@ -634,5 +603,5 @@ dropped 34 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 164 returning, 66 not
 
-Feed written: 7368 jobs
+Feed written: 7358 jobs
 Unresolved companies (0): 

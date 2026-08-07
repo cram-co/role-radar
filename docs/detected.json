@@ -505,7 +505,8 @@
   "manual": true
  },
  "Inspired Entertainment": {
-  "ats": "skip",
+  "ats": "wordpress",
+  "token": "careers.inseinc.com",
   "manual": true
  },
  "KamaGames": {
