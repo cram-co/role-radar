@@ -229,3 +229,4 @@ Inplay Matrix,Supplier - Platform,no,0,not probed yet,detect,skip,"inplaymatrix.
 Newfield,Supplier - Data,no,0,not probed yet,detect,skip,"Employment Hero at employmenthero.com/jobs/organisations/newfield-ltd. Server-rendered, handled by scrape_custom with slug titles. Isle of Man, 140 staff, international racing events and their own IT platform"
 iGate,Supplier - Platform,no,0,not probed yet,greenhouse_eu,greenhouse_eu:igate,Greenhouse EU at job-boards.eu.greenhouse.io/igate
 Hub88,Supplier - Platform,no,0,not probed yet,detect,skip,"Server-rendered careers page at hub88.io/careers/, handled by scrape_custom with slug titles. Yolo Group B2B aggregator arm, Malta-registered. The only part of the Yolo group with a findable board - the B2C brands (Bitcasino, Sportsbet.io) still have none"
+Wiztech,Operator,no,0,not probed yet,bamboohr,bamboohr:wiztech,BambooHR at wiztech.bamboohr.com. Parent of Aloplay. He rates the roles that come up here
