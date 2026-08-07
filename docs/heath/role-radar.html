@@ -44,10 +44,34 @@
   .locopt:hover{background:#F4F5F7;}
   .locopt input{width:16px;height:16px;margin:0;accent-color:var(--royal);flex:0 0 auto;}
   .locopt .n{margin-left:auto;color:var(--mist);font-size:12.5px;font-family:'IBM Plex Mono',monospace;}
+  /* Hide moved up beside the sort: its own label already says "Hide", so a
+     separate header was saying it twice. That frees the row below for the two
+     controls a returning visitor actually reaches for. */
+  .ctl-row{display:flex;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap;}
+  /* on a phone the sort and the hide toggle share one line: the select gives up
+     width first, since a truncated "Newest first" still reads */
+  @media(max-width:560px){
+    .ctl-row{gap:8px;flex-wrap:nowrap;}
+    .ctl-row select{min-width:0;flex:0 1 auto;padding:8px 8px;font-size:13px;}
+    .ctl-row .chip span{font-size:12.5px;padding:7px 9px;white-space:nowrap;}
+    .ctl-row2{flex-wrap:wrap;}
+  }
+  .ctl-row2{margin-top:10px;}
+  .ctl-btn{background:none;border:1px solid var(--line2);border-radius:5px;
+           padding:8px 13px;font:inherit;font-size:13.5px;color:var(--navy2);
+           cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:.12s;}
+  .ctl-btn:hover{border-color:var(--royal);color:var(--royal);}
+  .ctl-btn[aria-expanded="true"] .caret{transform:rotate(180deg);}
+  .ctl-btn .caret{transition:transform .15s;font-size:11px;}
+  .ctl-clear{color:var(--slate);}
+  .otherpanel{margin-top:11px;padding:13px 15px;border:1px solid var(--line2);
+              border-radius:5px;background:#FBFAF8;}
   .sort-row{display:flex;align-items:center;gap:9px;margin-top:11px;}
   .sort-row label{font-size:13px;color:var(--slate);}
+  .ctl-row select,
   .sort-row select{padding:8px 11px;border:1px solid #D3D7DE;border-radius:5px;background:#fff;
                    font:inherit;font-size:13.5px;color:var(--navy2);cursor:pointer;}
+  .ctl-row select:focus,
   .sort-row select:focus{outline:none;border-color:var(--royal);box-shadow:0 0 0 3px rgba(31,75,196,.12);}
   .excl-row{margin-top:14px;}
   .chips{display:flex;flex-wrap:wrap;gap:10px;}
@@ -164,7 +188,7 @@
 <header class="rr">
   <div class="wrap">
     <h1>ROLE RADAR</h1>
-    <div class="sub">iGaming &middot; Betting &middot; Casino &middot; Sports &middot; Lottery</div>
+    <div class="sub">iGaming &middot; Betting &middot; Casino &middot; Sports &middot; Poker &middot; Lottery</div>
     <div class="ticker">
       <span id="t-roles">loading…</span>
       <span id="t-cos"></span>
@@ -192,21 +216,26 @@
       <input type="checkbox" id="lead" checked />
       <span>Senior Leadership Only: Chief, VP, Director, Head+</span>
     </label>
-    <div class="sort-row">
-      <label for="sort">Sort</label>
+    <div class="ctl-row">
       <select id="sort">
         <option value="new">Newest first</option>
         <option value="lead">Leadership first</option>
         <option value="co">Company A&ndash;Z</option>
       </select>
-    </div>
-    <div class="excl-row">
-      <span class="excl-label">Hide</span>
       <div class="chips chips-sm" id="excl"></div>
+    </div>
+    <div class="ctl-row ctl-row2">
+      <button type="button" class="ctl-btn" id="otherbtn" aria-expanded="false">
+        Other filters <span class="caret">&#9662;</span>
+      </button>
+      <button type="button" class="ctl-btn ctl-clear" id="clear">Clear filters</button>
+    </div>
+    <div class="otherpanel" id="otherpanel" hidden>
+      <span class="excl-label">Show only</span>
+      <div class="chips chips-sm" id="showonly"></div>
     </div>
     <div class="countline">
       <span id="count">&nbsp;</span>
-      <button class="clear" id="clear" style="display:none">Clear</button>
     </div>
     <div id="notice"></div>
   </div>
@@ -270,31 +299,19 @@ let page = 1;
 // so the set partitions the feed: tick every box and the list empties. Specific
 // functions are tested before broad ones — "Head of Technical Accounting" is
 // Finance, not IT, because Finance is checked first.
+// Two groups left, from six. The department splits — Trading, Finance,
+// Commercial, Operational — were built to describe what to HIDE. Once the
+// board is digital by default those lines stop being worth drawing: a
+// commercial role and a customer-ops role are both just roles. Only IT &
+// Engineering earns a category of its own, and "ret" stays because the
+// Hide flag needs it to recognise floor work.
 const EXCLUDE_GROUPS = [
   { id: "ret", label: "Shops, Casino Floor & Hotel",
     rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer|slot attendant|slot technician|casino host|pit boss|floor supervisor|table games|beverage|bartender|barback|server|waiter|waitress|host|hostess|busser|barista|cook|chef|culinary|kitchen|steward|dishwash\w*|banquet|buffet|restaurant|housekeep\w*|room attendant|guest (room|service)|valet|porter|bell ?(person|staff|hop)|concierge|spa|salon|massage|lifeguard|pool attendant|security officer|surveillance|groundskeep\w*|landscap\w*|maintenance technician|custodian|janitor|laundry|warehouse|usher|ticket|box office|parking|maintenance\s*engineer|engineer[^|]{0,12}maintenance|facilities\s*engineer|hvac|plumber|electrician|\bmechanic\b|refrigerat|carpenter|painter|kitchen|slot\s*tech|groundskeeper|attendant|clerk|cage|count room|front desk|bell desk|slots?|poker room|bingo|keno|race ?book|arcade|amusement|greeter|runner|cleaner|part[ -]?time|full[ -]?time|steady extra|on[ -]?call|seasonal|shift lead)\b/i,
     keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director|senior manager|head,)\b/i },
 
-  { id: "trd", label: "Trading & Sportsbook",
-    rx: /\b(trader|trading|odds|pricing|sportsbook|bookmaker|liability)\b/i,
-    keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director)\b/i },
-
-  { id: "fin", label: "Finance",
-    rx: /\b(cfo|finance|financial|account|accounts|accounting|accountant|payroll|treasury|tax|vat|audit|auditor|controller|bookkeep\w*|fp&a|billing|invoic\w*|reconciliation\w*|collections|wealth|actuar)\b/i,
-    // "Customer Account Advisor" and "Key Account Manager" are service and
-    // commercial roles, not finance — let them fall through
-    keep: /\b(customer account|key account|account manager|account executive|account advisor|account director)\b/i },
-
   { id: "it",  label: "IT & Engineering",
     rx: /\b(developer|engineer|engineering|devops|devsecops|sre|qa|tester|testing|architect|programmer|coder|frontend|front-end|backend|back-end|fullstack|full-stack|java|javascript|python|\.net|c\+\+|php|ruby|golang|react|node|angular|vue|sysadmin|system administrator|systems administrator|infrastructure|cto|cio|technolog(y|ies|ical)|technical|software|\bit\b|platform|cloud|database|dba|\bapi\b|sdk|mobile|android|ios|cyber|penetration\w*|scrum|automation|data|analytics|intelligence|\bbi\b|machine learning|artificial intelligence|integration|linux|network)\b/i },
-
-  { id: "com", label: "Commercial & Marketing",
-    rx: /\b(cco|cmo|marketing|crm|social|seo|aso|ppc|programmatic|affiliate|brand|content|copywriter\w*|designer|creative|acquisition|retention|vip|loyalty|country manager|sales|business development|partnership|commercial|growth|media|community|engagement|sponsor|vertrieb)\b/i },
-
-  { id: "ops", label: "Operational & Business Functions",
-    rx: /\b(people|hr|human resources|talent|recruit\w*|ops|operation|operations|project|programme|program manager|product|agent|agents|support|service desk|service manager|service advisor|customer|kundeservice|kundenservice|kundeservicemedarbejder|klantenservice|player|admin|assistant|coordinator|payments|kyc|aml|fraud|risk|compliance|legal|counsel|due diligence|procurement|vendor|facilit\w*|office|backoffice|security)\b/i },
-
-  { id: "oth", label: "Everything else", other: true },
 ];
 
 // the single group a title belongs to
@@ -306,17 +323,62 @@ function groupOf(title){
   }
   return "oth";
 }
-let excluded = (() => {
-  // First visit hides floor-level roles: group career sites (Caesars, Entain,
-  // Tipico) carry thousands, and this tool is aimed at senior people. Once the
-  // user changes anything their own choice is stored and respected.
+// A single flag replaced a row of hide-chips. The chips asked the user to
+// think in categories they had not arrived with, and a title-based rule is
+// always one step behind the next job board's vocabulary. This asks one
+// question instead, and answers it mostly by COMPANY — which is finite and
+// knowable — rather than by title, which is not.
+let hideNonDigital = (() => {
   try {
-    const saved = localStorage.getItem("rr_excluded");
-    return saved === null ? new Set(["ret"]) : new Set(JSON.parse(saved));
-  } catch(e){ return new Set(["ret"]); }
+    const v = localStorage.getItem("rr_hidenondigital");
+    return v === null ? true : v === "1";       // on by default, like leadership
+  } catch(e){ return true; }
 })();
-function saveExcluded(){
-  try { localStorage.setItem("rr_excluded", JSON.stringify([...excluded])); } catch(e){}
+function saveHideNonDigital(){
+  try { localStorage.setItem("rr_hidenondigital", hideNonDigital ? "1" : "0"); } catch(e){}
+}
+
+// Which companies count as land-based now comes from the feed itself: the
+// collector stamps land_based onto roles whose company is marked that way in
+// companies.csv. That is a HUMAN judgement about direction of travel, and it
+// beats computing a share from today's roles — Entain read as 72% land-based
+// on role mix, but they are a digital business still winding down an estate,
+// while Caesars will never invert. Same number, opposite meaning.
+// The computed set is kept only as a fallback for a feed with no flag yet.
+let NON_DIGITAL_COS = new Set();
+const FLOOR = EXCLUDE_GROUPS.find(g => g.id === "ret");
+function isFloorTitle(t){
+  return !!(FLOOR && FLOOR.rx.test(t || "") && !(FLOOR.keep && FLOOR.keep.test(t || "")));
+}
+// An allowlist that OVERRIDES the company rule. Entain are the second largest
+// digital operator in the world; excluding them wholesale threw away Head of
+// Design, UKI AI Director, Head of StratOps and Data Science Manager along with
+// the greyhound-stadia jobs. About thirty terms describing DIGITAL WORK does
+// what sixty terms describing land-based work could not: it says what to keep
+// rather than trying to enumerate what to drop.
+const DIGITAL_OVERRIDE = /\b(digital|online|igaming|e-?commerce|product|platform|software|engineer\w*|developer|devops|data|analytic\w*|scientist|science|machine learning|\bai\b|cloud|cyber|architect|crm|affiliate|acquisition|retention|lifecycle|vip|brand|marketing|social|content|seo|ppc|strateg\w*|commercial|growth|insight|design\w*|\bux\b|\bui\b|sportsbook|odds|trading|quant|payments|programme|project manager|transformation)\b/i;
+
+// ...but the override needs a veto, or a property group's own vocabulary walks
+// straight through it: "Regional VP of Hospitality Commercial Strategy" and
+// "Director of Property Analytics" are land-based jobs wearing digital words.
+// These terms are unambiguous — no online role is about hotel housekeeping.
+const LAND_CONTEXT = /\b(propert\w*|hospitality|hotel|resort|casino marketing|player development|f\s*&\s*b|food and beverage|banquet|venue|stadia|racecourse|racetrack|on[- ]site|floor operations|construction|facilit\w*|housekeep\w*|guest experience|gaming operations)\b/i;
+
+function computeNonDigitalCos(){
+  const flagged = new Set();
+  JOBS.forEach(j => { if(j.lb && j.c) flagged.add(j.c); });
+  if(flagged.size){ NON_DIGITAL_COS = flagged; return; }
+  // fallback: an older feed with no flag, so infer it from the role mix
+  const by = {};
+  JOBS.forEach(j => {
+    const c = j.c || "";
+    if(!c) return;
+    by[c] = by[c] || { n: 0, r: 0 };
+    by[c].n++;
+    if(isFloorTitle(j.t)) by[c].r++;
+  });
+  NON_DIGITAL_COS = new Set(
+    Object.entries(by).filter(([, v]) => v.n >= 8 && v.r / v.n > 0.5).map(([c]) => c));
 }
 
 // these list roles on behalf of unnamed clients, so say so rather than letting
@@ -702,7 +764,10 @@ async function load(){
       const r = await fetch(url, {cache:"no-store"});
       if(!r.ok) continue;
       const d = await r.json();
-      JOBS = (d.jobs||[]).map(j=>({c:j.company,t:j.title,l:j.location,u:j.url,p:j.posted_at}));
+      // lb = land-based company, fs = when Role Radar first saw the role.
+      // Both come straight from companies.csv via the collector.
+      JOBS = (d.jobs||[]).map(j=>({c:j.company,t:j.title,l:j.location,u:j.url,
+                                   p:j.posted_at,lb:j.land_based,fs:j.first_seen}));
       updated = d.generated_at ? Date.parse(d.generated_at) : null;
       usingSample = false;
       return;
@@ -717,8 +782,21 @@ function render(){
   let out = JOBS;
   if(leadOnly) out = out.filter(j => SENIORITY.test(j.t||""));
   if(selectedLocs.length) out = out.filter(j => bucketsOf(j.l).some(b => selectedLocs.includes(b)));
-  if(excluded.size){
-    out = out.filter(j => !excluded.has(groupOf(j.t)));
+  if(showOnly.size){
+    out = out.filter(j =>
+      [...showOnly].some(id => matchesShow(j, id)));
+  }
+  if(hideNonDigital){
+    // both halves matter: the company rule catches the property groups whose
+    // "Director of Surveillance" slips past any title test, and the title rule
+    // still catches floor roles at companies that are mostly digital
+    // order matters. A floor-level title is dropped whatever the company, so a
+    // "Casino Host, Marketing" cannot buy its way back in. Only then does the
+    // company rule apply, and a clearly digital title overrides it.
+    out = out.filter(j =>
+      !isFloorTitle(j.t) &&
+      (!NON_DIGITAL_COS.has(j.c) ||
+       (DIGITAL_OVERRIDE.test(j.t || "") && !LAND_CONTEXT.test(j.t || ""))));
   }
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
@@ -753,11 +831,13 @@ function render(){
                    || (a.t||"").localeCompare(b.t||""));
   }
 
-  const anyFilter = q || leadOnly || selectedLocs.length || excluded.size;
+  const anyFilter = q || leadOnly || selectedLocs.length || hideNonDigital || showOnly.size;
   document.getElementById("count").textContent =
     anyFilter ? out.length.toLocaleString()+" of "+JOBS.length.toLocaleString()+" roles match"
               : JOBS.length.toLocaleString()+" roles";
-  document.getElementById("clear").style.display = anyFilter ? "inline" : "none";
+  const clr = document.getElementById("clear");
+  clr.disabled = !anyFilter;
+  clr.style.opacity = anyFilter ? "1" : ".45";
 
   const list = document.getElementById("list");
   if(!out.length){
@@ -823,16 +903,66 @@ function pager(cur, pages, total){
     </div>`;
 }
 
-function buildExcludes(){
-  const el = document.getElementById("excl");
-  el.innerHTML = EXCLUDE_GROUPS.map(g =>
-    `<label class="chip"><input type="checkbox" value="${g.id}"${excluded.has(g.id)?" checked":""} />
-       <span>${g.label}</span></label>`).join("");
+// Show-only is the inverse of the old hide-chips and reuses the same groups:
+// they were always definitions of KINDS OF WORK, and only ever pressed into
+// service as exclusions. Empty selection means no restriction.
+let showOnly = (() => {
+  try { return new Set(JSON.parse(localStorage.getItem("rr_showonly") || "[]")); }
+  catch(e){ return new Set(); }
+})();
+function saveShowOnly(){
+  try { localStorage.setItem("rr_showonly", JSON.stringify([...showOnly])); } catch(e){}
+}
+// Five options, chosen rather than enumerated. Freshness is what brings a
+// returning visitor back, so three of the five are about time.
+const SHOW_OPTS = [
+  { id: "__agency", label: "Agencies" },
+  { id: "it",       label: "IT &amp; Engineering" },
+  { id: "__added",  label: "Recently added to Role Radar" },
+  { id: "__p48",    label: "Posted in the last 48 hours" },
+  { id: "__p7",     label: "Posted in the last 7 days" },
+];
+const DAY = 24*3600*1000;
+function ageOf(v){                     // ms since a date string, or null
+  if(!v) return null;
+  const t = Date.parse(v);
+  return isNaN(t) ? null : Date.now() - t;
+}
+function matchesShow(j, id){
+  if(id === "__agency") return AGENCIES.has(j.c);
+  if(id === "__added"){ const a = ageOf(j.fs); return a !== null && a <= 7*DAY; }
+  if(id === "__p48"){   const a = ageOf(j.p);  return a !== null && a <= 2*DAY; }
+  if(id === "__p7"){    const a = ageOf(j.p);  return a !== null && a <= 7*DAY; }
+  return groupOf(j.t) === id;
+}
+function buildShowOnly(){
+  const el = document.getElementById("showonly");
+  if(!el) return;
+  // "Recently added" is withheld until a run has stamped first_seen, rather
+  // than offered as an option that could only return nothing
+  const hasFS = JOBS.some(j => j.fs);
+  el.innerHTML = SHOW_OPTS.filter(o => o.id !== "__added" || hasFS).map(o =>
+    `<label class="chip"><input type="checkbox" value="${o.id}"${showOnly.has(o.id)?" checked":""} />
+       <span>${o.label}</span></label>`).join("");
   el.querySelectorAll("input").forEach(cb => {
     cb.addEventListener("change", () => {
-      cb.checked ? excluded.add(cb.value) : excluded.delete(cb.value);
-      saveExcluded(); page = 1; render();
+      cb.checked ? showOnly.add(cb.value) : showOnly.delete(cb.value);
+      saveShowOnly(); page = 1; render();
     });
+  });
+}
+
+function buildExcludes(){
+  const el = document.getElementById("excl");
+  // no explanatory note: it pushed the control onto a second line on mobile,
+  // and the label already says what it does
+  el.innerHTML =
+    `<label class="chip"><input type="checkbox" id="nondig"${hideNonDigital?" checked":""} />
+       <span>Hide non-digital roles</span></label>`;
+  const cb = el.querySelector("#nondig");
+  cb.addEventListener("change", () => {
+    hideNonDigital = cb.checked;
+    saveHideNonDigital(); page = 1; render();
   });
 }
 
@@ -908,10 +1038,20 @@ document.getElementById("clear").addEventListener("click", () => {
   document.getElementById("q").value=""; document.getElementById("lead").checked=false;
   document.getElementById("sort").value="new";
   selectedLocs = []; saveLocs(); drawLocations(); updateLocLabel();
-  excluded.clear(); saveExcluded(); buildExcludes(); render();
+  hideNonDigital = false; saveHideNonDigital(); buildExcludes();
+  showOnly.clear(); saveShowOnly(); buildShowOnly(); render();
 });
 
-load().then(()=>{ buildLocations(); buildExcludes(); stats(); render(); });
+document.getElementById("otherbtn").addEventListener("click", (e) => {
+  e.stopPropagation();
+  const p = document.getElementById("otherpanel");
+  const open = p.hasAttribute("hidden");
+  open ? p.removeAttribute("hidden") : p.setAttribute("hidden","");
+  e.currentTarget.setAttribute("aria-expanded", open ? "true" : "false");
+});
+
+load().then(()=>{ computeNonDigitalCos(); buildLocations(); buildExcludes();
+                  buildShowOnly(); stats(); render(); });
 </script>
 
 <script>
