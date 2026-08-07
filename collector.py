@@ -1870,10 +1870,31 @@ def _sfcsb_date(txt):
 
 
 def fetch_breezy(token):
-    """Breezy HR public board: https://<token>.breezy.hr/json"""
-    d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
+    """Breezy HR public board: https://<token>.breezy.hr/json
+
+    NOTE the slug is the account name, not the company name — Betclic Group are
+    "betclic-group", with the hyphen. An earlier probe guessed "betclic" and
+    found nothing, which is why they sat unresolved for weeks."""
+    try:
+        r = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      breezy {token}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      breezy {token}: HTTP {r.status_code}")
+        return []
+    try:
+        d = r.json()
+    except Exception:
+        print(f"      breezy {token}: 200 but not JSON")
+        return []
+    if not isinstance(d, list):
+        print(f"      breezy {token}: unexpected payload {type(d).__name__}")
+        return []
     out = []
     for j in d if isinstance(d, list) else []:
+        if not isinstance(j, dict):
+            continue
         loc = j.get("location") or {}
         if isinstance(loc, dict):
             country = loc.get("country") or {}
@@ -2966,9 +2987,6 @@ CUSTOM_BOARDS = {
                          listing=["/jobs/"]),
     "Betika":       dict(base="https://betika.seamlesshiring.com", marker="/job",
                          listing=["/", "/jobs", "/careers", "/h"]),
-    # listing is client-rendered; the sitemap rung is what should catch /job/{id}
-    "PawaTech":     dict(base="https://careers.pawatech.com", marker="/job/",
-                         listing=["/", "/job/", "/jobs/", "/careers"]),
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="/JobApplications/",
                          listing=["/JobApplications/Apply/", "/"]),
     "Exacta Solutions": dict(base="https://www.exactasolutions.com", marker="/vacancies/",
@@ -2982,8 +3000,6 @@ CUSTOM_BOARDS = {
     # (a US company) — their real board is on their own site.
     "Blip.pt":      dict(base="https://www.blip.pt", marker="/jobs/",
                          listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3"]),
-    "Betclic (Banijay Gaming)": dict(base="https://betclicgroup.com", marker="/job",
-                         listing=["/en/people", "/en/people#jobs", "/en/jobs", "/jobs"]),
     # BHA's official industry board. Mostly yard and raceday work, which the
     # collection-time racing filter strips — what's left is racecourse
     # management, commercial and marketing.
@@ -3023,8 +3039,6 @@ CUSTOM_BOARDS = {
                          listing=["/careers"]),
     "SoftConstruct": dict(base="https://peopleforce.softconstruct.com", marker="/careers/v/",
                          listing=["/careers/v/", "/careers/", "/careers/v/?page=2"]),
-    "UK Tote Group": dict(base="https://careers.uktotegroup.com", marker="/job/",
-                         listing=["/", "/jobs", "/vacancies", "/search"]),
     "Greentube (Novomatic)": dict(base="https://careers.greentube.com", marker="/job",
                          listing=["/", "/jobs/", "/vacancies/", "/en/jobs/"]),
     # careers.gamesglobal.com is the listing; careers-gamesglobal.icims.com is
@@ -3045,8 +3059,6 @@ CUSTOM_BOARDS = {
                          listing=["/vacancies/", "/vacancies"]),
     "Inspired Entertainment": dict(base="https://careers.inseinc.com", marker="/job/",
                          listing=["/", "/jobs", "/search"]),
-    "Amusnet":      dict(base="https://jobs.amusnet.com", marker="/job",
-                         listing=["/Interactive/", "/Interactive/job/", "/"]),
     "Nolimit City®": dict(base="https://career.nolimitcity.com", marker="/career/",
                          listing=["/", "/career/"]),
     "Push Gaming":  dict(base="https://www.pushgaming.com", marker="/careers/",
@@ -3181,7 +3193,6 @@ def scrape_custom(name):
 AGENCY_BOARDS = {
     "Fortuna Entertainment Group": scrape_fortuna,
     **{n: (lambda n=n: scrape_custom(n)) for n in CUSTOM_BOARDS},
-    "Betfred": scrape_betfred,
     "Tabcorp": scrape_tabcorp,
     "Sportsbet": scrape_sportsbet,
     "Pentasia": scrape_pentasia,

@@ -1,5 +1,5 @@
 company,category,returning,roles,status,ats_hint,ats_token,notes
-Betclic (Banijay Gaming),Operator - France,no,0,breezy board found but empty,detect,skip,"real board at betclicgroup.com/en/people, handled by scrape_custom (the Breezy match was empty)"
+Betclic (Banijay Gaming),Operator - France,no,0,breezy board found but empty,detect,breezy:betclic-group,"Breezy HR at betclic-group.breezy.hr, embedded in the ""Our job offers"" section of betclicgroup.com/en/people. An earlier Breezy probe failed because it guessed the slug ""betclic"" - the real one is betclic-group. 1,600 employees, 700 in tech"
 Betfair International,Operator - Tier 1,no,0,needs Workday URL,workday (likely),skip,roles come through the Flutter International Workday tenant
 Paddy Power,Operator - Tier 1,no,0,needs Workday URL,workday (likely),skip,roles come through the Flutter UK & Ireland Workday tenant
 PokerStars,Operator - Tier 1,no,0,needs Workday URL,workday (likely),skip,roles come through the Flutter International Workday tenant
