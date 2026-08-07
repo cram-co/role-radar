@@ -468,6 +468,49 @@ function cleanLoc(loc){
   return [...new Set(parts)].join(", ");
 }
 
+// A bucket is only allowed to appear if it names somewhere we actually
+// recognise. Every new platform brings a new address format — Workday site
+// codes, Avature street addresses, SuccessFactors postcodes — and each one used
+// to invent countries: Cwmbran, Ballards Lane, "EMEA -". Rather than chase them
+// one at a time, anything unresolved joins the roles that never had a location:
+// the user experience is the same either way, you open the posting to find out.
+const ALL_COUNTRIES = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia",
+"Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium",
+"Belize","Benin","Bermuda","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","Brunei","Bulgaria",
+"Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia",
+"Congo","Costa Rica","Croatia","Cuba","Curacao","Cyprus","Czechia","Denmark","Dominican Republic",
+"Ecuador","Egypt","El Salvador","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon",
+"Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Guatemala","Guernsey","Guinea",
+"Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iraq","Ireland",
+"Isle of Man","Israel","Italy","Ivory Coast","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya",
+"Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Liechtenstein","Lithuania",
+"Luxembourg","Macau","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritius","Mexico",
+"Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nepal",
+"Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Macedonia","Norway","Oman","Pakistan",
+"Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar",
+"Romania","Rwanda","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia",
+"Slovenia","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname",
+"Sweden","Switzerland","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Trinidad & Tobago","Tunisia",
+"Turkey","Turkmenistan","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States",
+"Uruguay","Uzbekistan","Venezuela","Vietnam","Zambia","Zimbabwe"];
+
+let KNOWN_PLACES = null;
+function isKnownPlace(b){
+  if(!KNOWN_PLACES){
+    // NAMES is the shortlist bucket() pattern-matches against — only 63
+    // entries, so checking admission against it swept real countries into the
+    // catch-all: Botswana, Ghana, South Sudan. Admission is checked against
+    // the full list instead. Static, and never needs maintaining.
+    KNOWN_PLACES = new Set(NAMES.concat(ALL_COUNTRIES));
+    for(const v of Object.values(ISO)) KNOWN_PLACES.add(v);
+    for(const v of Object.values(CITY_COUNTRY)) KNOWN_PLACES.add(v);
+    ["Remote","Multiple locations","Inside the listing","European Union",
+     "Latin America","Africa","UAE","United Kingdom","United States",
+     "Canada"].forEach(x => KNOWN_PLACES.add(x));
+  }
+  return KNOWN_PLACES.has(b);
+}
+
 function bucketsOf(loc){
   if(!loc || !/[a-z0-9]/i.test(String(loc))) return ["Inside the listing"];
   const raw = String(loc);
@@ -475,13 +518,15 @@ function bucketsOf(loc){
   if(raw.includes(";")){
     const parts = raw.split(";").map(p => p.trim()).filter(Boolean);
     const set = new Set();
-    for(const p of parts){ const b = bucket(p); if(b) set.add(b); }
+    for(const p of parts){ const b = bucket(p);
+      if(b) set.add(isKnownPlace(b) ? b : "Inside the listing"); }
     // it belongs to every country named, AND reads as multi-site
     if(set.size > 1) set.add("Multiple locations");
     return set.size ? [...set] : [bucket(raw)];
   }
   const b = bucket(raw);
-  return b ? [b] : [];
+  if(!b) return [];
+  return [isKnownPlace(b) ? b : "Inside the listing"];
 }
 
 function bucket(loc){
@@ -518,6 +563,9 @@ function bucket(loc){
   // check state/province before the country map, since PA and MA are both
   // US states and country codes — in a "City, XX" string the state wins
   if(ISO[tail]) return ISO[tail];
+  // "CA Statewide", "IN Statewide" — a US state on its own
+  const swm = /^([a-z]{2})\s+statewide$/i.exec(s.trim());
+  if(swm && US_STATES.has(swm[1].toLowerCase())) return "United States";
   if(parts.length > 1 && US_STATES.has(tail)) return "United States";
   if(parts.length > 1 && CA_PROV.has(tail)) return "Canada";
   if(CITY_COUNTRY[tail]) return CITY_COUNTRY[tail];
