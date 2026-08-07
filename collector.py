@@ -1354,6 +1354,13 @@ def fetch_avature(token):
     return out
 
 
+def _strip_tag_debris(v):
+    """Remove any half-written tag or entity left by a truncated window."""
+    v = re.sub(r"<[^>]*>?", " ", v or "")
+    v = re.sub(r"&#?\w{0,8};?\s*$", "", v)
+    return re.sub(r"\s+", " ", v).strip(" ,;")
+
+
 def _avature_loc(tail):
     """The line under an Avature heading reads "address - country - hours".
     Keep the place, drop the hours, and prefer the country over a street.
@@ -1366,6 +1373,11 @@ def _avature_loc(tail):
     # becomes a real tag afterwards, which is how '<span class="separator"'
     # ended up inside evoke's location strings
     raw = html.unescape(tail)
+    # the window is cut at a fixed length, so it can end mid-tag. An
+    # unterminated "<span class=..." has no closing bracket for the stripper
+    # below to match, and it reached the feed as part of the location:
+    # 'Leeds, UK, </' and '...Metro Manila <span class="separator" aria-hidden'
+    raw = re.sub(r"<[^>]*$", " ", raw)
     # break into lines at block boundaries, then take the first with bullets
     # span is inline and holds the separator bullets — treating it as a line
     # break split "address <span>bullet</span> country" across two lines
@@ -1383,6 +1395,10 @@ def _avature_loc(tail):
     parts = [p.strip() for p in re.split(r"[\u2022\u00b7|\u2013\u2014]|\s{3,}", txt) if p.strip()]
     # drop anything that's just an hours figure like "37.5" or "18- 30"
     parts = [p for p in parts if not re.fullmatch(r"[\d.\s-]+", p)]
+    if not parts:
+        return ""
+    parts = [_strip_tag_debris(p) for p in parts]
+    parts = [p for p in parts if p]
     if not parts:
         return ""
     if len(parts) >= 2:
@@ -1649,6 +1665,47 @@ def _talos_items(d):
     return []
 
 
+def _sfcsb_loc_from_url(url, title):
+    """CSB builds its job URLs as /job/{City}-{Title}-{postcode}/{id}/, so the
+    location is recoverable without another request. Only IGT's board uses the
+    table layout that gives us a location cell; Brightstar, Amusnet and Luckia
+    fall back to link parsing, and this is what saves those from arriving blank.
+
+    Works by locating the slugified title inside the slug: whatever precedes it
+    is the city, whatever follows is a postcode and is dropped."""
+    m = re.search(r"/job/([^/]+)/", url or "")
+    if not m:
+        return ""
+    slug = m.group(1)
+    from urllib.parse import unquote
+    slug = unquote(slug)
+
+    def squash(v):
+        """Strip to letters and digits, keeping each character's original index
+        so a match can be mapped back. Needed because CSB slugifies punctuation
+        inconsistently — a title's "(H/M)" becomes "HM" in the slug."""
+        out, idx = [], []
+        for i, ch in enumerate(v or ""):
+            if ch.isalnum():
+                out.append(ch.lower())
+                idx.append(i)
+        return "".join(out), idx
+
+    ns, ns_idx = squash(slug)
+    nt, _ = squash(title)
+    if not nt or nt not in ns:
+        return ""
+    at = ns.index(nt)
+    if at == 0:
+        return ""                       # title starts the slug, so no city
+    city = slug[:ns_idx[at]]
+    city = re.sub(r"[-_]+", " ", city)
+    city = re.sub(r"\s+", " ", city).strip()
+    if len(city) < 2 or len(city) > 40 or re.fullmatch(r"[\d\s-]+", city):
+        return ""
+    return city
+
+
 def fetch_sfcsb(token):
     """SAP SuccessFactors CAREER SITE BUILDER — the modern front end.
 
@@ -1663,9 +1720,26 @@ def fetch_sfcsb(token):
 
     Token is the host: "jobs.igt.com", optionally with a path prefix for sites
     that use one: "jobs.igt.com|/default"."""
-    host, _, prefix = token.partition("|")
+    host, _, prefixes = token.partition("|")
     base = f"https://{host.strip()}" if not host.startswith("http") else host.strip()
-    prefix = prefix.strip().rstrip("/")
+    # a tenant can host several CSB "brands", each its own microsite with its own
+    # search. Amusnet runs /Interactive alongside the default one, and reading
+    # only the first gave 13 of their 28 roles. Comma-separate to read both,
+    # with an empty entry meaning the default (no prefix).
+    parts = [x.strip().rstrip("/") for x in (prefixes or "").split(",")]
+    out_all, seen_all = [], set()
+    for prefix in parts:
+        for j in _sfcsb_one(base, prefix, host):
+            if j["url"] in seen_all:
+                continue
+            seen_all.add(j["url"])
+            out_all.append(j)
+    if len(parts) > 1:
+        print(f"      sfcsb {host}: {len(out_all)} roles across {len(parts)} brands")
+    return out_all
+
+
+def _sfcsb_one(base, prefix, host):
 
     # a table row: the job link, then the location cell, then the date cell
     row_rx = re.compile(
@@ -1723,9 +1797,10 @@ def fetch_sfcsb(token):
             if u in seen:
                 continue
             seen.add(u)
+            loc = re.sub(r"\s*\+\d+ more.*$", "", clean(loc_html)).strip()
             out.append({
                 "title": title,
-                "location": re.sub(r"\s*\+\d+ more.*$", "", clean(loc_html)).strip(),
+                "location": loc or _sfcsb_loc_from_url(u, title),
                 "department": "",
                 "url": u,
                 "posted_at": _sfcsb_date(clean(date_html)),
@@ -1745,11 +1820,14 @@ def fetch_sfcsb(token):
                 if u in seen:
                     continue
                 seen.add(u)
-                out.append({"title": title, "location": "", "department": "",
-                            "url": u, "posted_at": None})
+                out.append({"title": title,
+                            "location": _sfcsb_loc_from_url(u, title),
+                            "department": "", "url": u, "posted_at": None})
                 page_new += 1
             if page_new and page == 0:
-                print(f"      sfcsb {host}: table columns not matched, using link parse")
+                got_loc = sum(1 for j in out if j["location"])
+                print(f"      sfcsb {host}: table columns not matched, using link "
+                      f"parse ({got_loc}/{len(out)} locations recovered from urls)")
 
         if not page_new:
             if page == 0:
@@ -2235,12 +2313,24 @@ def _links_first_element(html_text, base, path_marker):
         # the remaining blocks are location, department and work type in some
         # order; the one naming a place is whichever isn't an employment type
         loc = next((b for b in rest if not _EMPLOYMENT_TYPE.fullmatch(b)), "")
+        # some boards run the three together in a single element rather than
+        # as siblings — "Varna, Bulgaria Finance Full-time hybrid" invented
+        # five different Slovakias. Trim the department and work type back off.
+        loc = _LOC_TRAILING.sub("", loc).strip(" ,;-")
         url = href if href.startswith("http") else base.rstrip("/") + href
         if url in seen:
             continue
         seen.add(url)
         out.append((url, title, loc))
     return out
+
+
+_LOC_TRAILING = re.compile(
+    r"\s+(Analytics|Commercial|Compliance|Customer(?:\s+\w+)?|Delivery|Design|"
+    r"Engineering|Finance|HR|Legal|Marketing|Operations|People|"
+    r"Product(?:\s+Management)?|Risk|Sales|Support|Tech(?:nology)?|Trading)?"
+    r"\s*(Full[- ]?time|Part[- ]?time|Contract|Permanent|Temporary|"
+    r"Intern(?:ship)?|Freelance)?\s*(remote|hybrid|on[- ]?site)?\s*$", re.I)
 
 
 _EMPLOYMENT_TYPE = re.compile(
