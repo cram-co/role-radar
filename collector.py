@@ -2170,20 +2170,36 @@ def fetch_csod(token):
         print(f"      csod {tenant}: 200 but not JSON")
         return []
 
-    items = d
-    if isinstance(d, dict):
-        for k in ("data", "jobs", "results", "items", "requisitions", "jobList"):
-            v = d.get(k)
-            if isinstance(v, list) and v:
-                items = v
-                break
-            if isinstance(v, dict):
-                for k2 in ("jobs", "items", "results"):
-                    if isinstance(v.get(k2), list):
-                        items = v[k2]
-                        break
+    # Their reply is {"status":..., "timestamp":..., "data":{...}} — the list is
+    # nested inside data, so walk for the first list of dicts that looks like
+    # postings rather than guessing at the key name.
+    def _find_jobs(node, depth=0):
+        if depth > 4:
+            return None
+        if isinstance(node, list):
+            if node and isinstance(node[0], dict) and any(
+                    k in node[0] for k in ("title", "jobTitle", "name",
+                                           "requisitionTitle", "requisitionId")):
+                return node
+            return None
+        if isinstance(node, dict):
+            for k in ("data", "jobs", "results", "items", "requisitions",
+                      "jobList", "searchResults"):
+                found = _find_jobs(node.get(k), depth + 1)
+                if found:
+                    return found
+            for v in node.values():
+                found = _find_jobs(v, depth + 1)
+                if found:
+                    return found
+        return None
+
+    items = _find_jobs(d) or d
     if not isinstance(items, list) or not items:
         shape = f"dict keys {list(d)[:10]}" if isinstance(d, dict) else type(d).__name__
+        inner = d.get("data") if isinstance(d, dict) else None
+        if isinstance(inner, dict):
+            shape += f" | data keys {list(inner)[:12]}"
         print(f"      csod {tenant}: 200 but nothing extracted — {shape}")
         return []
 
@@ -3637,15 +3653,19 @@ CUSTOM_BOARDS = {
     # Server-rendered table: title in the anchor, location in span.location.
     # NOTE mostly brick-and-mortar venue roles, which the Shops/Casino Floor
     # exclusion hides — the value is the occasional corporate role.
+    # NOTE their site answers HTTP 202 to every request — a bot-protection
+    # challenge, not a bad path. Left configured in case it lifts, but it is
+    # genuinely blocked rather than mis-pointed. Mostly venue roles anyway.
     "The Star Entertainment Group": dict(base="https://careers.star.com.au",
                          marker="/job/", listing=["/en/search", "/en", "/"],
                          loc_class="location"),
     # PARKED WRONGLY as "aptrack + Employment Hero, unsupported". Employment
     # Hero needs no fetcher at all — Newfield has been read off the same path
     # for weeks. Their aptrack side was never the listing.
+    # Employment Hero org slugs carry a generated suffix — the real one is in
+    # their own JSON-LD: .../organisations/pointsbet-australia-pty-limited-vo6ll/
     "PointsBet":    dict(base="https://employmenthero.com", marker="/jobs/position/",
-                         listing=["/jobs/organisations/pointsbet/",
-                                  "/jobs/organisations/pointsbet-australia/"],
+                         listing=["/jobs/organisations/pointsbet-australia-pty-limited-vo6ll/"],
                          slug_titles=True),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
