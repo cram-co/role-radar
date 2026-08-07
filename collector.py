@@ -1649,6 +1649,148 @@ def _talos_items(d):
     return []
 
 
+def fetch_sfcsb(token):
+    """SAP SuccessFactors CAREER SITE BUILDER — the modern front end.
+
+    Not to be confused with the legacy career?company= pages, whose DWR backend
+    refuses us (SAP disabled __System.generateId, so we can't get a registered
+    scriptSessionId). CSB is a different product entirely: server-rendered,
+    marked meta-robots:index because it exists to be crawled by Google, and
+    laid out as a plain HTML table.
+
+    Listing is /search/location paginated by startrow in steps of 25. Each row
+    carries the job link, its location and its posting date.
+
+    Token is the host: "jobs.igt.com", optionally with a path prefix for sites
+    that use one: "jobs.igt.com|/default"."""
+    host, _, prefix = token.partition("|")
+    base = f"https://{host.strip()}" if not host.startswith("http") else host.strip()
+    prefix = prefix.strip().rstrip("/")
+
+    # a table row: the job link, then the location cell, then the date cell
+    row_rx = re.compile(
+        r'href="([^"]*?/job/[^"]*?)"[^>]*>(.*?)</a>.*?'
+        r'<td[^>]*class="[^"]*colLocation[^"]*"[^>]*>(.*?)</td>.*?'
+        r'<td[^>]*class="[^"]*colDate[^"]*"[^>]*>(.*?)</td>',
+        re.S | re.I)
+    link_rx = re.compile(r'href="([^"]*?/job/[^"?#]+)"[^>]*>(.*?)</a>', re.S | re.I)
+
+    def clean(v):
+        v = re.sub(r"<[^>]+>", " ", v or "")
+        return re.sub(r"\s+", " ", html.unescape(v)).strip()
+
+    # IGT lists at /search/location, Luckia at /search/ — try the first that works
+    listing = "/search/location"
+    try:
+        probe = _request("GET", f"{base}{prefix}/search/location?q=", headers=AGENCY_UA)
+        if probe.status_code != 200 or "/job/" not in probe.text:
+            listing = "/search"
+    except Exception:
+        listing = "/search"
+
+    out, seen, total = [], set(), None
+    for page in range(40):                    # 25 a page, so up to 1,000 roles
+        url = (f"{base}{prefix}{listing}?q=&sortColumn=referencedate"
+               f"&sortDirection=desc" + (f"&startrow={page * 25}" if page else ""))
+        try:
+            r = _request("GET", url, headers=AGENCY_UA)
+        except Exception as e:
+            print(f"      sfcsb {host}: {type(e).__name__}")
+            break
+        if r.status_code != 200:
+            print(f"      sfcsb {host}: HTTP {r.status_code} at row {page * 25}")
+            break
+        body = _STYLE_SCRIPT.sub(" ", r.text)
+
+        if total is None:
+            # IGT prints "Results 1 - 25 of <b>133</b>", Brightstar
+            # "Showing 1 to 25 of 113 Jobs" — allow tags between "of" and the number
+            mt = re.search(r"\bof\s*(?:<[^>]{0,40}>\s*)*([\d,]{1,7})\b", body, re.I)
+            if mt:
+                total = int(mt.group(1).replace(",", ""))
+                print(f"      sfcsb {host}: board reports {total} jobs")
+
+        found = row_rx.findall(body)
+        page_new = 0
+        for href, title_html, loc_html, date_html in found:
+            title = clean(title_html)
+            if not title or len(title) < 3 or len(title) > 140:
+                continue
+            if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+                continue
+            u = href if href.startswith("http") else base + href
+            u = u.split("?")[0]
+            if u in seen:
+                continue
+            seen.add(u)
+            out.append({
+                "title": title,
+                "location": re.sub(r"\s*\+\d+ more.*$", "", clean(loc_html)).strip(),
+                "department": "",
+                "url": u,
+                "posted_at": _sfcsb_date(clean(date_html)),
+            })
+            page_new += 1
+
+        if not page_new:
+            # the row pattern depends on CSB's default column classes; fall back
+            # to plain link parsing so a themed site still returns something
+            for href, title_html in link_rx.findall(body):
+                title = clean(title_html)
+                if not title or len(title) < 3 or len(title) > 140:
+                    continue
+                if _MARKUP_JUNK.search(title) or _PAGE_TITLE.match(title):
+                    continue
+                u = (href if href.startswith("http") else base + href).split("?")[0]
+                if u in seen:
+                    continue
+                seen.add(u)
+                out.append({"title": title, "location": "", "department": "",
+                            "url": u, "posted_at": None})
+                page_new += 1
+            if page_new and page == 0:
+                print(f"      sfcsb {host}: table columns not matched, using link parse")
+
+        if not page_new:
+            if page == 0:
+                print(f"      sfcsb {host}: 200 ({len(body)} bytes) but no /job/ links")
+                print("        " + _href_shapes(body))
+            break
+        if total and len(out) >= total:
+            break
+        time.sleep(REQUEST_DELAY)
+
+    print(f"      sfcsb {host}: {len(out)} roles")
+    return out
+
+
+_SFCSB_MONTHS = {}
+for _i, _names in enumerate([
+        ("jan", "ene", "gen"), ("feb", "fev"), ("mar", "mär"), ("apr", "abr"),
+        ("may", "mai", "mag"), ("jun", "giu"), ("jul", "lug"), ("aug", "ago"),
+        ("sep", "set"), ("oct", "okt", "ott", "out"), ("nov",), ("dec", "dic", "dez")], 1):
+    for _n in _names:
+        _SFCSB_MONTHS[_n] = _i
+
+
+def _sfcsb_date(txt):
+    """CSB localises its dates: "Aug 7, 2026" in English, "7 ago 2026" in
+    Spanish, and so on. Accept the month either side of the day."""
+    t = (txt or "").strip()
+    m = re.search(r"([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s*(\d{4})", t)   # Aug 7, 2026
+    if m:
+        mon, day, year = m.group(1), m.group(2), m.group(3)
+    else:
+        m = re.search(r"(\d{1,2})\s+([A-Za-z]{3})[a-z]*\.?\s+(\d{4})", t)  # 7 ago 2026
+        if not m:
+            return None
+        day, mon, year = m.group(1), m.group(2), m.group(3)
+    num = _SFCSB_MONTHS.get(mon.lower())
+    if not num:
+        return None
+    return f"{year}-{num:02d}-{int(day):02d}T00:00:00+00:00"
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json"""
     d = session.get(f"https://{token}.breezy.hr/json", timeout=TIMEOUT).json()
@@ -1942,6 +2084,7 @@ FETCHERS = {
     "rippling": fetch_rippling,
     "oracle": fetch_oracle,
     "successfactors": fetch_successfactors,
+    "sfcsb": fetch_sfcsb,
     "breezy": fetch_breezy,
     "lever": fetch_lever,
     "ashby": fetch_ashby,

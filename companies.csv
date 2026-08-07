@@ -8,7 +8,7 @@ PokerStars,Operator - Tier 1,no,0,needs Workday URL,workday (likely),skip,roles 
 1XBET,Operator,no,0,no board found,detect,skip,No public ATS found - always hiring but no discoverable careers board. Keep the row in case one appears
 Admiral,Operator - Austria,no,0,no board found,detect,skip,PARKED [ATS: onlyfy] - admiral-technologies.at/career/positions applies via admiral.onlyfy.jobs. Platform not supported
 AGS,Supplier - Content,no,0,no board found,detect,jobvite:agscareer,Jobvite (Play AGS); a Betterteam board also exists but Jobvite looks primary
-Amusnet,Supplier - Content,no,0,no board found,detect,skip,"PARKED [ATS: SuccessFactors] - career55.sapsf.eu company=amusnet, board careers-amusnet.com ~34 roles. Blocked with OPAP, IGT and Luckia"
+Amusnet,Supplier - Content,no,0,no board found,detect,sfcsb:jobs.amusnet.com|/Interactive,"SuccessFactors CAREER SITE BUILDER at jobs.amusnet.com with an /Interactive PATH PREFIX. ~34 roles across Art & Design, Business Operations, Finance, Legal, Marketing, Product, Risk & Compliance, TechOps. Sofia-based, 1,300+ staff"
 Aristocrat Interactive,Supplier - Content,no,0,no board found,detect,https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite,"Aristocrat group Workday tenant - may include land-based slot roles, watch the mix"
 ARRISE,Operator,no,0,no board found,detect,jobvite:pragmaticplay,"Jobvite at jobs.jobvite.com/pragmaticplay/jobs - the board is titled ""ARRISE Careers"". Separate from the Pragmatic Play row, which is on Teamtailor"
 Bally's Interactive,Operator,no,0,no board found,detect,ultipro:TWI1006TRWH|b9cc79c4-75a2-4800-8508-16504f7a2d90,UKG/UltiPro job board
@@ -23,7 +23,7 @@ Bodog Nation,Operator,no,0,no board found,detect,skip,No careers site found - ke
 Booming Games,Supplier - Content,no,0,no board found,detect,skip,PARKED [ATS: JOIN] - join.com/companies/booming-games. Platform not supported
 Bovada,Operator,no,0,no board found,detect,skip,"No careers site found - keep the row, major operator"
 Bragg Gaming,Supplier,no,0,no board found,detect,https://bragggaming.wd107.myworkdayjobs.com/External,Workday tenant
-Brightstar Lottery,Lottery,no,0,no board found,detect,successfactors:career2.successfactors.eu|IGT,"PARKED [ATS: SuccessFactors] - IGT lottery arm, same host as the IGT row but company=IGT rather than igtanevadaP2. Blocked with OPAP, IGT, Amusnet and Luckia"
+Brightstar Lottery,Lottery,no,0,no board found,detect,sfcsb:careers.brightstarlottery.com,"SuccessFactors CAREER SITE BUILDER at careers.brightstarlottery.com/search/ - ~113 roles. List layout rather than a table, so titles and links come through but locations may not. NOT the legacy DWR route"
 Caesars Digital,Operator - US,no,0,no board found,detect,oracle:edmn.fa.us2.oraclecloud.com|CX_1,"Oracle HCM, ~1,400 roles. Site CX_6001 serves the SAME jobs as CX_1 (checked: job 87573 appears on both) so do NOT add it as a second row. 81% are casino floor and hidden by the retail exclusion, which is correct"
 CODERE,Operator,no,0,no board found,detect,skip,LinkedIn only - no public ATS or careers board. Wont be found
 DAZN,Operator,no,0,no board found,detect,skip,"Parent is a sports streaming business, not gaming. The gaming roles come through the DAZN Bet row"
@@ -52,7 +52,7 @@ highbet,Operator,no,0,no board found,detect,bamboohr:avidlionz,BambooHR at avidl
 Inspired Entertainment,Supplier,no,0,no board found,detect,skip,"careers.inseinc.com, handled by scrape_custom"
 KamaGames,Supplier - Content,no,0,no board found,detect,skip,"No ATS but fully server-rendered - handled by scrape_custom off /careers. Isle of Man based, 7 roles at time of adding"
 LSports,Sports data,no,0,no board found,detect,skip,PARKED [ATS: Comeet] - lsports.eu/careers uses comeet_pos/comeet_cat parameters. Platform not supported
-Luckia,Operator,no,0,no board found,detect,skip,"PARKED [ATS: SuccessFactors] - jobs.luckiagaminggroup.com, /go/Category/ID/ shape, tenant not yet identified. Mostly retail casino with an Online section"
+Luckia,Operator,no,0,no board found,detect,sfcsb:jobs.luckiagaminggroup.com,"SuccessFactors CAREER SITE BUILDER at jobs.luckiagaminggroup.com. Table layout with locations and Spanish dates. Mostly retail casino (croupiers, slot attendants, SAT technicians) - the Shops/Casino Floor exclusion will hide most of it, which is correct"
 MaxBet,Operator,no,0,no board found,detect,skip,PARKED [ATS: Zoho Recruit] - maxbet.zohorecruit.eu. Platform not supported
 Neds,Operator,no,0,no board found,detect,workable:entaingroup,Entain Australia & New Zealand board - CHECK next run for overlap with the Entain row
 Nolimit City®,Supplier - Content,no,0,no board found,detect,skip,"career.nolimitcity.com static pages, handled by scrape_custom - low expectation"
@@ -223,7 +223,7 @@ Growe,Operator,no,0,not probed yet,detect,greenhouse_eu:growe,Greenhouse EU boar
 Careers in Racing,Racing,no,0,not probed yet,detect,skip,British Horseracing Authority official industry board; physical yard roles stripped at collection
 BetVictor (BVGroup),Operator,no,0,not probed yet,detect,hibob:bvgroup,"HiBob. NOTE subdomain is bvgroup, NOT bvg - bvg exists but is empty"
 Legend,Supplier - Content,no,0,not probed yet,detect,skip,Custom Next.js board at l1.com/jobs - scrape_custom with first_element titles
-IGT,Supplier - Content,no,0,not probed yet,detect,successfactors:career2.successfactors.eu|igtanevadaP2,"PARKED [ATS: SuccessFactors] - career2.successfactors.eu company=igtanevadaP2. Fetcher built via DWR but SAP returns ""not authorized"""
+IGT,Supplier - Content,no,0,not probed yet,detect,sfcsb:jobs.igt.com,"SuccessFactors CAREER SITE BUILDER at jobs.igt.com - server-rendered, meta-robots:index, ~133 roles. NOT the legacy DWR career?company= route, which SAP blocks"
 Inplay Matrix,Supplier - Platform,no,0,not probed yet,detect,skip,"inplaymatrix.com/jobs - no roles open at time of adding, keep on the list"
 888,Operator,no,0,not probed yet,detect,wordpress:jobs.888.com|888-position,"WordPress with a 888-position post type. THIRD evoke board - separate from evoke (Avature, William Hill side) and evoke plc (BambooHR, Spectate). Israel, Gibraltar, Ceuta, NY, NJ"
 Newfield,Supplier - Data,no,0,not probed yet,detect,skip,"Employment Hero at employmenthero.com/jobs/organisations/newfield-ltd. Server-rendered, handled by scrape_custom with slug titles. Isle of Man, 140 staff, international racing events and their own IT platform"
