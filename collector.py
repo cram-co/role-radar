@@ -2098,6 +2098,127 @@ def fetch_hurma(token):
     return out
 
 
+def fetch_csod(token):
+    """Cornerstone OnDemand career sites at {tenant}.csod.com.
+
+    The page is a React shell, so nothing is scrapeable — but everything needed
+    is in its HTML anyway. csod.context carries a Bearer token AND the regional
+    API host:
+
+        csod.context = {"corp":"olympic", "endpoints":{"cloud":"https://eu-fra.api.csod.com/"},
+                        "token":"eyJhbGciOi..."}
+
+    The token is anonymous (sub -100) and expires two hours after issue, which
+    is why it must be lifted fresh each run rather than pinned. The listing is
+    one POST to rec-job-search/external/jobs — pageSize 9999, so no paging.
+
+    Token is the tenant, optionally with a career site id: "olympic" or
+    "olympic|1"."""
+    tenant, _, site = token.partition("|")
+    tenant = tenant.strip().replace(".csod.com", "")
+    site = (site.strip() or "1")
+    base = f"https://{tenant}.csod.com"
+    home = f"{base}/ux/ats/careersite/{site}/home?c={tenant}"
+
+    cs = requests.Session()
+    try:
+        r = cs.get(home, headers=AGENCY_UA, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"      csod {tenant}: {type(e).__name__} on the career site")
+        return []
+    if r.status_code != 200:
+        print(f"      csod {tenant}: HTTP {r.status_code} on the career site")
+        return []
+
+    mt = re.search(r"csod\.context\s*=\s*(\{.*?\})\s*;", r.text, re.S)
+    ctx = {}
+    if mt:
+        try:
+            ctx = json.loads(mt.group(1))
+        except Exception:
+            ctx = {}
+    bearer = ctx.get("token") or ""
+    if not bearer:
+        m2 = re.search(r'"token"\s*:\s*"([A-Za-z0-9._-]{40,})"', r.text)
+        bearer = m2.group(1) if m2 else ""
+    if not bearer:
+        print(f"      csod {tenant}: no token found in {len(r.text)} bytes")
+        return []
+    cloud = ((ctx.get("endpoints") or {}).get("cloud") or "https://api.csod.com/").rstrip("/")
+
+    body = {"careerSiteId": site, "careerSitePageId": site, "pageNumber": 1,
+            "pageSize": 9999, "cultureId": 2, "searchText": "",
+            "cultureName": "English (UK)", "states": [], "countryCodes": [],
+            "cities": [], "placeID": "", "radius": None, "postingsWithinDays": None,
+            "customFieldCheckboxKeys": [], "customFieldDropdowns": [],
+            "customFieldRadios": []}
+    try:
+        rp = cs.post(f"{cloud}/rec-job-search/external/jobs", json=body, timeout=TIMEOUT,
+                     headers={**AGENCY_UA, "Accept": "*/*",
+                              "Content-Type": "application/json",
+                              "Authorization": f"Bearer {bearer}",
+                              "Origin": base, "Referer": base + "/"})
+    except Exception as e:
+        print(f"      csod {tenant}: {type(e).__name__} on the search API")
+        return []
+    if rp.status_code != 200:
+        print(f"      csod {tenant}: search API HTTP {rp.status_code}")
+        return []
+    try:
+        d = rp.json()
+    except Exception:
+        print(f"      csod {tenant}: 200 but not JSON")
+        return []
+
+    items = d
+    if isinstance(d, dict):
+        for k in ("data", "jobs", "results", "items", "requisitions", "jobList"):
+            v = d.get(k)
+            if isinstance(v, list) and v:
+                items = v
+                break
+            if isinstance(v, dict):
+                for k2 in ("jobs", "items", "results"):
+                    if isinstance(v.get(k2), list):
+                        items = v[k2]
+                        break
+    if not isinstance(items, list) or not items:
+        shape = f"dict keys {list(d)[:10]}" if isinstance(d, dict) else type(d).__name__
+        print(f"      csod {tenant}: 200 but nothing extracted — {shape}")
+        return []
+
+    out, seen = [], set()
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        title = html.unescape(str(_pick(j, "title", "jobTitle", "name",
+                                        "requisitionTitle") or "")).strip()
+        if not title or _MARKUP_JUNK.search(title):
+            continue
+        jid = str(_pick(j, "requisitionId", "id", "jobId", "reqId") or "").strip()
+        u = _pick(j, "url", "applyUrl")
+        if not u:
+            u = (f"{base}/ux/ats/careersite/{site}/job/{jid}?c={tenant}" if jid
+                 else home)
+        if u in seen:
+            continue
+        seen.add(u)
+        out.append({
+            "title": title,
+            "location": _flatten_loc(_pick(j, "location", "locations", "city",
+                                           "displayLocation", "primaryLocation")),
+            "department": str(_pick(j, "department", "division", "jobCategory") or ""),
+            "url": u,
+            "posted_at": _pick(j, "postedDate", "publishedDate", "createdDate"),
+        })
+    if not out and items and isinstance(items[0], dict):
+        print(f"      csod {tenant}: {len(items)} records but none mapped — "
+              f"keys {sorted(items[0])[:14]}")
+    else:
+        print(f"      csod {tenant}: {len(out)} roles")
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json
 
@@ -2446,6 +2567,7 @@ FETCHERS = {
     "orangehrm": fetch_orangehrm,
     "talos": fetch_talos,
     "hurma": fetch_hurma,
+    "csod": fetch_csod,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
@@ -2747,8 +2869,9 @@ def _jsonld_jobs(url, source):
                 addr = jl.get("address", {})
                 if isinstance(addr, dict):
                     loc = ", ".join(
-                        str(addr.get(k)) for k in ("addressLocality", "addressRegion", "addressCountry")
-                        if isinstance(addr.get(k), str)
+                        str(addr.get(k)).strip() for k in
+                        ("addressLocality", "addressRegion", "addressCountry")
+                        if isinstance(addr.get(k), str) and str(addr.get(k)).strip()
                     )
             if not loc and node.get("jobLocationType") == "TELECOMMUTE":
                 loc = "Remote"
@@ -3039,6 +3162,9 @@ def _vankaizen_api():
     comment markers, and the sitemap route gave titles only. Their 74 roles had
     no location at all until this."""
     base = "https://ats.vankaizen.com/api/public"
+    # /roles answered with 12 while the site lists ~74, so first-wins settled
+    # for a partial endpoint. Try them all and keep the fullest.
+    best = []
     for path in ("/vacancies", "/vacancy", "/jobs", "/roles", "/positions"):
         try:
             r = _request("GET", base + path,
@@ -3089,10 +3215,10 @@ def _vankaizen_api():
                 "url": f"https://vankaizen.com/vacancies/{slug}",
                 "posted_at": j.get("published_at") or j.get("created_at"),
             })
-        if out:
+        if len(out) > len(best):
+            best = out
             print(f"   Van Kaizen: public API {path} -> {len(out)} roles")
-            return out
-    return []
+    return best
 
 
 def scrape_vankaizen():
@@ -3403,7 +3529,7 @@ CUSTOM_BOARDS = {
     # the end of the URL.
     "Bally's Interactive": dict(base="https://careers.ballys.com", marker="/job/",
                          listing=["/career-areas/interactive"],
-                         slug_titles=True, url_loc_index=-4),
+                         slug_titles=True, url_loc_index=-4, listing_only=True),
     # PARKED WRONGLY as "Softgarden, unsupported" — that is only where the
     # APPLY button goes. Their listing is fully server-rendered with data-*
     # attributes carrying title, city and full address.
@@ -3423,6 +3549,17 @@ CUSTOM_BOARDS = {
     "NuxGame":      dict(base="https://careers.nuxgame.com", marker="/v/",
                          listing=["/", "/vacancies", "/careers"],
                          loc_class="tw-text-neutral-dark-80"),
+    # PARKED WRONGLY as "Humi, unsupported". Server-rendered: title in the
+    # anchor, then a sibling div reading "{Location} . {type} . {date}".
+    "NSUS Group":   dict(base="https://nsusgroup.applytojobs.ca", marker="/",
+                         listing=["/", "/jobs", "/careers"],
+                         loc_class="text-xs", loc_split=".",
+                         url_pattern=r"/[a-z-]+/\d{3,}$"),
+    # PARKED WRONGLY as "TalentAppStore, unsupported". Server-rendered:
+    # title in the anchor, location in a sibling div.location. ~32 roles.
+    "SkyCity Entertainment Group": dict(base="https://www.skycitycareers.com",
+                         marker="/jobdetails/", listing=["/search", "/"],
+                         loc_class="location"),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     # also PeopleForce, so the same sibling class should carry the location —
@@ -3532,7 +3669,8 @@ def _links_from_data_attrs(html_text, base, cfg):
     return out
 
 
-def _links_with_loc_class(html_text, base, marker, loc_class):
+def _links_with_loc_class(html_text, base, marker, loc_class,
+                          loc_split=None, url_pattern=None):
     """(url, title, location) where the location sits in a sibling element
     carrying a known class, after the job link.
 
@@ -3560,16 +3698,33 @@ def _links_with_loc_class(html_text, base, marker, loc_class):
         u = href if href.startswith("http") else base.rstrip("/") + href
         if u in seen or u.rstrip("/") == base.rstrip("/"):
             continue
+        # NSUS link their jobs as /{department}/{id}, sharing no path segment,
+        # so a fixed marker cannot isolate them — match the shape instead
+        if url_pattern and not re.search(url_pattern, u):
+            continue
         seen.add(u)
         nxt = marks[i + 1].start() if i + 1 < len(marks) else min(mt.end() + 800, len(body))
         window = body[mt.end():max(nxt, mt.end())][:800]
         lm = loc_rx.search(window)
-        loc = ""
+        loc, posted = "", None
         if lm:
             loc = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", lm.group(1)))).strip()
-            loc = _strip_tag_debris(loc)[:60]
+            loc = _strip_tag_debris(loc)
+            if loc_split:
+                # "North YorK, Ontario, Canada . full-time . May 7, 2026" —
+                # place first, then contract type, then the posting date
+                bits = [b.strip() for b in
+                        re.split(r"\s+" + re.escape(loc_split) + r"\s+", loc) if b.strip()]
+                if bits:
+                    loc = bits[0]
+                    for b in bits[1:]:
+                        d = _sfcsb_date(b)
+                        if d:
+                            posted = d
+                            break
+            loc = loc[:60].strip(" ,;.-")
         out.append({"title": title, "location": loc, "department": "",
-                    "url": u, "posted_at": None})
+                    "url": u, "posted_at": posted})
     return out
 
 
@@ -3580,13 +3735,18 @@ def scrape_custom(name):
     base, marker = cfg["base"], cfg["marker"]
     pages = [base.rstrip("/") + p for p in cfg["listing"]] + cfg.get("extra", [])
 
-    for url in pages:
-        ld = _jsonld_jobs(url, name)
-        if ld:
-            print(f"   {name}: JSON-LD on {url}")
-            return ld
+    if not cfg.get("listing_only"):
+        for url in pages:
+            ld = _jsonld_jobs(url, name)
+            if ld:
+                print(f"   {name}: JSON-LD on {url}")
+                return ld
 
-    urls = _sitemap_job_urls(base, marker)
+    # Bally's sitemap lists all 446 jobs across the group, so the sitemap rung
+    # quietly overrode a listing config that was deliberately scoped to one
+    # career area. Where the config says so, the listing page is the only
+    # source that should be trusted.
+    urls = [] if cfg.get("listing_only") else _sitemap_job_urls(base, marker)
     # Boards whose listing renders client-side expose only a stray link or two
     # in the static HTML, so link parsing "succeeds" with a fraction of the
     # roles and the sitemap fallback never runs. Huddle returned 1 of 6 that
@@ -3649,7 +3809,9 @@ def scrape_custom(name):
                     print(f"   {name}: first-element titles -> {new_n}")
                 continue
             if cfg.get("loc_class"):
-                found = _links_with_loc_class(r.text, base, marker, cfg["loc_class"])
+                found = _links_with_loc_class(r.text, base, marker, cfg["loc_class"],
+                                              loc_split=cfg.get("loc_split"),
+                                              url_pattern=cfg.get("url_pattern"))
                 new_n = 0
                 for j in found:
                     if j["url"] in seen:
