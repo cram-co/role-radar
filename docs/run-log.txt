@@ -1,7 +1,8 @@
-role-radar collector run: 2026-08-07T12:25:08.487820+00:00
+role-radar collector run: 2026-08-07T12:56:30.385922+00:00
 ============================================================
 
 Detecting: Arena Racing Company
+  .. Arena Racing Company took 35s to detect
 Re-probing (was unknown): Derivco
 Re-probing (was unknown): World Series of Poker
 Re-probing (was unknown): BetWarrior
@@ -27,15 +28,15 @@ Bragg Gaming: 2 roles (workday)
       sfcsb careers.brightstarlottery.com: table columns not matched, using link parse (23/25 locations recovered from urls)
       sfcsb careers.brightstarlottery.com: 113 roles
 Brightstar Lottery: 113 roles (sfcsb)
-Caesars Digital: 1429 roles (oracle)  [21s]
+Caesars Digital: 1429 roles (oracle)
       pinpoint careers.dazn.com: 3 matched 'dazn bet', 134 others skipped
 DAZN Bet: 3 roles (pinpoint)
 DigiOutsource: 124 roles (workday)
 Digitain: 89 roles (bamboohr)
-      avature amswh: 200 (39594 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39590 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 85 roles
-evoke: 85 roles (avature)  [36s]
+evoke: 85 roles (avature)  [35s]
 Evoplay: 1 roles (greenhouse)
 FIRST.bet: 17 roles (bamboohr)
 Gaming Innovation Group: 28 roles (pinpoint)
@@ -46,6 +47,8 @@ Inspired Entertainment: 5 roles (wordpress)
       sfcsb jobs.luckiagaminggroup.com: 30 roles
 Luckia: 30 roles (sfcsb)
 Neds: 11 roles (workable)
+      csod olympic: 200 but nothing extracted — dict keys ['status', 'timestamp', 'data']
+OlyBet Group: 0 roles (csod)
 OpenBet: 6 roles (workable)
 Parimatch: 21 roles (teamtailor)
 Playnetic: 8 roles (teamtailor)
@@ -71,7 +74,7 @@ Yggdrasil: 6 roles (smartrecruiters)
       talos 38ed147c: 1 roles
 Betfred: 1 roles (talos)
 KingMakers: 10 roles (workable)
-MERKUR Casino UK: 46 roles (workday)
+MERKUR Casino UK: 48 roles (workday)
 PawaTech: 16 roles (pawatalent)
       orangehrm pinnacle: 17 roles
 Pinnacle: 17 roles (orangehrm)
@@ -96,10 +99,10 @@ ARB Interactive: 6 roles (ashby)
 Arena Racing Company: 16 roles (ashby)
 ATG: 7 roles (ashby)
 B2Spin Limited: 18 roles (ashby)
-bet365: 100 roles (smartrecruiters)
+bet365: 101 roles (smartrecruiters)
 BetMGM: 15 roles (workday)
 betr: 14 roles (lever)
-Betsson Group: 122 roles (greenhouse)
+Betsson Group: 123 roles (greenhouse)
 Betty: 25 roles (greenhouse)
 Bullfinch Recruitment: 38 roles (breezy)
 Caliente: 5 roles (bamboohr)
@@ -111,7 +114,7 @@ Delasport: 0 roles (greenhouse)
 Derivco: 6 roles (bamboohr)
 DraftKings: 95 roles (workday)
 Easygo: 39 roles (greenhouse)
-Entain: 237 roles (smartrecruiters)
+Entain: 241 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
 evoke plc: 1 roles (bamboohr)
 Evolution: 291 roles (smartrecruiters)
@@ -124,7 +127,7 @@ Genius Sports: 58 roles (greenhouse)
 Gentoo Media (ex-GiG): 8 roles (teamtailor)
 GR8_TECH: 24 roles (greenhouse)
 Hard Rock Digital: 59 roles (recruitee)
-iGamingHunt: 11 roles (ashby)
+iGamingHunt: 12 roles (ashby)
 Intralot: 40 roles (recruitee)
 iTalent PLUS: 21 roles (teamtailor)
 Jackpot.com: 5 roles (greenhouse)
@@ -134,11 +137,11 @@ Kambi: 5 roles (greenhouse)
 Kerma Games: 16 roles (greenhouse)
 Kindred Group: 4 roles (ashby)
 LeoVegas Group: 73 roles (ashby)
-Light & Wonder: 127 roles (workday)
+Light & Wonder: 125 roles (workday)
 LionHires: 48 roles (greenhouse)
 LiveScore Group: 14 roles (greenhouse)
 Lottoland: 1 roles (greenhouse)
-Lottomatica: 48 roles (workday)
+Lottomatica: 49 roles (workday)
 LCKY Group (ex-Glitnor): 7 roles (teamtailor)
 Midnite: 16 roles (ashby)
 MiFinity: 14 roles (bamboohr)
@@ -146,12 +149,12 @@ MrQ: 8 roles (teamtailor)
 Novibet: 43 roles (workable)  [21s]
 Novig: 12 roles (ashby)
 Oddin.gg: 20 roles (lever)
-Patrianna: 23 roles (ashby)
+Patrianna: 24 roles (ashby)
 PawaPay: 2 roles (greenhouse)
 PENN Interactive: 34 roles (greenhouse)
 Playson: 25 roles (ashby)
-Playtech: 137 roles (smartrecruiters)
-Polymarket: 65 roles (ashby)
+Playtech: 138 roles (smartrecruiters)
+Polymarket: 66 roles (ashby)
 Pragmatic Play: 4 roles (teamtailor)
 PrizePicks: 19 roles (greenhouse)
 Rhino Entertainment: 3 roles (workable)
@@ -179,7 +182,7 @@ Betway Africa: 47 roles (workday)
       workday myhcm/jumpman: cxs 'jumpman' -> HTTP 422
       workday myhcm/jumpman: cxs 'jumpman' -> HTTP 422
 Jumpman Gaming: 0 roles (workday)
-B2Tech: 14 roles (teamtailor)
+B2Tech: 13 roles (teamtailor)
 Growe: 17 roles (greenhouse_eu)
 BetVictor (BVGroup): 10 roles (hibob)
       sfcsb jobs.igt.com: board reports 137 jobs
@@ -399,89 +402,11 @@ Upgaming: 18 roles (agency board)
    Hub88: listing page -> 4 current roles
    Hub88: link parse -> 4
 Hub88: 4 roles (agency board)
-      sitemap https://careers.ballys.com: 446 job URLs
-      json-ld https://careers.ballys.com/job/arapahoe-park/aurora/colorado/united-states/casinos-resorts/starter-assistant-seasonal/b8d55202-9e10-4380-a891-b3626f140b06: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/table-games-dealer-school/9ae73603-f721-4cc9-bcfe-045c2fc74c3a: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/hard-rock-hotel-casinos/biloxi/mississippi/united-states/casinos-resorts/groundskeeper/fde64903-94e8-4381-be5c-ae657d9c0cc5: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/warwick-rhode-island/warwick/rhode-island/united-states/corporate/accounts-payable-supervisor/d6388603-0868-4d37-a0c4-6977e1ba2997: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/sams-town-hotel-casino/shreveport/louisiana/united-states/casinos-resorts/host-smokey-joes/fc38e703-ce5b-4321-82aa-9e495fdda4a5: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/sports-bar-server/800f8a04-923f-40b2-9fb0-5a0d5ae53e3c: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-shreveport/shreveport/louisiana/united-states/casinos-resorts/server-food-sportsmans/bbe2e704-3496-47af-a3af-c2376890026d: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-shreveport/shreveport/louisiana/united-states/casinos-resorts/it-systems-operator/ab3fed04-8bd7-4a30-af36-ea33bd7e5e9a: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-shreveport/shreveport/louisiana/united-states/casinos-resorts/riverboat-technician/7e710005-99ce-4bed-adb3-52df8f93bf6a: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/bus-person-tip-macau-kitchen/713ace05-804e-4d8f-90be-3cc47c85c5e4: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-new-york/bronx/new-york/united-states/casinos-resorts/line-cook-the-waterfront-nyc-at-ballys-golf-links-at-ferry-point/b87d6606-8b02-449f-916a-1999e620acc5: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/draftkings-at-cq/east-saint-louis/illinois/united-states/casinos-resorts/representative-count-room/5be87106-f499-4ffc-86b2-24dc44f0e42b: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/experienced-table-games-dealer/be98c806-c703-4a14-a9df-c6c3f850217b: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/belle-of-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/cashier-food/dfbe3207-1591-43c5-a7ac-4f1b4513d5c7: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/draftkings-at-cq/east-saint-louis/illinois/united-states/casinos-resorts/cashier-fb-that-chicken-place/5dd19407-4a2b-4ddc-8bd2-820c8bac9662: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/host-person-circulo/641af208-b223-416e-be66-7fe43642b593: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/draftkings-at-cq/east-saint-louis/illinois/united-states/casinos-resorts/supervisor-food-and-beverage/f17a0f0a-ad44-4df4-a8d3-fe24cbe2cd9a: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/technician-hvac-apprentice/1659970a-ef66-429b-b376-7476fd9a6c40: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/supervisor-evs-housekeeping-casino-fohboh/06c8c10a-fb86-46ce-b641-05531bf89eac: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/armed-security-officer-part-time/0951e80a-e634-415c-934c-933bd0ca8769: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/sams-town-hotel-casino/shreveport/louisiana/united-states/casinos-resorts/specialty-line-cook-lead/f6da150b-3cbf-4761-a092-1014e73b722f: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-shreveport/shreveport/louisiana/united-states/casinos-resorts/dual-rate-officershift-manager-security/bae8d20b-1423-418b-97b9-afd489a4700a: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-evansville/evansville/indiana/united-states/casinos-resorts/dual-rate-surveillance-officer/8b69070c-bbd6-4dcf-a91e-f7478bd76640: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/security-officer/226f150c-e931-42b2-956d-e77f8f5ec902: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-black-hawk/black-hawk/colorado/united-states/casinos-resorts/poker-dealer-on-call/cd39ae0c-8cf6-459b-9b61-8ffc29e30252: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-evansville/evansville/indiana/united-states/casinos-resorts/shift-manager-restaurant/14c8f90c-5c51-49df-9bff-7e03f2062d1f: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/hr-generalist/efc56d0d-3cd0-4ca5-9f1e-25e7a1a6e5a6: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/table-games-dealer-casual-weekends/07378e0e-02b8-4b55-9f09-254ee2120940: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-evansville/evansville/indiana/united-states/casinos-resorts/bar-back-casino-main-bar/1c1a390f-d84c-466b-b30b-80eb94d46621: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/server-banquets/0f3c3d10-d1c0-4217-afc4-41eacb4520c9: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-corporation/providence/rhode-island/united-states/corporate/shared-services-accounting-supervisor/da459b10-e025-4c02-bbb8-9af35b6837c0: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/sams-town-hotel-casino/shreveport/louisiana/united-states/casinos-resorts/banquet-server/b6c04711-926e-42d7-bb31-bd67b28d9531: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/massage-therapist-part-time/11905d11-a5c8-4a64-9331-1881f72356ee: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/security-officer/78a89211-f381-4462-b140-86ec60dcfb32: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/casino-queen-marquette/marquette/iowa/united-states/casinos-resorts/cook-ft/483b2d12-2b9d-4c94-a6f6-574b3e24d005: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/belle-of-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/server-food-oyster-bar/e55b7b12-4bda-471d-9d2d-522f55e53005: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-evansville/evansville/indiana/united-states/casinos-resorts/controller/9f5d7b12-8baf-4edc-9bcd-903c76678eec: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/jersey-city/jersey-city/new-jersey/united-states/interactive/casino-retention-coordinator/9342ab12-4365-4095-9615-59b9d76d8ed3: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/front-desk-clerk-full-time/a127e612-9821-4a77-be3b-bf13bf388762: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/table-games-dealer-part-time/8d444913-e57b-4da1-9c56-f81d3c95eb5f: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/hard-rock-hotel-casinos/biloxi/mississippi/united-states/casinos-resorts/cage-cashier/e8d50614-d833-4122-a4dc-cb45e155b1c6: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-vicksburg/vicksburg/mississippi/united-states/casinos-resorts/pt-beverage-server-casino-bar-1/42203e14-069a-4d7f-a070-7e412f0fb9d9: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/queen-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/cage-cashier-full-time-swing-shift/db218216-908b-4c9e-a5f7-110d8ff116ee: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/queen-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/bartender-cbs/976deb16-cd81-4979-9dd9-ff9d1505ff21: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/technician-slots/0b65cb17-0654-480a-b17f-2f928062ca46: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/belle-of-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/shuttle-driver/c1522618-0401-4e16-9eeb-d8e9b17b830d: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-new-york/bronx/new-york/united-states/casinos-resorts/bartender-the-waterfront-nyc-at-ballys-golf-links-at-ferry-point/54865018-4749-4c89-b895-d1a1ac94caba: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/chicago/chicago/illinois/united-states/casinos-resorts/manager-of-slot-operations/3bf8c118-4be4-4ca8-8f6f-1ae6ef18382c: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/surveillance-officer-part-time/3d5bca1a-8e95-4e86-9982-a42bd461380c: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/shift-supervisor-security/060b611b-222c-425e-8a33-21bb27d6fb6f: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/attendant-houseman/f6371c1d-1e8e-42a3-98d7-546adcab7728: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/lifeguard-full-time-25hour-plus-paid-certifications/ee506e1d-2fdb-4534-9bef-edce96c31bf9: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/queen-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/cook-experienced-with-min-4-years-the-queen-casino-baton-rouge/fcef931d-47a4-485b-9c25-b1a7810cd5f3: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/draftkings-at-cq/east-saint-louis/illinois/united-states/casinos-resorts/security-officer/0bb8101e-0594-4fc3-ab59-4a0654a27b05: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-vicksburg/vicksburg/mississippi/united-states/casinos-resorts/representativeplayer-services-cage-cashier/20d4e41e-8987-438b-90ba-d1cc3c28b859: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/cook-ii-ciera-steak-and-chophouse/ad777320-f842-4d94-88c7-3ad3470e7047: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-canada/toronto/ontario/canada/interactive/customer-service-representative/fad57a20-f86a-46cf-9dee-e38946dbd688: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/chicago/chicago/illinois/united-states/casinos-resorts/vice-president-marketing/ff795421-5825-4735-8520-a67d3dea8cf0: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/arapahoe-park/aurora/colorado/united-states/casinos-resorts/attendant-valet-seasonal/1bed5922-dc88-4bc8-8c6f-19c101cb343b: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/draftkings-at-cq/east-saint-louis/illinois/united-states/casinos-resorts/laborer/d4e31423-4778-4b61-a00b-ab727cdaa6c1: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/lifeguard-part-time-25hour-plus-paid-certifications/72b96e23-eb4d-4449-a4bb-f950a724655e: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/host-executive-casino/36948c24-8a77-4304-8977-06e1bf0474e5: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/online-studio-casino-shift-manager-part-time/a8212e25-0931-4f52-89f5-cdff2ad7b691: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-black-hawk/black-hawk/colorado/united-states/casinos-resorts/auditor-internal-senior/4a73ed25-04f4-416e-988d-b0b3240c3004: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/sams-town-hotel-casino/shreveport/louisiana/united-states/casinos-resorts/bartender/5cdbfd25-a5f5-42b4-a5f5-8a4a044f09f3: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/queen-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/cook-the-queen-casino-baton-rouge/9fc83126-b32c-40ba-bce0-365dd6954631: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/cashier-best-odds/61783726-abf4-4ac4-9021-23261a483abb: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-tiverton/tiverton/rhode-island/united-states/casinos-resorts/armed-security-officer-ft/bc475c26-7d62-402f-8a83-406f85efa0ab: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/accountant-staff-junior/35eba526-f92c-47f5-8d68-416dce8773b6: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-quad-cities/rock-island/illinois/united-states/casinos-resorts/engineer-facilities/79e59927-d38a-462e-91f0-8039f8791d4a: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/casino-queen-marquette/marquette/iowa/united-states/casinos-resorts/dishwasher-pt/65c42e28-6a3d-4806-8642-ccfd85b0d03b: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-shreveport/shreveport/louisiana/united-states/casinos-resorts/poker-dual-rate-dealersupervisor/62702a29-7081-4824-892d-913329d9ccf8: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/chicago/chicago/illinois/united-states/casinos-resorts/room-chef/52cb7029-a5b2-48f1-ba41-57c9a76cd5b6: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lake-tahoe/stateline/nevada/united-states/casinos-resorts/host-person-cafe-del-soul-full-time/ad5fb92a-a832-44f7-abde-7a4852be7379: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/queen-baton-rouge/baton-rouge/louisiana/united-states/casinos-resorts/table-games-dealer/3be7d92a-13a8-4e44-b735-e1667c86eb88: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/supervisor-it-technician/a18c532b-68c8-41e6-8f10-6a754e353b4f: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-lincoln/lincoln/rhode-island/united-states/casinos-resorts/regional-analyst-compliance/4a916d2c-4273-4029-b304-fbe99b5b6587: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-kansas-city/kansas-city/missouri/united-states/casinos-resorts/table-games-dealer-school-opportunity/50cfc92c-44dc-4bac-a85a-f29940048f28: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-dover/dover/delaware/united-states/casinos-resorts/shift-manager-evs-200a-1030a/699d532d-4e8c-4542-b370-7c621dd8ca3b: 1 JobPosting blocks  <-- USABLE
-      json-ld https://careers.ballys.com/job/ballys-atlantic-city/atlantic-city/new-jersey/united-states/casinos-resorts/surveillance-officer-ft/093eb72e-d1e9-4e06-b244-b1a260a4eba4: 1 JobPosting blocks  <-- USABLE
-   Bally's Interactive: sitemap + JSON-LD -> 80
-Bally's Interactive: 80 roles (agency board)
+      Bally's Interactive: 1 script bundle(s) referenced, checking 4
+      Bally's Interactive: no API URLs found in bundle
+   Bally's Interactive: listing page -> 5 current roles
+   Bally's Interactive: link parse -> 5
+Bally's Interactive: 5 roles (agency board)
       json-ld https://merkur.group/career/our-jobs/job-vacancies/: HTTP 403
       json-ld https://merkur.group/en/career/our-jobs/job-vacancies/: HTTP 404
       MERKUR GROUP: 14 script bundle(s) referenced, checking 6
@@ -507,6 +432,17 @@ Sportingtech: 15 roles (agency board)
       NuxGame https://careers.nuxgame.com/careers: HTTP 404
    NuxGame: link parse -> 5
 NuxGame: 5 roles (agency board)
+      NSUS Group: 5 script bundle(s) referenced, checking 4
+      NSUS Group: API-looking URLs in bundle:
+         https://www.youtube.com/iframe_api
+   NSUS Group: link + .text-xs -> 2 roles (2 with a location)
+   NSUS Group: link parse -> 2
+NSUS Group: 2 roles (agency board)
+      SkyCity Entertainment Group: 9 script bundle(s) referenced, checking 4
+      SkyCity Entertainment Group: no API URLs found in bundle
+   SkyCity Entertainment Group: link + .location -> 32 roles (32 with a location)
+   SkyCity Entertainment Group: link parse -> 32
+SkyCity Entertainment Group: 32 roles (agency board)
       KamaGames: 6 script bundle(s) referenced, checking 4
       KamaGames: API-looking URLs in bundle:
          http://imakewebthings.com/waypoints/api/context
@@ -627,48 +563,14 @@ Push Gaming: 2 roles (agency board)
       ARRISE (global) https://arrise.com/en/careers: HTTP 404
    ARRISE (global): link parse -> 4
 ARRISE (global): 4 roles (agency board)
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/jobs/
-      json-ld https://apercon.com/jobs/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/jobs/page/2/
-      json-ld https://apercon.com/jobs/page/2/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/jobs/page/3/
-      json-ld https://apercon.com/jobs/page/3/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/jobs/page/4/
-      json-ld https://apercon.com/jobs/page/4/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/jobs/page/5/
-      json-ld https://apercon.com/jobs/page/5/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/jobs/page/6/
-      json-ld https://apercon.com/jobs/page/6/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/vacancies/
-      json-ld https://apercon.com/vacancies/: HTTP 429
-      429 from apercon.com, waiting 2s
-      429 from apercon.com, waiting 4s
-      rate limited after 3 attempts: https://apercon.com/
-      json-ld https://apercon.com/: HTTP 429
-      Apercon: shell HTTP 429
-      Apercon https://apercon.com/jobs/: HTTP 429
-      Apercon https://apercon.com/jobs/page/2/: HTTP 429
-      Apercon https://apercon.com/jobs/page/3/: HTTP 429
-      Apercon https://apercon.com/jobs/page/4/: HTTP 429
-      Apercon https://apercon.com/jobs/page/5/: HTTP 429
-      Apercon https://apercon.com/jobs/page/6/: HTTP 429
-      Apercon https://apercon.com/vacancies/: HTTP 429
-      Apercon https://apercon.com/: HTTP 429
-Apercon: 0 roles (agency board)  <-- CHECK: returned nothing
+      Apercon: 23 script bundle(s) referenced, checking 7
+      Apercon: API-looking URLs in bundle:
+         https://www.youtube.com/iframe_api
+      Apercon https://apercon.com/: 200, 80674 bytes, 0 '/job' refs
+         link shapes present: /kliyenty x14, /services/* x13, /frontpage-en/* x11, /wp-content/* x5, /wp-json/* x3, /services x3, /vacancies x3, /ua x2, /ru x2, /about-us x2, /contact x2, /category/* x2
+   Apercon: link parse -> 37
+      Apercon: dropped 7 navigation link(s)
+Apercon: 30 roles (agency board)
       Allwyn: shell HTTP 404
       Allwyn https://www.allwyn.co.uk/job-board: 200, 55594 bytes, 0 '/allwyn/' refs
          link shapes present: /686b4b6563b5a93062da3264/* x4, /about x3, /reporting x3, /careers x3, /npm/* x2, /governance x2, /how-we-operate x2, /social-value x2, /participant-protection x2, /contact x2, /career-benefits x2, /lenis@1.3.4/* x1
@@ -682,7 +584,6 @@ Pentasia: 108 roles (agency board)
 BettingJobs: 103 roles (agency board)
    Van Kaizen: public API /roles -> 12 roles
 Van Kaizen: 12 roles (agency board)
-   not carrying Bally's Interactive forward — set to skip
    not carrying Codere Online forward — set to skip
    not carrying Casumo forward — set to skip
    not carrying Exacta Solutions forward — set to skip
@@ -697,6 +598,10 @@ Van Kaizen: 12 roles (agency board)
    not carrying Wazdan forward — set to skip
    not carrying Upgaming forward — set to skip
    not carrying Hub88 forward — set to skip
+   not carrying Bally's Interactive forward — set to skip
+   not carrying MERKUR GROUP forward — set to skip
+   not carrying Sportingtech forward — set to skip
+   not carrying NuxGame forward — set to skip
    not carrying SoftConstruct forward — set to skip
    not carrying Greentube (Novomatic) forward — set to skip
    not carrying EGT Digital forward — set to skip
@@ -706,7 +611,6 @@ Van Kaizen: 12 roles (agency board)
    not carrying Nolimit City® forward — set to skip
    not carrying Push Gaming forward — set to skip
    not carrying ARRISE (global) forward — set to skip
-   not carrying Apercon forward — set to skip
    not carrying Allwyn forward — set to skip
    not carrying Tabcorp forward — set to skip
    not carrying Sportsbet forward — set to skip
@@ -719,9 +623,9 @@ carried 1 roles forward from the previous feed
 
 dropped 38 postings older than 2 years
 
-dropped 33 physical racing roles (stable, yard, raceday, track)
+dropped 32 physical racing roles (stable, yard, raceday, track)
 
-companies.csv refreshed: 169 returning, 62 not
+companies.csv refreshed: 172 returning, 59 not
 
 Feed written: 7018 jobs
 Unresolved companies (0): 
