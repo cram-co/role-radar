@@ -2207,8 +2207,10 @@ def fetch_csod(token):
     for j in items:
         if not isinstance(j, dict):
             continue
-        title = html.unescape(str(_pick(j, "title", "jobTitle", "name",
-                                        "requisitionTitle") or "")).strip()
+        # Cornerstone name it displayJobTitle. Their own diagnostic gave this
+        # up: "27 records but none mapped — keys ['displayJobTitle', ...]".
+        title = html.unescape(str(_pick(j, "displayJobTitle", "title", "jobTitle",
+                                        "name", "requisitionTitle") or "")).strip()
         if not title or _MARKUP_JUNK.search(title):
             continue
         jid = str(_pick(j, "requisitionId", "id", "jobId", "reqId") or "").strip()
@@ -2225,7 +2227,8 @@ def fetch_csod(token):
                                            "displayLocation", "primaryLocation")),
             "department": str(_pick(j, "department", "division", "jobCategory") or ""),
             "url": u,
-            "posted_at": _pick(j, "postedDate", "publishedDate", "createdDate"),
+            "posted_at": _pick(j, "postingEffectiveDate", "postedDate",
+                               "publishedDate", "createdDate"),
         })
     if not out and items and isinstance(items[0], dict):
         print(f"      csod {tenant}: {len(items)} records but none mapped — "
@@ -4065,14 +4068,20 @@ def _too_old(job):
     return (datetime.now(timezone.utc) - d).days > _MAX_AGE_DAYS
 
 
-def _carry_forward(all_jobs, feed_path, skipped=()):
+def _carry_forward(all_jobs, feed_path, skipped=(), known=None):
     """Re-add roles for companies that returned nothing this run but had roles
     in the last feed. Only applies where the company produced before, so a board
     that is genuinely empty still shows as empty.
 
     Companies deliberately set to skip are excluded: they return nothing by
     design, and carrying them forward would resurrect rows that were removed
-    on purpose."""
+    on purpose.
+
+    So are companies that no longer exist in companies.csv. Renaming a row —
+    "Caesars Digital" became "Caesars Entertainment" — left the old name with
+    no CSV entry, so it looked exactly like a board that had gone down and
+    1,421 roles were carried forward under BOTH names. A company that has gone
+    from the list has not gone unreachable; it has gone."""
     try:
         with open(feed_path, encoding="utf-8") as f:
             prev = json.load(f).get("jobs") or []
@@ -4088,10 +4097,15 @@ def _carry_forward(all_jobs, feed_path, skipped=()):
         by_co.setdefault(j["company"], []).append(j)
 
     skipped = set(skipped)
+    known = set(known) if known else None
     carried = 0
     for co, jobs in by_co.items():
         if co in skipped:
             print(f"   not carrying {co} forward — set to skip")
+            continue
+        if known is not None and co not in known:
+            print(f"   not carrying {co} forward — no longer in companies.csv "
+                  f"(renamed or removed)")
             continue
         if co in have:
             continue
@@ -4361,7 +4375,8 @@ def main():
     deliberately_skipped = {
         (c.get("company") or "").strip() for c in companies
         if (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-")}
-    all_jobs = _carry_forward(all_jobs, FEED_FILE, deliberately_skipped)
+    all_jobs = _carry_forward(all_jobs, FEED_FILE, deliberately_skipped,
+                              known={c["company"].strip() for c in companies})
     all_jobs = _stamp_first_seen(all_jobs, FEED_FILE)
 
     before = len(all_jobs)
