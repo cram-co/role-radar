@@ -342,7 +342,7 @@ ua:"Ukraine",am:"Armenia",ge:"Georgia",de:"Germany",es:"Spain",pt:"Portugal",it:
 be:"Belgium",fr:"France",se:"Sweden",dk:"Denmark",no:"Norway",fi:"Finland",cz:"Czechia",hu:"Hungary",
 rs:"Serbia",hr:"Croatia",at:"Austria",ch:"Switzerland",us:"United States",ca:"Canada",br:"Brazil",
 co:"Colombia",mx:"Mexico",ar:"Argentina",pe:"Peru",cl:"Chile",au:"Australia",nz:"New Zealand",in:"India",
-ph:"Philippines",sg:"Singapore",jp:"Japan",za:"South Africa",ng:"Nigeria",ke:"Kenya",ae:"UAE",il:"Israel",
+ph:"Philippines",sg:"Singapore",jp:"Japan",za:"South Africa",ng:"Nigeria",ke:"Kenya",ae:"United Arab Emirates",il:"Israel",
 tr:"Turkey",my:"Malaysia",tw:"Taiwan",hk:"Hong Kong",al:"Albania",md:"Moldova",mk:"North Macedonia"};
 const US_STATES = new Set(("al ak az ar ca co ct de fl ga hi id il in ia ks ky la me md ma mi mn ms "+
   "mo mt ne nv nh nj nm ny nc nd oh ok or pa ri sc sd tn tx ut vt va wa wv wi wy dc").split(" "));
@@ -417,7 +417,7 @@ const CITY_COUNTRY = {
   "milan":"Italy", "turin":"Italy", "napoli":"Italy", "naples":"Italy",
   "porto":"Portugal", "skopje":"North Macedonia", "sarajevo":"Bosnia & Herzegovina",
   "ljubljana":"Slovenia", "tirana":"Albania", "chisinau":"Moldova",
-  "tel aviv":"Israel", "istanbul":"Turkey", "cairo":"Egypt", "dubai":"UAE",
+  "tel aviv":"Israel", "istanbul":"Turkey", "cairo":"Egypt", "dubai":"United Arab Emirates",
   "singapore":"Singapore", "hong kong":"Hong Kong", "tokyo":"Japan", "seoul":"South Korea",
   "concord":"United States", "washington":"United States", "d.c.":"United States",
   // country-name variants that arrive spelled differently
@@ -505,7 +505,7 @@ function isKnownPlace(b){
     for(const v of Object.values(ISO)) KNOWN_PLACES.add(v);
     for(const v of Object.values(CITY_COUNTRY)) KNOWN_PLACES.add(v);
     ["Remote","Multiple locations","Inside the listing","European Union",
-     "Latin America","Africa","UAE","United Kingdom","United States",
+     "Latin America","Africa","United Kingdom","United States",
      "Canada"].forEach(x => KNOWN_PLACES.add(x));
   }
   return KNOWN_PLACES.has(b);
@@ -562,7 +562,7 @@ function bucket(loc){
   if(low.includes("remote") || low.includes("anywhere")
      || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(low)) return "Remote";
   if(low.includes("european union")) return "European Union";
-  if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "UAE";
+  if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "United Arab Emirates";
   // "USA - Georgia" is the STATE. This has to run before the country-name scan
   // below, or Georgia the country wins and a Florida role lands in Tbilisi.
   if(/\busa\s*[-–]|^usa\b|\bunited states\b/i.test(low)) return "United States";
