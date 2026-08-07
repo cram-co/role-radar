@@ -2219,6 +2219,78 @@ def fetch_csod(token):
     return out
 
 
+def fetch_join(token):
+    """JOIN (join.com) company pages.
+
+    A Next.js app, so the whole job list ships inside __NEXT_DATA__ as proper
+    structured data — no markup parsing and no API call needed:
+
+        "jobs":{"items":[{"title":"...", "idParam":"16548464-finance-...",
+                          "createdAt":"2026-07-20T...",
+                          "city":{"cityName":"Valletta","countryName":"Malta"},
+                          "category":{"name":"Finance"},
+                          "workplaceType":"ONSITE"}]}
+
+    Note a fully remote role still carries a city — "Remote / United States" —
+    so workplaceType and remoteType decide the location, not the city fields.
+
+    Token is the company slug: "booming-games"."""
+    slug = token.strip().strip("/").split("/")[-1]
+    url = f"https://join.com/companies/{slug}"
+    try:
+        r = _request("GET", url, headers=AGENCY_UA)
+    except Exception as e:
+        print(f"      join {slug}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      join {slug}: HTTP {r.status_code}")
+        return []
+
+    mt = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
+    if not mt:
+        print(f"      join {slug}: no __NEXT_DATA__ in {len(r.text)} bytes")
+        return []
+    try:
+        data = json.loads(mt.group(1))
+    except Exception:
+        print(f"      join {slug}: __NEXT_DATA__ did not parse")
+        return []
+
+    items = (((data.get("props") or {}).get("pageProps") or {})
+             .get("initialState") or {}).get("jobs") or {}
+    items = items.get("items") if isinstance(items, dict) else None
+    if not isinstance(items, list) or not items:
+        print(f"      join {slug}: no jobs in the page data")
+        return []
+
+    out = []
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        title = html.unescape(str(j.get("title") or "")).strip()
+        if not title:
+            continue
+        city = j.get("city") if isinstance(j.get("city"), dict) else {}
+        wp = str(j.get("workplaceType") or "").upper()
+        if wp == "REMOTE" and str(j.get("remoteType") or "").upper() == "ANYWHERE":
+            loc = "Remote"
+        else:
+            bits = [city.get("cityName"), city.get("countryName")]
+            loc = ", ".join(str(b) for b in bits if b)
+            if wp == "REMOTE" and "remote" not in loc.lower():
+                loc = f"{loc} (Remote)".strip()
+        cat = j.get("category") if isinstance(j.get("category"), dict) else {}
+        out.append({
+            "title": title,
+            "location": loc,
+            "department": str(cat.get("name") or ""),
+            "url": f"{url}/{j.get('idParam') or j.get('id') or ''}",
+            "posted_at": j.get("createdAt") or j.get("publishedAt"),
+        })
+    print(f"      join {slug}: {len(out)} roles")
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json
 
@@ -2568,6 +2640,7 @@ FETCHERS = {
     "talos": fetch_talos,
     "hurma": fetch_hurma,
     "csod": fetch_csod,
+    "join": fetch_join,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
@@ -3560,6 +3633,20 @@ CUSTOM_BOARDS = {
     "SkyCity Entertainment Group": dict(base="https://www.skycitycareers.com",
                          marker="/jobdetails/", listing=["/search", "/"],
                          loc_class="location"),
+    # PARKED WRONGLY as "PageUp, unsupported" — only the apply destination.
+    # Server-rendered table: title in the anchor, location in span.location.
+    # NOTE mostly brick-and-mortar venue roles, which the Shops/Casino Floor
+    # exclusion hides — the value is the occasional corporate role.
+    "The Star Entertainment Group": dict(base="https://careers.star.com.au",
+                         marker="/job/", listing=["/en/search", "/en", "/"],
+                         loc_class="location"),
+    # PARKED WRONGLY as "aptrack + Employment Hero, unsupported". Employment
+    # Hero needs no fetcher at all — Newfield has been read off the same path
+    # for weeks. Their aptrack side was never the listing.
+    "PointsBet":    dict(base="https://employmenthero.com", marker="/jobs/position/",
+                         listing=["/jobs/organisations/pointsbet/",
+                                  "/jobs/organisations/pointsbet-australia/"],
+                         slug_titles=True),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     # also PeopleForce, so the same sibling class should carry the location —
