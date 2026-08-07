@@ -4115,6 +4115,48 @@ def _carry_forward(all_jobs, feed_path, skipped=()):
     return all_jobs
 
 
+def _stamp_first_seen(all_jobs, feed_path):
+    """Record the date Role Radar FIRST saw each role, and carry it forward.
+
+    This is a better basis for "what's new" than posted_at, which only 65% of
+    roles carry — several platforms publish no date at all. first_seen exists
+    for every role and answers the question a returning visitor actually has:
+    what has appeared since I last looked.
+
+    Date only, not a timestamp: the app needs day granularity, and 7,000 full
+    ISO strings would add a quarter of a megabyte to every commit.
+
+    Only works forward. On the first run with this every role looks new, so
+    let it accumulate for a few days before exposing a filter on it."""
+    prev = {}
+    try:
+        with open(feed_path, encoding="utf-8") as f:
+            for j in json.load(f).get("jobs") or []:
+                u, fs = j.get("url"), j.get("first_seen")
+                if u and fs:
+                    prev[u] = fs
+    except Exception:
+        pass
+
+    today = datetime.now(timezone.utc).date().isoformat()
+    fresh = 0
+    for j in all_jobs:
+        seen = prev.get(j.get("url"))
+        if seen:
+            j["first_seen"] = seen
+        else:
+            j["first_seen"] = today
+            fresh += 1
+
+    if not prev:
+        print(f"\nfirst_seen: stamped all {len(all_jobs)} roles with {today} — "
+              f"no prior dates, so this is the first run carrying it")
+    else:
+        print(f"\nfirst_seen: {fresh} roles new since the last run, "
+              f"{len(all_jobs) - fresh} carried an existing date")
+    return all_jobs
+
+
 def _write_company_status(companies, all_jobs, cache):
     """Refresh the returning / roles / status columns in companies.csv so the
     file always shows which companies actually produced roles on the last run.
@@ -4266,8 +4308,13 @@ def main():
                 jobs = FETCHERS[ats](info["token"])
             else:
                 continue
+            lb = (c.get("business_model") or "").strip().lower() == "land-based"
             for j in jobs:
                 j.update(company=name, ats=ats, source="collector")
+                # only stamped when true, so the flag costs nothing on the 96%
+                # of companies that are digital
+                if lb:
+                    j["land_based"] = True
             all_jobs.extend(jobs)
             took = time.time() - _t0
             slow = f"  [{took:.0f}s]" if took > 20 else ""
@@ -4280,8 +4327,12 @@ def main():
     for name, fn in AGENCY_BOARDS.items():
         try:
             jobs = _drop_junk(fn(), name)
+            lb = next((( r.get("business_model") or "").strip().lower() == "land-based"
+                       for r in companies if r["company"].strip() == name), False)
             for j in jobs:
                 j.update(company=name, ats="agency", source="agency")
+                if lb:
+                    j["land_based"] = True
             all_jobs.extend(jobs)
             print(f"{name}: {len(jobs)} roles (agency board)"
                   + ("  <-- CHECK: returned nothing" if not jobs else ""))
@@ -4311,6 +4362,7 @@ def main():
         (c.get("company") or "").strip() for c in companies
         if (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-")}
     all_jobs = _carry_forward(all_jobs, FEED_FILE, deliberately_skipped)
+    all_jobs = _stamp_first_seen(all_jobs, FEED_FILE)
 
     before = len(all_jobs)
     all_jobs = [j for j in all_jobs if not _too_old(j)]
