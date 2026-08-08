@@ -2328,6 +2328,77 @@ def fetch_join(token):
     return out
 
 
+def fetch_zoho(token):
+    """Zoho Recruit career sites at {tenant}.zohorecruit.{tld}.
+
+    The whole board ships inside a hidden input on the careers page — no API
+    call, no paging, no SHOW MORE:
+
+        <input type="hidden" value="[{...}]" id="jobs">
+
+    The value is HTML-escaped JSON carrying every field worth having:
+    Posting_Title, City, State, Country, Date_Opened, Job_Type, Industry and
+    the record id. MaxBet's SHOW MORE button paginates the DISPLAY only; the
+    data behind it is already on the page.
+
+    Token is the host, optionally with the career page name:
+    "maxbet.zohorecruit.eu" or "maxbet.zohorecruit.eu|Careers"."""
+    host, _, page = token.partition("|")
+    host = host.strip().replace("https://", "").rstrip("/")
+    page = (page.strip() or "Careers")
+    base = f"https://{host}"
+    url = f"{base}/jobs/{page}"
+    try:
+        r = _request("GET", url, headers=AGENCY_UA)
+    except Exception as e:
+        print(f"      zoho {host}: {type(e).__name__}")
+        return []
+    if r.status_code != 200:
+        print(f"      zoho {host}: HTTP {r.status_code}")
+        return []
+
+    mt = re.search(r'<input[^>]*\bvalue="(\[.*?\])"[^>]*\bid="jobs"', r.text, re.S)
+    if not mt:
+        mt = re.search(r'<input[^>]*\bid="jobs"[^>]*\bvalue="(\[.*?\])"', r.text, re.S)
+    if not mt:
+        ids = re.findall(r'<input[^>]*id="(\w+)"', r.text)[:10]
+        print(f"      zoho {host}: no jobs input found — inputs present: {ids}")
+        return []
+    try:
+        items = json.loads(html.unescape(mt.group(1)))
+    except Exception:
+        print(f"      zoho {host}: jobs input did not parse as JSON")
+        return []
+    if not isinstance(items, list) or not items:
+        print(f"      zoho {host}: jobs input empty")
+        return []
+
+    out = []
+    for j in items:
+        if not isinstance(j, dict):
+            continue
+        if j.get("Publish") is False:
+            continue
+        title = html.unescape(str(_pick(j, "Posting_Title", "Job_Opening_Name") or "")).strip()
+        if not title:
+            continue
+        jid = str(j.get("id") or "").strip()
+        slug = re.sub(r"[^A-Za-z0-9]+", "-", title).strip("-") or "job"
+        bits = [str(j.get(k) or "").strip() for k in ("City", "Country")]
+        loc = ", ".join(b for b in bits if b and b.lower() != "null")
+        if not loc and j.get("Remote_Job"):
+            loc = "Remote"
+        out.append({
+            "title": title,
+            "location": loc[:80],
+            "department": str(j.get("Industry") or "")[:60],
+            "url": f"{base}/jobs/{page}/{jid}/{slug}" if jid else url,
+            "posted_at": j.get("Date_Opened"),
+        })
+    print(f"      zoho {host}: {len(out)} roles")
+    return out
+
+
 def fetch_breezy(token):
     """Breezy HR public board: https://<token>.breezy.hr/json
 
@@ -2678,6 +2749,7 @@ FETCHERS = {
     "hurma": fetch_hurma,
     "csod": fetch_csod,
     "join": fetch_join,
+    "zoho": fetch_zoho,
     "jobvite": fetch_jobvite,
     "betterteam": fetch_betterteam,
     "rippling": fetch_rippling,
@@ -3576,8 +3648,6 @@ def scrape_tabcorp():
 # one routine walks the same ladder: JSON-LD -> sitemap -> SPA bundle API ->
 # tolerant link parsing. Config is just a base URL and the path job links share.
 CUSTOM_BOARDS = {
-    "Cirsa":        dict(base="https://joblink.allibo.com", marker="job-offer",
-                         listing=["/ats2/job-offer.aspx", "/ats2/"]),
     "Codere Online":dict(base="https://codere.hiringroom.com", marker="/jobs/",
                          listing=["/jobs/"], extra=["https://codereargentina.hiringroom.com/jobs/"]),
     "Casumo":       dict(base="https://www.casumocareers.com", marker="/jobs/",
@@ -3621,9 +3691,12 @@ CUSTOM_BOARDS = {
     # Full-time Senior"), so the slug gives the cleaner title.
     "BGaming":      dict(base="https://bgaming.com", marker="/careers/",
                          listing=["/careers"], slug_titles=True),
-    # 38 roles at /career/all-offers, individual roles at /career/{Slug}
+    # Their visible listing is client-rendered and yielded 5 roles, one of them
+    # "All Offers". The application form's dropdown carries all 46, each with
+    # its WordPress post id — /?p=ID resolves to the real permalink.
     "Wazdan":       dict(base="https://wazdan.com", marker="/career/",
-                         listing=["/career/all-offers", "/career"], slug_titles=True),
+                         listing=["/career/all-offers", "/career/", "/career",
+                                  "/career/apply", "/kariera"], job_select=True),
     # 9 roles at /career/all, individual roles at /career/{slug}
     "Upgaming":     dict(base="https://lifeat.upgaming.com", marker="/career/",
                          listing=["/career/all", "/career"], slug_titles=True),
@@ -3688,6 +3761,12 @@ CUSTOM_BOARDS = {
     "PointsBet":    dict(base="https://employmenthero.com", marker="/jobs/position/",
                          listing=["/jobs/organisations/pointsbet-australia-pty-limited-vo6ll/"],
                          slug_titles=True),
+    # Their hrefs are RELATIVE with no leading slash ("Details/7" from
+    # /home/search), so URLs join against the listing page. Most of their board
+    # is flagged "Application Closed" — skip_if drops those, leaving the live ones.
+    "bet9ja":       dict(base="https://bet9jacareers.com", marker="Details/",
+                         listing=["/home/search", "/home"],
+                         loc_icon="fa-map-marker", skip_if=r"Application\s*Closed"),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     # also PeopleForce, so the same sibling class should carry the location —
@@ -3856,6 +3935,104 @@ def _links_with_loc_class(html_text, base, marker, loc_class,
     return out
 
 
+def _jobs_from_select(html_text, base, cfg):
+    """Some sites publish their whole board in a <select> on the application
+    form, even when the visible listing is client-rendered and gives up almost
+    nothing. Wazdan showed 5 roles to a scraper and 46 in this dropdown:
+
+        <option value="46053">2D Animator (After Effects, Spine 2D)</option>
+
+    The value is the WordPress post ID, and WordPress always resolves /?p=ID
+    to the real permalink, so a usable link comes free.
+
+    The right select is found by shape rather than by id — the one carrying the
+    most numeric-valued options — because form field ids are generated and
+    change whenever the form is edited."""
+    best, best_n = None, 0
+    for m in re.finditer(r"<select\b[^>]*>(.*?)</select>", html_text, re.S | re.I):
+        n = len(re.findall(r'<option[^>]+value="\d+"', m.group(1), re.I))
+        if n > best_n:
+            best, best_n = m.group(1), n
+    if not best or best_n < 3:
+        return []
+
+    out, seen = [], set()
+    for om in re.finditer(r'<option[^>]*\bvalue="(\d+)"[^>]*>(.*?)</option>',
+                          best, re.S | re.I):
+        pid = om.group(1)
+        title = html.unescape(re.sub(r"<[^>]+>", " ", om.group(2)))
+        title = re.sub(r"\s+", " ", title).strip()
+        if not title or len(title) < 3 or title.lower() in _NOT_A_JOB:
+            continue
+        if _MARKUP_JUNK.search(title):
+            continue
+        key = title.lower()
+        if key in seen:          # two "Frontend Developer" rows is one listing
+            continue
+        seen.add(key)
+        out.append({"title": title, "location": "", "department": "",
+                    "url": f"{base.rstrip('/')}/?p={pid}", "posted_at": None})
+    return out
+
+
+def _links_with_loc_icon(html_text, listing_url, base, marker, cfg):
+    """(url, title, location, date) for cards that mark their location with an
+    ICON rather than a class — Font Awesome map pins are everywhere:
+
+        <h5><a href="Details/7">Senior Tax Officer 1</a></h5>
+        <li><p><i class="fas fa-map-marker-alt"></i> Head Office</p></li>
+        <span class="time">Posted on 3/12/2026</span>
+
+    Two things bet9ja forced. Their hrefs are RELATIVE with no leading slash
+    ("Details/7" from /home/search), so URLs are joined against the listing
+    page rather than the domain — concatenating onto the base gave
+    "bet9jacareers.comDetails/7". And a `skip_if` pattern drops cards flagged
+    "Application Closed", which is most of their board."""
+    from urllib.parse import urljoin
+    body = _STYLE_SCRIPT.sub(" ", html_text)
+    icon = cfg.get("loc_icon", "fa-map-marker")
+    skip_rx = re.compile(cfg["skip_if"], re.I) if cfg.get("skip_if") else None
+    link_rx = re.compile(
+        r'href="([^"]*?' + re.escape(marker) + r'[^"?#]*)"[^>]*>(.*?)</a>', re.S | re.I)
+    icon_rx = re.compile(r'<i[^>]*class="[^"]*' + re.escape(icon) +
+                         r'[^"]*"[^>]*>\s*</i>\s*([^<]{2,60})', re.I)
+    date_rx = re.compile(r'Posted on\s*(\d{1,2}/\d{1,2}/\d{4})', re.I)
+
+    marks = list(link_rx.finditer(body))
+    out, seen, skipped = [], set(), 0
+    for i, mt in enumerate(marks):
+        href, inner = mt.group(1), mt.group(2)
+        title = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", inner))).strip()
+        if not title or len(title) < 3 or _MARKUP_JUNK.search(title):
+            continue
+        u = urljoin(listing_url, href)
+        if u in seen:
+            continue
+        nxt = marks[i + 1].start() if i + 1 < len(marks) else min(mt.end() + 1400, len(body))
+        window = body[mt.end():max(nxt, mt.end())][:1400]
+        if skip_rx and skip_rx.search(window):
+            skipped += 1
+            continue
+        seen.add(u)
+        lm = icon_rx.search(window)
+        loc = html.unescape(lm.group(1)).strip(" \t\n:-") if lm else ""
+        dm = date_rx.search(window)
+        posted = None
+        if dm:
+            try:
+                d, mo, y = [int(x) for x in dm.group(1).split("/")]
+                if mo > 12 and d <= 12:
+                    d, mo = mo, d
+                posted = f"{y:04d}-{mo:02d}-{d:02d}"
+            except Exception:
+                posted = None
+        out.append({"title": title, "location": _strip_tag_debris(loc)[:60],
+                    "department": "", "url": u, "posted_at": posted})
+    if skipped:
+        print(f"      dropped {skipped} closed listings")
+    return out
+
+
 def scrape_custom(name):
     """Try, in order: JSON-LD on the listing, the XML sitemap, the SPA bundle's
     API, then tolerant link parsing. Logs which rung worked."""
@@ -3935,6 +4112,31 @@ def scrape_custom(name):
                     new_n += 1
                 if new_n:
                     print(f"   {name}: first-element titles -> {new_n}")
+                continue
+            if cfg.get("loc_icon"):
+                found = _links_with_loc_icon(r.text, base.rstrip("/") + path, base, marker, cfg)
+                new_n = 0
+                for j in found:
+                    if j["url"] in seen:
+                        continue
+                    seen.add(j["url"])
+                    out.append(j)
+                    new_n += 1
+                if new_n:
+                    got = sum(1 for j in out if j["location"])
+                    print(f"   {name}: link + icon -> {new_n} roles ({got} with a location)")
+                continue
+            if cfg.get("job_select"):
+                found = _jobs_from_select(r.text, base, cfg)
+                new_n = 0
+                for j in found:
+                    if j["url"] in seen:
+                        continue
+                    seen.add(j["url"])
+                    out.append(j)
+                    new_n += 1
+                if new_n:
+                    print(f"   {name}: application-form select -> {new_n} roles")
                 continue
             if cfg.get("loc_class"):
                 found = _links_with_loc_class(r.text, base, marker, cfg["loc_class"],
