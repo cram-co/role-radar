@@ -4390,9 +4390,16 @@ def main():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
 
+    # "skip" means two different things in the CSV: a company we do not want to
+    # fetch, and one whose listing is read by a custom board instead of a token.
+    # Only the first should be barred from the carry-forward. Huddle and iGaming
+    # Recruitment both timed out one morning and vanished from the feed entirely,
+    # because their custom-board rows read as deliberately skipped.
     deliberately_skipped = {
         (c.get("company") or "").strip() for c in companies
-        if (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-")}
+        if (c.get("ats_token") or "").strip().lower() in ("skip", "none", "-")
+        and (c.get("company") or "").strip() not in CUSTOM_BOARDS
+        and (c.get("company") or "").strip() not in AGENCY_BOARDS}
     all_jobs = _carry_forward(all_jobs, FEED_FILE, deliberately_skipped,
                               known={c["company"].strip() for c in companies})
     all_jobs = _stamp_first_seen(all_jobs, FEED_FILE)
