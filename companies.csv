@@ -53,7 +53,6 @@ betPawa,Operator - Africa,no,0,workable board found but empty,detect,workable:be
 WPT Global,Poker,no,0,workable board found but empty,detect,workable:wpt-global,Workable. No roles open at time of pinning - worth re-testing,digital
 Jumpman Gaming,Operator,no,0,workday board found but empty,detect,https://myhcm.wd3.myworkdayjobs.com/jumpman,Workday pin in place. No open roles at time of check - re-test,digital
 Sisal,Operator - Tier 1,no,0,workday board found but empty,detect,https://sisal.wd3.myworkdayjobs.com/sisalcorp,"Workday, CONFIRMED WORKING - cxs/sisal/sisalcorp returns HTTP 200 with 0 results, ie a valid board that is currently empty. The 422s in the log are fallback probes, not the failure. Italy, Morocco, Turkey",digital
-MaxBet,Operator,no,0,zoho board found but empty,detect,zoho:maxbet.zohorecruit.eu|Careers,"Zoho Recruit. The WHOLE board ships in a hidden input id=""jobs"" on the careers page as HTML-escaped JSON - Posting_Title, City, Country, Date_Opened, Job_Type, Industry, id. No API call and no paging: their SHOW MORE button paginates the DISPLAY only, the data is already there. Flutter International company. Mostly Serbian/Bosnian retail shop roles which the exclusion hides, but the corporate ones are good - Head of Marketing, Reward Director, Product Analyst, CRM Specialist, UX Researcher, Senior Payment Specialist",digital
 3 Oaks Gaming,Supplier - Content,yes,1,producing,detect,workable:3-oaks-gaming,Workable. No roles open at time of pinning - worth re-testing,digital
 Alea,Operator,yes,8,producing,detect,,From LinkedIn follows,digital
 Allwyn,Lottery,yes,4,producing,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded",digital
@@ -100,7 +99,7 @@ DAZN Bet,Operator,yes,3,producing,detect,pinpoint:careers.dazn.com|dazn bet,"Pin
 Derivco,Operator,yes,6,producing,detect,,From LinkedIn follows,digital
 DigiOutsource,Operator,yes,123,producing,detect,https://myhcm.wd3.myworkdayjobs.com/digioutsource,Super Group tech arm; own Workday tenant on myhcm,digital
 Digitain,Supplier - Platform,yes,89,producing,detect,bamboohr:digitainsoftware,BambooHR,digital
-DraftKings,Operator - Tier 1,yes,96,producing,greenhouse (likely),https://draftkings.wd1.myworkdayjobs.com/DraftKings,,digital
+DraftKings,Operator - Tier 1,yes,95,producing,greenhouse (likely),https://draftkings.wd1.myworkdayjobs.com/DraftKings,,digital
 Easygo,Operator,yes,39,producing,detect,,From LinkedIn follows,digital
 Eeze,Supplier - Content,yes,21,producing,teamtailor,teamtailor:careers.eeze.com,Teamtailor on a custom domain at careers.eeze.com. He rates the roles that come up here,digital
 EGT Digital,Supplier - Content,yes,33,producing,detect,skip,"egt-digital.com/careers lists only CURRENT roles and links to skillie.ai - use it as the live filter, since the skillie sitemap holds every job ever posted",digital
@@ -156,6 +155,7 @@ LiveScore Group,Operator / Media,yes,14,producing,detect,greenhouse:livescore9,,
 Lottoland,Lottery betting,yes,1,producing,detect,,,digital
 Lottomatica,Operator - Tier 1,yes,49,producing,detect,https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers,Workday tenant,digital
 Luckia,Operator,yes,30,producing,detect,sfcsb:jobs.luckiagaminggroup.com,"SuccessFactors CAREER SITE BUILDER at jobs.luckiagaminggroup.com. Table layout with locations and Spanish dates. Mostly retail casino (croupiers, slot attendants, SAT technicians) - the Shops/Casino Floor exclusion will hide most of it, which is correct",land-based
+MaxBet,Operator,yes,51,producing,detect,zoho:maxbet.zohorecruit.eu|Careers,"Zoho Recruit. The WHOLE board ships in a hidden input id=""jobs"" on the careers page as HTML-escaped JSON - Posting_Title, City, Country, Date_Opened, Job_Type, Industry, id. No API call and no paging: their SHOW MORE button paginates the DISPLAY only, the data is already there. Flutter International company. Mostly Serbian/Bosnian retail shop roles which the exclusion hides, but the corporate ones are good - Head of Marketing, Reward Director, Product Analyst, CRM Specialist, UX Researcher, Senior Payment Specialist",digital
 MERKUR Casino UK,Operator,yes,51,producing,detect,https://merkurcasinouk.wd103.myworkdayjobs.com/MCEC,"Workday. All land-based slots/arcade roles - kept so an online role would surface, the retail exclusion hides the rest. NOTE: never resolve MERKUR by slug, an earlier probe matched an Austrian insurer",land-based
 MERKUR GROUP,Operator,yes,13,producing,detect,skip,"Listing is SERVER-RENDERED at merkur.group/career/our-jobs/job-vacancies/ with data-* attributes (data-title, data-city, data-geo_name, data-joburl), handled by scrape_custom. Was WRONGLY parked as ""Softgarden unsupported"" - that is only where the APPLY button goes. Gauselmann group, German and Austrian sites",land-based
 Midnite,Operator,yes,17,producing,detect,ashby:midnite,From LinkedIn follows,digital
