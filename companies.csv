@@ -1,6 +1,6 @@
 company,category,returning,roles,status,ats_hint,ats_token,notes,business_model
-OlyBet Group,Operator,no,0,csod board found but empty,detect,csod:olympic|1,"Cornerstone OnDemand at olympic.csod.com. React shell, but csod.context in the page HTML carries BOTH the Bearer token and the regional API host (eu-fra.api.csod.com), so the fetcher lifts them fresh each run - the token is anonymous and expires after 2 hours. One POST to rec-job-search/external/jobs with pageSize 9999, no paging",digital
 The Rank Group plc,Operator,no,0,dayforce board found but empty,detect,dayforce:rankgroup|CANDIDATEPORTAL|en-GB,Dayforce HCM candidate portal,digital
+Delasport,Supplier - Platform,no,0,greenhouse board found but empty,detect,,,digital
 AGS,Supplier - Content,no,0,jobvite board found but empty,detect,jobvite:agscareer,Jobvite (Play AGS); a Betterteam board also exists but Jobvite looks primary,digital
 1/ST (Stronach Group),Racing - US,no,0,skipped on purpose,detect,skip,PARKED [ATS: TeamWork Online] - teamworkonline.com/live-event-jobs/1st-jobs. No roles open,digital
 1win,Operator,no,0,skipped on purpose,detect,skip,"Hiring via a Telegram bot (t.me/jobs1win_bot), not a web board. Nothing to scrape",digital
@@ -92,14 +92,13 @@ Bullfinch Recruitment,Recruitment agency,yes,38,producing,breezy,,Breezy board; 
 Caesars Entertainment,Operator - US,yes,1428,producing,detect,oracle:edmn.fa.us2.oraclecloud.com|CX_1,"Oracle HCM. NOTE this is the WHOLE GROUP board, not their digital arm — ~1,400 roles, mostly property. Marked land-based for that reason. If Caesars Digital ever exposes its own board it should get a separate row, the way Aristocrat Interactive and Greentube do. Until then the digital override is what surfaces their ~50 genuinely digital roles",land-based
 Caliente,Operator - Mexico,yes,4,producing,detect,,,digital
 Careers in Racing,Racing,yes,32,producing,detect,skip,British Horseracing Authority official industry board; physical yard roles stripped at collection,digital
-Casumo,Operator,yes,2,producing,detect,skip,"in-house careers site, handled by scrape_custom",digital
+Casumo,Operator,yes,3,producing,detect,skip,"in-house careers site, handled by scrape_custom",digital
 Codere Online,Operator,yes,2,producing,detect,skip,"HiringRoom (codere + codereargentina), handled by scrape_custom",digital
 CoinPoker,Poker,yes,7,producing,detect,,From LinkedIn follows,digital
 ComeOn Group,Operator,yes,28,producing,detect,workable:comeon-group,Workable,digital
 Continent 8,Infrastructure,yes,3,producing,detect,,,digital
 Dabble,Sports/Prediction,yes,7,producing,detect,,From LinkedIn follows,digital
 DAZN Bet,Operator,yes,3,producing,detect,pinpoint:careers.dazn.com|dazn bet,"Pinpoint on a custom domain, shared with all of DAZN. Title filter keeps only roles suffixed ""- DAZN Bet""",digital
-Delasport,Supplier - Platform,yes,1,producing,detect,,,digital
 Derivco,Operator,yes,6,producing,detect,,From LinkedIn follows,digital
 DigiOutsource,Operator,yes,123,producing,detect,https://myhcm.wd3.myworkdayjobs.com/digioutsource,Super Group tech arm; own Workday tenant on myhcm,digital
 Digitain,Supplier - Platform,yes,89,producing,detect,bamboohr:digitainsoftware,BambooHR,digital
@@ -138,7 +137,7 @@ Huddle,Supplier - Content,yes,5,producing,detect,skip,"Careers page at huddle.te
 iGaming Recruitment,Recruitment agency,yes,26,producing,detect,skip,"WordPress jobs board, handled by scrape_custom",digital
 iGamingHunt,Recruitment agency,yes,14,producing,detect,ashby:igaminghunt,Ashby board,digital
 iGate,Supplier - Platform,yes,2,producing,greenhouse_eu,greenhouse_eu:igate,Greenhouse EU at job-boards.eu.greenhouse.io/igate,digital
-IGT,Supplier - Content,yes,141,producing,detect,sfcsb:jobs.igt.com,"SuccessFactors CAREER SITE BUILDER at jobs.igt.com - server-rendered, meta-robots:index, ~133 roles. NOT the legacy DWR career?company= route, which SAP blocks",digital
+IGT,Supplier - Content,yes,142,producing,detect,sfcsb:jobs.igt.com,"SuccessFactors CAREER SITE BUILDER at jobs.igt.com - server-rendered, meta-robots:index, ~133 roles. NOT the legacy DWR career?company= route, which SAP blocks",digital
 Inspired Entertainment,Supplier,yes,5,producing,detect,wordpress:careers.inseinc.com,"WordPress (WP Job Manager) at careers.inseinc.com. Post type is job_listing but the REST BASE is JOB-LISTINGS - asking for the slug 404s, which is why this sat at zero. Location comes from the job_listing_region taxonomy. Largely the UK Playnation arcade and holiday-park operation, so expect retail roles the exclusion hides, plus a few in Greece, Milan, Rome, Illinois and New York DIGITAL business — the board we scrape is their UK Playnation arcade arm, so most roles are venue work the exclusion hides, but the company is a B2B supplier",digital
 Intralot,Lottery,yes,40,producing,detect,,,digital
 iTalent PLUS,Recruitment agency,yes,21,producing,detect,,Malta iGaming specialist,digital
@@ -171,6 +170,7 @@ Novig,Operator - Prediction,yes,11,producing,greenhouse,,Sports prediction marke
 NSUS Group,Operator,yes,3,producing,detect,skip,"Listing is SERVER-RENDERED at nsusgroup.applytojobs.ca - title in the anchor, then a sibling div.text-xs reading ""{Location} . {type} . {date}"", so location AND posting date both parse. Job links are /{department}/{id} so matched by url_pattern. Was WRONGLY parked as ""Humi unsupported""",digital
 NuxGame,Supplier - Platform,yes,5,producing,detect,skip,"Listing is SERVER-RENDERED at careers.nuxgame.com - title in the anchor, location in a sibling div.tw-text-neutral-dark-80. Handled by scrape_custom with loc_class. Was WRONGLY parked as ""PeopleForce unsupported"" - that is only the apply platform. Same markup as SoftConstruct",digital
 Oddin.gg,Sports/Prediction,yes,20,producing,detect,,From LinkedIn follows,digital
+OlyBet Group,Operator,yes,27,producing,detect,csod:olympic|1,"Cornerstone OnDemand at olympic.csod.com. React shell, but csod.context in the page HTML carries BOTH the Bearer token and the regional API host (eu-fra.api.csod.com), so the fetcher lifts them fresh each run - the token is anonymous and expires after 2 hours. One POST to rec-job-search/external/jobs with pageSize 9999, no paging",digital
 OpenBet,Supplier - Sportsbook,yes,6,producing,detect,workable:openbet-1,"Workable, note the -1 suffix",digital
 Parimatch,Operator,yes,21,producing,detect,teamtailor:talent.pm.group,Teamtailor on a custom domain (talent.pm.group),digital
 Patrianna,Operator,yes,24,producing,detect,,From LinkedIn follows,digital
