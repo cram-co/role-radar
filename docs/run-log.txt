@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-08T18:13:08.404619+00:00
+role-radar collector run: 2026-08-08T19:12:25.181219+00:00
 ============================================================
 
       dayforce rankgroup: HTTP 403
@@ -83,10 +83,10 @@ Eeze: 21 roles (teamtailor)
 Emerald Zebra: 69 roles (wordpress)
 Entain: 252 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39631 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39625 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 87 roles
-evoke: 87 roles (avature)  [38s]
+evoke: 87 roles (avature)  [37s]
 evoke plc: 1 roles (bamboohr)
 Evolution: 292 roles (smartrecruiters)
 Evoplay: 1 roles (greenhouse)
@@ -108,9 +108,9 @@ Hard Rock Digital: 57 roles (recruitee)
 highbet: 7 roles (bamboohr)
 iGamingHunt: 14 roles (ashby)
 iGate: 2 roles (greenhouse_eu)
-      sfcsb jobs.igt.com: board reports 142 jobs
-      sfcsb jobs.igt.com: 142 roles
-IGT: 142 roles (sfcsb)
+      sfcsb jobs.igt.com: board reports 141 jobs
+      sfcsb jobs.igt.com: 141 roles
+IGT: 141 roles (sfcsb)
       wordpress careers.inseinc.com: Field Service Engineer &#8211; Stockport -> 2
 Inspired Entertainment: 2 roles (wordpress)
 Intralot: 40 roles (recruitee)
@@ -247,8 +247,9 @@ Codere Online: 2 roles (agency board)
 Casumo: 3 roles (agency board)
       bet9ja: 14 script bundle(s) referenced, checking 6
       bet9ja: no API URLs found in bundle
-      dropped 7 closed listings
-bet9ja: 0 roles (agency board)  <-- CHECK: returned nothing
+   bet9ja: link + icon -> 7 roles (7 with a location)
+   bet9ja: link parse -> 7
+bet9ja: 7 roles (agency board)
       json-ld https://www.exactasolutions.com/vacancies/page/4/: HTTP 404
       json-ld https://www.exactasolutions.com/vacancies/page/5/: HTTP 404
       sitemap https://www.exactasolutions.com: 30 job URLs
@@ -274,36 +275,14 @@ Exacta Solutions: 32 roles (agency board)
    TalentBet: link parse -> 51
       TalentBet: dropped 1 navigation link(s)
 TalentBet: 50 roles (agency board)
-      json-ld https://igamingrecruitment.io/vacancies/: HTTP 404
-      sitemap https://igamingrecruitment.io: 73 job URLs
-      json-ld https://igamingrecruitment.io/jobs/product-manager-integrations/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/sportsbook-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/api-backend-developer-sports-data/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/back-end-engineer-trading-systems/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/noc-team-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-marketing-compliance/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-complaints-experience-recovery/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-payments/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/platform-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/product-manager-payments/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/affiliate-influencer-account-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/customer-service-representative-spanish-speaking/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/customer-service-representative-turkish-speaking/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/sales-manager-europe/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/casino-operations-executive/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/project-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/digital-content-campaign-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/training-specialist/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/senior-casino-commercial-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-crm/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/account-manager-gibraltar-remote/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/sales-account-manager-b2b-igaming/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/treasury-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/communication-channels-expert/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/content-specialist/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/people-office-coordinator/: 1 JobPosting blocks  <-- USABLE
-   iGaming Recruitment: sitemap + JSON-LD -> 26
-iGaming Recruitment: 26 roles (agency board)
+      json-ld https://igamingrecruitment.io/jobs/: error (ConnectionError)
+      json-ld https://igamingrecruitment.io/jobs/page/2/: error (ConnectionError)
+      json-ld https://igamingrecruitment.io/vacancies/: error (ConnectionError)
+      iGaming Recruitment: shell error (ConnectionError)
+      iGaming Recruitment https://igamingrecruitment.io/jobs/: error (ConnectionError)
+      iGaming Recruitment https://igamingrecruitment.io/jobs/page/2/: error (ConnectionError)
+      iGaming Recruitment https://igamingrecruitment.io/vacancies/: error (ConnectionError)
+iGaming Recruitment: 0 roles (agency board)  <-- CHECK: returned nothing
       sitemap https://www.blip.pt: 17 job URLs
       json-ld https://www.blip.pt/jobs/jr139856/payroll-specialist/: 1 JobPosting blocks  <-- USABLE
       json-ld https://www.blip.pt/jobs/jr139611/senior-talent-development-manager/: 1 JobPosting blocks  <-- USABLE
@@ -345,9 +324,12 @@ Legend: 32 roles (agency board)
    Newfield: listing page -> 1 current roles
    Newfield: link parse -> 1
 Newfield: 1 roles (agency board)
-      sitemap https://huddle.tech: 6 job URLs
-   Huddle: sitemap preferred -> 5 roles (listing is client-rendered)
-Huddle: 5 roles (agency board)
+      json-ld https://huddle.tech/careers/: error (ConnectTimeout)
+      json-ld https://huddle.tech/careers: error (ConnectTimeout)
+      Huddle: shell error (ConnectTimeout)
+      Huddle https://huddle.tech/careers/: error (ConnectTimeout)
+      Huddle https://huddle.tech/careers: error (ConnectTimeout)
+Huddle: 0 roles (agency board)  <-- CHECK: returned nothing
       sitemap https://bgaming.com: 11 job URLs
       BGaming: no JSON-LD after 4 pages, skipping the rest
       BGaming: 38 script bundle(s) referenced, checking 10
@@ -586,14 +568,18 @@ BettingJobs: 103 roles (agency board)
    Van Kaizen: public API /roles -> 12 roles
 Van Kaizen: 12 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
+   carried forward 26 roles for iGaming Recruitment (unreachable this run)
+   carried forward 5 roles for Huddle (unreachable this run)
 
-first_seen: 83 roles new since the last run, 7247 carried an existing date
+carried 31 roles forward from the previous feed
+
+first_seen: 92 roles new since the last run, 7244 carried an existing date
 
 dropped 46 postings older than 2 years
 
 dropped 37 physical racing roles (stable, yard, raceday, track)
 
-companies.csv refreshed: 177 returning, 54 not
+companies.csv refreshed: 178 returning, 53 not
 
-Feed written: 7247 jobs
+Feed written: 7253 jobs
 Unresolved companies (0): 
