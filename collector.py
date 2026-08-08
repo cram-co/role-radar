@@ -1173,6 +1173,8 @@ def fetch_wordpress(token):
                         break
                 if loc:
                     break
+            # the title often carries a truer location than the field
+            loc = _loc_from_title(title, loc)
             out.append({
                 "title": title,
                 "location": loc,
@@ -2867,11 +2869,83 @@ _JUNK_TITLE = re.compile(
     r"previous|contact|about|register|sign\s*in|log\s*in)$", re.I)
 
 
+# A requisition reference glued to the end of a title. Emerald Zebra publish
+# "Risk and Payments Agent-4200563" and "Head of Projects (FinTech), Limassol,
+# Cyprus-4245817" — the number is in their post title, not something we added.
+# Five digits minimum, so a genuine "Engineer II-2024" or "Casino 2000" is safe.
+_TITLE_REF = re.compile(r"\s*[-–—_#]\s*\d{5,}\s*$")
+
+
+# Places that turn up as a trailing clause on an agency's job titles. Not a
+# world gazetteer — just enough to be confident a comma-tail is a LOCATION and
+# not part of the role, so "Director, VIP Sports" is never mistaken for one.
+_TITLE_PLACES = re.compile(
+    r"^(remote|hybrid|onsite|on-site|"
+    r"cyprus|limassol|nicosia|larnaca|paphos|famagusta|"
+    r"malta|valletta|sliema|gzira|msida|"
+    r"dubai|abu dhabi|uae|united arab emirates|qatar|doha|saudi\w*|riyadh|"
+    r"london|manchester|leeds|gibraltar|isle of man|douglas|jersey|guernsey|uk|"
+    r"united kingdom|england|scotland|ireland|dublin|"
+    r"greece|athens|thessaloniki|bulgaria|sofia|romania|bucharest|"
+    r"poland|warsaw|krakow|portugal|lisbon|porto|spain|madrid|barcelona|"
+    r"germany|berlin|munich|netherlands|amsterdam|belgium|brussels|"
+    r"estonia|tallinn|latvia|riga|lithuania|vilnius|ukraine|kyiv|kiev|"
+    r"serbia|belgrade|croatia|zagreb|slovenia|ljubljana|austria|vienna|"
+    r"italy|rome|milan|france|paris|switzerland|zurich|geneva|"
+    r"sweden|stockholm|denmark|copenhagen|norway|oslo|finland|helsinki|"
+    r"armenia|yerevan|georgia|tbilisi|batumi|israel|tel aviv|turkey|istanbul|"
+    r"south africa|cape town|johannesburg|nigeria|lagos|kenya|nairobi|"
+    r"usa|us|united states|new york|las vegas|new jersey|canada|toronto|"
+    r"australia|sydney|melbourne|philippines|manila|singapore|japan|tokyo|"
+    r"brazil|sao paulo|mexico|colombia|bogota|peru|lima|panama|costa rica"
+    r")\b", re.I)
+
+
+def _loc_from_title(title, current=""):
+    """Some agencies bake the real location into the job title and leave the
+    location FIELD holding their own office or a broad taxonomy. Emerald Zebra
+    publish "Financial Analyst, Dubai, UAE" with a location of Limassol — wrong
+    for 55 of their 69 roles.
+
+    Only the trailing comma-separated segments are considered, and only when
+    they are recognisable places, so "Director, VIP Sports" is left alone."""
+    # clean first: the requisition reference is glued to the LAST segment, so
+    # "…, Dubai, UAE-4244372" would otherwise yield a location of "UAE-4244372"
+    parts = [p.strip() for p in _clean_title(title).split(",")]
+    if len(parts) < 2:
+        return current
+    tail = []
+    for p in reversed(parts[1:]):
+        base = re.sub(r"\s*\(.*?\)\s*", " ", p).strip()
+        if base and _TITLE_PLACES.match(base) and len(base) <= 30:
+            tail.insert(0, base)
+        else:
+            break
+    if not tail:
+        return current
+    return ", ".join(tail)[:80]
+
+
+def _clean_title(t):
+    t = _TITLE_REF.sub("", (t or "").strip())
+    return re.sub(r"\s+", " ", t).strip(" ,;-–—")
+
+
 def _drop_junk(jobs, source=""):
-    """Strip navigation links that slipped through as vacancies."""
+    """Strip navigation links that slipped through as vacancies, and trailing
+    requisition references from the titles that survive."""
     out = [j for j in jobs if not _JUNK_TITLE.match((j.get("title") or "").strip())]
     if len(out) != len(jobs) and source:
         print(f"      {source}: dropped {len(jobs)-len(out)} navigation link(s)")
+    fixed = 0
+    for j in out:
+        t = j.get("title") or ""
+        c = _clean_title(t)
+        if c and c != t:
+            j["title"] = c
+            fixed += 1
+    if fixed and source:
+        print(f"      {source}: stripped a trailing reference from {fixed} title(s)")
     return out
 
 
@@ -3782,7 +3856,10 @@ CUSTOM_BOARDS = {
                          # gives /Details/12 — the same role a second time under a
                          # broken URL.
                          listing=["/home/search"],
-                         loc_icon="fa-map-marker", skip_if=r"Application\s*Closed"),
+                         # NO skip_if. Every one of their 7 listings is flagged
+                         # "Application Closed" and dropping them left the board
+                         # empty — he wants those 7 carried regardless.
+                         loc_icon="fa-map-marker"),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
     # also PeopleForce, so the same sibling class should carry the location —
@@ -4040,6 +4117,19 @@ def _links_with_loc_icon(html_text, listing_url, base, marker, cfg):
                 if mo > 12 and d <= 12:
                     d, mo = mo, d
                 posted = f"{y:04d}-{mo:02d}-{d:02d}"
+                # A posting date in the future means we read it the wrong way
+                # round: bet9ja's "3/12/2026" is 12 March, not 3 December, and
+                # left alone it would sort to the top as the newest role on the
+                # board. Only swap when the alternative is actually plausible.
+                from datetime import date as _date
+                today = _date.today()
+                if _date(y, mo, d) > today and d <= 12 and mo <= 31:
+                    alt = f"{y:04d}-{d:02d}-{mo:02d}"
+                    try:
+                        if _date(y, d, mo) <= today:
+                            posted = alt
+                    except ValueError:
+                        pass
             except Exception:
                 posted = None
         out.append({"title": title, "location": _strip_tag_debris(loc)[:60],
