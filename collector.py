@@ -3885,8 +3885,6 @@ CUSTOM_BOARDS = {
                          listing=["/vacancies/", "/vacancies"]),
     "Nolimit City®": dict(base="https://career.nolimitcity.com", marker="/career/",
                          listing=["/", "/career/"]),
-    "Push Gaming":  dict(base="https://www.pushgaming.com", marker="/careers/",
-                         listing=["/careers/join-our-team/", "/careers/"]),
     "ARRISE (global)": dict(base="https://arrise.com", marker="/job",
                          listing=["/careers", "/careers/", "/jobs", "/en/careers"]),
     # NOTE: Apercon is now pinned to wordpress:apercon.com in companies.csv,
