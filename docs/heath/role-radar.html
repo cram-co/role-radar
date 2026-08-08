@@ -307,7 +307,7 @@ let page = 1;
 // Hide flag needs it to recognise floor work.
 const EXCLUDE_GROUPS = [
   { id: "ret", label: "Shops, Casino Floor & Hotel",
-    rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer|slot attendant|slot technician|casino host|pit boss|floor supervisor|table games|beverage|bartender|barback|server|waiter|waitress|host|hostess|busser|barista|cook|chef|culinary|kitchen|steward|dishwash\w*|banquet|buffet|restaurant|housekeep\w*|room attendant|guest (room|service)|valet|porter|bell ?(person|staff|hop)|concierge|spa|salon|massage|lifeguard|pool attendant|security officer|surveillance|groundskeep\w*|landscap\w*|maintenance technician|custodian|janitor|laundry|warehouse|usher|ticket|box office|parking|maintenance\s*engineer|engineer[^|]{0,12}maintenance|facilities\s*engineer|hvac|plumber|electrician|\bmechanic\b|refrigerat|carpenter|painter|kitchen|slot\s*tech|groundskeeper|attendant|clerk|cage|count room|front desk|bell desk|slots?|poker room|bingo|keno|race ?book|arcade|amusement|greeter|runner|cleaner|part[ -]?time|full[ -]?time|steady extra|on[ -]?call|seasonal|shift lead)\b/i,
+    rx: /\b(retail|shop|shopmitarbeiter|cleaner|cashier|aushilfe|minijob|quereinsteiger|verk\u00e4ufer|store manager|shop manager|game presenter|shuffler|croupier|dealer|slot attendant|slot technician|casino host|pit boss|floor supervisor|table games|beverage|bartender|barback|server|waiter|waitress|host|hostess|busser|barista|cook|chef|culinary|kitchen|steward|dishwash\w*|banquet|buffet|restaurant|housekeep\w*|room attendant|guest (room|service)|valet|porter|bell ?(person|staff|hop)|concierge|spa|salon|massage|lifeguard|pool attendant|security officer|surveillance|groundskeep\w*|landscap\w*|maintenance technician|custodian|janitor|laundry|warehouse|usher|ticket|box office|parking|stadia|stadium|greyhound|racetrack|racecourse|equine|stable ?hand|stables|horsemen|paddock|kennels?|maintenance\s*engineer|engineer[^|]{0,12}maintenance|facilities\s*engineer|hvac|plumber|electrician|\bmechanic\b|refrigerat|carpenter|painter|kitchen|slot\s*tech|groundskeeper|attendant|clerk|cage|count room|front desk|bell desk|slots?|poker room|bingo|keno|race ?book|arcade|amusement|greeter|runner|cleaner|part[ -]?time|full[ -]?time|steady extra|on[ -]?call|seasonal|shift lead)\b/i,
     keep: /\b(chief|c[eofmpir]o|managing director|general manager|vice president|\bvp\b|head of|director of|senior director|senior manager|head,)\b/i },
 
   { id: "it",  label: "IT & Engineering",
@@ -363,6 +363,17 @@ const DIGITAL_OVERRIDE = /\b(digital|online|igaming|e-?commerce|product|platform
 // "Director of Property Analytics" are land-based jobs wearing digital words.
 // These terms are unambiguous — no online role is about hotel housekeeping.
 const LAND_CONTEXT = /\b(propert\w*|hospitality|hotel|resort|casino marketing|player development|f\s*&\s*b|food and beverage|banquet|venue|stadia|racecourse|racetrack|on[- ]site|floor operations|construction|facilit\w*|housekeep\w*|guest experience|gaming operations)\b/i;
+
+// VP and above always shows, whatever the company. A C-suite or MD role at a
+// land-based operator is still a C-suite role, and the company rule should
+// never be the reason one goes unseen.
+//
+// The line sits at VP deliberately. Extending it to Director or GM surfaced 15
+// more roles and every one was Caesars property work — Slot Operations,
+// Surveillance, Cage Operations, Food & Beverage. Today VP+ rescues exactly one
+// role, so this is insurance against a future posting rather than a fix for a
+// present gap.
+const SENIOR_ALWAYS = /\b(chief|c[eofmit]o|coo|president|managing director|vice president|vp|svp|evp)\b/i;
 
 function computeNonDigitalCos(){
   const flagged = new Set();
@@ -794,9 +805,10 @@ function render(){
     // "Casino Host, Marketing" cannot buy its way back in. Only then does the
     // company rule apply, and a clearly digital title overrides it.
     out = out.filter(j =>
-      !isFloorTitle(j.t) &&
-      (!NON_DIGITAL_COS.has(j.c) ||
-       (DIGITAL_OVERRIDE.test(j.t || "") && !LAND_CONTEXT.test(j.t || ""))));
+      SENIOR_ALWAYS.test(j.t || "") ||
+      (!isFloorTitle(j.t) &&
+       (!NON_DIGITAL_COS.has(j.c) ||
+        (DIGITAL_OVERRIDE.test(j.t || "") && !LAND_CONTEXT.test(j.t || "")))));
   }
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
