@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-08T15:03:48.889533+00:00
+role-radar collector run: 2026-08-08T18:13:08.404619+00:00
 ============================================================
 
       dayforce rankgroup: HTTP 403
@@ -26,8 +26,6 @@ Jumpman Gaming: 0 roles (workday)
       workday sisal/sisalcorp: cxs 'sisalcorp' -> HTTP 422
       workday sisal/sisalcorp: cxs 'sisalcorp' -> HTTP 422
 Sisal: 0 roles (workday)
-      zoho maxbet.zohorecruit.eu: 51 roles
-MaxBet: 51 roles (zoho)
 3 Oaks Gaming: 1 roles (workable)
 Alea: 8 roles (teamtailor)
 Altenar: 23 roles (bamboohr)
@@ -85,7 +83,7 @@ Eeze: 21 roles (teamtailor)
 Emerald Zebra: 69 roles (wordpress)
 Entain: 252 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39628 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39631 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 87 roles
 evoke: 87 roles (avature)  [38s]
@@ -133,6 +131,8 @@ Lottoland: 1 roles (greenhouse)
 Lottomatica: 49 roles (workday)
       sfcsb jobs.luckiagaminggroup.com: 30 roles
 Luckia: 30 roles (sfcsb)
+      zoho maxbet.zohorecruit.eu: 51 roles
+MaxBet: 51 roles (zoho)
 MERKUR Casino UK: 51 roles (workday)
 Midnite: 17 roles (ashby)
 MiFinity: 14 roles (bamboohr)
@@ -587,7 +587,7 @@ BettingJobs: 103 roles (agency board)
 Van Kaizen: 12 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
 
-first_seen: 134 roles new since the last run, 7196 carried an existing date
+first_seen: 83 roles new since the last run, 7247 carried an existing date
 
 dropped 46 postings older than 2 years
 
