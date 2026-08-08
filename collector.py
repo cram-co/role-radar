@@ -2357,17 +2357,29 @@ def fetch_zoho(token):
         print(f"      zoho {host}: HTTP {r.status_code}")
         return []
 
-    mt = re.search(r'<input[^>]*\bvalue="(\[.*?\])"[^>]*\bid="jobs"', r.text, re.S)
-    if not mt:
-        mt = re.search(r'<input[^>]*\bid="jobs"[^>]*\bvalue="(\[.*?\])"', r.text, re.S)
-    if not mt:
+    # Isolate the TAG first, then read its value. Their page has four hidden
+    # inputs — pageJson, moduleMeta, jobs, meta — and moduleMeta also starts
+    # with "[", so matching value=... directly latched onto the wrong one and
+    # captured across the tag boundary. Attribute values carry no literal " or
+    # > (both are entity-escaped), so tag isolation is safe.
+    raw = None
+    for tm in re.finditer(r"<input\b[^>]*>", r.text):
+        tag = tm.group(0)
+        if not re.search(r'\bid="jobs"', tag):
+            continue
+        vm = re.search(r'\bvalue="([^"]*)"', tag)
+        if vm:
+            raw = vm.group(1)
+            break
+    if raw is None:
         ids = re.findall(r'<input[^>]*id="(\w+)"', r.text)[:10]
         print(f"      zoho {host}: no jobs input found — inputs present: {ids}")
         return []
     try:
-        items = json.loads(html.unescape(mt.group(1)))
-    except Exception:
-        print(f"      zoho {host}: jobs input did not parse as JSON")
+        items = json.loads(html.unescape(raw))
+    except Exception as e:
+        head = html.unescape(raw)[:110].replace("\n", " ")
+        print(f"      zoho {host}: jobs input did not parse — {type(e).__name__}: {head}")
         return []
     if not isinstance(items, list) or not items:
         print(f"      zoho {host}: jobs input empty")
@@ -3765,7 +3777,11 @@ CUSTOM_BOARDS = {
     # /home/search), so URLs join against the listing page. Most of their board
     # is flagged "Application Closed" — skip_if drops those, leaving the live ones.
     "bet9ja":       dict(base="https://bet9jacareers.com", marker="Details/",
-                         listing=["/home/search", "/home"],
+                         # ONE listing path only. "/home" has no trailing slash,
+                         # so urljoin resolves "Details/12" against the parent and
+                         # gives /Details/12 — the same role a second time under a
+                         # broken URL.
+                         listing=["/home/search"],
                          loc_icon="fa-map-marker", skip_if=r"Application\s*Closed"),
     "KamaGames":    dict(base="https://www.kamagames.com", marker="/vacancy",
                          listing=["/careers"]),
@@ -4114,7 +4130,7 @@ def scrape_custom(name):
                     print(f"   {name}: first-element titles -> {new_n}")
                 continue
             if cfg.get("loc_icon"):
-                found = _links_with_loc_icon(r.text, base.rstrip("/") + path, base, marker, cfg)
+                found = _links_with_loc_icon(r.text, url, base, marker, cfg)
                 new_n = 0
                 for j in found:
                     if j["url"] in seen:
