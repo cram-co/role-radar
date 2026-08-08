@@ -2098,6 +2098,24 @@ def fetch_hurma(token):
     return out
 
 
+def _csod_date(v):
+    """Cornerstone hand back DD/MM/YYYY. Left raw, the browser reads it as the
+    American MM/DD and 06/08/2026 lands in June rather than August — wrong by
+    two months, which breaks both the sort and the 48-hour filter. 28/07/2026
+    settles which way round it is: there is no month 28."""
+    if not v:
+        return None
+    t = str(v).strip()
+    m = re.match(r"^(\d{1,2})[/-](\d{1,2})[/-](\d{4})$", t)
+    if m:
+        d, mo, y = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        if mo > 12 and d <= 12:          # the other way round after all
+            d, mo = mo, d
+        if 1 <= mo <= 12 and 1 <= d <= 31:
+            return f"{y:04d}-{mo:02d}-{d:02d}"
+    return t
+
+
 def fetch_csod(token):
     """Cornerstone OnDemand career sites at {tenant}.csod.com.
 
@@ -2227,8 +2245,8 @@ def fetch_csod(token):
                                            "displayLocation", "primaryLocation")),
             "department": str(_pick(j, "department", "division", "jobCategory") or ""),
             "url": u,
-            "posted_at": _pick(j, "postingEffectiveDate", "postedDate",
-                               "publishedDate", "createdDate"),
+            "posted_at": _csod_date(_pick(j, "postingEffectiveDate", "postedDate",
+                                          "publishedDate", "createdDate")),
         })
     if not out and items and isinstance(items[0], dict):
         print(f"      csod {tenant}: {len(items)} records but none mapped — "
