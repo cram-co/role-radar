@@ -1070,7 +1070,10 @@ function ageOf(v){                     // ms since a date string, or null
 }
 function matchesShow(j, id){
   if(id === "__agency") return AGENCIES.has(j.c);
-  if(id === "__added"){ const a = ageOf(j.fs); return a !== null && a <= 7*DAY; }
+  // 72 hours, not 7 days. This is "new to the board", which is a different
+  // question from "recently posted" — a third of roles carry no posted date at
+  // all, so this is the only honest freshness signal we have for them.
+  if(id === "__added"){ const a = ageOf(j.fs); return a !== null && a <= 3*DAY; }
   if(id === "__p48"){   const a = ageOf(j.p);  return a !== null && a <= 2*DAY; }
   if(id === "__p7"){    const a = ageOf(j.p);  return a !== null && a <= 7*DAY; }
   return groupOf(j.t) === id;
