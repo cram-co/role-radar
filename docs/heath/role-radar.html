@@ -456,7 +456,62 @@ const CITY_COUNTRY = {
   "roma":"Italy", "milano":"Italy", "madrid":"Spain", "barcelona":"Spain",
   "lisbon":"Portugal", "lisboa":"Portugal", "são paulo":"Brazil", "sao paulo":"Brazil",
   "buenos aires":"Argentina", "bogotá":"Colombia", "medellín":"Colombia",
+  // added 8 Aug from a full audit of the feed: 318 roles were landing in the
+  // catch-all and most were simply cities the map had never met.
+  "macedonia":"North Macedonia", "fyrom":"North Macedonia",
+  "burton on trent":"United Kingdom", "knutsford":"United Kingdom",
+  "swansea":"United Kingdom", "chelmsley wood":"United Kingdom",
+  "waltham cross":"United Kingdom", "solihull":"United Kingdom",
+  "seoul":"South Korea", "almaty":"Kazakhstan", "chiang mai":"Thailand",
+  "bangkok":"Thailand", "centennial":"United States", "basseterre":"Saint Kitts and Nevis",
+  "tooting":"United Kingdom", "ealing":"United Kingdom", "leicester":"United Kingdom",
+  "sutton":"United Kingdom", "aberdeen":"United Kingdom", "paddington":"United Kingdom",
+  "ballards lane":"United Kingdom", "finchley":"United Kingdom", "wembley":"United Kingdom",
+  "ilford":"United Kingdom", "romford":"United Kingdom", "luton":"United Kingdom",
+  "mississauga":"Canada", "brampton":"Canada", "ottawa":"Canada", "calgary":"Canada",
+  "louisville":"United States", "tyler":"United States", "bronx":"United States",
+  "jamesburg":"United States", "phillipsburg":"United States", "buffalo":"United States",
+  "santiago de los caballeros":"Dominican Republic", "santo domingo":"Dominican Republic",
+  "lansing":"United States", "orlando":"United States", "rochester":"United States",
+  "detroit":"United States", "columbus":"United States", "denver":"United States",
+  "phoenix":"United States", "seattle":"United States", "miami":"United States",
+  "limassol":"Cyprus", "nicosia":"Cyprus", "larnaca":"Cyprus", "paphos":"Cyprus",
+  "famagusta":"Cyprus", "ayia napa":"Cyprus",
+  "hammersmith":"United Kingdom", "putney":"United Kingdom", "croydon":"United Kingdom",
+  "milton keynes":"United Kingdom", "worthing":"United Kingdom", "exeter":"United Kingdom",
+  "maidstone":"United Kingdom", "hull":"United Kingdom", "bridgwater":"United Kingdom",
+  "coatbridge":"United Kingdom", "cwmbran":"United Kingdom", "swindon":"United Kingdom",
+  "reading":"United Kingdom", "nottingham":"United Kingdom", "sheffield":"United Kingdom",
+  "birmingham":"United Kingdom", "bristol":"United Kingdom", "glasgow":"United Kingdom",
+  "edinburgh":"United Kingdom", "cardiff":"United Kingdom", "belfast":"United Kingdom",
+  "liverpool":"United Kingdom", "newcastle":"United Kingdom", "brighton":"United Kingdom",
+  "stoke":"United Kingdom", "stoke-on-trent":"United Kingdom", "watford":"United Kingdom",
+  "banja luka":"Bosnia and Herzegovina", "sarajevo":"Bosnia and Herzegovina",
+  "tuzla":"Bosnia and Herzegovina", "bijeljina":"Bosnia and Herzegovina",
+  "prijedor":"Bosnia and Herzegovina", "mostar":"Bosnia and Herzegovina",
+  "skopje":"North Macedonia", "bitola":"North Macedonia",
+  "bucurești":"Romania", "bucuresti":"Romania", "bucharest":"Romania",
+  "cluj":"Romania", "cluj-napoca":"Romania", "timișoara":"Romania", "timisoara":"Romania",
+  "lviv":"Ukraine", "kharkiv":"Ukraine", "odesa":"Ukraine", "dnipro":"Ukraine",
+  "plovdiv":"Bulgaria", "varna":"Bulgaria", "burgas":"Bulgaria",
+  "marbella":"Spain", "alcobendas":"Spain", "malaga":"Spain", "málaga":"Spain",
+  "valencia":"Spain", "sevilla":"Spain", "seville":"Spain",
+  "providence":"United States", "west greenwich":"United States", "lakeland":"United States",
+  "charleston":"United States", "madison":"United States", "nashville":"United States",
+  "tallahassee":"United States", "cedar falls":"United States", "austin":"United States",
+  "reno":"United States", "baton rouge":"United States", "council bluffs":"United States",
+  "moncton":"Canada", "dieppe":"Canada", "north york":"Canada", "vancouver":"Canada",
+  "montreal":"Canada", "montréal":"Canada",
+  "belgrade":"Serbia", "beograd":"Serbia", "novi sad":"Serbia", "niš":"Serbia",
+  "podgorica":"Montenegro", "zagreb":"Croatia", "ljubljana":"Slovenia",
+  "kraków":"Poland", "krakow":"Poland", "gdansk":"Poland", "gdańsk":"Poland",
+  "wroclaw":"Poland", "wrocław":"Poland", "poznan":"Poland", "poznań":"Poland",
+  "porto":"Portugal", "braga":"Portugal", "thessaloniki":"Greece",
+  "tel aviv":"Israel", "istanbul":"Turkey", "izmir":"Turkey",
+  "auckland":"New Zealand", "gold coast":"Australia", "brisbane":"Australia",
+  "perth":"Australia", "adelaide":"Australia",
   "pieta":"Malta", "sliema":"Malta", "st julian's":"Malta", "birkirkara":"Malta",
+  "msida":"Malta", "gzira":"Malta", "san gwann":"Malta", "ta' xbiex":"Malta",
   "valletta":"Malta", "tbilisi":"Georgia", "yerevan":"Armenia", "kyiv":"Ukraine",
   "riga":"Latvia", "tallinn":"Estonia", "vilnius":"Lithuania", "belgrade":"Serbia",
   "zagreb":"Croatia", "bucharest":"Romania", "sydney":"Australia", "melbourne":"Australia",
@@ -600,6 +655,16 @@ function bucketsOf(loc){
   const b = bucket(raw);
   if(!b) return [];
   const out = [isKnownPlace(b) ? b : "Inside the listing"];
+  // ...and the inverse: "London · Remote" resolves to London, but someone
+  // filtering on Remote should still find it.
+  if(out[0] !== "Remote" && out[0] !== "Inside the listing"){
+    const rl = String(raw || "").toLowerCase();
+    if(rl.includes("remote") || rl.includes("anywhere")
+       || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(rl)){
+      out.unshift("Remote");
+    }
+  }
+
   // "United States (Remote)" is both. Remote wins the single bucket because
   // it is checked first, which hid the country — so when a string says remote
   // AND names somewhere, list it under both rather than choosing.
@@ -613,10 +678,24 @@ function bucketsOf(loc){
       if(c && c !== "Remote" && isKnownPlace(c)) out.push(c);
     }
   }
-  return out;
+  // both dual-bucket rules can name the same place, so collapse — and this has
+  // to be the LAST thing, or an early return skips the rule below it
+  return [...new Set(out)];
 }
 
 function bucket(loc){
+  // Ask the ORIGINAL string about remote before repairing it. repairLoc strips
+  // a trailing work-model word so "London Full-time Remote" becomes "London" —
+  // right for that, fatal for "Fully Remote", which arrived here as "Fully".
+  const rawLow = String(loc || "").toLowerCase();
+  if(rawLow.includes("remote") || rawLow.includes("anywhere")
+     || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(rawLow)){
+    // "London · Remote" is still London — only treat it as Remote when no
+    // actual place survives the repair.
+    const rest = repairLoc(loc).replace(/\b(fully|global|worldwide|europe|emea|apac|amer|amers|latam|na|nam|international|multiple|various|anywhere|remote|hybrid|on[- ]?site|based|first|only|friendly)\b/gi, "")
+                               .replace(/[\s,;·\-–]+/g, " ").trim();
+    if(!rest || rest.length < 3) return "Remote";
+  }
   loc = repairLoc(loc);
   // TalentBet emit ", , " — passes a plain emptiness check but names nowhere
   if(!loc || !/[a-z0-9]/i.test(String(loc))) return "Inside the listing";
@@ -624,6 +703,10 @@ function bucket(loc){
   // evoke's betting-shop addresses end in a town, so without this every shop
   // invented a country: Cwmbran, Bridgwater, Croydon.
   if(/\b[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}\b/i.test(String(loc))) return "United Kingdom";
+  // and the Canadian equivalent — letter digit letter, digit letter digit.
+  // "Mississauga, CA, L4V 1J7" was landing nowhere because the walk could not
+  // get past the code to reach the city.
+  if(/\b[A-Z]\d[A-Z]\s*\d[A-Z]\d\b/i.test(String(loc))) return "Canada";
   // some feeds arrive with entities intact: "St. Julian&#39;s" -> "St. Julian's"
   const s = String(loc).replace(/&#3[49];/g, "'").replace(/&amp;/g, "&")
                        .replace(/&nbsp;/g, " ").trim();
@@ -632,8 +715,11 @@ function bucket(loc){
      || /^all locations?$/i.test(s)) return "Multiple locations";
   // "Stockholm; Uppsala" — take the first, it's the primary site
   if(s.includes(";")) return bucket(s.split(";")[0]);
+  if(s.includes("|")) return bucket(s.split("|")[0]);
   if(low.includes("remote") || low.includes("anywhere")
      || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(low)) return "Remote";
+  if(/\b(uk|united kingdom)[\s-]*(wide|nationwide)\b/i.test(low)
+     || /^nationwide\b/i.test(low)) return "United Kingdom";
   if(low.includes("european union")) return "European Union";
   if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "United Arab Emirates";
   // "USA - Georgia" is the STATE. This has to run before the country-name scan
