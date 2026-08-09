@@ -4696,6 +4696,27 @@ def main():
         if len(cos) > 1:
             print(f"!! {host} is serving {len(cos)} company rows: {', '.join(sorted(cos))}")
 
+    # Clean every title HERE, not in _drop_junk. _drop_junk is only called on
+    # the custom-board and agency path, so the reference-stripping added for
+    # Emerald Zebra never ran on them — they come through the WordPress TOKEN
+    # fetcher. One central pass catches every source, whichever route it took.
+    fixed_t = fixed_l = 0
+    for j in all_jobs:
+        t = j.get("title") or ""
+        c = _clean_title(t)
+        if c and c != t:
+            j["title"] = c
+            fixed_t += 1
+        # and the same for locations baked into a title clause
+        loc = (j.get("location") or "").strip()
+        nl = _loc_from_title(j.get("title") or "", loc)
+        if nl and nl != loc:
+            j["location"] = nl
+            fixed_l += 1
+    if fixed_t or fixed_l:
+        print(f"\ntitles cleaned: {fixed_t} trailing references stripped, "
+              f"{fixed_l} locations taken from the title")
+
     # "skip" means two different things in the CSV: a company we do not want to
     # fetch, and one whose listing is read by a custom board instead of a token.
     # Only the first should be barred from the carry-forward. Huddle and iGaming
