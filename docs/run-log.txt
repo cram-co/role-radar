@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-09T08:22:59.176581+00:00
+role-radar collector run: 2026-08-09T09:31:18.048673+00:00
 ============================================================
 
       dayforce rankgroup: HTTP 403
@@ -65,7 +65,7 @@ Bragg Gaming: 2 roles (workday)
       sfcsb careers.brightstarlottery.com: 111 roles
 Brightstar Lottery: 111 roles (sfcsb)
 Bullfinch Recruitment: 38 roles (breezy)
-Caesars Entertainment: 1434 roles (oracle)  [20s]
+Caesars Entertainment: 1434 roles (oracle)
 Caliente: 4 roles (bamboohr)
 CoinPoker: 7 roles (teamtailor)
 ComeOn Group: 28 roles (workable)
@@ -83,10 +83,10 @@ Eeze: 21 roles (teamtailor)
 Emerald Zebra: 69 roles (wordpress)
 Entain: 252 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39535 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39538 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 75 roles
-evoke: 75 roles (avature)  [30s]
+evoke: 75 roles (avature)  [31s]
 evoke plc: 1 roles (bamboohr)
 Evolution: 292 roles (smartrecruiters)
 Evoplay: 1 roles (greenhouse)
@@ -440,9 +440,7 @@ NSUS Group: 3 roles (agency board)
    SkyCity Entertainment Group: link + .location -> 32 roles (32 with a location)
    SkyCity Entertainment Group: link parse -> 32
 SkyCity Entertainment Group: 32 roles (agency board)
-      The Star Entertainment Group: 1 script bundle(s) referenced, checking 4
-      The Star Entertainment Group: API-looking URLs in bundle:
-         https://www.recaptcha.net/recaptcha/api
+      The Star Entertainment Group: shell HTTP 202
       The Star Entertainment Group https://careers.star.com.au/en/search: HTTP 202
       The Star Entertainment Group https://careers.star.com.au/en: HTTP 202
       The Star Entertainment Group https://careers.star.com.au/: HTTP 202
@@ -589,7 +587,9 @@ BettingJobs: 103 roles (agency board)
 Van Kaizen: 12 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
 
-first_seen: 88 roles new since the last run, 7234 carried an existing date
+titles cleaned: 463 trailing references stripped, 33 locations taken from the title
+
+first_seen: 86 roles new since the last run, 7236 carried an existing date
 
 dropped 46 postings older than 2 years
 
