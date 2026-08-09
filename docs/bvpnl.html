@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
+<title>BitVictor — 3 Year P&amp;L, Sensitivity Model</title>
+<style>
+  :root{
+    color-scheme: dark;
+
+    --ink:#1E252D; --char:#262D35; --panel:#2D353E; --line:#3C4650;
+    --subtle:#7C8892; --blue:#61C7ED; --green:#44984D; --amber:#C7952F;
+    --red:#B4483C; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--ink); color:var(--white); min-height:100vh;
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1240px;margin:0 auto;padding:28px 20px 60px}
+  .eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+  h1{font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1}
+  .sub{margin-top:8px;font-size:13px;color:var(--subtle)}
+  .head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:24px}
+  button{font:inherit;cursor:pointer;background:none;border:none;color:inherit}
+  .ghost{font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:4px;border:1px solid var(--line);color:var(--subtle)}
+  .ghost:hover{color:var(--white);border-color:var(--subtle)}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:24px}
+  .tab{padding:10px 16px;font-size:13px;font-weight:600;color:var(--subtle);position:relative}
+  .tab.on{color:var(--blue)}
+  .tab.on:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--blue)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:0 32px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  @media(max-width:900px){.grid3,.grid4{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}h1{font-size:26px}}
+  .card{background:var(--char);border:1px solid var(--line);border-radius:8px;padding:16px}
+  .cardtitle{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+  .blurb{font-size:11.5px;line-height:1.45;color:var(--subtle);min-height:46px;margin-bottom:12px}
+  .hr{border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:12px}
+  .lab{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--subtle);margin-bottom:4px}
+  .ratio{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+  .rlabel{font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-left:8px}
+  dl{display:flex;flex-direction:column;gap:6px;font-size:12px}
+  .row{display:flex;justify-content:space-between;gap:8px}
+  .row dt{color:var(--subtle)}
+  .row dd{font-weight:600;font-variant-numeric:tabular-nums}
+  .warn{margin-top:10px;font-size:11px;line-height:1.4;color:var(--red)}
+  .pill{padding:6px 12px;font-size:12px;font-weight:600;border-radius:4px;border:1px solid var(--line);color:var(--subtle)}
+  .pill.on{background:var(--blue);color:var(--ink);border-color:var(--blue)}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  thead tr{background:var(--char)}
+  th{text-align:right;font-weight:700;padding:10px 16px;font-variant-numeric:tabular-nums}
+  th:first-child{text-align:left}
+  th span{display:block;font-size:10px;font-weight:400;color:var(--subtle)}
+  td{padding:8px 16px;text-align:right;font-variant-numeric:tabular-nums;color:var(--white)}
+  th{color:var(--white)}
+  td:first-child{text-align:left}
+  tbody tr{border-top:1px solid var(--line)}
+  tr.emph2{background:var(--panel)}
+  .tablewrap{border:1px solid var(--line);border-radius:8px;overflow-x:auto}
+  .metric{background:var(--char);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .metric .lab{margin-bottom:2px}
+  .metric .val{font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+  .field{padding:10px 0;border-bottom:1px solid var(--line)}
+  .fieldrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .fieldlab{font-size:13px;line-height:1.25;text-align:left}
+  .plus{color:var(--blue);font-size:11px;margin-left:6px}
+  input[type=number]{
+    width:76px;text-align:right;font:600 13px/1 inherit;font-variant-numeric:tabular-nums;
+    background:var(--ink);color:var(--white);border:1px solid var(--line);border-radius:4px;padding:6px 8px;
+  }
+  input[type=number]:focus{outline:none;border-color:var(--blue)}
+  .suffix{font-size:11px;color:var(--subtle);width:12px;display:inline-block}
+  .src{margin-top:8px;font-size:11.5px;line-height:1.55;color:var(--subtle);padding-right:8px}
+  .secttitle{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+  .sectnote{font-size:12px;color:var(--subtle);margin-bottom:12px}
+  .opexgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .opexgrid label{display:block;font-size:10px;color:var(--subtle);margin-bottom:4px}
+  .opexgrid input{width:100%}
+  .srccard h3{font-size:13px;color:var(--blue);margin-bottom:8px}
+  .srccard p{font-size:12.5px;line-height:1.6;color:var(--subtle)}
+  .foot{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:11px;color:var(--subtle)}
+  .stack{display:flex;flex-direction:column;gap:16px}
+  .hidden{display:none}
+  .gate{position:fixed;inset:0;background:var(--ink);display:flex;align-items:center;justify-content:center;z-index:99;padding:24px}
+  .gatebox{width:100%;max-width:360px;text-align:center}
+  .gatebox h2{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+  .gatebox p{font-size:12.5px;color:var(--subtle);margin-bottom:20px;line-height:1.5}
+  .gatebox input{width:100%;text-align:center;font:600 15px/1 inherit;letter-spacing:.06em;
+    background:var(--char);color:var(--white);border:1px solid var(--line);border-radius:6px;padding:12px}
+  .gatebox input:focus{outline:none;border-color:var(--blue)}
+  .gatebox button{width:100%;margin-top:10px;padding:12px;border-radius:6px;background:var(--blue);color:var(--ink);font-weight:700;font-size:14px}
+  .gateerr{margin-top:10px;font-size:12px;color:var(--red);min-height:16px}
+</style>
+</head>
+<body>
+<noscript><div style="position:fixed;inset:0;background:#1E252D;color:#fff;display:flex;align-items:center;justify-content:center;z-index:200;padding:24px;text-align:center;font-family:system-ui,sans-serif">This model needs JavaScript enabled. Open the file in a web browser rather than a preview pane.</div></noscript>
+<div class="gate" id="gate">
+  <div class="gatebox">
+    <div class="eyebrow">BitVictor</div>
+    <h2>Three year plan</h2>
+    <p>Bottom-up P&amp;L and sensitivity model.<br>Enter the access word to continue.</p>
+    <input type="password" id="pw" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Access word">
+    <button id="go">Open model</button>
+    <div class="gateerr" id="err"></div>
+  </div>
+</div>
+<div class="wrap" id="app" style="display:none">
+  <div class="head">
+    <div>
+      <div class="eyebrow">Three year plan</div>
+      <h1>Bottom-up P&amp;L, sensitivity model</h1>
+      <p class="sub">All figures USD. Change any assumption and every scenario recalculates.</p>
+    </div>
+    <button class="ghost" id="reset">Reset to defaults</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab on" data-tab="pnl">P&amp;L</button>
+    <button class="tab" data-tab="assumptions">Assumptions</button>
+    <button class="tab" data-tab="sources">Sources</button>
+  </div>
+
+  <div id="pnl"></div>
+  <div id="assumptions" class="hidden"></div>
+  <div id="sources" class="hidden"></div>
+
+  <p class="foot">Tanzanite.xyz on-chain deposits, trailing twelve months to June 2026, 41 operators. Benchmarks from the VIP-Grinders Crypto Casino Market Report, Q2 2026.</p>
+</div>
+
+<script>
+/* ---------------- model constants ---------------- */
+var RETENTION=[1,.4,.3,.24,.2,.17,.15,.13,.12,.11,.1,.09], TAIL=.08;
+var BASE_RAMP=[400,700,1000,1300,1600,1900];
+for(var i=0;i<12;i++)BASE_RAMP.push(1500+i*100);
+for(var i=0;i<12;i++)BASE_RAMP.push(2700+i*60);
+var YEARS=["2027","2028","2029"], PERIODS=[[0,6],[6,18],[18,30]];
+var LEAGUE=[22100,9380,2340,2280,1760,1570,1020,786,776,456,454,379,351,331,236,227,200,50.9,47.3,29.9];
+
+var GLOBAL_DEFAULTS={bonusPctGGR:20,platformPctGGR:20,royaltyPctNGR:3,m1Retention:40,facility:3.03,marketSize:46000};
+var SCENARIO_DEFAULTS={
+  conservative:{avgDeposit:290,hold:21,cpa:100,dpa:2.0,ramp:.40,opex:[1.40,1.65,1.80]},
+  realistic:{avgDeposit:500,hold:33,cpa:250,dpa:2.0,ramp:.43,opex:[1.54,2.46,3.45]},
+  stretch:{avgDeposit:550,hold:33,cpa:400,dpa:3.0,ramp:.42,opex:[1.54,2.50,4.20]}
+};
+var SCENARIOS=[
+  {key:"conservative",label:"Conservative",blurb:"The brand delivers nothing and we are one more crypto casino. Frozen ten-head team, no hiring into a business that is not working."},
+  {key:"realistic",label:"Realistic",blurb:"Decent number of players of good value and fair hold. The one we are shooting for."},
+  {key:"stretch",label:"Stretch",blurb:"The brand delivers. Better depositors, more of them, and they cost more to reach."}
+];
+
+var SRC={
+  conservative:{
+    avgDeposit:"Rainbet's observed average of $290 (Tanzanite, Q2 2026), the floor of the tracked twenty. This is the case where the brand premium never materialises.",
+    hold:"21% is the ratio Stake's own reported figures imply: $22.9bn of deposits against roughly $4.7bn of GGR. A whale-heavy book where large deposits cycle few times.",
+    cpa:"$100 is the midpoint of Stake's own affiliate CPA of $50 to $150 per first-time depositor, varying by jurisdiction and traffic channel."
+  },
+  realistic:{
+    avgDeposit:"Strip the three whale books from the tracked twenty, Bitcasino, Duel and Roobet, and the mean of the remaining seventeen is $510. So $500 is the average operator in the set. Average deposit IS the brand premium: if the name delivers nothing we are a Rainbet at $290, if it delivers fully we approach the leader at $673.",
+    hold:"Above the arithmetic midpoint of Stake's implied 21% and Tanzanite's observed 37%, and deliberately so: a casino-led mass-market book recycles a small deposit harder than a whale book cycles a large one. This is the single assumption the eighteen-month break-even rests on.",
+    cpa:"Above the $50 to $300 range crypto affiliate programmes advertise, and well above Stake's own $50 to $150. Being expensive on acquisition is deliberate: undershooting it is the assumption most likely to set a plan up to fail."
+  },
+  stretch:{
+    avgDeposit:"$550 sits just above the $510 mean of the tracked twenty once the three whale books come out, and $123 below the market leader at $673. Above the middle, well short of the top.",
+    hold:"Unchanged from the base case. Hold is a property of the product, game mix, RTP and how often a deposit is recycled, not of who the depositor is. It should not move just because we have more players.",
+    cpa:"Premium traffic costs more to reach. At $400 the lifetime value to acquisition ratio still clears the base case, so the gain comes from player value and engagement rather than from buying more efficiently."
+  }
+};
+var DPA_SRC={conservative:"Two deposits per ACTIVE month, not per calendar month. Just over half the 3.72 the market data implies once you divide 11.2 deposits per wallet by three active months.",realistic:"Two per ACTIVE month, not per calendar month, so about six deposits a year at this brand. The market figure of 11.2 per wallet divided by three active months gives 3.72; we use just over half. That 11.2 is a mean across six million wallets and heavily skewed by whales, and this model already carries whale behaviour in deposit SIZE, so using the blended frequency too would count the same players twice.",stretch:"Three per ACTIVE month. Still below the 3.72 the market implies. Engagement is where the brand premium shows up in this case: the same depositor plays half as often again."};
+var RAMP_SRC="Multiplier on the monthly acquisition plan. 1.00 is the full ramp: roughly 68,000 players acquired across three years, which leaves about 41,500 unique depositors active in year three. For scale, that would sit sixteenth of the twenty largest operators Tanzanite tracks, between Yeet at 27,000 and Duelbits at 46,000, and is 1.4% of Stake's 2.9 million. No case here needs anything close to big-five volumes. This is also the lever you pull when economics disappoint: you slow down rather than buying into a hole.";
+
+
+var LEAGUE_TABLE=[["Stake","$22,100m","32.50m","$680","2,901,237"],["Roobet","$9,380m","8.08m","$1,161","721,292"],["Shuffle","$2,340m","5.18m","$452","462,413"],["BC.Game","$2,280m","3.04m","$750","271,377"],["Rainbet","$1,760m","7.54m","$233","673,087"],["Gamdom","$1,570m","2.28m","$689","203,533"],["Duel","$1,020m","0.60m","$1,694","53,740"],["Rollbit","$786m","1.95m","$403","174,074"],["Bitcasino","$776m","0.30m","$2,604","26,602"],["Razed","$456m","0.59m","$772","52,758"],["Winna","$454m","0.69m","$657","61,685"],["500 Casino","$379m","1.20m","$316","107,123"],["BetFury","$351m","0.56m","$628","49,901"],["Thrill","$331m","0.71m","$466","63,381"],["Yeet","$236m","0.30m","$781","26,959"],["MetaWin","$227m","0.72m","$313","64,720"],["Duelbits","$200m","0.51m","$389","45,884"],["Goated","$51m","0.28m","$182","24,906"],["Chips","$47m","0.12m","$397","10,623"],["Acebet","$30m","0.05m","$567","4,704"]];
+var ASSUMPTION_SOURCES=[
+["Average deposit","Per-brand observed figures. Conservative takes Rainbet at $290, the mass-market floor; the base sits above the $413 midpoint of Roobet and Rainbet; stretch is a round $650, short of Stake."],
+["Deposit to GGR (hold)","Two observed points bracket it. Stake's reported figures imply 21%; Tanzanite's market-wide observation is 37 cents of GGR per dollar deposited."],
+["Blended CPA","Stake's affiliate programme pays $50 to $150 per qualified first-time depositor. Broader crypto affiliate terms run $50 to $300."],
+["Deposits per active","1.5 per ACTIVE month, not per calendar month. With about three active months per player that is 4.5 deposits a year at one brand. Dividing the market figure of 11.2 deposits per wallet by three active months gives 3.67, and the difference is deliberate: 11.2 is a MEAN across 6m wallets and that distribution is savagely skewed, with a few whales depositing hundreds of times while most wallets deposit once or twice. This model already carries whale behaviour in deposit SIZE, where 5% of actives deposit $5,000 against $263 for the rest. Applying the whale-inflated frequency as well would count the same players twice. At 3.67 the model returns $176m of year-three deposits and $33m cumulative, which is not a plan anyone should present."],
+["Bonuses & rakeback","Industry GGR-to-NGR gap runs 20 to 40% of GGR. Stake's rakeback alone is 5% of house edge, rising to 7% at Platinum."],
+["Platform & content","Aggregation rev-share 10 to 20% of GGR, platform fees a further 5 to 15%. Combined 20% assumes volume negotiation."],
+["Brand royalty","A deal term, not a market rate. Payable on NGR whether or not the venture profits."],
+["Retention curve","Standard casino shape: 40% at month two decaying to an 8% loyal tail, giving 3.01 active months per player. Not crypto-specific, and a known soft spot."],
+["Unique depositors","Derived, not published. Deposit count divided by 11.2 deposits per wallet per year, the market-wide average. That assumes each wallet plays a single brand. In practice wallets multi-home, so true per-brand depositor counts are likely higher, which would make this plan a smaller share of each operator rather than a larger one."]
+];
+
+/* ---------------- state ---------------- */
+var G=JSON.parse(JSON.stringify(GLOBAL_DEFAULTS));
+var S=JSON.parse(JSON.stringify(SCENARIO_DEFAULTS));
+var tab="pnl", detail="realistic", expanded={};
+
+/* ---------------- model ---------------- */
+function curve(n){var sc=G.m1Retention/40;
+  if(n===0)return 1;
+  return n<RETENTION.length?Math.min(1,RETENTION[n]*sc):TAIL*sc;}
+
+function runModel(s){
+  var acq=BASE_RAMP.map(function(v){return Math.round(v*s.ramp);});
+  var om=[];
+  for(var i=0;i<6;i++)om.push(s.opex[0]/6);
+  for(var i=0;i<12;i++)om.push(s.opex[1]/12);
+  for(var i=0;i<12;i++)om.push(s.opex[2]/12);
+  var rows=[],cum=0,worst=0,firstPos=null;
+  for(var m=0;m<30;m++){
+    var act=0;
+    for(var c=0;c<=m;c++)act+=acq[c]*curve(m-c);
+    var dep=act*s.dpa*s.avgDeposit/1e6;
+    var ggr=dep*(s.hold/100);
+    var bon=ggr*(G.bonusPctGGR/100);
+    var ngr=ggr-bon;
+    var ac=acq[m]*s.cpa/1e6;
+    var pl=ggr*(G.platformPctGGR/100);
+    var ro=ngr*(G.royaltyPctNGR/100);
+    var eb=ngr-ac-pl-ro-om[m];
+    if(eb>0&&firstPos===null)firstPos=m+1;
+    cum+=eb; if(cum<worst)worst=cum;
+    rows.push({actives:act,newDep:acq[m],deposits:dep,ggr:ggr,bonus:bon,ngr:ngr,acquisition:ac,platform:pl,royalty:ro,opex:om[m],ebitda:eb,cum:cum});
+  }
+  var years=PERIODS.map(function(p){
+    var sl=rows.slice(p[0],p[1]);
+    function sum(k){return sl.reduce(function(t,r){return t+r[k];},0);}
+    return {newDep:sum("newDep"),actives:sum("actives")/sl.length,deposits:sum("deposits"),
+      ggr:sum("ggr"),bonus:sum("bonus"),ngr:sum("ngr"),acquisition:sum("acquisition"),
+      platform:sum("platform"),royalty:sum("royalty"),opex:sum("opex"),
+      ebitda:sum("ebitda"),cum:sl[sl.length-1].cum};
+  });
+  var life=0; for(var i=0;i<12;i++)life+=curve(i);
+  var margin=1-G.bonusPctGGR/100-G.platformPctGGR/100-(G.royaltyPctNGR/100)*(1-G.bonusPctGGR/100);
+  var arpu=s.dpa*s.avgDeposit*(s.hold/100);
+  var ltv=arpu*life*margin;
+  var yr3=years[2].deposits;
+  var rank=LEAGUE.filter(function(v){return v>yr3;}).length+1;
+  var uq=acq.slice(18,30).reduce(function(a,b){return a+b;},0);
+  for(var k=0;k<18;k++)uq+=acq[k]*curve(18-k);
+  return {years:years,uniqY3:uq,peak:-worst,arpu:arpu,ltv:ltv,ltvCac:s.cpa>0?ltv/s.cpa:0,
+    contribution:ltv-s.cpa,totalPlayers:acq.reduce(function(a,b){return a+b;},0),
+    exitActives:rows[29].actives,share:yr3/G.marketSize*100,rank:rank,
+    firstPos:firstPos,firstProg:firstPos?firstPos+6:null};
+}
+
+/* ---------------- format ---------------- */
+function money(v){return v<0?"($"+Math.abs(v).toFixed(2)+"m)":"$"+v.toFixed(2)+"m";}
+function cost(v){return "($"+Math.abs(v).toFixed(2)+"m)";}
+function n0(v){return Math.round(v).toLocaleString();}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+/* ---------------- render ---------------- */
+var PL_ROWS=[
+ ["New depositors","newDep","count",0],["Monthly actives","actives","count",0],
+ ["Deposits","deposits","money",2],["GGR","ggr","money",1],
+ ["Bonuses &amp; rakeback","bonus","cost",0],["NGR","ngr","money",1],
+ ["Acquisition","acquisition","cost",0],["Platform &amp; content","platform","cost",0],
+ ["Brand royalty","royalty","cost",0],["Operating costs","opex","cost",0],
+ ["EBITDA","ebitda","money",2],["Cumulative EBITDA","cum","money",1]
+];
+
+function healthTone(r){return r<1?"var(--red)":r<1.5?"var(--amber)":"var(--green)";}
+function healthLabel(r){return r<1?"Loses money per player":r<1.5?"Fragile":r<3?"Workable":"Healthy";}
+
+function renderPnl(){
+  var R={}; SCENARIOS.forEach(function(s){R[s.key]=runModel(S[s.key]);});
+  var h='<div class="grid3" style="margin-bottom:28px">';
+  SCENARIOS.forEach(function(s){
+    var r=R[s.key], over=r.peak>G.facility;
+    h+='<div class="card"><div class="cardtitle">'+s.label+'</div><p class="blurb">'+s.blurb+'</p>'
+     +'<div class="hr"><div class="lab">Lifetime value to acquisition cost</div>'
+     +'<span class="ratio" style="color:'+healthTone(r.ltvCac)+'">'+r.ltvCac.toFixed(2)+':1</span>'
+     +'<span class="rlabel" style="color:'+healthTone(r.ltvCac)+'">'+healthLabel(r.ltvCac)+'</span></div><dl>';
+    [["Cumulative by 2029",money(r.years[2].cum),r.years[2].cum>=0?"var(--green)":"var(--red)"],
+     ["Peak cash need",money(r.peak),over?"var(--red)":"var(--white)"],
+     ["Year 3 deposits",money(r.years[2].deposits),"var(--white)"],
+     ["Players acquired",n0(r.totalPlayers),"var(--white)"],
+     ["Market share",r.share.toFixed(2)+"%","var(--white)"],
+     ["League rank",(r.rank>20?"Outside T20":r.rank+" of 20"),"var(--white)"]].forEach(function(x){
+      h+='<div class="row"><dt>'+x[0]+'</dt><dd style="color:'+x[2]+'">'+x[1]+'</dd></div>';
+    });
+    h+='</dl>';
+    if(over)h+='<p class="warn">Peak need exceeds the $'+G.facility.toFixed(2)+'m facility.</p>';
+    h+='</div>';
+  });
+  h+='</div>';
+
+  h+='<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px">'
+   +'<span class="lab" style="margin:0 4px 0 0">Full P&amp;L</span>';
+  SCENARIOS.forEach(function(s){
+    h+='<button class="pill'+(detail===s.key?" on":"")+'" data-detail="'+s.key+'">'+s.label+'</button>';
+  });
+  h+='</div>';
+
+  var r=R[detail];
+  h+='<div class="tablewrap"><table style="min-width:460px"><thead><tr><th></th>';
+  YEARS.forEach(function(y,i){h+='<th>'+y+(i===0?'<span>build + 6m trading</span>':'')+'</th>';});
+  h+='</tr></thead><tbody>';
+  PL_ROWS.forEach(function(row){
+    var label=row[0],key=row[1],kind=row[2],emph=row[3];
+    h+='<tr class="'+(emph===2?"emph2":"")+'"><td style="color:'+(emph>0?"var(--white)":"var(--subtle)")+';font-weight:'+(emph>0?700:400)+'">'+label+'</td>';
+    r.years.forEach(function(y){
+      var v=y[key];
+      var txt=kind==="count"?n0(v):kind==="cost"?cost(v):money(v);
+      var col=kind==="cost"?"var(--subtle)":v<0?"var(--red)":emph>0?"var(--white)":"var(--subtle)";
+      h+='<td style="color:'+col+';font-weight:'+(emph>0?700:400)+'">'+txt+'</td>';
+    });
+    h+='</tr>';
+  });
+  h+='<tr><td style="font-weight:700">EBITDA margin</td>';
+  r.years.forEach(function(y){
+    h+='<td style="font-weight:700;color:'+(y.ebitda<0?"var(--red)":"var(--white)")+'">'+(y.ngr>0?(y.ebitda/y.ngr*100).toFixed(0)+"%":"—")+'</td>';
+  });
+  h+='</tr></tbody></table></div>';
+
+  h+='<div class="grid4" style="margin-top:16px">';
+  [["ARPU per month","$"+r.arpu.toFixed(0)],
+   ["Lifetime value","$"+r.ltv.toFixed(0)],
+   ["Contribution per player","$"+r.contribution.toFixed(0)],
+   ["Monthly EBITDA positive",r.firstProg?"Programme m"+r.firstProg:"Not in 3 years"]].forEach(function(x){
+    h+='<div class="metric"><div class="lab">'+x[0]+'</div><div class="val">'+x[1]+'</div></div>';
+  });
+  h+='</div>';
+  document.getElementById("pnl").innerHTML=h;
+}
+
+function field(id,label,val,suffix,step,src){
+  var isOpen=expanded[id];
+  var h='<div class="field"><div class="fieldrow">'
+   +'<button class="fieldlab" data-src="'+id+'"'+(src?'':' style="cursor:default"')+'>'+label
+   +(src?'<span class="plus">'+(isOpen?"−":"+")+'</span>':'')+'</button>'
+   +'<span><input type="number" data-input="'+id+'" value="'+val+'" step="'+step+'"><span class="suffix">'+(suffix||"")+'</span></span>'
+   +'</div>';
+  if(isOpen&&src)h+='<p class="src">'+esc(src)+'</p>';
+  return h+'</div>';
+}
+
+function renderAssumptions(){
+  var h='<div class="card" style="margin-bottom:24px">'
+   +'<div class="secttitle">Applies to every scenario</div>'
+   +'<p class="sectnote">Structural to the business rather than to the case being argued. Change one and all three scenarios move together.</p>'
+   +'<div class="grid2">'
+   +field("g.platformPctGGR","Platform &amp; content, % of GGR",G.platformPctGGR,"%",1,"Content and aggregation rev-share runs 10 to 20% of GGR, platform fees a further 5 to 15%. Twenty per cent combined assumes decent negotiation at volume.")
+   +field("g.royaltyPctNGR","Brand royalty, % of NGR",G.royaltyPctNGR,"%",0.5,"A deal term rather than a market rate. Payable to the Group on NGR regardless of profitability, so the brand earns whether or not the venture does.")
+   +field("g.m1Retention","First month retention",G.m1Retention,"%",5,"Month-two retention. The curve decays from here to a loyal tail, giving about three active months per acquired player at the 40% default. A standard casino shape rather than a crypto-specific one, which is a known soft spot.")
+   +field("g.facility","Capital facility, $m",G.facility,"",0.1,"£2.25m at 1.3467 is $3.03m: tranche 1 £0.9m, tranche 2 £0.9m, treasury float £0.45m. Peak cash need turns red if it exceeds this.")
+   +'</div></div><div class="grid3">';
+  SCENARIOS.forEach(function(s){
+    var v=S[s.key], src=SRC[s.key];
+    h+='<div class="card"><div class="secttitle" style="margin-bottom:12px">'+s.label+'</div>'
+     +field("s."+s.key+".avgDeposit","Average deposit",v.avgDeposit,"$",10,src.avgDeposit)
+     +field("s."+s.key+".dpa","Deposits per active, mth",v.dpa,"",0.1,DPA_SRC[s.key])
+     +field("s."+s.key+".hold","Deposit to GGR (hold)",v.hold,"%",1,src.hold)
+     +field("s."+s.key+".cpa","Blended CPA",v.cpa,"$",10,src.cpa)
+     +field("s."+s.key+".ramp","Acquisition ramp",v.ramp,"",0.05,RAMP_SRC)
+     +'<div style="padding-top:12px"><div class="lab" style="margin-bottom:8px">Operating costs, $m</div><div class="opexgrid">';
+    YEARS.forEach(function(y,i){
+      h+='<div><label>'+y+'</label><input type="number" data-input="o.'+s.key+'.'+i+'" value="'+v.opex[i]+'" step="0.05"></div>';
+    });
+    h+='</div><p class="src" style="margin-top:8px">'
+     +({conservative:"Frozen at ten heads. No Head of Marketing, no Director of Operations, no Finance Manager, and two engineers rather than four. Those are the hires you do not make while revenue is missing plan, so the MD carries the operations brief.",realistic:"Nineteen heads at the year-one exit, scaling to around twenty-four through 2029 because year three is a growth year. Nineteen is the minimum to run the plan, not a ceiling.",stretch:"Twenty heads at the year-one exit, scaling to around thirty through 2029. Outperformance means more people, not the same people doing more."}[s.key])
+     +'</p></div></div>';
+  });
+  h+='</div>';
+  document.getElementById("assumptions").innerHTML=h;
+}
+
+function renderSources(){
+  var R=runModel(S[detail]);
+  var yr3=R.years[2].deposits, uq=R.uniqY3, avg=S[detail].avgDeposit;
+  var lbl=SCENARIOS.filter(function(x){return x.key===detail;})[0].label;
+  var h='<p class="sectnote" style="margin-bottom:14px">Every operator figure below is observed on-chain, not estimated. '
+   +'Averages and depositor counts are derived from the two columns beside them. The highlighted row is where the '
+   +'<b style="color:var(--blue)">'+lbl.toLowerCase()+'</b> case would sit in year three.</p>';
+  h+='<div class="tablewrap" style="margin-bottom:12px"><table style="min-width:480px"><thead><tr>'
+   +'<th style="text-align:left">#</th><th style="text-align:left">Operator</th>'
+   +'<th>Deposits</th><th>Count</th><th>Avg deposit</th><th>Depositors</th>'
+   +'</tr></thead><tbody>';
+  var placed=false, n=0;
+  function ours(){
+    n++;
+    return '<tr style="background:#15374A"><td style="text-align:left;color:var(--blue)">'+(n>20?"—":n)+'</td>'
+     +'<td style="text-align:left;font-weight:700;color:var(--blue)">This plan, '+lbl.toLowerCase()+'</td>'
+     +'<td style="color:var(--blue);font-weight:600">$'+yr3.toFixed(0)+'m</td>'
+     +'<td style="color:var(--blue)">'+(uq*S[detail].dpa*3.01/1e6).toFixed(2)+'m</td>'
+     +'<td style="color:var(--blue)">$'+avg+'</td>'
+     +'<td style="color:var(--blue);font-weight:600">'+n0(uq)+'</td></tr>';
+  }
+  LEAGUE_TABLE.forEach(function(row){
+    var v=parseFloat(row[1].replace(/[$,m]/g,''));
+    if(!placed && v<yr3){ h+=ours(); placed=true; }
+    n++;
+    h+='<tr><td style="text-align:left;color:var(--subtle)">'+n+'</td>'
+     +'<td style="text-align:left;font-weight:600">'+row[0]+'</td>'
+     +'<td>'+row[1]+'</td><td style="color:var(--subtle)">'+row[2]+'</td>'
+     +'<td>'+row[3]+'</td><td style="color:var(--subtle)">'+row[4]+'</td></tr>';
+  });
+  if(!placed){ n=20; h+=ours(); }
+  h+='</tbody></table></div>';
+  h+='<p class="sectnote" style="margin-bottom:20px">Stake carries <b>2,901,237</b> unique depositors a year. '
+   +'The '+lbl.toLowerCase()+' case needs <b style="color:var(--blue)">'+n0(uq)+'</b>, which is '
+   +'<b>'+(uq/2901237*100).toFixed(1)+'%</b> of the market leader.</p>';
+  h+='<p class="sectnote" style="margin-bottom:20px">The spread is the point. <b>Bitcasino</b> takes 44% of <b>Rainbet</b>\'s deposit volume from <b style="color:var(--blue)">4%</b> of the depositors, so one Bitcasino depositor is worth eleven of Rainbet\'s. Stake sits between them. That contrast is what <b style="color:var(--blue)">Black Type</b> is built for: a VIP layer over a mass-market book, not a different business.</p>';
+  h+='<p class="sectnote" style="margin-bottom:20px"><b>The one observed frequency figure</b> in the whole dataset is 67.2m deposits across roughly 6m unique wallets, or <b style="color:var(--blue)">11.2 deposits per wallet per year</b> across every brand that wallet uses. This model assumes 2.0 per <i>active</i> month, which over three active months is <b>6.0 deposits a year at a single brand</b>, or <b style="color:var(--blue)">54%</b> of the all-brand rate. Stretch at 3.0 reaches 80%. Deposits, count and average deposit are observed. The depositor column is derived by dividing count by 11.2, so it carries that market-wide assumption rather than a per-brand measurement.</p>';
+  h+='<div class="card" style="margin-bottom:16px"><div class="secttitle" style="margin-bottom:10px">Where each assumption comes from</div>';
+  ASSUMPTION_SOURCES.forEach(function(s,i){
+    h+='<div style="display:flex;gap:16px;padding:8px 0'+(i?';border-top:1px solid var(--line)':'')+'">'
+     +'<div style="flex:0 0 150px;font-size:12.5px;font-weight:600">'+s[0]+'</div>'
+     +'<div style="flex:1;font-size:12px;line-height:1.5;color:var(--subtle)">'+s[1]+'</div></div>';
+  });
+  h+='</div>';
+  document.getElementById("sources").innerHTML=h;
+}
+
+function renderAll(){renderPnl();renderAssumptions();renderSources();}
+
+/* ---------------- events ---------------- */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-tab]");
+  if(t){tab=t.dataset.tab;
+    document.querySelectorAll(".tab").forEach(function(b){b.classList.toggle("on",b.dataset.tab===tab);});
+    ["pnl","assumptions","sources"].forEach(function(k){document.getElementById(k).classList.toggle("hidden",k!==tab);});
+    return;}
+  var d=e.target.closest("[data-detail]");
+  if(d){detail=d.dataset.detail;renderPnl();renderSources();return;}
+  var s=e.target.closest("[data-src]");
+  if(s){var id=s.dataset.src;expanded[id]=!expanded[id];renderAssumptions();return;}
+  if(e.target.id==="reset"){
+    G=JSON.parse(JSON.stringify(GLOBAL_DEFAULTS));
+    S=JSON.parse(JSON.stringify(SCENARIO_DEFAULTS));
+    expanded={};renderAll();return;}
+});
+
+document.addEventListener("input",function(e){
+  var el=e.target.closest("[data-input]");
+  if(!el)return;
+  var parts=el.dataset.input.split("."), v=parseFloat(el.value);
+  if(isNaN(v))return;
+  if(parts[0]==="g")G[parts[1]]=v;
+  else if(parts[0]==="s")S[parts[1]][parts[2]]=v;
+  else if(parts[0]==="o")S[parts[1]].opex[parseInt(parts[2],10)]=v;
+  renderPnl();
+});
+
+/* ---------------- access gate ---------------- */
+function hsh(t){var v=5381;for(var i=0;i<t.length;i++){v=((v*33)^t.charCodeAt(i))>>>0;}return v;}
+var KEY=4202362144;
+function unlock(){
+  document.getElementById("gate").style.display="none";
+  document.getElementById("app").style.display="";
+  try{sessionStorage.setItem("ccm","1");}catch(e){}
+}
+var KEYS=[4202362144,3446846464,3450604896];
+function tryPw(){
+  var raw=document.getElementById("pw").value||"";
+  var v=raw.replace(/[\s\u00A0\u200B]/g,"");
+  if(KEYS.indexOf(hsh(v))>-1||KEYS.indexOf(hsh(v.toLowerCase()))>-1){unlock();return;}
+  document.getElementById("err").textContent="Not recognised. Try again.";
+  document.getElementById("pw").value="";document.getElementById("pw").focus();
+}
+document.getElementById("go").addEventListener("click",tryPw);
+document.getElementById("pw").addEventListener("keydown",function(e){if(e.key==="Enter")tryPw();});
+try{if(sessionStorage.getItem("ccm")==="1")unlock();}catch(e){}
+document.getElementById("pw").focus();
+
+renderAll();
+</script>
+</body>
+</html>
