@@ -35,6 +35,16 @@
   .locbtn .caret{color:var(--slate);font-size:11px;}
   .locpanel{position:absolute;z-index:20;top:calc(100% + 6px);left:0;width:100%;max-width:360px;background:#fff;
             border:1px solid #D3D7DE;border-radius:6px;box-shadow:0 8px 26px rgba(14,27,46,.14);padding:10px;}
+  /* Two ways to read the same list: by size when you want to know where the
+     work is, alphabetically when you already know what you are looking for. */
+  .locsort{display:flex;gap:6px;padding:0 2px 9px;border-bottom:1px solid var(--line2);
+           margin-bottom:8px;}
+  .locsort button{flex:1;background:none;border:1px solid var(--line2);border-radius:4px;
+                  padding:5px 8px;font:inherit;font-size:11.5px;color:var(--slate);
+                  cursor:pointer;font-family:'IBM Plex Mono',monospace;letter-spacing:.06em;
+                  text-transform:uppercase;transition:.12s;}
+  .locsort button:hover{border-color:var(--steel);color:var(--navy2);}
+  .locsort button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff;}
   .locpanel input{width:100%;padding:9px 11px;border:1px solid #D3D7DE;border-radius:4px;font:inherit;font-size:14px;margin-bottom:8px;}
   .locpanel input:focus{outline:none;border-color:var(--royal);}
   #locopts{max-height:280px;overflow-y:auto;}
@@ -209,6 +219,10 @@
       </button>
       <div class="locpanel" id="locpanel" hidden>
         <input type="text" id="locsearch" placeholder="Find a location" autocomplete="off" />
+        <div class="locsort">
+          <button type="button" data-s="az" id="locsort-az">A&ndash;Z</button>
+          <button type="button" data-s="count" id="locsort-count">By role count</button>
+        </div>
         <div id="locopts"></div>
       </div>
     </div>
@@ -436,7 +450,7 @@ const CA_PROV_NAMES = new Set(["ontario","quebec","québec","alberta","manitoba"
 const SITE_NOISE = /\b(head office|office|hub|hq|campus|site|services|sas|ltd|limited|inc|bv|gmbh|delta|aleda|adstellam|dnu_?|junglee|massecom|fdj|fdp|product madness)\b/gi;
 // two-letter codes that are countries, not states — added so they don't get
 // swept into the US bucket
-Object.assign(ISO, {si:"Slovenia", ba:"Bosnia & Herzegovina", cr:"Costa Rica", uy:"Uruguay"});
+Object.assign(ISO, {si:"Slovenia", ba:"Bosnia and Herzegovina", cr:"Costa Rica", uy:"Uruguay"});
 // Feeds carry bare city names and local-language country names. Map the ones
 // that actually appear rather than leaving them as separate one-off buckets.
 const CITY_COUNTRY = {
@@ -543,7 +557,7 @@ const CITY_COUNTRY = {
   "amsterdam":"Netherlands", "rotterdam":"Netherlands", "brussels":"Belgium",
   "zurich":"Switzerland", "geneva":"Switzerland", "vienna":"Austria", "wien":"Austria",
   "milan":"Italy", "turin":"Italy", "napoli":"Italy", "naples":"Italy",
-  "porto":"Portugal", "skopje":"North Macedonia", "sarajevo":"Bosnia & Herzegovina",
+  "porto":"Portugal", "skopje":"North Macedonia", "sarajevo":"Bosnia and Herzegovina",
   "ljubljana":"Slovenia", "tirana":"Albania", "chisinau":"Moldova",
   "tel aviv":"Israel", "istanbul":"Turkey", "cairo":"Egypt", "dubai":"United Arab Emirates",
   "singapore":"Singapore", "hong kong":"Hong Kong", "tokyo":"Japan", "seoul":"South Korea",
@@ -604,7 +618,7 @@ function cleanLoc(loc){
 // the user experience is the same either way, you open the posting to find out.
 const ALL_COUNTRIES = ["Afghanistan","Albania","Algeria","Andorra","Angola","Argentina","Armenia",
 "Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium",
-"Belize","Benin","Bermuda","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","Brunei","Bulgaria",
+"Belize","Benin","Bermuda","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria",
 "Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Chad","Chile","China","Colombia",
 "Congo","Costa Rica","Croatia","Cuba","Curacao","Cyprus","Czechia","Denmark","Dominican Republic",
 "Ecuador","Egypt","El Salvador","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon",
@@ -632,7 +646,7 @@ function isKnownPlace(b){
     KNOWN_PLACES = new Set(NAMES.concat(ALL_COUNTRIES));
     for(const v of Object.values(ISO)) KNOWN_PLACES.add(v);
     for(const v of Object.values(CITY_COUNTRY)) KNOWN_PLACES.add(v);
-    ["Remote","Multiple locations","Inside the listing","European Union",
+    ["Remote","Multiple locations","Inside the listing","EMEA",
      "Latin America","Africa","United Kingdom","United States",
      "Canada"].forEach(x => KNOWN_PLACES.add(x));
   }
@@ -663,6 +677,21 @@ function bucketsOf(loc){
        || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(rl)){
       out.unshift("Remote");
     }
+  }
+  // "EMEA - Remote" and "Europe · Fully Remote" resolve to Remote, but someone
+  // browsing Europe should find them. Same dual-bucket idea as Remote itself.
+  if(!out.includes("EMEA")){
+    const el = String(raw || "").toLowerCase();
+    if(/\beurope\b|\beuropean\b|\bemea\b|\b(eu)\b/.test(el)) out.push("EMEA");
+  }
+  // A region-wide listing with no city is almost always remote or flexible —
+  // PawaPay, Sporty, Growe and 37 Pentasia ads are all distributed businesses.
+  // It stays in EMEA too, so this only ever adds reach.
+  if(out.includes("EMEA") && !out.includes("Remote")){
+    const only = String(raw || "").toLowerCase()
+      .replace(/\b(european union|european|europe|emea|eu|wide|only|based)\b/gi, "")
+      .replace(/[\s,;·\-–()]+/g, " ").trim();
+    if(!only || only.length < 3) out.unshift("Remote");
   }
 
   // "United States (Remote)" is both. Remote wins the single bucket because
@@ -716,11 +745,24 @@ function bucket(loc){
   // "Stockholm; Uppsala" — take the first, it's the primary site
   if(s.includes(";")) return bucket(s.split(";")[0]);
   if(s.includes("|")) return bucket(s.split("|")[0]);
+  // "UK/EU - Remote" — a slash separates places too, but only when both sides
+  // look like places rather than "and/or" or a date
+  if(s.includes("/")){
+    const head = s.split("/")[0].trim();
+    if(head.length > 1 && head.length < 22){
+      const hb = bucket(head);
+      if(hb && hb !== "Inside the listing" && isKnownPlace(hb)) return hb;
+    }
+  }
   if(low.includes("remote") || low.includes("anywhere")
      || /\b(home[- ]?based|work from home|wfh|fully distributed)\b/.test(low)) return "Remote";
   if(/\b(uk|united kingdom)[\s-]*(wide|nationwide)\b/i.test(low)
      || /^nationwide\b/i.test(low)) return "United Kingdom";
-  if(low.includes("european union")) return "European Union";
+  if(/\beuropean union\b|\bemea\b|\beurope\b|\beuropean\b/i.test(low)){
+    const rest = low.replace(/\b(european union|european|europe|emea|eu|wide|only|based|remote|hybrid|on[- ]?site)\b/gi, "")
+                    .replace(/[\s,;·\-–()]+/g, " ").trim();
+    if(!rest || rest.length < 3) return "EMEA";
+  }
   if(/\b(dubai|abu dhabi|sharjah)\b/.test(low)) return "United Arab Emirates";
   // "USA - Georgia" is the STATE. This has to run before the country-name scan
   // below, or Georgia the country wins and a Florida role lands in Tbilisi.
@@ -1073,12 +1115,29 @@ function buildLocations(){
   updateLocLabel();
 }
 
+// The pinned hubs always keep their curated order. Only the long tail of
+// countries below them is sorted, and A-Z stays the default — role count is
+// there for when the question is "where is the work" rather than "is X listed".
+let locSort = (() => {
+  try { return localStorage.getItem("rr_locsort") || "az"; } catch(e){ return "az"; }
+})();
+function setLocSort(v){
+  locSort = v;
+  try { localStorage.setItem("rr_locsort", v); } catch(e){}
+  drawLocations();
+}
+
 function drawLocations(){
   const q = (document.getElementById("locsearch").value || "").toLowerCase();
   const hubs = HUBS.filter(h => LOC_COUNTS[h]);
-  // hubs keep their curated order; everything else reads alphabetically,
-  // which is far easier to scan than a count-ordered list
-  const rest = Object.keys(LOC_COUNTS).filter(k => !hubs.includes(k)).sort((a,b)=>a.localeCompare(b));
+  const rest = Object.keys(LOC_COUNTS).filter(k => !hubs.includes(k))
+    .sort(locSort === "az"
+      ? (a,b) => a.localeCompare(b)
+      : (a,b) => LOC_COUNTS[b] - LOC_COUNTS[a] || a.localeCompare(b));
+  const cb1 = document.getElementById("locsort-count");
+  const cb2 = document.getElementById("locsort-az");
+  if(cb1) cb1.setAttribute("aria-pressed", locSort !== "az");
+  if(cb2) cb2.setAttribute("aria-pressed", locSort === "az");
   const row = k => `<label class="locopt"><input type="checkbox" value="${k}"${selectedLocs.includes(k)?" checked":""} />
       <span>${k}</span><span class="n">${LOC_COUNTS[k]}</span></label>`;
   const f = arr => arr.filter(k => !q || k.toLowerCase().includes(q));
@@ -1128,6 +1187,9 @@ document.getElementById("locbtn").addEventListener("click", (e) => {
 });
 document.getElementById("locpanel").addEventListener("click", e => e.stopPropagation());
 document.getElementById("locsearch").addEventListener("input", drawLocations);
+document.querySelectorAll(".locsort button").forEach(b => {
+  b.addEventListener("click", e => { e.stopPropagation(); setLocSort(b.dataset.s); });
+});
 document.addEventListener("click", () => {
   document.getElementById("locpanel").setAttribute("hidden","");
   document.getElementById("locbtn").setAttribute("aria-expanded","false");
