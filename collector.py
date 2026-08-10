@@ -3753,11 +3753,6 @@ CUSTOM_BOARDS = {
     # (a US company) — their real board is on their own site.
     "Blip.pt":      dict(base="https://www.blip.pt", marker="/jobs/",
                          listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3"]),
-    # BHA's official industry board. Mostly yard and raceday work, which the
-    # collection-time racing filter strips — what's left is racecourse
-    # management, commercial and marketing.
-    "Careers in Racing": dict(base="https://jobs.careersinracing.com", marker="/job/",
-                         listing=["/jobs/", "/jobs/?page=2", "/jobs/?page=3", "/jobs"]),
     "Legend":       dict(base="https://l1.com", marker="/jobs/",
                          listing=["/jobs", "/jobs/"], first_element=True),
     # Isle of Man social casino studio. No ATS but fully server-rendered:
