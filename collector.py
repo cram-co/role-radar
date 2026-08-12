@@ -3430,28 +3430,69 @@ def _vankaizen_api():
     comment markers, and the sitemap route gave titles only. Their 74 roles had
     no location at all until this."""
     base = "https://ats.vankaizen.com/api/public"
+
+    def _get(url):
+        """One request, returning the list of records or None."""
+        try:
+            r = _request("GET", url, headers={**AGENCY_UA, "Accept": "application/json"})
+        except Exception:
+            return None
+        if r.status_code != 200:
+            return None
+        try:
+            d = r.json()
+        except Exception:
+            return None
+        items = d
+        if isinstance(d, dict):
+            for k in ("data", "vacancies", "results", "items", "jobs", "records"):
+                if isinstance(d.get(k), list):
+                    items = d[k]
+                    break
+        return items if isinstance(items, list) else None
+
+    def _all(path):
+        """Their /roles endpoint returns exactly 12 — the site's own page size,
+        not the total. Ask for everything at once first, since a single request
+        beats eleven; only fall back to paging if the cap is enforced."""
+        first = _get(base + path)
+        if not first:
+            return []
+        for param in ("limit=200", "per_page=200", "pageSize=200", "take=200", "size=200"):
+            big = _get(f"{base}{path}?{param}")
+            if big and len(big) > len(first):
+                print(f"   Van Kaizen: {path}?{param} -> {len(big)} in one request")
+                return big
+        # paging, then. Stop as soon as a page adds nothing new.
+        seen = {json.dumps(x, sort_keys=True) for x in first if isinstance(x, dict)}
+        out = list(first)
+        for style in ("page={}", "offset={}", "skip={}"):
+            got_any = False
+            for n in range(2, 14):
+                val = n if "page=" in style else (n - 1) * len(first)
+                page = _get(f"{base}{path}?{style.format(val)}")
+                if not page:
+                    break
+                fresh = [x for x in page if isinstance(x, dict)
+                         and json.dumps(x, sort_keys=True) not in seen]
+                if not fresh:
+                    break
+                for x in fresh:
+                    seen.add(json.dumps(x, sort_keys=True))
+                out.extend(fresh)
+                got_any = True
+                time.sleep(REQUEST_DELAY)
+            if got_any:
+                print(f"   Van Kaizen: {path} paged with {style.split('=')[0]} -> {len(out)}")
+                return out
+        return out
+
     # /roles answered with 12 while the site lists ~74, so first-wins settled
     # for a partial endpoint. Try them all and keep the fullest.
     best = []
     for path in ("/vacancies", "/vacancy", "/jobs", "/roles", "/positions"):
-        try:
-            r = _request("GET", base + path,
-                         headers={**AGENCY_UA, "Accept": "application/json"})
-        except Exception:
-            continue
-        if r.status_code != 200:
-            continue
-        try:
-            d = r.json()
-        except Exception:
-            continue
-        items = d
-        if isinstance(d, dict):
-            for k in ("data", "vacancies", "results", "items", "jobs"):
-                if isinstance(d.get(k), list):
-                    items = d[k]
-                    break
-        if not isinstance(items, list) or not items:
+        items = _all(path)
+        if not items:
             continue
 
         out = []
@@ -3486,6 +3527,10 @@ def _vankaizen_api():
         if len(out) > len(best):
             best = out
             print(f"   Van Kaizen: public API {path} -> {len(out)} roles")
+        # once a path has given a real board there is nothing to gain from
+        # trying the rest, and each one costs up to nine requests
+        if len(best) >= 20:
+            break
     return best
 
 
@@ -3745,8 +3790,12 @@ CUSTOM_BOARDS = {
     "Exacta Solutions": dict(base="https://www.exactasolutions.com", marker="/vacancies/",
                          listing=["/vacancies/", "/vacancies/page/2/", "/vacancies/page/3/",
                                   "/vacancies/page/4/", "/vacancies/page/5/"]),
-    "TalentBet":    dict(base="https://www.talentbet.com", marker="/job",
-                         listing=["/jobs/", "/jobs/page/2/", "/vacancies/"]),
+    # Their cards link out with the text "More Details", so link-text titles
+    # gave 50 roles all called that. The URL slug carries the real title:
+    # /jobs/head-of-acquisition, /jobs/senior-kyc-compliance.
+    "TalentBet":    dict(base="https://www.talentbet.com", marker="/jobs/",
+                         listing=["/jobs/", "/jobs/page/2/", "/jobs/page/3/", "/vacancies/"],
+                         slug_titles=True),
     "iGaming Recruitment": dict(base="https://igamingrecruitment.io", marker="/job",
                          listing=["/jobs/", "/jobs/page/2/", "/vacancies/"]),
     # Flutter's Porto engineering hub. Note greenhouse:blip is a DIFFERENT Blip
