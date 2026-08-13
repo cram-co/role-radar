@@ -142,9 +142,9 @@ var LEAGUE=[22100,9380,2340,2280,1760,1570,1020,786,776,456,454,379,351,331,236,
 
 var GLOBAL_DEFAULTS={bonusPctGGR:20,platformPctGGR:20,royaltyPctNGR:3,m1Retention:40,facility:3.03,marketSize:46000};
 var SCENARIO_DEFAULTS={
-  conservative:{avgDeposit:290,hold:21,cpa:100,dpa:2.0,ramp:.40,opex:[1.40,1.65,1.80]},
-  realistic:{avgDeposit:500,hold:33,cpa:250,dpa:2.0,ramp:.43,opex:[1.54,2.46,3.45]},
-  stretch:{avgDeposit:550,hold:33,cpa:400,dpa:3.0,ramp:.42,opex:[1.54,2.50,4.20]}
+  conservative:{avgDeposit:290,hold:21,cpa:130,dpa:2.0,ramp:.37,opex:[1.20,1.45,1.55]},
+  realistic:{avgDeposit:500,hold:33,cpa:260,dpa:2.0,ramp:.43,opex:[1.30,1.80,2.20]},
+  stretch:{avgDeposit:620,hold:33,cpa:390,dpa:3.0,ramp:.43,opex:[1.30,1.85,2.45]}
 };
 var SCENARIOS=[
   {key:"conservative",label:"Conservative",blurb:"The brand delivers nothing and we are one more crypto casino. Frozen ten-head team, no hiring into a business that is not working."},
@@ -156,21 +156,21 @@ var SRC={
   conservative:{
     avgDeposit:"Rainbet's observed average of $290 (Tanzanite, Q2 2026), the floor of the tracked twenty. This is the case where the brand premium never materialises.",
     hold:"21% is the ratio Stake's own reported figures imply: $22.9bn of deposits against roughly $4.7bn of GGR. A whale-heavy book where large deposits cycle few times.",
-    cpa:"$100 is the midpoint of Stake's own affiliate CPA of $50 to $150 per first-time depositor, varying by jurisdiction and traffic channel."
+    cpa:"Tested in blocks of 130. At the top of Stake's own affiliate range of $50 to $150 per first-time depositor, so this is the cautious end of what the market actually pays."
   },
   realistic:{
     avgDeposit:"Strip the three whale books from the tracked twenty, Bitcasino, Duel and Roobet, and the mean of the remaining seventeen is $510. So $500 is the average operator in the set. Average deposit IS the brand premium: if the name delivers nothing we are a Rainbet at $290, if it delivers fully we approach the leader at $673.",
     hold:"Above the arithmetic midpoint of Stake's implied 21% and Tanzanite's observed 37%, and deliberately so: a casino-led mass-market book recycles a small deposit harder than a whale book cycles a large one. This is the single assumption the eighteen-month break-even rests on.",
-    cpa:"Above the $50 to $300 range crypto affiliate programmes advertise, and well above Stake's own $50 to $150. Being expensive on acquisition is deliberate: undershooting it is the assumption most likely to set a plan up to fail."
+    cpa:"Tested in blocks of 130. Above the $50 to $300 range crypto affiliate programmes advertise, and above Stake's own. Being expensive on acquisition is deliberate, because undershooting it is the assumption most likely to set a plan up to fail."
   },
   stretch:{
-    avgDeposit:"$550 sits just above the $510 mean of the tracked twenty once the three whale books come out, and $123 below the market leader at $673. Above the middle, well short of the top.",
+    avgDeposit:"$620 sits above the $510 mean of the tracked twenty once the three whale books come out, and still below the market leader at $673. Above the middle, short of the top.",
     hold:"Unchanged from the base case. Hold is a property of the product, game mix, RTP and how often a deposit is recycled, not of who the depositor is. It should not move just because we have more players.",
-    cpa:"Premium traffic costs more to reach. At $400 the lifetime value to acquisition ratio still clears the base case, so the gain comes from player value and engagement rather than from buying more efficiently."
+    cpa:"Tested in blocks of 130. Premium traffic costs more to reach, and even at $390 the lifetime value ratio clears the base case, so the gain comes from player value and engagement rather than from buying more cheaply."
   }
 };
 var DPA_SRC={conservative:"Two deposits per ACTIVE month, not per calendar month. Just over half the 3.72 the market data implies once you divide 11.2 deposits per wallet by three active months.",realistic:"Two per ACTIVE month, not per calendar month, so about six deposits a year at this brand. The market figure of 11.2 per wallet divided by three active months gives 3.72; we use just over half. That 11.2 is a mean across six million wallets and heavily skewed by whales, and this model already carries whale behaviour in deposit SIZE, so using the blended frequency too would count the same players twice.",stretch:"Three per ACTIVE month. Still below the 3.72 the market implies. Engagement is where the brand premium shows up in this case: the same depositor plays half as often again."};
-var RAMP_SRC="Multiplier on the monthly acquisition plan. 1.00 is the full ramp: roughly 68,000 players acquired across three years, which leaves about 41,500 unique depositors active in year three. For scale, that would sit sixteenth of the twenty largest operators Tanzanite tracks, between Yeet at 27,000 and Duelbits at 46,000, and is 1.4% of Stake's 2.9 million. No case here needs anything close to big-five volumes. This is also the lever you pull when economics disappoint: you slow down rather than buying into a hole.";
+var RAMP_SRC="A volume dial on the marketing plan. The model has a built-in monthly acquisition schedule: at full throttle, 1.00, you buy 400 new depositors in the first trading month rising to 3,360 a month by the end of year three, or 67,860 in total. Ramp scales that whole schedule without changing its shape, so 0.43 buys 43 per cent of it: 172 in month one rising to about 1,445 a month, or 29,175 in total. It is a separate lever because it is the one thing you control month to month. You cannot dial what players deposit or how often they play; you can decide how hard to spend finding them.";
 
 
 var LEAGUE_TABLE=[["Stake","$22,100m","32.50m","$680","2,901,237"],["Roobet","$9,380m","8.08m","$1,161","721,292"],["Shuffle","$2,340m","5.18m","$452","462,413"],["BC.Game","$2,280m","3.04m","$750","271,377"],["Rainbet","$1,760m","7.54m","$233","673,087"],["Gamdom","$1,570m","2.28m","$689","203,533"],["Duel","$1,020m","0.60m","$1,694","53,740"],["Rollbit","$786m","1.95m","$403","174,074"],["Bitcasino","$776m","0.30m","$2,604","26,602"],["Razed","$456m","0.59m","$772","52,758"],["Winna","$454m","0.69m","$657","61,685"],["500 Casino","$379m","1.20m","$316","107,123"],["BetFury","$351m","0.56m","$628","49,901"],["Thrill","$331m","0.71m","$466","63,381"],["Yeet","$236m","0.30m","$781","26,959"],["MetaWin","$227m","0.72m","$313","64,720"],["Duelbits","$200m","0.51m","$389","45,884"],["Goated","$51m","0.28m","$182","24,906"],["Chips","$47m","0.12m","$397","10,623"],["Acebet","$30m","0.05m","$567","4,704"]];
@@ -355,7 +355,7 @@ function renderAssumptions(){
       h+='<div><label>'+y+'</label><input type="number" data-input="o.'+s.key+'.'+i+'" value="'+v.opex[i]+'" step="0.05"></div>';
     });
     h+='</div><p class="src" style="margin-top:8px">'
-     +({conservative:"Frozen at ten heads. No Head of Marketing, no Director of Operations, no Finance Manager, and two engineers rather than four. Those are the hires you do not make while revenue is missing plan, so the MD carries the operations brief.",realistic:"Nineteen heads at the year-one exit, scaling to around twenty-four through 2029 because year three is a growth year. Nineteen is the minimum to run the plan, not a ceiling.",stretch:"Twenty heads at the year-one exit, scaling to around thirty through 2029. Outperformance means more people, not the same people doing more."}[s.key])
+     +({conservative:"Frozen near the launch team. Revenue never justifies the operations and marketing hires, so the MD carries the operations brief and the business runs on about seven heads.",realistic:"Three heads at build, five at MVP, ten by the end of year one, growing to about thirteen through 2029. Everything outsourceable sits outside this line: marketing agency, design, customer support and managed services, all cross-charged.",stretch:"Ten heads by the end of year one, growing to about fifteen through 2029. Outperformance funds the extra people from its own surplus rather than from the tranches."}[s.key])
      +'</p></div></div>';
   });
   h+='</div>';
