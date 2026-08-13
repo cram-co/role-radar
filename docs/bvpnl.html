@@ -142,31 +142,31 @@ var LEAGUE=[22100,9380,2340,2280,1760,1570,1020,786,776,456,454,379,351,331,236,
 
 var GLOBAL_DEFAULTS={bonusPctGGR:20,platformPctGGR:20,royaltyPctNGR:3,m1Retention:40,facility:3.03,marketSize:46000};
 var SCENARIO_DEFAULTS={
-  conservative:{avgDeposit:290,hold:21,cpa:130,dpa:2.0,ramp:.37,opex:[1.20,1.45,1.55]},
-  realistic:{avgDeposit:500,hold:33,cpa:260,dpa:2.0,ramp:.43,opex:[1.30,1.80,2.20]},
-  stretch:{avgDeposit:620,hold:33,cpa:390,dpa:3.0,ramp:.43,opex:[1.30,1.85,2.45]}
+  conservative:{avgDeposit:290,hold:21,cpa:130,dpa:2.0,ramp:.24,opex:[1.00,1.25,1.35]},
+  realistic:{avgDeposit:500,hold:27,cpa:260,dpa:2.5,ramp:.43,opex:[1.30,2.00,2.70]},
+  stretch:{avgDeposit:620,hold:33,cpa:390,dpa:3.0,ramp:.43,opex:[1.35,2.20,3.20]}
 };
 var SCENARIOS=[
-  {key:"conservative",label:"Conservative",blurb:"The brand delivers nothing and we are one more crypto casino. Frozen ten-head team, no hiring into a business that is not working."},
+  {key:"conservative",label:"Conservative",blurb:"The brand delivers players at low value and we are one more crypto casino. Headcount frozen at 10."},
   {key:"realistic",label:"Realistic",blurb:"Decent number of players of good value and fair hold. The one we are shooting for."},
-  {key:"stretch",label:"Stretch",blurb:"The brand delivers. Better depositors, more of them, and they cost more to reach."}
+  {key:"stretch",label:"Stretch",blurb:"The brand works with better depositors that cost more, but deliver returns."}
 ];
 
 var SRC={
   conservative:{
     avgDeposit:"Rainbet's observed average of $290 (Tanzanite, Q2 2026), the floor of the tracked twenty. This is the case where the brand premium never materialises.",
-    hold:"21% is the ratio Stake's own reported figures imply: $22.9bn of deposits against roughly $4.7bn of GGR. A whale-heavy book where large deposits cycle few times.",
-    cpa:"Tested in blocks of 130. At the top of Stake's own affiliate range of $50 to $150 per first-time depositor, so this is the cautious end of what the market actually pays."
+    hold:"21% is the ratio Stake's own reported figures imply: $22.9bn of deposits against roughly $4.7bn of GGR.",
+    cpa:"Tested in blocks of 130. At the top of Stake's own affiliate range of $50 to $150 per first-time depositor."
   },
   realistic:{
     avgDeposit:"Strip the three whale books from the tracked twenty, Bitcasino, Duel and Roobet, and the mean of the remaining seventeen is $510. So $500 is the average operator in the set. Average deposit IS the brand premium: if the name delivers nothing we are a Rainbet at $290, if it delivers fully we approach the leader at $673.",
-    hold:"Above the arithmetic midpoint of Stake's implied 21% and Tanzanite's observed 37%, and deliberately so: a casino-led mass-market book recycles a small deposit harder than a whale book cycles a large one. This is the single assumption the eighteen-month break-even rests on.",
-    cpa:"Tested in blocks of 130. Above the $50 to $300 range crypto affiliate programmes advertise, and above Stake's own. Being expensive on acquisition is deliberate, because undershooting it is the assumption most likely to set a plan up to fail."
+    hold:"Six points above conservative and six below stretch. A linear 21 / 27 / 33 ladder across the three cases, bracketed by Stake's implied 21% and Tanzanite's observed 37%.",
+    cpa:"Knowingly high against crypto-only data, to account for startup and closer to the $300 to $500 expected in regular casino acquisition."
   },
   stretch:{
     avgDeposit:"$620 sits above the $510 mean of the tracked twenty once the three whale books come out, and still below the market leader at $673. Above the middle, short of the top.",
-    hold:"Unchanged from the base case. Hold is a property of the product, game mix, RTP and how often a deposit is recycled, not of who the depositor is. It should not move just because we have more players.",
-    cpa:"Tested in blocks of 130. Premium traffic costs more to reach, and even at $390 the lifetime value ratio clears the base case, so the gain comes from player value and engagement rather than from buying more cheaply."
+    hold:"Six points above the base case. Below Tanzanite's market-wide observation of 37 cents of GGR per dollar deposited.",
+    cpa:"Tested in blocks of 130. Premium traffic costs more to reach, and even at $390 the lifetime value ratio clears the base case."
   }
 };
 var DPA_SRC={conservative:"Two deposits per ACTIVE month, not per calendar month. Just over half the 3.72 the market data implies once you divide 11.2 deposits per wallet by three active months.",realistic:"Two per ACTIVE month, not per calendar month, so about six deposits a year at this brand. The market figure of 11.2 per wallet divided by three active months gives 3.72; we use just over half. That 11.2 is a mean across six million wallets and heavily skewed by whales, and this model already carries whale behaviour in deposit SIZE, so using the blended frequency too would count the same players twice.",stretch:"Three per ACTIVE month. Still below the 3.72 the market implies. Engagement is where the brand premium shows up in this case: the same depositor plays half as often again."};
@@ -178,12 +178,12 @@ var ASSUMPTION_SOURCES=[
 ["Average deposit","Per-brand observed figures. Conservative takes Rainbet at $290, the mass-market floor; the base sits above the $413 midpoint of Roobet and Rainbet; stretch is a round $650, short of Stake."],
 ["Deposit to GGR (hold)","Two observed points bracket it. Stake's reported figures imply 21%; Tanzanite's market-wide observation is 37 cents of GGR per dollar deposited."],
 ["Blended CPA","Stake's affiliate programme pays $50 to $150 per qualified first-time depositor. Broader crypto affiliate terms run $50 to $300."],
-["Deposits per active","1.5 per ACTIVE month, not per calendar month. With about three active months per player that is 4.5 deposits a year at one brand. Dividing the market figure of 11.2 deposits per wallet by three active months gives 3.67, and the difference is deliberate: 11.2 is a MEAN across 6m wallets and that distribution is savagely skewed, with a few whales depositing hundreds of times while most wallets deposit once or twice. This model already carries whale behaviour in deposit SIZE, where 5% of actives deposit $5,000 against $263 for the rest. Applying the whale-inflated frequency as well would count the same players twice. At 3.67 the model returns $176m of year-three deposits and $33m cumulative, which is not a plan anyone should present."],
+["Deposits per active","Per active month, not per calendar month. The market shows 11.2 deposits per wallet a year across every brand a player uses."],
 ["Bonuses & rakeback","Industry GGR-to-NGR gap runs 20 to 40% of GGR. Stake's rakeback alone is 5% of house edge, rising to 7% at Platinum."],
 ["Platform & content","Aggregation rev-share 10 to 20% of GGR, platform fees a further 5 to 15%. Combined 20% assumes volume negotiation."],
-["Brand royalty","A deal term, not a market rate. Payable on NGR whether or not the venture profits."],
+["Brand royalty","A deal term, not a market rate. Payable on NGR whether or not the venture profits, and subject to Group amendment and agreement."],
 ["Retention curve","Standard casino shape: 40% at month two decaying to an 8% loyal tail, giving 3.01 active months per player. Not crypto-specific, and a known soft spot."],
-["Unique depositors","Derived, not published. Deposit count divided by 11.2 deposits per wallet per year, the market-wide average. That assumes each wallet plays a single brand. In practice wallets multi-home, so true per-brand depositor counts are likely higher, which would make this plan a smaller share of each operator rather than a larger one."]
+["Unique depositors","Derived, not published. Deposit count divided by 11.2 deposits per wallet a year."]
 ];
 
 /* ---------------- state ---------------- */
@@ -257,7 +257,7 @@ var PL_ROWS=[
 ];
 
 function healthTone(r){return r<1?"var(--red)":r<1.5?"var(--amber)":"var(--green)";}
-function healthLabel(r){return r<1?"Loses money per player":r<1.5?"Fragile":r<3?"Workable":"Healthy";}
+function healthLabel(r){return r<1?"Loses money per player":r<2?"Capital at risk":r<2.5?"Workable":"Profitable";}
 
 function renderPnl(){
   var R={}; SCENARIOS.forEach(function(s){R[s.key]=runModel(S[s.key]);});
@@ -355,7 +355,7 @@ function renderAssumptions(){
       h+='<div><label>'+y+'</label><input type="number" data-input="o.'+s.key+'.'+i+'" value="'+v.opex[i]+'" step="0.05"></div>';
     });
     h+='</div><p class="src" style="margin-top:8px">'
-     +({conservative:"Frozen near the launch team. Revenue never justifies the operations and marketing hires, so the MD carries the operations brief and the business runs on about seven heads.",realistic:"Three heads at build, five at MVP, ten by the end of year one, growing to about thirteen through 2029. Everything outsourceable sits outside this line: marketing agency, design, customer support and managed services, all cross-charged.",stretch:"Ten heads by the end of year one, growing to about fifteen through 2029. Outperformance funds the extra people from its own surplus rather than from the tranches."}[s.key])
+     +({conservative:"Stalls at eight. The plan reaches ten at go-to-market with the operations and marketing hires, and those are exactly the ones you do not make when volume never arrives. Outsourcing stays minimal for the same reason.",realistic:"Ten heads throughout, with outsourcing scaling on volume: marketing agency, design, customer support and managed services, all cross-charged. Permanent hires only above budget.",stretch:"Ten heads at the year-one exit, above ten and below twenty thereafter. Outsourcing and cross-charging carry the growth through late year two into year three."}[s.key])
      +'</p></div></div>';
   });
   h+='</div>';
@@ -398,7 +398,7 @@ function renderSources(){
    +'The '+lbl.toLowerCase()+' case needs <b style="color:var(--blue)">'+n0(uq)+'</b>, which is '
    +'<b>'+(uq/2901237*100).toFixed(1)+'%</b> of the market leader.</p>';
   h+='<p class="sectnote" style="margin-bottom:20px">The spread is the point. <b>Bitcasino</b> takes 44% of <b>Rainbet</b>\'s deposit volume from <b style="color:var(--blue)">4%</b> of the depositors, so one Bitcasino depositor is worth eleven of Rainbet\'s. Stake sits between them. That contrast is what <b style="color:var(--blue)">Black Type</b> is built for: a VIP layer over a mass-market book, not a different business.</p>';
-  h+='<p class="sectnote" style="margin-bottom:20px"><b>The one observed frequency figure</b> in the whole dataset is 67.2m deposits across roughly 6m unique wallets, or <b style="color:var(--blue)">11.2 deposits per wallet per year</b> across every brand that wallet uses. This model assumes 2.0 per <i>active</i> month, which over three active months is <b>6.0 deposits a year at a single brand</b>, or <b style="color:var(--blue)">54%</b> of the all-brand rate. Stretch at 3.0 reaches 80%. Deposits, count and average deposit are observed. The depositor column is derived by dividing count by 11.2, so it carries that market-wide assumption rather than a per-brand measurement.</p>';
+  h+='<p class="sectnote" style="margin-bottom:20px"><b>The one observed frequency figure</b> in the whole dataset is 67.2m deposits across roughly 6m unique wallets, or <b style="color:var(--blue)">11.2 deposits per wallet per year</b> across every brand that wallet uses. This model assumes 2.0 per <i>active</i> month, which over three active months is <b>6.0 deposits a year at a single brand</b>, or <b style="color:var(--blue)">54%</b> of the all-brand rate. Stretch at 3.0 reaches 80%.</p>';
   h+='<div class="card" style="margin-bottom:16px"><div class="secttitle" style="margin-bottom:10px">Where each assumption comes from</div>';
   ASSUMPTION_SOURCES.forEach(function(s,i){
     h+='<div style="display:flex;gap:16px;padding:8px 0'+(i?';border-top:1px solid var(--line)':'')+'">'
