@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-15T07:34:47.798177+00:00
+role-radar collector run: 2026-08-16T07:59:44.639164+00:00
 ============================================================
 
       dayforce rankgroup: HTTP 403
@@ -18,14 +18,14 @@ OPAP: 0 roles (successfactors)
       wordpress jobs.888.com: no job post type found among 15 tried
 888: 0 roles (wordpress)
 betPawa: 0 roles (workable)
-      workday myhcm/jumpman: cxs 'myhcm' error (JSONDecodeError)
+      workday myhcm/jumpman: cxs 'myhcm' -> HTTP 200 (0 results)
       workday myhcm/jumpman: cxs 'jumpman' -> HTTP 422
       workday myhcm/jumpman: cxs 'jumpman' -> HTTP 422
-Jumpman Gaming: FAILED (Expecting value: line 1 column 1 (char 0))
-      workday sisal/sisalcorp: cxs 'sisal' error (JSONDecodeError)
+Jumpman Gaming: 0 roles (workday)
+      workday sisal/sisalcorp: cxs 'sisal' -> HTTP 200 (0 results)
       workday sisal/sisalcorp: cxs 'sisalcorp' -> HTTP 422
       workday sisal/sisalcorp: cxs 'sisalcorp' -> HTTP 422
-Sisal: FAILED (Expecting value: line 1 column 1 (char 0))
+Sisal: 0 roles (workday)
 3 Oaks Gaming: 1 roles (workable)
 Alea: 8 roles (teamtailor)
 Altenar: 24 roles (bamboohr)
@@ -38,10 +38,7 @@ Altenar: 24 roles (bamboohr)
       sfcsb jobs.amusnet.com: 17 roles across 2 brands
 Amusnet: 17 roles (sfcsb)
 ARB Interactive: 5 roles (ashby)
-      workday aristocrat/AristocratExternalCareersSite: cxs 'aristocrat' error (JSONDecodeError)
-      workday aristocrat/AristocratExternalCareersSite: cxs 'aristocratexternalcareerssite' -> HTTP 422
-      workday aristocrat/AristocratExternalCareersSite: cxs 'AristocratExternalCareersSite' -> HTTP 422
-Aristocrat Interactive: FAILED (Expecting value: line 1 column 1 (char 0))
+Aristocrat Interactive: 191 roles (workday)
       jobvite pragmaticplay: 99 roles across 3 listings
 ARRISE: 99 roles (jobvite)
 B2Spin Limited: 21 roles (ashby)
@@ -51,19 +48,13 @@ Betclic (Banijay Gaming): 63 roles (breezy)
       talos 38ed147c: 1 roles
 Betfred: 1 roles (talos)
 BetMakers Technology Group: 3 roles (rippling)
-      workday betmgminc/BetMGM: cxs 'betmgminc' error (JSONDecodeError)
-      workday betmgminc/BetMGM: cxs 'betmgm' -> HTTP 422
-      workday betmgminc/BetMGM: cxs 'BetMGM' -> HTTP 422
-BetMGM: FAILED (Expecting value: line 1 column 1 (char 0))
+BetMGM: 15 roles (workday)
 betr: 13 roles (lever)
 Betsson Group: 122 roles (greenhouse)
 Betty: 33 roles (greenhouse)
 BetVictor (BVGroup): 13 roles (hibob)
 BetWarrior: 7 roles (bamboohr)
-      workday myhcm/Betway_Africa: cxs 'myhcm' error (JSONDecodeError)
-      workday myhcm/Betway_Africa: cxs 'betway_africa' -> HTTP 422
-      workday myhcm/Betway_Africa: cxs 'Betway_Africa' -> HTTP 422
-Betway Africa: FAILED (Expecting value: line 1 column 1 (char 0))
+Betway Africa: 55 roles (workday)
       join booming-games: 3 roles
 Booming Games: 3 roles (join)
 Bragg Gaming: 2 roles (workday)
@@ -81,44 +72,29 @@ Dabble: 7 roles (teamtailor)
       pinpoint careers.dazn.com: 3 matched 'dazn bet', 128 others skipped
 DAZN Bet: 3 roles (pinpoint)
 Derivco: 7 roles (bamboohr)
-      workday myhcm/digioutsource: cxs 'myhcm' error (JSONDecodeError)
-      workday myhcm/digioutsource: cxs 'digioutsource' -> HTTP 422
-      workday myhcm/digioutsource: cxs 'digioutsource' -> HTTP 422
-DigiOutsource: FAILED (Expecting value: line 1 column 1 (char 0))
+DigiOutsource: 122 roles (workday)
 Digitain: 87 roles (bamboohr)
-      workday draftkings/DraftKings: cxs 'draftkings' error (JSONDecodeError)
-      workday draftkings/DraftKings: cxs 'draftkings' error (JSONDecodeError)
-      workday draftkings/DraftKings: cxs 'DraftKings' error (JSONDecodeError)
-DraftKings: FAILED (Expecting value: line 1 column 1 (char 0))
+DraftKings: 87 roles (workday)
 Easygo: 39 roles (greenhouse)
 Eeze: 21 roles (teamtailor)
       wordpress emeraldzebra.cy: Application Support Engineer, Multi-Asset Trading Technology, Hybrid,  Limassol-2941631 -> 62
 Emerald Zebra: 62 roles (wordpress)
-Entain: 283 roles (smartrecruiters)
+Entain: 282 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39563 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39566 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 78 roles
 evoke: 78 roles (avature)  [33s]
 evoke plc: 1 roles (bamboohr)
-Evolution: 303 roles (smartrecruiters)
+Evolution: 304 roles (smartrecruiters)
 Evoplay: 0 roles (greenhouse)
 Fanatics Betting & Gaming: 82 roles (greenhouse)
 FanDuel: 96 roles (greenhouse)
 FDJ United: 82 roles (workday)
 FIRST.bet: 17 roles (bamboohr)
-      workday flutterbe/Group_External: cxs 'flutterbe' error (JSONDecodeError)
-      workday flutterbe/Group_External: cxs 'group_external' -> HTTP 422
-      workday flutterbe/Group_External: cxs 'Group_External' -> HTTP 422
-Flutter Group (corporate): FAILED (Expecting value: line 1 column 1 (char 0))
-      workday flutterbe/FlutterInt_External: cxs 'flutterbe' error (JSONDecodeError)
-      workday flutterbe/FlutterInt_External: cxs 'flutterint_external' -> HTTP 422
-      workday flutterbe/FlutterInt_External: cxs 'FlutterInt_External' -> HTTP 422
-Flutter International (PokerStars, Betfair Int, Adjarabet): FAILED (Expecting value: line 1 column 1 (char 0))
-      workday flutterbe/FlutterUKI_External: cxs 'flutterbe' error (JSONDecodeError)
-      workday flutterbe/FlutterUKI_External: cxs 'flutteruki_external' -> HTTP 422
-      workday flutterbe/FlutterUKI_External: cxs 'FlutterUKI_External' -> HTTP 422
-Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola): FAILED (Expecting value: line 1 column 1 (char 0))
+Flutter Group (corporate): 39 roles (workday)
+Flutter International (PokerStars, Betfair Int, Adjarabet): 56 roles (workday)
+Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola): 9 roles (workday)
 Gamdom: 5 roles (teamtailor)
 Gaming Innovation Group: 21 roles (pinpoint)
 Genius Sports: 50 roles (greenhouse)
@@ -145,10 +121,7 @@ Kindred Group: 5 roles (ashby)
 KingMakers: 10 roles (workable)
 LCKY Group (ex-Glitnor): 7 roles (teamtailor)
 LeoVegas Group: 72 roles (ashby)
-      workday lnw/LightWonderExternalCareers: cxs 'lnw' error (JSONDecodeError)
-      workday lnw/LightWonderExternalCareers: cxs 'lightwonderexternalcareers' -> HTTP 422
-      workday lnw/LightWonderExternalCareers: cxs 'LightWonderExternalCareers' -> HTTP 422
-Light & Wonder: FAILED (Expecting value: line 1 column 1 (char 0))
+Light & Wonder: 131 roles (workday)
 LionHires: 42 roles (greenhouse)
 LiveScore Group: 13 roles (greenhouse)
 Lottoland: 1 roles (greenhouse)
@@ -186,10 +159,7 @@ Racing Post / Spotlight Sports: 7 roles (workable)
 Relax Gaming: 6 roles (teamtailor)
 Rhino Entertainment: 2 roles (workable)
 Rush Street Interactive: 31 roles (greenhouse)
-      workday sglottery/ScientificGamesExternalCareers: cxs 'sglottery' error (JSONDecodeError)
-      workday sglottery/ScientificGamesExternalCareers: cxs 'scientificgamesexternalcareers' -> HTTP 422
-      workday sglottery/ScientificGamesExternalCareers: cxs 'ScientificGamesExternalCareers' -> HTTP 422
-SCIENTIFIC GAMES: FAILED (Expecting value: line 1 column 1 (char 0))
+SCIENTIFIC GAMES: 106 roles (workday)
 Silverspin: 7 roles (teamtailor)
 SkillOnNet: 21 roles (teamtailor)
 Soft2Bet: 7 roles (greenhouse)
@@ -203,10 +173,8 @@ SPRIBE: 12 roles (hurma)
 Stake (Easygo): 23 roles (breezy)
 Stats Perform: 10 roles (teamtailor)
 Strive Gaming: 1 roles (bamboohr)
-      workday myhcm/Betway: cxs 'myhcm' error (JSONDecodeError)
-      workday myhcm/Betway: cxs 'betway' -> HTTP 422
-      workday myhcm/Betway: cxs 'Betway' -> HTTP 422
-Super Group (Betway, Jackpot City, Spin): FAILED (Expecting value: line 1 column 1 (char 0))
+      workday myhcm/Betway: 60 roles (exact multiple of the page size — check it isn't truncated)
+Super Group (Betway, Jackpot City, Spin): 60 roles (workday)
 Superbet: 194 roles (greenhouse)
 Talentgrator: 59 roles (workable)  [26s]
 The Lottery Corporation: 11 roles (oracle)
@@ -271,8 +239,9 @@ Fortuna Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
       Codere Online: no API URLs found in bundle
    Codere Online: link parse -> 2
 Codere Online: 2 roles (agency board)
-      sitemap https://www.casumocareers.com: 2 job URLs
+      sitemap https://www.casumocareers.com: 3 job URLs
       json-ld https://www.casumocareers.com/jobs/8049683-multimedia-designer: 1 JobPosting blocks  <-- USABLE
+      json-ld https://www.casumocareers.com/jobs/7922995-business-intelligence-analyst: HTTP 410
       json-ld https://www.casumocareers.com/jobs/7691557-casino-manager: 1 JobPosting blocks  <-- USABLE
    Casumo: sitemap + JSON-LD -> 2
 Casumo: 2 roles (agency board)
@@ -569,8 +538,7 @@ EGT Digital: 33 roles (agency board)
       json-ld https://careers.gamesglobal.com/jobs/1615?lang=en-us: 1 JobPosting blocks  <-- USABLE
    Games Global: sitemap + JSON-LD -> 32
 Games Global: 32 roles (agency board)
-      sitemap https://talenthub.playngo.com: 2 job URLs
-      json-ld https://talenthub.playngo.com/jobs/7937264-senior-microsoft-platform-security-engineer: HTTP 410
+      sitemap https://talenthub.playngo.com: 1 job URLs
       Play'n GO: 15 script bundle(s) referenced, checking 6
       Play'n GO: API-looking URLs in bundle:
          https://www.youtube.com/iframe_api
@@ -580,8 +548,7 @@ Games Global: 32 roles (agency board)
          link shapes present: /series/* x30, /services/* x25, /careers x8, /social-casino x6, /post/* x5, /media/* x4, /games x4, /about-us x4, /news x4, /the-go-show x4, /csr x4, /safer-gambling x4
       Play'n GO https://talenthub.playngo.com/: 200, 23869 bytes, 1 '/job' refs
          link shapes present: /connect/* x3, /sso_login x2, /assets/* x1, /blog/* x1, /jobs.rss x1, /careers x1, /data-privacy x1
-   Play'n GO: sitemap slugs -> 1 (unverified, may include closed roles)
-Play'n GO: 1 roles (agency board)
+Play'n GO: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://evenbetgaming.com/vacancies/: HTTP 404
       json-ld https://evenbetgaming.com/vacancies: HTTP 404
       sitemap https://evenbetgaming.com: 4 job URLs
@@ -633,30 +600,19 @@ BettingJobs: 104 roles (agency board)
 Van Kaizen: 80 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
 
-titles cleaned: 451 trailing references stripped, 28 locations taken from the title
-   carried forward 193 roles for Aristocrat Interactive (unreachable this run)
-   carried forward 16 roles for BetMGM (unreachable this run)
-   carried forward 54 roles for Betway Africa (unreachable this run)
-   carried forward 123 roles for DigiOutsource (unreachable this run)
-   carried forward 93 roles for DraftKings (unreachable this run)
-   carried forward 36 roles for Flutter Group (corporate) (unreachable this run)
-   carried forward 53 roles for Flutter International (PokerStars, Betfair Int, Adjarabet) (unreachable this run)
-   carried forward 8 roles for Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola) (unreachable this run)
+titles cleaned: 456 trailing references stripped, 30 locations taken from the title
+   carried forward 1 roles for Play'n GO (unreachable this run)
    carried forward 1 roles for Inspired Entertainment (unreachable this run)
-   carried forward 130 roles for Light & Wonder (unreachable this run)
-   carried forward 107 roles for SCIENTIFIC GAMES (unreachable this run)
-   carried forward 60 roles for Super Group (Betway, Jackpot City, Spin) (unreachable this run)
-   carried forward 1 roles for Evoplay (unreachable this run)
 
-carried 875 roles forward from the previous feed
+carried 2 roles forward from the previous feed
 
-first_seen: 236 roles new since the last run, 7065 carried an existing date
+first_seen: 79 roles new since the last run, 7219 carried an existing date
 
-dropped 46 postings older than 2 years
+dropped 47 postings older than 2 years
 
 dropped 4 physical racing roles (stable, yard, raceday, track)
 
-companies.csv refreshed: 175 returning, 55 not
+companies.csv refreshed: 174 returning, 56 not
 
-Feed written: 7251 jobs
+Feed written: 7247 jobs
 Unresolved companies (0): 
