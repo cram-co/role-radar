@@ -1581,6 +1581,70 @@ def _dayforce_site_config(portal_html):
 
 
 
+
+_SECRETISH = re.compile(r"token|apikey|api_key|auth|bearer|jwt|secret|credential|clientid|subscription",
+                        re.I)
+
+
+def _dayforce_secretish(data, limit=25):
+    """Report any field whose NAME suggests it carries credentials.
+
+    The 403 arrives as plain text while sibling 404s and 405s arrive as
+    problem-detail JSON, so it is thrown before routing — an authorization
+    check, not a bad body. If the board hands its client a token, it reaches
+    the browser in data we already fetch, and the earlier config walker only
+    matched a whitelist of six site fields so it would have ignored it.
+
+    Names only, and values truncated hard: this goes in a public run log."""
+    found, stack, budget = {}, [data], 40000
+    while stack and budget > 0 and len(found) < limit:
+        node = stack.pop()
+        budget -= 1
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if isinstance(v, (dict, list)):
+                    stack.append(v)
+                elif _SECRETISH.search(str(k)) and v not in (None, "", False):
+                    s = str(v)
+                    found[k] = (s[:6] + "..." + str(len(s)) + " chars") if len(s) > 12 else s
+        elif isinstance(node, list):
+            stack.extend(node[:500])
+    return found
+
+
+
+_CSRF_META = re.compile(
+    r'<meta[^>]+name=["\'](?:csrf-token|CSRF-TOKEN|X-CSRF-TOKEN|_csrf|RequestVerificationToken)["\']'
+    r'[^>]+content=["\']([^"\']+)["\']', re.I)
+_CSRF_META_REV = re.compile(
+    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\'](?:csrf-token|X-CSRF-TOKEN|_csrf)["\']', re.I)
+_CSRF_JSON = re.compile(r'["\'](?:csrfToken|csrf_token|antiForgeryToken|requestVerificationToken)["\']'
+                        r'\s*[:=]\s*["\']([^"\']{16,})["\']', re.I)
+_CSRF_INPUT = re.compile(r'<input[^>]+name=["\']__RequestVerificationToken["\'][^>]+value=["\']([^"\']+)["\']', re.I)
+
+
+def _dayforce_csrf(portal_html):
+    """Find the antiforgery token the board sends as X-CSRF-TOKEN.
+
+    A capture of the real browser request showed the search POST carries an
+    X-CSRF-TOKEN header, which is precisely what the earlier evidence pointed
+    at: the 403 came back as plain text while sibling 404s and 405s came back
+    as problem-detail JSON, i.e. thrown by middleware before routing.
+
+    Checked in the order these are usually delivered: the session cookie jar
+    (double-submit pattern, where the header simply echoes the cookie), then a
+    meta tag, then an inline JSON or JS assignment, then a hidden form input."""
+    for c in session.cookies:
+        if re.search(r"csrf|xsrf|antiforgery|verificationtoken", c.name or "", re.I) and c.value:
+            return c.value, f"cookie {c.name}"
+    for rx, how in ((_CSRF_META, "meta tag"), (_CSRF_META_REV, "meta tag"),
+                    (_CSRF_JSON, "inline json"), (_CSRF_INPUT, "form input")):
+        m = rx.search(portal_html or "")
+        if m:
+            return m.group(1), how
+    return None, None
+
+
 def _dayforce_row(j, ns, board, culture):
     """One posting from any Dayforce payload shape."""
     if not isinstance(j, dict):
@@ -1621,7 +1685,7 @@ def _dayforce_items(d):
     return []
 
 
-def _dayforce_probe(ns, board, culture, portal, site):
+def _dayforce_probe(ns, board, culture, portal, site, csrf=None):
     """DIAGNOSTIC FALLBACK, only after the documented call has been refused.
 
     Two fixes have now been tried on Rank and both were disproven by the log:
@@ -1638,6 +1702,8 @@ def _dayforce_probe(ns, board, culture, portal, site):
              "pageNumber": 1, "pageSize": 50, "searchText": "", "location": ""}
     hdr = {**BROWSER_XHR, "Content-Type": "application/json",
            "Origin": "https://jobs.dayforcehcm.com", "Referer": portal}
+    if csrf:
+        hdr["X-CSRF-TOKEN"] = csrf
     hdr_x = {**hdr, "X-Requested-With": "XMLHttpRequest"}
     qs = f"?clientNamespace={ns}&jobBoardCode={code}&cultureCode={culture}"
 
@@ -1684,6 +1750,13 @@ def _dayforce_probe(ns, board, culture, portal, site):
         if not items:
             shape = f"keys {list(d)[:8]}" if isinstance(d, dict) else type(d).__name__
             print(f"        probe {label}: 200, no postings — {shape}")
+            if isinstance(d, dict):
+                pp = d.get("pageProps")
+                if isinstance(pp, dict):
+                    print(f"          pageProps keys {list(pp)[:20]}")
+                sec = _dayforce_secretish(d)
+                if sec:
+                    print(f"          credential-ish fields {sec}")
             continue
         rows = [x for x in (_dayforce_row(j, ns, board, culture) for j in items) if x]
         print(f"        probe {label}: 200 with {len(rows)} postings — THIS ONE WORKS")
@@ -1710,17 +1783,30 @@ def fetch_dayforce(token):
     # swallowed: if the portal itself is refused the block is at their edge on
     # the whole tenant, not on the search call, and that is worth knowing from
     # the log instead of guessing.
-    site = {}
+    site, csrf = {}, None
     try:
         w = session.get(portal, headers=BROWSER_UA, timeout=TIMEOUT)
         if w.status_code != 200:
             print(f"      dayforce {ns}: portal warm-up HTTP {w.status_code}")
         else:
+            csrf, how = _dayforce_csrf(w.text)
+            if csrf:
+                print(f"      dayforce {ns}: CSRF token via {how} ({len(csrf)} chars)")
+            else:
+                print(f"      dayforce {ns}: no CSRF token found on portal")
             site = _dayforce_site_config(w.text)
             if site:
                 print(f"      dayforce {ns}: site config {site}")
             else:
                 print(f"      dayforce {ns}: no __NEXT_DATA__ site config on portal")
+            try:
+                m = re.search(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', w.text or "", re.S)
+                if m:
+                    sec = _dayforce_secretish(json.loads(m.group(1)))
+                    if sec:
+                        print(f"      dayforce {ns}: credential-ish fields on portal {sec}")
+            except Exception:
+                pass
     except Exception as e:
         print(f"      dayforce {ns}: portal warm-up {type(e).__name__}")
 
@@ -1730,30 +1816,38 @@ def fetch_dayforce(token):
         payload = {"clientNamespace": ns, "jobBoardCode": board,
                    "cultureCode": culture, "distanceUnit": 0,
                    "paginationStart": start}
-        # overlay anything the page itself declared. The board's own spelling
-        # of these wins over our guess from the token: a tenant whose site code
-        # differs from the URL segment is exactly the case a hardcoded payload
-        # gets wrong, and this costs nothing when they agree.
+        # Add only fields we do not already set. The captured browser request
+        # sends the UPPERCASE board code from the URL even though __NEXT_DATA__
+        # spells it lowercase, so the page config must not override our three
+        # core fields — an earlier version did exactly that.
         for k, v in site.items():
-            if k.lower() != "companyname":
-                payload[k] = v
+            if k.lower() in ("companyname", "clientnamespace", "jobboardcode",
+                             "culturecode") or k.startswith("_"):
+                continue
+            payload.setdefault(k, v)
         try:
-            r = _request("POST", url, json=payload,
-                         headers={**BROWSER_XHR,
-                                  "Content-Type": "application/json",
-                                  "Origin": "https://jobs.dayforcehcm.com",
-                                  "Referer": portal,
-                                  "X-Requested-With": "XMLHttpRequest"})
+            hdrs = {**BROWSER_XHR,
+                    "Content-Type": "application/json",
+                    "Origin": "https://jobs.dayforcehcm.com",
+                    "Referer": portal,
+                    "X-Requested-With": "XMLHttpRequest"}
+            if csrf:
+                hdrs["X-CSRF-TOKEN"] = csrf
+            r = _request("POST", url, json=payload, headers=hdrs)
         except Exception as e:
             print(f"      dayforce {ns}: {type(e).__name__}")
             break
         if r.status_code != 200:
-            # print a short body snippet: a WAF challenge page and a plain
-            # "forbidden" are different problems and the body is what tells
-            # them apart. Without it a 403 says nothing about what to try next.
             snip = re.sub(r"\s+", " ", (r.text or "")[:160]).strip()
             print(f"      dayforce {ns}: HTTP {r.status_code}"
                   + (f" — {snip}" if snip else ""))
+            # WWW-Authenticate names the scheme outright when the refusal is an
+            # auth check; the vendor headers say which layer answered.
+            hdrs = {k: v for k, v in (r.headers or {}).items()
+                    if k.lower() in ("www-authenticate", "server", "x-powered-by")
+                    or k.lower().startswith(("x-ms-", "x-azure-", "x-df-", "x-request"))}
+            if hdrs:
+                print(f"      dayforce {ns}: response headers {hdrs}")
             break
         try:
             d = r.json()
@@ -1808,7 +1902,7 @@ def fetch_dayforce(token):
             break                            # a bare list is the whole payload
         time.sleep(REQUEST_DELAY)
     if not out:
-        rows, how = _dayforce_probe(ns, board, culture, portal, site)
+        rows, how = _dayforce_probe(ns, board, culture, portal, site, csrf)
         if rows:
             print(f"      dayforce {ns}: recovered {len(rows)} roles via {how.strip()}")
             return rows
