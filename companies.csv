@@ -1,5 +1,4 @@
 company,category,returning,roles,status,ats_hint,ats_token,notes,business_model
-The Rank Group plc,Operator,no,0,dayforce board found but empty,detect,dayforce:rankgroup|CANDIDATEPORTAL|en-GB,Dayforce HCM candidate portal,land-based
 Delasport,Supplier - Platform,no,0,greenhouse board found but empty,detect,,,digital
 Evoplay,Supplier - Content,no,0,greenhouse board found but empty,detect,greenhouse:evoplaygames,"Greenhouse, EU-hosted board",digital
 Underdog,Operator - US,no,0,greenhouse board found but empty,greenhouse (likely),greenhouse:underdogfantasy,Greenhouse,digital
@@ -105,7 +104,7 @@ Easygo,Operator,yes,43,producing,detect,,From LinkedIn follows,digital
 Eeze,Supplier - Content,yes,21,producing,teamtailor,teamtailor:careers.eeze.com,Teamtailor on a custom domain at careers.eeze.com. He rates the roles that come up here,digital
 EGT Digital,Supplier - Content,yes,35,producing,detect,skip,"egt-digital.com/careers lists only CURRENT roles and links to skillie.ai - use it as the live filter, since the skillie sitemap holds every job ever posted",digital
 Emerald Zebra,Recruitment agency,yes,51,producing,detect,wordpress:emeraldzebra.cy|jobs,"WordPress + Elementor/JetEngine. Their widget config names the post type outright: custom_post_types:[""jobs""], so the REST route is /wp-json/wp/v2/jobs. Cyprus-based iGaming/fintech/forex agency - the REST route returns ALL their roles, where the /job-industry/gaming-jobs-in-cyprus/ taxonomy would filter out the fintech and forex ones. FALLBACK if REST is closed: scrape the taxonomy pages - title in h2 > a, location after icon-map-marker, date in a <time> tag. Note their site 403s some clients, so watch the log",digital
-Entain,Operator - Tier 1,yes,264,producing,detect,,"Ladbrokes, Coral, bwin, partypoker",digital
+Entain,Operator - Tier 1,yes,263,producing,detect,,"Ladbrokes, Coral, bwin, partypoker",digital
 EvenBet Gaming,Supplier - Content,yes,5,producing,detect,skip,"own site, handled by scrape_custom",digital
 EveryMatrix,Supplier - Platform,yes,21,producing,detect,,,digital
 evoke,Operator,yes,73,producing,detect,avature:amswh,"Avature at amswh.avature.net (William Hill/888/Mr Green). NOTE williamhillinternational.com is a SEPARATE second board, not yet added",digital
@@ -151,7 +150,7 @@ Light & Wonder,Supplier - Content,yes,129,producing,detect,https://lnw.wd5.mywor
 LionHires,Recruitment agency,yes,25,producing,greenhouse,,Global recruitment agency; multi-client gaming roles,digital
 LiveScore Group,Operator / Media,yes,14,producing,detect,greenhouse:livescore9,,digital
 Lottoland,Lottery betting,yes,1,producing,detect,,,digital
-Lottomatica,Operator - Tier 1,yes,48,producing,detect,https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers,Workday tenant,digital
+Lottomatica,Operator - Tier 1,yes,49,producing,detect,https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers,Workday tenant,digital
 Luckia,Operator,yes,29,producing,detect,sfcsb:jobs.luckiagaminggroup.com,"SuccessFactors CAREER SITE BUILDER at jobs.luckiagaminggroup.com. Table layout with locations and Spanish dates. Mostly retail casino (croupiers, slot attendants, SAT technicians) - the Shops/Casino Floor exclusion will hide most of it, which is correct",land-based
 MaxBet,Operator,yes,59,producing,detect,zoho:maxbet.zohorecruit.eu|Careers,"Zoho Recruit. The WHOLE board ships in a hidden input id=""jobs"" on the careers page as HTML-escaped JSON - Posting_Title, City, Country, Date_Opened, Job_Type, Industry, id. No API call and no paging: their SHOW MORE button paginates the DISPLAY only, the data is already there. Flutter International company. Mostly Serbian/Bosnian retail shop roles which the exclusion hides, but the corporate ones are good - Head of Marketing, Reward Director, Product Analyst, CRM Specialist, UX Researcher, Senior Payment Specialist",digital
 MERKUR Casino UK,Operator,yes,19,producing,detect,https://merkurcasinouk.wd103.myworkdayjobs.com/MCEC,"Workday. All land-based slots/arcade roles - kept so an online role would surface, the retail exclusion hides the rest. NOTE: never resolve MERKUR by slug, an earlier probe matched an Austrian insurer",land-based
@@ -211,8 +210,9 @@ Tabcorp,Operator - Australia,yes,30,producing,detect,skip,"server-rendered caree
 TalentBet,Recruitment agency,yes,35,producing,detect,skip,"WordPress jobs board, handled by scrape_custom",digital
 Talentgrator,Recruitment agency,yes,58,producing,detect,workable:talentgratorjobs,Workable. Agency,digital
 The Lottery Corporation,Lottery - Australia,yes,9,producing,detect,oracle:fa-exnj-saasfaprod1.fa.ocs.oraclecloud.com|TLC-Careers,Oracle HCM,digital
+The Rank Group plc,Operator,yes,148,producing,detect,dayforce:rankgroup|CANDIDATEPORTAL|en-GB,Dayforce HCM candidate portal,land-based
 The Star Entertainment Group,Operator,yes,20,producing,detect,skip,"Listing is SERVER-RENDERED at careers.star.com.au - table row with the title in a.job-link and the location in span.location. Was WRONGLY parked as ""PageUp unsupported"" - only the apply destination. MOSTLY brick-and-mortar venue roles which the exclusion hides; the value is the occasional corporate role (risk, compliance, digital)",land-based
-Tipico,Operator - Tier 1,yes,178,producing,detect,,,digital
+Tipico,Operator - Tier 1,yes,176,producing,detect,,,digital
 UK Tote Group,Racing,yes,1,producing,detect,talos:f08b3d92-b104-43d5-bb6e-266542f8affa|careers.uktotegroup.com,"Talos360. Public JSON API, no auth: POST api-careers-sites.talos360.com/api/careerssite/vacancies/search with careersSiteObfuscatedId",digital
 Upgaming,Supplier - Content,yes,12,producing,detect,skip,"lifeat.upgaming.com/career/all, ~9 roles, handled by scrape_custom with slug titles. Config not yet verified against the live page - the run log will confirm",digital
 Van Kaizen,Recruitment agency,yes,82,producing,detect,skip,bespoke scraper in collector.py,digital
@@ -227,5 +227,5 @@ Winna.com,Operator,yes,5,producing,detect,teamtailor:careers.winna.com,Teamtailo
 Wiztech,Operator,yes,5,producing,bamboohr,bamboohr:wiztech,BambooHR at wiztech.bamboohr.com. Parent of Aloplay. He rates the roles that come up here,digital
 World Series of Poker,Poker,yes,5,producing,detect,,From LinkedIn follows,digital
 WPT Global,Poker,yes,2,producing,detect,workable:wpt-global,Workable. No roles open at time of pinning - worth re-testing,digital
-Yggdrasil,Supplier - Content,yes,4,producing,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id",digital
+Yggdrasil,Supplier - Content,yes,5,producing,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id",digital
 ZEAL Network,Lottery,yes,13,producing,detect,,,digital
