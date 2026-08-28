@@ -1557,11 +1557,17 @@ def fetch_dayforce(token):
 
     portal = f"https://jobs.dayforcehcm.com/{culture}/{ns}/{board}"
     # a bare POST gets 403 even with browser headers — load the portal first so
-    # the session picks up whatever cookie their edge expects
+    # the session picks up whatever cookie their edge expects. The warm-up now
+    # sends a full Chrome fingerprint and its status is REPORTED rather than
+    # swallowed: if the portal itself is refused the block is at their edge on
+    # the whole tenant, not on the search call, and that is worth knowing from
+    # the log instead of guessing.
     try:
-        session.get(portal, headers=AGENCY_UA, timeout=TIMEOUT)
-    except Exception:
-        pass
+        w = session.get(portal, headers=BROWSER_UA, timeout=TIMEOUT)
+        if w.status_code != 200:
+            print(f"      dayforce {ns}: portal warm-up HTTP {w.status_code}")
+    except Exception as e:
+        print(f"      dayforce {ns}: portal warm-up {type(e).__name__}")
 
     out, seen = [], set()
     start = 0
@@ -1571,7 +1577,7 @@ def fetch_dayforce(token):
                    "paginationStart": start}
         try:
             r = _request("POST", url, json=payload,
-                         headers={**AGENCY_UA, "Accept": "application/json",
+                         headers={**BROWSER_XHR,
                                   "Content-Type": "application/json",
                                   "Origin": "https://jobs.dayforcehcm.com",
                                   "Referer": portal,
@@ -1580,7 +1586,12 @@ def fetch_dayforce(token):
             print(f"      dayforce {ns}: {type(e).__name__}")
             break
         if r.status_code != 200:
-            print(f"      dayforce {ns}: HTTP {r.status_code}")
+            # print a short body snippet: a WAF challenge page and a plain
+            # "forbidden" are different problems and the body is what tells
+            # them apart. Without it a 403 says nothing about what to try next.
+            snip = re.sub(r"\s+", " ", (r.text or "")[:160]).strip()
+            print(f"      dayforce {ns}: HTTP {r.status_code}"
+                  + (f" — {snip}" if snip else ""))
             break
         try:
             d = r.json()
@@ -2792,6 +2803,34 @@ AGENCY_UA = {
     "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-GB,en;q=0.9",
 }
+
+# A fuller Chrome fingerprint. Some edges (Dayforce at Rank) answer 403 to the
+# minimal header set above because the client-hint and Sec-Fetch headers a real
+# browser always sends are missing. Only used where a plain request is refused.
+_CH_UA = '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"'
+BROWSER_UA = {
+    **AGENCY_UA,
+    "sec-ch-ua": _CH_UA,
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"macOS"',
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-User": "?1",
+    "Sec-Fetch-Dest": "document",
+    "Upgrade-Insecure-Requests": "1",
+    # no "br": requests only decodes brotli when the brotli package is
+    # installed, and a body we cannot decode fails the JSON parse.
+    "Accept-Encoding": "gzip, deflate",
+}
+BROWSER_XHR = {
+    **BROWSER_UA,
+    "Accept": "application/json, text/plain, */*",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+}
+BROWSER_XHR.pop("Sec-Fetch-User", None)
+BROWSER_XHR.pop("Upgrade-Insecure-Requests", None)
 
 # location words that appear at the tail of a Pentasia slug
 _LOC_WORDS = {
