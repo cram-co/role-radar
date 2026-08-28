@@ -1,6 +1,7 @@
-role-radar collector run: 2026-08-28T07:08:34.036677+00:00
+role-radar collector run: 2026-08-28T07:31:01.526701+00:00
 ============================================================
 
+      dayforce rankgroup: site config {'clientNamespace': 'rankgroup', 'jobBoardCode': 'candidateportal', 'cultureCode': 'en-GB', 'jobBoardId': 1}
       dayforce rankgroup: HTTP 403 — Forbidden
 The Rank Group plc: 0 roles (dayforce)
 Delasport: 0 roles (greenhouse)
@@ -33,14 +34,14 @@ Sisal: 0 roles (workday)
 3 Oaks Gaming: 1 roles (workable)
 Alea: 8 roles (teamtailor)
 Altenar: 24 roles (bamboohr)
-      sfcsb jobs.amusnet.com: board reports 28 jobs
-      sfcsb jobs.amusnet.com: table columns not matched, using link parse (9/10 locations recovered from urls)
-      sfcsb jobs.amusnet.com: 13 roles
-      sfcsb jobs.amusnet.com: board reports 34 jobs
-      sfcsb jobs.amusnet.com: table columns not matched, using link parse (9/10 locations recovered from urls)
-      sfcsb jobs.amusnet.com: 19 roles
-      sfcsb jobs.amusnet.com: 20 roles across 2 brands
-Amusnet: 20 roles (sfcsb)
+      sfcsb jobs.amusnet.com: board reports 29 jobs
+      sfcsb jobs.amusnet.com: table columns not matched, using link parse (8/10 locations recovered from urls)
+      sfcsb jobs.amusnet.com: 14 roles
+      sfcsb jobs.amusnet.com: board reports 35 jobs
+      sfcsb jobs.amusnet.com: table columns not matched, using link parse (8/10 locations recovered from urls)
+      sfcsb jobs.amusnet.com: 20 roles
+      sfcsb jobs.amusnet.com: 21 roles across 2 brands
+Amusnet: 21 roles (sfcsb)
 ARB Interactive: 7 roles (ashby)
 Aristocrat Interactive: 206 roles (workday)
       jobvite pragmaticplay: 87 roles across 3 listings
@@ -79,13 +80,13 @@ Derivco: 11 roles (bamboohr)
 DigiOutsource: 117 roles (workday)
 Digitain: 86 roles (bamboohr)
 DraftKings: 97 roles (workday)
-Easygo: 44 roles (greenhouse)
+Easygo: 43 roles (greenhouse)
 Eeze: 21 roles (teamtailor)
       wordpress emeraldzebra.cy: Digital Marketing Director, Sports Betting, Limassol-3876348 -> 51
 Emerald Zebra: 51 roles (wordpress)
 Entain: 269 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39537 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39535 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 71 roles
 evoke: 71 roles (avature)  [30s]
@@ -133,7 +134,7 @@ Luckia: 28 roles (sfcsb)
 MaxBet: 59 roles (zoho)
 MERKUR Casino UK: 19 roles (workday)
 Midnite: 22 roles (ashby)
-MiFinity: 16 roles (bamboohr)
+MiFinity: 15 roles (bamboohr)
 MrQ: 8 roles (teamtailor)
 Neds: 9 roles (workable)
 Novibet: 34 roles (workable)
@@ -165,7 +166,7 @@ Silverspin: 7 roles (teamtailor)
 SkillOnNet: 21 roles (teamtailor)
 Soft2Bet: 7 roles (greenhouse)
 SoftSwiss: 21 roles (teamtailor)
-Sportradar: 71 roles (smartrecruiters)
+Sportradar: 72 roles (smartrecruiters)
 Sporttrade: 2 roles (bamboohr)
 SportyBet / Sporty Group: 44 roles (greenhouse)
       hurma spribe: board reports 9 vacancies
@@ -178,7 +179,7 @@ Super Group (Betway, Jackpot City, Spin): 58 roles (workday)
 Superbet: 185 roles (greenhouse)
 Talentgrator: 59 roles (workable)  [26s]
 The Lottery Corporation: 9 roles (oracle)
-Tipico: 178 roles (smartrecruiters)
+Tipico: 179 roles (smartrecruiters)
       talos f08b3d92: 1 roles
 UK Tote Group: 1 roles (talos)
 Veikkaus (incl. Fennica Gaming): 5 roles (oracle)
@@ -566,16 +567,15 @@ EvenBet Gaming: 5 roles (agency board)
       Nolimit City® https://career.nolimitcity.com/career/: HTTP 403
    Nolimit City®: link parse -> 44
 Nolimit City®: 44 roles (agency board)
-      json-ld https://arrise.com/careers: HTTP 404
-      json-ld https://arrise.com/careers/: HTTP 404
       json-ld https://arrise.com/jobs: HTTP 404
       json-ld https://arrise.com/en/careers: HTTP 404
-      ARRISE (global): shell HTTP 404
-      ARRISE (global) https://arrise.com/careers: HTTP 404
-      ARRISE (global) https://arrise.com/careers/: HTTP 404
+      ARRISE (global): 3 script bundle(s) referenced, checking 4
+      ARRISE (global): API-looking URLs in bundle:
+         https://log.cookieyes.com/api/v1/log
       ARRISE (global) https://arrise.com/jobs: HTTP 404
       ARRISE (global) https://arrise.com/en/careers: HTTP 404
-ARRISE (global): 0 roles (agency board)  <-- CHECK: returned nothing
+   ARRISE (global): link parse -> 6
+ARRISE (global): 6 roles (agency board)
       Apercon: 23 script bundle(s) referenced, checking 7
       Apercon: API-looking URLs in bundle:
          https://www.youtube.com/iframe_api
@@ -601,15 +601,14 @@ BettingJobs: 91 roles (agency board)
 Van Kaizen: 82 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
 
-titles cleaned: 416 trailing references stripped, 33 locations taken from the title
+titles cleaned: 415 trailing references stripped, 34 locations taken from the title
    carried forward 6 roles for VGW (unreachable this run)
    carried forward 20 roles for The Star Entertainment Group (unreachable this run)
-   carried forward 6 roles for ARRISE (global) (unreachable this run)
    carried forward 7 roles for Sportingtech (unreachable this run)
 
-carried 39 roles forward from the previous feed
+carried 33 roles forward from the previous feed
 
-first_seen: 107 roles new since the last run, 7135 carried an existing date
+first_seen: 60 roles new since the last run, 7183 carried an existing date
 
 dropped 52 postings older than 2 years
 
@@ -617,5 +616,5 @@ dropped 4 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 173 returning, 57 not
 
-Feed written: 7186 jobs
+Feed written: 7187 jobs
 Unresolved companies (0): 
