@@ -1543,6 +1543,40 @@ _POSTCODE = re.compile(
     r"[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}|\d{5}(-\d{4})?|[A-Z]\d[A-Z]\s*\d[A-Z]\d", re.I)
 
 
+
+def _dayforce_site_config(portal_html):
+    """Dayforce portals are Next.js apps: the board's own settings ship in the
+    __NEXT_DATA__ script on the page. Two independent write-ups of this ATS say
+    the search call is built FROM those values rather than from the URL, which
+    is the likeliest reason a payload assembled purely from our token is
+    refused with a bare 403 while the page itself loads fine.
+
+    Returns whatever site fields are present, keyed as the page spells them."""
+    m = re.search(r'id="__NEXT_DATA__"[^>]*>(.*?)</script>', portal_html or "", re.S)
+    if not m:
+        return {}
+    try:
+        data = json.loads(m.group(1))
+    except Exception:
+        return {}
+    wanted = {"clientnamespace", "jobboardcode", "clientsitexrefcode",
+              "culturecode", "companyid", "clientsiteid", "jobboardid",
+              "siteid", "companyname"}
+    found, stack, budget = {}, [data], 40000
+    while stack and budget > 0:
+        node = stack.pop()
+        budget -= 1
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if isinstance(v, (dict, list)):
+                    stack.append(v)
+                elif k.lower() in wanted and v not in (None, "") and k not in found:
+                    found[k] = v
+        elif isinstance(node, list):
+            stack.extend(node[:500])
+    return found
+
+
 def fetch_dayforce(token):
     """Dayforce HCM candidate portals. The board is client-rendered but there is
     a public POST search endpoint that returns everything in one call.
@@ -1562,10 +1596,17 @@ def fetch_dayforce(token):
     # swallowed: if the portal itself is refused the block is at their edge on
     # the whole tenant, not on the search call, and that is worth knowing from
     # the log instead of guessing.
+    site = {}
     try:
         w = session.get(portal, headers=BROWSER_UA, timeout=TIMEOUT)
         if w.status_code != 200:
             print(f"      dayforce {ns}: portal warm-up HTTP {w.status_code}")
+        else:
+            site = _dayforce_site_config(w.text)
+            if site:
+                print(f"      dayforce {ns}: site config {site}")
+            else:
+                print(f"      dayforce {ns}: no __NEXT_DATA__ site config on portal")
     except Exception as e:
         print(f"      dayforce {ns}: portal warm-up {type(e).__name__}")
 
@@ -1575,6 +1616,13 @@ def fetch_dayforce(token):
         payload = {"clientNamespace": ns, "jobBoardCode": board,
                    "cultureCode": culture, "distanceUnit": 0,
                    "paginationStart": start}
+        # overlay anything the page itself declared. The board's own spelling
+        # of these wins over our guess from the token: a tenant whose site code
+        # differs from the URL segment is exactly the case a hardcoded payload
+        # gets wrong, and this costs nothing when they agree.
+        for k, v in site.items():
+            if k.lower() != "companyname":
+                payload[k] = v
         try:
             r = _request("POST", url, json=payload,
                          headers={**BROWSER_XHR,
