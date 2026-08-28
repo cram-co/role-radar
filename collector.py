@@ -1562,6 +1562,7 @@ def _dayforce_site_config(portal_html):
     wanted = {"clientnamespace", "jobboardcode", "clientsitexrefcode",
               "culturecode", "companyid", "clientsiteid", "jobboardid",
               "siteid", "companyname"}
+    build_id = data.get("buildId") if isinstance(data, dict) else None
     found, stack, budget = {}, [data], 40000
     while stack and budget > 0:
         node = stack.pop()
@@ -1574,7 +1575,120 @@ def _dayforce_site_config(portal_html):
                     found[k] = v
         elif isinstance(node, list):
             stack.extend(node[:500])
+    if build_id:
+        found["_buildId"] = build_id
     return found
+
+
+
+def _dayforce_row(j, ns, board, culture):
+    """One posting from any Dayforce payload shape."""
+    if not isinstance(j, dict):
+        return None
+    title = html.unescape(str(_pick(j, "title", "jobTitle", "Title") or "")).strip()
+    if not title:
+        return None
+    jid = _pick(j, "id", "jobPostingId", "referenceNumber", "ReferenceNumber") or ""
+    u = (_pick(j, "jobDetailsUrl", "JobDetailsUrl", "url")
+         or f"https://jobs.dayforcehcm.com/{culture}/{ns}/{board}/jobs/{jid}")
+    bits = [_pick(j, "city", "City"), _pick(j, "state", "State"),
+            _pick(j, "country", "Country")]
+    return {
+        "title": title,
+        "location": ", ".join(str(b) for b in bits if b) or _flatten_loc(_pick(j, "location")),
+        "department": str(_pick(j, "department", "Department") or ""),
+        "url": u,
+        "posted_at": _pick(j, "datePosted", "DatePosted", "postedDate"),
+    }
+
+
+def _dayforce_items(d):
+    """Find the posting list inside whatever came back."""
+    if isinstance(d, list):
+        return d
+    if not isinstance(d, dict):
+        return []
+    for k in ("results", "jobPostings", "data", "items", "jobs", "postings"):
+        v = d.get(k)
+        if isinstance(v, list) and v:
+            return v
+    # Next.js data routes bury the payload under pageProps
+    pp = (d.get("pageProps") or {}) if isinstance(d.get("pageProps"), dict) else {}
+    for k in ("jobPostings", "jobs", "results", "postings", "initialJobs"):
+        v = pp.get(k)
+        if isinstance(v, list) and v:
+            return v
+    return []
+
+
+def _dayforce_probe(ns, board, culture, portal, site):
+    """DIAGNOSTIC FALLBACK, only after the documented call has been refused.
+
+    Two fixes have now been tried on Rank and both were disproven by the log:
+    a browser fingerprint (the portal loads fine, so it is not bot management)
+    and a payload built from __NEXT_DATA__ (still a bare 403). Rather than
+    guess a third time, sweep the plausible variants once, report what each
+    returns, and USE one if it works. Bounded, paced, and only reached on
+    failure, so a healthy tenant never pays for it."""
+    base = f"https://jobs.dayforcehcm.com/api/geo/{ns}/jobposting/search"
+    code = site.get("jobBoardCode") or board
+    body = {"clientNamespace": ns, "jobBoardCode": code,
+            "cultureCode": culture, "distanceUnit": 0, "paginationStart": 0}
+    paged = {"clientNamespace": ns, "jobBoardCode": code, "cultureCode": culture,
+             "pageNumber": 1, "pageSize": 50, "searchText": "", "location": ""}
+    hdr = {**BROWSER_XHR, "Content-Type": "application/json",
+           "Origin": "https://jobs.dayforcehcm.com", "Referer": portal}
+    hdr_x = {**hdr, "X-Requested-With": "XMLHttpRequest"}
+    qs = f"?clientNamespace={ns}&jobBoardCode={code}&cultureCode={culture}"
+
+    variants = [
+        ("POST paged shape",      "POST", base, paged, hdr_x),
+        ("POST no X-Req-With",    "POST", base, body,  hdr),
+        ("POST minimal headers",  "POST", base, body,
+            {**AGENCY_UA, "Content-Type": "application/json", "Referer": portal}),
+        ("GET  querystring",      "GET",  base + qs, None, hdr_x),
+        ("POST no /geo",          "POST",
+            f"https://jobs.dayforcehcm.com/api/{ns}/jobposting/search", body, hdr_x),
+        ("POST culture in path",  "POST",
+            f"https://jobs.dayforcehcm.com/api/geo/{ns}/{culture}/jobposting/search",
+            body, hdr_x),
+        ("GET  jobposting list",  "GET",
+            f"https://jobs.dayforcehcm.com/api/geo/{ns}/jobposting/list" + qs, None, hdr_x),
+    ]
+    bid = site.get("_buildId")
+    if bid:
+        variants.append(("GET  next data route", "GET",
+            f"https://jobs.dayforcehcm.com/_next/data/{bid}/{culture}/{ns}/{board}.json",
+            None, hdr_x))
+
+    for label, method, url, payload, headers in variants:
+        try:
+            kw = {"headers": headers}
+            if payload is not None:
+                kw["json"] = payload
+            r = _request(method, url, tries=1, **kw)
+        except Exception as e:
+            print(f"        probe {label}: {type(e).__name__}")
+            continue
+        if r.status_code != 200:
+            snip = re.sub(r"\s+", " ", (r.text or "")[:80]).strip()
+            print(f"        probe {label}: HTTP {r.status_code}"
+                  + (f" — {snip}" if snip else ""))
+            continue
+        try:
+            d = r.json()
+        except Exception:
+            print(f"        probe {label}: 200 but not JSON")
+            continue
+        items = _dayforce_items(d)
+        if not items:
+            shape = f"keys {list(d)[:8]}" if isinstance(d, dict) else type(d).__name__
+            print(f"        probe {label}: 200, no postings — {shape}")
+            continue
+        rows = [x for x in (_dayforce_row(j, ns, board, culture) for j in items) if x]
+        print(f"        probe {label}: 200 with {len(rows)} postings — THIS ONE WORKS")
+        return rows, label
+    return [], None
 
 
 def fetch_dayforce(token):
@@ -1693,6 +1807,11 @@ def fetch_dayforce(token):
         if isinstance(d, list):
             break                            # a bare list is the whole payload
         time.sleep(REQUEST_DELAY)
+    if not out:
+        rows, how = _dayforce_probe(ns, board, culture, portal, site)
+        if rows:
+            print(f"      dayforce {ns}: recovered {len(rows)} roles via {how.strip()}")
+            return rows
     if out:
         print(f"      dayforce {ns}: {len(out)} roles")
     return out
