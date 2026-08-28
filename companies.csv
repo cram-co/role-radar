@@ -1,5 +1,5 @@
 company,category,returning,roles,status,ats_hint,ats_token,notes,business_model
-The Rank Group plc,Operator,no,0,dayforce board found but empty,detect,dayforce:rankgroup|CANDIDATEPORTAL|en-GB,Dayforce HCM candidate portal,digital
+The Rank Group plc,Operator,no,0,dayforce board found but empty,detect,dayforce:rankgroup|CANDIDATEPORTAL|en-GB,Dayforce HCM candidate portal,land-based
 Delasport,Supplier - Platform,no,0,greenhouse board found but empty,detect,,,digital
 Evoplay,Supplier - Content,no,0,greenhouse board found but empty,detect,greenhouse:evoplaygames,"Greenhouse, EU-hosted board",digital
 Underdog,Operator - US,no,0,greenhouse board found but empty,greenhouse (likely),greenhouse:underdogfantasy,Greenhouse,digital

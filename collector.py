@@ -22,6 +22,7 @@ import sys
 import time
 import uuid
 from datetime import datetime, timezone
+import urllib.parse
 from pathlib import Path
 
 import requests
@@ -1636,7 +1637,14 @@ def _dayforce_csrf(portal_html):
     meta tag, then an inline JSON or JS assignment, then a hidden form input."""
     for c in session.cookies:
         if re.search(r"csrf|xsrf|antiforgery|verificationtoken", c.name or "", re.I) and c.value:
-            return c.value, f"cookie {c.name}"
+            # NextAuth stores this cookie as "token|hash", URL-encoded, so the
+            # raw value is 131 chars while the header the browser sends is just
+            # the 64-char token in front of the separator. A first pass sent
+            # the whole cookie and was still refused; the captured request is
+            # what showed the difference.
+            v = urllib.parse.unquote(c.value).split("|")[0].strip()
+            if v:
+                return v, f"cookie {c.name}"
     for rx, how in ((_CSRF_META, "meta tag"), (_CSRF_META_REV, "meta tag"),
                     (_CSRF_JSON, "inline json"), (_CSRF_INPUT, "form input")):
         m = rx.search(portal_html or "")
