@@ -229,3 +229,14 @@ World Series of Poker,Poker,yes,5,producing,detect,,From LinkedIn follows,digita
 WPT Global,Poker,yes,2,producing,detect,workable:wpt-global,Workable. No roles open at time of pinning - worth re-testing,digital
 Yggdrasil,Supplier - Content,yes,6,producing,detect,smartrecruiters:YggdrasilSandbox,"SmartRecruiters, note the ""Sandbox"" suffix in the company id",digital
 ZEAL Network,Lottery,yes,13,producing,detect,,,digital
+High 5 Games,Supplier - Content,no,0,new - not yet run,detect,bamboohr:high5games,BambooHR,digital
+The Multiple Group,Supplier - Platform,no,0,new - not yet run,detect,bamboohr:multiplegroup,BambooHR,digital
+Betstarters,Supplier - Platform,no,0,new - not yet run,detect,bamboohr:betstarters,BambooHR,digital
+LeapSquare,Supplier - Platform,no,0,new - not yet run,detect,bamboohr:leapsquare,BambooHR,digital
+Wicked Games,Supplier - Content,no,0,new - not yet run,detect,bamboohr:wickedgames,BambooHR,digital
+Duelbits,Operator,no,0,new - not yet run,detect,bamboohr:duelbits,BambooHR,digital
+iBet Group,Operator,no,0,new - not yet run,detect,bamboohr:igroup,BambooHR,digital
+Menace.com,Operator,no,0,new - not yet run,detect,greenhouse_eu:menace-com,Greenhouse EU board,digital
+Solid Stake,Operator,no,0,new - not yet run,detect,recruitee:solidstake,Recruitee,digital
+OLG,Lottery,no,0,new - not yet run,detect,https://olg.wd3.myworkdayjobs.com/en-US/Careers,Workday. Ontario lottery and gaming,digital
+Allwyn UK,Lottery,no,0,new - not yet run,detect,workable:allwynuk,"National Lottery Fourth Licence operator. Separate entity from the Allwyn parent row, which uses the Recruitis scraper",digital
