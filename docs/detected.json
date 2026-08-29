@@ -1010,5 +1010,60 @@
   "ats": "teamtailor",
   "token": "careers.eeze.com",
   "manual": true
+ },
+ "High 5 Games": {
+  "ats": "bamboohr",
+  "token": "high5games",
+  "manual": true
+ },
+ "The Multiple Group": {
+  "ats": "bamboohr",
+  "token": "multiplegroup",
+  "manual": true
+ },
+ "Betstarters": {
+  "ats": "bamboohr",
+  "token": "betstarters",
+  "manual": true
+ },
+ "LeapSquare": {
+  "ats": "bamboohr",
+  "token": "leapsquare",
+  "manual": true
+ },
+ "Wicked Games": {
+  "ats": "bamboohr",
+  "token": "wickedgames",
+  "manual": true
+ },
+ "Duelbits": {
+  "ats": "bamboohr",
+  "token": "duelbits",
+  "manual": true
+ },
+ "iBet Group": {
+  "ats": "bamboohr",
+  "token": "igroup",
+  "manual": true
+ },
+ "Menace.com": {
+  "ats": "greenhouse_eu",
+  "token": "menace-com",
+  "manual": true
+ },
+ "Solid Stake": {
+  "ats": "recruitee",
+  "token": "solidstake",
+  "manual": true
+ },
+ "OLG": {
+  "ats": "workday",
+  "url": "https://olg.wd3.myworkdayjobs.com/en-US/Careers",
+  "manual": true
+ },
+ "Allwyn UK": {
+  "ats": "workable",
+  "token": "allwynuk",
+  "manual": true
  }
 }

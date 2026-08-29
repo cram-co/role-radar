@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-29T12:41:07.645238+00:00
+role-radar collector run: 2026-08-29T18:44:58.736452+00:00
 ============================================================
 
 Delasport: 0 roles (greenhouse)
@@ -41,8 +41,8 @@ Altenar: 24 roles (bamboohr)
 Amusnet: 21 roles (sfcsb)
 ARB Interactive: 7 roles (ashby)
 Aristocrat Interactive: 205 roles (workday)
-      jobvite pragmaticplay: 83 roles across 3 listings
-ARRISE: 83 roles (jobvite)
+      jobvite pragmaticplay: 85 roles across 3 listings
+ARRISE: 85 roles (jobvite)
 B2Spin Limited: 15 roles (ashby)
 B2Tech: 12 roles (teamtailor)
 bet365: 113 roles (smartrecruiters)
@@ -83,7 +83,7 @@ Eeze: 21 roles (teamtailor)
 Emerald Zebra: 51 roles (wordpress)
 Entain: 258 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39513 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39507 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 70 roles
 evoke: 70 roles (avature)  [28s]
@@ -158,7 +158,7 @@ Racing Post / Spotlight Sports: 10 roles (workable)
 Relax Gaming: 7 roles (teamtailor)
 Rhino Entertainment: 5 roles (workable)
 Rush Street Interactive: 24 roles (greenhouse)
-SCIENTIFIC GAMES: 116 roles (workday)
+SCIENTIFIC GAMES: 115 roles (workday)
 Silverspin: 7 roles (teamtailor)
 SkillOnNet: 21 roles (teamtailor)
 Soft2Bet: 7 roles (greenhouse)
@@ -179,8 +179,8 @@ The Lottery Corporation: 9 roles (oracle)
       dayforce rankgroup: CSRF token via cookie __Host-next-auth.csrf-token (64 chars)
       dayforce rankgroup: site config {'clientNamespace': 'rankgroup', 'jobBoardCode': 'candidateportal', 'cultureCode': 'en-GB', 'jobBoardId': 1, '_buildId': 'eIk4L1D515LvH5jNwmYR7'}
       dayforce rankgroup: credential-ish fields on portal {'GOOGLE_API_KEY': 'AIzaSy...39 chars', 'PENDO_API_KEY': '3bc007...36 chars', 'clientId': '83365', 'apiKey': '77zhgj...14 chars', 'cookie-description-pin-unauth': 'This c...84 chars'}
-      dayforce rankgroup: 143 roles
-The Rank Group plc: 143 roles (dayforce)
+      dayforce rankgroup: 140 roles
+The Rank Group plc: 140 roles (dayforce)
 Tipico: 180 roles (smartrecruiters)
       talos f08b3d92: 1 roles
 UK Tote Group: 1 roles (talos)
@@ -196,6 +196,17 @@ World Series of Poker: 5 roles (bamboohr)
 WPT Global: 2 roles (workable)
 Yggdrasil: 6 roles (smartrecruiters)
 ZEAL Network: 13 roles (ashby)
+High 5 Games: 13 roles (bamboohr)
+The Multiple Group: 8 roles (bamboohr)
+Betstarters: 1 roles (bamboohr)
+LeapSquare: 0 roles (bamboohr)
+Wicked Games: 12 roles (bamboohr)
+Duelbits: 1 roles (bamboohr)
+iBet Group: 2 roles (bamboohr)
+Menace.com: 0 roles (greenhouse_eu)
+Solid Stake: 1 roles (recruitee)
+OLG: 6 roles (workday)
+Allwyn UK: 22 roles (workable)
    Fortuna: hunting API in the SPA bundle
       Fortuna: 1 script bundle(s) referenced, checking 4
       Fortuna: API-looking URLs in bundle:
@@ -458,7 +469,7 @@ The Star Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothin
    PointsBet: listing page -> 3 current roles
    PointsBet: link parse -> 3
 PointsBet: 3 roles (agency board)
-      KamaGames: 6 script bundle(s) referenced, checking 4
+      KamaGames: 4 script bundle(s) referenced, checking 4
       KamaGames: API-looking URLs in bundle:
          http://imakewebthings.com/waypoints/api/context
          http://imakewebthings.com/waypoints/api/context-destroy
@@ -483,7 +494,7 @@ PointsBet: 3 roles (agency board)
          https://stackoverflow.com/questions/9951045/pinterest-api-documentation
          https://www.reddit.com/dev/api
          https://www.reddit.com/dev/api/
-      KamaGames https://www.kamagames.com/careers: 200, 75851 bytes, 0 '/vacancy' refs
+      KamaGames https://www.kamagames.com/careers: 200, 72482 bytes, 0 '/vacancy' refs
          link shapes present: /images/* x13, /kamagames x4, /dist/* x2, /about_us x2, /games x2, /pokerist x2, /blackjackist x2, /slots x2, /video_poker x2, /roulettist x2, /baccarist x2, /setpoker x2
 KamaGames: 0 roles (agency board)  <-- CHECK: returned nothing
       SoftConstruct: shell HTTP 403
@@ -545,9 +556,9 @@ Games Global: 30 roles (agency board)
       Play'n GO: 15 script bundle(s) referenced, checking 6
       Play'n GO: API-looking URLs in bundle:
          https://www.youtube.com/iframe_api
-      Play'n GO https://talenthub.playngo.com/jobs/: 200, 1788523 bytes, 0 '/job' refs
+      Play'n GO https://talenthub.playngo.com/jobs/: 200, 1788527 bytes, 0 '/job' refs
          link shapes present: /series/* x30, /services/* x25, /careers x8, /social-casino x6, /post/* x5, /media/* x4, /games x4, /about-us x4, /news x4, /the-go-show x4, /csr x4, /safer-gambling x4
-      Play'n GO https://talenthub.playngo.com/jobs: 200, 1788523 bytes, 0 '/job' refs
+      Play'n GO https://talenthub.playngo.com/jobs: 200, 1788527 bytes, 0 '/job' refs
          link shapes present: /series/* x30, /services/* x25, /careers x8, /social-casino x6, /post/* x5, /media/* x4, /games x4, /about-us x4, /news x4, /the-go-show x4, /csr x4, /safer-gambling x4
       Play'n GO https://talenthub.playngo.com/: 200, 24092 bytes, 1 '/job' refs
          link shapes present: /connect/* x3, /sso_login x2, /assets/* x1, /jobs.rss x1, /careers x1, /data-privacy x1
@@ -603,20 +614,20 @@ BettingJobs: 91 roles (agency board)
 Van Kaizen: 82 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
 
-titles cleaned: 419 trailing references stripped, 34 locations taken from the title
+titles cleaned: 423 trailing references stripped, 34 locations taken from the title
    carried forward 6 roles for VGW (unreachable this run)
    carried forward 20 roles for The Star Entertainment Group (unreachable this run)
    carried forward 7 roles for Sportingtech (unreachable this run)
 
 carried 33 roles forward from the previous feed
 
-first_seen: 95 roles new since the last run, 7304 carried an existing date
+first_seen: 124 roles new since the last run, 7339 carried an existing date
 
 dropped 51 postings older than 2 years
 
 dropped 4 physical racing roles (stable, yard, raceday, track)
 
-companies.csv refreshed: 174 returning, 56 not
+companies.csv refreshed: 183 returning, 58 not
 
-Feed written: 7344 jobs
+Feed written: 7408 jobs
 Unresolved companies (0): 
