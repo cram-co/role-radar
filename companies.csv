@@ -80,7 +80,7 @@ Brightstar Lottery,Lottery,yes,103,producing,detect,sfcsb:careers.brightstarlott
 Bullfinch Recruitment,Recruitment agency,yes,38,producing,breezy,,Breezy board; IOM/Gib/Malta/Cyprus focus,digital
 Caesars Entertainment,Operator - US,yes,1432,producing,detect,oracle:edmn.fa.us2.oraclecloud.com|CX_1,"Oracle HCM. NOTE this is the WHOLE GROUP board, not their digital arm — ~1,400 roles, mostly property. Marked land-based for that reason. If Caesars Digital ever exposes its own board it should get a separate row, the way Aristocrat Interactive and Greentube do. Until then the digital override is what surfaces their ~50 genuinely digital roles",land-based
 Caliente,Operator - Mexico,yes,6,producing,detect,,,digital
-Casumo,Operator,yes,2,producing,detect,skip,"in-house careers site, handled by scrape_custom",digital
+Casumo,Operator,yes,1,producing,detect,skip,"in-house careers site, handled by scrape_custom",digital
 Codere Online,Operator,yes,2,producing,detect,skip,"HiringRoom (codere + codereargentina), handled by scrape_custom",digital
 CoinPoker,Poker,yes,18,producing,detect,,From LinkedIn follows,digital
 ComeOn Group,Operator,yes,28,producing,detect,workable:comeon-group,Workable,digital
@@ -205,7 +205,7 @@ Stake (Easygo),Operator - Crypto,yes,21,producing,detect,,,digital
 Stats Perform,Sports data,yes,6,producing,detect,,,digital
 Strive Gaming,Supplier - Platform US,yes,1,producing,detect,bamboohr:strivegaming,BambooHR at strivegaming.bamboohr.com,digital
 "Super Group (Betway, Jackpot City, Spin)",Operator - Tier 1,yes,58,producing,detect,https://myhcm.wd3.myworkdayjobs.com/Betway,Super Group / Betway Workday tenant (myhcm),digital
-Superbet,Operator - Growth,yes,196,producing,detect,greenhouse:super,,digital
+Superbet,Operator - Growth,yes,197,producing,detect,greenhouse:super,,digital
 Tabcorp,Operator - Australia,yes,30,producing,detect,skip,"server-rendered careers site (PageUp behind it), handled by scrape_tabcorp",digital
 TalentBet,Recruitment agency,yes,35,producing,detect,skip,"WordPress jobs board, handled by scrape_custom",digital
 Talentgrator,Recruitment agency,yes,58,producing,detect,workable:talentgratorjobs,Workable. Agency,digital
