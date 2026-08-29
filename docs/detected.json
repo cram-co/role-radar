@@ -1065,5 +1065,75 @@
   "ats": "workable",
   "token": "allwynuk",
   "manual": true
+ },
+ "BoyleSports": {
+  "ats": "teamtailor",
+  "token": "careers.boylesports.com",
+  "manual": true
+ },
+ "Over99": {
+  "ats": "teamtailor",
+  "token": "hiring.over99.com",
+  "manual": true
+ },
+ "Crae Group": {
+  "ats": "teamtailor",
+  "token": "jobs.craegroup.com",
+  "manual": true
+ },
+ "RubyPlay": {
+  "ats": "pinpoint",
+  "token": "careers.rubyplay.com",
+  "manual": true
+ },
+ "Boyd Gaming": {
+  "ats": "smartrecruiters",
+  "token": "BoydGaming",
+  "manual": true
+ },
+ "PIN-UP Global": {
+  "ats": "wordpress",
+  "token": "pin-up.global|vacancy",
+  "manual": true
+ },
+ "High Roller Technologies": {
+  "ats": "recruitee",
+  "token": "highroller",
+  "manual": true
+ },
+ "Stakelogic": {
+  "ats": "wordpress",
+  "token": "stakelogic.com|career",
+  "manual": true
+ },
+ "Catena Media": {
+  "ats": "wordpress",
+  "token": "catenamedia.com",
+  "manual": true
+ },
+ "Raketech": {
+  "ats": "wordpress",
+  "token": "raketech.com",
+  "manual": true
+ },
+ "Quickspin": {
+  "ats": "wordpress",
+  "token": "quickspin.com",
+  "manual": true
+ },
+ "PressEnter Group": {
+  "ats": "bamboohr",
+  "token": "pressentergroup",
+  "manual": true
+ },
+ "Sportserve": {
+  "ats": "wordpress",
+  "token": "sportserve.co",
+  "manual": true
+ },
+ "1X2 Network": {
+  "ats": "wordpress",
+  "token": "1x2network.com",
+  "manual": true
  }
 }
