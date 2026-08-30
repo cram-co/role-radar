@@ -1,4 +1,4 @@
-role-radar collector run: 2026-08-29T20:27:32.427679+00:00
+role-radar collector run: 2026-08-30T11:44:12.481421+00:00
 ============================================================
 
 LeapSquare: 0 roles (bamboohr)
@@ -56,9 +56,8 @@ Altenar: 24 roles (bamboohr)
 Amusnet: 21 roles (sfcsb)
 ARB Interactive: 7 roles (ashby)
 Aristocrat Interactive: 205 roles (workday)
-      jobvite pragmaticplay: 200, 76071 bytes but no /job/ links
-         link shapes: /__assets__/* x1
-ARRISE: 0 roles (jobvite)
+      jobvite pragmaticplay: 85 roles across 3 listings
+ARRISE: 85 roles (jobvite)
 B2Spin Limited: 15 roles (ashby)
 B2Tech: 12 roles (teamtailor)
 bet365: 113 roles (smartrecruiters)
@@ -84,7 +83,7 @@ Bragg Gaming: 2 roles (workday)
       sfcsb careers.brightstarlottery.com: 103 roles
 Brightstar Lottery: 103 roles (sfcsb)
 Bullfinch Recruitment: 38 roles (breezy)
-Caesars Entertainment: 1437 roles (oracle)  [24s]
+Caesars Entertainment: 1438 roles (oracle)
 Caliente: 6 roles (bamboohr)
 CoinPoker: 18 roles (teamtailor)
 ComeOn Group: 28 roles (workable)
@@ -102,12 +101,12 @@ Easygo: 43 roles (greenhouse)
 Eeze: 21 roles (teamtailor)
       wordpress emeraldzebra.cy: Digital Marketing Director, Sports Betting, Limassol-3876348 -> 51
 Emerald Zebra: 51 roles (wordpress)
-Entain: 258 roles (smartrecruiters)
+Entain: 256 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39516 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39513 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
-      avature amswh: 70 roles
-evoke: 70 roles (avature)  [30s]
+      avature amswh: 69 roles
+evoke: 69 roles (avature)  [29s]
 evoke plc: 1 roles (bamboohr)
 Evolution: 307 roles (smartrecruiters)
 Fanatics Betting & Gaming: 76 roles (greenhouse)
@@ -175,10 +174,10 @@ Pinnacle: 18 roles (orangehrm)
 Playnetic: 11 roles (teamtailor)
 Playson: 25 roles (ashby)
 Playtech: 110 roles (smartrecruiters)
-Polymarket: 74 roles (ashby)
+Polymarket: 77 roles (ashby)
 Pragmatic Play: 4 roles (teamtailor)
 PressEnter Group: 4 roles (bamboohr)
-PrizePicks: 27 roles (greenhouse)
+PrizePicks: 26 roles (greenhouse)
 Push Gaming: 6 roles (teamtailor)
 Racing Post / Spotlight Sports: 10 roles (workable)
 Relax Gaming: 7 roles (teamtailor)
@@ -201,7 +200,7 @@ Stake (Easygo): 21 roles (breezy)
 Stats Perform: 6 roles (teamtailor)
 Strive Gaming: 1 roles (bamboohr)
 Super Group (Betway, Jackpot City, Spin): 58 roles (workday)
-Superbet: 197 roles (greenhouse)
+Superbet: 198 roles (greenhouse)
 Talentgrator: 58 roles (workable)  [26s]
 The Lottery Corporation: 9 roles (oracle)
 The Multiple Group: 8 roles (bamboohr)
@@ -230,24 +229,6 @@ ZEAL Network: 13 roles (ashby)
       Fortuna: 1 script bundle(s) referenced, checking 4
       Fortuna: API-looking URLs in bundle:
          https://app-azeun-p-hr-easyapply-be.azurewebsites.net
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Vacancies: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/positions: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobOffers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/joboffers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/adverts: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/GetAll: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/List: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobAds: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobads: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publication: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publications: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/vacancies: HTTP 500
@@ -266,16 +247,35 @@ ZEAL Network: 13 roles (ashby)
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/offers: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Recruitment/Jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/job/search: HTTP 500
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Vacancies: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/positions: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobOffers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/joboffers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/adverts: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/GetAll: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/List: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobAds: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobads: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publication: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publications: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
 Fortuna Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
       Codere Online: 0 script bundle(s) referenced, checking 4
       Codere Online: no API URLs found in bundle
    Codere Online: link parse -> 2
 Codere Online: 2 roles (agency board)
-      sitemap https://www.casumocareers.com: 2 job URLs
+      sitemap https://www.casumocareers.com: 3 job URLs
+      json-ld https://www.casumocareers.com/jobs/8241460-senior-accountant: 1 JobPosting blocks  <-- USABLE
       json-ld https://www.casumocareers.com/jobs/8049683-multimedia-designer: HTTP 410
       json-ld https://www.casumocareers.com/jobs/7691557-casino-manager: 1 JobPosting blocks  <-- USABLE
-   Casumo: sitemap + JSON-LD -> 1
-Casumo: 1 roles (agency board)
+   Casumo: sitemap + JSON-LD -> 2
+Casumo: 2 roles (agency board)
       bet9ja: 14 script bundle(s) referenced, checking 6
       bet9ja: no API URLs found in bundle
    bet9ja: link + icon -> 8 roles (8 with a location)
@@ -333,37 +333,14 @@ Exacta Solutions: 32 roles (agency board)
       json-ld https://www.talentbet.com/jobs/vietnamese-speaking-game-presenter-hosting-73f20: 1 JobPosting blocks  <-- USABLE
    TalentBet: sitemap + JSON-LD -> 35
 TalentBet: 35 roles (agency board)
-      json-ld https://igamingrecruitment.io/vacancies/: HTTP 404
-      sitemap https://igamingrecruitment.io: 74 job URLs
-      json-ld https://igamingrecruitment.io/jobs/affiliate-influencer-account-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/affiliate-manager-gibraltar/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/product-manager-integrations/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/sportsbook-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/api-backend-developer-sports-data/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/back-end-engineer-trading-systems/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/noc-team-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-marketing-compliance/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-complaints-experience-recovery/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-payments/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/platform-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/product-manager-payments/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/customer-service-representative-spanish-speaking/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/customer-service-representative-turkish-speaking/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/sales-manager-europe/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/casino-operations-executive/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/project-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/digital-content-campaign-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/training-specialist/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/senior-casino-commercial-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/head-of-crm/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/account-manager-gibraltar-remote/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/sales-account-manager-b2b-igaming/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/treasury-manager/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/communication-channels-expert/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/content-specialist/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://igamingrecruitment.io/jobs/people-office-coordinator/: 1 JobPosting blocks  <-- USABLE
-   iGaming Recruitment: sitemap + JSON-LD -> 27
-iGaming Recruitment: 27 roles (agency board)
+      json-ld https://igamingrecruitment.io/jobs/: HTTP 403
+      json-ld https://igamingrecruitment.io/jobs/page/2/: HTTP 403
+      json-ld https://igamingrecruitment.io/vacancies/: HTTP 403
+      iGaming Recruitment: shell HTTP 403
+      iGaming Recruitment https://igamingrecruitment.io/jobs/: HTTP 403
+      iGaming Recruitment https://igamingrecruitment.io/jobs/page/2/: HTTP 403
+      iGaming Recruitment https://igamingrecruitment.io/vacancies/: HTTP 403
+iGaming Recruitment: 0 roles (agency board)  <-- CHECK: returned nothing
       sitemap https://www.blip.pt: 18 job URLs
       json-ld https://www.blip.pt/jobs/jr139537/security-solutions-architect-iam/: 1 JobPosting blocks  <-- USABLE
       json-ld https://www.blip.pt/jobs/jr124496/site-reliability-engineer/: 1 JobPosting blocks  <-- USABLE
@@ -570,19 +547,17 @@ EGT Digital: 35 roles (agency board)
       json-ld https://careers.gamesglobal.com/jobs/1598?lang=en-us: 1 JobPosting blocks  <-- USABLE
    Games Global: sitemap + JSON-LD -> 30
 Games Global: 30 roles (agency board)
-      sitemap https://talenthub.playngo.com: 2 job URLs
-      json-ld https://talenthub.playngo.com/jobs/7937264-senior-microsoft-platform-security-engineer: HTTP 410
+      sitemap https://talenthub.playngo.com: 1 job URLs
       Play'n GO: 15 script bundle(s) referenced, checking 6
       Play'n GO: API-looking URLs in bundle:
          https://www.youtube.com/iframe_api
-      Play'n GO https://talenthub.playngo.com/jobs/: 200, 1788526 bytes, 0 '/job' refs
+      Play'n GO https://talenthub.playngo.com/jobs/: 200, 1788523 bytes, 0 '/job' refs
          link shapes present: /series/* x30, /services/* x25, /careers x8, /social-casino x6, /post/* x5, /media/* x4, /games x4, /about-us x4, /news x4, /the-go-show x4, /csr x4, /safer-gambling x4
-      Play'n GO https://talenthub.playngo.com/jobs: 200, 1788526 bytes, 0 '/job' refs
+      Play'n GO https://talenthub.playngo.com/jobs: 200, 1788523 bytes, 0 '/job' refs
          link shapes present: /series/* x30, /services/* x25, /careers x8, /social-casino x6, /post/* x5, /media/* x4, /games x4, /about-us x4, /news x4, /the-go-show x4, /csr x4, /safer-gambling x4
       Play'n GO https://talenthub.playngo.com/: 200, 24092 bytes, 1 '/job' refs
          link shapes present: /connect/* x3, /sso_login x2, /assets/* x1, /jobs.rss x1, /careers x1, /data-privacy x1
-   Play'n GO: sitemap slugs -> 1 (unverified, may include closed roles)
-Play'n GO: 1 roles (agency board)
+Play'n GO: 0 roles (agency board)  <-- CHECK: returned nothing
       json-ld https://evenbetgaming.com/vacancies/: HTTP 404
       json-ld https://evenbetgaming.com/vacancies: HTTP 404
       sitemap https://evenbetgaming.com: 5 job URLs
@@ -633,15 +608,16 @@ BettingJobs: 91 roles (agency board)
 Van Kaizen: 82 roles (agency board)
 !! employmenthero.com/jobs/position is serving 2 company rows: Newfield, PointsBet
 
-titles cleaned: 511 trailing references stripped, 37 locations taken from the title
-   carried forward 85 roles for ARRISE (unreachable this run)
+titles cleaned: 511 trailing references stripped, 38 locations taken from the title
+   carried forward 27 roles for iGaming Recruitment (unreachable this run)
+   carried forward 1 roles for Play'n GO (unreachable this run)
    carried forward 6 roles for VGW (unreachable this run)
    carried forward 20 roles for The Star Entertainment Group (unreachable this run)
    carried forward 7 roles for Sportingtech (unreachable this run)
 
-carried 118 roles forward from the previous feed
+carried 61 roles forward from the previous feed
 
-first_seen: 59 roles new since the last run, 8362 carried an existing date
+first_seen: 66 roles new since the last run, 8357 carried an existing date
 
 dropped 51 postings older than 2 years
 
@@ -649,5 +625,5 @@ dropped 4 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 189 returning, 43 not
 
-Feed written: 8366 jobs
+Feed written: 8368 jobs
 Unresolved companies (0): 
