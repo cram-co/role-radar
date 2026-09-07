@@ -376,7 +376,12 @@ const DIGITAL_OVERRIDE = /\b(digital|online|igaming|e-?commerce|product|platform
 // straight through it: "Regional VP of Hospitality Commercial Strategy" and
 // "Director of Property Analytics" are land-based jobs wearing digital words.
 // These terms are unambiguous — no online role is about hotel housekeeping.
-const LAND_CONTEXT = /\b(propert\w*|hospitality|hotel|resort|casino marketing|player development|f\s*&\s*b|food and beverage|banquet|venue|stadia|racecourse|racetrack|on[- ]site|floor operations|construction|facilit\w*|housekeep\w*|guest experience|gaming operations)\b/i;
+const LAND_CONTEXT = /\b(propert\w*|hospitality|hotel|resort|casino marketing|player development|f\s*&\s*b|food and beverage|banquet|venue|stadia|racecourse|racetrack|on[- ]site|floor operations|construction|facilit\w*|housekeep\w*|guest experience|gaming operations|marine|maritime|vessel|deckhand|riverboat|shipboard|dock\w*|galley|hvac|plumb\w*|electrician|mechanic|custodial|groundskeep\w*|landscap\w*|laundry|valet|steward\w*|culinary|kitchen|chef|cook|barista|bartend\w*|beverage|cage|count room|surveillance|slot tech\w*|slot operations|table games|pit\b|valet|security officer|warehouse|shipping and receiving|duty manager|vip host\w*|guest represent\w*|restaurant|\bbar\b|cage cashier|count team|environmental services|engineering technician)\b/i;
+  // Land-based operators call their maintenance staff "Engineer I/II/III" and
+  // their casino sportsbook counter staff "Sportsbook Supervisor". Both trip
+  // DIGITAL_OVERRIDE on words meant for software and trading roles. Applied
+  // ONLY inside the land-based branch, so no digital company is affected.
+  const LAND_TITLE_SHAPES = /(\bengineer\s*(i{1,3}|[123])\b|\bengineer\b.*\b(field|av|day|swing|night|shift)\b|-\s*(day|swing|night)\s*-|\bsportsbook\s+(supervisor|shift|dual rate|writer|ticket|clerk)\b|\bmarket engineer\b|\bcasino engineer\b|\bengineering\s*[-\u2013]\s*shift\b)/i;
 
 // VP and above always shows, whatever the company. A C-suite or MD role at a
 // land-based operator is still a C-suite role, and the company rule should
@@ -932,11 +937,20 @@ function render(){
     // order matters. A floor-level title is dropped whatever the company, so a
     // "Casino Host, Marketing" cannot buy its way back in. Only then does the
     // company rule apply, and a clearly digital title overrides it.
-    out = out.filter(j =>
-      SENIOR_ALWAYS.test(j.t || "") ||
-      (!isFloorTitle(j.t) &&
-       (!NON_DIGITAL_COS.has(j.c) ||
-        (DIGITAL_OVERRIDE.test(j.t || "") && !LAND_CONTEXT.test(j.t || "")))));
+    // At a land-based company LAND_CONTEXT now vetoes even a senior-sounding
+    // title. "Marine Chief Engineer" on a Boyd riverboat matched SENIOR_ALWAYS
+    // on the word "chief" and short-circuited every other check; the same hole
+    // would pass a chief steward or a head chef. A real Chief Digital Officer
+    // carries no land context, so it still shows. Nothing changes for the
+    // digital companies, where SENIOR_ALWAYS keeps its old force.
+    out = out.filter(j => {
+      const t = j.t || "";
+      if (NON_DIGITAL_COS.has(j.c)) {
+        if (LAND_CONTEXT.test(t) || LAND_TITLE_SHAPES.test(t) || isFloorTitle(t)) return false;
+        return SENIOR_ALWAYS.test(t) || DIGITAL_OVERRIDE.test(t);
+      }
+      return SENIOR_ALWAYS.test(t) || !isFloorTitle(t);
+    });
   }
   if(q) out = out.filter(j => (j.t||"").toLowerCase().includes(q) || (j.c||"").toLowerCase().includes(q));
   // Roughly 1 in 7 roles carry no posting date — several sources (Workday,
