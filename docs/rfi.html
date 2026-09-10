@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request for Information — Casino platform and turnkey services</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/cram-favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F5F7;
+  --card:#FFFFFF;
+  --ink:#0E1B2E;
+  --ink-soft:#3E5069;
+  --rule:#E2E4E8;
+  --accent:#1F4BC4;
+  --accent-soft:#E7EDFB;
+  --warn:#A3352B;
+  --radius:3px;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:"Fraunces",Georgia,"Times New Roman",serif;font-weight:500;margin:0}
+a{color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:1px solid var(--rule);
+  background:var(--paper);
+}
+.masthead-inner{
+  max-width:var(--maxw);margin:0 auto;padding:14px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+}
+.mark{display:block;line-height:0}
+.mark svg{height:52px;width:auto;display:block}
+.masthead-meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);letter-spacing:.02em}
+
+/* ---------- shell ---------- */
+.shell{max-width:var(--maxw);margin:0 auto;padding:34px 28px 90px;display:grid;grid-template-columns:212px 1fr;gap:52px;align-items:start}
+@media (max-width:860px){.shell{grid-template-columns:1fr;gap:26px;padding:22px 20px 80px}}
+
+/* ---------- side rail ---------- */
+.rail{position:sticky;top:28px}
+@media (max-width:860px){.rail{position:static}}
+.rail ol{list-style:none;margin:0;padding:0;counter-reset:sec}
+.rail li{
+  display:flex;gap:11px;align-items:flex-start;
+  padding:7px 0;font-size:13.5px;color:var(--ink-soft);
+  border-left:2px solid transparent;padding-left:12px;margin-left:-14px;
+}
+.rail li .n{
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;
+  min-width:16px;color:#8B93A0;font-size:12px;
+}
+.rail li.done .n{color:var(--accent)}
+.rail li.active{color:var(--ink);border-left-color:var(--accent);font-weight:500}
+.rail li.active .n{color:var(--accent)}
+@media (max-width:860px){
+  .rail ol{display:none}
+  .railbar{height:4px;background:var(--rule);border-radius:2px;overflow:hidden}
+  .railbar i{display:block;height:100%;background:var(--accent);width:0;transition:width .28s ease}
+  .railcount{font-size:12.5px;color:var(--ink-soft);margin-bottom:8px}
+}
+@media (min-width:861px){.railbar,.railcount{display:none}}
+
+/* ---------- pages ---------- */
+.page{display:none;animation:none}
+.page.on{display:block}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);margin-bottom:7px;letter-spacing:.02em}
+.page h1{font-size:26px;line-height:1.25;letter-spacing:-.01em;max-width:none}
+.page h2{font-size:25px;line-height:1.22;letter-spacing:-.01em;max-width:24ch}
+.intent{color:var(--ink-soft);margin:12px 0 0;max-width:66ch;font-size:15.5px}
+.rule{height:1px;background:var(--rule);margin:26px 0 4px;border:0}
+
+.lede{max-width:66ch}
+.lede p{margin:15px 0}
+.pullnote{
+  border-left:2px solid var(--accent);
+  background:var(--accent-soft);
+  padding:13px 16px;margin:22px 0;max-width:66ch;
+  font-size:14.5px;border-radius:0 var(--radius) var(--radius) 0;
+}
+.pullnote strong{font-weight:600}
+
+/* ---------- fields ---------- */
+.q{margin:26px 0 0;max-width:70ch}
+.q .qhead{display:flex;gap:11px;align-items:baseline}
+.q .qnum{
+  font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--accent);
+  font-variant-numeric:tabular-nums;min-width:28px;
+}
+.q label{font-weight:500;font-size:16px;display:block;cursor:pointer}
+.q .hint{font-size:13.5px;color:var(--ink-soft);margin:4px 0 0 37px;max-width:62ch}
+.q .fieldwrap{margin:9px 0 0 37px}
+@media (max-width:600px){
+  .q .hint,.q .fieldwrap{margin-left:0}
+  .q .qhead{gap:8px}
+}
+textarea,input[type=text],input[type=email],input[type=url],input[type=tel],select{
+  width:100%;font:inherit;font-size:15px;color:var(--ink);
+  background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);
+  padding:10px 12px;transition:border-color .15s ease,box-shadow .15s ease;
+}
+textarea{min-height:104px;resize:vertical;line-height:1.5}
+textarea:focus,input:focus,select:focus{
+  outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);
+}
+input[type=file]{font-size:14px;color:var(--ink-soft);max-width:100%}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;max-width:70ch;margin-top:22px}
+@media (max-width:600px){.grid2{grid-template-columns:1fr}}
+.field label{display:block;font-weight:500;font-size:14.5px;margin-bottom:6px}
+.field .hint{font-size:13px;color:var(--ink-soft);margin-top:5px}
+.req{color:var(--warn);font-weight:400}
+.err{border-color:var(--warn)!important}
+.errmsg{color:var(--warn);font-size:13.5px;margin-top:6px;display:none}
+.errmsg.on{display:block}
+
+/* ---------- optionality ---------- */
+.optgrp{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);
+  letter-spacing:.03em;text-transform:uppercase;font-weight:400;
+}
+.q:has(.optgrp) .choices,.q:has(.optgrp) .hint,.q:has(.optgrp) .fieldwrap{margin-left:0}
+.q:has(.optgrp){margin-top:18px}
+
+/* ---------- deadline ---------- */
+.deadline{
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  border:1px solid var(--warn);border-left:4px solid var(--warn);
+  border-radius:var(--radius);padding:14px 18px;margin:26px 0 0;max-width:74ch;
+  background:#FDF6F5;
+}
+.deadline .lab{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--warn);
+  letter-spacing:.04em;
+}
+.deadline .date{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:21px;
+  color:var(--warn);line-height:1.2;
+}
+.deadline .sub{font-size:13px;color:var(--ink-soft);width:100%;margin-top:2px}
+
+/* ---------- choices ---------- */
+.choices{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0 0 37px}
+@media (max-width:600px){.choices{margin-left:0}}
+.choice{
+  display:inline-flex;align-items:center;gap:12px;cursor:pointer;
+  border:1px solid var(--rule);background:var(--card);border-radius:var(--radius);
+  padding:6px 11px;font-size:13.5px;color:var(--ink-soft);
+  transition:border-color .15s ease,background .15s ease,color .15s ease;
+}
+.choice input{margin:0;accent-color:var(--accent)}
+.choice input[type=checkbox]{width:13px;height:13px;margin-right:2px}
+.choice:hover{border-color:var(--ink-soft)}
+.choice:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--ink);font-weight:500}
+.choice:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- start button + divider ---------- */
+.startnav{justify-content:flex-start;margin-top:34px;padding-top:24px}
+.preview-rule{margin:30px 0 0;border:0;height:1px;background:var(--ink)}
+
+/* ---------- question preview ---------- */
+.preview{margin-top:26px;max-width:74ch;scroll-margin-top:24px}
+.preview > .ph{
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  padding-bottom:9px;border-bottom:1px solid var(--rule);flex-wrap:wrap;
+}
+.preview h3{font-size:17px;font-weight:500}
+.preview .note{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft)}
+.preview .grp{margin-top:17px}
+.preview .grp > .t{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);
+  margin-bottom:5px;
+}
+.preview ol{margin:0;padding-left:0;list-style:none}
+.preview ol li{
+  display:flex;gap:10px;font-size:14px;line-height:1.5;
+  color:var(--ink-soft);padding:2.5px 0;
+}
+.preview ol li b{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:#8B93A0;
+  font-weight:400;min-width:26px;
+}
+.printlink{margin-top:16px;font-size:13.5px;color:var(--ink-soft)}
+.printlink button{
+  background:none;border:0;color:var(--accent);padding:0;font-size:13.5px;
+  text-decoration:underline;cursor:pointer;font-family:inherit;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+  margin-top:38px;padding-top:22px;border-top:1px solid var(--rule);max-width:70ch;
+}
+button{font:inherit;cursor:pointer;border-radius:var(--radius);transition:background .15s ease,border-color .15s ease}
+.btn{
+  background:var(--ink);color:#fff;border:1px solid var(--ink);
+  padding:10px 22px;font-size:15px;font-weight:500;
+}
+.btn:hover{background:#0E1C2C}
+.btn.go{background:var(--accent);border-color:var(--accent)}
+.btn.go:hover{background:#0F5155}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+.btn.ghost:hover{border-color:var(--ink-soft)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.navspacer{flex:1}
+.saveline{font-size:13px;color:var(--ink-soft);margin-top:14px;max-width:70ch}
+.saveline button{
+  background:none;border:0;color:var(--accent);padding:0;font-size:13px;text-decoration:underline;
+}
+
+/* ---------- done ---------- */
+.done{display:none;max-width:60ch}
+.done.on{display:block}
+.done h1{font-size:28px}
+.sending{display:none;color:var(--ink-soft);font-size:14.5px;margin-top:14px}
+.sending.on{display:block}
+.failmsg{display:none;color:var(--warn);font-size:14.5px;margin-top:14px;max-width:62ch}
+.failmsg.on{display:block}
+
+/* ---------- footer ---------- */
+.foot{
+  max-width:var(--maxw);margin:0 auto;padding:0 28px 44px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);
+}
+.foot .rule{margin-bottom:14px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- print: full blank RFI ---------- */
+@media print{
+  body{background:#fff}
+  .rail,.nav,.saveline{display:none!important}
+  .page{display:block!important;page-break-after:always;padding-top:10px}
+  .shell{display:block;padding:0}
+  textarea{min-height:70px}
+  .pullnote{border-left:2px solid #999;background:#f2f2f2}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="mark" href="https://cram.ltd" aria-label="Cram">
+      <svg viewBox="0 0 87 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cram">
+        <title>Cram</title>
+        <path d="M19.50 12.47 A11 11 0 1 0 19.50 31.53" fill="none" stroke="#1F4BC4" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M31.00 12.47 A11 11 0 1 0 31.00 31.53" fill="none" stroke="#6B7688" stroke-width="2.6" stroke-linecap="round"/>
+        <text x="33" y="28" font-family="Poppins, sans-serif" font-size="19" font-weight="500" fill="#0E1B2E" letter-spacing="0.3"><tspan font-size="15.5" font-weight="600">C</tspan>ram</text>
+      </svg>
+    </a>
+    <div class="masthead-meta">REQUEST FOR INFORMATION &nbsp; CONFIDENTIAL</div>
+  </div>
+</header>
+
+<div class="shell">
+
+  <nav class="rail" aria-label="Sections">
+    <div class="railcount" id="railcount">Section 1 of 8</div>
+    <div class="railbar"><i id="railfill"></i></div>
+    <ol id="raillist">
+      <li data-i="0"><span class="n">0</span><span>Your details</span></li>
+      <li data-i="1"><span class="n">1</span><span>Crypto architecture</span></li>
+      <li data-i="2"><span class="n">2</span><span>Modularity</span></li>
+      <li data-i="3"><span class="n">3</span><span>Environments and delivery</span></li>
+      <li data-i="4"><span class="n">4</span><span>Payments and risk</span></li>
+      <li data-i="5"><span class="n">5</span><span>Player data</span></li>
+      <li data-i="6"><span class="n">6</span><span>Licensing</span></li>
+      <li data-i="7"><span class="n">7</span><span>Corporate and operational</span></li>
+      <li data-i="8"><span class="n">8</span><span>Commercial</span></li>
+      <li data-i="9"><span class="n">9</span><span>PAM and Martech</span></li>
+      <li data-i="10"><span class="n">10</span><span>Content and product</span></li>
+      <li data-i="11"><span class="n">11</span><span>Submit</span></li>
+    </ol>
+  </nav>
+
+  <main>
+  <form id="rfi" novalidate>
+
+    <!-- ============ 0 · COVER ============ -->
+    <section class="page on" data-page="0" aria-labelledby="h0">
+      <h1 id="h0">RFI: Crypto-first Casino Platform &amp; Services</h1>
+
+      <div class="lede">
+        <p>Cram Limited has been engaged by an investment group to select the platform and turnkey service partner for a new crypto-first casino and sportsbook.</p>
+        <p>Across the next 11 pages are 67 questions. Estimated time for completion is around 80 minutes, but we have attached below the full list of questions for your preparation.</p>
+        <p>Please answer in as much detail as is relevant. Your responses will be collated and scored against a weighted scorecard across ten sections, to be agreed with our client.</p>
+      </div>
+
+      <div class="deadline">
+        <span class="lab">DEADLINE FOR RESPONSES</span>
+        <span class="date">Sunday 11 October 2026</span>
+      </div>
+
+      <div class="pullnote">
+        <strong>Prefer to send a deck?</strong> You can attach or link your own materials at the end instead of answering in full. Be aware that unanswered questions score zero, and that generic material rarely covers exit terms, data ownership or commercials, which carry the most weight here.
+      </div>
+
+      <hr class="rule">
+      <h2 style="font-size:19px;margin-top:26px">Your details</h2>
+      <p class="intent">So we know who is responding and under which legal entity we would contract.</p>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="f_entity">Contracting company <span class="req">*</span></label>
+          <input type="text" id="f_entity" name="Contracting company" autocomplete="organization">
+          <div class="hint">The legal entity that would sign, not the trading brand.</div>
+          <div class="errmsg" data-for="f_entity">Please tell us which entity would contract.</div>
+        </div>
+        <div class="field">
+          <label for="f_juris">Jurisdiction of that entity</label>
+          <input type="text" id="f_juris" name="Entity jurisdiction">
+          <div class="hint">Country of incorporation.</div>
+        </div>
+        <div class="field">
+          <label for="f_brand">Platform name or brand <span class="req">*</span></label>
+          <input type="text" id="f_brand" name="Platform name or brand">
+          <div class="errmsg" data-for="f_brand">Please give the platform or brand name.</div>
+        </div>
+        <div class="field">
+          <label for="f_site">Website</label>
+          <input type="url" id="f_site" name="Website" placeholder="https://">
+        </div>
+        <div class="field">
+          <label for="f_name">Your name <span class="req">*</span></label>
+          <input type="text" id="f_name" name="Respondent name" autocomplete="name">
+          <div class="errmsg" data-for="f_name">Please give your name.</div>
+        </div>
+        <div class="field">
+          <label for="f_role">Your role</label>
+          <input type="text" id="f_role" name="Respondent role" autocomplete="organization-title">
+        </div>
+        <div class="field">
+          <label for="f_email">Email <span class="req">*</span></label>
+          <input type="email" id="f_email" name="email" autocomplete="email">
+          <div class="hint">Where we send the outcome and any follow-up.</div>
+          <div class="errmsg" data-for="f_email">Please give a valid email address.</div>
+        </div>
+        <div class="field">
+          <label for="f_phone">Phone</label>
+          <input type="tel" id="f_phone" name="Phone" autocomplete="tel">
+        </div>
+      </div>
+
+
+      <hr class="rule">
+      <h2 style="font-size:19px;margin-top:26px">Optionality</h2>
+      <p class="intent">What you provide, and how you sell it. Tick everything that is live today. Anything you can do but have not deployed, leave unticked and tell us in the notes.</p>
+
+      <div class="q">
+        <div class="qhead"><label class="optgrp">Platform</label></div>
+        <div class="choices">
+          <label class="choice" for="optg0_0"><input type="checkbox" id="optg0_0" name="Services: Platform" value="Player account management (PAM)"><span>Player account management (PAM)</span></label>
+          <label class="choice" for="optg0_1"><input type="checkbox" id="optg0_1" name="Services: Platform" value="Wallet and cashier"><span>Wallet and cashier</span></label>
+          <label class="choice" for="optg0_2"><input type="checkbox" id="optg0_2" name="Services: Platform" value="Crypto payments and custody"><span>Crypto payments and custody</span></label>
+          <label class="choice" for="optg0_3"><input type="checkbox" id="optg0_3" name="Services: Platform" value="Fiat on-ramps"><span>Fiat on-ramps</span></label>
+          <label class="choice" for="optg0_4"><input type="checkbox" id="optg0_4" name="Services: Platform" value="Front end, web and apps"><span>Front end, web and apps</span></label>
+        </div>
+      </div>
+      <div class="q">
+        <div class="qhead"><label class="optgrp">Product</label></div>
+        <div class="choices">
+          <label class="choice" for="optg1_0"><input type="checkbox" id="optg1_0" name="Services: Product" value="Casino aggregation"><span>Casino aggregation</span></label>
+          <label class="choice" for="optg1_1"><input type="checkbox" id="optg1_1" name="Services: Product" value="Proprietary or original games"><span>Proprietary or original games</span></label>
+          <label class="choice" for="optg1_2"><input type="checkbox" id="optg1_2" name="Services: Product" value="Live casino"><span>Live casino</span></label>
+          <label class="choice" for="optg1_3"><input type="checkbox" id="optg1_3" name="Services: Product" value="Sportsbook"><span>Sportsbook</span></label>
+          <label class="choice" for="optg1_4"><input type="checkbox" id="optg1_4" name="Services: Product" value="Sports trading and risk"><span>Sports trading and risk</span></label>
+          <label class="choice" for="optg1_5"><input type="checkbox" id="optg1_5" name="Services: Product" value="Esports and virtuals"><span>Esports and virtuals</span></label>
+          <label class="choice" for="optg1_6"><input type="checkbox" id="optg1_6" name="Services: Product" value="Poker"><span>Poker</span></label>
+        </div>
+      </div>
+      <div class="q">
+        <div class="qhead"><label class="optgrp">Tooling</label></div>
+        <div class="choices">
+          <label class="choice" for="optg2_0"><input type="checkbox" id="optg2_0" name="Services: Tooling" value="CRM and bonus engine"><span>CRM and bonus engine</span></label>
+          <label class="choice" for="optg2_1"><input type="checkbox" id="optg2_1" name="Services: Tooling" value="Affiliate system"><span>Affiliate system</span></label>
+          <label class="choice" for="optg2_2"><input type="checkbox" id="optg2_2" name="Services: Tooling" value="BI and reporting"><span>BI and reporting</span></label>
+          <label class="choice" for="optg2_3"><input type="checkbox" id="optg2_3" name="Services: Tooling" value="Fraud, risk and AML tooling"><span>Fraud, risk and AML tooling</span></label>
+        </div>
+      </div>
+      <div class="q">
+        <div class="qhead"><label class="optgrp">Managed services</label></div>
+        <div class="choices">
+          <label class="choice" for="optg3_0"><input type="checkbox" id="optg3_0" name="Services: Managed services" value="Operations and customer support"><span>Operations and customer support</span></label>
+          <label class="choice" for="optg3_1"><input type="checkbox" id="optg3_1" name="Services: Managed services" value="Marketing"><span>Marketing</span></label>
+          <label class="choice" for="optg3_2"><input type="checkbox" id="optg3_2" name="Services: Managed services" value="Sports trading"><span>Sports trading</span></label>
+          <label class="choice" for="optg3_3"><input type="checkbox" id="optg3_3" name="Services: Managed services" value="KYC and AML operations"><span>KYC and AML operations</span></label>
+          <label class="choice" for="optg3_4"><input type="checkbox" id="optg3_4" name="Services: Managed services" value="VIP management"><span>VIP management</span></label>
+          <label class="choice" for="optg3_5"><input type="checkbox" id="optg3_5" name="Services: Managed services" value="Compliance and licensing support"><span>Compliance and licensing support</span></label>
+        </div>
+      </div>
+      <div class="q">
+        <div class="qhead"><label class="optgrp">Commercial models offered</label></div>
+        <div class="choices">
+          <label class="choice" for="optm_0"><input type="checkbox" id="optm_0" name="Commercial models" value="Turnkey"><span>Turnkey</span></label>
+          <label class="choice" for="optm_1"><input type="checkbox" id="optm_1" name="Commercial models" value="White label"><span>White label</span></label>
+          <label class="choice" for="optm_2"><input type="checkbox" id="optm_2" name="Commercial models" value="Self-service or API only"><span>Self-service or API only</span></label>
+          <label class="choice" for="optm_3"><input type="checkbox" id="optm_3" name="Commercial models" value="Modular components"><span>Modular components</span></label>
+          <label class="choice" for="optm_4"><input type="checkbox" id="optm_4" name="Commercial models" value="Managed services only"><span>Managed services only</span></label>
+        </div>
+      </div>
+      <div class="q">
+        <div class="qhead"><label class="optgrp" for="optnotes">Anything that does not fit the boxes</label></div>
+        <div class="hint">Partnerships, white-labelled third parties, or capability that is close but not live.</div>
+        <div class="fieldwrap"><textarea id="optnotes" name="Optionality notes" style="min-height:70px"></textarea></div>
+      </div>
+
+      <div class="nav startnav">
+        <button type="button" class="btn go" data-go="1">Start the questions</button>
+      </div>
+
+      <hr class="rule preview-rule">
+
+      <div class="preview" id="questions">
+        <div class="ph">
+          <h3>The full list of questions</h3>
+          <span class="note">67 QUESTIONS &nbsp; TEN SECTIONS</span>
+        </div>
+
+        <div class="grp">
+          <div class="t">1 &nbsp; CRYPTO ARCHITECTURE</div>
+          <ol>
+            <li><b>1.1</b> Is the platform built crypto-first, or crypto layered over a fiat core?</li>
+            <li><b>1.2</b> Which chains and tokens are native, by direct connection?</li>
+            <li><b>1.3</b> Which chains and tokens are wrapped or third party, and which processors do you use for aggregation?</li>
+            <li><b>1.4</b> Who custodies the private keys, and what is the hot and cold split of wallets?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">2 &nbsp; MODULARITY AND FLEXIBILITY</div>
+          <ol>
+            <li><b>2.1</b> How is the platform composed, and which components operate independently?</li>
+            <li><b>2.2</b> If we brought our own wallet or cashier in the future, how would that work?</li>
+            <li><b>2.3</b> Could a different sportsbook sit alongside your PAM and gaming aggregation?</li>
+            <li><b>2.4</b> Is the front end fully owned by us regardless of who develops it?</li>
+            <li><b>2.5</b> Is development available as a professional service, and can you dedicate a developer?</li>
+            <li><b>2.6</b> Please list current third-party integrations of note.</li>
+            <li><b>2.7</b> What is the process, prioritisation method and timeline for adding a vendor you do not currently work with?</li>
+            <li><b>2.8</b> Are multiple brands permitted from one instance, and what components are shared when adding tenants?</li>
+            <li><b>2.9</b> Are there any source code rights? What comes as standard against optional, at what cost and in what circumstances?</li>
+            <li><b>2.10</b> If the group strategy changes to build components during the term, how is a change of scope supported?</li>
+            <li><b>2.11</b> If we move a component or the stack at the end of the initial term, what do we retain, and what needs rebuilding or re-licensing?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">3 &nbsp; ENVIRONMENTS, INFRASTRUCTURE AND DELIVERY</div>
+          <ol>
+            <li><b>3.1</b> Which environments do we get, and are they ours alone?</li>
+            <li><b>3.2</b> What API documentation, authentication and limitations apply, and can our technical team review the documentation before contract?</li>
+            <li><b>3.3</b> How are versioning and backward compatibility handled, and what notice do we get on maintenance, significant updates and changes?</li>
+            <li><b>3.4</b> Where is the platform hosted, on what infrastructure, and what uptime have you achieved over the last twelve months?</li>
+            <li><b>3.5</b> Describe your delivery model: discovery, requirements sign-off, and who owns each phase of the integration.</li>
+            <li><b>3.6</b> What testing and acceptance process applies, and what falls to us?</li>
+            <li><b>3.7</b> How are change requests handled and charged, both in scope and out of scope?</li>
+            <li><b>3.8</b> What support model applies before launch, at launch and afterwards as standard, without additional professional service fees?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">4 &nbsp; PAYMENTS, WITHDRAWALS AND RISK</div>
+          <ol>
+            <li><b>4.1</b> What configuration is available for auto-approved withdrawals, and what triggers or blocks a manual review?</li>
+            <li><b>4.2</b> What withdrawal times do your operators achieve today?</li>
+            <li><b>4.3</b> How is hot wallet float managed, and what happens to a withdrawal when hot liquidity is short?</li>
+            <li><b>4.4</b> What is the average frequency and value of failed or stuck transactions?</li>
+            <li><b>4.5</b> What reconciliation and financial reporting do you provide, and at what frequency?</li>
+            <li><b>4.6</b> Which fiat on-ramp providers are integrated, and which fiat display currencies are supported?</li>
+            <li><b>4.7</b> Is on-chain monitoring native or a third-party vendor, and which chains does it cover?</li>
+            <li><b>4.8</b> What fraud, risk, AML and responsible gaming tooling is native, and what needs a third party?</li>
+            <li><b>4.9</b> Under fully managed services, what are your SLAs on withdrawal and KYC processing, and what remedies apply if you miss them?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">5 &nbsp; PLAYER DATA</div>
+          <ol>
+            <li><b>5.1</b> Where is player data hosted, and under whose control?</li>
+            <li><b>5.2</b> Who is controller and who is processor?</li>
+            <li><b>5.3</b> Is the full record fully retained by us: bet history, bonus state, CRM segments, KYC artefacts?</li>
+            <li><b>5.4</b> Can we hold the master record, and have you sync to it?</li>
+            <li><b>5.5</b> Is there an on-premise option, or is the platform cloud only?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">6 &nbsp; LICENSING AND COMPLIANCE</div>
+          <ol>
+            <li><b>6.1</b> Do you hold an Anjouan B2B licence or Recognition Certificate?</li>
+            <li><b>6.2</b> What is your licence or jurisdiction preference, if any, when engaging a crypto start-up?</li>
+            <li><b>6.3</b> Which jurisdictions are you certified in, which are pending, and are there any you cannot work in?</li>
+            <li><b>6.4</b> What happens to our operation if your licence is suspended?</li>
+            <li><b>6.5</b> Which territories can we take players from, and which are blocked or restricted?</li>
+            <li><b>6.6</b> How is geolocation handled and geo-blocking enforced, and how do you handle VPN use and circumvention?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">7 &nbsp; CORPORATE AND OPERATIONAL</div>
+          <ol>
+            <li><b>7.1</b> Which legal entity would contract with us, where is it incorporated, and how long has it been trading?</li>
+            <li><b>7.2</b> Which security, quality and testing certifications do you hold, and how often do you penetration test?</li>
+            <li><b>7.3</b> How many operators are live on the platform today?</li>
+            <li><b>7.4</b> What is your total headcount in product, technology and engineering?</li>
+            <li><b>7.5</b> How many people are typically engaged in a new partner go-live, and in what roles?</li>
+            <li><b>7.6</b> Which functions can you run as a fully outsourced managed service after go-live?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">8 &nbsp; COMMERCIAL AND SERVICE</div>
+          <ol>
+            <li><b>8.1</b> Revenue share or fixed fee, and what minimum guarantees apply?</li>
+            <li><b>8.2</b> Where do volume tiers step in any transaction-based fees?</li>
+            <li><b>8.3</b> Can you make the final decision on the partnership? If not, what is the escalation path and who is involved?</li>
+            <li><b>8.4</b> Which three comparable operators or live crypto casino and sports brands can we take references from?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">9 &nbsp; PAM AND MARTECH</div>
+          <ol>
+            <li><b>9.1</b> How granular are user permissions and role configuration in the back office, and who controls them?</li>
+            <li><b>9.2</b> What internal monitoring and audit logging is in place to detect internal fraud?</li>
+            <li><b>9.3</b> Does the platform have a native CRM and bonus engine, and can it be switched off if we run an external CRM?</li>
+            <li><b>9.4</b> Do you have existing integrations with Optimove, FastTrack or comparable CRM platforms?</li>
+            <li><b>9.5</b> Which other martech, automation or BI tools are already integrated?</li>
+            <li><b>9.6</b> What player events are exposed to an external CRM, by what mechanism and at what latency?</li>
+            <li><b>9.7</b> Can an external CRM platform trigger bonuses, free spins and messages through your API?</li>
+            <li><b>9.8</b> Are self-excluded players and those who have hit limits automatically suppressed from campaigns?</li>
+            <li><b>9.9</b> In customer support CRM, which communication channels are native and which need a third party?</li>
+          </ol>
+        </div>
+
+        <div class="grp">
+          <div class="t">10 &nbsp; CONTENT AND PRODUCT</div>
+          <ol>
+            <li><b>10.1</b> How many game providers and titles are live today?</li>
+            <li><b>10.2</b> Can we contract with studios and game providers directly, and have you integrate them?</li>
+            <li><b>10.3</b> What is your sportsbook coverage, is trading in-house or a third-party feed, and how is trading risk managed?</li>
+            <li><b>10.4</b> What reporting comes as standard, can we export raw data to our own warehouse, and what are the limitations?</li>
+            <li><b>10.5</b> How is content localised by market, and which languages are supported across product, cashier, content and support?</li>
+          </ol>
+        </div>
+
+        <p class="printlink">Circulating this internally?
+          <button type="button" id="printQs">Print or save the questions</button>
+        </p>
+      </div>
+
+    </section>
+
+    <section class="page" data-page="1" aria-labelledby="hs1">
+      <div class="eyebrow">SECTION 1 OF 10</div>
+      <h2 id="hs1">Crypto architecture</h2>
+      <p class="intent">Whether the platform was built crypto-first, or crypto sits over a fiat core.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">1.1</span><label for="q1_1">Is the platform built crypto-first, or crypto layered over a fiat core?</label></div>
+        <div class="hint">Tell us when crypto support was built and what it replaced.</div>
+        <div class="choices">
+          <label class="choice" for="q1_1_c0"><input type="radio" id="q1_1_c0" name="1.1 (choice)" value="Built crypto-first"><span>Built crypto-first</span></label>
+          <label class="choice" for="q1_1_c1"><input type="radio" id="q1_1_c1" name="1.1 (choice)" value="Fiat core, crypto layered on"><span>Fiat core, crypto layered on</span></label>
+          <label class="choice" for="q1_1_c2"><input type="radio" id="q1_1_c2" name="1.1 (choice)" value="Hybrid"><span>Hybrid</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q1_1" name="1.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">1.2</span><label for="q1_2">Which chains and tokens are native, by direct connection?</label></div>
+        <div class="hint">Include the low-fee networks that matter for smaller, more frequent deposits.</div>
+        <div class="fieldwrap"><textarea id="q1_2" name="1.2"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">1.3</span><label for="q1_3">Which chains and tokens are wrapped or third party, and which processors do you use for aggregation?</label></div>
+        <div class="hint">Name them.</div>
+        <div class="fieldwrap"><textarea id="q1_3" name="1.3"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">1.4</span><label for="q1_4">Who custodies the private keys, and what is the hot and cold split of wallets?</label></div>
+        <div class="choices">
+          <label class="choice" for="q1_4_c0"><input type="radio" id="q1_4_c0" name="1.4 (choice)" value="You custody"><span>You custody</span></label>
+          <label class="choice" for="q1_4_c1"><input type="radio" id="q1_4_c1" name="1.4 (choice)" value="Third-party custodian"><span>Third-party custodian</span></label>
+          <label class="choice" for="q1_4_c2"><input type="radio" id="q1_4_c2" name="1.4 (choice)" value="We custody"><span>We custody</span></label>
+          <label class="choice" for="q1_4_c3"><input type="radio" id="q1_4_c3" name="1.4 (choice)" value="Operator's choice"><span>Operator's choice</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q1_4" name="1.4" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="0">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="2">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="2" aria-labelledby="hs2">
+      <div class="eyebrow">SECTION 2 OF 10</div>
+      <h2 id="hs2">Modularity and flexibility</h2>
+      <p class="intent">How the platform is composed, and how it grows with us. We expect to outsource heavily at launch and to bring selected components in house as the business matures, so we are looking for a stack that accommodates that.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.1</span><label for="q2_1">How is the platform composed, and which components operate independently?</label></div>
+        <div class="hint">Describe the architecture at a high level.</div>
+        <div class="choices">
+          <label class="choice" for="q2_1_c0"><input type="radio" id="q2_1_c0" name="2.1 (choice)" value="Fully composable"><span>Fully composable</span></label>
+          <label class="choice" for="q2_1_c1"><input type="radio" id="q2_1_c1" name="2.1 (choice)" value="Core plus swappable modules"><span>Core plus swappable modules</span></label>
+          <label class="choice" for="q2_1_c2"><input type="radio" id="q2_1_c2" name="2.1 (choice)" value="Integrated suite"><span>Integrated suite</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_1" name="2.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.2</span><label for="q2_2">If we brought our own wallet or cashier in the future, how would that work?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_2_c0"><input type="radio" id="q2_2_c0" name="2.2 (choice)" value="Supported today"><span>Supported today</span></label>
+          <label class="choice" for="q2_2_c1"><input type="radio" id="q2_2_c1" name="2.2 (choice)" value="Possible with development"><span>Possible with development</span></label>
+          <label class="choice" for="q2_2_c2"><input type="radio" id="q2_2_c2" name="2.2 (choice)" value="Not supported"><span>Not supported</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_2" name="2.2" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.3</span><label for="q2_3">Could a different sportsbook sit alongside your PAM and gaming aggregation?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_3_c0"><input type="radio" id="q2_3_c0" name="2.3 (choice)" value="Yes, already done"><span>Yes, already done</span></label>
+          <label class="choice" for="q2_3_c1"><input type="radio" id="q2_3_c1" name="2.3 (choice)" value="Possible with integration work"><span>Possible with integration work</span></label>
+          <label class="choice" for="q2_3_c2"><input type="radio" id="q2_3_c2" name="2.3 (choice)" value="Not supported"><span>Not supported</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_3" name="2.3" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.4</span><label for="q2_4">Is the front end fully owned by us regardless of who develops it?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_4_c0"><input type="radio" id="q2_4_c0" name="2.4 (choice)" value="Yes, fully owned"><span>Yes, fully owned</span></label>
+          <label class="choice" for="q2_4_c1"><input type="radio" id="q2_4_c1" name="2.4 (choice)" value="Licensed to us"><span>Licensed to us</span></label>
+          <label class="choice" for="q2_4_c2"><input type="radio" id="q2_4_c2" name="2.4 (choice)" value="Depends on the build route"><span>Depends on the build route</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_4" name="2.4" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.5</span><label for="q2_5">Is development available as a professional service, and can you dedicate a developer?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_5_c0"><input type="radio" id="q2_5_c0" name="2.5 (choice)" value="Both offered"><span>Both offered</span></label>
+          <label class="choice" for="q2_5_c1"><input type="radio" id="q2_5_c1" name="2.5 (choice)" value="Professional services only"><span>Professional services only</span></label>
+          <label class="choice" for="q2_5_c2"><input type="radio" id="q2_5_c2" name="2.5 (choice)" value="Dedicated developer only"><span>Dedicated developer only</span></label>
+          <label class="choice" for="q2_5_c3"><input type="radio" id="q2_5_c3" name="2.5 (choice)" value="Neither"><span>Neither</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_5" name="2.5" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.6</span><label for="q2_6">Please list current third-party integrations of note.</label></div>
+        <div class="hint">Those most relevant to a start-up operation.</div>
+        <div class="fieldwrap"><textarea id="q2_6" name="2.6"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.7</span><label for="q2_7">What is the process, prioritisation method and timeline for adding a vendor you do not currently work with?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_7_c0"><input type="radio" id="q2_7_c0" name="2.7 (choice)" value="We can integrate anything"><span>We can integrate anything</span></label>
+          <label class="choice" for="q2_7_c1"><input type="radio" id="q2_7_c1" name="2.7 (choice)" value="Case by case"><span>Case by case</span></label>
+          <label class="choice" for="q2_7_c2"><input type="radio" id="q2_7_c2" name="2.7 (choice)" value="Only from our approved list"><span>Only from our approved list</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_7" name="2.7" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.8</span><label for="q2_8">Are multiple brands permitted from one instance, and what components are shared when adding tenants?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_8_c0"><input type="radio" id="q2_8_c0" name="2.8 (choice)" value="Yes, fully separated"><span>Yes, fully separated</span></label>
+          <label class="choice" for="q2_8_c1"><input type="radio" id="q2_8_c1" name="2.8 (choice)" value="Yes, with shared components"><span>Yes, with shared components</span></label>
+          <label class="choice" for="q2_8_c2"><input type="radio" id="q2_8_c2" name="2.8 (choice)" value="Single brand only"><span>Single brand only</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_8" name="2.8" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.9</span><label for="q2_9">Are there any source code rights? What comes as standard against optional, at what cost and in what circumstances?</label></div>
+        <div class="choices">
+          <label class="choice" for="q2_9_c0"><input type="radio" id="q2_9_c0" name="2.9 (choice)" value="Escrow available"><span>Escrow available</span></label>
+          <label class="choice" for="q2_9_c1"><input type="radio" id="q2_9_c1" name="2.9 (choice)" value="Source rights negotiable"><span>Source rights negotiable</span></label>
+          <label class="choice" for="q2_9_c2"><input type="radio" id="q2_9_c2" name="2.9 (choice)" value="Neither"><span>Neither</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q2_9" name="2.9" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.10</span><label for="q2_10">If the group strategy changes to build components during the term, how is a change of scope supported?</label></div>
+        <div class="fieldwrap"><textarea id="q2_10" name="2.10"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">2.11</span><label for="q2_11">If we move a component or the stack at the end of the initial term, what do we retain, and what needs rebuilding or re-licensing?</label></div>
+        <div class="hint">Player records, transaction history, bonus state and reporting. Have you supported an operator through a change like this before?</div>
+        <div class="fieldwrap"><textarea id="q2_11" name="2.11"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="1">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="3">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="3" aria-labelledby="hs3">
+      <div class="eyebrow">SECTION 3 OF 10</div>
+      <h2 id="hs3">Environments, infrastructure and delivery</h2>
+      <p class="intent">What we build against, what we build on, and how you get us live.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.1</span><label for="q3_1">Which environments do we get, and are they ours alone?</label></div>
+        <div class="hint">Sandbox, staging and production, and whether test environments mirror production.</div>
+        <div class="choices">
+          <label class="choice" for="q3_1_c0"><input type="radio" id="q3_1_c0" name="3.1 (choice)" value="Dedicated environments"><span>Dedicated environments</span></label>
+          <label class="choice" for="q3_1_c1"><input type="radio" id="q3_1_c1" name="3.1 (choice)" value="Shared sandbox"><span>Shared sandbox</span></label>
+          <label class="choice" for="q3_1_c2"><input type="radio" id="q3_1_c2" name="3.1 (choice)" value="Production only"><span>Production only</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q3_1" name="3.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.2</span><label for="q3_2">What API documentation, authentication and limitations apply, and can our technical team review the documentation before contract?</label></div>
+        <div class="choices">
+          <label class="choice" for="q3_2_c0"><input type="radio" id="q3_2_c0" name="3.2 (choice)" value="Public documentation"><span>Public documentation</span></label>
+          <label class="choice" for="q3_2_c1"><input type="radio" id="q3_2_c1" name="3.2 (choice)" value="Under NDA"><span>Under NDA</span></label>
+          <label class="choice" for="q3_2_c2"><input type="radio" id="q3_2_c2" name="3.2 (choice)" value="On request only"><span>On request only</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q3_2" name="3.2" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.3</span><label for="q3_3">How are versioning and backward compatibility handled, and what notice do we get on maintenance, significant updates and changes?</label></div>
+        <div class="choices">
+          <label class="choice" for="q3_3_c0"><input type="radio" id="q3_3_c0" name="3.3 (choice)" value="Versioned APIs, long notice"><span>Versioned APIs, long notice</span></label>
+          <label class="choice" for="q3_3_c1"><input type="radio" id="q3_3_c1" name="3.3 (choice)" value="Versioned, short notice"><span>Versioned, short notice</span></label>
+          <label class="choice" for="q3_3_c2"><input type="radio" id="q3_3_c2" name="3.3 (choice)" value="No formal versioning"><span>No formal versioning</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q3_3" name="3.3" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.4</span><label for="q3_4">Where is the platform hosted, on what infrastructure, and what uptime have you achieved over the last twelve months?</label></div>
+        <div class="hint">Name the cloud or datacentre, and give the actual figure rather than the SLA target.</div>
+        <div class="fieldwrap"><textarea id="q3_4" name="3.4"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.5</span><label for="q3_5">Describe your delivery model: discovery, requirements sign-off, and who owns each phase of the integration.</label></div>
+        <div class="choices">
+          <label class="choice" for="q3_5_c0"><input type="radio" id="q3_5_c0" name="3.5 (choice)" value="Dedicated project manager"><span>Dedicated project manager</span></label>
+          <label class="choice" for="q3_5_c1"><input type="radio" id="q3_5_c1" name="3.5 (choice)" value="Shared account management"><span>Shared account management</span></label>
+          <label class="choice" for="q3_5_c2"><input type="radio" id="q3_5_c2" name="3.5 (choice)" value="Operator-led"><span>Operator-led</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q3_5" name="3.5" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.6</span><label for="q3_6">What testing and acceptance process applies, and what falls to us?</label></div>
+        <div class="fieldwrap"><textarea id="q3_6" name="3.6"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.7</span><label for="q3_7">How are change requests handled and charged, both in scope and out of scope?</label></div>
+        <div class="hint">Include your day rate or change rate card if you have one.</div>
+        <div class="fieldwrap"><textarea id="q3_7" name="3.7"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">3.8</span><label for="q3_8">What support model applies before launch, at launch and afterwards as standard, without additional professional service fees?</label></div>
+        <div class="hint">Severity levels, response times, out-of-hours cover, and who we escalate to.</div>
+        <div class="choices">
+          <label class="choice" for="q3_8_c0"><input type="radio" id="q3_8_c0" name="3.8 (choice)" value="24/7 with severity matrix"><span>24/7 with severity matrix</span></label>
+          <label class="choice" for="q3_8_c1"><input type="radio" id="q3_8_c1" name="3.8 (choice)" value="Business hours plus on-call"><span>Business hours plus on-call</span></label>
+          <label class="choice" for="q3_8_c2"><input type="radio" id="q3_8_c2" name="3.8 (choice)" value="Business hours only"><span>Business hours only</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q3_8" name="3.8" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="2">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="4">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="4" aria-labelledby="hs4">
+      <div class="eyebrow">SECTION 4 OF 10</div>
+      <h2 id="hs4">Payments, withdrawals and risk</h2>
+      <p class="intent">Withdrawal speed is a published commitment for this brand, so the platform has to carry it. These answers matter more than most.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.1</span><label for="q4_1">What configuration is available for auto-approved withdrawals, and what triggers or blocks a manual review?</label></div>
+        <div class="hint">Tell us the standard process and tooling for that review.</div>
+        <div class="choices">
+          <label class="choice" for="q4_1_c0"><input type="radio" id="q4_1_c0" name="4.1 (choice)" value="Fully configurable by us"><span>Fully configurable by us</span></label>
+          <label class="choice" for="q4_1_c1"><input type="radio" id="q4_1_c1" name="4.1 (choice)" value="Configurable within limits"><span>Configurable within limits</span></label>
+          <label class="choice" for="q4_1_c2"><input type="radio" id="q4_1_c2" name="4.1 (choice)" value="Fixed rules"><span>Fixed rules</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q4_1" name="4.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.2</span><label for="q4_2">What withdrawal times do your operators achieve today?</label></div>
+        <div class="hint">Median and slowest ten per cent if you have them. We intend to publish ours monthly.</div>
+        <div class="fieldwrap"><textarea id="q4_2" name="4.2"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.3</span><label for="q4_3">How is hot wallet float managed, and what happens to a withdrawal when hot liquidity is short?</label></div>
+        <div class="fieldwrap"><textarea id="q4_3" name="4.3"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.4</span><label for="q4_4">What is the average frequency and value of failed or stuck transactions?</label></div>
+        <div class="fieldwrap"><textarea id="q4_4" name="4.4"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.5</span><label for="q4_5">What reconciliation and financial reporting do you provide, and at what frequency?</label></div>
+        <div class="choices">
+          <label class="choice" for="q4_5_c0"><input type="radio" id="q4_5_c0" name="4.5 (choice)" value="Real-time"><span>Real-time</span></label>
+          <label class="choice" for="q4_5_c1"><input type="radio" id="q4_5_c1" name="4.5 (choice)" value="Daily"><span>Daily</span></label>
+          <label class="choice" for="q4_5_c2"><input type="radio" id="q4_5_c2" name="4.5 (choice)" value="Monthly"><span>Monthly</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q4_5" name="4.5" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.6</span><label for="q4_6">Which fiat on-ramp providers are integrated, and which fiat display currencies are supported?</label></div>
+        <div class="hint">For example Moonpay, Banxa or Transak. We are not looking for local fiat rails.</div>
+        <div class="choices">
+          <label class="choice" for="q4_6_c0"><input type="radio" id="q4_6_c0" name="4.6 (choice)" value="On-ramps integrated"><span>On-ramps integrated</span></label>
+          <label class="choice" for="q4_6_c1"><input type="radio" id="q4_6_c1" name="4.6 (choice)" value="Planned"><span>Planned</span></label>
+          <label class="choice" for="q4_6_c2"><input type="radio" id="q4_6_c2" name="4.6 (choice)" value="None"><span>None</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q4_6" name="4.6" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.7</span><label for="q4_7">Is on-chain monitoring native or a third-party vendor, and which chains does it cover?</label></div>
+        <div class="hint">Name the KYT provider if it is third party.</div>
+        <div class="choices">
+          <label class="choice" for="q4_7_c0"><input type="radio" id="q4_7_c0" name="4.7 (choice)" value="Native"><span>Native</span></label>
+          <label class="choice" for="q4_7_c1"><input type="radio" id="q4_7_c1" name="4.7 (choice)" value="Third-party vendor"><span>Third-party vendor</span></label>
+          <label class="choice" for="q4_7_c2"><input type="radio" id="q4_7_c2" name="4.7 (choice)" value="Not offered"><span>Not offered</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q4_7" name="4.7" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.8</span><label for="q4_8">What fraud, risk, AML and responsible gaming tooling is native, and what needs a third party?</label></div>
+        <div class="hint">Which third parties in this area are already integrated and operational with other operators?</div>
+        <div class="choices">
+          <label class="choice" for="q4_8_c0"><input type="radio" id="q4_8_c0" name="4.8 (choice)" value="Mostly native"><span>Mostly native</span></label>
+          <label class="choice" for="q4_8_c1"><input type="radio" id="q4_8_c1" name="4.8 (choice)" value="Mix of native and third party"><span>Mix of native and third party</span></label>
+          <label class="choice" for="q4_8_c2"><input type="radio" id="q4_8_c2" name="4.8 (choice)" value="Mostly third party"><span>Mostly third party</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q4_8" name="4.8" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">4.9</span><label for="q4_9">Under fully managed services, what are your SLAs on withdrawal and KYC processing, and what remedies apply if you miss them?</label></div>
+        <div class="fieldwrap"><textarea id="q4_9" name="4.9"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="3">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="5">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="5" aria-labelledby="hs5">
+      <div class="eyebrow">SECTION 5 OF 10</div>
+      <h2 id="hs5">Player data</h2>
+      <p class="intent">The master record sits on our side. These answers carry weight.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">5.1</span><label for="q5_1">Where is player data hosted, and under whose control?</label></div>
+        <div class="choices">
+          <label class="choice" for="q5_1_c0"><input type="radio" id="q5_1_c0" name="5.1 (choice)" value="Our infrastructure"><span>Our infrastructure</span></label>
+          <label class="choice" for="q5_1_c1"><input type="radio" id="q5_1_c1" name="5.1 (choice)" value="Your infrastructure"><span>Your infrastructure</span></label>
+          <label class="choice" for="q5_1_c2"><input type="radio" id="q5_1_c2" name="5.1 (choice)" value="Either, operator's choice"><span>Either, operator's choice</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q5_1" name="5.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">5.2</span><label for="q5_2">Who is controller and who is processor?</label></div>
+        <div class="choices">
+          <label class="choice" for="q5_2_c0"><input type="radio" id="q5_2_c0" name="5.2 (choice)" value="Operator controller, vendor processor"><span>Operator controller, vendor processor</span></label>
+          <label class="choice" for="q5_2_c1"><input type="radio" id="q5_2_c1" name="5.2 (choice)" value="Vendor controller"><span>Vendor controller</span></label>
+          <label class="choice" for="q5_2_c2"><input type="radio" id="q5_2_c2" name="5.2 (choice)" value="Joint controllers"><span>Joint controllers</span></label>
+          <label class="choice" for="q5_2_c3"><input type="radio" id="q5_2_c3" name="5.2 (choice)" value="Other"><span>Other</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q5_2" name="5.2" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">5.3</span><label for="q5_3">Is the full record fully retained by us: bet history, bonus state, CRM segments, KYC artefacts?</label></div>
+        <div class="choices">
+          <label class="choice" for="q5_3_c0"><input type="radio" id="q5_3_c0" name="5.3 (choice)" value="Yes, in full"><span>Yes, in full</span></label>
+          <label class="choice" for="q5_3_c1"><input type="radio" id="q5_3_c1" name="5.3 (choice)" value="Most, with exceptions"><span>Most, with exceptions</span></label>
+          <label class="choice" for="q5_3_c2"><input type="radio" id="q5_3_c2" name="5.3 (choice)" value="No"><span>No</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q5_3" name="5.3" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">5.4</span><label for="q5_4">Can we hold the master record, and have you sync to it?</label></div>
+        <div class="choices">
+          <label class="choice" for="q5_4_c0"><input type="radio" id="q5_4_c0" name="5.4 (choice)" value="Yes"><span>Yes</span></label>
+          <label class="choice" for="q5_4_c1"><input type="radio" id="q5_4_c1" name="5.4 (choice)" value="Possible with development"><span>Possible with development</span></label>
+          <label class="choice" for="q5_4_c2"><input type="radio" id="q5_4_c2" name="5.4 (choice)" value="No"><span>No</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q5_4" name="5.4" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">5.5</span><label for="q5_5">Is there an on-premise option, or is the platform cloud only?</label></div>
+        <div class="choices">
+          <label class="choice" for="q5_5_c0"><input type="radio" id="q5_5_c0" name="5.5 (choice)" value="Cloud only"><span>Cloud only</span></label>
+          <label class="choice" for="q5_5_c1"><input type="radio" id="q5_5_c1" name="5.5 (choice)" value="On-premise available"><span>On-premise available</span></label>
+          <label class="choice" for="q5_5_c2"><input type="radio" id="q5_5_c2" name="5.5 (choice)" value="Hybrid available"><span>Hybrid available</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q5_5" name="5.5" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="4">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="6">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="6" aria-labelledby="hs6">
+      <div class="eyebrow">SECTION 6 OF 10</div>
+      <h2 id="hs6">Licensing and compliance</h2>
+      <p class="intent">Your licences, where we can trade on them, and what happens to us if one fails.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">6.1</span><label for="q6_1">Do you hold an Anjouan B2B licence or Recognition Certificate?</label></div>
+        <div class="hint">If not, what would it take and how long?</div>
+        <div class="choices">
+          <label class="choice" for="q6_1_c0"><input type="radio" id="q6_1_c0" name="6.1 (choice)" value="Hold a B2B licence"><span>Hold a B2B licence</span></label>
+          <label class="choice" for="q6_1_c1"><input type="radio" id="q6_1_c1" name="6.1 (choice)" value="Hold a Recognition Certificate"><span>Hold a Recognition Certificate</span></label>
+          <label class="choice" for="q6_1_c2"><input type="radio" id="q6_1_c2" name="6.1 (choice)" value="Application in progress"><span>Application in progress</span></label>
+          <label class="choice" for="q6_1_c3"><input type="radio" id="q6_1_c3" name="6.1 (choice)" value="Neither"><span>Neither</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q6_1" name="6.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">6.2</span><label for="q6_2">What is your licence or jurisdiction preference, if any, when engaging a crypto start-up?</label></div>
+        <div class="fieldwrap"><textarea id="q6_2" name="6.2"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">6.3</span><label for="q6_3">Which jurisdictions are you certified in, which are pending, and are there any you cannot work in?</label></div>
+        <div class="fieldwrap"><textarea id="q6_3" name="6.3"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">6.4</span><label for="q6_4">What happens to our operation if your licence is suspended?</label></div>
+        <div class="fieldwrap"><textarea id="q6_4" name="6.4"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">6.5</span><label for="q6_5">Which territories can we take players from, and which are blocked or restricted?</label></div>
+        <div class="hint">Cover both your own licence and any restrictions your game suppliers impose by jurisdiction, which are often different.</div>
+        <div class="fieldwrap"><textarea id="q6_5" name="6.5"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">6.6</span><label for="q6_6">How is geolocation handled and geo-blocking enforced, and how do you handle VPN use and circumvention?</label></div>
+        <div class="choices">
+          <label class="choice" for="q6_6_c0"><input type="radio" id="q6_6_c0" name="6.6 (choice)" value="IP and geolocation"><span>IP and geolocation</span></label>
+          <label class="choice" for="q6_6_c1"><input type="radio" id="q6_6_c1" name="6.6 (choice)" value="IP, geolocation and VPN detection"><span>IP, geolocation and VPN detection</span></label>
+          <label class="choice" for="q6_6_c2"><input type="radio" id="q6_6_c2" name="6.6 (choice)" value="Operator's responsibility"><span>Operator's responsibility</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q6_6" name="6.6" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="5">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="7">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="7" aria-labelledby="hs7">
+      <div class="eyebrow">SECTION 7 OF 10</div>
+      <h2 id="hs7">Corporate and operational</h2>
+      <p class="intent">Who we would contract with, how the business is run, and what you could run on our behalf. Beneficial ownership and counterparty diligence are handled at finalist stage, not here.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">7.1</span><label for="q7_1">Which legal entity would contract with us, where is it incorporated, and how long has it been trading?</label></div>
+        <div class="fieldwrap"><textarea id="q7_1" name="7.1"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">7.2</span><label for="q7_2">Which security, quality and testing certifications do you hold, and how often do you penetration test?</label></div>
+        <div class="hint">For example ISO 27001, SOC 2, GLI or BMM certification.</div>
+        <div class="choices">
+          <label class="choice" for="q7_2_c0"><input type="radio" id="q7_2_c0" name="7.2 (choice)" value="ISO 27001"><span>ISO 27001</span></label>
+          <label class="choice" for="q7_2_c1"><input type="radio" id="q7_2_c1" name="7.2 (choice)" value="SOC 2"><span>SOC 2</span></label>
+          <label class="choice" for="q7_2_c2"><input type="radio" id="q7_2_c2" name="7.2 (choice)" value="GLI or BMM"><span>GLI or BMM</span></label>
+          <label class="choice" for="q7_2_c3"><input type="radio" id="q7_2_c3" name="7.2 (choice)" value="Other or none"><span>Other or none</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q7_2" name="7.2" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">7.3</span><label for="q7_3">How many operators are live on the platform today?</label></div>
+        <div class="fieldwrap"><textarea id="q7_3" name="7.3"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">7.4</span><label for="q7_4">What is your total headcount in product, technology and engineering?</label></div>
+        <div class="fieldwrap"><textarea id="q7_4" name="7.4"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">7.5</span><label for="q7_5">How many people are typically engaged in a new partner go-live, and in what roles?</label></div>
+        <div class="fieldwrap"><textarea id="q7_5" name="7.5"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">7.6</span><label for="q7_6">Which functions can you run as a fully outsourced managed service after go-live?</label></div>
+        <div class="hint">We intend to outsource heavily at launch. Tell us what you would run end to end, what is co-managed, and how each is priced.</div>
+        <div class="choices">
+          <label class="choice" for="q7_6_c0"><input type="radio" id="q7_6_c0" name="7.6 (choice)" value="Broad managed services"><span>Broad managed services</span></label>
+          <label class="choice" for="q7_6_c1"><input type="radio" id="q7_6_c1" name="7.6 (choice)" value="Selected functions"><span>Selected functions</span></label>
+          <label class="choice" for="q7_6_c2"><input type="radio" id="q7_6_c2" name="7.6 (choice)" value="Platform only"><span>Platform only</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q7_6" name="7.6" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="6">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="8">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="8" aria-labelledby="hs8">
+      <div class="eyebrow">SECTION 8 OF 10</div>
+      <h2 id="hs8">Commercial and service</h2>
+      <p class="intent">Pricing, where it steps, and who actually decides.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">8.1</span><label for="q8_1">Revenue share or fixed fee, and what minimum guarantees apply?</label></div>
+        <div class="hint">If revenue share, state whether it is on GGR or NGR and what is deducted before the calculation.</div>
+        <div class="choices">
+          <label class="choice" for="q8_1_c0"><input type="radio" id="q8_1_c0" name="8.1 (choice)" value="Revenue share on GGR"><span>Revenue share on GGR</span></label>
+          <label class="choice" for="q8_1_c1"><input type="radio" id="q8_1_c1" name="8.1 (choice)" value="Revenue share on NGR"><span>Revenue share on NGR</span></label>
+          <label class="choice" for="q8_1_c2"><input type="radio" id="q8_1_c2" name="8.1 (choice)" value="Fixed fee"><span>Fixed fee</span></label>
+          <label class="choice" for="q8_1_c3"><input type="radio" id="q8_1_c3" name="8.1 (choice)" value="Hybrid"><span>Hybrid</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q8_1" name="8.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">8.2</span><label for="q8_2">Where do volume tiers step in any transaction-based fees?</label></div>
+        <div class="hint">Include setup, integration and per-market fees, itemised.</div>
+        <div class="fieldwrap"><textarea id="q8_2" name="8.2"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">8.3</span><label for="q8_3">Can you make the final decision on the partnership? If not, what is the escalation path and who is involved?</label></div>
+        <div class="choices">
+          <label class="choice" for="q8_3_c0"><input type="radio" id="q8_3_c0" name="8.3 (choice)" value="Yes, I decide"><span>Yes, I decide</span></label>
+          <label class="choice" for="q8_3_c1"><input type="radio" id="q8_3_c1" name="8.3 (choice)" value="I recommend, others approve"><span>I recommend, others approve</span></label>
+          <label class="choice" for="q8_3_c2"><input type="radio" id="q8_3_c2" name="8.3 (choice)" value="Committee or board decision"><span>Committee or board decision</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q8_3" name="8.3" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">8.4</span><label for="q8_4">Which three comparable operators or live crypto casino and sports brands can we take references from?</label></div>
+        <div class="hint">Also tell us your time from signature to live at similar scope.</div>
+        <div class="choices">
+          <label class="choice" for="q8_4_c0"><input type="radio" id="q8_4_c0" name="8.4 (choice)" value="Three available"><span>Three available</span></label>
+          <label class="choice" for="q8_4_c1"><input type="radio" id="q8_4_c1" name="8.4 (choice)" value="Some available"><span>Some available</span></label>
+          <label class="choice" for="q8_4_c2"><input type="radio" id="q8_4_c2" name="8.4 (choice)" value="None available"><span>None available</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q8_4" name="8.4" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="7">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="9">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="9" aria-labelledby="hs9">
+      <div class="eyebrow">SECTION 9 OF 10</div>
+      <h2 id="hs9">PAM and Martech</h2>
+      <p class="intent">How the platform is configured and controlled behind the scenes, and how it feeds a CRM.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.1</span><label for="q9_1">How granular are user permissions and role configuration in the back office, and who controls them?</label></div>
+        <div class="hint">Can we define our own roles, or are we limited to a fixed set? Can you access our environment, and under what controls?</div>
+        <div class="choices">
+          <label class="choice" for="q9_1_c0"><input type="radio" id="q9_1_c0" name="9.1 (choice)" value="Fully configurable by us"><span>Fully configurable by us</span></label>
+          <label class="choice" for="q9_1_c1"><input type="radio" id="q9_1_c1" name="9.1 (choice)" value="Fixed roles"><span>Fixed roles</span></label>
+          <label class="choice" for="q9_1_c2"><input type="radio" id="q9_1_c2" name="9.1 (choice)" value="Configured by you on request"><span>Configured by you on request</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_1" name="9.1" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.2</span><label for="q9_2">What internal monitoring and audit logging is in place to detect internal fraud?</label></div>
+        <div class="hint">Admin actions, manual balance adjustments, bonus overrides, permission changes, and whether logs are immutable and exportable.</div>
+        <div class="choices">
+          <label class="choice" for="q9_2_c0"><input type="radio" id="q9_2_c0" name="9.2 (choice)" value="Full immutable audit trail"><span>Full immutable audit trail</span></label>
+          <label class="choice" for="q9_2_c1"><input type="radio" id="q9_2_c1" name="9.2 (choice)" value="Partial logging"><span>Partial logging</span></label>
+          <label class="choice" for="q9_2_c2"><input type="radio" id="q9_2_c2" name="9.2 (choice)" value="Basic activity logs"><span>Basic activity logs</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_2" name="9.2" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.3</span><label for="q9_3">Does the platform have a native CRM and bonus engine, and can it be switched off if we run an external CRM?</label></div>
+        <div class="choices">
+          <label class="choice" for="q9_3_c0"><input type="radio" id="q9_3_c0" name="9.3 (choice)" value="Native CRM, can be switched off"><span>Native CRM, can be switched off</span></label>
+          <label class="choice" for="q9_3_c1"><input type="radio" id="q9_3_c1" name="9.3 (choice)" value="Native CRM, cannot be switched off"><span>Native CRM, cannot be switched off</span></label>
+          <label class="choice" for="q9_3_c2"><input type="radio" id="q9_3_c2" name="9.3 (choice)" value="No native CRM"><span>No native CRM</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_3" name="9.3" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.4</span><label for="q9_4">Do you have existing integrations with Optimove, FastTrack or comparable CRM platforms?</label></div>
+        <div class="hint">Name them, and say which are live with an operator today rather than possible.</div>
+        <div class="choices">
+          <label class="choice" for="q9_4_c0"><input type="radio" id="q9_4_c0" name="9.4 (choice)" value="Live with operators"><span>Live with operators</span></label>
+          <label class="choice" for="q9_4_c1"><input type="radio" id="q9_4_c1" name="9.4 (choice)" value="Built, not yet live"><span>Built, not yet live</span></label>
+          <label class="choice" for="q9_4_c2"><input type="radio" id="q9_4_c2" name="9.4 (choice)" value="Possible, not built"><span>Possible, not built</span></label>
+          <label class="choice" for="q9_4_c3"><input type="radio" id="q9_4_c3" name="9.4 (choice)" value="None"><span>None</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_4" name="9.4" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.5</span><label for="q9_5">Which other martech, automation or BI tools are already integrated?</label></div>
+        <div class="hint">Only integrations that are live with an operator today.</div>
+        <div class="fieldwrap"><textarea id="q9_5" name="9.5"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.6</span><label for="q9_6">What player events are exposed to an external CRM, by what mechanism and at what latency?</label></div>
+        <div class="hint">Be clear about what is real time and what is not.</div>
+        <div class="choices">
+          <label class="choice" for="q9_6_c0"><input type="radio" id="q9_6_c0" name="9.6 (choice)" value="Real-time streaming"><span>Real-time streaming</span></label>
+          <label class="choice" for="q9_6_c1"><input type="radio" id="q9_6_c1" name="9.6 (choice)" value="Webhooks"><span>Webhooks</span></label>
+          <label class="choice" for="q9_6_c2"><input type="radio" id="q9_6_c2" name="9.6 (choice)" value="API polling"><span>API polling</span></label>
+          <label class="choice" for="q9_6_c3"><input type="radio" id="q9_6_c3" name="9.6 (choice)" value="Batch files"><span>Batch files</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_6" name="9.6" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.7</span><label for="q9_7">Can an external CRM platform trigger bonuses, free spins and messages through your API?</label></div>
+        <div class="hint">Tell us which bonus types are exposed and which are not.</div>
+        <div class="choices">
+          <label class="choice" for="q9_7_c0"><input type="radio" id="q9_7_c0" name="9.7 (choice)" value="Yes, full control"><span>Yes, full control</span></label>
+          <label class="choice" for="q9_7_c1"><input type="radio" id="q9_7_c1" name="9.7 (choice)" value="Partial"><span>Partial</span></label>
+          <label class="choice" for="q9_7_c2"><input type="radio" id="q9_7_c2" name="9.7 (choice)" value="No"><span>No</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_7" name="9.7" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.8</span><label for="q9_8">Are self-excluded players and those who have hit limits automatically suppressed from campaigns?</label></div>
+        <div class="choices">
+          <label class="choice" for="q9_8_c0"><input type="radio" id="q9_8_c0" name="9.8 (choice)" value="Yes, automatic"><span>Yes, automatic</span></label>
+          <label class="choice" for="q9_8_c1"><input type="radio" id="q9_8_c1" name="9.8 (choice)" value="Manual process"><span>Manual process</span></label>
+          <label class="choice" for="q9_8_c2"><input type="radio" id="q9_8_c2" name="9.8 (choice)" value="Not handled by the platform"><span>Not handled by the platform</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_8" name="9.8" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">9.9</span><label for="q9_9">In customer support CRM, which communication channels are native and which need a third party?</label></div>
+        <div class="hint">Which third parties are already integrated and operational with your platform?</div>
+        <div class="choices">
+          <label class="choice" for="q9_9_c0"><input type="radio" id="q9_9_c0" name="9.9 (choice)" value="All native"><span>All native</span></label>
+          <label class="choice" for="q9_9_c1"><input type="radio" id="q9_9_c1" name="9.9 (choice)" value="Mix of native and third party"><span>Mix of native and third party</span></label>
+          <label class="choice" for="q9_9_c2"><input type="radio" id="q9_9_c2" name="9.9 (choice)" value="All third party"><span>All third party</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q9_9" name="9.9" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="8">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="10">Continue</button>
+      </div>
+    </section>
+
+    <section class="page" data-page="10" aria-labelledby="hs10">
+      <div class="eyebrow">SECTION 10 OF 10</div>
+      <h2 id="hs10">Content and product</h2>
+      <p class="intent">What is live today across casino and sport, and what we can see in the data without asking you.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">10.1</span><label for="q10_1">How many game providers and titles are live today?</label></div>
+        <div class="fieldwrap"><textarea id="q10_1" name="10.1"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">10.2</span><label for="q10_2">Can we contract with studios and game providers directly, and have you integrate them?</label></div>
+        <div class="choices">
+          <label class="choice" for="q10_2_c0"><input type="radio" id="q10_2_c0" name="10.2 (choice)" value="Direct contracts supported"><span>Direct contracts supported</span></label>
+          <label class="choice" for="q10_2_c1"><input type="radio" id="q10_2_c1" name="10.2 (choice)" value="Only through your commercial terms"><span>Only through your commercial terms</span></label>
+          <label class="choice" for="q10_2_c2"><input type="radio" id="q10_2_c2" name="10.2 (choice)" value="Mixed"><span>Mixed</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q10_2" name="10.2" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">10.3</span><label for="q10_3">What is your sportsbook coverage, is trading in-house or a third-party feed, and how is trading risk managed?</label></div>
+        <div class="hint">Events per year, sports covered and in-play depth.</div>
+        <div class="choices">
+          <label class="choice" for="q10_3_c0"><input type="radio" id="q10_3_c0" name="10.3 (choice)" value="In-house trading"><span>In-house trading</span></label>
+          <label class="choice" for="q10_3_c1"><input type="radio" id="q10_3_c1" name="10.3 (choice)" value="Third-party feed"><span>Third-party feed</span></label>
+          <label class="choice" for="q10_3_c2"><input type="radio" id="q10_3_c2" name="10.3 (choice)" value="Hybrid"><span>Hybrid</span></label>
+          <label class="choice" for="q10_3_c3"><input type="radio" id="q10_3_c3" name="10.3 (choice)" value="No sportsbook"><span>No sportsbook</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q10_3" name="10.3" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">10.4</span><label for="q10_4">What reporting comes as standard, can we export raw data to our own warehouse, and what are the limitations?</label></div>
+        <div class="hint">Do you use Power BI or Looker?</div>
+        <div class="choices">
+          <label class="choice" for="q10_4_c0"><input type="radio" id="q10_4_c0" name="10.4 (choice)" value="Full raw export"><span>Full raw export</span></label>
+          <label class="choice" for="q10_4_c1"><input type="radio" id="q10_4_c1" name="10.4 (choice)" value="Scheduled extracts"><span>Scheduled extracts</span></label>
+          <label class="choice" for="q10_4_c2"><input type="radio" id="q10_4_c2" name="10.4 (choice)" value="Reports only"><span>Reports only</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q10_4" name="10.4" placeholder="Add detail"></textarea></div>
+      </div>
+      <div class="q">
+        <div class="qhead"><span class="qnum">10.5</span><label for="q10_5">How is content localised by market, and which languages are supported across product, cashier, content and support?</label></div>
+        <div class="hint">Tell us what is machine translated and what is native.</div>
+        <div class="choices">
+          <label class="choice" for="q10_5_c0"><input type="radio" id="q10_5_c0" name="10.5 (choice)" value="Fully localised lobbies"><span>Fully localised lobbies</span></label>
+          <label class="choice" for="q10_5_c1"><input type="radio" id="q10_5_c1" name="10.5 (choice)" value="Some market variation"><span>Some market variation</span></label>
+          <label class="choice" for="q10_5_c2"><input type="radio" id="q10_5_c2" name="10.5 (choice)" value="One global lobby"><span>One global lobby</span></label>
+        </div>
+        <div class="fieldwrap"><textarea id="q10_5" name="10.5" placeholder="Add detail"></textarea></div>
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="9">Back</button>
+        <div class="navspacer"></div>
+        <button type="button" class="btn go" data-go="11">Continue</button>
+      </div>
+    </section>
+
+    <!-- ============ 7 · SUBMIT ============ -->
+    <section class="page" data-page="11" aria-labelledby="h7s">
+      <div class="eyebrow">Last step</div>
+      <h2 id="h7s">Anything else, and how to send it</h2>
+      <p class="intent">Attach your own materials if you have them. They are read alongside your answers, not instead of them.</p>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">11.1</span><label for="q25">Link to your platform deck or documentation</label></div>
+        <div class="hint">A public or shared link is usually easier than an attachment.</div>
+        <div class="fieldwrap"><input type="url" id="q25" name="11.1 Link to materials" placeholder="https://"></div>
+      </div>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">11.2</span><label for="q26">Or attach a file</label></div>
+        <div class="hint">PDF, up to 10MB. If the upload fails, send it to the address below instead.</div>
+        <div class="fieldwrap"><input type="file" id="q26" name="upload" accept=".pdf,.ppt,.pptx,.doc,.docx"></div>
+      </div>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">11.3</span><label for="q27">Anything we did not ask that we should have</label></div>
+        <div class="fieldwrap"><textarea id="q27" name="11.3 Anything else"></textarea></div>
+      </div>
+
+      <div class="q">
+        <div class="qhead"><span class="qnum">11.4</span><label for="q28">Who should we speak to if you are shortlisted?</label></div>
+        <div class="hint">Name, role and email, if different from your details.</div>
+        <div class="fieldwrap"><textarea id="q28" name="11.4 Shortlist contact" style="min-height:70px"></textarea></div>
+      </div>
+
+      <div class="deadline">
+        <span class="lab">DEADLINE FOR RESPONSES</span>
+        <span class="date">Sunday 11 October 2026</span>
+        <span class="sub">Responses received after this date cannot be scored.</span>
+      </div>
+
+      <div class="pullnote">
+        Responses are held by Cram Limited and shared with our client for the purpose of this selection only. Nothing here is an offer, an invitation to tender, or a commitment to contract.
+      </div>
+
+      <div class="nav">
+        <button type="button" class="btn ghost" data-go="10">Back</button>
+        <div class="navspacer"></div>
+        <button type="submit" class="btn go" id="submitBtn">Send response</button>
+      </div>
+      <div class="sending" id="sending">Sending your response.</div>
+      <div class="failmsg" id="failmsg"></div>
+      <p class="saveline">Want a copy for your records before you send?
+        <button type="button" id="saveCopy">Download your answers</button>
+      </p>
+    </section>
+
+  </form>
+
+  <!-- ============ DONE ============ -->
+  <div class="done" id="done">
+    <div class="eyebrow">Received</div>
+    <h1>Thank you. Your response is with us.</h1>
+    <p class="intent">We are reading responses as they arrive and expect to confirm the shortlist within two weeks of the closing date. If we need anything clarified we will come back to you by email first.</p>
+    <p class="saveline">A copy was not emailed to you automatically.
+      <button type="button" id="saveCopy2">Download your answers</button>
+    </p>
+  </div>
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="rule"></div>
+  Cram Limited &nbsp;|&nbsp; Issued on behalf of our client &nbsp;|&nbsp; Questions to <a href="mailto:rfi@cram.ltd">rfi@cram.ltd</a>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ====== SET THIS: your Formspree endpoint ====== */
+  var FORMSPREE = "https://formspree.io/f/moeqklyd";
+  /* =============================================== */
+
+  var form     = document.getElementById("rfi");
+  var pages    = Array.prototype.slice.call(document.querySelectorAll(".page"));
+  var railItems= Array.prototype.slice.call(document.querySelectorAll("#raillist li"));
+  var railFill = document.getElementById("railfill");
+  var railCount= document.getElementById("railcount");
+  var doneEl   = document.getElementById("done");
+  var sending  = document.getElementById("sending");
+  var failmsg  = document.getElementById("failmsg");
+  var submitBtn= document.getElementById("submitBtn");
+  var current  = 0;
+  var TOTAL    = pages.length;
+
+  function paint(){
+    pages.forEach(function(p,i){ p.classList.toggle("on", i===current); });
+    railItems.forEach(function(li,i){
+      li.classList.toggle("active", i===current);
+      li.classList.toggle("done", i<current);
+    });
+    railFill.style.width = ((current)/(TOTAL-1)*100) + "%";
+    railCount.textContent = "Section " + (current+1) + " of " + TOTAL;
+    window.scrollTo({top:0, behavior:"smooth"});
+  }
+
+  function showErr(id,on){
+    var f = document.getElementById(id);
+    var m = document.querySelector('.errmsg[data-for="'+id+'"]');
+    if(f) f.classList.toggle("err", !!on);
+    if(m) m.classList.toggle("on", !!on);
+  }
+
+  function validateCover(){
+    var ok = true;
+    [["f_entity"],["f_brand"],["f_name"]].forEach(function(p){
+      var el = document.getElementById(p[0]);
+      var bad = !el.value.trim();
+      showErr(p[0], bad); if(bad) ok=false;
+    });
+    var em = document.getElementById("f_email");
+    var badEm = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim());
+    showErr("f_email", badEm); if(badEm) ok=false;
+    if(!ok){
+      var first = document.querySelector(".err");
+      if(first) first.focus({preventScroll:false});
+    }
+    return ok;
+  }
+
+  document.addEventListener("click", function(e){
+    var b = e.target.closest("[data-go]");
+    if(!b) return;
+    var target = parseInt(b.getAttribute("data-go"),10);
+    if(current===0 && target>0 && !validateCover()) return;
+    current = target;
+    paint();
+  });
+
+  /* clear error styling as the user types */
+  ["f_entity","f_brand","f_name","f_email"].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener("input", function(){ showErr(id,false); });
+  });
+
+  /* ---- download a copy of answers ---- */
+  function buildText(){
+    var out = ["REQUEST FOR INFORMATION — CASINO PLATFORM AND TURNKEY SERVICES",
+               "Response copy generated " + new Date().toLocaleString(), ""];
+    Array.prototype.forEach.call(form.elements, function(el){
+      if(!el.name || el.type==="file" || el.type==="submit" || el.type==="button") return;
+      if(el.type==="radio" && !el.checked) return;
+      var v = (el.value||"").trim();
+      if(!v) return;
+      out.push(el.name);
+      out.push(v);
+      out.push("");
+    });
+    return out.join("\n");
+  }
+  function download(){
+    var blob = new Blob([buildText()], {type:"text/plain;charset=utf-8"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "RFI-response-copy.txt";
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  }
+  document.getElementById("saveCopy").addEventListener("click", download);
+  var pq = document.getElementById("printQs");
+  if(pq) pq.addEventListener("click", function(){ window.print(); });
+  document.getElementById("saveCopy2").addEventListener("click", download);
+
+  /* ---- submit ---- */
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(!validateCover()){ current=0; paint(); return; }
+
+    failmsg.classList.remove("on");
+    sending.classList.add("on");
+    submitBtn.disabled = true;
+
+    var data = new FormData(form);
+    data.append("_subject", "RFI response: " + (document.getElementById("f_brand").value || "unnamed vendor"));
+
+    fetch(FORMSPREE, { method:"POST", body:data, headers:{ "Accept":"application/json" } })
+      .then(function(r){
+        if(r.ok) return r.json();
+        return r.json().then(function(j){ throw new Error((j.errors && j.errors[0] && j.errors[0].message) || "Submission failed"); });
+      })
+      .then(function(){
+        form.style.display = "none";
+        document.querySelector(".rail").style.display = "none";
+        doneEl.classList.add("on");
+        window.scrollTo({top:0, behavior:"smooth"});
+      })
+      .catch(function(err){
+        sending.classList.remove("on");
+        submitBtn.disabled = false;
+        failmsg.textContent = "We could not send that: " + err.message +
+          ". Download a copy of your answers using the link below and email it to rfi@cram.ltd, and we will load it manually.";
+        failmsg.classList.add("on");
+      });
+  });
+
+  paint();
+})();
+</script>
+</body>
+</html>
