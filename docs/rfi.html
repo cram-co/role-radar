@@ -136,6 +136,17 @@ input[type=file]{font-size:14px;color:var(--ink-soft);max-width:100%}
 .q:has(.optgrp) .choices,.q:has(.optgrp) .hint,.q:has(.optgrp) .fieldwrap{margin-left:0}
 .q:has(.optgrp){margin-top:18px}
 
+/* ---------- restore bar ---------- */
+.restore{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  border:1px solid var(--accent);border-left:4px solid var(--accent);
+  background:var(--accent-soft);border-radius:var(--radius);
+  padding:13px 16px;margin:0 0 26px;max-width:74ch;
+}
+.restore .rtxt{font-size:14.5px;color:var(--ink)}
+.restore .ract{display:flex;gap:9px}
+.restore .btn{padding:7px 14px;font-size:13.5px}
+
 /* ---------- deadline ---------- */
 .deadline{
   display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
@@ -300,6 +311,14 @@ button{font:inherit;cursor:pointer;border-radius:var(--radius);transition:backgr
   </nav>
 
   <main>
+  <div class="restore" id="restoreBar" hidden>
+    <span class="rtxt">We found answers saved on this device<span id="restoreWhen"></span>.</span>
+    <span class="ract">
+      <button type="button" class="btn go" id="restoreYes">Restore them</button>
+      <button type="button" class="btn ghost" id="restoreNo">Start fresh</button>
+    </span>
+  </div>
+
   <form id="rfi" novalidate>
 
     <!-- ============ 0 · COVER ============ -->
@@ -1249,8 +1268,8 @@ button{font:inherit;cursor:pointer;border-radius:var(--radius);transition:backgr
 
       <div class="q">
         <div class="qhead"><span class="qnum">11.2</span><label for="q26">Or attach a file</label></div>
-        <div class="hint">PDF, up to 10MB. If the upload fails, send it to the address below instead.</div>
-        <div class="fieldwrap"><input type="file" id="q26" name="upload" accept=".pdf,.ppt,.pptx,.doc,.docx"></div>
+        <div class="hint">Up to 10 files, 25MB each. Large files on a slow connection can time out, so a link is safer for anything sizeable. If an upload fails, email it to the address below and your written answers will still be saved.</div>
+        <div class="fieldwrap"><input type="file" id="q26" name="upload" accept=".pdf,.ppt,.pptx,.doc,.docx" multiple></div>
       </div>
 
       <div class="q">
@@ -1281,6 +1300,7 @@ button{font:inherit;cursor:pointer;border-radius:var(--radius);transition:backgr
       </div>
       <div class="sending" id="sending">Sending your response.</div>
       <div class="failmsg" id="failmsg"></div>
+      <p class="saveline" id="autosaveNote">Your answers are saved in this browser as you type, so you can close the page and come back. They are cleared once you submit.</p>
       <p class="saveline">Want a copy for your records before you send?
         <button type="button" id="saveCopy">Download your answers</button>
       </p>
@@ -1412,28 +1432,158 @@ button{font:inherit;cursor:pointer;border-radius:var(--radius);transition:backgr
     sending.classList.add("on");
     submitBtn.disabled = true;
 
+    /* file size guard: Formspree allows 10 files, 25MB each */
+    var fileInput = document.getElementById("q26");
+    if (fileInput && fileInput.files && fileInput.files.length) {
+      if (fileInput.files.length > 10) {
+        sending.classList.remove("on"); submitBtn.disabled = false;
+        failmsg.textContent = "That is more than 10 files. Please attach up to 10, or send a link instead.";
+        failmsg.classList.add("on");
+        return;
+      }
+      var total = 0, oversized = [];
+      for (var i = 0; i < fileInput.files.length; i++) {
+        total += fileInput.files[i].size;
+        if (fileInput.files[i].size > 25 * 1024 * 1024) oversized.push(fileInput.files[i].name);
+      }
+      if (oversized.length) {
+        sending.classList.remove("on"); submitBtn.disabled = false;
+        failmsg.textContent = "Too large to upload: " + oversized.join(", ") +
+          ". The limit is 25MB per file. Send a link instead, or email it to rfi@cram.ltd, and submit your answers without the attachment.";
+        failmsg.classList.add("on");
+        return;
+      }
+      if (total > 20 * 1024 * 1024) {
+        sending.textContent = "Sending. Large attachments can take a while, so please keep this page open.";
+      }
+    }
+
     var data = new FormData(form);
     data.append("_subject", "RFI response: " + (document.getElementById("f_brand").value || "unnamed vendor"));
 
-    fetch(FORMSPREE, { method:"POST", body:data, headers:{ "Accept":"application/json" } })
+    var controller = (typeof AbortController !== "undefined") ? new AbortController() : null;
+    var timedOut = false;
+    var timer = setTimeout(function(){
+      timedOut = true;
+      if (controller) controller.abort();
+    }, 45000);
+
+    fetch(FORMSPREE, { method:"POST", body:data, headers:{ "Accept":"application/json" },
+                       signal: controller ? controller.signal : undefined })
       .then(function(r){
         if(r.ok) return r.json();
         return r.json().then(function(j){ throw new Error((j.errors && j.errors[0] && j.errors[0].message) || "Submission failed"); });
       })
       .then(function(){
+        clearTimeout(timer);
+        submitted = true;
+        clearSaved();
         form.style.display = "none";
         document.querySelector(".rail").style.display = "none";
         doneEl.classList.add("on");
         window.scrollTo({top:0, behavior:"smooth"});
       })
       .catch(function(err){
+        clearTimeout(timer);
         sending.classList.remove("on");
+        sending.textContent = "Sending your response.";
         submitBtn.disabled = false;
-        failmsg.textContent = "We could not send that: " + err.message +
-          ". Download a copy of your answers using the link below and email it to rfi@cram.ltd, and we will load it manually.";
+        failmsg.textContent = timedOut
+          ? "That took too long to send, which usually means the attachment is large or the connection is slow. Remove the attachment and send it separately to rfi@cram.ltd, then submit again. Download a copy of your answers first using the link below."
+          : "We could not send that: " + err.message +
+            ". Download a copy of your answers using the link below and email it to rfi@cram.ltd, and we will load it manually.";
         failmsg.classList.add("on");
       });
   });
+
+  /* ------------------------------------------------------------------
+     Autosave. Answers are held in this browser only, never sent early.
+     ------------------------------------------------------------------ */
+  var KEY = "cram-rfi-v1";
+  var dirty = false, submitted = false, saveTimer = null;
+
+  function collect(){
+    var out = {};
+    Array.prototype.forEach.call(form.elements, function(el){
+      if(!el.name || el.type === "file" || el.type === "submit" || el.type === "button") return;
+      if(el.type === "radio" || el.type === "checkbox"){
+        if(el.checked) (out[el.name] = out[el.name] || []).push(el.value);
+      } else if(el.value){
+        out[el.name] = el.value;
+      }
+    });
+    return out;
+  }
+
+  function save(){
+    try{
+      var data = collect();
+      if(!Object.keys(data).length) return;
+      localStorage.setItem(KEY, JSON.stringify({ at: Date.now(), page: current, data: data }));
+    }catch(e){ /* private browsing or storage full: fail quietly */ }
+  }
+
+  function scheduleSave(){
+    dirty = true;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(save, 600);
+  }
+
+  function restore(saved){
+    var data = saved.data || {};
+    Array.prototype.forEach.call(form.elements, function(el){
+      if(!el.name || el.type === "file") return;
+      var v = data[el.name];
+      if(v === undefined) return;
+      if(el.type === "radio" || el.type === "checkbox"){
+        if(Array.isArray(v) && v.indexOf(el.value) !== -1) el.checked = true;
+      } else {
+        el.value = v;
+      }
+    });
+    if(typeof saved.page === "number" && saved.page > 0 && saved.page < TOTAL){
+      current = saved.page; paint();
+    }
+  }
+
+  function clearSaved(){
+    try{ localStorage.removeItem(KEY); }catch(e){}
+  }
+
+  form.addEventListener("input", scheduleSave);
+  form.addEventListener("change", scheduleSave);
+  document.addEventListener("click", function(e){
+    if(e.target.closest("[data-go]")) save();
+  });
+
+  window.addEventListener("beforeunload", function(e){
+    if(dirty && !submitted){ e.preventDefault(); e.returnValue = ""; }
+  });
+
+  /* offer a restore if something is stored */
+  (function(){
+    var raw = null;
+    try{ raw = localStorage.getItem(KEY); }catch(e){ return; }
+    if(!raw) return;
+    var saved;
+    try{ saved = JSON.parse(raw); }catch(e){ clearSaved(); return; }
+    if(!saved || !saved.data || !Object.keys(saved.data).length) return;
+
+    var bar = document.getElementById("restoreBar");
+    var when = document.getElementById("restoreWhen");
+    if(saved.at){
+      var d = new Date(saved.at);
+      when.textContent = " from " + d.toLocaleDateString() + " at " +
+        d.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+    }
+    bar.hidden = false;
+    document.getElementById("restoreYes").addEventListener("click", function(){
+      restore(saved); bar.hidden = true;
+    });
+    document.getElementById("restoreNo").addEventListener("click", function(){
+      clearSaved(); bar.hidden = true;
+    });
+  })();
 
   paint();
 })();
