@@ -159,7 +159,6 @@ Midnite,Operator,yes,21,producing,detect,ashby:midnite,From LinkedIn follows,dig
 MiFinity,Gaming payments,yes,14,producing,detect,,,digital
 MrQ,Operator,yes,7,producing,detect,teamtailor:careers.lindar.com,Teamtailor on Lindar Media custom domain,digital
 Neds,Operator,yes,15,producing,detect,workable:entaingroup,Entain Australia & New Zealand board - CHECK next run for overlap with the Entain row,digital
-Newfield,Supplier - Data,yes,77,producing,detect,skip,"Employment Hero at employmenthero.com/jobs/organisations/newfield-ltd. Server-rendered, handled by scrape_custom with slug titles. Isle of Man, 140 staff, international racing events and their own IT platform",digital
 Nolimit City®,Supplier - Content,yes,44,producing,detect,skip,"career.nolimitcity.com static pages, handled by scrape_custom - low expectation",digital
 Novibet,Operator - Growth,yes,24,producing,detect,workable:novibet,Workable,digital
 Novig,Operator - Prediction,yes,11,producing,greenhouse,,Sports prediction market / betting exchange; CFTC-designated; NY,digital
@@ -180,7 +179,6 @@ Pinnacle,Operator,yes,16,producing,detect,orangehrm:pinnacle,OrangeHRM. Uses the
 Playnetic,Operator,yes,11,producing,detect,teamtailor:careers.playnetic.com,Teamtailor on a custom domain,digital
 Playson,Supplier - Content,yes,25,producing,detect,,,digital
 Playtech,Supplier - Platform,yes,124,producing,detect,,,digital
-PointsBet,Sports/Prediction,yes,77,producing,detect,skip,"Employment Hero at employmenthero.com/jobs/organisations/pointsbet/, handled by scrape_custom with slug titles - the SAME path Newfield has used for weeks, so no fetcher was ever needed. Was WRONGLY parked as ""aptrack + Employment Hero unsupported"". Australian business only; PointsBet Canada was removed from the list earlier",digital
 Polymarket,Sports/Prediction,yes,77,producing,detect,,From LinkedIn follows,digital
 Pragmatic Play,Supplier - Content,yes,4,producing,detect,,Teamtailor board carries only a few roles - most hiring runs through ARRISE,digital
 PressEnter Group,Operator,yes,5,producing,detect,bamboohr:pressentergroup,"CONFIRMED pin. BambooHR link sits in the site footer, not behind the Careers button",digital
