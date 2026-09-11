@@ -4114,11 +4114,13 @@ CUSTOM_BOARDS = {
                          listing=["/jobs", "/jobs/"], first_element=True),
     # Isle of Man social casino studio. No ATS but fully server-rendered:
     # /careers lists each role as a link to /vacancy{N} with a clean title.
-    # Employment Hero boards are server-rendered at /jobs/organisations/{org}/
-    # with job links at /jobs/position/{slug}/. The link text runs title,
-    # location, type and date together, so the slug gives the cleaner title.
-    "Newfield":     dict(base="https://employmenthero.com", marker="/jobs/position/",
-                         listing=["/jobs/organisations/newfield-ltd/"], slug_titles=True),
+    # REMOVED 11 Sep: Newfield and PointsBet. Both read Employment Hero with
+    # marker "/jobs/position/", which matched every job link on the page rather
+    # than only the organisation's own, so each returned the SAME 77 unrelated
+    # Australian roles (vets, vehicle sales, childcare). Do not re-add on this
+    # pattern: an Employment Hero organisation page must be proved to filter
+    # before its links are trusted. Two companies reporting an identical role
+    # count is the tell.
     # Their /wp-json/ endpoint hangs (511s of timeouts across ten post types)
     # while huddle.tech itself is fine, so read the careers page directly.
     # Roles live at /careers/{slug}/ and are mostly talent pools.
@@ -4191,14 +4193,6 @@ CUSTOM_BOARDS = {
     "The Star Entertainment Group": dict(base="https://careers.star.com.au",
                          marker="/job/", listing=["/en/search", "/en", "/"],
                          loc_class="location"),
-    # PARKED WRONGLY as "aptrack + Employment Hero, unsupported". Employment
-    # Hero needs no fetcher at all — Newfield has been read off the same path
-    # for weeks. Their aptrack side was never the listing.
-    # Employment Hero org slugs carry a generated suffix — the real one is in
-    # their own JSON-LD: .../organisations/pointsbet-australia-pty-limited-vo6ll/
-    "PointsBet":    dict(base="https://employmenthero.com", marker="/jobs/position/",
-                         listing=["/jobs/organisations/pointsbet-australia-pty-limited-vo6ll/"],
-                         slug_titles=True),
     # Their hrefs are RELATIVE with no leading slash ("Details/7" from
     # /home/search), so URLs join against the listing page. Most of their board
     # is flagged "Application Closed" — skip_if drops those, leaving the live ones.
