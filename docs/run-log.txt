@@ -1,4 +1,4 @@
-role-radar collector run: 2026-09-26T11:15:19.254716+00:00
+role-radar collector run: 2026-09-27T11:53:11.775344+00:00
 ============================================================
 
 WA.Technology: 0 roles (ashby)
@@ -37,7 +37,7 @@ Raketech: 0 roles (wordpress)
       wordpress sportserve.co: no job post type found among 14 tried
 Sportserve: 0 roles (wordpress)
       wordpress stakelogic.com: no job post type found among 14 tried
-Stakelogic: 0 roles (wordpress)  [37s]
+Stakelogic: 0 roles (wordpress)
 betPawa: 0 roles (workable)
       workday myhcm/jumpman: cxs 'myhcm' -> HTTP 200 (0 results)
       workday myhcm/jumpman: cxs 'jumpman' -> HTTP 422
@@ -88,7 +88,7 @@ Bragg Gaming: 3 roles (workday)
       sfcsb careers.brightstarlottery.com: 107 roles
 Brightstar Lottery: 107 roles (sfcsb)
 Bullfinch Recruitment: 32 roles (breezy)
-Caesars Entertainment: 1473 roles (oracle)
+Caesars Entertainment: 1477 roles (oracle)
 Caliente: 3 roles (bamboohr)
 CoinPoker: 18 roles (teamtailor)
 ComeOn Group: 17 roles (workable)
@@ -104,12 +104,12 @@ Easygo: 36 roles (greenhouse)
 Eeze: 21 roles (teamtailor)
       wordpress emeraldzebra.cy: Digital Marketing Director, Sports Betting, Limassol-3876348 -> 70
 Emerald Zebra: 70 roles (wordpress)
-Entain: 266 roles (smartrecruiters)
+Entain: 267 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (39443 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (39424 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
-      avature amswh: 55 roles
-evoke: 55 roles (avature)  [26s]
+      avature amswh: 54 roles
+evoke: 54 roles (avature)  [24s]
 evoke plc: 2 roles (bamboohr)
 Evolution: 295 roles (smartrecruiters)
 Evoplay: 1 roles (greenhouse)
@@ -132,9 +132,9 @@ High 5 Games: 13 roles (bamboohr)
 highbet: 7 roles (bamboohr)
 iBet Group: 2 roles (bamboohr)
 iGamingHunt: 8 roles (ashby)
-      sfcsb jobs.igt.com: board reports 149 jobs
-      sfcsb jobs.igt.com: 149 roles
-IGT: 149 roles (sfcsb)
+      sfcsb jobs.igt.com: board reports 148 jobs
+      sfcsb jobs.igt.com: 148 roles
+IGT: 148 roles (sfcsb)
 Intralot: 48 roles (recruitee)
 iTalent PLUS: 21 roles (teamtailor)
 Kaizen Gaming: 84 roles (greenhouse)
@@ -155,12 +155,12 @@ Luckia: 31 roles (sfcsb)
       zoho maxbet.zohorecruit.eu: 54 roles
 MaxBet: 54 roles (zoho)
 MERKUR Casino UK: 49 roles (workday)
-Midnite: 20 roles (ashby)
+Midnite: 21 roles (ashby)
 MiFinity: 14 roles (bamboohr)
 MrQ: 8 roles (teamtailor)
 Neds: 15 roles (workable)
 Novibet: 13 roles (workable)
-Novig: 15 roles (ashby)
+Novig: 16 roles (ashby)
 Oddin.gg: 30 roles (lever)
 OLG: 2 roles (workday)
       csod olympic: 22 roles
@@ -209,8 +209,8 @@ The Multiple Group: 1 roles (bamboohr)
       dayforce rankgroup: CSRF token via cookie __Host-next-auth.csrf-token (64 chars)
       dayforce rankgroup: site config {'clientNamespace': 'rankgroup', 'jobBoardCode': 'candidateportal', 'cultureCode': 'en-GB', 'jobBoardId': 1, '_buildId': 'CPh3LkXp_NpP0xPmezqJC'}
       dayforce rankgroup: credential-ish fields on portal {'GOOGLE_API_KEY': 'AIzaSy...39 chars', 'PENDO_API_KEY': '3bc007...36 chars', 'clientId': '83365', 'apiKey': '77zhgj...14 chars', 'cookie-description-pin-unauth': 'This c...84 chars'}
-      dayforce rankgroup: 155 roles
-The Rank Group plc: 155 roles (dayforce)
+      dayforce rankgroup: 158 roles
+The Rank Group plc: 158 roles (dayforce)
 Tipico: 180 roles (smartrecruiters)
       talos f08b3d92: 1 roles
 UK Tote Group: 1 roles (talos)
@@ -471,14 +471,15 @@ NuxGame: 6 roles (agency board)
 NSUS Group: 4 roles (agency board)
       SkyCity Entertainment Group: 8 script bundle(s) referenced, checking 4
       SkyCity Entertainment Group: no API URLs found in bundle
-   SkyCity Entertainment Group: link + .location -> 48 roles (48 with a location)
-   SkyCity Entertainment Group: link parse -> 48
-SkyCity Entertainment Group: 48 roles (agency board)
+   SkyCity Entertainment Group: link + .location -> 46 roles (46 with a location)
+   SkyCity Entertainment Group: link parse -> 46
+SkyCity Entertainment Group: 46 roles (agency board)
       json-ld https://careers.star.com.au/en/search: HTTP 404
       json-ld https://careers.star.com.au/en: HTTP 404
-      The Star Entertainment Group: shell HTTP 202
+      The Star Entertainment Group: 2 script bundle(s) referenced, checking 4
+      The Star Entertainment Group: no API URLs found in bundle
       The Star Entertainment Group https://careers.star.com.au/en/search: HTTP 202
-      The Star Entertainment Group https://careers.star.com.au/en: HTTP 404
+      The Star Entertainment Group https://careers.star.com.au/en: HTTP 202
       The Star Entertainment Group https://careers.star.com.au/: HTTP 202
 The Star Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
       KamaGames: 6 script bundle(s) referenced, checking 4
@@ -613,7 +614,7 @@ Van Kaizen: 65 roles (agency board)
 
 titles cleaned: 486 trailing references stripped, 33 locations taken from the title
 
-first_seen: 269 roles new since the last run, 7968 carried an existing date
+first_seen: 68 roles new since the last run, 8175 carried an existing date
 
 dropped 50 postings older than 2 years
 
@@ -621,5 +622,5 @@ dropped 5 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 180 returning, 50 not
 
-Feed written: 8182 jobs
+Feed written: 8188 jobs
 Unresolved companies (0): 
