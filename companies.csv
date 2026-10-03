@@ -74,7 +74,7 @@ Betstarters,Supplier - Platform,yes,1,producing,detect,bamboohr:betstarters,Bamb
 BettingJobs,Recruitment agency,yes,85,producing,detect,skip,bespoke scraper in collector.py,digital
 Betty,Operator,yes,28,producing,detect,greenhouse:bettyjobboard,"Greenhouse; token is bettyjobboard, not betty",digital
 BetVictor (BVGroup),Operator,yes,7,producing,detect,hibob:bvgroup,"HiBob. NOTE subdomain is bvgroup, NOT bvg - bvg exists but is empty",digital
-BetWarrior,Operator,yes,7,producing,detect,,From LinkedIn follows,digital
+BetWarrior,Operator,yes,7,producing,detect,bamboohr:betwarrior,BambooHR at betwarrior.bamboohr.com; from LinkedIn follows,digital
 Betway Africa,Operator - Africa,yes,55,producing,detect,https://myhcm.wd3.myworkdayjobs.com/Betway_Africa,Super Group; own Workday tenant,digital
 BGaming,Supplier - Content,yes,11,producing,detect,skip,"Server-rendered careers page at bgaming.com/careers, roles at /careers/{slug}, handled by scrape_custom with slug titles. Malta HQ with Poland and Georgia offices. 11 roles at time of adding including a Chief Commercial Officer",digital
 Blip.pt,Supplier - Platform,yes,16,producing,detect,skip,Flutter's Porto engineering hub; own board at blip.pt/jobs/ (greenhouse:blip is a different company),digital
