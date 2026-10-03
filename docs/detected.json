@@ -245,7 +245,8 @@
  },
  "BetWarrior": {
   "ats": "bamboohr",
-  "token": "betwarrior"
+  "token": "betwarrior",
+  "manual": true
  },
  "Oddin.gg": {
   "ats": "lever",
