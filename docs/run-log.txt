@@ -1,4 +1,4 @@
-role-radar collector run: 2026-10-03T11:31:27.552249+00:00
+role-radar collector run: 2026-10-04T12:11:11.998076+00:00
 ============================================================
 
 WA.Technology: 0 roles (ashby)
@@ -57,8 +57,8 @@ Altenar: 15 roles (bamboohr)
       sfcsb jobs.amusnet.com: board reports 28 jobs
       sfcsb jobs.amusnet.com: table columns not matched, using link parse (9/10 locations recovered from urls)
       sfcsb jobs.amusnet.com: 13 roles
-      sfcsb jobs.amusnet.com: 13 roles across 2 brands
-Amusnet: 13 roles (sfcsb)
+      sfcsb jobs.amusnet.com: 14 roles across 2 brands
+Amusnet: 14 roles (sfcsb)
 ARB Interactive: 5 roles (ashby)
 Aristocrat Interactive: 227 roles (workday)
       jobvite pragmaticplay: 83 roles across 2 listings
@@ -72,7 +72,7 @@ Betfred: 1 roles (talos)
 BetMakers Technology Group: 5 roles (rippling)
 BetMGM: 18 roles (workday)
 betr: 9 roles (lever)
-Betsson Group: 115 roles (greenhouse)
+Betsson Group: 116 roles (greenhouse)
 Betstarters: 1 roles (bamboohr)
 Betty: 32 roles (greenhouse)
 BetVictor (BVGroup): 7 roles (hibob)
@@ -80,7 +80,7 @@ BetWarrior: 7 roles (bamboohr)
 Betway Africa: 56 roles (workday)
       join booming-games: 5 roles
 Booming Games: 5 roles (join)
-Boyd Gaming: 913 roles (smartrecruiters)
+Boyd Gaming: 912 roles (smartrecruiters)
 BoyleSports: 21 roles (teamtailor)
 Bragg Gaming: 3 roles (workday)
       sfcsb careers.brightstarlottery.com: board reports 105 jobs
@@ -88,7 +88,7 @@ Bragg Gaming: 3 roles (workday)
       sfcsb careers.brightstarlottery.com: 105 roles
 Brightstar Lottery: 105 roles (sfcsb)
 Bullfinch Recruitment: 36 roles (breezy)
-Caesars Entertainment: 1438 roles (oracle)
+Caesars Entertainment: 1442 roles (oracle)
 Caliente: 1 roles (bamboohr)
 CoinPoker: 17 roles (teamtailor)
 ComeOn Group: 20 roles (workable)
@@ -108,8 +108,8 @@ Entain: 263 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
       avature amswh: 200 (39451 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
-      avature amswh: 60 roles
-evoke: 60 roles (avature)  [26s]
+      avature amswh: 59 roles
+evoke: 59 roles (avature)  [26s]
 evoke plc: 2 roles (bamboohr)
 Evolution: 302 roles (smartrecruiters)
 Evoplay: 1 roles (greenhouse)
@@ -118,7 +118,7 @@ FanDuel: 84 roles (greenhouse)
 FDJ United: 87 roles (workday)
 FIRST.bet: 6 roles (bamboohr)
 Flutter Group (corporate): 29 roles (workday)
-Flutter International (PokerStars, Betfair Int, Adjarabet): 63 roles (workday)
+Flutter International (PokerStars, Betfair Int, Adjarabet): 62 roles (workday)
 Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola): 3 roles (workday)
 Gamdom: 6 roles (teamtailor)
 Gaming Innovation Group: 7 roles (pinpoint)
@@ -181,14 +181,14 @@ Playtech: 112 roles (smartrecruiters)
 Polymarket: 67 roles (ashby)
 Pragmatic Play: 4 roles (teamtailor)
 PressEnter Group: 5 roles (bamboohr)
-PrizePicks: 41 roles (greenhouse)
+PrizePicks: 40 roles (greenhouse)
 Push Gaming: 11 roles (teamtailor)
 Racing Post / Spotlight Sports: 9 roles (workable)
 Relax Gaming: 7 roles (teamtailor)
 Rhino Entertainment: 5 roles (workable)
 RubyPlay: 6 roles (pinpoint)
 Rush Street Interactive: 23 roles (greenhouse)
-SCIENTIFIC GAMES: 144 roles (workday)
+SCIENTIFIC GAMES: 143 roles (workday)
 Silverspin: 5 roles (teamtailor)
 SkillOnNet: 21 roles (teamtailor)
 Soft2Bet: 15 roles (greenhouse)
@@ -210,8 +210,8 @@ The Multiple Group: 1 roles (bamboohr)
       dayforce rankgroup: CSRF token via cookie __Host-next-auth.csrf-token (64 chars)
       dayforce rankgroup: site config {'clientNamespace': 'rankgroup', 'jobBoardCode': 'candidateportal', 'cultureCode': 'en-GB', 'jobBoardId': 1, '_buildId': 'CPh3LkXp_NpP0xPmezqJC'}
       dayforce rankgroup: credential-ish fields on portal {'GOOGLE_API_KEY': 'AIzaSy...39 chars', 'PENDO_API_KEY': '3bc007...36 chars', 'clientId': '83365', 'apiKey': '77zhgj...14 chars', 'cookie-description-pin-unauth': 'This c...84 chars'}
-      dayforce rankgroup: 158 roles
-The Rank Group plc: 158 roles (dayforce)
+      dayforce rankgroup: 161 roles
+The Rank Group plc: 161 roles (dayforce)
 Tipico: 176 roles (smartrecruiters)
       talos f08b3d92: 1 roles
 UK Tote Group: 1 roles (talos)
@@ -230,24 +230,6 @@ ZEAL Network: 23 roles (ashby)
       Fortuna: 1 script bundle(s) referenced, checking 4
       Fortuna: API-looking URLs in bundle:
          https://app-azeun-p-hr-easyapply-be.azurewebsites.net
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Vacancies: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/positions: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobOffers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/joboffers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/adverts: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/GetAll: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/List: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobAds: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobads: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publication: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publications: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
-      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/vacancies: HTTP 500
@@ -266,6 +248,24 @@ ZEAL Network: 23 roles (ashby)
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/offers: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/Recruitment/Jobs: HTTP 500
       https://app-azeun-p-hr-easyapply-be.azurewebsites.net/api/job/search: HTTP 500
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/vacancies: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Vacancies: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/positions: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobOffers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/joboffers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/v1/jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/adverts: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/GetAll: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Job/List: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/JobAds: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/jobads: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publication: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/publications: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/offers: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/Recruitment/Jobs: 200 but text/html (not json)
+      https://app-azeun-p-hr-easyapply-fe.azurewebsites.net/api/job/search: 200 but text/html (not json)
 Fortuna Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
       Codere Online: 0 script bundle(s) referenced, checking 4
       Codere Online: no API URLs found in bundle
@@ -474,17 +474,17 @@ NuxGame: 6 roles (agency board)
 NSUS Group: 3 roles (agency board)
       SkyCity Entertainment Group: 8 script bundle(s) referenced, checking 4
       SkyCity Entertainment Group: no API URLs found in bundle
-   SkyCity Entertainment Group: link + .location -> 53 roles (53 with a location)
-   SkyCity Entertainment Group: link parse -> 53
-SkyCity Entertainment Group: 53 roles (agency board)
+   SkyCity Entertainment Group: link + .location -> 52 roles (52 with a location)
+   SkyCity Entertainment Group: link parse -> 52
+SkyCity Entertainment Group: 52 roles (agency board)
       json-ld https://careers.star.com.au/en/search: HTTP 404
       json-ld https://careers.star.com.au/en: HTTP 404
       The Star Entertainment Group: shell HTTP 202
-      The Star Entertainment Group https://careers.star.com.au/en/search: HTTP 202
+      The Star Entertainment Group https://careers.star.com.au/en/search: HTTP 404
       The Star Entertainment Group https://careers.star.com.au/en: HTTP 202
       The Star Entertainment Group https://careers.star.com.au/: HTTP 202
 The Star Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
-      KamaGames: 6 script bundle(s) referenced, checking 4
+      KamaGames: 4 script bundle(s) referenced, checking 4
       KamaGames: API-looking URLs in bundle:
          http://imakewebthings.com/waypoints/api/context
          http://imakewebthings.com/waypoints/api/context-destroy
@@ -509,7 +509,7 @@ The Star Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothin
          https://stackoverflow.com/questions/9951045/pinterest-api-documentation
          https://www.reddit.com/dev/api
          https://www.reddit.com/dev/api/
-      KamaGames https://www.kamagames.com/careers: 200, 75847 bytes, 0 '/vacancy' refs
+      KamaGames https://www.kamagames.com/careers: 200, 72478 bytes, 0 '/vacancy' refs
          link shapes present: /images/* x13, /kamagames x4, /dist/* x2, /about_us x2, /games x2, /pokerist x2, /blackjackist x2, /slots x2, /video_poker x2, /roulettist x2, /baccarist x2, /setpoker x2
 KamaGames: 0 roles (agency board)  <-- CHECK: returned nothing
       SoftConstruct: shell HTTP 403
@@ -603,7 +603,7 @@ Apercon: 30 roles (agency board)
    Allwyn: link parse -> 4
 Allwyn: 4 roles (agency board)
 Tabcorp: 28 roles (agency board)
-Sportsbet: 15 roles (agency board)
+Sportsbet: 13 roles (agency board)
       Pentasia: stripped a trailing reference from 1 title(s)
 Pentasia: 101 roles (agency board)
       BettingJobs https://www.bettingjobs.com/operations-payment/: HTTP 404
@@ -619,7 +619,7 @@ titles cleaned: 472 trailing references stripped, 28 locations taken from the ti
 
 carried 23 roles forward from the previous feed
 
-first_seen: 208 roles new since the last run, 7853 carried an existing date
+first_seen: 56 roles new since the last run, 8006 carried an existing date
 
 dropped 38 postings older than 2 years
 
@@ -627,5 +627,5 @@ dropped 6 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 181 returning, 49 not
 
-Feed written: 8017 jobs
+Feed written: 8018 jobs
 Unresolved companies (0): 
