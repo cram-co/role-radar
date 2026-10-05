@@ -101,7 +101,6 @@ Duelbits,Operator,yes,4,producing,detect,bamboohr:duelbits,BambooHR,digital
 Easygo,Operator,yes,37,producing,detect,,From LinkedIn follows,digital
 Eeze,Supplier - Content,yes,21,producing,teamtailor,teamtailor:careers.eeze.com,Teamtailor on a custom domain at careers.eeze.com. He rates the roles that come up here,digital
 EGT Digital,Supplier - Content,yes,32,producing,detect,skip,"egt-digital.com/careers lists only CURRENT roles and links to skillie.ai - use it as the live filter, since the skillie sitemap holds every job ever posted",digital
-Emerald Zebra,Recruitment agency,yes,78,producing,detect,wordpress:emeraldzebra.cy|jobs,"WordPress + Elementor/JetEngine. Their widget config names the post type outright: custom_post_types:[""jobs""], so the REST route is /wp-json/wp/v2/jobs. Cyprus-based iGaming/fintech/forex agency - the REST route returns ALL their roles, where the /job-industry/gaming-jobs-in-cyprus/ taxonomy would filter out the fintech and forex ones. FALLBACK if REST is closed: scrape the taxonomy pages - title in h2 > a, location after icon-map-marker, date in a <time> tag. Note their site 403s some clients, so watch the log",digital
 Entain,Operator - Tier 1,yes,275,producing,detect,,"Ladbrokes, Coral, bwin, partypoker",digital
 EvenBet Gaming,Supplier - Content,yes,6,producing,detect,skip,"own site, handled by scrape_custom",digital
 EveryMatrix,Supplier - Platform,yes,21,producing,detect,,,digital
