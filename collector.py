@@ -20,6 +20,7 @@ import json
 import re
 import sys
 import time
+import traceback
 import uuid
 from datetime import datetime, timezone
 import urllib.parse
@@ -5127,13 +5128,26 @@ if __name__ == "__main__":
     # Mirror the whole run into docs/run-log.txt. The workflow commits docs/,
     # so the diagnostics end up published alongside the feed instead of being
     # stranded in the Actions console.
-    buf = io.StringIO()
+    #
+    # The log STREAMS to disk line by line rather than being written once at
+    # the end. A run that is killed outright - out of memory, a cancelled or
+    # reclaimed runner - never reaches a finally block, and the old version
+    # left nothing behind at all on exactly the night that mattered. Line
+    # buffering means whatever the collector managed to print is already on
+    # disk the moment it dies.
+    DOCS.mkdir(parents=True, exist_ok=True)
+    log = open(DOCS / "run-log.txt", "w", encoding="utf-8", buffering=1)
+    log.write(f"role-radar collector run: "
+              f"{datetime.now(timezone.utc).isoformat()}\n{'=' * 60}\n\n")
     try:
-        with contextlib.redirect_stdout(_Tee(sys.stdout, buf)):
+        with contextlib.redirect_stdout(_Tee(sys.stdout, log)):
             main()
+    except BaseException:
+        # The traceback goes to stderr, which was never part of the log, so a
+        # crashed run used to publish output that simply stopped mid-sentence
+        # with no reason given. Put the reason where the diagnostics are.
+        log.write(f"\n{'=' * 60}\nRUN FAILED\n\n{traceback.format_exc()}")
+        raise
     finally:
-        stamp = datetime.now(timezone.utc).isoformat()
-        (DOCS / "run-log.txt").write_text(
-            f"role-radar collector run: {stamp}\n{'=' * 60}\n\n" + buf.getvalue(),
-            encoding="utf-8",
-        )
+        log.write(f"\n{'=' * 60}\nended {datetime.now(timezone.utc).isoformat()}\n")
+        log.close()
