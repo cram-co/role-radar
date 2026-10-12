@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>DVS Audit Plan Builder</title>
+<meta name="description" content="Private tool. DVS Trust Framework audit plan builder.">
+<link rel="icon" type="image/svg+xml" href="/cram-favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+</head>
+<body style="margin:0">
+<style>
+/* Layout: two panes on desktop — inputs on the left, the live plan on the right; stacked on phones. */
+:root{
+  --ink:#17263B; --ink-soft:#4A596D; --paper:#F3F5F4; --surface:#FFFFFF; --surface-2:#F8F9F8;
+  --line:#D6DDE2; --brass:#94733F; --brass-ink:#FFFFFF; --brass-soft:#F1E8D8;
+  --warn:#8A5A2A; --warn-bg:#FBF2E6; --warn-line:#EAD9B8; --danger:#A23B3B;
+  --chip-on-bg:#17263B; --chip-on-fg:#FFFFFF; --bar:#17263B; --bar-fg:#FFFFFF;
+  --f-display:"Source Serif 4", Charter, Georgia, serif;
+  --f-body:"Source Sans 3", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --ink:#E6EBF1; --ink-soft:#A8B3C1; --paper:#10161F; --surface:#18212C; --surface-2:#1D2733;
+  --line:#2E3A48; --brass:#C9A56B; --brass-ink:#1A1206; --brass-soft:#2E2718;
+  --warn:#E5B98A; --warn-bg:#2A2116; --warn-line:#4A3A22; --danger:#E08585;
+  --chip-on-bg:#E6EBF1; --chip-on-fg:#10161F; --bar:#0B1017; --bar-fg:#E6EBF1; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --ink:#E6EBF1; --ink-soft:#A8B3C1; --paper:#10161F; --surface:#18212C; --surface-2:#1D2733;
+  --line:#2E3A48; --brass:#C9A56B; --brass-ink:#1A1206; --brass-soft:#2E2718;
+  --warn:#E5B98A; --warn-bg:#2A2116; --warn-line:#4A3A22; --danger:#E08585;
+  --chip-on-bg:#E6EBF1; --chip-on-fg:#10161F; --bar:#0B1017; --bar-fg:#E6EBF1; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:15px; line-height:1.45}
+.gate{min-height:calc(100vh - 120px); display:flex; align-items:center; justify-content:center; padding-inline:16px; padding-block:40px}
+.gate-card{width:100%; max-width:380px; background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--brass); border-radius:4px; padding:24px; display:flex; flex-direction:column; gap:8px}
+.gate-card h1{font-size:22px}
+.gate-card p{margin:0 0 6px; color:var(--ink-soft)}
+.gate-card .dl-btn{margin-top:8px}
+.gate-msg{min-height:1.2em; font-size:13.5px; color:var(--danger)}
+.wrap{max-width:1180px; margin:0 auto; padding-inline:16px; padding-block:0 32px}
+h1,h2,h3{font-family:var(--f-display); font-weight:600; margin:0; text-wrap:balance}
+.masthead{padding-block:22px 16px; border-bottom:2px solid var(--ink); display:flex; flex-wrap:wrap; gap:10px 24px; align-items:flex-end; justify-content:space-between}
+.masthead h1{font-size:26px}
+.masthead p{margin:4px 0 0; color:var(--ink-soft); font-size:14px; max-width:62ch}
+.mast-actions{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.ghost-btn.confirm{border-color:var(--danger); color:var(--danger); font-weight:700}
+.fw-tag{font-family:var(--f-mono); font-size:11.5px; letter-spacing:.04em; color:var(--brass); border:1px solid var(--brass); padding:3px 8px; border-radius:3px; white-space:nowrap}
+.example-banner{margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; background:var(--brass-soft); border:1px solid var(--brass); border-radius:4px; padding:9px 12px; font-size:13.5px}
+.grid{display:grid; grid-template-columns:minmax(0,460px) minmax(0,1fr); gap:24px; margin-top:18px; align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.form{display:flex; flex-direction:column; gap:14px; min-width:0}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:16px; min-width:0}
+.card h2{font-size:16.5px; display:flex; gap:8px; align-items:baseline; margin-bottom:4px}
+.card h2 .num{font-style:italic; color:var(--brass); font-size:15px}
+.hint{font-size:13px; color:var(--ink-soft); margin:0 0 12px}
+.row{display:flex; gap:10px; flex-wrap:wrap}
+.row > *{flex:1 1 150px; min-width:0}
+label.field{display:flex; flex-direction:column; gap:4px; margin-bottom:10px}
+label.field > span, .lbl{font-size:12.5px; font-weight:700; color:var(--ink-soft); letter-spacing:.02em}
+input[type=text],input[type=number],input[type=date],input[type=time],select,textarea{
+  width:100%; padding:8px 9px; border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  color:var(--ink); font:inherit; font-size:14.5px}
+textarea{resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,.chip:focus-visible{outline:2px solid var(--brass); outline-offset:1px}
+.check{display:flex; gap:8px; align-items:center; font-size:14px; cursor:pointer; margin:4px 0}
+.check input{width:16px; height:16px; accent-color:var(--brass)}
+.chips{display:flex; flex-wrap:wrap; gap:7px}
+.chip{border:1px solid var(--line); background:var(--surface); color:var(--ink-soft); padding:6px 11px; border-radius:20px; font-size:13.5px; cursor:pointer; font:inherit; font-size:13.5px}
+.chip.on{background:var(--chip-on-bg); border-color:var(--chip-on-bg); color:var(--chip-on-fg); font-weight:600}
+.list-row{display:flex; gap:7px; align-items:center; margin-bottom:7px}
+.list-row > input{flex:1.5 1 0; min-width:0}
+.list-row > select{flex:1 1 0; min-width:0}
+.dropdown{border:1px solid var(--line); border-radius:3px; background:var(--surface)}
+.dropdown > summary{cursor:pointer; padding:8px 10px; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center}
+.dropdown > summary::-webkit-details-marker{display:none}
+.dropdown > summary::after{content:"▾"; color:var(--ink-soft)}
+.dropdown[open] > summary::after{content:"▴"}
+.dropdown-body{border-top:1px solid var(--line); padding:8px 10px 10px; display:flex; flex-direction:column; gap:8px; max-height:340px; overflow-y:auto}
+.pgroup{border:none; margin:0; padding:0}
+.pgroup legend{font-size:12px; font-weight:700; color:var(--ink-soft); letter-spacing:.03em; text-transform:uppercase; padding:0; margin-bottom:4px}
+.pcodes{display:grid; grid-template-columns:repeat(auto-fill,minmax(72px,1fr)); gap:4px 8px}
+.pcode{display:flex; gap:6px; align-items:center; font-family:var(--f-mono); font-size:13px; cursor:pointer; padding:2px 0}
+.pcode input{width:15px; height:15px; accent-color:var(--brass)}
+.chip.sel{display:inline-flex; gap:6px; align-items:center; cursor:default; font-family:var(--f-mono); font-size:12.5px; padding:4px 6px 4px 10px}
+.chip-x{background:none; border:none; color:inherit; cursor:pointer; font-size:12px; padding:0 3px; opacity:.8}
+.red-tag{display:inline-block; margin-left:6px; font-size:11px; font-weight:700; color:var(--good, var(--brass)); border:1px solid currentColor; border-radius:10px; padding:0 6px; white-space:nowrap}
+.icon-btn{background:none; border:none; color:var(--danger); cursor:pointer; font-size:17px; padding:2px 6px; line-height:1}
+.add-link{background:none; border:1px dashed var(--brass); color:var(--brass); padding:6px 11px; border-radius:4px; font:inherit; font-size:13.5px; font-weight:700; cursor:pointer}
+.add-link:hover{background:var(--brass-soft)}
+.ghost-btn{background:none; border:1px solid var(--line); color:var(--ink-soft); padding:5px 10px; border-radius:4px; font:inherit; font-size:13px; cursor:pointer}
+.ghost-btn:hover{border-color:var(--ink-soft)}
+.dates{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:8px}
+.dates label span{font-size:12px}
+details.more{margin-top:8px}
+details.more summary{cursor:pointer; font-size:13px; font-weight:700; color:var(--ink-soft)}
+.settings{display:grid; grid-template-columns:1fr 110px; gap:7px 10px; align-items:center; margin-top:10px; font-size:13.5px; color:var(--ink-soft)}
+.acts{display:flex; flex-direction:column; border:1px solid var(--line); border-radius:4px; overflow:hidden}
+.act{display:grid; grid-template-columns:22px 62px minmax(0,1fr) 58px 48px; gap:6px; align-items:center; padding:6px 8px; border-top:1px solid var(--line); font-size:13.5px; background:var(--surface)}
+.act:first-child{border-top:none}
+.act.off{background:var(--surface-2); color:var(--ink-soft)}
+.act.off .ttl{text-decoration:line-through}
+.act input[type=checkbox]{width:16px; height:16px; accent-color:var(--brass)}
+.act input[type=number]{padding:4px 5px; font-size:13px; text-align:right}
+.ref{font-family:var(--f-mono); font-size:12px; color:var(--brass); white-space:nowrap}
+.act .ttl{line-height:1.3}
+.mv{display:flex; gap:2px}
+.mv button{background:none; border:1px solid var(--line); color:var(--ink-soft); border-radius:3px; width:22px; height:22px; cursor:pointer; font-size:11px; padding:0}
+.acts-head{display:grid; grid-template-columns:22px 62px minmax(0,1fr) 58px 48px; gap:6px; padding:0 8px 4px; font-size:11.5px; color:var(--ink-soft); font-weight:700; letter-spacing:.03em; text-transform:uppercase}
+
+/* Plan pane */
+.plan{position:sticky; top:calc(env(safe-area-inset-top,0px) + 12px); min-width:0}
+@media (max-width:900px){.plan{position:static}}
+.summary{background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--brass); border-radius:4px; padding:16px}
+.summary .kpis{display:flex; flex-wrap:wrap; gap:8px 28px; margin:6px 0 10px}
+.kpi b{display:block; font-family:var(--f-display); font-size:28px; font-weight:700; font-variant-numeric:tabular-nums; line-height:1.1}
+.kpi span{font-size:12.5px; color:var(--ink-soft)}
+.meta{font-size:13.5px; color:var(--ink-soft); display:grid; grid-template-columns:auto minmax(0,1fr); gap:3px 12px}
+.meta dt{font-weight:700}
+.meta dd{margin:0; color:var(--ink)}
+.note{font-size:13px; color:var(--warn); background:var(--warn-bg); border:1px solid var(--warn-line); padding:9px 11px; border-radius:4px; margin-top:12px}
+.dl-btn{width:100%; margin-top:14px; padding:12px; border:none; border-radius:4px; background:var(--brass); color:var(--brass-ink); font:inherit; font-weight:700; font-size:15px; cursor:pointer}
+.dl-btn:hover{filter:brightness(.95)}
+.dl-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+.dl-row .dl-btn{flex:1 1 180px; margin-top:0}
+.dl-btn.alt{background:var(--surface); color:var(--ink); border:1px solid var(--ink)}
+.dl-status{font-size:13px; color:var(--ink-soft); margin-top:6px; min-height:1em}
+.days{display:flex; flex-direction:column; gap:10px; margin-top:14px}
+details.day{background:var(--surface); border:1px solid var(--line); border-radius:4px; overflow:hidden}
+details.day > summary{list-style:none; cursor:pointer; padding:10px 14px; display:flex; justify-content:space-between; gap:12px; background:var(--surface-2); font-family:var(--f-display); font-weight:700; font-size:15px}
+details.day > summary::-webkit-details-marker{display:none}
+details.day > summary .d{color:var(--ink-soft); font-family:var(--f-body); font-weight:600; font-size:13.5px}
+.sched{overflow-x:auto}
+.sched table{width:100%; border-collapse:collapse; font-size:13.5px}
+.sched td{padding:8px 10px; border-top:1px solid var(--line); vertical-align:top}
+.sched td.t{white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--ink-soft); width:1%}
+.sched td.r{width:1%}
+.sched td b{display:block; font-weight:600}
+.sched td .f{color:var(--ink-soft); font-size:12.5px}
+.sched tr.brk td{background:var(--surface-2); color:var(--ink-soft); font-style:italic}
+.tags{display:flex; gap:5px; flex-wrap:wrap; margin-top:3px}
+.who.off{color:var(--ink-soft); border-color:var(--ink-soft); border-style:dashed}
+.who{display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.03em; color:var(--brass); border:1px solid var(--brass); border-radius:10px; padding:0 7px}
+.alloc{width:100%; border-collapse:collapse; font-size:13px; margin-top:10px}
+.alloc td{padding:4px 0; border-top:1px solid var(--line)}
+.alloc td:last-child{text-align:right; font-variant-numeric:tabular-nums; color:var(--ink-soft); white-space:nowrap; padding-left:10px}
+.alloc td.ref{width:1%; padding-right:10px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important; scroll-behavior:auto!important}}
+
+/* Site footer. Sits outside the gate so the privacy notice is reachable without the password. */
+.site-foot{border-top:1px solid var(--line); background:var(--surface-2); padding:18px 16px; margin-top:40px}
+.site-foot-in{max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+              font-size:13px; color:var(--ink-soft)}
+.site-foot-in svg{height:26px; width:auto; display:block}
+.site-foot a{color:inherit; text-decoration:none; border-bottom:1px solid var(--line)}
+.site-foot a:hover{color:var(--ink)}
+.site-foot-note{margin-left:auto; font-size:12.5px}
+@media (max-width:640px){ .site-foot-note{margin-left:0; flex-basis:100%} }
+</style>
+
+<div class="gate" id="gate">
+  <form class="gate-card" id="gate-form" autocomplete="off">
+    <h1>DVS Audit Plan Builder</h1>
+    <p>Enter the password to continue.</p>
+    <label for="gate-pw" class="lbl">Password</label>
+    <input type="password" id="gate-pw" autocomplete="current-password" required>
+    <button type="submit" class="dl-btn">Open builder</button>
+    <div class="gate-msg" id="gate-msg" role="alert"></div>
+  </form>
+</div>
+<div class="wrap" id="app-wrap" hidden>
+  <header class="masthead">
+    <div>
+      <h1>DVS Audit Plan Builder</h1>
+      <p>Enter the audit days from your duration tool and the scope. The plan fills those days from 09:30 with lunch at 12:30, with every activity tagged to its trust framework clause, ready to download as a spreadsheet.</p>
+    </div>
+    <div class="mast-actions">
+      <span class="fw-tag">UK DVS TRUST FRAMEWORK 1.0</span>
+      <button type="button" class="ghost-btn" id="clear-btn">Clear form</button>
+    </div>
+  </header>
+  <div id="banner"></div>
+  <div class="grid">
+    <div class="form" id="form"></div>
+    <div class="plan" id="plan"></div>
+  </div>
+</div>
+
+<script src="vendor/docx-9.6.1.iife.js"></script>
+<script>
+(function(){
+"use strict";
+
+/* ---------- Reference data (clause numbers from UK DVS trust framework 1.0, June 2026) ---------- */
+const AUDIT_TYPES = ["Stage 1 (readiness and documentation review)","Stage 2 (certification audit)","Surveillance","Recertification","Scope extension","Special audit"];
+const TEAM_ROLES = ["Lead auditor","Auditor","Technical expert","Auditor in training","Observer"];
+const NON_COUNTING = ["Auditor in training","Observer"];
+const METHODS = ["On-site","Remote","Hybrid"];
+// GPG 45 identity profiles (GOV.UK "Identity profiles"), grouped by level of confidence.
+const GPG45 = [
+  {level:"Low", w:0.3, codes:["L1A","L1B","L1C","L2A","L2B","L3A"]},
+  {level:"Medium", w:0.4, codes:["M1A","M1B","M1C","M1D","M2A","M2B","M2C","M3A"]},
+  {level:"High", w:0.5, codes:["H1A","H1B","H1C","H2A","H2B","H2C","H2D","H2E","H3A"]},
+  {level:"Very High", w:0.6, codes:["V1A","V1B","V1C","V1D","V2A","V2B","V2C","V2D","V3A"]},
+];
+const gpg45Level = code => GPG45.find(g => g.codes.includes(code));
+const GPG44_LEVELS = ["Low","Medium","High"];
+const GPG44_W = {Low:0.3, Medium:0.4, High:0.5};
+
+// Other certifications held: clauses they overlap get a reduced share of time (factor), with a prompt to rely on the certificate.
+const CERTS = [
+  {v:"iso27001", label:"ISO/IEC 27001", reduce:{"c11.6a":0.5, "c11.6b":0.5, "c11.7":0.5, "c12.3":0.75, "c12.5":0.75, "c11.3":0.75}},
+  {v:"iso27701", label:"ISO/IEC 27701", reduce:{"c12.7":0.5, "c11.5":0.75, "c11.8":0.75}},
+  {v:"iso9001", label:"ISO 9001", reduce:{"c11.4":0.5, "c11.2":0.75, "c11.3":0.75}},
+];
+
+const ROLES = [
+  {v:"IDSP", label:"Identity service provider", ref:"5", title:"Rules for identity service providers", w:1.0,
+   focus:"5.1 Creating a digital identity (GPG 45 process design, evidence and verification); 5.2 Accepting expired documents."},
+  {v:"ASP", label:"Attribute service provider", ref:"6", title:"Rules for attribute service providers", w:0.8,
+   focus:"6.1 Creating attributes (source validation, currency and accuracy); 6.1.1 Sharing attributes."},
+  {v:"HSP", label:"Holder service provider", ref:"7", title:"Rules for holder service providers", w:1.0,
+   focus:"7.1 Holding identities and attributes; 7.2 Reusing a verified identity or attribute; 7.3 Managing a user's account; 7.3.1 Notifying users of account changes."},
+  {v:"OSP", label:"Orchestration service provider", ref:"8", title:"Rules for orchestration service providers", w:0.6,
+   focus:"8.1 Reporting the DVS registration of others; how composed outcomes are presented to relying parties; failure handling."},
+  {v:"CSP", label:"Component service provider", ref:"9", title:"Rules for component service providers", w:0.8,
+   focus:"9.1 Providing components of GPG 45 (9.1.1) or GPG 44 (9.1.2); component specification, performance and accuracy evidence."},
+];
+
+const SUPP_CODES = [
+  {v:"rtw", label:"Right to Work"},
+  {v:"rtr", label:"Right to Rent"},
+  {v:"dbs", label:"DBS"},
+];
+
+// Rules for all service providers. `seq` sets the default running order.
+const CLAUSES = [
+  {k:"c11.1", seq:110, ref:"11.1", title:"Business probity", w:0.25,
+   focus:"Company standing, directors and ownership, conflicts of interest, financial standing evidence."},
+  {k:"c11.2", seq:111, ref:"11.2", title:"Responding to complaints and disputes", w:0.3,
+   focus:"Complaints and disputes process, complaint log sampling, response times, escalation and outcomes."},
+  {k:"c11.3", seq:112, ref:"11.3", title:"Staff and resources", w:0.4,
+   focus:"Competence and training records, pre-employment screening and vetting, adequacy of resourcing."},
+  {k:"c11.4", seq:113, ref:"11.4", title:"Service and quality management", w:0.5,
+   focus:"Quality management system, service levels and performance monitoring, change control, continual improvement."},
+  {k:"c11.5", seq:114, ref:"11.5", title:"Information management", w:0.4,
+   focus:"Archiving information (11.5.1), disposal schedule (11.5.2), data management (11.5.3)."},
+  {k:"c11.6a", seq:115, ref:"11.6.1–11.6.3", title:"Information security: confidentiality, integrity and availability", w:0.5,
+   focus:"Confidentiality (11.6.1), integrity (11.6.2) and availability (11.6.3) controls, including BC/DR testing evidence."},
+  {k:"c11.6b", seq:116, ref:"11.6.4–11.6.8", title:"Information security: controls and governance", w:1.0,
+   focus:"Technical and security controls (11.6.4), organisational controls (11.6.5), physical security (11.6.6), security governance (11.6.7), protecting collected information (11.6.8). ISMS / ISO 27001 and penetration-test evidence."},
+  {k:"c11.7", seq:117, ref:"11.7", title:"Risk management", w:0.5,
+   focus:"Risk management framework, risk register currency, treatment plans and ownership."},
+  {k:"c11.8", seq:118, ref:"11.8", title:"Keeping records", w:0.4,
+   focus:"Records management policy (11.8.1), other record-keeping duties (11.8.2), disposal of records and disposal statement (11.8.3–11.8.4), staff duties and accountability (11.8.5–11.8.6)."},
+  {k:"c11.9", seq:119, ref:"11.9", title:"Withdrawing from the trust framework", w:0.15,
+   focus:"Exit arrangements: user notification and data handling if the service withdraws."},
+  {k:"c12.1", seq:120, ref:"12.1", title:"Making products and services interoperable", w:0.5,
+   focus:"Data schema (12.1.1), receiving messages from participants (12.1.2), sharing identities and attributes (12.1.3). Sample message payloads."},
+  {k:"c12.2", seq:121, ref:"12.2", title:"Checking if a user can act on behalf of an organisation or another person", w:0.3,
+   focus:"Delegated authority checks and sample cases."},
+  {k:"c12.3", seq:122, ref:"12.3", title:"Encryption and cryptography", w:0.6,
+   focus:"Encryption (12.3.1), cryptography and key management (12.3.2), entity authentication (12.3.3), digital signatures (12.3.4)."},
+  {k:"c12.4", seq:123, ref:"12.4", title:"Fraud management", w:0.8,
+   focus:"Fraud monitoring (12.4.1), policies and procedures (12.4.2), reporting fraud (12.4.3), intelligence and analysis (12.4.4), sharing threat indicators (12.4.5)."},
+  {k:"c12.5", seq:124, ref:"12.5", title:"Responding to incidents", w:0.6,
+   focus:"Fraud incidents (12.5.1), service delivery incidents (12.5.2), data breaches (12.5.3), compromised holder accounts (12.5.4), helping users repair their identity (12.5.5). Incident log sampling."},
+  {k:"c12.6", seq:125, ref:"12.6", title:"Telling users about your product or service", w:0.2,
+   focus:"Accuracy of information and claims made to users about the service and its certification."},
+  {k:"c12.7", seq:126, ref:"12.7", title:"Privacy and data protection rules", w:0.7,
+   focus:"Transparency (12.7.1), privacy by design and default (12.7.2), prohibited processing of personal data (12.7.3). DPIA, privacy notices, lawful basis, retention."},
+  {k:"c12.8", seq:127, ref:"12.8", title:"Using biometrics in your service", w:0.5,
+   focus:"Biometric performance and security (12.8.1), testing (12.8.2), transparency (12.8.3)."},
+  {k:"c12.9", seq:128, ref:"12.9", title:"Working with relying parties", w:0.3,
+   focus:"Relying-party agreements and flow-down terms; information given to relying parties about outcomes and confidence levels."},
+  {k:"c10.1", seq:140, ref:"10.1", title:"Making products and services inclusive", w:0.4,
+   focus:"Inclusion approach (10.1.1), annual inclusion monitoring report (10.1.2), allowing users to retake a check (10.1.3)."},
+  {k:"c10.2", seq:141, ref:"10.2", title:"Making products and services accessible", w:0.25,
+   focus:"Accessibility of user journeys: conformance evidence, accessibility statement, testing records."},
+  {k:"c10.3", seq:142, ref:"10.3", title:"Confirming a user's understanding of how their data will be shared", w:0.3,
+   focus:"Confirming user understanding (10.3.1), including for holder services (10.3.2)."},
+  {k:"c13", seq:160, ref:"13", title:"The register of digital identity and attribute services", w:0.15,
+   focus:"Presence on the register (13.1); withdrawal and removal (13.2)."},
+  {k:"c14", seq:161, ref:"14", title:"The UK CertifID trust mark", w:0.15,
+   focus:"Eligibility (14.1), using and controlling the mark (14.2), ceasing use (14.3)."},
+];
+
+/* ---------- State ---------- */
+const STORE_KEY = "dvs-plan-builder-v2";
+
+function nextMonday(){
+  const d = new Date(); d.setHours(12,0,0,0);
+  const add = ((8 - d.getDay()) % 7) || 7;
+  d.setDate(d.getDate() + add + 7);
+  return iso(d);
+}
+function iso(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function parseIso(s){ const [y,m,d] = (s||"").split("-").map(Number); if(!y) return null; return new Date(y, m-1, d, 12); }
+
+function blankState(){
+  return {
+    example:false, orgName:"", auditType:AUDIT_TYPES[1], stage1Format:"online", method:"On-site", location:"",
+    auditDays:2, dayBasis:"together", startDate:nextMonday(), skipWeekends:true, dates:[],
+    team:[{name:"", role:"Lead auditor"}],
+    roles:[], gpg45:[], gpg44Auth:"", gpg44Prot:"", certs:[], suppCodes:[],
+    off:{}, weights:{}, order:{}, scopeNotes:"",
+    sched:{start:"09:30", lunch:"12:30", lunchMins:60, dayHours:7, opening:30, wrap:15, review:30, closing:45},
+  };
+}
+function exampleState(){
+  const s = blankState();
+  Object.assign(s, {
+    example:true, orgName:"Example Verify Ltd", auditDays:3, location:"London office",
+    team:[{name:"Lead auditor name", role:"Lead auditor"},{name:"Second auditor name", role:"Auditor"}],
+    roles:["IDSP","OSP"], gpg45:["M1B","M1C","H1B"],
+    gpg44Auth:"Medium", gpg44Prot:"Medium", certs:["iso27001"], suppCodes:["rtw"],
+  });
+  return s;
+}
+
+let state;
+try { const raw = localStorage.getItem(STORE_KEY); state = raw ? Object.assign(blankState(), JSON.parse(raw)) : exampleState(); }
+catch(e){ state = exampleState(); }
+state.sched = Object.assign(blankState().sched, state.sched || {});
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){} }
+
+/* ---------- Helpers ---------- */
+function el(tag, attrs, kids){
+  const e = document.createElement(tag);
+  for(const k in (attrs||{})){
+    const v = attrs[k];
+    if(v === null || v === undefined || v === false) continue;
+    if(k === "class") e.className = v;
+    else if(k.startsWith("on")) e.addEventListener(k.slice(2), v);
+    else if(k === "text") e.textContent = v;
+    else e.setAttribute(k, v === true ? "" : v);
+  }
+  (kids||[]).forEach(c => { if(c === null || c === undefined || c === false) return; e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+  return e;
+}
+const toMin = t => { const [h,m] = (t||"0:0").split(":").map(Number); return h*60 + (m||0); };
+const fmt = m => String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0");
+const hrs = m => { const h = m/60; return (Math.round(h*100)/100).toString(); };
+const fmtDate = d => d ? d.toLocaleDateString("en-GB",{weekday:"short", day:"numeric", month:"short", year:"numeric"}) : "Date not set";
+const snap = (m) => Math.max(0, Math.round(m/15)*15);
+const STAGE1_FORMATS = [
+  {v:"offline", label:"Offline Review"},
+  {v:"online", label:"Online Review"},
+];
+const isStage1 = () => state.auditType.startsWith("Stage 1");
+const stage1Mode = () => isStage1() ? (state.stage1Format === "offline" ? "offline" : "online") : "full";
+const methodText = () => {
+  const m = stage1Mode();
+  if(m === "offline") return "Stage 1 Offline Review (no meetings)";
+  if(m === "online") return "Stage 1 Online Review (opening and closing meetings online)";
+  return state.method;
+};
+const countingTeam = () => state.team.filter(t => !NON_COUNTING.includes(t.role));
+const personLabel = (t, i) => (t.name && t.name.trim()) || (t.role + (i ? " " + (i+1) : ""));
+
+/* ---------- Activities ---------- */
+function candidateActivities(){
+  const acts = [];
+  const selectedRoles = ROLES.filter(r => state.roles.includes(r.v));
+  selectedRoles.forEach((r, i) => acts.push({k:"role-"+r.v, seq:130+i, ref:r.ref, title:r.title, w:r.w, focus:r.focus}));
+  if(state.roles.includes("IDSP")){
+    sortedGpg45().forEach((code, i) => {
+      const g = gpg45Level(code);
+      acts.push({k:"gpg45-"+code, seq:135+i*0.01, ref:"5.1 · GPG 45", title:"Profile "+code+" ("+g.level+" confidence)", w:g.w,
+        focus:"Sample case files that met profile "+code+" against GPG 45 scores for evidence strength, validity, activity history, identity fraud and verification."});
+    });
+  }
+  if(state.gpg44Auth) acts.push({k:"gpg44-auth", seq:137, ref:"GPG 44", title:"Authentication ("+state.gpg44Auth+")", w:GPG44_W[state.gpg44Auth],
+    focus:"Sample authenticators issued and used against GPG 44 requirements for "+state.gpg44Auth.toLowerCase()+" level: authenticator types, strength, binding to the account and replacement."});
+  if(state.gpg44Prot) acts.push({k:"gpg44-prot", seq:137.5, ref:"GPG 44", title:"Protection ("+state.gpg44Prot+")", w:GPG44_W[state.gpg44Prot],
+    focus:"Check the "+state.gpg44Prot.toLowerCase()+" level of protection claimed against GPG 44: combination of authenticators, account recovery, session management and monitoring."});
+  SUPP_CODES.filter(c => state.suppCodes.includes(c.v)).forEach((c, i) => acts.push({k:"supp-"+c.v, seq:138+i*0.01, ref:"4.4", title:"Supplementary code: "+c.label, w:0.4,
+    focus:"Sample outputs against the "+c.label+" supplementary code requirements."}));
+  CLAUSES.forEach(c => acts.push(Object.assign({}, c)));
+  acts.forEach(a => {
+    if(state.weights[a.k] !== undefined && state.weights[a.k] !== "") a.w = Number(state.weights[a.k]);
+    a.baseW = a.w; a.reducedBy = [];
+    CERTS.filter(c => (state.certs||[]).includes(c.v) && c.reduce[a.k]).forEach(c => { a.w = a.w * c.reduce[a.k]; a.reducedBy.push(c.label); });
+    if(a.reducedBy.length) a.focus = a.focus + " Reduced depth: reliance on " + a.reducedBy.join(" and ") + " certification (scope and SoA to be confirmed).";
+    a.on = !state.off[a.k];
+    a.pos = state.order[a.k] !== undefined ? state.order[a.k] : a.seq;
+  });
+  acts.sort((a,b) => a.pos - b.pos);
+  return acts;
+}
+function sortedGpg45(){
+  const all = GPG45.flatMap(g => g.codes);
+  return (state.gpg45||[]).filter(c => all.includes(c)).sort((a,b) => all.indexOf(a) - all.indexOf(b));
+}
+function moveAct(k, dir){
+  const acts = candidateActivities();
+  const i = acts.findIndex(a => a.k === k), j = i + dir;
+  if(i < 0 || j < 0 || j >= acts.length) return;
+  [acts[i], acts[j]] = [acts[j], acts[i]];
+  state.order = {}; acts.forEach((a, n) => state.order[a.k] = n);
+  renderAll();
+}
+
+/* ---------- Scheduling engine ---------- */
+function workingDates(n){
+  const out = [];
+  let d = parseIso(state.startDate);
+  for(let i = 0; i < n; i++){
+    if(state.dates[i]) { out.push(parseIso(state.dates[i])); d = parseIso(state.dates[i]); d.setDate(d.getDate()+1); continue; }
+    if(!d){ out.push(null); continue; }
+    while(state.skipWeekends && (d.getDay() === 0 || d.getDay() === 6)) d.setDate(d.getDate()+1);
+    out.push(new Date(d)); d.setDate(d.getDate()+1);
+  }
+  return out;
+}
+
+// Largest-remainder split of `units` between items by weight, at least 1 each.
+function apportion(weights, units){
+  const n = weights.length; if(!n) return [];
+  if(units <= n) return weights.map(() => 1);
+  const base = weights.map(() => 1); let left = units - n;
+  const tot = weights.reduce((s,w) => s + Math.max(w, 0.0001), 0);
+  const exact = weights.map(w => left * Math.max(w,0.0001) / tot);
+  const fl = exact.map(Math.floor);
+  let rem = left - fl.reduce((s,x) => s+x, 0);
+  const order = exact.map((x,i) => [x - fl[i], i]).sort((a,b) => b[0]-a[0]);
+  for(let i = 0; i < rem; i++) fl[order[i % n][1]]++;
+  return base.map((b,i) => b + fl[i]);
+}
+
+// Split an ordered list into n contiguous groups of roughly equal weight.
+function partition(acts, n){
+  if(n <= 1) return [acts];
+  const total = acts.reduce((s,a) => s + a.w, 0);
+  const groups = []; let cur = []; let acc = 0; let target = total / n;
+  acts.forEach((a, i) => {
+    const remainingGroups = n - groups.length;
+    const remainingActs = acts.length - i;
+    if(cur.length && remainingGroups > 1 && (acc + a.w/2 > target || remainingActs < remainingGroups)){
+      groups.push(cur); cur = []; acc = 0;
+    }
+    cur.push(a); acc += a.w;
+  });
+  groups.push(cur);
+  while(groups.length < n) groups.push([]);
+  return groups;
+}
+
+function buildPlan(){
+  const S = state.sched;
+  const auditDays = Math.max(0, Number(state.auditDays) || 0);
+  const counting = countingTeam();
+  const split = state.dayBasis === "split" && counting.length > 1;
+  const nTracks = split ? counting.length : 1;
+  const calDays = auditDays / nTracks;
+  const dayMins = snap(Number(S.dayHours) * 60);
+  const nDays = Math.max(1, Math.ceil(calDays - 1e-9));
+  const caps = [];
+  for(let i = 0; i < nDays; i++){
+    const f = Math.min(1, calDays - i);
+    caps.push(snap(f * dayMins));
+  }
+  const dates = workingDates(nDays);
+  const stage1 = isStage1();
+  // Stage 1: plan left blank apart from opening/closing until the Stage 1 checklist is added.
+  const acts = stage1 ? [] : candidateActivities().filter(a => a.on);
+  const warnings = [];
+
+  // Joint slots per day
+  const s1 = stage1Mode();
+  const off = false;
+  const opening = s1 === "offline" ? 0 : snap(Number(S.opening));
+  const closing = s1 === "offline" ? 0 : snap(Number(S.closing));
+  const wrap = stage1 ? 0 : snap(Number(S.wrap));
+  const review = stage1 ? 0 : snap(Number(S.review));
+  const fixed = caps.map((cap, i) => {
+    const start = i === 0 && opening ? [{joint:true, ref:"", title:"Opening meeting", mins:opening,
+      focus:"Introductions; confirm scope, roles, criteria (UK DVS trust framework 1.0), audit plan, sampling approach, logistics and confidentiality."}] : [];
+    const end = [];
+    if(i === nDays-1){
+      if(review) end.push({joint:true, offline:off, ref:"", title: isStage1() ? "Auditor review and preparation of Stage 1 report" : "Auditor review and preparation of findings", mins:review,
+        focus: isStage1() ? "Consolidate document review results, record areas of concern and conclude on readiness for Stage 2." : "Audit team consolidates evidence, agrees conclusions and grades findings."});
+      if(closing) end.push({joint:true, ref:"", title:"Closing meeting", mins:closing, focus:"Present findings and any nonconformities, confirm correction timescales and next steps."});
+    } else if(wrap){
+      end.push({joint:true, ref:"", title:"Daily wrap-up with auditee", mins:wrap, focus:"Summary of the day, open information requests, confirm plan for tomorrow."});
+    }
+    const used = start.concat(end).reduce((s,x) => s + x.mins, 0);
+    return {start, end, content: Math.max(0, cap - used)};
+  });
+  const contentTotal = fixed.reduce((s,f) => s + f.content, 0);
+  if(stage1) fixed.forEach((f, i) => { f.gapMins = f.content; });
+  if(auditDays <= 0) warnings.push("Enter the audit days from your duration tool.");
+
+  // Tracks
+  const groups = partition(acts, nTracks);
+  const tracks = groups.map((g, ti) => {
+    const units = Math.round(contentTotal / 15);
+    const alloc = apportion(g.map(a => a.w), units);
+    const items = g.map((a, i) => Object.assign({}, a, {mins: alloc[i]*15}));
+    const need = items.reduce((s,a) => s + a.mins, 0);
+    if(need > contentTotal && g.length) warnings.push((nTracks > 1 ? personLabel(counting[ti], ti)+": " : "") + "there is not enough time to give every activity 15 minutes. The plan overruns by " + hrs(need - contentTotal) + "h. Untick or merge some activities, or add audit days.");
+    return {who: split ? personLabel(counting[ti], state.team.indexOf(counting[ti])) : "Audit team", items};
+  });
+
+  // Pack each track into days
+  const perDay = caps.map(() => []);
+  tracks.forEach((tr, ti) => {
+    let d = 0, capLeft = fixed[0].content;
+    const seen = {};
+    tr.items.forEach(item => {
+      let left = item.mins;
+      while(left > 0){
+        if(capLeft <= 0 && d < nDays-1){ d++; capLeft = fixed[d].content; continue; }
+        const take = d === nDays-1 ? (capLeft > 0 ? Math.min(left, capLeft) : left) : Math.min(left, capLeft);
+        seen[item.k] = (seen[item.k]||0) + 1;
+        perDay[d].push({track:ti, who:tr.who, offline:off, ref:item.ref, title:item.title + (seen[item.k] > 1 ? " (cont'd)" : ""), focus:item.focus, mins:take, k:item.k});
+        left -= take; capLeft -= take;
+      }
+    });
+  });
+
+  // Time each day
+  if(stage1) perDay.forEach((pd, i) => { if(fixed[i].gapMins) pd.push({track:0, gap:true, mins:fixed[i].gapMins}); });
+  const startMin = toMin(S.start), lunchMin = toMin(S.lunch), lunchLen = snap(Number(S.lunchMins));
+  const days = caps.map((cap, i) => {
+    const hasLunch = lunchLen > 0 && cap > (lunchMin - startMin);
+    const rows = [];
+    const place = (seq, who, track) => {
+      let clock = startMin, lunchDone = !hasLunch;
+      seq.forEach(seg => {
+        let left = seg.mins, part = 0;
+        while(left > 0){
+          if(!lunchDone && clock >= lunchMin){ if(track === 0 && !stage1) rows.push({brk:true, s:lunchMin, e:lunchMin+lunchLen, title:"Lunch", who:"All"}); clock = lunchMin + lunchLen; lunchDone = true; }
+          const room = !lunchDone ? lunchMin - clock : Infinity;
+          const take = Math.min(left, room);
+          const title = part > 0 && !/\(cont'd\)$/.test(seg.title) ? seg.title + " (cont'd)" : seg.title;
+          if(seg.gap) rows.push({gap:true, s:clock, e:clock+take, track, mins:take}); else rows.push({s:clock, e:clock+take, ref:seg.ref, title, focus:seg.focus, who: seg.joint ? "All" : who, joint:!!seg.joint, offline:!!seg.offline, track, mins:take});
+          clock += take; left -= take; part++;
+        }
+      });
+      if(!lunchDone && track === 0 && hasLunch && !stage1 && clock >= lunchMin) rows.push({brk:true, s:lunchMin, e:lunchMin+lunchLen, title:"Lunch", who:"All"});
+    };
+    for(let t = 0; t < nTracks; t++){
+      const content = perDay[i].filter(x => x.track === t);
+      const seq = fixed[i].start.concat(content).concat(fixed[i].end);
+      if(t > 0) { // joint slots come from track 0 only; later tracks still occupy their clock time
+        const tmp = []; const saved = rows.length;
+        place(seq, tracks[t].who, t);
+        const mine = rows.splice(saved);
+        mine.filter(r => !r.joint && !r.brk).forEach(r => tmp.push(r));
+        rows.push(...tmp);
+      } else place(seq, tracks[0].who, 0);
+    }
+    rows.sort((a,b) => a.s - b.s || (a.track||0) - (b.track||0));
+    for(let k = rows.length - 1; k > 0; k--) if(rows[k].gap && rows[k-1].gap){ rows[k-1].e = rows[k].e; rows[k-1].mins += rows[k].mins; rows.splice(k,1); }
+    const end = rows.reduce((m,r) => Math.max(m, r.e), startMin);
+    return {n:i+1, date:dates[i], cap, rows, end};
+  });
+
+  // Allocation summary
+  const alloc = [];
+  acts.forEach(a => {
+    const mins = days.reduce((s,d) => s + d.rows.filter(r => r.ref === a.ref && r.title.replace(/ \(cont'd\)$/,"") === a.title).reduce((x,r) => x + r.mins, 0), 0);
+    const whoSet = new Set(); days.forEach(d => d.rows.forEach(r => { if(r.ref === a.ref && r.title.replace(/ \(cont'd\)$/,"") === a.title) whoSet.add(r.who); }));
+    alloc.push({ref:a.ref, title:a.title, mins, who:[...whoSet].join(", ")});
+  });
+
+  return {stage1, auditDays, calDays, nDays, split, nTracks, days, alloc, warnings, contentTotal, dayMins};
+}
+
+/* ---------- Remember which collapsible sections are open across re-renders ---------- */
+const uiOpen = {};
+function keepOpen(key, det, defaultOpen){
+  const open = key in uiOpen ? uiOpen[key] : !!defaultOpen;
+  if(open) det.setAttribute("open", "");
+  det.addEventListener("toggle", () => { uiOpen[key] = det.open; });
+  return det;
+}
+
+/* ---------- Rendering: form ---------- */
+const formEl = document.getElementById("form");
+const planEl = document.getElementById("plan");
+const bannerEl = document.getElementById("banner");
+
+function field(label, control, id){ if(id) control.id = id; return el("label", {class:"field", for:id}, [el("span", {text:label}), control]); }
+function text(val, onInput, ph){ const i = el("input", {type:"text", placeholder:ph||""}); i.value = val || ""; i.addEventListener("input", e => { onInput(e.target.value); changed(); }); return i; }
+function num(val, onInput, step, min){ const i = el("input", {type:"number", step:step||"0.25", min:min === undefined ? "0" : min}); i.value = val; i.addEventListener("input", e => { onInput(e.target.value); changed(); }); return i; }
+function sel(options, val, onChange, structural){ const s = el("select"); options.forEach(o => { const op = el("option", {value:o, text:o}); if(o === val) op.selected = true; s.appendChild(op); }); s.addEventListener("change", e => { onChange(e.target.value); structural ? renderAll() : changed(); }); return s; }
+function check(label, val, onChange, id, structural){
+  const c = el("input", {type:"checkbox", id}); c.checked = !!val;
+  c.addEventListener("change", e => { onChange(e.target.checked); structural ? renderAll() : changed(); });
+  return el("label", {class:"check", for:id}, [c, label]);
+}
+function card(num, title, hint, kids){ return el("section", {class:"card"}, [el("h2", {}, [el("span", {class:"num", text:num}), title]), hint ? el("p", {class:"hint", text:hint}) : null].concat(kids)); }
+function chips(items, active, toggle){
+  return el("div", {class:"chips"}, items.map(it => el("button", {type:"button", class:"chip" + (active.includes(it.v) ? " on" : ""), "aria-pressed": active.includes(it.v) ? "true" : "false", onclick:() => toggle(it.v), text:it.label})));
+}
+function toggleIn(arr, v){ const i = arr.indexOf(v); i > -1 ? arr.splice(i,1) : arr.push(v); renderAll(); }
+
+function renderBanner(){
+  bannerEl.innerHTML = "";
+  if(!state.example) return;
+  bannerEl.appendChild(el("div", {class:"example-banner"}, [
+    el("span", {text:"This is an example audit so you can see how the plan works. Replace the details with your own, or start from a blank form."}),
+    el("button", {type:"button", class:"ghost-btn", onclick:() => { state = blankState(); renderAll(); }, text:"Start blank"}),
+  ]));
+}
+
+function renderForm(){
+  formEl.innerHTML = "";
+  const S = state.sched;
+
+  formEl.appendChild(card("1", "Engagement", "", [
+    field("Organisation (auditee)", text(state.orgName, v => state.orgName = v, "e.g. Acme Verify Ltd"), "f-org"),
+    field("Audit type", sel(AUDIT_TYPES, state.auditType, v => state.auditType = v, true), "f-type"),
+    isStage1() ? field("How this Stage 1 will run", sel(STAGE1_FORMATS.map(f => f.label), (STAGE1_FORMATS.find(f => f.v === stage1Mode()) || STAGE1_FORMATS[1]).label, v => state.stage1Format = STAGE1_FORMATS.find(f => f.label === v).v, true), "f-s1") : null,
+    isStage1() ? el("p", {class:"hint", text: stage1Mode() === "offline" ? "No meetings with the auditee. The plan stays blank until the Stage 1 checklist is added." : "Opening and closing meetings are held online. The time in between stays blank until the Stage 1 checklist is added."}) : null,
+    isStage1() ? null : el("div", {class:"row"}, [
+      field("Audit method", sel(METHODS, state.method, v => state.method = v), "f-method"),
+      field("Location(s)", text(state.location, v => state.location = v, "e.g. Manchester HQ or Teams"), "f-loc"),
+    ]),
+  ]));
+
+  // Team
+  const teamRows = state.team.map((t, i) => el("div", {class:"list-row"}, [
+    (() => { const x = text(t.name, v => t.name = v, i === 0 ? "Lead auditor name" : "Name"); x.id = "f-team-"+i; x.setAttribute("aria-label","Team member "+(i+1)+" name"); return x; })(),
+    (() => { const s = sel(TEAM_ROLES, t.role, v => t.role = v, true); s.id = "f-teamrole-"+i; s.setAttribute("aria-label","Team member "+(i+1)+" role"); return s; })(),
+    state.team.length > 1 ? el("button", {type:"button", class:"icon-btn", title:"Remove", "aria-label":"Remove team member", onclick:() => { state.team.splice(i,1); renderAll(); }, text:"✕"}) : el("span", {style:"width:29px"}),
+  ]));
+  formEl.appendChild(card("2", "Audit team", "Trainees and observers are listed on the plan but don't count towards audit days.", teamRows.concat([
+    el("button", {type:"button", class:"add-link", onclick:() => { state.team.push({name:"", role:"Auditor"}); renderAll(); }, text:"+ Add team member"}),
+  ])));
+
+  // Days and dates
+  const counting = countingTeam();
+  const dateInputs = [];
+  const calDays = state.dayBasis === "split" && counting.length > 1 ? (Number(state.auditDays)||0) / counting.length : (Number(state.auditDays)||0);
+  const nDays = Math.max(1, Math.ceil(calDays - 1e-9));
+  const wd = workingDates(nDays);
+  for(let i = 0; i < nDays; i++){
+    const inp = el("input", {type:"date", id:"f-date-"+i}); inp.value = wd[i] ? iso(wd[i]) : "";
+    inp.addEventListener("change", e => { state.dates[i] = e.target.value; if(i === 0) state.startDate = e.target.value; state.dates.length = Math.max(state.dates.length, i+1); renderAll(); });
+    dateInputs.push(el("label", {class:"field", for:"f-date-"+i}, [el("span", {text:"Day "+(i+1)}), inp]));
+  }
+  const daysInput = num(state.auditDays, v => state.auditDays = v, "0.25", "0.25");
+  daysInput.addEventListener("change", () => renderAll());
+  const startInput = el("input", {type:"date", id:"f-start"}); startInput.value = state.startDate || "";
+  startInput.addEventListener("change", e => { state.startDate = e.target.value; state.dates = []; renderAll(); });
+
+  formEl.appendChild(card("3", "Audit days and dates", "Enter the audit days from your duration calculator. The plan is fitted to exactly that time.", [
+    el("div", {class:"row"}, [
+      field("Audit days", daysInput, "f-days"),
+      el("label", {class:"field", for:"f-start"}, [el("span", {text:"First day"}), startInput]),
+    ]),
+    counting.length > 1 ? field("How the audit days are counted", sel(["together","split"].map(v => v === "together" ? "Calendar days: the team audits together" : "Auditor-days: split across the team"), state.dayBasis === "split" ? "Auditor-days: split across the team" : "Calendar days: the team audits together", v => state.dayBasis = v.startsWith("Auditor") ? "split" : "together", true), "f-basis") : null,
+    check("Skip weekends", state.skipWeekends, v => { state.skipWeekends = v; state.dates = []; }, "f-wkend", true),
+    el("div", {class:"lbl", style:"margin:8px 0 6px", text:"Dates (change any day individually)"}),
+    el("div", {class:"dates"}, dateInputs),
+  ]));
+
+  // Scope
+  const scopeKids = [
+    el("div", {class:"lbl", style:"margin-bottom:7px", text:"Provider roles being certified"}),
+    chips(ROLES.map(r => ({v:r.v, label:r.label})), state.roles, v => toggleIn(state.roles, v)),
+  ];
+  if(state.roles.includes("IDSP")){
+    state.gpg45 = state.gpg45 || [];
+    const chosen = sortedGpg45();
+    scopeKids.push(el("div", {class:"lbl", style:"margin:14px 0 7px", text:"GPG 45 profiles to sample"}));
+    const groups = GPG45.map(g => el("fieldset", {class:"pgroup"}, [
+      el("legend", {text:g.level + " confidence"}),
+      el("div", {class:"pcodes"}, g.codes.map(code => {
+        const id = "f-g45-" + code;
+        const cb = el("input", {type:"checkbox", id}); cb.checked = chosen.includes(code);
+        cb.addEventListener("change", e => { const i = state.gpg45.indexOf(code); if(e.target.checked && i < 0) state.gpg45.push(code); if(!e.target.checked && i > -1) state.gpg45.splice(i,1); renderAll(); });
+        return el("label", {class:"pcode", for:id}, [cb, code]);
+      })),
+    ]));
+    scopeKids.push(keepOpen("gpg45", el("details", {class:"dropdown"}, [
+      el("summary", {text: chosen.length ? chosen.length + " profile" + (chosen.length > 1 ? "s" : "") + " selected" : "Select profiles"}),
+      el("div", {class:"dropdown-body"}, groups.concat([
+        chosen.length ? el("button", {type:"button", class:"ghost-btn", onclick:() => { state.gpg45 = []; renderAll(); }, text:"Clear profiles"}) : null,
+      ])),
+    ])));
+    scopeKids.push(chosen.length
+      ? el("div", {class:"chips", style:"margin-top:8px"}, chosen.map(code => el("span", {class:"chip on sel"}, [
+          code + " · " + gpg45Level(code).level,
+          el("button", {type:"button", class:"chip-x", "aria-label":"Remove " + code, onclick:() => { state.gpg45.splice(state.gpg45.indexOf(code),1); renderAll(); }, text:"✕"}),
+        ])))
+      : el("p", {class:"hint", style:"margin:6px 0 0", text:"No profiles selected yet."}));
+  }
+  scopeKids.push(el("div", {class:"lbl", style:"margin:14px 0 7px", text:"GPG 44"}));
+  const g44opts = ["Not in scope"].concat(GPG44_LEVELS);
+  scopeKids.push(el("div", {class:"row"}, [
+    field("Authentication", sel(g44opts, state.gpg44Auth || "Not in scope", v => state.gpg44Auth = v === "Not in scope" ? "" : v, true), "f-g44-auth"),
+    field("Protection", sel(g44opts, state.gpg44Prot || "Not in scope", v => state.gpg44Prot = v === "Not in scope" ? "" : v, true), "f-g44-prot"),
+  ]));
+  scopeKids.push(el("div", {class:"lbl", style:"margin:6px 0 4px", text:"Other certifications held"}));
+  scopeKids.push(el("p", {class:"hint", style:"margin:0 0 6px", text:"Overlapping clauses get less time. Only tick a certificate whose scope covers the DVS service."}));
+  state.certs = state.certs || [];
+  CERTS.forEach(c => scopeKids.push(check(c.label, state.certs.includes(c.v), v => { const i = state.certs.indexOf(c.v); if(v && i < 0) state.certs.push(c.v); if(!v && i > -1) state.certs.splice(i,1); }, "f-cert-" + c.v, true)));
+  scopeKids.push(el("div", {class:"lbl", style:"margin:12px 0 7px", text:"Supplementary codes (4.4)"}));
+  scopeKids.push(chips(SUPP_CODES, state.suppCodes, v => toggleIn(state.suppCodes, v)));
+  formEl.appendChild(card("4", "Scope", "", scopeKids));
+
+  // Activities
+  const acts = candidateActivities();
+  const actRows = acts.map((a, i) => {
+    const cb = el("input", {type:"checkbox", id:"f-act-"+i, "aria-label":"Include "+a.ref+" "+a.title}); cb.checked = a.on;
+    cb.addEventListener("change", e => { if(e.target.checked) delete state.off[a.k]; else state.off[a.k] = true; renderAll(); });
+    const w = el("input", {type:"number", step:"0.05", min:"0", id:"f-w-"+i, "aria-label":"Weighting for "+a.ref}); w.value = Math.round(a.baseW*100)/100;
+    w.addEventListener("input", e => { state.weights[a.k] = e.target.value; changed(); });
+    return el("div", {class:"act" + (a.on ? "" : " off")}, [
+      cb, el("span", {class:"ref", text:a.ref}), el("label", {class:"ttl", for:"f-act-"+i}, [a.title, a.reducedBy.length ? el("span", {class:"red-tag", title:"Time reduced because a certificate is held", text:"Reduced: " + a.reducedBy.join(", ")}) : null]), w,
+      el("span", {class:"mv"}, [
+        el("button", {type:"button", title:"Move up", "aria-label":"Move up", onclick:() => moveAct(a.k,-1), disabled: i === 0, text:"▲"}),
+        el("button", {type:"button", title:"Move down", "aria-label":"Move down", onclick:() => moveAct(a.k,1), disabled: i === acts.length-1, text:"▼"}),
+      ]),
+    ]);
+  });
+  if(isStage1()) formEl.appendChild(card("5", "Stage 1 checklist", "The Stage 1 checklist isn't in the builder yet, so the plan only shows the opening and closing meetings. Clause activities are used for Stage 2 and later audits.", []));
+  else formEl.appendChild(card("5", "Activities and clauses", "Untick anything not being sampled this time (for example 12.8 if no biometrics, or a reduced set for surveillance). Weighting sets each activity's share of the time. Arrows change the running order.", [
+    el("div", {class:"acts-head"}, [el("span"), el("span", {text:"Clause"}), el("span", {text:"Activity"}), el("span", {text:"Weight", style:"text-align:right"}), el("span")]),
+    el("div", {class:"acts"}, actRows),
+    el("div", {style:"margin-top:8px; display:flex; gap:8px; flex-wrap:wrap"}, [
+      el("button", {type:"button", class:"ghost-btn", onclick:() => { state.weights = {}; state.order = {}; state.off = {}; renderAll(); }, text:"Reset order and weights"}),
+    ]),
+  ]));
+
+  // Schedule + notes
+  const setIn = (key, type, step) => { const i = el("input", {type, step:step||"1", id:"f-s-"+key}); i.value = S[key]; i.addEventListener("input", e => { S[key] = e.target.value; changed(); }); return i; };
+  const notes = el("textarea", {rows:"3", id:"f-notes", placeholder:"Changes since last audit, open nonconformities to follow up, sampling notes…"}); notes.value = state.scopeNotes;
+  notes.addEventListener("input", e => { state.scopeNotes = e.target.value; save(); });
+  formEl.appendChild(card("6", "Schedule and notes", "", [
+    field("Scope notes (added to the spreadsheet)", notes, "f-notes"),
+    keepOpen("timings", el("details", {class:"more"}, [
+      el("summary", {text:"Day timings"}),
+      el("div", {class:"settings"}, [
+        el("label", {for:"f-s-start", text:"Start time"}), setIn("start","time"),
+        el("label", {for:"f-s-lunch", text:"Lunch starts"}), setIn("lunch","time"),
+        el("label", {for:"f-s-lunchMins", text:"Lunch length (minutes)"}), setIn("lunchMins","number","15"),
+        el("label", {for:"f-s-dayHours", text:"Working hours per audit day"}), setIn("dayHours","number","0.25"),
+        el("label", {for:"f-s-opening", text:"Opening meeting (minutes)"}), setIn("opening","number","15"),
+        el("label", {for:"f-s-wrap", text:"Daily wrap-up (minutes, 0 for none)"}), setIn("wrap","number","15"),
+        el("label", {for:"f-s-review", text:"Auditor review before closing (minutes)"}), setIn("review","number","15"),
+        el("label", {for:"f-s-closing", text:"Closing meeting (minutes)"}), setIn("closing","number","15"),
+      ]),
+    ])),
+  ]));
+}
+
+/* ---------- Rendering: plan ---------- */
+let lastPlan = null;
+function renderPlan(){
+  const P = buildPlan(); lastPlan = P;
+  planEl.innerHTML = "";
+  const first = P.days[0] && P.days[0].date, last = P.days[P.days.length-1] && P.days[P.days.length-1].date;
+  const team = state.team.map((t,i) => personLabel(t,i) + " (" + t.role + ")").join(", ");
+  const onSite = P.stage1 ? P.days.reduce((s,d) => s + d.cap, 0) : P.days.reduce((s,d) => s + d.rows.filter(r => !r.brk).reduce((x,r) => x + (r.joint || r.track === 0 ? r.mins : 0), 0), 0);
+
+  const sum = el("div", {class:"summary"}, [
+    el("h3", {style:"font-size:17px", text:(state.orgName || "Auditee not named") + " · " + state.auditType}),
+    el("div", {class:"kpis"}, [
+      el("div", {class:"kpi"}, [el("b", {text:String(P.auditDays)}), el("span", {text: P.split ? "auditor-days" : "audit days"})]),
+      el("div", {class:"kpi"}, [el("b", {text:String(P.nDays)}), el("span", {text: P.nDays === 1 ? "calendar day" : "calendar days"})]),
+      el("div", {class:"kpi"}, [el("b", {text:hrs(onSite)}), el("span", {text:"hours per auditor"})]),
+    ]),
+    el("dl", {class:"meta"}, [
+      el("dt", {text:"Dates"}), el("dd", {text: first ? (P.nDays > 1 ? fmtDate(first) + " to " + fmtDate(last) : fmtDate(first)) : "Not set"}),
+      el("dt", {text:"Team"}), el("dd", {text:team}),
+      el("dt", {text:"Method"}), el("dd", {text:methodText() + (state.location && !isStage1() ? " · " + state.location : "")}),
+      el("dt", {text:"Roles"}), el("dd", {text: state.roles.length ? ROLES.filter(r => state.roles.includes(r.v)).map(r => r.label).join(", ") : "None selected"}),
+    ]),
+  ]);
+  P.warnings.forEach(w => sum.appendChild(el("div", {class:"note", text:w})));
+  const dlBtn = el("div", {class:"dl-row"}, [
+    el("button", {type:"button", class:"dl-btn", onclick:() => download("docx"), text:"Download agenda (Word)"}),
+    el("button", {type:"button", class:"dl-btn alt", onclick:() => download("xlsx"), text:"Download agenda (Excel)"}),
+  ]);
+  const status = el("div", {class:"dl-status", id:"dl-status", role:"status"});
+  sum.appendChild(dlBtn); sum.appendChild(status);
+
+  const allocDet = keepOpen("alloc", el("details", {class:"more"}, [
+    el("summary", {text:"Time by clause"}),
+    el("table", {class:"alloc"}, [el("tbody", {}, P.alloc.map(a => el("tr", {}, [el("td", {class:"ref", text:a.ref}), el("td", {text:a.title}), el("td", {text:hrs(a.mins)+"h"})])))]),
+  ]));
+  if(P.alloc.length) sum.appendChild(allocDet);
+  planEl.appendChild(sum);
+
+  const daysWrap = el("div", {class:"days"});
+  P.days.forEach((d, i) => {
+    const det = keepOpen("day-" + d.n, el("details", {class:"day"}), i === 0);
+    det.appendChild(el("summary", {}, [el("span", {text:"Day " + d.n}), el("span", {class:"d", text:fmtDate(d.date) + " · " + fmt(toMin(state.sched.start)) + "–" + fmt(d.end)})]));
+    const tb = el("tbody");
+    d.rows.forEach(r => {
+      if(r.gap){ tb.appendChild(el("tr", {class:"brk"}, [el("td", {class:"t", text:fmt(r.s)+"–"+fmt(r.e)}), el("td", {class:"r"}), el("td", {text: stage1Mode() === "offline" ? "Offline review (Stage 1 checklist to be added)" : "Stage 1 review (checklist to be added)"})])); return; }
+      if(r.brk){ tb.appendChild(el("tr", {class:"brk"}, [el("td", {class:"t", text:fmt(r.s)+"–"+fmt(r.e)}), el("td", {class:"r"}), el("td", {text:"Lunch"})])); return; }
+      tb.appendChild(el("tr", {}, [
+        el("td", {class:"t", text:fmt(r.s)+"–"+fmt(r.e)}),
+        el("td", {class:"r"}, [r.ref ? el("span", {class:"ref", text:r.ref}) : null]),
+        el("td", {}, [el("b", {text:r.title}), r.focus ? el("span", {class:"f", text:r.focus}) : null,
+          (P.split || r.joint || r.offline) ? el("div", {class:"tags"}, [
+            (P.split || (r.joint && !r.offline)) ? el("span", {class:"who", text:r.who}) : null,
+            r.offline ? el("span", {class:"who off", text:"Offline"}) : null,
+          ]) : null]),
+      ]));
+    });
+    det.appendChild(el("div", {class:"sched"}, [el("table", {}, [tb])]));
+    daysWrap.appendChild(det);
+  });
+  planEl.appendChild(daysWrap);
+}
+
+function changed(){ if(state.example){ state.example = false; renderBanner(); } save(); renderPlan(); }
+function renderAll(){ save(); renderBanner(); renderForm(); renderPlan(); }
+
+/* ---------- Exports: shared content ---------- */
+const C = {ink:"17263B", soft:"5A6573", brass:"94733F", band:"F1E8D8", head:"17263B", lunch:"F2F4F5", label:"F3F5F4", line:"D6DDE2"};
+const longDate = d => d ? d.toLocaleDateString("en-GB",{weekday:"long", day:"numeric", month:"long", year:"numeric"}) : "Date to be confirmed";
+function criteriaFor(ref){
+  if(!ref) return "";
+  if(ref === "GPG 44") return "GPG 44";
+  if(ref.indexOf("GPG 45") > -1) return "DVSTF 5.1 / GPG 45";
+  if(ref === "Stage 1") return "";
+  return "DVSTF " + ref;
+}
+function exportDetails(P){
+  const first = P.days[0] && P.days[0].date, last = P.days[P.days.length-1] && P.days[P.days.length-1].date;
+  const d = [
+    ["Organisation", state.orgName || ""],
+    ["Audit type", state.auditType],
+    ["Criteria", "UK digital verification services trust framework 1.0" + (state.roles.includes("IDSP") && sortedGpg45().length ? "; GPG 45" : "") + (state.gpg44Auth || state.gpg44Prot ? "; GPG 44" : "") + (state.suppCodes.length ? "; supplementary codes" : "")],
+    ["Dates", first ? (P.nDays > 1 ? longDate(first) + " to " + longDate(last) : longDate(first)) : ""],
+    ["Audit days", P.split ? P.auditDays + " auditor-days (" + P.nDays + " calendar " + (P.nDays === 1 ? "day" : "days") + ")" : String(P.auditDays)],
+    ["Method", methodText() + (state.location && !isStage1() ? ", " + state.location : "")],
+    ["Audit team", state.team.map((t,i) => personLabel(t,i) + " (" + t.role + ")").join("\n")],
+    ["Roles in scope", ROLES.filter(r => state.roles.includes(r.v)).map(r => r.label).join(", ") || "None selected"],
+  ];
+  if(state.roles.includes("IDSP")) d.push(["GPG 45 profiles", sortedGpg45().join(", ") || "None selected"]);
+  if(state.gpg44Auth || state.gpg44Prot) d.push(["GPG 44", [state.gpg44Auth ? "Authentication: " + state.gpg44Auth : "", state.gpg44Prot ? "Protection: " + state.gpg44Prot : ""].filter(Boolean).join("; ")]);
+  if(state.suppCodes.length) d.push(["Supplementary codes", SUPP_CODES.filter(c => state.suppCodes.includes(c.v)).map(c => c.label).join(", ")]);
+  const certs = CERTS.filter(c => (state.certs||[]).includes(c.v)).map(c => c.label);
+  if(certs.length) d.push(["Other certifications", certs.join(", ")]);
+  if(state.scopeNotes.trim()) d.push(["Notes", state.scopeNotes.trim()]);
+  return d;
+}
+function exportAgenda(P){
+  return P.days.map(d => ({
+    label: "Day " + d.n + ": " + longDate(d.date),
+    rows: d.rows.map(r => {
+      const time = fmt(r.s) + "–" + fmt(r.e);
+      if(r.brk) return {kind:"break", time, topic:"Lunch", evidence:"", criteria:""};
+      if(r.gap) return {kind:"gap", time, topic:"", evidence:"", criteria:""};
+      return {kind: r.joint ? "meeting" : "item", time, topic:r.title, who: P.split && !r.joint ? r.who : "", evidence:r.focus || "", criteria:criteriaFor(r.ref)};
+    }),
+  }));
+}
+const fileBase = () => (state.orgName ? state.orgName.replace(/[^a-z0-9]+/gi,"_").replace(/^_|_$/g,"") : "Draft") + "_DVS_audit_plan";
+
+/* ---------- Word agenda (docx library) ---------- */
+async function buildDocx(P){
+  const D = window.docx;
+  const {Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, WidthType, ShadingType, BorderStyle, Footer, Header, PageNumber, AlignmentType, TableLayoutType, VerticalAlign} = D;
+  const W = 9906, COLS = [1330, 2620, 4456, 1500], DCOLS = [2300, W - 2300];
+  const line = {style:BorderStyle.SINGLE, size:4, color:C.line};
+  const none = {style:BorderStyle.NONE, size:0, color:"FFFFFF"};
+  const cellBorders = {top:line, bottom:line, left:none, right:none};
+  const fill = c => ({type:ShadingType.CLEAR, color:"auto", fill:c});
+  const margins = {top:70, bottom:70, left:100, right:100};
+  const para = (text, o) => {
+    o = o || {};
+    const parts = String(text).split("\n");
+    return parts.map(t => new Paragraph({spacing:{before:0, after:0, line:260}, alignment:o.align, keepNext:o.keepNext,
+      children:[new TextRun({text:t, bold:o.bold, italics:o.italics, color:o.color || C.ink, size:o.size || 19, font:"Arial"})]}));
+  };
+  const tight = {top:45, bottom:45, left:90, right:90};
+  const cell = (children, width, o) => new TableCell({children, width:{size:width, type:WidthType.DXA}, borders:cellBorders, margins: o && o.tight ? tight : margins,
+    shading:o && o.fill ? fill(o.fill) : undefined, columnSpan:o && o.span, verticalAlign:VerticalAlign.TOP});
+
+  // Details table
+  const det = exportDetails(P).map(([k,v]) => new TableRow({cantSplit:true, children:[
+    cell(para(k, {bold:true}), DCOLS[0], {fill:C.label}),
+    cell(para(v || " "), DCOLS[1]),
+  ]}));
+  const detTable = new Table({width:{size:W, type:WidthType.DXA}, columnWidths:DCOLS, layout:TableLayoutType.FIXED, rows:det});
+
+  // Agenda table
+  // One table per day, each starting on a new page. The day band and column headings repeat if a day runs over a page.
+  const hdr = () => new TableRow({tableHeader:true, cantSplit:true, children:["Time","Topic","Indicative evidence","Criteria"].map((h,i) =>
+    cell(para(h, {bold:true, color:"FFFFFF"}), COLS[i], {fill:C.head}))});
+  const baseCell = cell, basePara = para;
+  const dayTables = exportAgenda(P).map(day => {
+    // Slightly more compact type and padding so a full day usually fits on one A4 page.
+    const para = (t, o) => basePara(t, Object.assign({size:17}, o || {}));
+    const cell = (c, w, o) => baseCell(c, w, Object.assign({tight:true}, o || {}));
+    const rows = [
+      new TableRow({tableHeader:true, cantSplit:true, children:[cell(para(day.label, {bold:true, size:20}), W, {fill:C.band, span:4})]}),
+      hdr(),
+    ];
+    day.rows.forEach(r => {
+      if(r.kind === "break"){
+        rows.push(new TableRow({cantSplit:true, children:[
+          cell(para(r.time, {italics:true, color:C.soft}), COLS[0], {fill:C.lunch}),
+          cell(para("Lunch", {italics:true, color:C.soft}), COLS[1] + COLS[2] + COLS[3], {fill:C.lunch, span:3}),
+        ]}));
+        return;
+      }
+      if(r.kind === "gap"){
+        rows.push(new TableRow({cantSplit:true, children:[cell(para(r.time, {bold:true}), COLS[0]), cell(para(" "), COLS[1]), cell(para(" "), COLS[2]), cell(para(" "), COLS[3])]}));
+        for(let k = 0; k < 4; k++) rows.push(new TableRow({cantSplit:true, children:COLS.map(w => cell(para(" "), w))}));
+        return;
+      }
+      const topic = para(r.topic, {bold:true});
+      if(r.who) topic.push(...para(r.who, {color:C.brass, size:15}));
+      rows.push(new TableRow({cantSplit:true, children:[
+        cell(para(r.time, {bold:true}), COLS[0]),
+        cell(topic, COLS[1]),
+        cell(para(r.evidence || " "), COLS[2]),
+        cell(para(r.criteria || " ", {color:C.brass, bold:!!r.criteria}), COLS[3]),
+      ]}));
+    });
+    return new Table({width:{size:W, type:WidthType.DXA}, columnWidths:COLS, layout:TableLayoutType.FIXED, rows});
+  });
+  const agendaBlocks = [];
+  dayTables.forEach((t, i) => {
+    if(i === 0){
+      agendaBlocks.push(new Paragraph({pageBreakBefore:true, spacing:{before:0, after:60}, keepNext:true, children:[new TextRun({text:"Agenda", bold:true, size:26, color:C.ink, font:"Arial"})]}));
+      agendaBlocks.push(new Paragraph({spacing:{after:160}, keepNext:true, children:[new TextRun({text:"Timings are indicative and may be adjusted by agreement during the audit.", italics:true, size:17, color:C.soft, font:"Arial"})]}));
+    } else {
+      agendaBlocks.push(new Paragraph({pageBreakBefore:true, spacing:{before:0, after:0}, children:[new TextRun({text:"", size:2})]}));
+    }
+    agendaBlocks.push(t);
+  });
+  agendaBlocks.push(new Paragraph({spacing:{before:0, after:0}, children:[new TextRun({text:"", size:2})]}));
+
+  const h = (text) => new Paragraph({spacing:{before:320, after:120}, keepNext:true, children:[new TextRun({text, bold:true, size:26, color:C.ink, font:"Arial"})]});
+  const doc = new Document({
+    creator: state.team[0] && state.team[0].name || "",
+    title: (state.orgName || "Draft") + " audit plan",
+    styles:{default:{document:{run:{font:"Arial", size:19, color:C.ink}}}},
+    sections:[{
+      properties:{page:{size:{width:11906, height:16838}, margin:{top:1000, bottom:1000, left:1000, right:1000, header:500, footer:500}}},
+      headers:{default:new Header({children:[new Paragraph({alignment:AlignmentType.RIGHT, children:[new TextRun({text:"Audit plan · Confidential", size:16, color:C.soft, font:"Arial"})]})]})},
+      footers:{default:new Footer({children:[new Paragraph({alignment:AlignmentType.RIGHT, children:[
+        new TextRun({text:(state.orgName || "Draft") + " · " + state.auditType + " · Page ", size:16, color:C.soft, font:"Arial"}),
+        new TextRun({children:[PageNumber.CURRENT], size:16, color:C.soft, font:"Arial"}),
+        new TextRun({text:" of ", size:16, color:C.soft, font:"Arial"}),
+        new TextRun({children:[PageNumber.TOTAL_PAGES], size:16, color:C.soft, font:"Arial"}),
+      ]})]})},
+      children:[
+        new Paragraph({spacing:{after:40}, children:[new TextRun({text:"Audit Plan", bold:true, size:40, color:C.ink, font:"Arial"})]}),
+        new Paragraph({spacing:{after:200}, border:{bottom:{style:BorderStyle.SINGLE, size:12, color:C.brass, space:6}},
+          children:[new TextRun({text:(state.orgName ? state.orgName + " · " : "") + "UK digital verification services trust framework 1.0", size:22, color:C.brass, font:"Arial"})]}),
+        h("Audit details"),
+        detTable,
+        ...agendaBlocks,
+      ],
+    }],
+  });
+  return await Packer.toBlob(doc);
+}
+
+/* ---------- Excel working copy (hand-built OOXML, so it can be styled) ---------- */
+const CRC_TABLE = (() => { const t = new Uint32Array(256); for(let n = 0; n < 256; n++){ let c = n; for(let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+function crc32(b){ let c = 0xFFFFFFFF; for(let i = 0; i < b.length; i++) c = CRC_TABLE[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+function zipStore(files){
+  const enc = new TextEncoder(), parts = [], central = [];
+  let offset = 0;
+  const now = new Date();
+  const dtime = (now.getHours() << 11) | (now.getMinutes() << 5) | (now.getSeconds() >> 1);
+  const ddate = ((now.getFullYear() - 1980) << 9) | ((now.getMonth()+1) << 5) | now.getDate();
+  files.forEach(([name, text]) => {
+    const nb = enc.encode(name), data = enc.encode(text), crc = crc32(data);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, dtime, true); lh.setUint16(12, ddate, true); lh.setUint32(14, crc, true);
+    lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true); lh.setUint16(26, nb.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), nb, data);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+    ch.setUint16(12, dtime, true); ch.setUint16(14, ddate, true); ch.setUint32(16, crc, true);
+    ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true); ch.setUint16(28, nb.length, true);
+    ch.setUint32(42, offset, true);
+    central.push(new Uint8Array(ch.buffer), nb);
+    offset += 30 + nb.length + data.length;
+  });
+  const csize = central.reduce((s,p) => s + p.length, 0);
+  const end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+  end.setUint32(12, csize, true); end.setUint32(16, offset, true);
+  return new Blob(parts.concat(central, [new Uint8Array(end.buffer)]), {type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+}
+const xesc = s => String(s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+function buildXlsx(P){
+  // Column widths (characters) and style ids — see styles.xml below.
+  const WID = [14, 34, 66, 18];
+  const S = {title:1, sub:2, label:3, value:4, h2:5, colh:6, band:7, time:8, topic:9, text:10, crit:11, lunch:12, note:13, blank:14};
+  const rows = []; const merges = [];
+  let r = 0;
+  const add = (cells, ht) => { r++; rows.push({r, cells, ht}); return r; };
+  const est = (text, cols) => {
+    const w = cols.reduce((s,c) => s + WID[c], 0) * 1.15;
+    return String(text || "").split("\n").reduce((n, l) => n + Math.max(1, Math.ceil(l.length / w)), 0);
+  };
+  const h = lines => Math.max(1, lines) * 13 + 5;
+
+  let x = add([[0, "Audit Plan", S.title]], 26); merges.push("A"+x+":D"+x);
+  x = add([[0, (state.orgName ? state.orgName + " · " : "") + "UK digital verification services trust framework 1.0", S.sub]], 18); merges.push("A"+x+":D"+x);
+  add([], 8);
+  x = add([[0, "Audit details", S.h2]], 20);
+  exportDetails(P).forEach(([k,v]) => {
+    const y = add([[0, k, S.label], [1, v, S.value], [2, "", S.value], [3, "", S.value]], h(Math.max(est(v, [1,2,3]), est(k,[0]))));
+    merges.push("B"+y+":D"+y);
+  });
+  add([], 10);
+  add([[0, "Agenda", S.h2]], 20);
+  x = add([[0, "Timings are indicative and may be adjusted by agreement during the audit.", S.note]], 15); merges.push("A"+x+":D"+x);
+  const headerRow = add([[0,"Time",S.colh],[1,"Topic",S.colh],[2,"Indicative evidence",S.colh],[3,"Criteria",S.colh]], 20);
+  exportAgenda(P).forEach(day => {
+    const y = add([[0, day.label, S.band],[1,"",S.band],[2,"",S.band],[3,"",S.band]], 19); merges.push("A"+y+":D"+y);
+    day.rows.forEach(rw => {
+      if(rw.kind === "break"){ const z = add([[0, rw.time, S.lunch],[1, "Lunch", S.lunch],[2,"",S.lunch],[3,"",S.lunch]], 17); merges.push("B"+z+":D"+z); return; }
+      if(rw.kind === "gap"){ add([[0, rw.time, S.time],[1,"",S.blank],[2,"",S.blank],[3,"",S.blank]], 18); for(let k = 0; k < 4; k++) add([[0,"",S.blank],[1,"",S.blank],[2,"",S.blank],[3,"",S.blank]], 18); return; }
+      const topic = rw.topic + (rw.who ? "\n" + rw.who : "");
+      add([[0, rw.time, S.time],[1, topic, S.topic],[2, rw.evidence, S.text],[3, rw.criteria, S.crit]],
+        h(Math.max(est(topic,[1]), est(rw.evidence,[2]), est(rw.criteria,[3]))));
+    });
+  });
+
+  const col = i => "ABCD"[i];
+  const sheetRows = rows.map(row => '<row r="' + row.r + '"' + (row.ht ? ' ht="' + row.ht + '" customHeight="1"' : "") + '>' +
+    row.cells.map(([c, v, s]) => '<c r="' + col(c) + row.r + '" s="' + s + '"' + (v === "" ? "/>" : ' t="inlineStr"><is><t xml:space="preserve">' + xesc(v) + '</t></is></c>')).join("") + '</row>').join("");
+  const sheet = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+    '<sheetPr><pageSetUpPr fitToPage="1"/></sheetPr>' +
+    '<sheetViews><sheetView workbookViewId="0" showGridLines="0" zoomScale="110"/></sheetViews>' +
+    '<sheetFormatPr defaultRowHeight="15"/>' +
+    '<cols>' + WID.map((w,i) => '<col min="' + (i+1) + '" max="' + (i+1) + '" width="' + w + '" customWidth="1"/>').join("") + '</cols>' +
+    '<sheetData>' + sheetRows + '</sheetData>' +
+    '<mergeCells count="' + merges.length + '">' + merges.map(m => '<mergeCell ref="' + m + '"/>').join("") + '</mergeCells>' +
+    '<printOptions horizontalCentered="1"/>' +
+    '<pageMargins left="0.5" right="0.5" top="0.6" bottom="0.6" header="0.3" footer="0.3"/>' +
+    '<pageSetup paperSize="9" orientation="portrait" fitToWidth="1" fitToHeight="0"/>' +
+    '<headerFooter><oddFooter>&amp;L&amp;8' + xesc((state.orgName || "Draft") + " · " + state.auditType) + '&amp;R&amp;8Page &amp;P of &amp;N</oddFooter></headerFooter>' +
+    '</worksheet>';
+
+  const border = '<border><left/><right/><top style="thin"><color rgb="FF' + C.line + '"/></top><bottom style="thin"><color rgb="FF' + C.line + '"/></bottom><diagonal/></border>';
+  const font = (o) => '<font>' + (o.b ? '<b/>' : '') + (o.i ? '<i/>' : '') + '<sz val="' + (o.sz || 10) + '"/><color rgb="FF' + (o.c || C.ink) + '"/><name val="Arial"/><family val="2"/></font>';
+  const fillX = c => '<fill><patternFill patternType="solid"><fgColor rgb="FF' + c + '"/><bgColor indexed="64"/></patternFill></fill>';
+  // fonts: 0 body,1 title,2 sub,3 bold,4 h2,5 white bold,6 italic grey,7 small italic grey,8 bold brass
+  const fonts = [font({}), font({b:1, sz:18}), font({sz:11, c:C.brass}), font({b:1}), font({b:1, sz:12}), font({b:1, c:"FFFFFF"}), font({i:1, c:C.soft}), font({i:1, sz:9, c:C.soft}), font({b:1, c:C.brass})];
+  // fills: 0 none, 1 gray125, 2 label, 3 header, 4 band, 5 lunch
+  const fills = ['<fill><patternFill patternType="none"/></fill>', '<fill><patternFill patternType="gray125"/></fill>', fillX(C.label), fillX(C.head), fillX(C.band), fillX(C.lunch)];
+  const xf = (f, fl, b, al) => '<xf numFmtId="0" fontId="' + f + '" fillId="' + fl + '" borderId="' + b + '" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment ' + al + '/></xf>';
+  const TOP = 'vertical="top" wrapText="1"', MID = 'vertical="center" wrapText="1"';
+  const xfs = [
+    '<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>',
+    xf(1,0,0,'vertical="center"'),   // 1 title
+    xf(2,0,0,'vertical="center"'),   // 2 sub
+    xf(3,2,1,TOP),                   // 3 label
+    xf(0,0,1,TOP),                   // 4 value
+    xf(4,0,0,'vertical="bottom"'),   // 5 h2
+    xf(5,3,1,MID),                   // 6 column header
+    xf(3,4,1,MID),                   // 7 day band
+    xf(3,0,1,'vertical="top"'),      // 8 time
+    xf(3,0,1,TOP),                   // 9 topic
+    xf(0,0,1,TOP),                   // 10 evidence
+    xf(8,0,1,TOP),                   // 11 criteria
+    xf(6,5,1,MID),                   // 12 lunch
+    xf(7,0,0,'vertical="center"'),   // 13 note
+    xf(0,0,1,TOP),                   // 14 blank fill-in cell
+  ];
+  const styles = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">' +
+    '<fonts count="' + fonts.length + '">' + fonts.join("") + '</fonts>' +
+    '<fills count="' + fills.length + '">' + fills.join("") + '</fills>' +
+    '<borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border>' + border + '</borders>' +
+    '<cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs>' +
+    '<cellXfs count="' + xfs.length + '">' + xfs.join("") + '</cellXfs>' +
+    '<cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles>' +
+    '</styleSheet>';
+  const workbook = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">' +
+    '<sheets><sheet name="Audit Plan" sheetId="1" r:id="rId1"/></sheets>' +
+    '<definedNames><definedName name="_xlnm.Print_Titles" localSheetId="0">\'Audit Plan\'!$' + headerRow + ':$' + headerRow + '</definedName></definedNames>' +
+    '</workbook>';
+  return zipStore([
+    ["[Content_Types].xml", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>'],
+    ["_rels/.rels", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
+    ["xl/workbook.xml", workbook],
+    ["xl/_rels/workbook.xml.rels", '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>'],
+    ["xl/styles.xml", styles],
+    ["xl/worksheets/sheet1.xml", sheet],
+  ]);
+}
+
+/* ---------- Download ---------- */
+let downloadsNS;
+const downloadsReady = (window.claude && window.claude.use) ? window.claude.use("downloads").then(ns => downloadsNS = ns).catch(() => downloadsNS = null) : Promise.resolve(null);
+
+async function download(kind){
+  const status = document.getElementById("dl-status");
+  const say = t => { if(status) status.textContent = t; };
+  const P = lastPlan || buildPlan();
+  let blob, filename;
+  try {
+    if(kind === "docx"){
+      if(!window.docx){ say("The Word library didn't load. Check your connection and reload the page."); return; }
+      say("Preparing the Word agenda…");
+      blob = await buildDocx(P); filename = fileBase() + ".docx";
+    } else {
+      blob = buildXlsx(P); filename = fileBase() + ".xlsx";
+    }
+  } catch(e){ say("Something went wrong building the file: " + (e && e.message || e)); return; }
+  await downloadsReady;
+  if(downloadsNS){
+    try { await downloadsNS.save({filename, data:blob}); say("Saved " + filename + "."); }
+    catch(e){
+      if(e && e.code === "declined") say("Download cancelled.");
+      else if(e && e.code === "rate_limited") say("A download prompt is already open. Try again in a moment.");
+      else say("Downloads aren't available in this view.");
+    }
+  } else {
+    try {
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = filename;
+      document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+      say("Downloading " + filename + ".");
+    } catch(e){ say("Downloads aren't available in this view."); }
+  }
+}
+
+(function(){
+  const btn = document.getElementById("clear-btn"); let timer = null;
+  btn.addEventListener("click", () => {
+    if(!btn.classList.contains("confirm")){
+      btn.classList.add("confirm"); btn.textContent = "Click again to clear";
+      timer = setTimeout(() => { btn.classList.remove("confirm"); btn.textContent = "Clear form"; }, 4000);
+      return;
+    }
+    clearTimeout(timer); btn.classList.remove("confirm"); btn.textContent = "Clear form";
+    state = blankState(); renderAll(); window.scrollTo({top:0});
+  });
+})();
+renderAll();
+
+/* ---------- Password gate (keeps casual visitors out; not encryption) ---------- */
+(function(){
+  const HASH = "4ecbed7f776621424531a442ed9289fdc0c922873182c3d994ee654d300f51aa";
+  const gate = document.getElementById("gate"), app = document.getElementById("app-wrap");
+  const unlock = () => { gate.hidden = true; app.hidden = false; };
+  try { if(sessionStorage.getItem("dvs-unlocked") === HASH) { unlock(); return; } } catch(e){}
+  const input = document.getElementById("gate-pw"), msg = document.getElementById("gate-msg");
+  input.focus();
+  document.getElementById("gate-form").addEventListener("submit", async e => {
+    e.preventDefault();
+    let hex = "";
+    try {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(input.value));
+      hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,"0")).join("");
+    } catch(err){ msg.textContent = "This browser can't check the password. Try opening it in Chrome or Edge."; return; }
+    if(hex === HASH){ try { sessionStorage.setItem("dvs-unlocked", HASH); } catch(err){} msg.textContent = ""; unlock(); }
+    else { msg.textContent = "That password isn't right. Check it and try again."; input.select(); }
+  });
+})();
+})();
+</script>
+
+<footer class="site-foot">
+  <div class="site-foot-in">
+    <a href="https://cram.ltd/" aria-label="Cram Limited" style="border:0">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M35.71 17.30 A17.14 17.14 0 1 0 35.71 46.70" fill="none" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/>
+        <path d="M54.00 17.30 A17.14 17.14 0 1 0 54.00 46.70" fill="none" stroke="#AEB6C2" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </a>
+    <span>&copy; 2026 Cram Limited &middot; <a href="https://cram.ltd/">cram.ltd</a> &middot; <a href="/privacy.html">Privacy</a></span>
+    <span class="site-foot-note">Everything you enter stays in this browser. Nothing is sent to us.</span>
+  </div>
+</footer>
+
+</body>
+</html>
