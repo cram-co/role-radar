@@ -1,4 +1,4 @@
-role-radar collector run: 2026-10-17T10:18:27.658767+00:00
+role-radar collector run: 2026-10-18T10:34:33.018077+00:00
 ============================================================
 
 WA.Technology: 0 roles (ashby)
@@ -16,6 +16,8 @@ Menace.com: 0 roles (greenhouse_eu)
 AGS: 0 roles (jobvite)
       pawatalent careers.pawatech.com: 200 but not JSON
 PawaTech: 0 roles (pawatalent)
+      pinpoint careers.dazn.com: 0 matched 'dazn bet', 134 others skipped
+DAZN Bet: 0 roles (pinpoint)
       recruitee highroller: HTTP 404
 High Roller Technologies: 0 roles (recruitee)
 Amelco UK Ltd: 2 roles (smartrecruiters)
@@ -87,19 +89,17 @@ Boyd Gaming: 857 roles (smartrecruiters)
 BoyleSports: 21 roles (teamtailor)
 Bragg Gaming: 6 roles (workday)
       sfcsb careers.brightstarlottery.com: board reports 113 jobs
-      sfcsb careers.brightstarlottery.com: table columns not matched, using link parse (21/25 locations recovered from urls)
+      sfcsb careers.brightstarlottery.com: table columns not matched, using link parse (23/25 locations recovered from urls)
       sfcsb careers.brightstarlottery.com: 113 roles
 Brightstar Lottery: 113 roles (sfcsb)
 Bullfinch Recruitment: 37 roles (breezy)
-Caesars Entertainment: 1407 roles (oracle)
+Caesars Entertainment: 1406 roles (oracle)
 Caliente: 2 roles (bamboohr)
 CoinPoker: 16 roles (teamtailor)
 ComeOn Group: 20 roles (workable)
 Continent 8: 5 roles (bamboohr)
 Crae Group: 2 roles (teamtailor)
 Dabble: 5 roles (teamtailor)
-      pinpoint careers.dazn.com: 0 matched 'dazn bet', 134 others skipped
-DAZN Bet: 0 roles (pinpoint)
 Derivco: 11 roles (bamboohr)
 DigiOutsource: 109 roles (workday)
 Digitain: 79 roles (bamboohr)
@@ -112,7 +112,7 @@ EveryMatrix: 21 roles (teamtailor)
       avature amswh: 200 (40080 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 69 roles
-evoke: 69 roles (avature)  [29s]
+evoke: 69 roles (avature)  [27s]
 evoke plc: 1 roles (bamboohr)
 Evolution: 294 roles (smartrecruiters)
 Evoplay: 2 roles (greenhouse)
@@ -148,7 +148,7 @@ Kindred Group: 7 roles (ashby)
 KingMakers: 4 roles (workable)
 LCKY Group (ex-Glitnor): 2 roles (teamtailor)
 LeoVegas Group: 63 roles (ashby)
-Light & Wonder: 149 roles (workday)
+Light & Wonder: 148 roles (workday)
 LionHires: 0 roles (greenhouse)
 LiveScore Group: 11 roles (greenhouse)
 Lottoland: 2 roles (greenhouse)
@@ -157,7 +157,7 @@ Lottomatica: 50 roles (workday)
 Luckia: 42 roles (sfcsb)
       zoho maxbet.zohorecruit.eu: 63 roles
 MaxBet: 63 roles (zoho)
-MERKUR Casino UK: 52 roles (workday)
+MERKUR Casino UK: 50 roles (workday)
 Midnite: 20 roles (ashby)
 MiFinity: 11 roles (bamboohr)
 MrQ: 6 roles (teamtailor)
@@ -471,9 +471,9 @@ NuxGame: 5 roles (agency board)
 NSUS Group: 3 roles (agency board)
       SkyCity Entertainment Group: 8 script bundle(s) referenced, checking 4
       SkyCity Entertainment Group: no API URLs found in bundle
-   SkyCity Entertainment Group: link + .location -> 46 roles (46 with a location)
-   SkyCity Entertainment Group: link parse -> 46
-SkyCity Entertainment Group: 46 roles (agency board)
+   SkyCity Entertainment Group: link + .location -> 41 roles (41 with a location)
+   SkyCity Entertainment Group: link parse -> 41
+SkyCity Entertainment Group: 41 roles (agency board)
       json-ld https://careers.star.com.au/en/search: HTTP 404
       json-ld https://careers.star.com.au/en: HTTP 404
       The Star Entertainment Group: shell HTTP 202
@@ -661,7 +661,7 @@ titles cleaned: 344 trailing references stripped, 29 locations taken from the ti
 
 carried 18 roles forward from the previous feed
 
-first_seen: 240 roles new since the last run, 7466 carried an existing date
+first_seen: 45 roles new since the last run, 7652 carried an existing date
 
 dropped 40 postings older than 2 years
 
@@ -669,8 +669,8 @@ dropped 3 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 177 returning, 52 not
 
-Feed written: 7663 jobs
+Feed written: 7654 jobs
 Unresolved companies (0): 
 
 ============================================================
-ended 2026-10-17T10:31:46.755965+00:00
+ended 2026-10-18T10:46:34.371978+00:00
