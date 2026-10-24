@@ -1,4 +1,4 @@
-role-radar collector run: 2026-10-23T11:11:57.477506+00:00
+role-radar collector run: 2026-10-24T10:30:08.373956+00:00
 ============================================================
 
 WA.Technology: 0 roles (ashby)
@@ -17,8 +17,6 @@ Menace.com: 0 roles (greenhouse_eu)
 AGS: 0 roles (jobvite)
       pawatalent careers.pawatech.com: 200 but not JSON
 PawaTech: 0 roles (pawatalent)
-      pinpoint careers.dazn.com: 1 matched 'dazn bet', 127 others skipped
-DAZN Bet: 1 roles (pinpoint)
       recruitee highroller: HTTP 404
 High Roller Technologies: 0 roles (recruitee)
 Amelco UK Ltd: 2 roles (smartrecruiters)
@@ -30,6 +28,7 @@ Amelco UK Ltd: 2 roles (smartrecruiters)
 OPAP: 0 roles (successfactors)
       talos f08b3d92: 200 but nothing extracted — payload is dict keys ['careersSiteVacancies']
 UK Tote Group: 0 roles (talos)
+Crae Group: 0 roles (teamtailor)
       wordpress jobs.888.com: no job post type found among 15 tried
 888: 0 roles (wordpress)
       wordpress catenamedia.com: no job post type found among 14 tried
@@ -55,21 +54,21 @@ Jumpman Gaming: 0 roles (workday)
 Sisal: 0 roles (workday)
 3 Oaks Gaming: 3 roles (workable)
 Alea: 6 roles (teamtailor)
-Allwyn UK: 26 roles (workable)
-Altenar: 13 roles (bamboohr)
-      sfcsb jobs.amusnet.com: board reports 19 jobs
+Allwyn UK: 27 roles (workable)
+Altenar: 14 roles (bamboohr)
+      sfcsb jobs.amusnet.com: board reports 18 jobs
       sfcsb jobs.amusnet.com: table columns not matched, using link parse (7/10 locations recovered from urls)
       sfcsb jobs.amusnet.com: 10 roles
-      sfcsb jobs.amusnet.com: board reports 27 jobs
+      sfcsb jobs.amusnet.com: board reports 26 jobs
       sfcsb jobs.amusnet.com: table columns not matched, using link parse (7/10 locations recovered from urls)
-      sfcsb jobs.amusnet.com: 12 roles
-      sfcsb jobs.amusnet.com: 16 roles across 2 brands
-Amusnet: 16 roles (sfcsb)
+      sfcsb jobs.amusnet.com: 11 roles
+      sfcsb jobs.amusnet.com: 15 roles across 2 brands
+Amusnet: 15 roles (sfcsb)
 ARB Interactive: 4 roles (ashby)
-Aristocrat Interactive: 226 roles (workday)
-      jobvite pragmaticplay: 81 roles across 1 listings
-ARRISE: 81 roles (jobvite)
-B2Spin Limited: 13 roles (ashby)
+Aristocrat Interactive: 230 roles (workday)
+      jobvite pragmaticplay: 80 roles across 1 listings
+ARRISE: 80 roles (jobvite)
+B2Spin Limited: 14 roles (ashby)
 B2Tech: 11 roles (teamtailor)
 bet365: 75 roles (smartrecruiters)
 Betclic (Banijay Gaming): 76 roles (breezy)
@@ -81,47 +80,48 @@ betr: 6 roles (lever)
 Betsson Group: 107 roles (greenhouse)
 Betstarters: 1 roles (bamboohr)
 Betty: 28 roles (greenhouse)
-BetVictor (BVGroup): 3 roles (hibob)
+BetVictor (BVGroup): 4 roles (hibob)
 BetWarrior: 6 roles (bamboohr)
-Betway Africa: 57 roles (workday)
+Betway Africa: 56 roles (workday)
       join booming-games: no jobs in the page data
 Booming Games: 0 roles (join)
-Boyd Gaming: 846 roles (smartrecruiters)
+Boyd Gaming: 844 roles (smartrecruiters)
 BoyleSports: 21 roles (teamtailor)
 Bragg Gaming: 4 roles (workday)
-      sfcsb careers.brightstarlottery.com: board reports 113 jobs
+      sfcsb careers.brightstarlottery.com: board reports 106 jobs
       sfcsb careers.brightstarlottery.com: table columns not matched, using link parse (23/25 locations recovered from urls)
-      sfcsb careers.brightstarlottery.com: 113 roles
-Brightstar Lottery: 113 roles (sfcsb)
+      sfcsb careers.brightstarlottery.com: 106 roles
+Brightstar Lottery: 106 roles (sfcsb)
 Bullfinch Recruitment: 40 roles (breezy)
-Caesars Entertainment: 1421 roles (oracle)
+Caesars Entertainment: 1417 roles (oracle)
 Caliente: 2 roles (bamboohr)
 CoinPoker: 17 roles (teamtailor)
-ComeOn Group: 19 roles (workable)
+ComeOn Group: 20 roles (workable)
 Continent 8: 4 roles (bamboohr)
-Crae Group: 0 roles (teamtailor)
 Dabble: 2 roles (teamtailor)
-Derivco: 9 roles (bamboohr)
+      pinpoint careers.dazn.com: 1 matched 'dazn bet', 127 others skipped
+DAZN Bet: 1 roles (pinpoint)
+Derivco: 11 roles (bamboohr)
 DigiOutsource: 107 roles (workday)
 Digitain: 82 roles (bamboohr)
 DraftKings: 77 roles (workday)
 Easygo: 25 roles (greenhouse)
 Eeze: 6 roles (teamtailor)
-Entain: 267 roles (smartrecruiters)
+Entain: 274 roles (smartrecruiters)
 EveryMatrix: 21 roles (teamtailor)
-      avature amswh: 200 (40104 bytes) but no /careers/JobDetail/ links
+      avature amswh: 200 (40105 bytes) but no /careers/JobDetail/ links
         /careers/* x26, /portalpacks/* x6, /portal/* x3, /site-services/* x3, /ASSET/* x1, /cssLibrary/* x1, /company/* x1, /willhillpeople x1
       avature amswh: 72 roles
-evoke: 72 roles (avature)  [31s]
+evoke: 72 roles (avature)  [30s]
 evoke plc: 1 roles (bamboohr)
-Evolution: 291 roles (smartrecruiters)
+Evolution: 295 roles (smartrecruiters)
 Evoplay: 3 roles (greenhouse)
-Fanatics Betting & Gaming: 72 roles (greenhouse)
-FanDuel: 84 roles (greenhouse)
+Fanatics Betting & Gaming: 73 roles (greenhouse)
+FanDuel: 87 roles (greenhouse)
 FDJ United: 81 roles (workday)
 FIRST.bet: 5 roles (bamboohr)
-Flutter Group (corporate): 28 roles (workday)
-Flutter International (PokerStars, Betfair Int, Adjarabet): 72 roles (workday)
+Flutter Group (corporate): 29 roles (workday)
+Flutter International (PokerStars, Betfair Int, Adjarabet): 73 roles (workday)
 Flutter UK & Ireland (Sky Bet, Paddy Power, Betfair, tombola): 4 roles (workday)
 Gamdom: 4 roles (teamtailor)
 Gaming Innovation Group: 18 roles (pinpoint)
@@ -129,14 +129,14 @@ Genius Sports: 39 roles (greenhouse)
 Gentoo Media (ex-GiG): 4 roles (teamtailor)
 Growe: 5 roles (greenhouse_eu)
 Hacksaw Gaming: 15 roles (bamboohr)
-Hard Rock Digital: 53 roles (recruitee)
+Hard Rock Digital: 57 roles (recruitee)
 High 5 Games: 15 roles (bamboohr)
 highbet: 5 roles (bamboohr)
 iBet Group: 2 roles (bamboohr)
 iGamingHunt: 11 roles (ashby)
-      sfcsb jobs.igt.com: board reports 134 jobs
-      sfcsb jobs.igt.com: 134 roles
-IGT: 134 roles (sfcsb)
+      sfcsb jobs.igt.com: board reports 131 jobs
+      sfcsb jobs.igt.com: 131 roles
+IGT: 131 roles (sfcsb)
 Intralot: 43 roles (recruitee)
 iTalent PLUS: 21 roles (teamtailor)
 Jackpot.com: 4 roles (greenhouse)
@@ -147,8 +147,8 @@ Kerma Games: 7 roles (greenhouse)
 Kindred Group: 4 roles (ashby)
 KingMakers: 6 roles (workable)
 LCKY Group (ex-Glitnor): 4 roles (teamtailor)
-LeoVegas Group: 61 roles (ashby)
-Light & Wonder: 148 roles (workday)
+LeoVegas Group: 59 roles (ashby)
+Light & Wonder: 151 roles (workday)
 LiveScore Group: 13 roles (greenhouse)
 Lottoland: 2 roles (greenhouse)
 Lottomatica: 47 roles (workday)
@@ -157,14 +157,14 @@ Luckia: 32 roles (sfcsb)
       zoho maxbet.zohorecruit.eu: 62 roles
 MaxBet: 62 roles (zoho)
 MERKUR Casino UK: 56 roles (workday)
-Midnite: 14 roles (ashby)
+Midnite: 16 roles (ashby)
 MiFinity: 11 roles (bamboohr)
 MrQ: 8 roles (teamtailor)
 Neds: 9 roles (workable)
-Novibet: 4 roles (workable)
+Novibet: 5 roles (workable)
 Novig: 13 roles (ashby)
-Oddin.gg: 33 roles (lever)
-OLG: 5 roles (workday)
+Oddin.gg: 32 roles (lever)
+OLG: 7 roles (workday)
       csod olympic: 21 roles
 OlyBet Group: 21 roles (csod)
 OpenBet: 7 roles (workable)
@@ -176,27 +176,27 @@ PENN Interactive: 34 roles (greenhouse)
       orangehrm pinnacle: 11 roles
 Pinnacle: 11 roles (orangehrm)
 Playnetic: 11 roles (teamtailor)
-Playson: 22 roles (ashby)
+Playson: 21 roles (ashby)
 Playtech: 115 roles (smartrecruiters)
 Polymarket: 40 roles (ashby)
 Pragmatic Play: 4 roles (teamtailor)
 PressEnter Group: 4 roles (bamboohr)
-PrizePicks: 29 roles (greenhouse)
-Push Gaming: 10 roles (teamtailor)
+PrizePicks: 28 roles (greenhouse)
+Push Gaming: 9 roles (teamtailor)
 Racing Post / Spotlight Sports: 5 roles (workable)
 Relax Gaming: 10 roles (teamtailor)
 Rhino Entertainment: 5 roles (workable)
 RubyPlay: 6 roles (pinpoint)
 Rush Street Interactive: 24 roles (greenhouse)
-SCIENTIFIC GAMES: 122 roles (workday)
+SCIENTIFIC GAMES: 117 roles (workday)
 Silverspin: 6 roles (teamtailor)
 SkillOnNet: 21 roles (teamtailor)
-Soft2Bet: 17 roles (greenhouse)
+Soft2Bet: 18 roles (greenhouse)
 SoftSwiss: 21 roles (teamtailor)
 Solid Stake: 1 roles (recruitee)
 Sportradar: 96 roles (smartrecruiters)
 Sporttrade: 1 roles (bamboohr)
-SportyBet / Sporty Group: 36 roles (greenhouse)
+SportyBet / Sporty Group: 37 roles (greenhouse)
       hurma spribe: board reports 10 vacancies
       hurma spribe: 10 roles
 SPRIBE: 10 roles (hurma)
@@ -211,21 +211,21 @@ The Multiple Group: 1 roles (bamboohr)
       dayforce rankgroup: CSRF token via cookie __Host-next-auth.csrf-token (64 chars)
       dayforce rankgroup: site config {'clientNamespace': 'rankgroup', 'jobBoardCode': 'candidateportal', 'cultureCode': 'en-GB', 'jobBoardId': 1, '_buildId': 'SPpv4TxxnTBUhQsoFYVwN'}
       dayforce rankgroup: credential-ish fields on portal {'GOOGLE_API_KEY': 'AIzaSy...39 chars', 'PENDO_API_KEY': '3bc007...36 chars', 'clientId': '83365', 'apiKey': '77zhgj...14 chars', 'cookie-description-pin-unauth': 'This c...84 chars'}
-      dayforce rankgroup: 179 roles
-The Rank Group plc: 179 roles (dayforce)
-Tipico: 172 roles (smartrecruiters)
+      dayforce rankgroup: 187 roles
+The Rank Group plc: 187 roles (dayforce)
+Tipico: 173 roles (smartrecruiters)
 Veikkaus (incl. Fennica Gaming): 12 roles (oracle)
 VGW: 2 roles (greenhouse)
-Videoslots: 6 roles (bamboohr)
+Videoslots: 5 roles (bamboohr)
 White Hat Gaming: 5 roles (rippling)
-Wicked Games: 10 roles (bamboohr)
+Wicked Games: 9 roles (bamboohr)
 Wildz Group: 1 roles (teamtailor)
 Winna.com: 5 roles (teamtailor)
 Wiztech: 4 roles (bamboohr)
 World Series of Poker: 6 roles (bamboohr)
 WPT Global: 1 roles (workable)
 Yggdrasil: 1 roles (smartrecruiters)
-ZEAL Network: 21 roles (ashby)
+ZEAL Network: 22 roles (ashby)
    Fortuna: hunting API in the SPA bundle
       Fortuna: 1 script bundle(s) referenced, checking 4
       Fortuna: API-looking URLs in bundle:
@@ -385,9 +385,9 @@ Blip.pt: 10 roles (agency board)
          https://nextjs.org/docs/app/api-reference/functions/use-search-params
          https://nextjs.org/docs/messages/next-dynamic-api-wrong-context
          https://nextjs.org/docs/messages/sync-dynamic-apis
-   Legend: first-element titles -> 31
-   Legend: link parse -> 31
-Legend: 31 roles (agency board)
+   Legend: first-element titles -> 32
+   Legend: link parse -> 32
+Legend: 32 roles (agency board)
       sitemap https://huddle.tech: 6 job URLs
    Huddle: sitemap preferred -> 5 roles (listing is client-rendered)
 Huddle: 5 roles (agency board)
@@ -473,7 +473,7 @@ SkyCity Entertainment Group: 33 roles (agency board)
       json-ld https://careers.star.com.au/en/search: HTTP 404
       json-ld https://careers.star.com.au/en: HTTP 404
       The Star Entertainment Group: shell HTTP 202
-      The Star Entertainment Group https://careers.star.com.au/en/search: HTTP 202
+      The Star Entertainment Group https://careers.star.com.au/en/search: HTTP 404
       The Star Entertainment Group https://careers.star.com.au/en: HTTP 404
       The Star Entertainment Group https://careers.star.com.au/: HTTP 202
 The Star Entertainment Group: 0 roles (agency board)  <-- CHECK: returned nothing
@@ -575,7 +575,7 @@ EvenBet Gaming: 5 roles (agency board)
 Nolimit City®: 44 roles (agency board)
       json-ld https://arrise.com/jobs: HTTP 404
       json-ld https://arrise.com/en/careers: HTTP 404
-      sitemap https://arrise.com: 85 job URLs
+      sitemap https://arrise.com: 87 job URLs
       json-ld https://arrise.com/job/job-senior-product-compliance-manager-4971/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-senior-ui-ux-designer-5475/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-ui-ux-designer-5491/: 1 JobPosting blocks  <-- USABLE
@@ -609,7 +609,6 @@ Nolimit City®: 44 roles (agency board)
       json-ld https://arrise.com/job/job-legal-counsel-ip-brand-protection-7667/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-legal-counsel-ip-brand-protection-7668/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-security-special-agent-7670/: 1 JobPosting blocks  <-- USABLE
-      json-ld https://arrise.com/job/job-rng-customer-support-engineer-l1-7683/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-senior-product-owner-7669/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-account-manager-7517/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-senior-legal-counsel-commercial-7686/: 1 JobPosting blocks  <-- USABLE
@@ -628,12 +627,12 @@ Nolimit City®: 44 roles (agency board)
       json-ld https://arrise.com/job/job-integrations-engineer-7736/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-head-of-operations-7598c1/: 1 JobPosting blocks  <-- USABLE
       json-ld https://arrise.com/job/job-head-of-operations-7598c2/: 1 JobPosting blocks  <-- USABLE
-   ARRISE (global): sitemap + JSON-LD -> 52
-ARRISE (global): 52 roles (agency board)
+   ARRISE (global): sitemap + JSON-LD -> 51
+ARRISE (global): 51 roles (agency board)
       Apercon: 23 script bundle(s) referenced, checking 7
       Apercon: API-looking URLs in bundle:
          https://www.youtube.com/iframe_api
-      Apercon https://apercon.com/: 200, 82418 bytes, 0 '/job' refs
+      Apercon https://apercon.com/: 200, 82459 bytes, 0 '/job' refs
          link shapes present: /kliyenty x14, /services/* x13, /frontpage-en/* x11, /wp-content/* x5, /wp-json/* x3, /services x3, /vacancies x3, /ua x2, /ru x2, /about-us x2, /contact x2, /category/* x2
    Apercon: link parse -> 37
       Apercon: dropped 7 navigation link(s)
@@ -643,8 +642,8 @@ Apercon: 30 roles (agency board)
          link shapes present: /686b4b6563b5a93062da3264/* x4, /about x3, /reporting x3, /careers x3, /npm/* x2, /governance x2, /how-we-operate x2, /social-value x2, /participant-protection x2, /contact x2, /career-benefits x2, /lenis@1.3.4/* x1
    Allwyn: link parse -> 2
 Allwyn: 2 roles (agency board)
-Tabcorp: 32 roles (agency board)
-Sportsbet: 10 roles (agency board)
+Tabcorp: 30 roles (agency board)
+Sportsbet: 9 roles (agency board)
       Pentasia: stripped a trailing reference from 1 title(s)
 Pentasia: 86 roles (agency board)
       BettingJobs https://www.bettingjobs.com/operations-payment/: HTTP 404
@@ -655,12 +654,12 @@ BettingJobs: 96 roles (agency board)
       Van Kaizen: stripped a trailing reference from 1 title(s)
 Van Kaizen: 72 roles (agency board)
 
-titles cleaned: 338 trailing references stripped, 31 locations taken from the title
+titles cleaned: 340 trailing references stripped, 31 locations taken from the title
    carried forward 3 roles for Booming Games (unreachable this run)
 
 carried 3 roles forward from the previous feed
 
-first_seen: 324 roles new since the last run, 7299 carried an existing date
+first_seen: 244 roles new since the last run, 7396 carried an existing date
 
 dropped 39 postings older than 2 years
 
@@ -668,8 +667,8 @@ dropped 3 physical racing roles (stable, yard, raceday, track)
 
 companies.csv refreshed: 176 returning, 53 not
 
-Feed written: 7581 jobs
+Feed written: 7598 jobs
 Unresolved companies (0): 
 
 ============================================================
-ended 2026-10-23T11:26:57.101010+00:00
+ended 2026-10-24T10:44:06.641563+00:00
