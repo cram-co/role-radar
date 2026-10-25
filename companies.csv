@@ -57,7 +57,7 @@ Alea,Operator,yes,6,producing,detect,,From LinkedIn follows,digital
 Allwyn,Lottery,yes,2,producing,detect,skip,"Recruitis scraper returns only 1 role - scraper needs work, not excluded",digital
 Allwyn UK,Lottery,yes,27,producing,detect,workable:allwynuk,"National Lottery Fourth Licence operator. Separate entity from the Allwyn parent row, which uses the Recruitis scraper",digital
 Altenar,Supplier - Sportsbook,yes,14,producing,detect,,,digital
-Amusnet,Supplier - Content,yes,15,producing,detect,"sfcsb:jobs.amusnet.com|/Interactive,","SuccessFactors CAREER SITE BUILDER at jobs.amusnet.com. TWO CSB brands on one tenant - /Interactive and the default - hence the trailing comma in the token, which reads both. ~28 roles. Sofia-based, 1,300+ staff",digital
+Amusnet,Supplier - Content,yes,13,producing,detect,"sfcsb:jobs.amusnet.com|/Interactive,","SuccessFactors CAREER SITE BUILDER at jobs.amusnet.com. TWO CSB brands on one tenant - /Interactive and the default - hence the trailing comma in the token, which reads both. ~28 roles. Sofia-based, 1,300+ staff",digital
 Apercon,Recruitment agency,yes,30,producing,detect,skip,WP REST API is closed (all 10 post types empty) - handled by scrape_custom with paginated listing URLs,digital
 ARB Interactive,Operator,yes,4,producing,detect,,From LinkedIn follows,digital
 Aristocrat Interactive,Supplier - Content,yes,230,producing,detect,https://aristocrat.wd3.myworkdayjobs.com/en-GB/AristocratExternalCareersSite,"Aristocrat group Workday tenant - may include land-based slot roles, watch the mix",digital
@@ -83,12 +83,12 @@ Betway Africa,Operator - Africa,yes,56,producing,detect,https://myhcm.wd3.mywork
 BGaming,Supplier - Content,yes,12,producing,detect,skip,"Server-rendered careers page at bgaming.com/careers, roles at /careers/{slug}, handled by scrape_custom with slug titles. Malta HQ with Poland and Georgia offices. 11 roles at time of adding including a Chief Commercial Officer",digital
 Blip.pt,Supplier - Platform,yes,10,producing,detect,skip,Flutter's Porto engineering hub; own board at blip.pt/jobs/ (greenhouse:blip is a different company),digital
 Booming Games,Supplier - Content,yes,3,producing,detect,join:booming-games,"JOIN (join.com) — a Next.js app, so the whole job list ships inside __NEXT_DATA__ with title, city/country, category and createdAt as structured fields. No API call needed. Note a fully remote role still carries a city, so workplaceType/remoteType decide the location",digital
-Boyd Gaming,Operator - US,yes,844,producing,detect,smartrecruiters:BoydGaming,SmartRecruiters. Token is case-sensitive. 28 US casino properties plus Boyd Interactive,land-based
+Boyd Gaming,Operator - US,yes,845,producing,detect,smartrecruiters:BoydGaming,SmartRecruiters. Token is case-sensitive. 28 US casino properties plus Boyd Interactive,land-based
 BoyleSports,Operator,yes,21,producing,detect,teamtailor:careers.boylesports.com,Teamtailor on custom domain. Retail estate in UK and Ireland,land-based
 Bragg Gaming,Supplier,yes,4,producing,detect,https://bragggaming.wd107.myworkdayjobs.com/External,Workday tenant,digital
 Brightstar Lottery,Lottery,yes,106,producing,detect,sfcsb:careers.brightstarlottery.com,"SuccessFactors CAREER SITE BUILDER at careers.brightstarlottery.com/search/ - ~113 roles. List layout rather than a table, so titles and links come through but locations may not. NOT the legacy DWR route",digital
 Bullfinch Recruitment,Recruitment agency,yes,40,producing,breezy,,Breezy board; IOM/Gib/Malta/Cyprus focus,digital
-Caesars Entertainment,Operator - US,yes,1413,producing,detect,oracle:edmn.fa.us2.oraclecloud.com|CX_1,"Oracle HCM. NOTE this is the WHOLE GROUP board, not their digital arm — ~1,400 roles, mostly property. Marked land-based for that reason. If Caesars Digital ever exposes its own board it should get a separate row, the way Aristocrat Interactive and Greentube do. Until then the digital override is what surfaces their ~50 genuinely digital roles",land-based
+Caesars Entertainment,Operator - US,yes,1412,producing,detect,oracle:edmn.fa.us2.oraclecloud.com|CX_1,"Oracle HCM. NOTE this is the WHOLE GROUP board, not their digital arm — ~1,400 roles, mostly property. Marked land-based for that reason. If Caesars Digital ever exposes its own board it should get a separate row, the way Aristocrat Interactive and Greentube do. Until then the digital override is what surfaces their ~50 genuinely digital roles",land-based
 Caliente,Operator - Mexico,yes,2,producing,detect,,,digital
 Casumo,Operator,yes,2,producing,detect,skip,"in-house careers site, handled by scrape_custom",digital
 Codere Online,Operator,yes,2,producing,detect,skip,"HiringRoom (codere + codereargentina), handled by scrape_custom",digital
@@ -104,10 +104,10 @@ DraftKings,Operator - Tier 1,yes,77,producing,greenhouse (likely),https://draftk
 Easygo,Operator,yes,25,producing,detect,,From LinkedIn follows,digital
 Eeze,Supplier - Content,yes,6,producing,teamtailor,teamtailor:careers.eeze.com,Teamtailor on a custom domain at careers.eeze.com. He rates the roles that come up here,digital
 EGT Digital,Supplier - Content,yes,28,producing,detect,skip,"egt-digital.com/careers lists only CURRENT roles and links to skillie.ai - use it as the live filter, since the skillie sitemap holds every job ever posted",digital
-Entain,Operator - Tier 1,yes,274,producing,detect,,"Ladbrokes, Coral, bwin, partypoker",digital
+Entain,Operator - Tier 1,yes,273,producing,detect,,"Ladbrokes, Coral, bwin, partypoker",digital
 EvenBet Gaming,Supplier - Content,yes,5,producing,detect,skip,"own site, handled by scrape_custom",digital
 EveryMatrix,Supplier - Platform,yes,21,producing,detect,,,digital
-evoke,Operator,yes,72,producing,detect,avature:amswh,"Avature at amswh.avature.net (William Hill/888/Mr Green). NOTE williamhillinternational.com is a SEPARATE second board, not yet added",digital
+evoke,Operator,yes,67,producing,detect,avature:amswh,"Avature at amswh.avature.net (William Hill/888/Mr Green). NOTE williamhillinternational.com is a SEPARATE second board, not yet added",digital
 evoke plc,Operator - Tier 1,yes,1,producing,detect,bamboohr:888spectate,"888, William Hill, Mr Green",digital
 Evolution,Supplier - Live/RNG,yes,284,producing,smartrecruiters (likely),,,digital
 Evoplay,Supplier - Content,yes,3,producing,detect,greenhouse:evoplaygames,"Greenhouse, EU-hosted board",digital
@@ -148,7 +148,7 @@ KingMakers,Operator - Africa,yes,6,producing,detect,workable:kingmakers,Workable
 LCKY Group (ex-Glitnor),Operator,yes,4,producing,detect,teamtailor:careers.lckygroup.com,"Teamtailor on a custom domain. Rebranded from GLITNOR GROUP in Jan 2026. Brands: Lucky Casino, Happy Casino, Flax Casino, Vera&John, OneCasino, plus the Swintt game studio. NOT related to Yolo Group or Bitcasino despite search results suggesting otherwise",digital
 Legend,Supplier - Content,yes,32,producing,detect,skip,Custom Next.js board at l1.com/jobs - scrape_custom with first_element titles,digital
 LeoVegas Group,Operator - Tier 1,yes,59,producing,teamtailor (likely),,MGM-owned,digital
-Light & Wonder,Supplier - Content,yes,151,producing,detect,https://lnw.wd5.myworkdayjobs.com/LightWonderExternalCareers,"Workday. WAS A FALSE MATCH - auto-detection resolved to jobs.ashbyhq.com/light, a fintech startup called ""Light"", giving 7 wrong roles. Never resolve this one by slug",digital
+Light & Wonder,Supplier - Content,yes,150,producing,detect,https://lnw.wd5.myworkdayjobs.com/LightWonderExternalCareers,"Workday. WAS A FALSE MATCH - auto-detection resolved to jobs.ashbyhq.com/light, a fintech startup called ""Light"", giving 7 wrong roles. Never resolve this one by slug",digital
 LiveScore Group,Operator / Media,yes,13,producing,detect,greenhouse:livescore9,,digital
 Lottoland,Lottery betting,yes,2,producing,detect,,,digital
 Lottomatica,Operator - Tier 1,yes,47,producing,detect,https://lottomaticagroup.wd103.myworkdayjobs.com/en-US/LottomaticaCareers,Workday tenant,digital
@@ -192,7 +192,7 @@ Rush Street Interactive,Operator - US,yes,24,producing,detect,,,digital
 SCIENTIFIC GAMES,Supplier - Content,yes,117,producing,detect,https://sglottery.wd5.myworkdayjobs.com/ScientificGamesExternalCareers,Workday,digital
 Silverspin,Supplier - Content,yes,6,producing,detect,,From LinkedIn follows,digital
 SkillOnNet,Operator,yes,21,producing,detect,teamtailor:skillonnet-1744715103.teamtailor.com,Teamtailor,digital
-SkyCity Entertainment Group,Operator,yes,33,producing,detect,skip,"Listing is SERVER-RENDERED at skycitycareers.com/search - title in the anchor, location in a sibling div.location. ~32 roles. Was WRONGLY parked as ""TalentAppStore unsupported"" - that is only the apply platform",land-based
+SkyCity Entertainment Group,Operator,yes,32,producing,detect,skip,"Listing is SERVER-RENDERED at skycitycareers.com/search - title in the anchor, location in a sibling div.location. ~32 roles. Was WRONGLY parked as ""TalentAppStore unsupported"" - that is only the apply platform",land-based
 Soft2Bet,Supplier - Platform,yes,18,producing,detect,,Prior COO role,digital
 SoftConstruct,Supplier - Platform,yes,20,producing,detect,skip,"PeopleForce at peopleforce.softconstruct.com, handled by scrape_custom",digital
 SoftSwiss,Supplier - Platform,yes,21,producing,detect,,,digital
